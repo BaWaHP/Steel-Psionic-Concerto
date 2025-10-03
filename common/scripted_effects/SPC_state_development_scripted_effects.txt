@@ -1,0 +1,455 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+
+SPC_states_development_startup = {
+	set_variable = { magic_development_monthly_buff = 0 }
+	set_variable = { science_development_monthly_buff = 0 }
+	SPC_state_development_initialization = yes
+	every_owned_state = {
+		set_variable = { state_magic_monthly_buff = 0 }
+		set_variable = { state_science_monthly_buff = 0 }
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 0 }
+		SPC_monthly_updated_development_modifier = yes
+	}
+}
+
+SPC_monthly_development_rate_update = {
+	every_owned_state = {
+		set_variable = { state_magic_monthly_basic = 0 }
+		set_variable = { state_science_monthly_basic = 0 }
+		set_variable = { mag_progress_bar_frame = state_magic_progress }
+		set_variable = { sci_progress_bar_frame = state_science_progress }
+		###魔法部分
+		set_variable = { amount_of_data_added_to_monthly_magic_progress = 0 }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = state_magic_monthly_buff }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = ROOT.modifier@state_magic_development_monthly }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = modifier@local_magic_development_monthly }
+		every_neighbor_state = {
+			if = {
+				limit = {
+					check_variable = { state_magic_level = 0 }
+				}
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 1 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -0.5 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 2 }
+				}	
+				###nothing
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 3 }
+				}	
+				###nothing
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 4 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = 0.5 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 5 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = 1 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 6 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = 1.5 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_magic_level = 7 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = 2 }	
+			}			
+		}
+		set_variable = { state_magic_monthly_basic = amount_of_data_added_to_monthly_magic_progress }
+		###科学部分
+		set_variable = { amount_of_data_added_to_monthly_science_progress = 0 }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = state_science_monthly_buff }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = ROOT.modifier@state_science_development_monthly }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = modifier@local_science_development_monthly }
+		every_neighbor_state = {
+			if = {
+				limit = {
+					check_variable = { state_science_level = 0 }
+				}
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 1 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -0.5 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 2 }
+				}	
+				###nothing	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 3 }
+				}	
+				###nothing	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 4 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = 0.5 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 5 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = 1 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 6 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = 1.5 }	
+			}
+			else_if = {
+				limit = {
+					check_variable = { state_science_level = 7 }
+				}	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = 2 }	
+			}
+		}
+		set_variable = { state_science_monthly_basic = amount_of_data_added_to_monthly_science_progress }
+	}
+}
+
+SPC_monthly_development_level_update = {
+	every_owned_state = {
+		add_to_variable = { state_magic_progress =  state_magic_monthly_basic}
+		add_to_variable = { state_science_progress = state_science_monthly_basic }
+		if = {
+			limit = {
+				check_variable = { state_magic_progress > 99 }
+				NOT = {
+					check_variable = { state_magic_level = 7 }
+				}
+			}
+			set_variable = { state_magic_progress = 0 }
+			add_to_variable = { state_magic_level = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_progress > 99 }
+				check_variable = { state_magic_level = 7 }
+			}
+			set_variable = { state_magic_progress = 100 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_progress < 0 }
+			}
+			set_variable = { state_magic_progress = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { state_science_progress > 99 }
+				NOT = {
+					check_variable = { state_science_level = 7 }
+				}
+			}
+			set_variable = { state_science_progress = 0 }
+			add_to_variable = { state_science_level = 1 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_science_progress > 99 }
+				check_variable = { state_science_level = 7 }
+			}
+			set_variable = { state_science_progress = 100 }			
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_science_progress < 0 }
+			}
+			set_variable = { state_science_progress = 0 }
+		}
+		SPC_monthly_updated_development_modifier = yes
+	}
+}
+
+SPC_monthly_updated_development_modifier = {
+	###魔法###
+	if = {
+		limit = {
+			check_variable = { state_magic_level = 0 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 1 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 2 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 3 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 4 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 5 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 6 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_6 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_level = 7 }
+		}
+		SPC_remove_mag_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_magic_level_modifier_7 }
+	}
+	###科学###
+	if = {
+		limit = {
+			check_variable = { state_science_level = 0 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 1 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 2 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 3 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 4 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 5 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 6 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_6 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_level = 7 }
+		}
+		SPC_remove_sci_state_development_modifiers = yes
+		add_dynamic_modifier = { modifier = state_science_level_modifier_7 }
+	}
+}
+
+SPC_special_op_update = {
+	if = {
+		limit = {
+			check_variable = { state_magic_progress > 99 }
+			NOT = {
+				check_variable = { state_magic_level = 7 }
+			}
+		}
+		set_variable = { state_magic_progress = 0 }
+		add_to_variable = { state_magic_level = 1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_progress > 99 }
+			check_variable = { state_magic_level = 7 }
+		}
+		set_variable = { state_magic_progress = 100 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_magic_progress < 0 }
+		}
+		set_variable = { state_magic_progress = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { state_science_progress > 99 }
+			NOT = {
+				check_variable = { state_science_level = 7 }
+			}
+		}
+		set_variable = { state_science_progress = 0 }
+		add_to_variable = { state_science_level = 1 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_progress > 99 }
+			check_variable = { state_science_level = 7 }
+		}
+		set_variable = { state_science_progress = 100 }			
+	}
+	else_if = {
+		limit = {
+			check_variable = { state_science_progress < 0 }
+		}
+		set_variable = { state_science_progress = 0 }
+	}
+	SPC_monthly_updated_development_modifier = yes
+}
+
+SPC_remove_mag_state_development_modifiers = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_0 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_0 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_1 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_1 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_2 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_2 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_3 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_3 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_4 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_4 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_5 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_5 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_6 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_6 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_magic_level_modifier_7 } }
+		remove_dynamic_modifier = { modifier = state_magic_level_modifier_7 }
+	}
+}
+
+SPC_remove_sci_state_development_modifiers = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_0 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_0 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_1 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_1 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_2 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_2 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_3 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_3 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_4 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_4 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_5 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_5 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_6 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_6 }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = state_science_level_modifier_7 } }
+		remove_dynamic_modifier = { modifier = state_science_level_modifier_7 }
+	}
+}
+
+SPC_state_development_initialization = {
+	###根据省份具体来设置###
+	#X = {
+	#	set_variable = { state_magic_progress = 0 }
+	#	set_variable = { state_magic_level = 3 }
+	#	set_variable = { state_science_progress = 0 }
+	#	set_variable = { state_science_level = 3 }
+	#}
+}

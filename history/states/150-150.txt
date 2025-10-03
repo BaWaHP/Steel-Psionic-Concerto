@@ -1,0 +1,29 @@
+
+state={
+	id=150
+	name="STATE_150"
+	resources = {
+		magic_crystal = 12
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = TEG
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			17560 1 
+		}
+
+	}
+
+	provinces={
+		5141 9051 9216 10922 17414 17415 17546 17560 17615 17670 17738 
+	}
+	manpower=1290000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

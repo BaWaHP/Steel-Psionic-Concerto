@@ -1,0 +1,440 @@
+characters={
+
+	KDK_gaius_pernumia = {		#盖乌斯·佩尔努米亚
+   		name = KDK_gaius_pernumia
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = national_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_marcus_pennabilli = {		#马尔库斯·彭纳比利
+   		name = KDK_marcus_pennabilli
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = popular_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_virtue_commission = {		#美德委员会
+   		name = KDK_virtue_commission
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = utopian_socialism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_tiberius_carmignano = {		#提贝里乌斯·卡尔米尼亚诺
+   		name = KDK_tiberius_carmignano
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = social_democrat
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_Kandadal_XI = {		#坎达德尔十一世
+   		name = KDK_Kandadal_XI
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KDK_Kandadal_XI_desc
+   			ideology = dual_system_of_constitutional_monarchy
+			traits = { KDK_bloody_king }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_cordelia_riparbera_jr = {		#小科德利阿·里帕尔贝拉
+   		name = KDK_cordelia_riparbera_jr
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = social_corporatism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_cordelia_saints_riparbella = {		#科德利阿·‘圣徒’·里帕尔贝拉
+   		name = KDK_cordelia_saints_riparbella
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = racial_homonationalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_gaius_surano = {		#盖乌斯·苏拉诺
+   		name = KDK_gaius_surano
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = civilian_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_julius_roccadaspide = {		#尤里乌斯·罗卡达斯皮德
+   		name = KDK_julius_roccadaspide
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = sacred_battles
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_the_cult = {		#“教团”
+   		name = KDK_the_cult
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_invisible_committee = {		#隐形委员会
+   		name = KDK_invisible_committee
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarchy_commusim
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KDK_reconstruction_committee = {		#坎达德尔重建委员会
+   		name = KDK_reconstruction_committee
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = KDK_reconstruction_committee_desc
+			idea_token = KDK_reconstruction_committee_idea
+			traits = { KDK_puppet_two_party_system }
+			available = { has_government = authoritarian_republican_subtype }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	KDK_finn_veciano = {		#费恩·韦基亚诺
+   		name = KDK_finn_veciano
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		country_leader = {
+			ideology = market_liberalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			desc = KDK_finn_veciano_desc
+			idea_token = KDK_finn_veciano_idea
+			traits = { KDK_loyal_dog_of_rsb hidden_backstabber }
+			available = {
+				OR = {
+					has_government = authoritarian_republican
+					has_government = liberal_republican
+				}
+			}
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	KDK_nicolas_esmirada = {		#尼科拉斯·艾斯米拉达
+   		name = KDK_nicolas_esmirada
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		country_leader = {
+			ideology = conservative_liberalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			desc = KDK_nicolas_esmirada_desc
+			idea_token = KDK_nicolas_esmirada_idea
+			traits = { KDK_titlan_culture_enjoyers immature_fortification_engineer }
+			available = {
+				OR = {
+					has_government = authoritarian_republican
+					has_government = conservative_republican
+				}
+			}
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	KDK_ulpius_surano = {		#乌尔皮乌斯·苏拉诺
+   		name = KDK_ulpius_surano
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = KDK_ulpius_surano_desc
+			idea_token = KDK_ulpius_surano_idea
+			traits = { terrible_tyrant }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	KDK_cordelia_riparbera = {		#科德利阿·‘正义者’·里帕尔贝拉
+   		name = KDK_cordelia_riparbera
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = KDK_cordelia_riparbera_desc
+			idea_token = KDK_cordelia_riparbera_idea
+			traits = { compassionate_gentleman }
+			available = { has_government = authoritarian_republican }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	KDK_dinu_carodanno = {		#迪努·卡洛丹诺
+   		name = KDK_dinu_carodanno
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		field_marshal = {
+			traits = { organizer KDK_royal_loyalist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	KDK_otilia_sara_sori = {		#奥蒂利亚萨拉·索里
+   		name = KDK_otilia_sara_sori
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			traits = { KDK_royal_loyalist }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	KDK_lucien_sara_merknes = {		#卢西安萨拉·默克内斯
+   		name = KDK_lucien_sara_merknes
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			traits = { KDK_poplar_alliance_sympathizers }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	KDK_nicolescu_roscaklivia = {		#尼科列斯库·罗斯卡克里维亚
+   		name = KDK_nicolescu_roscaklivia
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			traits = { war_hero infantry_leader KDK_poplar_alliance_sympathizers }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

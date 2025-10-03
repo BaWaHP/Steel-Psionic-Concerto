@@ -1,0 +1,1580 @@
+SFH_influence_from_mermaid_category = {
+
+	SFH_confort_mermaids = {
+		icon = GFX_decision_generic_political_discourse
+
+		available = {
+			has_country_flag = SFH_influence_from_mermaid_flag
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 30
+				}
+				factor = 1
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = SFH_mermaid_satisfaction_tt_up_medium
+			custom_effect_tooltip = SFH_people_satisfaction_tt_down_small
+			add_to_variable = {
+				SFH_mermaid_satisfaction_variable = 10
+			}
+			add_to_variable = {
+				SFH_people_satisfaction_variable = -5
+			}
+			SFH_mermaid_influence_modifier_update = yes
+		}
+	}
+
+	SFH_expand_mermaid_influence = {
+		icon = GFX_decision_generic_factory
+
+		available = {
+			has_country_flag = SFH_influence_from_mermaid_flag
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				check_variable = {
+					SFH_mermaid_influence_variable < 0.3
+				}
+				factor = 1
+			}
+			modifier = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 30
+				}
+				factor = 1
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = SFH_mermaid_satisfaction_tt_up_small
+			custom_effect_tooltip = SFH_mermaid_influence_tt_up_medium
+			add_to_variable = {
+				SFH_mermaid_satisfaction_variable = 5
+			}
+			add_to_variable = {
+				SFH_mermaid_influence_variable = 0.1
+			}
+			SFH_mermaid_influence_modifier_update = yes
+		}
+	}
+
+	SFH_reduce_mermaid_influence = {
+
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			has_country_flag = SFH_influence_from_mermaid_flag
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+			modifier = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 70
+				}
+				factor = 1
+			}
+			modifier = {
+				check_variable = {
+					SFH_mermaid_influence_variable > 0.7
+				}
+				factor = 1
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 30
+			custom_effect_tooltip = SFH_mermaid_satisfaction_tt_down_small
+			custom_effect_tooltip = SFH_mermaid_influence_tt_down_medium
+			add_to_variable = {
+				SFH_mermaid_satisfaction_variable = -5
+			}
+			add_to_variable = {
+				SFH_mermaid_influence_variable = -0.1
+			}
+			SFH_mermaid_influence_modifier_update = yes
+		}
+	}
+
+	SFH_promote_cooperation = {
+
+		icon = GFX_decision_generic_colonial_administration
+
+		available = {
+			has_country_flag = SFH_influence_from_mermaid_flag
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = SFH_mermaid_satisfaction_tt_up_small
+			custom_effect_tooltip = SFH_people_satisfaction_tt_up_medium
+			add_to_variable = {
+				SFH_mermaid_satisfaction_variable = 5
+			}
+			add_to_variable = {
+				SFH_people_satisfaction_variable = 10
+			}
+			SFH_mermaid_influence_modifier_update = yes
+		}
+	}
+
+}
+
+SFH_military_connection = {
+	SFH_corruption_everywhere = { 		#腐败横行...
+		icon = GFX_decision_generic_fundraising
+		allowed = { tag = SFH }
+		available = { NOT = { has_dynamic_modifier = { modifier = SFH_corrupted_army_dynamic_modifier } } }
+		activation = {
+			tag = SFH
+			has_dynamic_modifier = {
+				modifier = SFH_corrupted_army_dynamic_modifier
+			}
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		timeout_effect = {  
+			add_political_power = -5
+			add_stability = -0.01
+			add_war_support = -0.01
+		}
+	}
+	SFH_suppress_corruption = { 		#打压腐败
+		icon = GFX_decision_generic_arrest
+		allowed = { tag = SFH }
+		available = {}
+		
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		days_re_enable = 60
+		days_remove = 30
+		cost = 50
+
+		complete_effect = {
+			add_command_power = -25
+		}
+
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	SFH_emphasize_discipline_decision = { 		#强调纪律
+		icon = GFX_decision_generic_political_discourse
+		allowed = { tag = SFH }
+		available = {}
+		
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		days_re_enable = 60
+		days_remove = 30
+
+		complete_effect = {
+			add_command_power = -25
+			add_stability = 0.05
+			add_political_power = 20
+		}
+
+		modifier = {
+			political_power_factor = 0.1
+		}
+
+		remove_effect = {
+			add_stability = -0.05
+		}
+	}
+	SFH_encourage_doctrine_development = { 		#鼓励学说发展
+		icon = GFX_decision_generic_operation
+		allowed = { tag = SFH }
+		available = {}
+		
+		cost = 30
+		days_re_enable = 60
+		days_remove = 30
+
+		complete_effect = {}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			experience_gain_army_factor = 0.1
+		}
+
+		remove_effect = {
+			army_experience = 30
+			random_list = {
+				50 = {
+					add_doctrine_cost_reduction = {
+						name = SFH_encourage_doctrine_development
+						cost_reduction = 0.5
+						uses = 1
+						category = land_doctrine
+					}
+				}
+				50 = {}
+			}
+		}
+	}
+	SFH_temp_mil_production = { 		#临时军工生产
+		icon = GFX_decision_ger_military_buildup
+		allowed = { tag = SFH }
+		available = {}
+		
+		cost = 50
+		days_re_enable = 60
+		days_remove = 120
+
+		complete_effect = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			army_experience = 5
+			add_offsite_building = {
+				type = arms_factory
+				level = -2
+			}
+		}
+	}
+	SFH_recruit_private_army = { 		#募集私兵
+		icon = GFX_decision_generic_speech
+		allowed = { tag = SFH }
+		available = { command_power > 29 }
+		
+		cost = 30
+		days_re_enable = 200
+		days_remove = 45
+
+		complete_effect = {
+			add_command_power = -30
+			add_stability = -0.02
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_template = "临时私兵" } }
+				division_template = {
+					name = "临时私兵"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+					priority = 1
+					is_locked = yes
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"临时私兵\" division_template = \"临时私兵\" start_experience_factor = 0.3 start_equipment_factor = 0.9"  
+					owner = SFH
+				}
+				create_unit = {
+					division = "name = \"临时私兵\" division_template = \"临时私兵\" start_experience_factor = 0.3 start_equipment_factor = 0.9"  
+					owner = SFH
+				}
+			}
+		}
+	}
+	SFH_demand_army_support = { 		#要求军队支持皇室
+		icon = GFX_decision_generic_monarchy
+		allowed = { tag = SFH }
+		available = {}
+		visible = { has_country_flag = SFH_national_reformation_flag }
+		
+		cost = 50
+		days_re_enable = 60
+		days_remove = 60
+
+		complete_effect = {
+			SFH_king_power_up_large = yes
+			SFH_conservative_power_down_small = yes
+			SFH_reformist_power_down_small = yes
+		}
+
+		modifier = {
+			political_power_factor = -0.1
+			command_power_gain_mult = -0.2
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_command_power = 100
+		}
+	}
+	SFH_demand_attack_actions = { 		#要求发动进攻
+		icon = GFX_decision_generic_monarchy
+		allowed = { tag = SFH }
+		available = { has_war = yes }
+		visible = { has_war = yes }
+		
+		cost = 30
+		days_re_enable = 120
+		days_remove = 30
+
+		complete_effect = {
+			add_war_support = 0.05
+		}
+
+		modifier = {
+			army_attack_factor = 0.1
+			army_org_regain = 0.05
+		}
+
+		remove_effect = {
+		}
+	}
+	SFH_demand_defence_actions = { 		#要求进行防御
+		icon = GFX_decision_generic_monarchy
+		allowed = { tag = SFH }
+		available = { has_war = yes }
+		visible = { has_war = yes }
+		
+		cost = 30
+		days_re_enable = 120
+		days_remove = 30
+
+		complete_effect = {
+			add_war_support = 0.05
+		}
+
+		modifier = {
+			army_defence_factor = 0.1
+			army_org_factor = 0.05
+		}
+
+		remove_effect = {
+		}
+	}
+}
+
+SFH_future_of_the_nation = {
+	SFH_preparation_up = { 		#准备度上升
+		icon = GFX_decision_generic_decision
+		allowed = { tag = SFH }
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = SFH_preparation_up_tr
+				check_variable = {
+					SFH_preparation_bar_var = 100
+				}
+			} 
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = SFH_preparation_up_tr
+				check_variable = {
+					SFH_preparation_bar_var = 100
+				}
+			} 
+		}
+		activation = { tag = SFH check_variable = { SFH_preparation_bar_var < 100 } }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {
+			add_to_variable = {
+				SFH_preparation_bar_var = 5
+			}
+			custom_effect_tooltip = SFH_preparation_up_tt
+			SFH_preparation_var_clamp = yes
+		}
+	}
+}
+
+SFH_national_reformation = {
+	SFH_gathering_storm = { 		#风雨欲来
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFH }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 800
+
+		timeout_effect = {
+			custom_effect_tooltip = SFH_gathering_storm_tt
+			country_event = SFH.800
+		}
+	}
+
+	SFH_reformist_coup = { 		#改革派政变
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = { tag = SFH }
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = SFH_reformist_coup_tr
+					check_variable = {
+						SFH_reformist_power < 90
+					}
+				}
+				has_war = yes
+			}
+		}
+		activation = {
+			check_variable = {
+				SFH_reformist_power > 89
+			}
+			has_country_flag = SFH_national_reformation_flag
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		timeout_effect = {  
+			custom_effect_tooltip = SFH_reformist_coup_tt
+			country_event = SFH.8
+		}
+	}
+
+	SFH_conservative_coup = { 		#保守派政变
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = { tag = SFH }
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = SFH_conservative_coup_tr
+					check_variable = {
+						SFH_conservative_power < 90
+					}
+				}
+				has_war = yes
+			}
+		}
+		activation = {
+			check_variable = {
+				SFH_conservative_power > 89
+			}
+			has_country_flag = SFH_national_reformation_flag
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		timeout_effect = {  
+			custom_effect_tooltip = SFH_conservative_coup_tt
+			country_event = SFH.9
+		}
+	}
+
+	SFH_reformist_cooling_down = { 		#改革派贵族情绪缓和
+		icon = GFX_decision_generic_political_discourse
+		allowed = { tag = SFH }
+		available = {
+			always = no
+		}
+		activation = {
+			tag = SFH
+			has_country_flag = SFH_national_reformation_flag
+		}
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 50
+
+		timeout_effect = {  
+			add_stability = 0.02
+			SFH_reformist_power_down_small = yes
+		}
+	}
+
+	SFH_conservatist_cooling_down = { 		#保守派贵族情绪缓和
+		icon = GFX_decision_generic_political_discourse
+		allowed = { tag = SFH }
+		available = {
+			always = no
+		}
+		activation = {
+			tag = SFH
+			has_country_flag = SFH_national_reformation_flag
+		}
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 80
+
+		timeout_effect = {  
+			add_stability = 0.02
+			SFH_conservative_power_down_small = yes
+		}
+	}
+
+	SFH_hold_speeches = {	#举办演讲
+
+		icon = GFX_decision_generic_speech
+
+		available = {
+			has_war = no
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_stability = 0.02
+			add_political_power = 10
+			SFH_king_power_up_small = yes
+		}
+	}
+
+	SFH_supress_the_opposition = {	#压制不满人士
+
+		icon = GFX_decision_generic_arrest
+
+		available = {
+			has_war = no
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 100
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			SFH_king_power_up_large = yes
+		}
+	}
+
+	SFH_concession_to_reformist = {		#向改革派贵族让步
+
+		icon = GFX_decision_gre_investment_decisions
+
+		available = {
+			has_war = no
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			SFH_king_power_down_small = yes
+			SFH_reformist_power_down_large = yes
+		}
+	}
+
+	SFH_prefer_to_reformist = {		#偏好改革派贵族
+
+		icon = GFX_decision_generic_fundraising
+
+		available = {
+			has_war = no
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 10
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			SFH_conservative_power_up_small = yes
+			SFH_reformist_power_down_small = yes
+		}
+	}
+
+	SFH_sacrifice_reformist = {		#牺牲改革派权益
+
+		icon = GFX_decision_generic_break_treaty
+
+		available = {
+			has_war = no
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 100
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = -0.05
+			SFH_king_power_up_small = yes
+			SFH_reformist_power_up_small = yes
+		}
+	}
+
+	SFH_concession_to_conservatist = {		#向保守派贵族让步
+
+		icon = GFX_decision_gre_investment_decisions
+
+		available = {
+			has_war = no
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			SFH_king_power_down_small = yes
+			SFH_conservative_power_down_large = yes
+		}
+	}
+
+	SFH_prefer_to_conservatist = {		#偏好保守派贵族
+
+		icon = GFX_decision_generic_fundraising
+
+		available = {
+			has_war = no
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 10
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			SFH_reformist_power_up_small = yes
+			SFH_conservative_power_down_small = yes
+		}
+	}
+
+	SFH_sacrifice_conservatist = {		#牺牲保守派权益
+
+		icon = GFX_decision_generic_break_treaty
+
+		available = {
+			has_war = no
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 100
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = -0.05
+			SFH_king_power_up_small = yes
+			SFH_conservative_power_up_small = yes
+		}
+	}
+
+	SFH_hold_nobility_party = {		#联席宴会
+
+		icon = GFX_decision_generic_monarchy
+
+		available = {
+			has_war = no
+		}
+
+		cost = 100
+		fire_only_once = no
+		days_re_enable = 200
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			SFH_king_power_up_large = yes
+			SFH_reformist_power_down_small = yes
+			SFH_conservative_power_down_small = yes
+		}
+	}
+}
+
+SFH_battle_over_territory = {		#领土争夺战
+	SFH_bot_status_report = { 		#状态报告
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { OR = { tag = SFH tag = SFR tag = QTA } }
+		available = { always = no }
+
+		visible = { SFH = { has_country_flag = SFH_pre_war_flag } }
+		
+		cost = 0
+		fire_only_once = yes
+	}
+	###内战倒计时###
+	SFH_gathering_storm_for_others = { 		#风雨欲来
+		name = SFH_gathering_storm
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFH tag = QTA }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 800
+
+		timeout_effect = {
+			custom_effect_tooltip = SFH_gathering_storm_tt
+			if = {
+				limit = { tag = SFR }
+				country_event = SFR.150
+			}
+		}
+	}
+	###通用行动任务###
+	SFH_taking_actions = { 		#南远乡政府正在镇压叛乱...
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { 
+			OR = { 
+				SFH = { exists = no } 
+				SFH = { has_war = yes } 
+				#SFH = { any_owned_state = { has_state_flag = SFH_state_influence_under_control } }
+				NOT = { SFH = { has_country_flag = SFH_pre_war_flag } } 
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			if = {
+				limit = { tag = SFH }
+				every_owned_state = {
+					if = {
+						limit = {
+							OR = {
+								has_state_flag = SFH_state_influence_under_control
+								AND = {
+									is_owned_by = SFH
+									has_state_flag = SFH_state_influence_lock
+								}
+							}
+						}
+						effect_tooltip = {
+							add_to_variable = { 
+								var = SFH_state_influence_var
+								value = 3
+								tooltip = SFH_state_influence_var_tt
+							}	
+						}
+						hidden_effect = { set_variable = { SFH_state_influence_var_up_var = 3 } SFH_state_influence_var_up_effect = yes }
+						SFH_bot_influence_update_aio = yes
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					SFH = {
+						every_owned_state = {
+							if = {
+								limit = {
+									OR = {
+										has_state_flag = SFH_state_influence_under_control
+										AND = {
+											is_owned_by = SFH
+											has_state_flag = SFH_state_influence_lock
+										}
+									}
+								}
+								effect_tooltip = {
+									add_to_variable = { 
+										var = SFH_state_influence_var
+										value = 3
+										tooltip = SFH_state_influence_var_tt
+									}	
+								}
+								hidden_effect = { set_variable = { SFH_state_influence_var_up_var = 3 } SFH_state_influence_var_up_effect = yes }
+								SFH_bot_influence_update_aio = yes
+							}
+						}
+					}
+				}
+			}
+			activate_mission = SFH_taking_actions
+		}
+	}
+	SFR_taking_actions = { 		#革命阵线正在行动
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { OR = { SFR = { exists = no } SFR = { has_war = yes } NOT = { SFH = { has_country_flag = SFH_pre_war_flag } } } }
+		activation = { always = no }
+
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			if = {
+				limit = { tag = SFR }
+				SFH = {
+					every_core_state = {
+						limit = { 
+							OR = {
+								AND = { has_state_flag = SFH_state_influence_not_under_control check_variable = { SFR_state_influence_var > QTA_state_influence_var } }
+								is_owned_by = SFR
+							}
+						}
+						every_neighbor_state = { SFR_taking_actions_effect = yes }
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					SFH = {
+						every_core_state = {
+							limit = { 
+								OR = {
+									AND = { has_state_flag = SFH_state_influence_not_under_control check_variable = { SFR_state_influence_var > QTA_state_influence_var } }
+									is_owned_by = SFR
+								}
+							}
+							every_neighbor_state = { SFR_taking_actions_effect = yes }
+						}
+					}
+				}
+			}
+			activate_mission = SFR_taking_actions
+		}
+	}
+	QTA_taking_actions = { 		#青天军正在行动
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { OR = { QTA = { exists = no } QTA = { has_war = yes } NOT = { SFH = { has_country_flag = SFH_pre_war_flag } } } }
+		activation = { always = no }
+
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			if = {
+				limit = { tag = QTA }
+				SFH = {
+					every_core_state = {
+						limit = { 
+							OR = {
+								AND = { has_state_flag = SFH_state_influence_not_under_control check_variable = { QTA_state_influence_var > SFR_state_influence_var } }
+								is_owned_by = QTA
+							}
+						}
+						every_neighbor_state = { QTA_taking_actions_effect = yes }
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					SFH = {
+						every_core_state = {
+							limit = { 
+								OR = {
+									AND = { has_state_flag = SFH_state_influence_not_under_control check_variable = { QTA_state_influence_var > SFR_state_influence_var } }
+									is_owned_by = QTA
+								}
+							}
+							every_neighbor_state = { QTA_taking_actions_effect = yes }
+						}
+					}
+				}
+			}
+			activate_mission = QTA_taking_actions
+		}
+	}
+	###领土争夺战——南远乡###
+	SFH_consolidaring_gov_authority = { 		#远乡 - 巩固政府权威
+		icon = GFX_decision_generic_scorched_earth
+		allowed = { tag = SFH }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				has_state_flag = SFH_state_influence_under_control
+			}
+		}
+
+		cost = 20
+		days_remove = 20
+		days_re_enable = 5
+
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 10
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 10
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFH_state_influence_var_up_var = 10 } SFH_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFH_hunting_insurgents = { 		#远乡 - 追捕叛乱分子
+		icon = GFX_decision_generic_arrest
+		allowed = { tag = SFH }
+
+		visible = {
+			var:SFH_bot_state_pointer = {
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				has_state_flag = SFH_state_influence_under_control
+				check_variable = { SFH_state_influence_var < 61 }
+			}
+		}
+		
+		cost = 0
+		days_remove = 40
+		days_re_enable = 10
+
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.1
+		}
+
+		complete_effect = {
+			set_variable = { SFH_bot_decision_pointer_2 = SFH_bot_state_pointer }
+		}
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_2 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_2 = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 20
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 20
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFH_state_influence_var_up_var = 20 } SFH_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_2 = 0 }
+		}
+	}
+	SFH_martial_law = { 		#远乡 - 戒严令
+		icon = GFX_decision_generic_assassination
+		allowed = { tag = SFH }
+
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				has_state_flag = SFH_state_influence_under_control
+				check_variable = { SFH_state_influence_var < 31 }
+			}
+		}
+		
+		cost = 20
+		days_remove = 60
+		days_re_enable = 30
+
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = -0.1
+		}
+
+		complete_effect = {
+			set_variable = { SFH_bot_decision_pointer_3 = SFH_bot_state_pointer }
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_3 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_3 = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 30
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = 30
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_3 = { set_variable = { SFH_state_influence_var_up_var = 30 } SFH_state_influence_var_up_effect = yes } }
+		}
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_3 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_3 = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = -40
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFH_state_influence_var
+							value = -40
+							tooltip = SFH_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_3 = { set_variable = { SFH_state_influence_var_down_var = 40 } SFH_state_influence_var_down_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_3 = 0 }
+		}
+	}
+}
+
+SFH_land_integration_decisions = {
+	SFH_integrate_states = {		#整合xx地区
+		icon = GFX_decision_generic_decision
+
+		available = { }
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				NOT = { is_core_of = ROOT }
+				FROM = { is_owned_by = ROOT }
+				OR = {
+					AND = {
+						SFH = { 
+							OR = { 
+								has_completed_focus = SFH_corporate_officials 
+								has_completed_focus = SFH_integrate_officials
+								has_completed_focus = SFH_come_home_kid
+								has_completed_focus = SFH_friend_and_enemies
+							} 
+						}
+						OR = {
+							state = 12
+							state = 14
+							state = 25
+							state = 26
+							state = 29
+							state = 134
+							state = 142
+						}
+					}
+					AND = {
+						SFH = { 
+							has_completed_focus = SFH_nfh_reconstruction_bill
+						}
+						OR = {
+							state = 15
+							state = 16
+							state = 17
+							state = 18
+							state = 19
+							state = 21
+							state = 22
+							state = 23
+							state = 24
+							state = 133
+							state = 144
+							state = 160
+							#人鱼
+							state = 20
+							state = 31
+							state = 410
+						}
+					}
+					AND = {
+						#被抢走的领土-西北#
+						SFH = { 
+							has_completed_focus = SFH_integrate_northwest_border
+						}
+						OR = {
+							state = 28
+							state = 27
+							state = 143
+						}
+					}
+					AND = {
+						#被抢走的领土-西南#
+						SFH = { 
+							has_completed_focus = SFH_integrate_southwest_border
+						}
+						OR = {
+							state = 32
+							state = 33
+							state = 55
+							state = 56
+						}
+					}
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = yes
+		days_remove = 150
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 999
+		}
+
+		remove_effect = {
+			FROM = { add_core_of = ROOT }
+		}
+	}
+}
+
+SFH_expansion_decisions = {
+	SFH_ask_northwest_territory = {		#索取大战失去的西北领土
+		icon = GFX_decision_generic_decision
+
+		available = {}
+		visible = { has_completed_focus = SFH_asking_for_northwest_territory }
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					owns_state = 143
+					owns_state = 27
+					owns_state = 28
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = SFH.1501
+					days = 1
+				}
+			}
+		}
+	}
+	SFH_ask_southwest_territory = {		#索取大战失去的西南领土
+		icon = GFX_decision_generic_decision
+
+		available = {}
+		visible = { has_completed_focus = SFH_asking_for_southwest_territory }
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					owns_state = 32
+					owns_state = 33
+					owns_state = 55
+					owns_state = 56
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio > 1
+				}
+				add = 1000
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = SFH.1521
+					days = 1
+				}
+			}
+		}
+	}
+	SFH_invade_foreign_nations = {		#入侵[FROM.GetName]领土
+		icon = GFX_decision_generic_decision
+
+		available = {}
+		visible = { has_completed_focus = SFH_fight_for_the_future }
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					SPC_generic_region_trigger_2 = yes
+					SPC_generic_region_trigger_3 = yes
+				}
+				exists = yes
+				NOT = { is_puppet_of = ROOT }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+	SFH_liberate_foreign_nations = {		#解放[FROM.GetName]
+		icon = GFX_decision_generic_decision
+
+		available = {}
+		visible = { has_completed_focus = SFH_reinforce_border }
+
+		target_trigger = {
+			OR = {
+				SPC_generic_region_trigger_2 = yes
+				SPC_generic_region_trigger_3 = yes
+			}
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = authoritarian_nationalism
+				has_government = national_socialist
+				has_government = religious_extremism
+				has_government = wizard_rules
+				has_government = anarchism
+			}
+			exists = yes
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+	SFH_invate_foreign_nations = {		#邀请[FROM.GetName]加入阵营
+		icon = GFX_decision_generic_decision
+
+		available = {}
+		visible = { has_completed_focus = SFH_reinforce_border }
+
+		target_trigger = {
+			OR = {
+				SPC_generic_region_trigger_2 = yes
+				SPC_generic_region_trigger_3 = yes
+			}
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = paternal_autocrat
+			}
+			exists = yes
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = SFH.1560
+					days = 1
+				}
+			}
+		}
+	}
+	SFH_declare_territories = {		#宣称外部领土
+		icon = generic_civil_support
+
+		available = { has_completed_focus = SFH_fight_for_the_future }
+		visible = { has_completed_focus = SFH_fight_for_the_future }
+
+		cost = 200
+		fire_only_once = yes
+		days_remove = 200
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = SFH_declare_territories_tt
+			if = {
+				limit = { SFH = { has_country_flag = SFH_expansion_route_1 } }
+				custom_effect_tooltip = SFH_declare_territories_tt_1
+			}
+			if = {
+				limit = { SFH = { has_country_flag = SFH_expansion_route_2 } }
+				custom_effect_tooltip = SFH_declare_territories_tt_2
+			}
+			if = {
+				limit = { SFH = { has_country_flag = SFH_expansion_route_3 } }
+				custom_effect_tooltip = SFH_declare_territories_tt_3
+			}
+			hidden_effect = {
+				if = {
+					limit = { SFH = { has_country_flag = SFH_expansion_route_1 } }
+					57 = { add_claim_by = SFH }
+					58 = { add_claim_by = SFH }
+					61 = { add_claim_by = SFH }
+					62 = { add_claim_by = SFH }
+					35 = { add_claim_by = SFH }
+					34 = { add_claim_by = SFH }
+				}
+				if = {
+					limit = { SFH = { has_country_flag = SFH_expansion_route_2 } }
+					64 = { add_claim_by = SFH }
+					63 = { add_claim_by = SFH }
+					66 = { add_claim_by = SFH }
+					36 = { add_claim_by = SFH }
+					37 = { add_claim_by = SFH }
+					38 = { add_claim_by = SFH }
+					54 = { add_claim_by = SFH }
+				}
+				if = {
+					limit = { SFH = { has_country_flag = SFH_expansion_route_3 } }
+					70 = { add_claim_by = SFH }
+					59 = { add_claim_by = SFH }
+					60 = { add_claim_by = SFH }
+					100 = { add_claim_by = SFH }
+					366 = { add_claim_by = SFH }
+					65 = { add_claim_by = SFH }
+					99 = { add_claim_by = SFH }
+					96 = { add_claim_by = SFH }
+					103 = { add_claim_by = SFH }
+					104 = { add_claim_by = SFH }
+					102 = { add_claim_by = SFH }
+				}
+			}
+		}
+	}
+	SFH_demand_cliamed_territories = {		#索取宣称领土
+
+		icon = generic_civil_support
+
+		available = {}
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = SFH
+				any_owned_state = {
+					is_claimed_by = SFH
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 9999
+		}
+
+		complete_effect = {
+			FROM = {
+				every_owned_state = {
+					if = {
+						limit = { OR = { is_claimed_by = SFH is_core_of = SFH } }
+						transfer_state_to = SFH
+					}
+				}
+			}
+		}
+	}
+}
+
+SFH_aftergame_decisions = {
+	SFH_send_great_war = {		#发动第二次东巴大战
+
+		icon = generic_civil_support
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			if = {
+				limit = { WOM = { exists = yes } }
+				declare_war_on = {
+					target = WOM
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { PEO = { exists = yes } }
+				declare_war_on = {
+					target = PEO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { ARO = { exists = yes } }
+				declare_war_on = {
+					target = ARO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { NCD = { exists = yes } }
+				declare_war_on = {
+					target = NCD
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { CLD = { exists = yes } }
+				declare_war_on = {
+					target = CLD
+					type = annex_everything
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=180
+	name="STATE_180"
+
+	resources = {
+		steel = 48
+		aluminium = 6
+		tungsten = 6
+		magic_crystal = 12
+	}
+
+	history={
+		owner = DIF
+		add_core_of = DIF
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14977 3
+		}
+	}
+
+	provinces={
+		1561 5160 8467 8975 11329 12127 14977 15081 15107 15127 15231 15302 15354 15365 15409 15521 
+	}
+	manpower=260000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

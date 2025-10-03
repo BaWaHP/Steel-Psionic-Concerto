@@ -1,0 +1,239 @@
+can_core_nation_through_compliance = {	#可核心化占领
+	any_of_scopes = {
+		array = potential_cores
+		original_tag = FROM
+	}
+	FROM = {
+		NOT = { has_country_flag = can_core_nation_through_compliance_tr }	#纯粹tt
+		hidden_trigger = {
+			any_core_state = {
+				custom_trigger_tooltip = {
+					if = {
+						limit = { NOT = { is_core_of = ROOT } }
+						NOT = {
+							is_in_array = {
+								array = ROOT.unpotential_cores
+								value = THIS.id
+							}
+						}
+					}
+					else = {
+						always = no
+					}
+				}
+			}
+		}
+	}
+}
+
+can_core_nation_through_compliance_state_ROOT = {
+	NOT = { is_core_of = ROOT }
+	any_of_scopes = {
+		array = core_countries
+		is_in_array = {
+			ROOT.potential_cores = original_tag
+		}
+	}
+}
+
+cannot_core_state_through_compliance_state_ROOT = {
+	NOT = {
+		is_in_array = {
+			array = ROOT.unpotential_cores
+			value = THIS.id
+		}
+	}
+}
+
+SPC_generic_region_trigger_1 = {	#远乡任意吃鸡政权
+	OR = {
+		#南远乡
+		tag = SFH tag = SFR tag = QTA
+		#北远乡
+		tag = NFH tag = FFH tag = AFH tag = MSA
+		#西北
+		tag = NWF
+	}
+}
+
+SPC_generic_region_trigger_1_1 = {	#南远乡任意吃鸡政权
+	OR = {
+		#南远乡
+		tag = SFH tag = SFR tag = QTA
+	}
+}
+
+SPC_generic_region_trigger_1_2 = {	#北远乡任意吃鸡政权
+	OR = {
+		#北远乡
+		tag = NFH tag = FFH tag = AFH tag = MSA
+	}
+}
+
+SPC_generic_region_trigger_1_3 = {	#北远乡任意吃鸡政权
+	OR = {
+		#西北
+		tag = NWF
+	}
+}
+
+SPC_generic_region_trigger_2 = {	#联合王国任意吃鸡政权
+	OR = {
+		#皮奥瑞亚
+		tag = PEO
+		#西莉迪亚
+		tag = CLD tag = NCD tag = NCL
+		#奥罗日亚
+		tag = ARO tag = ALR
+	}
+}
+
+SPC_generic_region_trigger_2_1 = {	#奥罗日亚任意吃鸡政权
+	OR = {
+		tag = ARO tag = ALR
+	}
+}
+
+SPC_generic_region_trigger_2_2 = {	#西莉迪亚任意吃鸡政权
+	OR = {
+		tag = CLD tag = NCD tag = NCL
+	}
+}
+
+SPC_generic_region_trigger_2_3 = {	#皮奥瑞亚任意吃鸡政权
+	OR = {
+		tag = PEO
+	}
+}
+
+SPC_generic_region_trigger_3 = {	#沃姆任意吃鸡政权
+	OR = {
+		#沃姆
+		tag = WOM tag = IRC tag = PRF tag = SLR
+		#戈尔维亚
+		tag = GLV tag = KOD tag = RMN
+		#阿瑞萨
+		tag = ARZ
+		#斯布里奇
+		tag = SBG tag = HCB tag = HLD
+		#大公国
+		tag = TPG
+	}
+}
+
+SPC_generic_region_trigger_3_1 = {	#沃姆（小）任意吃鸡政权
+	OR = {
+		#沃姆
+		tag = WOM tag = IRC tag = PRF tag = SLR
+	}
+}
+
+SPC_generic_region_trigger_3_2 = {	#戈尔维亚任意吃鸡政权
+	OR = {
+		#戈尔维亚
+		tag = GLV tag = KOD tag = RMN
+	}
+}
+
+SPC_generic_region_trigger_3_3 = {	#斯布里奇任意吃鸡政权
+	OR = {
+		#斯布里奇
+		tag = SBG tag = HCB tag = HLD
+	}
+}
+
+SPC_generic_region_trigger_3_4 = {	#大公国任意吃鸡政权
+	OR = {
+		#大公国
+		tag = TPG
+	}
+}
+
+SPC_generic_region_trigger_3_5 = {	#阿瑞萨任意吃鸡政权
+	OR = {
+		#大公国
+		tag = ARZ
+	}
+}
+
+SPC_generic_region_trigger_50 = {	#特尼安任意吃鸡政权
+	OR = { 
+		#北
+		tag = LNR tag = RLN 
+		#南
+		tag = KOA 
+	}
+}
+
+SPC_generic_region_trigger_51 = {	#南巴任意政权
+	OR = { 
+		#特尼安
+		SPC_generic_region_trigger_50 = yes
+		#南巴
+		tag = RSB tag = RSU tag = RRF tag = TCW tag = KTL tag = ROK
+		#二元王国
+		tag = HGL tag = AST tag = BSK
+		#顿伏茨克
+		tag = GDD tag = FCR
+		#女大公
+		tag = UPV
+	}
+}
+
+SPC_generic_region_trigger_52 = {	#鲁萨尔任意吃鸡政权
+	OR = { 
+		tag = RSU tag = RRF
+	}
+}
+
+SPC_generic_region_trigger_100 = {	#提特兰任意政权
+	OR = { 
+		tag = ROT
+		tag = IMC
+
+		#蒙特
+		tag = MTV tag = WDR tag = MCS tag = LCM
+
+		tag = KDK
+		tag = VLF
+		tag = MGC
+	}
+}
+
+SPC_generic_region_trigger_102 = {	#蒙特任意政权
+	OR = { 
+		tag = MTV tag = WDR tag = MCS tag = LCM
+	}
+}
+
+SPC_generic_region_trigger_150 = {	#七河任意政权
+	OR = { 
+		tag = ZHE
+
+		tag = TEG tag = SIN tag = SHA
+		tag = BOT tag = CHE
+
+		tag = WUN
+
+		tag = WCH
+	}
+}
+
+SPC_generic_region_trigger_200 = {	#中巴任意政权
+	OR = {
+		#中巴联盟
+		tag = CBL tag = OPH tag = FWJ tag = RCC tag = MNT tag = CBI tag = FEJ tag = VGI tag = AYL tag = CLA
+	}
+}
+
+SPC_generic_region_trigger_250 = {	#北中巴任意政权
+	OR = {
+		tag = UTM tag = IPK tag = TCL tag = BCC tag = NLL tag = EOM
+	}
+}
+
+SPC_generic_region_trigger_251 = {	#雀鸟任意政权
+	OR = {
+		tag = NOH tag = OLA tag = OHL
+	}
+}

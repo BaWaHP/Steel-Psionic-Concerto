@@ -1,0 +1,110 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_AST_startup_effect = {
+	if = {
+		limit = {
+			tag = AST
+		}
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = normal_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_basic_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_basic_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_suderian
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_pluralismm
+		add_ideas = SXP_recessing_policy
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 376
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 349
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 355
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 353
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 354
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+		}
+	}
+}

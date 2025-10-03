@@ -1,0 +1,31 @@
+
+state={
+	id=338
+	name="STATE_338"
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+			dockyard = 2
+			3765 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			3765 3 
+		}
+
+	}
+
+	provinces={
+		3765 20684 20738 
+	}
+	manpower=849300
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

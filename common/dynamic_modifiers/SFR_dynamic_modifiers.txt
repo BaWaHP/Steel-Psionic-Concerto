@@ -1,0 +1,88 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#人民之国
+SFR_nation_of_people_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_FIN_socialist_welfare
+	political_power_factor = SFR_nation_of_people_dm_ppf
+	monthly_population = SFR_nation_of_people_dm_mp
+}
+
+#红星照耀平京...
+SFR_red_star_over_capital = {
+	enable = { always = yes }
+	icon = GFX_idea_SOV_politicized_military_ccp_sov_compatibility
+	
+	conscription_factor = SFR_red_star_over_capital_cf
+	army_org_factor = SFR_red_star_over_capital_aof
+	stability_factor = SFR_red_star_over_capital_sf
+	political_power_factor = SFR_red_star_over_capital_ppf
+	army_org_regain = SFR_red_star_over_capital_aor
+	production_factory_efficiency_gain_factor = SFR_red_star_over_capital_pfegf
+	production_speed_buildings_factor = SFR_red_star_over_capital_psbf
+	production_factory_max_efficiency_factor = SFR_red_star_over_capital_pfmef
+	monthly_population = SFR_red_star_over_capital_mp
+	global_building_slots_factor = SFR_red_star_over_capital_gbsf
+	consumer_goods_factor = SFR_red_star_over_capital_cgf
+	political_advisor_cost_factor = SFR_red_star_over_capital_pacf
+	industrial_capacity_factory = SFR_red_star_over_capital_icf
+	industrial_capacity_dockyard = SFR_red_star_over_capital_icd
+	state_science_development_monthly = SFR_red_star_over_capital_ssdm
+	state_magic_development_monthly = SFR_red_star_over_capital_smdm
+}
+
+#红色远乡宪法
+SFR_red_constitution_of_far_soviet = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_constitutional_guarantee
+	
+	stability_factor = SFR_red_constitution_of_far_soviet_sf
+	war_support_factor = SFR_red_constitution_of_far_soviet_wsf
+	political_power_factor = SFR_red_constitution_of_far_soviet_ppf
+	political_advisor_cost_factor = SFR_red_constitution_of_far_soviet_pacf
+	industrial_capacity_factory = SFR_red_constitution_of_far_soviet_icf
+	industrial_capacity_dockyard = SFR_red_constitution_of_far_soviet_icd
+	production_speed_buildings_factor = SFR_red_constitution_of_far_soviet_psbf
+	production_factory_efficiency_gain_factor = SFR_red_constitution_of_far_soviet_pfegf
+	consumer_goods_factor = SFR_red_constitution_of_far_soviet_cgf
+	research_speed_factor = SFR_red_constitution_of_far_soviet_rsf
+	drift_defence_factor = SFR_red_constitution_of_far_soviet_ddf
+	monthly_living_standard_development_process = SFR_red_constitution_of_far_soviet_mlsdp
+}
+
+#土地改革进行中
+SFR_land_reform_in_progress = {
+	enable = { always = yes }
+	icon = GFX_idea_new_economic_policy
+	
+	stability_factor = SFR_land_reform_in_progress_sf
+	political_power_factor = SFR_land_reform_in_progress_ppf
+	consumer_goods_factor = SFR_land_reform_in_progress_cgf
+	industrial_capacity_factory = SFR_land_reform_in_progress_icf
+	industrial_capacity_dockyard = SFR_land_reform_in_progress_icd
+	production_speed_buildings_factor = SFR_land_reform_in_progress_psbf
+}

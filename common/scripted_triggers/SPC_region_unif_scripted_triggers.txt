@@ -1,0 +1,79 @@
+SPC_generic_region_trigger_1_unif = {	#是统一远乡的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_1_unif_tr
+		SPC_generic_region_trigger_1 = yes
+		has_global_flag = SPC_region_unified_global_1
+	}
+}
+
+SPC_generic_region_trigger_2_unif = {	#是统一联合王国的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_2_unif_tr
+		SPC_generic_region_trigger_2 = yes
+		has_global_flag = SPC_region_unified_global_2
+	}
+}
+
+SPC_generic_region_trigger_3_unif = {	#是统一沃姆的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_unif_tr
+		SPC_generic_region_trigger_3 = yes
+		has_global_flag = SPC_region_unified_global_3
+	}
+}
+
+SPC_generic_region_trigger_4_unif = {	#是统一提特兰地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_4_unif_tr
+		SPC_generic_region_trigger_100 = yes
+		has_global_flag = SPC_region_unified_global_4
+	}
+}
+
+SPC_generic_region_trigger_5_unif = {	#是统一特尼安地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_5_unif_tr
+		SPC_generic_region_trigger_50 = yes
+		has_global_flag = SPC_region_unified_global_5
+	}
+}
+
+SPC_generic_region_trigger_6_unif = {	#是统一鲁萨尔地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_6_unif_tr
+		SPC_generic_region_trigger_52 = yes
+		has_global_flag = SPC_region_unified_global_6
+	}
+}
+
+SPC_generic_region_trigger_7_unif = {	#是统一全南巴地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_7_unif_tr
+		SPC_generic_region_trigger_51 = yes
+		has_global_flag = SPC_region_unified_global_7
+	}
+}
+
+SPC_generic_region_trigger_8_unif = {	#是统一戈尔维亚地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_8_unif_tr
+		SPC_generic_region_trigger_3_2 = yes
+		has_global_flag = SPC_region_unified_global_8
+	}
+}
+
+SPC_generic_region_trigger_9_unif = {	#是统一斯布里奇地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_9_unif_tr
+		SPC_generic_region_trigger_3_3 = yes
+		has_global_flag = SPC_region_unified_global_9
+	}
+}
+
+SPC_generic_region_trigger_10_unif = {	#是统一沃姆地区的任意势力
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_10_unif_tr
+		SPC_generic_region_trigger_3_1 = yes
+		has_global_flag = SPC_region_unified_global_10
+	}
+}

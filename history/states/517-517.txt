@@ -1,0 +1,30 @@
+state={
+	id=517
+	name="STATE_517"
+	resources = {
+		steel = 12
+	}
+	history = {
+		owner = UIS
+		add_core_of = UIS
+		buildings = {
+			infrastructure = 2
+			air_base = 2
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			8415 10
+		}
+		victory_points = {
+			7001 2
+		}
+	}
+	provinces={
+		7001 8185 8415 11299 13836 13863 13900 13961 14016 
+	}
+	manpower=3140000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

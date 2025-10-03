@@ -1,0 +1,117 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_CLD_startup_effect = {
+	if = {
+		limit = { tag = CLD }
+		###政府法案###
+		add_ideas = extensive_conscription
+		add_ideas = basic_training
+		add_ideas = low_economic_mobilisation
+		add_ideas = closed_economy
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = uncomfortable
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_nationalization
+		add_ideas = WP_limited_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_joining_the_army
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_race_euqality
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它杂项###
+		country_event = {
+			id = CLD.9
+			days = 20
+		}
+		set_variable = { CLD_enemy_sabotage_mission_days = 14 }
+		set_variable = { CLD_enemy_sabotage_mission_level = 0 }
+		activate_mission = CLD_enemy_sabotage_mission
+		###控制省份对应普及度###
+		107 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}		
+		108 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }		
+		}		
+		109 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}		
+		110 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		111 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}
+		112 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}
+		113 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+		114 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}
+	}
+}

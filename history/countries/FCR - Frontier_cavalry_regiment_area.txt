@@ -1,0 +1,83 @@
+﻿capital = 373
+
+oob = "FCR"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 1
+	worldunion_democrat = 1
+	liberal_republican = 5
+	conservative_republican = 5
+	authoritarian_republican = 12
+	national_socialist = 0
+	authoritarian_nationalism = 16
+	paternal_autocrat = 60
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mobile_warfare = 1
+}
+
+###顾问###
+recruit_character = FCR_fras_kona
+recruit_character = FCR_chen_yue
+recruit_character = FCR_benito_aconton
+recruit_character = FCR_skandru_alrisis
+recruit_character = FCR_manny_strona_matteoda
+recruit_character = FCR_gru_strahmann
+recruit_character = FCR_ricolo_mafti
+recruit_character = FCR_wagon_romanov
+recruit_character = FCR_edmund_smirnov
+recruit_character = FCR_daniel_garcia
+recruit_character = FCR_pablo_martin
+recruit_character = FCR_hartless_desport
+recruit_character = FCR_pandanil_anderson
+
+###开局顾问###
+activate_advisor = FCR_skandru_alrisis_idea
+activate_advisor = FCR_hartless_desport_idea
+activate_advisor = FCR_manny_strona_matteoda_idea
+
+add_ideas = {
+	FCR_three_heroes
+	FCR_new_cavalry
+	FCR_ravaged_land
+	FCR_assistance_from_krayano
+	FCR_bastard_peace
+}

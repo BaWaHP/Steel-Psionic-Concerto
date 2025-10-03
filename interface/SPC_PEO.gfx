@@ -1,0 +1,53 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_PEO_KongSinian"
+		texturefile = "gfx/leaders/PEO/KongSinian.png"
+	}
+	spriteType = {
+		name = "GFX_PEO_rick_heckler"
+		texturefile = "gfx/leaders/PEO/rick_heckler.png"
+	}
+	spriteType = {
+		name = "GFX_PEO_BoWei"
+		texturefile = "gfx/leaders/PEO/BoWei.png"
+	}
+	spriteType = {
+		name = "GFX_PEO_BoFangzhou"
+		texturefile = "gfx/leaders/PEO/BoFangzhou.png"
+	}
+	spriteType = {
+		name = "GFX_PEO_barry_kimyao"
+		texturefile = "gfx/leaders/PEO/barry_kimyao.png"
+	}
+	spriteType = {
+		name = "GFX_PEO_Huang_Xizhong"
+		texturefile = "gfx/leaders/PEO/Huang_Xizhong.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_PEO_Huang_Xizhong"
+		texturefile = "gfx/advisors/PEO/Huang_Xizhong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_PEO_rick_heckler"
+		texturefile = "gfx/advisors/PEO/rick_heckler.png"
+	}
+	###GUI##
+	spriteType = {
+		name = "GFX_decision_category_PEO_congress_graph"
+		texturefile = "gfx/interface/decisions/decision_category_usa_congress_senate_ui.dds"
+		noOfFrames = 21
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_PEO_shield_of_republic_unit"
+		texturefile = "gfx/interface/traits/trait_unyielding_defender.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_PEO_military_reform_implementers_unit"
+		texturefile = "gfx/interface/traits/trait_skilled_staffer.dds"
+		legacy_lazy_load = no
+	}
+}

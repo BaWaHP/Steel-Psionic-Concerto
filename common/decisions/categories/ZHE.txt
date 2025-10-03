@@ -1,0 +1,50 @@
+ZHE_interest_group_decision_category = {		#利益集团
+	#picture = 
+	allowed = { tag = ZHE }
+	allowed = { 
+		tag = ZHE 
+		always = no
+	}
+	visible_when_empty = yes
+	priority = 10
+}
+
+ZHE_social_experiment_decision_category = {		#“社会实验”
+	#picture = 
+	allowed = { tag = ZHE }
+	visible = {
+		tag = ZHE
+		has_completed_focus = ZHE_social_experiment
+		always = no
+	}
+	priority = 10
+}
+
+ZHE_arms_trading_decision_category = {		#七河制造
+	#picture = GFX_decision_cat_picture_naval_treaties
+	allowed = {
+		always = no
+	}
+	visible = {
+		#ZHE = {
+		#	exists = yes
+		#}
+		#OR = {
+		#	tag = ZHE
+		#	NOT = {
+		#		has_war_with = ZHE
+		#	}
+		#}
+		always = no
+	}
+	visible_when_empty = yes
+	priority = -114514
+}
+
+ZHE_progressive_disease_decision_category = {		#病情进展
+	icon = GFX_decision_category_generic_crisis
+	#picture = 
+	allowed = { tag = ZHE }
+	visible = { tag = ZHE }
+	priority = 10
+}

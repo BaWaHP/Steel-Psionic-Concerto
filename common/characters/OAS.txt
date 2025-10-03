@@ -1,0 +1,22 @@
+characters={
+	OAS_risa_silvertail = {		#瑞纱·银尾
+		name = OAS_risa_silvertail
+		portraits = {
+			civilian = {
+				large="GFX_OAS_risa_silvertail"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_OAS_risa_silvertail"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = OAS_risa_silvertail_desc
+			ideology = social_democrat
+			traits = { OAS_refugee_leaders }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,35 @@
+SPC_generic_sekeleton_decision_category = {
+	OAS_take_SOT_after_it_becomes_useless = {		#吃SOT
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = OAS }
+
+		available = {
+			OR = {
+				has_global_flag = SPC_region_unified_global_11
+				AND = {
+					CBI = { exists = no }
+					CBL = { exists = no }
+				}
+				date > 2000.6.1
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			annex_country = {
+				target = SOT
+				transfer_troops = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+SPC_generic_national_reunification_decision_category = {
+
+}
+

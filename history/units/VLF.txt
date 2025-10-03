@@ -1,0 +1,71 @@
+﻿division_template = {
+	name = "瓦莱菲奥丽塔射击军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "瓦莱菲奥丽塔近卫军"
+
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "王室卫队"
+		location = 18722
+		division_template = "瓦莱菲奥丽塔射击军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "米乌斯地方军第一军"
+		location = 6541
+		division_template = "瓦莱菲奥丽塔射击军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "米乌斯地方军第二军"
+		location = 2593
+		division_template = "瓦莱菲奥丽塔射击军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "米乌斯地方军第三军"
+		location = 2593
+		division_template = "瓦莱菲奥丽塔射击军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巴塔乌谢克地方军"
+		location = 18266
+		division_template = "瓦莱菲奥丽塔近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "内修斯地方军"
+		location = 18824
+		division_template = "瓦莱菲奥丽塔近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}

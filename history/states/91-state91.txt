@@ -1,0 +1,33 @@
+
+state={
+	id=91
+	name="STATE_91"
+
+	resources = {
+		steel = 2
+	}
+
+	history={
+		owner = HCB
+		add_core_of = HCB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			2429 15
+		}
+		victory_points = {
+			6120 5
+		}
+	}
+
+	provinces={
+		1444 1758 2429 3660 6120 11269 16227 16297 16327 16363 16517 16576 16691 16825 
+	}
+	manpower=2100000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

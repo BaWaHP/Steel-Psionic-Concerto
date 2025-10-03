@@ -1,0 +1,68 @@
+SPC_generic_sekeleton_decision_category = {
+	GLV_generic_war_decision = {		#戈尔维亚通用吃鸡决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3_2 = yes }
+
+		available = {
+			date > 2001.6.1
+			has_war = no
+			FROM = { is_neighbor_of = ROOT }
+		}
+
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				SPC_generic_region_trigger_3_2 = yes
+				NOT = { tag = ROOT }
+			}
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			FROM = {
+				add_to_ROOT_potential_cores = yes
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+SPC_generic_national_reunification_decision_category = {
+	GLV_reunification_decision = {		#戈尔维亚统一决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3_2 = yes }
+
+		available = {
+			SPC_generic_region_trigger_3_2_control = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 200
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_3_2
+				if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_core_of = ROOT
+				}
+			}
+			set_global_flag = SPC_region_unified_global_8
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+	}
+}
+

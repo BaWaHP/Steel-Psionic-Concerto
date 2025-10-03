@@ -1,0 +1,7 @@
+SPC_war_exhaustion_dynamic_modifier = {
+	enable = { SPC_war_exhaustion_eligible = yes }
+	stability_factor = minus_war_exhaustion
+	political_power_factor = minus_war_exhaustion
+	surrender_limit = minus_halfed_war_exhaustion
+	monthly_living_standard_development_process = rounded_minus_tenfold_war_exhaustion
+}

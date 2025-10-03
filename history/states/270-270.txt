@@ -1,0 +1,33 @@
+
+state={
+	id=270
+	name="STATE_270"
+
+	resources = {
+		aluminium = 12
+		magic_crystal = 24
+	}
+
+	history={
+		owner = NLL
+		add_core_of = NLL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			16010 5
+		}
+		victory_points = {
+			4809 3
+		}
+	}
+
+	provinces={
+		380 4809 5151 5572 7073 11718 15679 15716 15856 15919 16010 16030 
+	}
+	manpower=240000
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

@@ -1,0 +1,956 @@
+﻿###########################
+# Ace pilots Events
+###########################
+
+add_namespace = PEO
+
+country_event = {	#委员会的争吵
+	id = PEO.1
+	title = PEO.1.t
+	desc = PEO.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.1.a
+		add_political_power = -25	
+	}
+}
+
+country_event = {	#大鸣放
+	id = PEO.2
+	title = PEO.2.t
+	desc = PEO.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.2.a
+		add_stability = 0.02
+		add_political_power = 50
+	}
+}
+
+country_event = {	#联席会议
+	id = PEO.3
+	title = PEO.3.t
+	desc = PEO.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.3.a
+	}
+}
+
+country_event = {	#邻居
+	id = PEO.4
+	title = PEO.4.t
+	desc = PEO.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.4.a
+	}
+}
+
+country_event = {	#演讲
+	id = PEO.5
+	title = PEO.5.t
+	desc = PEO.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.5.a
+	}
+}
+
+country_event = {	#企业，工人
+	id = PEO.6
+	title = PEO.6.t
+	desc = PEO.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.6.a
+		add_stability = 0.02
+		add_political_power = 10
+	}
+}
+
+country_event = {	#特权
+	id = PEO.7
+	title = PEO.7.t
+	desc = PEO.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.7.a
+	}
+}
+
+country_event = {	#法院
+	id = PEO.8
+	title = PEO.8.t
+	desc = PEO.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = PEO.8.a
+		add_timed_idea = {
+			idea = PEO_battered_financial_order
+			days = 150
+		}
+	}
+}
+
+
+country_event = {  #审判
+	id = PEO.101
+    title = PEO.101.t
+    desc = PEO.101.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.101.a
+		add_manpower = -1
+	}
+}
+
+country_event = {  #共和之夏
+	id = PEO.102
+    title = PEO.102.t
+    desc = PEO.102.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.102.a	
+	}
+}
+
+country_event = {   #例会
+	id = PEO.103
+    title = PEO.103.t
+    desc = PEO.103.d
+	fire_only_once = yes
+	is_triggered_only = yes
+   
+    option = { 
+        name = PEO.103.a
+		add_political_power = 25
+			
+	}
+}
+
+country_event = {  #演讲
+	id = PEO.104
+    title = PEO.104.t
+    desc = PEO.104.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.104.a	
+	}
+}
+
+country_event = {    #森林兄弟
+	id = PEO.105
+    title = PEO.105.t
+    desc = PEO.105.d
+	fire_only_once = yes
+	is_triggered_only = yes   
+
+    option = { 
+        name = PEO.105.a	
+	}
+}
+
+country_event = {  #远洋之心
+	id = PEO.106
+    title = PEO.106.t
+    desc = PEO.106.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.106.a
+		add_manpower = -150
+		add_political_power = 150	
+	}
+}
+
+country_event = {    #晚餐
+	id = PEO.107
+    title = PEO.107.t
+    desc = PEO.107.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.107.a	
+	}
+}
+
+country_event = {    #圣辰节
+	id = PEO.108
+    title = PEO.108.t
+    desc = PEO.108.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+    option = { 
+        name = PEO.108.a	
+	}
+}
+
+country_event = {    #工厂，工人和他们美好的未来
+	id = PEO.109
+    title = PEO.109.t
+    desc = PEO.109.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+    option = { 
+        name = PEO.109.a	
+	}
+}
+
+country_event = {  #《1999年皮奥瑞亚议会选举》
+	id = PEO.150
+    title = PEO.150.t
+    desc = PEO.150.d
+	#picture = 
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.150.a
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.1
+		}
+		country_event = PEO.151
+	}
+
+	option = { 
+        name = PEO.150.b
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.2
+		}
+		country_event = PEO.152
+	}
+}
+
+country_event = {  #《社会党第17届党代会》
+	id = PEO.151
+    title = PEO.151.t
+    desc = PEO.151.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.151.a
+		set_politics = {
+			ruling_party = worldunion_socialist
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = { 
+        name = PEO.151.b
+		set_politics = {
+			ruling_party = worldunion_democrat
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		set_country_flag = PEO_phase_one_over
+		set_country_flag = PEO_election_Bowei_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {  #《共和党十八届四中全会》
+	id = PEO.152
+    title = PEO.152.t
+    desc = PEO.152.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.152.a
+		set_politics = {
+			ruling_party = liberal_republican
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.05
+		}
+	}
+
+	option = { 
+        name = PEO.152.b
+		set_politics = {
+			ruling_party = conservative_republican
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {  #国情咨文
+	id = PEO.200
+    title = PEO.200.t
+    desc = PEO.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.200.a
+		add_political_power = 50
+	}
+}
+
+country_event = {  #风景独好
+	id = PEO.201
+    title = PEO.201.t
+    desc = PEO.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.201.a
+		country_event = {
+			id = PEO.205
+			days = 15
+		}
+	}
+}
+
+country_event = {  #孔斯年的坚持
+	id = PEO.202
+    title = PEO.202.t
+    desc = PEO.202.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.202.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {  #共和国宫的晚宴
+	id = PEO.203
+    title = PEO.203.t
+    desc = PEO.203.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.203.a
+	}
+}
+
+country_event = {  #破门而入
+	id = PEO.204
+    title = PEO.204.t
+    desc = PEO.204.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.204.a
+	}
+}
+
+country_event = {  #自由贸易？
+	id = PEO.205
+    title = PEO.205.t
+    desc = PEO.205.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.205.a
+		complete_national_focus = PEO_stating_free_trade
+		country_event = {
+			id = PEO.206
+			days = 30
+		}
+	}
+
+	option = { 
+        name = PEO.205.b
+		complete_national_focus = PEO_peo_first
+		country_event = {
+			id = PEO.206
+			days = 30
+		}
+	}
+}
+
+country_event = {  #愁坐忧城
+	id = PEO.206
+    title = PEO.206.t
+    desc = PEO.206.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.206.a
+		complete_national_focus = PEO_support_partial_requests
+	}
+
+	option = { 
+        name = PEO.206.b
+		complete_national_focus = PEO_enact_strict_laws
+	}
+}
+
+country_event = {  #名单
+	id = PEO.207
+    title = PEO.207.t
+    desc = PEO.207.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.207.a
+		hidden_effect = {
+			PEO_LiHaisheng = { remove_advisor_role = { slot = political_advisor } }
+			PEO_oberst_chris = { remove_advisor_role = { slot = political_advisor } }
+			PEO_eberhardt_ford = { remove_advisor_role = { slot = political_advisor } }
+			PEO_kovner_schreiting = { remove_advisor_role = { slot = political_advisor } }
+			PEO_Obstin_Jolson = { remove_advisor_role = { slot = political_advisor } }
+			PEO_rick_heckler = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_rick_heckler_idea
+						desc = PEO_rick_heckler_idea_desc
+						traits = { PEO_watcher }
+					}
+				}
+			}
+			PEO_LiFangde = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_LiFangde_idea
+						desc = PEO_LiFangde_idea_desc
+						traits = { PEO_popular_communist }
+					}
+				}
+			}
+			PEO_ZhangWhenhong = {
+				add_advisor_role = {
+					advisor = {
+						cost = 200
+						slot = political_advisor
+						idea_token = PEO_ZhangWhenhong_idea
+						desc = PEO_ZhangWhenhong_desc
+						traits = { PEO_multiple_talents }
+					}
+				}
+			}
+			PEO_john_adderley = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_john_adderley_idea
+						desc = PEO_john_adderley_desc
+						traits = { captain_of_industry }
+					}
+				}
+			}
+			PEO_donald_warren = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_donald_warren_idea
+						desc = PEO_donald_warren_desc
+						traits = { secretary_education }
+					}
+				}
+			}
+			PEO_SongRen = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_donald_warren_idea
+						desc = PEO_SongRen_desc
+						traits = { PEO_modernized_agriculture_promoter }
+					}
+				}
+			}
+			PEO_anna_patrick = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_anna_patrick_idea
+						desc = PEO_anna_patrick_desc
+						traits = { armaments_organizer }
+					}
+				}
+			}
+			PEO_ZhangWu = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = political_advisor
+						idea_token = PEO_ZhangWu_idea
+						desc = PEO_ZhangWu_desc
+						traits = { financial_expert }
+					}
+				}
+			}
+			PEO_KongSinian = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = high_command
+						idea_token = PEO_KongSinian_idea
+						desc = PEO_KongSinian_idea_desc
+						traits = { PEO_shield_of_republic }
+					}
+				}
+			}
+			PEO_Huang_Xizhong = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = army_chief
+						idea_token = PEO_KongSinian_idea
+						desc = PEO_KongSinian_idea_desc
+						traits = { army_artillery_2 }
+					}
+				}
+			}
+			PEO_kankanid_sowodnyu = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = navy_chief
+						idea_token = PEO_kankanid_sowodnyu_idea
+						desc = PEO_kankanid_sowodnyu_desc
+						traits = { PEO_sharks_in_sea_of_lys }
+					}
+				}
+			}
+			PEO_lee_melrose = {
+				add_advisor_role = {
+					advisor = {
+						cost = 150
+						slot = air_chief
+						idea_token = PEO_lee_melrose_idea
+						desc = PEO_lee_melrose_desc
+						traits = { PEO_wing_of_motherland }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {  #左汀原的蓝星条旗
+	id = PEO.250
+    title = PEO.250.t
+    desc = PEO.250.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.250.a
+	}
+}
+
+country_event = {  #皮奥瑞亚的援助
+	id = PEO.251
+    title = PEO.251.t
+    desc = PEO.251.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.251.a
+	}
+}
+
+country_event = {  #丑陋的皮奥瑞亚人
+	id = PEO.252
+    title = PEO.252.t
+    desc = PEO.252.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.252.a
+	}
+}
+
+country_event = {  #第一期
+	id = PEO.253
+    title = PEO.253.t
+    desc = PEO.253.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.253.a
+	}
+}
+
+country_event = {  #幽灵电台
+	id = PEO.254
+    title = PEO.254.t
+    desc = PEO.254.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.254.a
+	}
+}
+
+country_event = {  #人人喜欢的乔
+	id = PEO.255
+    title = PEO.255.t
+    desc = PEO.255.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.255.a
+	}
+}
+
+country_event = {  #蓝星旗飘扬
+	id = PEO.256
+    title = PEO.256.t
+    desc = PEO.256.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.256.a
+	}
+}
+
+country_event = {  #丑陋的工作
+	id = PEO.257
+    title = PEO.257.t
+    desc = PEO.257.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.257.a
+	}
+}
+
+country_event = {  #如何贿赂皮奥瑞亚小官
+	id = PEO.258
+    title = PEO.258.t
+    desc = PEO.258.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.258.a
+	}
+}
+
+country_event = {  #代价
+	id = PEO.259
+    title = PEO.259.t
+    desc = PEO.259.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.259.a
+		add_timed_idea = {
+			idea = PEO_gov_funded_surveys
+			days = 60
+		}
+	}
+}
+
+country_event = {  #丑陋的旅行
+	id = PEO.260
+    title = PEO.260.t
+    desc = PEO.260.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.260.a
+	}
+}
+
+country_event = {  #第204号总理行政令
+	id = PEO.261
+    title = PEO.261.t
+    desc = PEO.261.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.261.a
+	}
+}
+
+country_event = {  #皮奥瑞亚收紧边防政策
+	id = PEO.262
+    title = PEO.262.t
+    desc = PEO.262.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+    option = { 
+        name = PEO.262.a
+	}
+}
+
+country_event = {  #赢了面子，输了里子
+	id = PEO.263
+    title = PEO.263.t
+    desc = PEO.263.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.263.a
+	}
+}
+
+country_event = {  #桑匪怎么越剿越多？
+	id = PEO.264
+    title = PEO.264.t
+    desc = PEO.264.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.264.a
+	}
+}
+
+country_event = {  #第2号联邦教育行政令
+	id = PEO.265
+    title = PEO.265.t
+    desc = PEO.265.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.265.a
+	}
+}
+
+country_event = {  #民主化的终结
+	id = PEO.1000
+    title = PEO.1000.t
+    desc = PEO.1000.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.1000.a
+		custom_effect_tooltip = PEO.1000.a.tt
+		set_politics = { ruling_party = paternal_autocrat }
+		remove_country_leader_role = {
+			character = PEO_LuGuiyue
+			ideology = absolute_monarchy
+		}
+		PEO_KongSinian = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = military_dictatorship
+					expire = "3000.1.1.1"
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = PEO_paternal_autocrat_party_1_long
+			name = PEO_paternal_autocrat_party_1
+		}
+		country_event = {
+			id = PEO.1001
+			days = 3
+		}
+	}
+}
+
+country_event = {  #结局
+	id = PEO.1001
+    title = PEO.1001.t
+    desc = PEO.1001.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.1001.a
+	}
+}
+
+country_event = {  #非常质询
+	id = PEO.1002
+    title = PEO.1002.t
+    desc = PEO.1002.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+        name = PEO.1002.a
+		trigger = {
+			OR = {
+				has_political_power > 149
+				has_stability > 0.25
+			}
+		}
+		custom_effect_tooltip = PEO.1002.a.tt
+		add_days_mission_timeout = {
+			mission = PEO_people_angry_at_emgerncy
+			days = 180
+		}
+		activate_mission = PEO_special_inquiry_from_congress
+	}
+
+	option = { 
+        name = PEO.1002.b
+		trigger = {
+			OR = {
+				has_political_power < 150
+				has_stability < 0.26
+			}
+		}
+		custom_effect_tooltip = PEO.1002.b.tt
+		if = {
+			limit = { has_government = worldunion_democrat }
+			swap_ideas = {
+				remove_idea = PEO_national_emergency_act
+				add_idea = PEO_third_republic_constitution_mid_left
+			}
+		}
+	}
+}
+
+add_namespace = PEONews
+
+news_event = {
+	id = PEONews.1	#中左派在皮奥瑞亚执政
+	title = PEONews.1.t
+	desc = PEONews.1.d
+	picture = GFX_news_event_generic_15
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = PEONews.1.a
+	}
+}

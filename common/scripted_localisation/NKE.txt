@@ -1,0 +1,59 @@
+defined_text = {
+	name = GetNKUName
+	text = {
+		trigger = {
+			has_country_flag = NKE_national_university_renamed
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_RENAMED_NAME
+	}
+	text = {
+		trigger = {
+			NOT = { has_country_flag = NKE_national_university_renamed }
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_NAME
+	}
+}
+defined_text = {
+	name = GetNKUQuality
+	text = {
+		trigger = {
+			check_variable = { NKE_national_university_quality = -4 }
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_QUALITY_0
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = -3 }
+				check_variable = { NKE_national_university_quality = -2 }
+			}
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_QUALITY_1
+	}
+	text = {
+		trigger = {
+			OR = {
+				NOT = { has_variable = NKE_national_university_quality }
+				check_variable = { NKE_national_university_quality = -1 }
+				check_variable = { NKE_national_university_quality = 0 }
+				check_variable = { NKE_national_university_quality = 1 }
+			}
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_QUALITY_2
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = 2 }
+				check_variable = { NKE_national_university_quality = 3 }
+			}
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_QUALITY_3
+	}
+	text = {
+		trigger = {
+			check_variable = { NKE_national_university_quality = 4 }
+		}
+		localization_key = NKE_NATIONAL_UNIVERSITY_QUALITY_4
+	}
+}

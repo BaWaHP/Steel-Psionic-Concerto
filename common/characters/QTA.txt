@@ -1,0 +1,30 @@
+characters={
+	QTA_QingTian = {		#“青天”
+		name = QTA_QingTian
+		portraits = {
+			civilian = {
+				large="GFX_QTA_QingTian"
+				small="GFX_idea_QTA_QingTian"
+			}
+			army = {
+				large="GFX_QTA_QingTian"
+				small="GFX_idea_QTA_QingTian"
+			}
+		}
+		country_leader = {
+			desc = "QTA_QingTian_desc"
+			ideology = military_dictatorship
+			traits = { the_mysterious_one }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { offensive_doctrine }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+}

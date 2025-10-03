@@ -1,0 +1,38 @@
+state={
+	id=220
+	name="STATE_220"
+
+	resources = {
+		steel = 4
+		tungsten = 4
+	}
+	
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 2
+			air_base = 4
+			11105 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			11105 3
+		}
+		victory_points = {
+			1965 1
+		}
+	}
+	
+	
+	provinces={
+		1965 3722 10151 11105 11350 21736 21739 
+	}
+	manpower=2300000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

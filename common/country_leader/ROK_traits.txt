@@ -1,0 +1,20 @@
+leader_traits = {
+
+	ROK_red_parent = {		#“红色家长”
+		random = no
+		
+		political_power_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	ROK_pigeon_of_truth = {		#“真理的白鸽”
+		random = no
+		
+		political_power_factor = 0.1
+		production_speed_industrial_complex_factor = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+}

@@ -1,0 +1,4716 @@
+﻿add_namespace = SFR
+
+country_event = {	#革命伊始…
+	id = SFR.1
+	title = SFR.1.t
+	desc = SFR.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.1.a
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+		SPC_living_standard_development_amount_up_2 = yes
+		SFR_front_unity_down_1 = yes
+		country_event = {
+			id = SFR.2
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.1.b
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 100
+		SFR_front_unity_up_3 = yes
+		country_event = {
+			id = SFR.2
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.1.c
+		add_tech_bonus = {
+			name = SPC_generic_bonus
+			category = infantry_weapons
+			category = infantry_uniforms
+			uses = 1
+			bonus = 0.5
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 800
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 400
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+		SFR_front_unity_down_1 = yes
+		country_event = {
+			id = SFR.2
+			days = 7
+		}
+	}
+}
+
+country_event = {	#…火光冲天的那一夜…
+	id = SFR.2
+	title = SFR.2.t
+	desc = SFR.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2.a
+		add_advisor_role = {
+			character = SFR_XuHongbo
+			advisor = {
+				slot = political_advisor
+				cost = 0
+				idea_token = SFR_XuHongbo_idea
+				traits = { SFR_revolutionary_party_patriarch }
+			}
+			activate = yes
+		}
+		add_tech_bonus = {
+			name = SPC_generic_bonus
+			category = industry
+			category = infantry_weapons
+			category = infantry_uniforms
+			category = artillery
+			uses = 3
+			bonus = 0.5
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.1
+		}
+		SFR_front_unity_up_3 = yes
+		SPC_research_development_amount_up_3 = yes
+		country_event = {
+			id = SFR.3
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.2.b
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 200
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 200
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			category = industry
+			uses = 1
+			bonus = 0.5
+		}
+		capital_scope = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		SPC_industrial_development_amount_up_2 = yes
+		SFR_front_unity_down_1 = yes
+		country_event = {
+			id = SFR.3
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.2.c
+		add_war_support = 0.05
+		add_manpower = 20000
+		division_template = {
+			name = "游击部队残部"
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				light_infantry = { x = 0 y = 3 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"游击部队残部\" division_template = \"游击部队残部\" start_experience_factor = 0.3 start_equipment_factor = 0.8"  
+				owner = SFR
+				count = 3
+			}
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.1
+		}
+		SFR_front_unity_down_1 = yes
+		country_event = {
+			id = SFR.3
+			days = 7
+		}
+	}
+}
+
+country_event = {	#…以及最后的结局
+	id = SFR.3
+	title = SFR.3.t
+	desc = SFR.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.3.a
+		capital_scope = {
+			add_manpower = 50000
+			add_extra_state_shared_building_slots = 1
+			add_resource = {
+				type = steel
+				amount = 4
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+			add_resource = {
+				type = aluminium
+				amount = 2
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+		SFR_front_unity_down_1 = yes
+	}
+
+	option = {
+		name = SFR.3.b
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 100
+		swap_ruler_traits = {
+			remove = SFR_tired_mediator
+			add = SFR_seasoned_mediator
+		}
+		SFR_front_unity_up_3 = yes
+	}
+
+	option = {
+		name = SFR.3.c
+		division_template = {
+			name = "革命党残部"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"革命党残部\" division_template = \"革命党残部\" start_experience_factor = 0.3 start_equipment_factor = 0.8"  
+				owner = SFR
+				count = 2
+			}
+		}
+		army_experience = 50
+		add_manpower = 10000
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+		SFR_front_unity_down_1 = yes
+	}
+}
+
+country_event = {	#坚如磐石之人
+	id = SFR.4
+	title = SFR.4.t
+	desc = SFR.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.4.a
+		custom_effect_tooltip = SFR.4.a.tt
+		hidden_effect = { country_event = { id = SFR.5 days = 5 } }
+	}
+}
+
+country_event = {	#失魂落魄之人
+	id = SFR.5
+	title = SFR.5.t
+	desc = SFR.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.5.a
+		custom_effect_tooltip = SFR.5.a.tt
+		hidden_effect = { country_event = { id = SFR.6 days = 5 } }
+	}
+}
+
+country_event = {	#革命的生命线
+	id = SFR.6
+	title = SFR.6.t
+	desc = SFR.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.6.a
+		custom_effect_tooltip = SFR.6.a.tt
+		hidden_effect = { country_event = { id = SFR.7 days = 5 } }
+	}
+}
+
+country_event = {	#阵线的生命线
+	id = SFR.7
+	title = SFR.7.t
+	desc = SFR.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.7.a
+		custom_effect_tooltip = SFR.7.a.tt
+		hidden_effect = { country_event = { id = SFR.8 days = 5 } }
+	}
+}
+
+country_event = {	#忠于革命，渴望复仇
+	id = SFR.8
+	title = SFR.8.t
+	desc = SFR.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.8.a
+		custom_effect_tooltip = SFR.8.a.tt
+	}
+}
+
+country_event = {	#再会
+	id = SFR.9
+	title = SFR.9.t
+	desc = SFR.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.9.a
+		SFR_front_unity_down_1 = yes
+	}
+
+	option = {
+		name = SFR.9.b
+		SFR_front_unity_up_1 = yes
+	}
+}
+
+country_event = {	#反对革命阵线
+	id = SFR.10
+	title = SFR.10.t
+	desc = SFR.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.10.a
+		complete_national_focus = SFR_support_left_opposition
+	}
+
+	option = {
+		name = SFR.10.b
+		complete_national_focus = SFR_support_right_opposition
+	}
+}
+
+country_event = {	#陈坚的日记
+	id = SFR.11
+	title = SFR.11.t
+	desc = SFR.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.11.a
+		custom_effect_tooltip = SFR.11.tt
+		add_stability = -0.02
+		if = {
+			limit = { has_completed_focus = SFR_support_right_opposition }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.05
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.01
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.01
+			}
+		}
+		hidden_effect = { country_event = { id = SFR.12 days = 14 } }
+	}
+}
+
+country_event = {	#张一心的信
+	id = SFR.12
+	title = SFR.12.t
+	desc = SFR.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.12.a
+		custom_effect_tooltip = SFR.12.tt
+		add_stability = -0.02
+		if = {
+			limit = { has_completed_focus = SFR_support_right_opposition }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.05
+			}
+		}
+		else = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.01
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.01
+			}
+		}
+	}
+}
+
+country_event = {	#会议中的演讲
+	id = SFR.13
+	title = SFR.13.t
+	desc = SFR.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.13.a
+		add_political_power = -10
+		SFR_front_unity_down_1 = yes
+	}
+
+	option = {
+		name = SFR.13.b
+		add_political_power = 20
+		capital_scope = { add_extra_state_shared_building_slots = 1 }
+		SFR_front_unity_down_2 = yes
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = -0.03
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.03
+		}
+	}
+}
+
+country_event = {	#秘密集结
+	id = SFR.14
+	title = SFR.14.t
+	desc = SFR.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.14.a
+		add_manpower = 2000
+		add_war_support = 0.02
+		SFR_front_unity_down_1 = yes
+	}
+}
+
+country_event = {	#小集会
+	id = SFR.15
+	title = SFR.15.t
+	desc = SFR.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.15.a
+		add_political_power = 30
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = SFR.15.b
+		add_war_support = 0.05
+		SFR_front_unity_down_2 = yes
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.1
+		}
+	}
+}
+
+country_event = {	#救济百姓
+	id = SFR.16
+	title = SFR.16.t
+	desc = SFR.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.16.a
+		add_stability = -0.05
+		add_political_power = 50
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.02
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.02
+		}
+		SFR_front_unity_down_3 = yes
+	}
+
+	option = {
+		name = SFR.16.b
+		add_war_support = 0.05
+		add_manpower = 1000
+		SFR_front_unity_down_1 = yes
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.08
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.08
+		}
+	}
+}
+
+country_event = {	#左与右之争吵
+	id = SFR.17
+	title = SFR.17.t
+	desc = SFR.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.17.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+		SFR_front_unity_down_1 = yes
+	}
+
+	option = {
+		name = SFR.17.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+		SFR_front_unity_down_1 = yes
+	}
+
+	option = {
+		name = SFR.17.c
+		add_stability = -0.1
+		add_war_support = -0.1
+		SFR_front_unity_down_3 = yes
+	}
+}
+
+country_event = {	#老友的再会
+	id = SFR.18
+	title = SFR.18.t
+	desc = SFR.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.18.a
+		add_war_support = 0.05
+		SPC_industrial_development_amount_up_1 = yes
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = SFR.18.b
+		add_stability = 0.05
+		SPC_living_standard_development_amount_up_1 = yes
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+	}
+}
+
+country_event = {	#安插内鬼
+	id = SFR.19
+	title = SFR.19.t
+	desc = SFR.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.19.a
+		add_manpower = 2000
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.02
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.02
+		}
+	}
+}
+
+country_event = {	#支持革命阵线
+	id = SFR.20
+	title = SFR.20.t
+	desc = SFR.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.20.a
+		complete_national_focus = SFR_unify_the_left
+	}
+
+	option = {
+		name = SFR.20.b
+		complete_national_focus = SFR_reinforce_leadership
+	}
+
+	option = {
+		name = SFR.20.c
+		complete_national_focus = SFR_re_enable_front_parliament
+	}
+}
+
+country_event = {	#会面
+	id = SFR.21
+	title = SFR.21.t
+	desc = SFR.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.21.a
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_manpower = 5000
+		}
+		add_political_power = -30
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.02
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.02
+		}
+	}
+
+	option = {
+		name = SFR.21.b
+		add_political_power = 20
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = -0.02
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.02
+		}
+	}
+}
+
+country_event = {	#我们的根基所在
+	id = SFR.22
+	title = SFR.22.t
+	desc = SFR.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.22.a
+		add_stability = 0.02
+		SPC_agricultural_development_amount_up_2 = yes
+		SPC_living_standard_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#一顿饱饭
+	id = SFR.23
+	title = SFR.23.t
+	desc = SFR.23.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.23.a
+		add_stability = 0.05
+		SPC_living_standard_development_amount_up_2 = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.03
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.03
+		}
+		SFR_front_unity_up_1 = yes
+	}
+}
+
+country_event = {	#清洗国际派？
+	id = SFR.24
+	title = SFR.24.t
+	desc = SFR.24.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.24.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+		SFR_front_unity_up_3 = yes
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.03
+		}
+	}
+
+	option = {
+		name = SFR.24.b
+		add_stability = 0.05
+		add_political_power = 50
+		SFR_front_unity_down_1 = yes
+	}
+}
+
+country_event = {	#关于境外与本土派系的辩论
+	id = SFR.25
+	title = SFR.25.t
+	desc = SFR.25.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.25.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+		SFR_front_unity_up_3 = yes
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.03
+		}
+	}
+
+	option = {
+		name = SFR.25.b
+		add_stability = 0.05
+		add_political_power = 50
+		SFR_front_unity_down_1 = yes
+	}
+}
+
+country_event = {	#大局为重
+	id = SFR.26
+	title = SFR.26.t
+	desc = SFR.26.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.26.a
+		add_political_power = -100
+		SFR_front_unity_up_1 = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#会议上的演讲
+	id = SFR.27
+	title = SFR.27.t
+	desc = SFR.27.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.27.a
+		add_political_power = 10
+		SFR_front_unity_up_1 = yes
+	}
+}
+
+country_event = {	#革命的军队
+	id = SFR.28
+	title = SFR.28.t
+	desc = SFR.28.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.28.a
+		add_war_support = 0.05
+		SFR_front_unity_up_1 = yes
+	}
+}
+
+country_event = {	#叛逆的军队
+	id = SFR.29
+	title = SFR.29.t
+	desc = SFR.29.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.29.a
+		add_war_support = -0.1
+		army_experience = 20
+		SPC_military_development_amount_up_3 = yes
+		add_timed_idea = {
+			idea = SFR_purge_army
+			days = 50
+		}
+	}
+
+	option = {
+		name = SFR.29.b
+		add_war_support = 0.05
+		army_experience = 10
+		SPC_military_development_amount_up_1 = yes
+	}
+}
+
+country_event = {	#调动部队
+	id = SFR.30
+	title = SFR.30.t
+	desc = SFR.30.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.30.a
+		add_manpower = 5000
+		SFR_front_unity_up_1 = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = SFR.30.b
+		add_war_support = 0.05
+		SFR_front_unity_up_1 = yes
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+	}
+}
+
+country_event = {	#论把相互厌恶的人塞到同一间房里…
+	id = SFR.31
+	title = SFR.31.t
+	desc = SFR.31.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.31.a
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = SFR.31.b
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
+		}
+	}
+}
+
+country_event = {	#喝茶
+	id = SFR.32
+	title = SFR.32.t
+	desc = SFR.32.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.32.a
+		add_political_power = 10
+		SFR_front_unity_up_1 = yes
+	}
+}
+
+country_event = {	#多方会谈
+	id = SFR.33
+	title = SFR.33.t
+	desc = SFR.33.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.33.a
+		add_stability = 0.05
+		SFR_front_unity_up_3 = yes
+	}
+}
+
+country_event = {	#清洗反对派
+	id = SFR.50
+	title = SFR.50.t
+	desc = SFR.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.50.a
+		add_stability = 0.05
+		add_manpower = -2000
+		country_event = {
+			id = SFR.51
+			days = 1
+		}
+	}
+}
+
+country_event = {	#黎明之后
+	id = SFR.51
+	title = SFR.51.t
+	desc = SFR.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.51.a
+		SFR_maintain_the_front_ban = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		###联合政府###
+		set_country_flag = SFR_focus_1
+		set_country_flag = SFR_focus_1_1
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	#政变
+	id = SFR.52
+	title = SFR.52.t
+	desc = SFR.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.52.a
+		if = {
+			limit = { has_completed_focus = SFR_support_left_opposition }
+			country_event = {
+				id = SFR.53
+				days = 1
+			}
+		}
+		else = {
+			country_event = {
+				id = SFR.54
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFR.52.b
+		country_event = {
+			id = SFR.55
+			days = 1
+		}
+	}
+}
+
+country_event = {	#来自左翼的审判
+	id = SFR.53
+	title = SFR.53.t
+	desc = SFR.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.53.a
+		add_political_power = 10
+		add_stability = -0.02
+
+		set_politics = { ruling_party = pioneer_communism }
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.3
+		}
+
+		SFR_maintain_the_front_ban = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		###这里之后接共产党路线###
+		load_focus_tree = generic_focus
+	}
+
+	option = {
+		name = SFR.53.b
+		add_stability = 0.02
+
+		set_politics = { ruling_party = pioneer_communism }
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.3
+		}
+
+		SFR_maintain_the_front_ban = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		###这里之后接共产党路线###
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#革命党人的怒火
+	id = SFR.54
+	title = SFR.54.t
+	desc = SFR.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.54.a
+		add_manpower = -1
+
+		set_politics = { ruling_party = paternal_autocrat }
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.1
+		}
+
+		SFR_maintain_the_front_ban = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		###这里之后接革命党路线###
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#革命危难之际
+	id = SFR.55
+	title = SFR.55.t
+	desc = SFR.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.55.a
+
+		set_politics = { ruling_party = revolutionary_communism }
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+
+		SFR_LinYouzhi_promote_effect = yes
+
+		SFR_maintain_the_front_ban = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		###这里之后接军政府###
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#不容乐观的局势
+	id = SFR.100
+	title = SFR.100.t
+	desc = SFR.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.100.a
+	}
+}
+
+country_event = {	#恢复生产的牺牲
+	id = SFR.101
+	title = SFR.101.t
+	desc = SFR.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.101.a
+	}
+}
+
+country_event = {	#内部维稳的必要性
+	id = SFR.102
+	title = SFR.102.t
+	desc = SFR.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.102.a
+	}
+}
+
+country_event = {	#小范围军改倡议
+	id = SFR.103
+	title = SFR.103.t
+	desc = SFR.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.103.a
+	}
+}
+
+country_event = {	#风暴已至
+	id = SFR.150
+	title = SFR.150.t
+	desc = SFR.150.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.150.a
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = SFR_united_front }
+				country_event = {
+					id = SFR.151
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = SFR_focus_1_1 }
+			clr_country_flag = SFR_focus_1_1
+			set_country_flag = SFR_focus_1_2
+		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		
+		clr_country_flag = SFH_
+	}
+}
+
+country_event = {	#政府军投诚！
+	id = SFR.151
+	title = SFR.151.t
+	desc = SFR.151.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.151.a
+		add_war_support = 0.05
+		add_manpower = 2000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 600
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 600
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 50
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 50
+		}
+		division_template = {
+			name = "远乡政府军"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				artillery_brigade = { x = 2 y = 0 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"远乡政府军\" division_template = \"远乡政府军\" start_experience_factor = 0.1 start_equipment_factor = 0.8"  
+				owner = SFR
+				count = 2
+			}
+		}
+	}
+}
+
+country_event = {	#内战之终...？
+	id = SFR.152
+	title = SFR.152.t
+	desc = SFR.152.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.152.a
+		trigger = { QTA = { exists = no } }
+		#if = {
+		#	limit = { has_country_flag = SFR_focus_1_2 }
+		#	clr_country_flag = SFR_focus_1_2
+		#	set_country_flag = SFR_focus_1_3
+		#}
+		#mark_focus_tree_layout_dirty = yes
+		load_focus_tree = generic_focus
+	}
+
+	option = {
+		name = SFR.152.b
+		trigger = { QTA = { exists = yes } }
+		declare_war_on = {
+			target = QTA
+			type = annex_everything
+		}
+		if = {
+			limit = { has_country_flag = SFR_focus_1_2 }
+			clr_country_flag = SFR_focus_1_2
+			set_country_flag = SFR_focus_1_3
+		}
+		mark_focus_tree_layout_dirty = yes
+		#load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#新世界的曙光
+	id = SFR.200
+	title = SFR.200.t
+	desc = SFR.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_ideas = {
+				SFR_roving_army
+				SFR_city_in_ruin
+				SFR_chaotic_countryside
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.200.a
+		effect_tooltip = {
+			add_ideas = {
+				SFR_roving_army
+				SFR_city_in_ruin
+				SFR_chaotic_countryside
+			}	
+		}
+	}
+}
+
+country_event = {	#先来后到？
+	id = SFR.201
+	title = SFR.201.t
+	desc = SFR.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.201.a
+		SFR_city_in_ruin_effect = yes
+		custom_effect_tooltip = SFR_right_stronger_tt
+		add_to_variable = { SFR_left_right_influence = -1 }
+	}
+
+	option = {
+		name = SFR.201.b
+		SFR_roving_army_effect = yes
+	}
+
+	option = {
+		name = SFR.201.c
+		SFR_chaotic_countryside_effect = yes
+		custom_effect_tooltip = SFR_left_stronger_tt
+		add_to_variable = { SFR_left_right_influence = 1 }
+	}
+}
+
+country_event = {	#处理投降部队？
+	id = SFR.202
+	title = SFR.202.t
+	desc = SFR.202.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.202.a
+		add_manpower = -8123
+		add_war_support = -0.05
+		SFR_city_in_ruin_effect = yes
+		custom_effect_tooltip = SFR_right_stronger_tt
+		add_to_variable = { SFR_left_right_influence = -1 }
+	}
+
+	option = {
+		name = SFR.202.b
+		add_stability = -0.05
+		add_manpower = 20000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 2000
+		}
+		army_experience = 20
+		SPC_military_development_amount_up_4 = yes
+	}
+
+	option = {
+		name = SFR.202.c
+		add_political_power = -100
+		SFR_chaotic_countryside_effect = yes
+		custom_effect_tooltip = SFR_left_stronger_tt
+		add_to_variable = { SFR_left_right_influence = 1 }
+	}
+}
+
+country_event = {	#大剿匪
+	id = SFR.203
+	title = SFR.203.t
+	desc = SFR.203.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.203.a
+		add_manpower = -9381
+		add_war_support = -0.05
+		add_stability = 0.1
+		add_political_power = 50
+		random_owned_state = { add_extra_state_shared_building_slots = 1 }
+		hidden_effect = {
+			country_event = {
+				id = SFR.204
+				days = 7
+			}
+		}
+		SFR_roving_army_effect = yes
+	}
+}
+
+country_event = {	#连带伤害
+	id = SFR.204
+	title = SFR.204.t
+	desc = SFR.204.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.204.a
+		add_political_power = -100
+		add_stability = 0.05
+		add_war_support = -0.1
+		add_to_variable = {
+			var = military_development_mod
+			value = -2
+			tooltip = military_development_mod_tt_down_1
+		}
+	}
+
+	option = {
+		name = SFR.204.b
+		add_manpower = -1
+		add_stability = -0.05
+		add_political_power = 50
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = -2
+			tooltip = living_standard_development_mod_tt_down_1
+		}
+	}
+}
+
+country_event = {	#政府军将领
+	id = SFR.205
+	title = SFR.205.t
+	desc = SFR.205.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.205.a
+		add_stability = 0.05
+		add_political_power = 50
+		custom_effect_tooltip = SFR_left_stronger_tt
+		add_to_variable = { SFR_left_right_influence = 1 }
+		add_to_variable = {
+			var = military_development_mod
+			value = 2
+			tooltip = military_development_mod_tt_up_1
+		}
+		army_experience = 30
+	}
+
+	option = {
+		name = SFR.205.b
+		add_stability = -0.05
+		add_manpower = -21
+		SFH_GanPan = { set_nationality = ROOT }
+		SFH_LuZhan = { set_nationality = ROOT }
+	}
+
+	option = {
+		name = SFR.205.c
+		add_stability = -0.1
+		add_political_power = -50
+		add_manpower = -7
+		SFH_GanPan = { set_nationality = ROOT }
+		SFH_LuZhan = { set_nationality = ROOT }
+		SFH_ZhangHuawu = { set_nationality = ROOT }
+		SFH_YingQichen = { set_nationality = ROOT }
+		SFH_ZhuChen = { set_nationality = ROOT }
+		custom_effect_tooltip = SFR_right_stronger_tt
+		add_to_variable = { SFR_left_right_influence = -1 }
+	}
+}
+
+country_event = {	#重振城市秩序
+	id = SFR.206
+	title = SFR.206.t
+	desc = SFR.206.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.206.a
+		add_stability = -0.05
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		country_event = {
+			id = SFR.207
+			days = 1
+		}
+		custom_effect_tooltip = SFR_left_stronger_tt
+		add_to_variable = { SFR_left_right_influence = 1 }
+	}
+
+	option = {
+		name = SFR.206.b
+		add_political_power = -50
+		SPC_living_standard_development_amount_up_3 = yes
+		country_event = {
+			id = SFR.208
+			days = 1
+		}
+	}
+
+	option = {
+		name = SFR.206.c
+		add_stability = 0.1
+		add_political_power = 50
+		add_manpower = -234
+		SPC_living_standard_development_amount_down_2 = yes
+		country_event = {
+			id = SFR.209
+			days = 1
+		}
+		custom_effect_tooltip = SFR_right_stronger_tt
+		add_to_variable = { SFR_left_right_influence = -1 }
+	}
+}
+
+country_event = {	#缓和的街道
+	id = SFR.207
+	title = SFR.207.t
+	desc = SFR.207.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.208.a
+		add_manpower = 10000
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 100
+		SPC_living_standard_development_amount_up_3 = yes
+	}
+}
+
+country_event = {	#城市秩序恢复
+	id = SFR.208
+	title = SFR.208.t
+	desc = SFR.208.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.208.a
+		add_political_power = 50
+		add_stability = 0.05
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		5 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	}
+}
+
+country_event = {	#快速恢复生产
+	id = SFR.209
+	title = SFR.209.t
+	desc = SFR.209.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.209.a
+		add_political_power = -50
+		add_stability = 0.1
+		5 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+}
+
+country_event = {	#饱饭
+	id = SFR.210
+	title = SFR.210.t
+	desc = SFR.210.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.210.a
+		add_manpower = 2314
+		add_stability = 0.05
+		add_political_power = 50
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		SFR_city_in_ruin_effect = yes
+	}
+}
+
+country_event = {	#城市残存革命党的命运？
+	id = SFR.211
+	title = SFR.211.t
+	desc = SFR.211.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.211.a
+		add_stability = 0.05
+		add_manpower = 10000
+		SFR_chaotic_countryside_effect = yes
+	}
+
+	option = {
+		name = SFR.211.b
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_manpower = 20000
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_to_variable = {
+				var = state_science_progress
+				value = 10
+				tooltip = state_science_dev_tt
+			}
+		}
+	}
+
+	option = {
+		name = SFR.211.c
+		add_war_support = 0.05
+		add_manpower = 10000
+		SFR_roving_army_effect = yes
+	}
+}
+
+country_event = {	#下乡
+	id = SFR.212
+	title = SFR.212.t
+	desc = SFR.212.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.212.a
+		random_list = {
+			20 = {
+				country_event = {
+					id = SFR.213
+					days = 1
+				}
+			}
+			80 = {
+				country_event = {
+					id = SFR.214
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SFR.212.b
+		random_list = {
+			40 = {
+				country_event = {
+					id = SFR.213
+					days = 1
+				}
+			}
+			50 = {
+				country_event = {
+					id = SFR.214
+					days = 1
+				}
+			}
+			10 = {
+				country_event = {
+					id = SFR.215
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#和谐一日
+	id = SFR.213
+	title = SFR.213.t
+	desc = SFR.213.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.213.a
+		add_stability = 0.05
+		add_political_power = 20
+		SFR_chaotic_countryside_effect = yes
+	}
+}
+
+country_event = {	#道阻且长
+	id = SFR.214
+	title = SFR.214.t
+	desc = SFR.214.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.214.a
+		add_political_power = 10
+	}
+}
+
+country_event = {	#不受欢迎
+	id = SFR.215
+	title = SFR.215.t
+	desc = SFR.215.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.215.a
+		add_stability = -0.05
+		add_political_power = -20
+	}
+}
+
+country_event = {	#新血液
+	id = SFR.216
+	title = SFR.216.t
+	desc = SFR.216.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.216.a
+		add_political_power = 100
+		add_manpower = 2313
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 2
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+		SFR_chaotic_countryside_effect = yes
+	}
+}
+
+country_event = {	#难办抉择
+	id = SFR.217
+	title = SFR.217.t
+	desc = SFR.217.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.217.a
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 2
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+		SPC_agricultural_policy_up = yes
+	}
+
+	option = {
+		name = SFR.217.b
+		add_to_variable = {
+			var = industrial_development_mod
+			value = 2
+			tooltip = industrial_development_mod_tt_up_1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		SPC_industry_policy_up = yes
+		SFR_city_in_ruin_effect = yes
+	}
+
+	option = {
+		name = SFR.217.c
+		army_experience = 30
+		add_to_variable = {
+			var = military_development_mod
+			value = 2
+			tooltip = military_development_mod_tt_up_1
+		}
+		SPC_military_development_amount_up_4 = yes
+		SPC_training_laws_up = yes
+		SFR_roving_army_effect = yes
+	}
+}
+
+country_event = {	#一切的根源
+	id = SFR.218
+	title = SFR.218.t
+	desc = SFR.218.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.218.a
+		country_event = {
+			id = SFR.219
+			days = 1
+		}
+	}
+}
+
+country_event = {	#郑家的命运
+	id = SFR.219
+	title = SFR.219.t
+	desc = SFR.219.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.219.a
+		country_event = {
+			id = SFR.220
+			days = 7
+		}
+		country_event = {
+			id = SFR.221
+			days = 1
+		}
+	}
+		
+	option = {
+		name = SFR.219.b
+		country_event = {
+			id = SFR.220
+			days = 7
+		}
+		country_event = {
+			id = SFR.223
+			days = 1
+		}
+	}
+		
+	option = {
+		name = SFR.219.c
+		country_event = {
+			id = SFR.220
+			days = 7
+		}
+		country_event = {
+			id = SFR.224
+			days = 1
+		}
+	}
+}
+
+country_event = {	#恶徒的命运
+	id = SFR.220
+	title = SFR.220.t
+	desc = SFR.220.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.220.a
+	}
+}
+
+country_event = {	#新的开始
+	id = SFR.221
+	title = SFR.221.t
+	desc = SFR.221.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.221.a
+		country_event = {
+			id = SFR.222
+			days = 1
+		}
+	}
+}
+
+country_event = {	#往日之影
+	id = SFR.222
+	title = SFR.222.t
+	desc = SFR.222.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.222.a
+	}
+}
+
+country_event = {	#海风
+	id = SFR.223
+	title = SFR.223.t
+	desc = SFR.223.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.223.a
+	}
+}
+
+country_event = {	#审判
+	id = SFR.224
+	title = SFR.224.t
+	desc = SFR.224.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.224.a
+		country_event = {
+			id = SFR.225
+			days = 1
+		}
+	}
+}
+
+country_event = {	#命定之日
+	id = SFR.225
+	title = SFR.225.t
+	desc = SFR.225.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.225.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#报应
+	id = SFR.226
+	title = SFR.226.t
+	desc = SFR.226.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.226.a
+	}
+}
+
+country_event = {	#结束
+	id = SFR.227
+	title = SFR.227.t
+	desc = SFR.227.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.227.a
+	}
+}
+
+country_event = {	#大会闭幕！
+	id = SFR.250
+	title = SFR.250.t
+	desc = SFR.250.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.250.a
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.3
+		}
+		retire_character = SFR_YeWenshi
+		set_politics = {
+			ruling_party = revolutionary_communism
+		}
+	}
+
+	option = {
+		name = SFR.250.b
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.1
+		retire_character = SFR_YeWenshi
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.3
+		}
+		promote_character = SFR_LinQinlan
+	}
+}
+
+country_event = {	#风波将至
+	id = SFR.300
+	title = SFR.300.t
+	desc = SFR.300.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.300.a
+	}
+}
+
+country_event = {	#西北调查报告
+	id = SFR.301
+	title = SFR.301.t
+	desc = SFR.301.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.301.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#革命阵线的橄榄枝？
+	id = SFR.302
+	title = SFR.302.t
+	desc = SFR.302.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.302.a
+	}
+}
+
+country_event = {	#会谈
+	id = SFR.303
+	title = SFR.303.t
+	desc = SFR.303.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.303.a
+		NWF = { country_event = { id = SFR.304 days = 1 } }
+	}
+}
+
+country_event = {	#会谈
+	id = SFR.304
+	title = SFR.304.t
+	desc = SFR.304.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#同意
+		name = SFR.304.a
+		SFR = {
+			country_event = {
+				id = SFR.305
+				days = 1
+			}
+		}
+	}
+
+	option = {		#拒绝
+		name = SFR.304.b
+		SFR = {
+			country_event = {
+				id = SFR.306
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#同意
+	id = SFR.305
+	title = SFR.305.t
+	desc = SFR.305.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.305.a
+		effect_tooltip = { unlock_national_focus = SFR_integrate_northwest_gov }
+	}
+}
+
+country_event = {	#拒绝
+	id = SFR.306
+	title = SFR.306.t
+	desc = SFR.306.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.306.a
+		complete_national_focus = SFR_prepare_war_northwest
+		effect_tooltip = { unlock_national_focus = SFR_march_to_northwest }
+	}
+}
+
+country_event = {	#唯有一战
+	id = SFR.307
+	title = SFR.307.t
+	desc = SFR.307.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.307.a
+		add_war_support = 0.01
+	}
+}
+
+country_event = {	#动员大会
+	id = SFR.308
+	title = SFR.308.t
+	desc = SFR.308.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.308.a
+		add_war_support = 0.02
+		SPC_military_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#致我们共同的未来
+	id = SFR.309
+	title = SFR.309.t
+	desc = SFR.309.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.309.a
+	}
+}
+
+country_event = {	#团结可以团结的力量
+	id = SFR.310
+	title = SFR.310.t
+	desc = SFR.310.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.310.a
+		SPC_living_standard_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#战争的伤痕
+	id = SFR.311
+	title = SFR.311.t
+	desc = SFR.311.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.311.a
+	}
+}
+
+country_event = {	#北远乡调查报告
+	id = SFR.312
+	title = SFR.312.t
+	desc = SFR.312.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.312.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#联络自由联军
+	id = SFR.313
+	title = SFR.313.t
+	desc = SFR.313.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.313.a
+		FFH = { country_event = { id = SFR.314 days = 1 } }
+	}
+}
+
+country_event = {	#来自南方的邀请？
+	id = SFR.314
+	title = SFR.314.t
+	desc = SFR.314.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.314.a
+		SFR = {
+			country_event = {
+				id = SFR.315
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFR.314.b
+		SFR = {
+			country_event = {
+				id = SFR.316
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#自由联军接受了我们的要求
+	id = SFR.315
+	title = SFR.315.t
+	desc = SFR.315.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.315.a
+		give_military_access = FFH
+		diplomatic_relation = {
+			country = FFH
+			relation = non_aggression_pact
+		}
+		FFH = {
+			give_military_access = SFR
+			diplomatic_relation = {
+				country = SFR
+				relation = non_aggression_pact
+			}
+		}
+		set_country_flag = SFR_integrate_free_alliance_flag
+		effect_tooltip = {
+			unlock_national_focus = SFR_intervene_in_civil_war
+		}
+	}
+}
+
+country_event = {	#自由联军拒绝了我们的要求
+	id = SFR.316
+	title = SFR.316.t
+	desc = SFR.316.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.316.a
+		complete_national_focus = SFR_prepare_north_war
+		effect_tooltip = {
+			unlock_national_focus = SFR_no_other_choice
+		}
+	}
+}
+
+country_event = {	#故乡
+	id = SFR.317
+	title = SFR.317.t
+	desc = SFR.317.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.317.a
+	}
+}
+
+country_event = {	#故乡（变体）
+	id = SFR.318
+	title = SFR.318.t
+	desc = SFR.318.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.318.a
+	}
+}
+
+country_event = {	#联欢
+	id = SFR.319
+	title = SFR.319.t
+	desc = SFR.319.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.319.a
+	}
+}
+
+country_event = {	#革命的山贼？
+	id = SFR.320
+	title = SFR.320.t
+	desc = SFR.320.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.320.a
+		add_political_power = 100
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+		}
+		15 = { add_compliance = 20 add_resistance = -10 }
+		23 = { add_compliance = 20 add_resistance = -10 }
+		21 = { add_compliance = 20 add_resistance = -10 }
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = -1
+			tooltip = living_standard_development_mod_tt_down_1
+		}
+		add_to_variable = {
+			var = military_development_mod
+			value = -1
+			tooltip = military_development_mod_tt_down_1
+		}
+	}
+
+	option = {
+		name = SFR.320.b
+		add_stability = 0.02
+		add_political_power = 20
+	}
+}
+
+country_event = {	#最后的反动派
+	id = SFR.321
+	title = SFR.321.t
+	desc = SFR.321.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.321.a
+	}
+}
+
+country_event = {	#为逝者复仇
+	id = SFR.322
+	title = SFR.322.t
+	desc = SFR.322.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.322.a
+		add_manpower = -231
+		add_political_power = 20
+	}
+
+	option = {
+		name = SFR.322.b
+		add_stability = 0.02
+		add_political_power = -30
+	}
+}
+
+country_event = {	#人鱼特区历史报告
+	id = SFR.323
+	title = SFR.323.t
+	desc = SFR.323.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.323.a
+	}
+}
+
+country_event = {	#要求我们无条件投降！
+	id = SFR.324
+	title = SFR.324.t
+	desc = SFR.324.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.324.a
+		ai_chance = { base = 20 }
+		SFR = {
+			country_event = {
+				id = SFR.325
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFR.324.b
+		ai_chance = { base = 80 }
+		SFR = {
+			country_event = {
+				id = SFR.326
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#人鱼同意了我们的要求！
+	id = SFR.325
+	title = SFR.325.t
+	desc = SFR.325.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.325.a
+		effect_tooltip = {
+			unlock_national_focus = SFR_integrate_special_zone_gov
+		}
+		set_autonomy = {
+			target = MSA
+			autonomy_state = autonomy_puppet
+		}
+	}
+}
+
+country_event = {	#人鱼拒绝了我们的要求！
+	id = SFR.326
+	title = SFR.326.t
+	desc = SFR.326.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.326.a
+		complete_national_focus = SFR_only_solution
+		effect_tooltip = {
+			unlock_national_focus = SFR_prepare_landing_war
+		}
+	}
+}
+
+country_event = {	#小小的复仇
+	id = SFR.327
+	title = SFR.327.t
+	desc = SFR.327.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.327.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#归乡大会
+	id = SFR.328
+	title = SFR.328.t
+	desc = SFR.328.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.328.a
+	}
+}
+
+country_event = {	#祖国新生
+	id = SFR.329
+	title = SFR.329.t
+	desc = SFR.329.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = { add_ideas = SFR_bureaucratic_overload }
+	
+	option = {
+		name = SFR.329.a
+		effect_tooltip = {
+			add_ideas = SFR_bureaucratic_overload
+		}
+	}
+}
+
+country_event = {	#全国人口普查
+	id = SFR.330
+	title = SFR.330.t
+	desc = SFR.330.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.330.a
+	}
+}
+
+country_event = {	#走马上任
+	id = SFR.331
+	title = SFR.331.t
+	desc = SFR.331.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.331.a
+	}
+}
+
+country_event = {	#新瓶旧酒
+	id = SFR.332
+	title = SFR.332.t
+	desc = SFR.332.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.332.a
+	}
+}
+
+country_event = {	#平京一日
+	id = SFR.333
+	title = SFR.333.t
+	desc = SFR.333.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.333.a
+	}
+}
+
+country_event = {	#老伙计
+	id = SFR.334
+	title = SFR.334.t
+	desc = SFR.334.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.334.a
+	}
+}
+
+country_event = {	#红旗高悬
+	id = SFR.335
+	title = SFR.335.t
+	desc = SFR.335.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.335.a
+		#if = {
+		#	limit = { has_country_flag = SFR_focus_1_3 }
+		#	clr_country_flag = SFR_focus_1_4
+		#	set_country_flag = SFR_focus_1_5
+		#}
+		mark_focus_tree_layout_dirty = yes
+		load_focus_tree = generic_focus
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+	}
+}
+
+country_event = {	#理想实现，但是...
+	id = SFR.350
+	title = SFR.350.t
+	desc = SFR.350.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.350.a
+		country_event = {
+			id = SFR.351
+			days = 1
+		}
+	}
+}
+
+country_event = {	#远乡共产党的未来？
+	id = SFR.351
+	title = SFR.351.t
+	desc = SFR.351.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.351.a
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		custom_effect_tooltip = SFR.351.a.tt
+		set_power_balance = {
+			id = SFR_commi_bop
+			set_value = 0
+		}
+	}
+}
+
+country_event = {	#又一次会议
+	id = SFR.352
+	title = SFR.352.t
+	desc = SFR.352.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.352.a
+		custom_effect_tooltip = SFR.352.a.tt
+		add_stability = -0.1
+		add_political_power = -50
+		set_variable = { SFR_pol_reform_left_anger = 1 }
+		set_variable = { SFR_pol_reform_right_anger = 1 }
+		country_event = {
+			id = SFR.380
+			days = 7
+		}
+	}
+}
+
+country_event = {	#权力的诱惑
+	id = SFR.353
+	title = SFR.353.t
+	desc = SFR.353.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.353.a
+		add_political_power = -100
+		country_event = {
+			id = SFR.354
+			days = 1
+		}
+	}
+
+	option = {
+		name = SFR.353.b
+		add_stability = -0.1
+		country_event = {
+			id = SFR.358
+			days = 1
+		}
+	}
+}
+
+country_event = {	#拉清单
+	id = SFR.354
+	title = SFR.354.t
+	desc = SFR.354.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.354.a
+		add_stability = -0.05
+		country_event = {
+			id = SFR.355
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.354.b
+		add_political_power = -50
+		country_event = {
+			id = SFR.356
+			days = 7
+		}
+	}
+}
+
+country_event = {	#杀鸡儆猴
+	id = SFR.355
+	title = SFR.355.t
+	desc = SFR.355.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.357
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.355.a
+		add_stability = -0.1
+		add_political_power = 100
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = -1
+			tooltip = living_standard_development_mod_tt_down_1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_1
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#下地干活
+	id = SFR.356
+	title = SFR.356.t
+	desc = SFR.356.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.357
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = SFR.356.a
+		add_political_power = -50
+		SPC_agricultural_development_amount_up_1 = yes
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 1
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+		add_to_variable = {
+			var = industrial_development_mod
+			value = -1
+			tooltip = industrial_development_mod_tt_down_1
+		}
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#滋生的不满
+	id = SFR.357
+	title = SFR.357.t
+	desc = SFR.357.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.357.a
+		add_stability = -0.1
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#苦口婆心
+	id = SFR.358
+	title = SFR.358.t
+	desc = SFR.358.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.358.a
+		add_stability = 0.05
+		add_war_support = -0.1
+		add_political_power = -150
+		country_event = {
+			id = SFR.359
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.358.a
+		add_war_support = -0.05
+		add_political_power = -200
+		country_event = {
+			id = SFR.360
+			days = 7
+		}
+	}
+}
+
+country_event = {	#闲的可以
+	id = SFR.359
+	title = SFR.359.t
+	desc = SFR.359.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.361
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.359.a
+		add_stability = 0.05
+		add_to_variable = {
+			var = research_development_mod
+			value = -2
+			tooltip = research_development_mod_tt_down_1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#照顾后事
+	id = SFR.360
+	title = SFR.360.t
+	desc = SFR.360.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.361
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.360.a
+		add_stability = 0.1
+		add_to_variable = {
+			var = research_development_mod
+			value = -2
+			tooltip = research_development_mod_tt_down_1
+		}
+		add_to_variable = {
+			var = industrial_development_mod
+			value = -2
+			tooltip = industrial_development_mod_tt_down_1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+		add_to_variable = { SFR_pol_reform_right_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_1
+	}
+}
+
+country_event = {	#滋生的不安
+	id = SFR.361
+	title = SFR.361.t
+	desc = SFR.361.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.361.a
+		add_political_power = -100
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#代表大会的未来
+	id = SFR.362
+	title = SFR.362.t
+	desc = SFR.362.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.362.a
+		add_political_power = 50
+		add_stability = -0.05
+		country_event = {
+			id = SFR.363
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.362.b
+		add_political_power = -50
+		add_stability = 0.05
+		country_event = {
+			id = SFR.367
+			days = 7
+		}
+	}
+}
+
+country_event = {	#人民之声
+	id = SFR.363
+	title = SFR.363.t
+	desc = SFR.363.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.363.a
+		add_stability = -0.1
+		country_event = {
+			id = SFR.364
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.363.b
+		add_political_power = -100
+		country_event = {
+			id = SFR.365
+			days = 7
+		}
+	}
+}
+
+country_event = {	#选择性监督
+	id = SFR.364
+	title = SFR.364.t
+	desc = SFR.364.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.366
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.364.a
+		add_stability = 0.05
+		add_political_power = -50
+		SPC_living_standard_development_amount_down_2 = yes
+		add_to_variable = { SFR_pol_reform_left_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_1
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#选择性发声
+	id = SFR.365
+	title = SFR.365.t
+	desc = SFR.365.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.366
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.365.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.1
+		}
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#谁来发声？
+	id = SFR.366
+	title = SFR.366.t
+	desc = SFR.366.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.366.a
+		SPC_living_standard_development_amount_down_2 = yes
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#加强控制
+	id = SFR.367
+	title = SFR.367.t
+	desc = SFR.367.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.367.a
+		add_political_power = -50
+		country_event = {
+			id = SFR.368
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.367.b
+		add_stability = -0.02
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.05
+		}
+		country_event = {
+			id = SFR.369
+			days = 7
+		}
+	}
+}
+
+country_event = {	#收紧栓绳
+	id = SFR.368
+	title = SFR.368.t
+	desc = SFR.368.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.368.a
+		add_stability = 0.1
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.1
+		}
+		add_power_balance_value = {
+			id = SFR_commi_bop
+			value = -0.1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+		add_to_variable = { SFR_pol_reform_right_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_1
+	}
+}
+
+country_event = {	#互相报告
+	id = SFR.369
+	title = SFR.369.t
+	desc = SFR.369.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.369.a
+		add_stability = -0.05
+		add_political_power = 50
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = SFR_commi_bop
+			value = 0.1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#新的担忧
+	id = SFR.370
+	title = SFR.370.t
+	desc = SFR.370.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.370.a
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = -1
+			tooltip = living_standard_development_mod_tt_down_1
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#潜在的危机
+	id = SFR.371
+	title = SFR.371.t
+	desc = SFR.371.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.371.a
+		add_stability = -0.05
+		add_war_support = 0.05
+		country_event = {
+			id = SFR.372
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.371.b
+		add_political_power = -30
+		country_event = {
+			id = SFR.376
+			days = 7
+		}
+	}
+}
+
+country_event = {	#重拳出击
+	id = SFR.372
+	title = SFR.372.t
+	desc = SFR.372.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.372.a
+		add_stability = 0.02
+		country_event = {
+			id = SFR.373
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.372.b
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		country_event = {
+			id = SFR.374
+			days = 7
+		}
+	}
+}
+
+country_event = {	#抓捕
+	id = SFR.373
+	title = SFR.373.t
+	desc = SFR.373.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.375
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.373.a
+		add_stability = 0.05
+		add_political_power = -20
+		add_power_balance_value = {
+			id = SFR_commi_bop
+			value = 0.05
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_1
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#借机清算
+	id = SFR.374
+	title = SFR.374.t
+	desc = SFR.374.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.375
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.374.a
+		add_stability = -0.05
+		add_political_power = 100
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.1
+		}
+		add_power_balance_value = {
+			id = SFR_commi_bop
+			value = -0.1
+		}
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#越过雷池
+	id = SFR.375
+	title = SFR.375.t
+	desc = SFR.375.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.375.a
+		add_stability = -0.05
+		add_to_variable = { SFR_pol_reform_right_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+	}
+}
+
+country_event = {	#强有力的“说服”
+	id = SFR.376
+	title = SFR.376.t
+	desc = SFR.376.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.376.a
+		add_stability = -0.02
+		SPC_living_standard_development_amount_down_3 = yes
+		country_event = {
+			id = SFR.377
+			days = 7
+		}
+	}
+
+	option = {
+		name = SFR.376.b
+		add_political_power = -50
+		country_event = {
+			id = SFR.378
+			days = 7
+		}
+	}
+}
+
+country_event = {	#威胁
+	id = SFR.377
+	title = SFR.377.t
+	desc = SFR.377.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.379
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.377.a
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_political_power = -50
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#招安
+	id = SFR.378
+	title = SFR.378.t
+	desc = SFR.378.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SFR.379
+				days = 7
+			}
+		}
+	}
+	
+	option = {
+		name = SFR.378.a
+		add_stability = 0.1
+		add_political_power = -100
+		SPC_living_standard_development_amount_down_4 = yes
+		add_timed_idea = {
+			idea = SFR_special_fund
+			days = 180
+		}
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+		add_to_variable = { SFR_pol_reform_right_anger = -1 }
+		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_1
+	}
+}
+
+country_event = {	#未能根除的问题
+	id = SFR.379
+	title = SFR.379.t
+	desc = SFR.379.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.379.a
+		add_political_power = -50
+		add_to_variable = { SFR_pol_reform_left_anger = 1 }
+		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
+	}
+}
+
+country_event = {	#工农代表大会提议
+	id = SFR.380
+	title = SFR.380.t
+	desc = SFR.380.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.380.a
+		country_event = {
+			id = SFR.381
+			days = 7
+		}
+	}
+}
+
+country_event = {	#国民议会倡议
+	id = SFR.381
+	title = SFR.381.t
+	desc = SFR.381.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.381.a
+	}
+}
+
+country_event = {	#最后一次会议
+	id = SFR.382
+	title = SFR.382.t
+	desc = SFR.382.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.382.a
+		custom_effect_tooltip = SFR.382.a.tt
+		hidden_effect = {
+			set_temp_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_left_anger }
+			subtract_from_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_right_anger }
+			if = {
+				limit = { check_variable = { subtract_from_variable > 2 } }
+				country_event = {
+					id = SFR.384
+					days = 1
+				}
+			}
+			else_if = {
+				limit = { check_variable = { subtract_from_variable < -2 } }
+				country_event = {
+					id = SFR.383
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = SFR.385
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#党内左翼的怒火
+	id = SFR.383
+	title = SFR.383.t
+	desc = SFR.383.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.383.a
+		add_ideas = SFR_anti_rightist_movement
+		country_event = {
+			id = SFR.386
+			days = 1
+		}
+	}
+}
+
+country_event = {	#党内右翼的怒火
+	id = SFR.384
+	title = SFR.384.t
+	desc = SFR.384.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.384.a
+		add_ideas = SFR_anti_counter_revolution
+		country_event = {
+			id = SFR.387
+			days = 1
+		}
+	}
+}
+
+country_event = {	#吵闹的公堂
+	id = SFR.385
+	title = SFR.385.t
+	desc = SFR.385.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.385.a
+		add_ideas = SFR_left_right_unsatisfied
+		custom_effect_tooltip = SFR.385.a.tt
+	}
+}
+
+country_event = {	#党内左翼的威胁
+	id = SFR.386
+	title = SFR.386.t
+	desc = SFR.386.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.386.a
+		effect_tooltip = { unlock_national_focus = SFR_all_power_to_workers_and_peasants }
+		custom_effect_tooltip = {
+			localization_key = ban_certain_focus_from_selecting
+			FOCUS_NAME = SFR_national_assembly_proposal
+		}
+		set_country_flag = SFR_all_power_to_workers_and_peasants_ban
+	}
+}
+
+country_event = {	#党内右翼的威胁
+	id = SFR.387
+	title = SFR.387.t
+	desc = SFR.387.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.387.a
+		effect_tooltip = { unlock_national_focus = SFR_national_assembly_proposal }
+		custom_effect_tooltip = {
+			localization_key = ban_certain_focus_from_selecting
+			FOCUS_NAME = SFR_all_power_to_workers_and_peasants
+		}
+		set_country_flag = SFR_national_assembly_proposal_ban
+	}
+}
+
+country_event = {	#鸡飞狗跳
+	id = SFR.388
+	title = SFR.388.t
+	desc = SFR.388.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.388.a
+		set_country_flag = SFR_temp_ban_pol_reform
+	}
+}
+
+country_event = {	#政治局势缓和
+	id = SFR.389
+	title = SFR.389.t
+	desc = SFR.389.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.389.a
+		custom_effect_tooltip = SFR.389.a.tt
+		SFR_pol_reform_situ_better = yes
+	}
+}
+
+country_event = {	#革命的新一阶段
+	id = SFR.390
+	title = SFR.390.t
+	desc = SFR.390.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.390.a
+	}
+}
+
+country_event = {	#国民议会
+	id = SFR.391
+	title = SFR.391.t
+	desc = SFR.391.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.391.a
+	}
+}
+
+country_event = {	#全国土改
+	id = SFR.400
+	title = SFR.400.t
+	desc = SFR.400.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.400.a
+		unlock_decision_category_tooltip = SFR_land_reform_decisions
+		custom_effect_tooltip = SFR_start_land_reform_tt
+		activate_mission = SFR_land_reform_time_limit
+		activate_mission = SFR_land_reform_monthly_check
+		SFR_land_reform_in_progress_init = yes
+	}
+}
+
+country_event = {	#全国土改圆满成功！
+	id = SFR.401
+	title = SFR.401.t
+	desc = SFR.401.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.401.a
+	}
+}
+
+country_event = {	#全国土改正常收尾
+	id = SFR.402
+	title = SFR.402.t
+	desc = SFR.402.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.402.a
+	}
+}
+
+country_event = {	#全国土改草草收尾
+	id = SFR.403
+	title = SFR.403.t
+	desc = SFR.403.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.403.a
+	}
+}
+
+country_event = {	#土改进展缓慢！
+	id = SFR.404
+	title = SFR.404.t
+	desc = SFR.404.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.404.a
+	}
+}
+
+country_event = {	#收益分配争议
+	id = SFR.405
+	title = SFR.405.t
+	desc = SFR.405.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#实行工分绩效
+		name = SFR.405.a
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		add_to_variable = {
+			var = SFR_land_reform_decisions_progress
+			value = 6
+			tooltip = SFR_land_reform_decisions_progress_tt
+		}
+		SFR_land_reform_decisions_progress_update = yes
+		add_to_variable = { SFR_land_reform_in_progress_sf = -0.05 }
+		add_to_variable = { SFR_land_reform_in_progress_ppf = -0.05 }
+		add_to_variable = { SFR_land_reform_in_progress_cgf = -0.05 }
+		add_to_variable = { SFR_land_reform_in_progress_icf = 0.05 }
+		add_to_variable = { SFR_land_reform_in_progress_icd = 0.05 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_land_reform_in_progress_tt_0
+				add_idea = SFR_land_reform_in_progress_tt_2
+			}
+		}
+	}
+
+	option = {		#设定最低分红
+		name = SFR.405.b
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		add_to_variable = {
+			var = SFR_land_reform_decisions_progress
+			value = 4
+			tooltip = SFR_land_reform_decisions_progress_tt
+		}
+		SFR_land_reform_decisions_progress_update = yes
+		add_to_variable = { SFR_land_reform_in_progress_cgf = 0.1 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_land_reform_in_progress_tt_0
+				add_idea = SFR_land_reform_in_progress_tt_3
+			}
+		}
+	}
+}
+
+country_event = {	#新农机
+	id = SFR.406
+	title = SFR.406.t
+	desc = SFR.406.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.406.a
+		add_political_power = -10
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 1
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+	}
+}
+
+country_event = {	#京里来的大爷
+	id = SFR.407
+	title = SFR.407.t
+	desc = SFR.407.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.407.a
+		add_political_power = 1
+		add_stability = -0.01
+	}
+
+	option = {
+		name = SFR.407.b
+		add_political_power = -1
+		add_stability = 0.01
+	}
+}
+
+country_event = {	#地方势力的不配合
+	id = SFR.408
+	title = SFR.408.t
+	desc = SFR.408.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.408.a
+		add_stability = -0.05
+		add_political_power = -50
+		SFR_land_reform_decisions_progress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_land_reform_in_progress_tt_0
+				add_idea = SFR_land_reform_in_progress_tt_6
+			}
+		}
+		add_to_variable = { SFR_land_reform_in_progress_sf = -0.05 }
+		add_to_variable = { SFR_land_reform_in_progress_ppf = -0.05 }
+		force_update_dynamic_modifier = yes
+	}
+
+	option = {
+		name = SFR.408.b
+		add_stability = 0.05
+		add_political_power = -100
+		add_to_variable = {
+			var = SFR_land_reform_decisions_progress
+			value = 5
+			tooltip = SFR_land_reform_decisions_progress_tt
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_land_reform_in_progress_tt_0
+				add_idea = SFR_land_reform_in_progress_tt_3
+			}
+		}
+		add_to_variable = { SFR_land_reform_in_progress_cgf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+country_event = {	#
+	id = SFR.409
+	title = SFR.409.t
+	desc = SFR.409.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.409.a
+	}
+}
+
+###工农代表大会###
+
+country_event = {	#参与的人选
+	id = SFR.2000
+	title = SFR.2000.t
+	desc = SFR.2000.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#工农代表占据绝对多数！
+		name = SFR.2000.a
+		trigger = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		custom_effect_tooltip = {
+			localization_key = complete_certain_focus_trigger_tooltip
+			FOCUS_NAME = SFR_all_power_to_workers_and_peasants
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2001
+			days = 7
+		}
+	}
+	
+	option = {		#民主派代表脱颖而出。
+		name = SFR.2000.b
+		trigger = { has_completed_focus = SFR_national_assembly_proposal }
+		custom_effect_tooltip = {
+			localization_key = complete_certain_focus_trigger_tooltip
+			FOCUS_NAME = SFR_national_assembly_proposal
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_7_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_7_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_7_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_7_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2001
+			days = 7
+		}
+	}
+
+	option = {		#稳健派与平京帮主导一切。
+		name = SFR.2000.c
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2001
+			days = 7
+		}
+	}
+
+	option = {		#强硬派与技术官僚加强发声。
+		name = SFR.2000.dd
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			value = 15
+			tooltip = SFR_red_star_over_capital_group_1_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 15
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2001
+			days = 7
+		}
+	}
+
+	option = {		#尝试在各派系之间维持平衡。
+		name = SFR.2000.e
+		add_stability = 0.05
+		add_political_power = -100
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_national_assembly_proposal }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_7_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_7_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2001
+			days = 7
+		}
+	}
+}
+
+country_event = {	#权力与平衡
+	id = SFR.2001
+	title = SFR.2001.t
+	desc = SFR.2001.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#强化大会权力
+		name = SFR.2001.a
+		trigger = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		custom_effect_tooltip = {
+			localization_key = complete_certain_focus_trigger_tooltip
+			FOCUS_NAME = SFR_all_power_to_workers_and_peasants
+		}
+		country_event = {
+			id = SFR.2002
+			days = 7
+		}
+		set_country_flag = SFR_2001_a
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_1
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#强化国民议会权力
+		name = SFR.2001.b
+		trigger = { has_completed_focus = SFR_national_assembly_proposal }
+		custom_effect_tooltip = {
+			localization_key = complete_certain_focus_trigger_tooltip
+			FOCUS_NAME = SFR_national_assembly_proposal
+		}
+		country_event = {
+			id = SFR.2002
+			days = 7
+		}
+		set_country_flag = SFR_2001_b
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_2
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_7_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_7_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_7_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_7_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#加强军委的存在
+		name = SFR.2001.c
+		country_event = {
+			id = SFR.2002
+			days = 7
+		}
+		set_country_flag = SFR_2001_c
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_3
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#集中行政力量
+		name = SFR.2001.dd
+		country_event = {
+			id = SFR.2002
+			days = 7
+		}
+		set_country_flag = SFR_2001_d
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_4
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#部分职责下放地方
+		name = SFR.2001.e
+		country_event = {
+			id = SFR.2002
+			days = 7
+		}
+		set_country_flag = SFR_2001_e
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_5
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_5_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+}
+
+country_event = {	#经济条款
+	id = SFR.2002
+	title = SFR.2002.t
+	desc = SFR.2002.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#国营为主、合作社为辅
+		name = SFR.2002.a
+		country_event = {
+			id = SFR.2003
+			days = 7
+		}
+		set_country_flag = SFR_2002_a
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_6
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#公私合营、统筹兼顾
+		name = SFR.2002.b
+		country_event = {
+			id = SFR.2003
+			days = 7
+		}
+		set_country_flag = SFR_2002_b
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_7
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_6_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#重点项目先行
+		name = SFR.2002.c
+		country_event = {
+			id = SFR.2003
+			days = 7
+		}
+		set_country_flag = SFR_2002_c
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_8
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+}
+
+country_event = {	#权利与监督条款
+	id = SFR.2003
+	title = SFR.2003.t
+	desc = SFR.2003.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#强调公民权利条款
+		name = SFR.2003.a
+		country_event = {
+			id = SFR.2004
+			days = 7
+		}
+		set_country_flag = SFR_2003_a
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_9
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#强调国家安全条款
+		name = SFR.2003.b
+		country_event = {
+			id = SFR.2004
+			days = 7
+		}
+		set_country_flag = SFR_2003_b
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_10
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {		#强调群众监督与纠错机制
+		name = SFR.2003.c
+		country_event = {
+			id = SFR.2004
+			days = 7
+		}
+		set_country_flag = SFR_2003_c
+		custom_effect_tooltip = SFR_constitution_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+				add_idea = SFR_red_constitution_of_far_soviet_tt_11
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_6_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+}
+
+country_event = {	#开始表决！
+	id = SFR.2004
+	title = SFR.2004.t
+	desc = SFR.2004.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2004.a
+		set_country_flag = SFR_workers_and_peasants_congress_voting
+		set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_start_tt
+			DAYS = 7
+		}
+		set_variable = { SFR_land_reform_voting_days = 7 }
+		hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 1 }	}
+		effect_tooltip = { SFR_workers_and_peasants_congress_vote_1 = yes }
+	}
+}
+
+country_event = {	#
+	id = SFR.2005
+	title = SFR.2005.t
+	desc = SFR.2005.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2005.a
+	}
+}
+
+###新闻###
+
+add_namespace = SFRNews
+
+news_event = {
+	id = SFRNews.1		#远乡内战结束-康米胜
+	title = SFRNews.1.t
+	desc = SFRNews.1.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.1.a
+	}
+}
+
+news_event = {
+	id = SFRNews.2		#远乡国再统一
+	title = SFRNews.2.t
+	desc = SFRNews.2.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.2.a
+	}
+}
+
+news_event = {
+	id = SFRNews.3		#远乡国再统一
+	title = SFRNews.3.t
+	desc = SFRNews.3.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.3.a
+	}
+}

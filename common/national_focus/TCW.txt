@@ -1,0 +1,1927 @@
+﻿focus_tree = {
+	id = TCW_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TCW
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#又一繁忙年初
+		id = TCW_another_year_of_work
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		x = 10
+		y = 0
+		cost = 1
+
+		available = {
+		}
+
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.1
+		}
+	}
+
+	focus = {	#启用人力资源部门
+		id = TCW_enable_hr
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_another_year_of_work }
+		relative_position_id = TCW_another_year_of_work
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 140
+			unlock_decision_category_tooltip = TCW_resettlement_of_refugees_decision_category
+		}
+	}
+
+	focus = {	#吸纳科研人才
+		id = TCW_attracting_research_talents
+		icon = GFX_goal_generic_scientific_exchange
+		x = -3
+		y = 2
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_enable_hr }
+		relative_position_id = TCW_enable_hr
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+			add_to_variable = { TCW_refugee_influx_rsf = 0.05 }
+			custom_effect_tooltip = TCW_attracting_research_talents_tt
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {	#补充工业劳动力
+		id = TCW_supplemental_workforce
+		icon = GFX_goal_generic_oil_refinery
+		x = -1
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_enable_hr }
+		relative_position_id = TCW_enable_hr
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+			add_to_variable = { TCW_refugee_influx_icf = 0.05 }
+			381 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			custom_effect_tooltip = TCW_supplemental_workforce_tt
+		}
+	}
+
+	focus = {	#岭森军工扩展
+		id = TCW_rinsen_military_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_supplemental_workforce }
+		relative_position_id = TCW_supplemental_workforce
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			341 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+		}
+	}
+
+	focus = {	#《外籍就业保障法》
+		id = TCW_foreign_employment_secure_act
+		icon = GFX_focus_generic_public_works
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_attracting_research_talents }
+		prerequisite = { focus = TCW_rinsen_military_expansion }
+		prerequisite = { focus = TCW_elan_steel_plant }
+		prerequisite = { focus = TCW_ogata_open_action }
+		relative_position_id = TCW_rinsen_military_expansion
+		mutually_exclusive = { focus = TCW_special_police_enforcement_regulations }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_stability = -0.1
+			add_timed_idea = {
+				idea = TCW_foreign_employment_guarantee
+				days = 90
+			}
+			custom_effect_tooltip = TCW_advancing_resettlement_reinforced_tt
+		}
+	}
+
+	focus = {	#协助资源开采
+		id = TCW_assist_in_resource_extraction
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_enable_hr }
+		relative_position_id = TCW_enable_hr
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			set_variable = { TCW_refugee_influx_lrf = 0.1 }
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			custom_effect_tooltip = TCW_assist_in_resource_extraction_tt
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 342
+			}
+		}
+	}
+
+	focus = {	#埃兰钢铁厂
+		id = TCW_elan_steel_plant
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_assist_in_resource_extraction }
+		relative_position_id = TCW_assist_in_resource_extraction
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			381 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 381
+			}
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+		}
+	}
+
+	focus = {	#《特殊警务执法条例》
+		id = TCW_special_police_enforcement_regulations
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_attracting_research_talents }
+		prerequisite = { focus = TCW_rinsen_military_expansion }
+		prerequisite = { focus = TCW_elan_steel_plant }
+		prerequisite = { focus = TCW_ogata_open_action }
+		relative_position_id = TCW_elan_steel_plant
+		mutually_exclusive = { focus = TCW_foreign_employment_secure_act }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.05
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = TCW_discriminatory_employment
+				days = 60
+			}
+			custom_effect_tooltip = TCW_advancing_resettlement_reinforced_tt
+		}
+	}
+
+	focus = {	#奥加特开荒行动
+		id = TCW_ogata_open_action
+		icon = GFX_goal_Generic_Land_Reform
+		x = 3
+		y = 2
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_enable_hr }
+		relative_position_id = TCW_enable_hr
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			386 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			342 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+		}
+	}
+
+	focus = {	#归化入籍
+		id = TCW_naturalization
+		icon = GFX_Generic_War_Propaganda03
+		x = 0
+		y = 4
+		cost = 5
+
+		available = {
+			has_country_flag = TCW_resettlement_of_refugees_decision_over
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_foreign_employment_secure_act 
+ 						 focus = TCW_special_police_enforcement_regulations }
+		relative_position_id = TCW_enable_hr
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = TCW_refugee_influx }
+			}
+			custom_effect_tooltip = TCW_naturalization_tt
+			add_ideas = TCW_a_society_in_its_own_right
+			swap_ideas = {
+				remove_idea = TCW_ethnicity_and_racism
+				add_idea = TCW_ethnicity_and_racism_2
+			}
+		}
+	}
+
+	focus = {	#隐于暗影的危机
+		id = TCW_crisis_hidden_in_shadows
+		icon = GFX_TCW_crisis_hidden_in_shadows
+		x = 0
+		y = 1
+		cost = 1.5
+
+		available = {
+			has_country_flag = TCW_resettlement_of_refugees_decision_over
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_naturalization }
+		relative_position_id = TCW_naturalization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.2
+		}
+	}
+
+}
+
+focus_tree = {
+	id = TCW_focus_2
+	
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#不省人事的总统
+		id = TCW_unconcious_president
+		icon = GFX_Generic_Tear_Paper
+		x = 10
+		y = 0
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.1
+			unlock_decision_category_tooltip = TCW_president_awaking_decision_category
+		}
+	}
+
+	focus = {	#整顿大局
+		id = TCW_dealing_with_big_picture
+		icon = GFX_goal_government_centralised_icon
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_flag = TCW_president_awake_flag
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_unconcious_president }
+		relative_position_id = TCW_unconcious_president
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = TCW.15
+			swap_ideas = {
+				remove_idea = TCW_ethnicity_and_racism_2
+				add_idea = TCW_ethnicity_and_racism_3
+			}
+		}
+	}
+
+	focus = {	#扩建军事研究部门
+		id = TCW_expand_mili_research_department
+		icon = GFX_goal_Focus_Examine_Foreign_Small_Arms
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_dealing_with_big_picture }
+		relative_position_id = TCW_dealing_with_big_picture
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = TCW_expand_mili_research_department
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {	#扩充空军战备
+		id = TCW_expand_planes_reserve
+		icon = GFX_goal_new_airforce
+		x = 0
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_expand_mili_research_department }
+		relative_position_id = TCW_expand_mili_research_department
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "战斗机"
+				type = small_plane_airframe_1
+				parent_version = 0
+				modules = {
+					fixed_main_weapon_slot = light_mg_4x
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = lmg_defense_turret_2x
+					special_type_slot_2 = empty	
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 50
+			}
+			create_equipment_variant = {
+				name = "支援机"
+				type = small_plane_cas_airframe_1
+				parent_version = 0
+				modules = {
+					fixed_main_weapon_slot = small_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = light_mg_2x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = lmg_defense_turret_2x
+					special_type_slot_2 = empty	
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_cas_airframe_1
+				amount = 50
+			}
+			air_experience = 20
+		}
+	}
+
+	focus = {	#重建装甲部队
+		id = TCW_rebuild_arms_units
+		icon = GFX_Generic_Purchase_Tanks_Focus
+		x = 0
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_expand_planes_reserve }
+		relative_position_id = TCW_expand_planes_reserve
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			division_template = {
+				name = "泰坦装甲师"
+				regiments = {
+					light_titan = { x = 0 y = 0 }
+					light_titan = { x = 0 y = 1 }
+					light_titan = { x = 0 y = 2 }
+					light_titan = { x = 1 y = 0 }
+					light_titan = { x = 1 y = 1 }
+					motorized = { x = 2 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"泰坦装甲师\" division_template = \"泰坦装甲师\" start_experience_factor = 0.3 start_equipment_factor = 0.95"
+					owner = TCW
+				}
+				create_unit = {
+					division = "name = \"泰坦装甲师\" division_template = \"泰坦装甲师\" start_experience_factor = 0.3 start_equipment_factor = 0.95"
+					owner = TCW
+				}
+			}
+			army_experience = 10
+			add_tech_bonus = {
+				name = TCW_rebuild_arms_units
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {	#后方民兵起义
+		id = TCW_ensure_supplies
+		icon = GFX_TCW_ensure_supplies
+		x = 0
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_rebuild_arms_units }
+		relative_position_id = TCW_rebuild_arms_units
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			#add_ideas = TCW_mobilize_supplies_for_war
+			custom_effect_tooltip = TCW_ensure_supplies_tt
+		}
+	}
+
+	focus = {	#向进步正义党妥协
+		id = TCW_parliament_of_liberals
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = -3
+		y = 1
+		cost = 2
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_dealing_with_big_picture }
+		relative_position_id = TCW_dealing_with_big_picture
+		mutually_exclusive = { focus = TCW_parliament_of_youth }
+
+		completion_reward = {
+			add_political_power = 60
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {	#工厂放权体制实验
+		id = TCW_focus_on_general_efficiency
+		icon = GFX_focus_por_workers_of_iberia
+		x = -1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_parliament_of_liberals }
+		relative_position_id = TCW_parliament_of_liberals
+		mutually_exclusive = { focus = TCW_sweep_worms_in_market }
+
+		completion_reward = {
+			#add_ideas = TCW_focus_on_overall_production
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_ideas = TCW_init_ind_dem
+		}
+	}
+
+	focus = {	#清理市场蛀虫
+		id = TCW_sweep_worms_in_market
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_parliament_of_liberals }
+		relative_position_id = TCW_parliament_of_liberals
+		mutually_exclusive = { focus = TCW_focus_on_general_efficiency }
+
+		completion_reward = {
+			#add_ideas = TCW_earlier_econ_freelization
+			country_event = TCW.19
+		}
+	}
+
+	focus = {	#专注军备生产
+		id = TCW_mili_production_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_focus_on_general_efficiency
+						 focus = TCW_sweep_worms_in_market }
+		relative_position_id = TCW_sweep_worms_in_market
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			339 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_victory_points = {
+				province = 2667
+				value = 5
+			}
+		}
+	}
+
+	focus = {	#战于广阔的天空
+		id = TCW_fight_in_open_sky
+		icon = GFX_TCW_fight_in_open_sky
+		x = 0
+		y = 2
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_mili_production_focus }
+		relative_position_id = TCW_mili_production_focus
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = TCW_fight_open_sky
+		}
+	}
+
+	focus = {	#青年党人的议会
+		id = TCW_parliament_of_youth
+		icon = GFX_goal_Conservative
+		x = 3
+		y = 1
+		cost = 2
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_dealing_with_big_picture }
+		relative_position_id = TCW_dealing_with_big_picture
+		mutually_exclusive = { focus = TCW_parliament_of_liberals }
+
+		completion_reward = {
+			add_political_power = 60
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {	#人权
+		id = TCW_mans_right
+		icon = GFX_goal_liberty
+		x = -1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_parliament_of_youth }
+		relative_position_id = TCW_parliament_of_youth
+		mutually_exclusive = { focus = TCW_families }
+
+		completion_reward = {
+			add_ideas = TCW_wide_human_rights
+		}
+	}
+
+	focus = {	#家庭
+		id = TCW_families
+		icon = GFX_Generic_Family
+		x = 1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_parliament_of_youth }
+		relative_position_id = TCW_parliament_of_youth
+		mutually_exclusive = { focus = TCW_mans_right }
+
+		completion_reward = {
+			add_ideas = TCW_recover_traditional_families
+		}
+	}
+
+	focus = {	#专注媒体宣传
+		id = TCW_propoganda_focus
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		cost = 4
+
+		available = {
+		}
+
+		bypass = {
+			has_idea = MP_only_our_voice
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_mans_right
+						 focus = TCW_families }
+		relative_position_id = TCW_families
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -50
+			add_ideas = MP_only_our_voice
+		}
+	}
+
+	focus = {	#战于开阔的原野
+		id = TCW_fight_in_open_field
+		icon = GFX_TCW_fight_in_open_field
+		x = 0
+		y = 2
+		cost = 4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_propoganda_focus }
+		relative_position_id = TCW_propoganda_focus
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = TCW_fight_open_field
+		}
+	}
+
+	focus = {	#一切准备就绪
+		id = TCW_everything_ready
+		icon = GFX_goal_generic_secret_weapon
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_ensure_supplies }
+		prerequisite = { focus = TCW_fight_in_open_sky
+						 focus = TCW_fight_in_open_field }
+		relative_position_id = TCW_ensure_supplies
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.16
+		}
+	}
+
+	focus = {	#向南进军！
+		id = TCW_marching_to_south
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_everything_ready }
+		relative_position_id = TCW_everything_ready
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			declare_war_on = {
+				target = KTL
+				type = annex_everything
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = TCW_ensure_supplies }
+					country_event = { id = TCW.17 days = 7 }
+				}
+				news_event = TCWNews.3
+			}
+		}
+	}
+
+}
+
+focus_tree = {
+	id = TCW_focus_3
+	
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#选举前的暴风雨
+		id = TCW_storm_before_election
+		icon = GFX_TCW_storm_before_election
+		x = 10
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.50
+			SPC_military_development_amount_down_2 = yes
+			army_experience = 10
+		}
+	}
+
+	focus = {	#元帅遗愿之疑
+		id = TCW_marshal_s_last_wish
+		icon = GFX_TCW_marshal_s_last_wish
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_storm_before_election }
+		relative_position_id = TCW_storm_before_election
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.51
+			add_political_power = 50
+			add_stability = -0.05
+		}
+	}
+
+	focus = {	#经略济世之要
+		id = TCW_key_to_economic_development
+		icon = GFX_TCW_key_to_economic_development
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_storm_before_election }
+		relative_position_id = TCW_storm_before_election
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.52
+			add_to_variable = {
+				var = industrial_development_amount
+				value = 25
+				tooltip = industrial_development_amount_tt
+			}
+		}
+	}
+
+	focus = {	#舆论风波滔天
+		id = TCW_turbulent_public_opinion
+		icon = GFX_TCW_turbulent_public_opinion
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_storm_before_election }
+		relative_position_id = TCW_storm_before_election
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.53
+			SPC_research_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#为联邦赋予命运
+		id = TCW_fate_stay_federation
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_marshal_s_last_wish }
+		prerequisite = { focus = TCW_key_to_economic_development }
+		prerequisite = { focus = TCW_turbulent_public_opinion }
+		relative_position_id = TCW_key_to_economic_development
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = TCW_fate_stay_federation_tt
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { TCW_dem_reform_var > 0 } }
+					country_event = TCW.54
+				}
+				else = {
+					country_event = TCW.55
+				}
+			}
+		}
+	}
+
+	focus = {	#久违的民主欢呼
+		id = TCW_long_awaited_democratic_cheer
+		icon = GFX_Generic_Break_Free
+		x = -1
+		y = 1
+		cost = 1
+
+		available = { always = no }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_fate_stay_federation }
+		relative_position_id = TCW_fate_stay_federation
+		mutually_exclusive = { focus = TCW_new_milestone_of_national_rev }
+
+		completion_reward = {
+			country_event = {
+				id = TCW.58
+				days = 5
+			}
+		}
+	}
+
+	focus = {	#大选结果出炉
+		id = TCW_result_of_election
+		icon = GFX_Generic_Democracy
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_long_awaited_democratic_cheer }
+		relative_position_id = TCW_long_awaited_democratic_cheer
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = TCW.56
+		}
+	}
+
+	focus = {	#民族革命新里程
+		id = TCW_new_milestone_of_national_rev
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 1
+		y = 1
+		cost = 1
+
+		available = { always = no }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_fate_stay_federation }
+		relative_position_id = TCW_fate_stay_federation
+		mutually_exclusive = { focus = TCW_long_awaited_democratic_cheer }
+
+		completion_reward = {
+			country_event = {
+				id = TCW.59
+				days = 5
+			}
+		}
+	}
+
+	focus = {	#一山难容二虎
+		id = TCW_no_room_for_two_tigers
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_new_milestone_of_national_rev }
+		relative_position_id = TCW_new_milestone_of_national_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = TCW.57
+		}
+	}
+}
+
+focus_tree = {
+	id = TCW_focus_4
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TCW
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {
+		x = 0
+		y = 2000
+	}
+
+	#青年党政府成立
+	focus = {
+		id = TCW_youth_party_government_established
+		icon = GFX_focus_NOR_continue_nygaardsvold_government
+		x = 10
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 90
+			country_event = {
+				id = TCW.100
+				days = 1
+			}
+			TCW_national_parliament_setup = yes
+		}
+	}
+
+	#取缔极右翼组织
+	focus = {
+		id = TCW_ban_extreme_right_wing_organization
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = -3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_youth_party_government_established }
+		relative_position_id = TCW_youth_party_government_established
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.15
+			}
+			swap_ideas = {
+				remove_idea = TCW_ethnicity_and_racism_3
+				add_idea = TCW_ethnicity_and_racism_3_1
+			}
+		}
+	}
+
+	#摘除元帅画像
+	focus = {
+		id = TCW_remove_marshal_portrait
+		icon = GFX_focus_RAJ_military_into_the_workforce
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_youth_party_government_established }
+		relative_position_id = TCW_youth_party_government_established
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = -0.2
+			}
+			add_war_support = -0.075
+
+		}
+	}
+
+	#新兴外交姿态
+	focus = {
+		id = TCW_new_diplomatic_posture
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_youth_party_government_established }
+		relative_position_id = TCW_youth_party_government_established
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = { RSB = { exists = yes } }
+				RSB = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = SPC_improve_relation_30
+					}
+				}
+			}
+			if = {
+				limit = { ROK = { exists = yes } }
+				ROK = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = SPC_improve_relation_30
+					}
+				}
+			}
+			if = {
+				limit = { RSU = { exists = yes } }
+				RSU = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = SPC_improve_relation_30
+					}
+				}
+			}
+			add_ideas = friendly_tatic
+		}
+	}
+
+	#政治去军事化
+	focus = {
+		id = TCW_political_demilitarization
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_youth_party_government_established }
+		relative_position_id = TCW_youth_party_government_established
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TCW_army_of_ambition
+				add_idea = TCW_army_of_ambition_1_1
+			}
+			add_timed_idea = {
+				idea = TCW_rebuild_political_situation
+				days = 60
+			}
+		}
+	}
+
+	#矿难调查
+	focus = {
+		id = TCW_mine_disaster_investigation
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 1
+		y = 1
+		cost = 1
+
+		available = {
+			has_country_flag = TCW_mine_disaster_investigation_flag
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_ban_extreme_right_wing_organization }
+		prerequisite = { focus = TCW_remove_marshal_portrait }
+		prerequisite = { focus = TCW_new_diplomatic_posture }
+		prerequisite = { focus = TCW_political_demilitarization }
+		relative_position_id = TCW_remove_marshal_portrait
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_military_development_amount_down_1 = yes
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.05
+			}
+			add_political_power = -30
+			custom_effect_tooltip = TCW_mine_disaster_investigation_tt
+		}
+	}
+
+	#问责进步党人
+	focus = {
+		id = TCW_hold_progressive_party_responsible
+		icon = GFX_Generic_Purge_Social_Democracy
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_mine_disaster_investigation }
+		relative_position_id = TCW_mine_disaster_investigation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.1
+			}
+			custom_effect_tooltip = TCW_hold_progressive_party_responsible_tt
+			add_to_variable = { TCW_national_parliament_seat_1 = 6 }	#青年党
+			add_to_variable = { TCW_national_parliament_seat_2 = -12 }	#正义党
+			add_to_variable = { TCW_national_parliament_seat_3 = 2 }	#无党派人士
+			add_to_variable = { TCW_national_parliament_seat_4 = 2 }	#科维斯族代表
+			add_to_variable = { TCW_national_parliament_seat_5 = 2 }	#军方代表
+			country_event = {
+				id = TCW.103
+				days = 1
+			}
+		}
+	}
+
+	#开始青年党的事业
+	focus = {
+		id = TCW_start_youth_party_career
+		icon = GFX_focus_generic_social_democracy
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_hold_progressive_party_responsible }
+		relative_position_id = TCW_hold_progressive_party_responsible
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#清算宗教势力
+	focus = {
+		id = TCW_settle_religious_forces
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = -3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_start_youth_party_career }
+		relative_position_id = TCW_start_youth_party_career
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#无神论革命的余烬
+	focus = {
+		id = TCW_aftermath_of_atheist_revolution
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = -1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_settle_religious_forces }
+		relative_position_id = TCW_settle_religious_forces
+		mutually_exclusive = { focus = TCW_seal_doctrine_in_museum }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#将教义封存于博物馆
+	focus = {
+		id = TCW_seal_doctrine_in_museum
+		icon = GFX_focus_SWE_counter_revolution
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_settle_religious_forces }
+		relative_position_id = TCW_settle_religious_forces
+		mutually_exclusive = { focus = TCW_aftermath_of_atheist_revolution }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#实行义务教育
+	focus = {
+		id = TCW_implement_compulsory_education
+		icon = GFX_generic_Bookstack
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_aftermath_of_atheist_revolution focus = TCW_seal_doctrine_in_museum }
+		relative_position_id = TCW_aftermath_of_atheist_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#赦免进步学者
+	focus = {
+		id = TCW_pardon_progressive_scholars
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 2
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_aftermath_of_atheist_revolution }
+		relative_position_id = TCW_aftermath_of_atheist_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#打击学术造假
+	focus = {
+		id = TCW_strike_academic_fraud
+		icon = GFX_goal_Generic_Secret_Police
+		x = 0
+		y = 2
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_seal_doctrine_in_museum }
+		relative_position_id = TCW_seal_doctrine_in_museum
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#为科研授勋
+	focus = {
+		id = TCW_award_for_scientific_research
+		icon = GFX_focus_BEL_v_for_victory
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_pardon_progressive_scholars focus = TCW_strike_academic_fraud }
+		relative_position_id = TCW_pardon_progressive_scholars
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#纯粹之文明社会
+	focus = {
+		id = TCW_pure_civilized_society
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_award_for_scientific_research }
+		relative_position_id = TCW_award_for_scientific_research
+		mutually_exclusive = { focus = TCW_united_national_state }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#采用民族历史论
+	focus = {
+		id = TCW_adopt_national_historical_theory
+		icon = GFX_goal_skull_treaty
+		x = 3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_start_youth_party_career }
+		relative_position_id = TCW_start_youth_party_career
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#标榜民族品格本色
+	focus = {
+		id = TCW_boast_national_character
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_adopt_national_historical_theory }
+		relative_position_id = TCW_adopt_national_historical_theory
+		mutually_exclusive = { focus = TCW_balance_of_national_rights }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#守卫民族团结
+	focus = {
+		id = TCW_guard_national_unity
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_boast_national_character focus = TCW_balance_of_national_rights }
+		relative_position_id = TCW_boast_national_character
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#为鼓励生育拨款
+	focus = {
+		id = TCW_grant_for_encouraging_birth
+		icon = GFX_focus_generic_welfare
+		x = 0
+		y = 2
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_boast_national_character }
+		relative_position_id = TCW_boast_national_character
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#众民族权利平衡
+	focus = {
+		id = TCW_balance_of_national_rights
+		icon = GFX_Generic_Chess_Move
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_adopt_national_historical_theory }
+		relative_position_id = TCW_adopt_national_historical_theory
+		mutually_exclusive = { focus = TCW_boast_national_character }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#捍卫伦理秩序
+	focus = {
+		id = TCW_defend_ethical_order
+		icon = GFX_goal_Conservative
+		x = 0
+		y = 2
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_balance_of_national_rights }
+		relative_position_id = TCW_balance_of_national_rights
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#为民族歌颂
+	focus = {
+		id = TCW_sing_for_nation
+		icon = GFX_Generic_War_Propaganda02
+		x = 1
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_grant_for_encouraging_birth focus = TCW_defend_ethical_order }
+		relative_position_id = TCW_grant_for_encouraging_birth
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	#团结之民族国家
+	focus = {
+		id = TCW_united_national_state
+		icon = GFX_focus_AFG_adopt_nufus
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_sing_for_nation }
+		relative_position_id = TCW_sing_for_nation
+		mutually_exclusive = { focus = TCW_pure_civilized_society }
+
+		completion_reward = {
+			
+		}
+	}
+
+	#现代化民族模范
+	focus = {
+		id = TCW_modern_national_model
+		icon = GFX_focus_SWE_the_lion_of_the_north
+		x = 3
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = TCW_pure_civilized_society focus = TCW_united_national_state }
+		relative_position_id = TCW_pure_civilized_society
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+}

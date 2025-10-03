@@ -1,0 +1,23 @@
+characters={
+
+	GLV_conor_galviva = {		#康纳·戈尔维亚
+   		name = GLV_conor_galviva
+   		portraits = {
+   			civilian = {
+   				large="GFX_GLV_conor_galviva"
+				   small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_GLV_conor_galviva"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = GLV_conor_galviva_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

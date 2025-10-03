@@ -1,0 +1,24 @@
+
+state={
+	id=13
+	name="STATE_13"
+	provinces={
+		3616 8972 9247 9405 10652 11860 17107 17181 17254 17497 
+	}
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+            infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+        }
+		victory_points = {
+			11860 5
+		}
+	}
+	manpower = 903759
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

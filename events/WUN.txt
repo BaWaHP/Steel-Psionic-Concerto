@@ -1,0 +1,343 @@
+﻿###########################
+# ZHE Events #
+###########################
+
+add_namespace = WUN
+
+country_event = {
+	id = WUN.1		#肉山
+	title = WUN.1.t
+	desc = WUN.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.1.a
+		add_manpower = -50000
+		retire_character = WUN_Yaqub_kuli_bek
+		set_political_party = {
+			ideology = wizard_rules
+			popularity = 100
+		}
+		set_politics = {
+			ruling_party = wizard_rules
+		}
+		add_country_leader_role = {
+			character = WUN_lust_mountain
+			promote_leader = yes
+			country_leader = {
+				ideology = original_desire
+				expire = "2040.1.1.1"
+				traits = { lust_mountain_trait brutal }
+			}
+		}
+		set_cosmetic_tag = WUN_lust_mountain_name
+		add_ideas = WUN_break_down
+		remove_ideas = WUN_spread_of_racist_sentiment
+		remove_ideas = WUN_spread_of_nationalism_sentiment
+		remove_dynamic_modifier = { modifier = WUN_way_of_the_king }
+		remove_ideas = WUN_hot_knife_with_cold_blood
+		remove_ideas = WUN_Ill_fares_the_land
+		remove_ideas = WUN_nomadic_society
+		remove_ideas = ZHE_king_behind_king
+		remove_ideas = WUN_boke_system
+		deactivate_advisor = WUN_yaqub_huda_bek_idea
+		deactivate_advisor = WUN_yaqub_haighura_bek_idea
+		deactivate_advisor = WUN_yaqub_ginsham_bek_idea
+		country_lock_all_division_template = yes
+		add_ideas = no_standard_at_all
+		add_ideas = barely_no_taxes
+		add_ideas = RP_decide_themselves
+		add_ideas = AP_no_funds
+		add_ideas = RP_no_funds
+		add_ideas = MP_freedom_speech
+		add_ideas = MP_no_restriction
+		add_ideas = SPP_no_secreat_police
+		add_ideas = FP_joining_the_poitics
+		add_ideas = EP_minimum_spending
+		add_ideas = LR_advanced_magician
+		add_ideas = SR_race_euqality
+		add_ideas = RAP_suppression
+		add_ideas = SXP_recessing_policy
+	}
+}
+
+country_event = {
+	id = WUN.2		#追随之人
+	title = WUN.2.t
+	desc = WUN.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.2.a
+		add_manpower = 10000
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+		country_event = { id = WUN.5 days = 15 }
+	}
+}
+
+country_event = {
+	id = WUN.3		#懊悔之人
+	title = WUN.3.t
+	desc = WUN.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.3.a
+		add_political_power = -50
+		add_stability = -0.1
+	}
+
+	option = {
+		name = WUN.3.b
+		add_political_power = -50
+		add_stability = -0.1
+		#declare_war_on = {
+		#	target = WUN
+		#	type = annex_everything
+		#}
+	}
+}
+
+country_event = {
+	id = WUN.4		#理性之人
+	title = WUN.4.t
+	desc = WUN.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.4.a
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+country_event = {
+	id = WUN.5		#重生之人
+	title = WUN.5.t
+	desc = WUN.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.5.a
+		add_manpower = -1
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+		country_event = { id = WUN.6 days = 15 }
+	}
+}
+
+country_event = {
+	id = WUN.6		#真心为您
+	title = WUN.6.t
+	desc = WUN.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.6.a
+		add_stability = 0.05
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+		country_event = { id = WUN.7 days = 15 }
+	}
+}
+
+country_event = {
+	id = WUN.7		#真心为你
+	title = WUN.7.t
+	desc = WUN.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.7.a
+		add_stability = 0.05
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+		country_event = { id = WUN.8 days = 15 }
+	}
+}
+
+country_event = {
+	id = WUN.8		#陷落之人
+	title = WUN.8.t
+	desc = WUN.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.8.a
+		add_manpower = -3
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+		country_event = { id = WUN.9 days = 15 }
+	}
+}
+
+country_event = {
+	id = WUN.9		#永生之人
+	title = WUN.9.t
+	desc = WUN.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.9.a
+		add_manpower = -6
+		add_ideas = WUN_sun_comes_down
+		capital_scope = {
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+			create_unit = {
+				division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+				owner = WUN
+			}
+		}
+	}
+}
+
+country_event = {
+	id = WUN.10		#敞开的欲望之门
+	title = WUN.10.t
+	desc = WUN.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.10.a
+		remove_country_leader_role = {
+			character = WUN_lust_mountain 
+			ideology = original_desire
+		}
+		add_country_leader_role = {
+			character = WUN_Libido
+			promote_leader = yes
+			country_leader = {
+				desc = WUN_Libido_desc
+				ideology = original_desire
+				expire = "2040.1.1.1"
+				traits = { appetite lust_for_love desire_to_know }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = WUN.100		#您有新的肉团订单！
+	title = WUN.100.t
+	desc = WUN.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.100.a
+		add_equipment_to_stockpile = {
+			type = lust_chrysalides_0
+			amount = 20
+			producer = WUN
+		}
+	}
+}
+
+country_event = {
+	id = WUN.200		#加冕仪式
+	title = WUN.200.t
+	desc = WUN.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WUN.200.a
+		add_political_power = -5
+		add_command_power = 5
+	}
+}
+
+add_namespace = WUNNews
+
+news_event = {
+	id = WUNNews.1		#突发！七河地区爆发灾厄事件！
+	title = WUNNews.1.t
+	desc = WUNNews.1.d
+	picture = GFX_news_event_generic_32
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WUNNews.1.a
+		if = {
+			limit = { tag = ZHE }
+			add_political_power = -25
+		}
+	}
+}

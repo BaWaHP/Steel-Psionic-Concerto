@@ -1,0 +1,36 @@
+
+state={
+	id=115
+	name="STATE_115"
+
+	resources = {
+		aluminium = 5
+		tungsten = 10
+		chromium = 5
+	}
+
+	history={
+		owner = NCD
+		add_core_of = NCD
+		add_core_of = CLD
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			4977 3
+		}
+		victory_points = {
+			8527 2
+		}
+
+	}
+
+	provinces={
+		1139 4977 7423 8527 8829 10627 10779 11044 11749 19837 19838 19893 19937 20020 20073 20109 22067 
+	}
+	manpower=1048463
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

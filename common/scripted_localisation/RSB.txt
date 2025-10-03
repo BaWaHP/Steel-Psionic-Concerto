@@ -1,0 +1,61 @@
+defined_text = {
+	name = GET_RSB_politic_sit_desc
+	text = {
+		trigger = {
+			check_variable = { RSB_politic_sit_desc = 0 }
+		}
+		localization_key = RSB_politic_sit_desc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { RSB_politic_sit_desc = 1 }
+		}
+		localization_key = RSB_politic_sit_desc_1
+	}
+}
+
+defined_text = {
+	name = GET_RSB_politic_sit_local_party_trust
+	text = {
+		trigger = {
+			check_variable = { RSB_politic_sit_local_party_trust < 20 }
+		}
+		localization_key = RSB_politic_sit_local_party_trust_0
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { RSB_politic_sit_local_party_trust > 19 }
+				check_variable = { RSB_politic_sit_local_party_trust < 40 }
+			}
+		}
+		localization_key = RSB_politic_sit_local_party_trust_1
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { RSB_politic_sit_local_party_trust > 39 }
+				check_variable = { RSB_politic_sit_local_party_trust < 60 }
+			}
+		}
+		localization_key = RSB_politic_sit_local_party_trust_2
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { RSB_politic_sit_local_party_trust > 59 }
+				check_variable = { RSB_politic_sit_local_party_trust < 80 }
+			}
+		}
+		localization_key = RSB_politic_sit_local_party_trust_3
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { RSB_politic_sit_local_party_trust > 79 }
+				check_variable = { RSB_politic_sit_local_party_trust < 101 }
+			}
+		}
+		localization_key = RSB_politic_sit_local_party_trust_4
+	}
+}

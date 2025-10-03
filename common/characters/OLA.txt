@@ -1,0 +1,23 @@
+characters={
+
+	OLA_darian_akabane = {		#达里安·赤羽
+   		name = OLA_darian_akabane
+   		portraits = {
+   			civilian = {
+   				large="GFX_OLA_darian_akabane"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_OLA_darian_akabane"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = OLA_darian_akabane_desc
+   			ideology = leftist_guerrilla_movement
+   			traits = { OLA_guerrilla_leader }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

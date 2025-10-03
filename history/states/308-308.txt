@@ -1,0 +1,37 @@
+
+state={
+	id=308
+	name="STATE_308"
+
+	resources = {
+		magic_crystal = 2
+	}
+
+	history={
+		owner = KOA
+		add_core_of = KOA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 1
+			20756 = {
+				naval_base = 4
+			}
+			20756 = {
+				bunker = 2
+			}
+		}
+		victory_points = {
+			20756 5
+		}
+	}
+
+	provinces={
+		5149 10418 10675 11722 20639 20693 20703 20727 20744 20756 20784 20832 20873 
+	}
+	manpower = 842460
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

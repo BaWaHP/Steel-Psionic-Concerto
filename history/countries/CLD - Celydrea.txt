@@ -1,0 +1,92 @@
+﻿capital = 108
+
+oob = "CLD"
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = revolutionary_communism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 18
+	revolutionary_communism = 45
+	worldunion_socialist = 17
+	worldunion_democrat = 7
+	liberal_republican = 5
+	conservative_republican = 0
+	authoritarian_republican = 4
+	national_socialist = 3
+	authoritarian_nationalism = 1
+	paternal_autocrat = 0
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_support = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+recruit_character = CLD_Arle_Scherrer
+recruit_character = CLD_wings_Mazokav
+recruit_character = CLD_human_Lorvin
+recruit_character = CLD_human_Siatovia
+recruit_character = CLD_human_Jacques_Toles
+recruit_character = CLD_human_Rickelsang
+recruit_character = CLD_human_Velja_Childs
+recruit_character = CLD_wings_Timparnov 
+recruit_character = CLD_Mayakolonova
+recruit_character = CLD_human_Anshitvia 
+recruit_character = CLD_human_Strovell 
+recruit_character = CLD_human_Chelviotro
+recruit_character = CLD_human_Janotlf
+recruit_character = CLD_human_Candelajas 
+recruit_character = CLD_human_Moniz
+recruit_character = CLD_human_Sverre_Kalter
+recruit_character = CLD_human_Newart
+recruit_character = CLD_human_Yato
+recruit_character = CLD_human_Lang_Weiwen
+recruit_character = CLD_Blood_Opteil
+recruit_character = CLD_yumiko_shiraki
+
+recruit_character = CLD_william_moritz
+recruit_character = CLD_bob_burns
+recruit_character = CLD_jane_grek
+recruit_character = CLD_west_cain
+
+add_ideas = CLD_wound_of_betrayal
+add_ideas = CLD_uncomplete_managing_system
+add_ideas = CLD_trade_treaty_with_peo
+add_ideas = CLD_weak_army
+add_ideas = CLD_commue_in_conflicts
+add_ideas = CLD_scientific_boundary
+add_ideas = CLD_chaotic_nationalization
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment
+	amount = 300
+}

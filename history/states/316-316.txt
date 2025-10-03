@@ -1,0 +1,30 @@
+
+state={
+	id=316
+	name="STATE_316"
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			8081 20
+		}
+		victory_points = {
+			20288 8 
+		}
+
+	}
+
+	provinces={
+		1696 2449 5092 9776 10370 20237 20288 20347 20407 20461 
+	}
+	manpower=1980000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

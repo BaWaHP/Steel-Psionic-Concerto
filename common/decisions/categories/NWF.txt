@@ -1,0 +1,6 @@
+NWF_debug_event_trigger = {
+	allowed = { tag = NWF }
+	visible = { is_debug = yes }
+	visible_when_empty = no
+	priority = 114514
+}

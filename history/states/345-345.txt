@@ -1,0 +1,32 @@
+
+state={
+	id=345
+	name="STATE_345"
+	resources={
+		steel=12.000
+		aluminium=6.000
+	}
+
+	history={
+		owner = ROK
+		add_core_of = ROK
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			20057 10 
+		}
+
+	}
+
+	provinces={
+		782 5896 7742 9544 19999 20057 20066 20067 20107 20129 20212 
+	}
+	manpower=2230000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=12
+	name="STATE_12"
+
+	history={
+		owner = NWF
+		add_core_of = NWF
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		4320 9032 11305 17119 17237 17339 17371 17391 17478 17526 17622 
+	}
+	manpower=1303911
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

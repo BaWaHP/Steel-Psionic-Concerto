@@ -1,0 +1,1502 @@
+ARO_Auroretia_internal_crisis = {
+	
+	#重申王室权威
+	ARO_reassert_royal_authority = {
+		icon = GFX_decision_generic_protection
+
+		available = {
+		}
+		visible = {
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_down_minor_w
+			custom_effect_tooltip = ARO_satisfaction_down_minor_r
+			custom_effect_tooltip = ARO_satisfaction_down_minor_c
+			add_to_variable = { ARO_satisfaction_warmongers = -5 }
+			add_to_variable = { ARO_satisfaction_republicans = -5 }
+			add_to_variable = { ARO_satisfaction_cultists = -5 }
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.15
+			}
+		}
+	}
+
+	#安抚派系
+	ARO_comfort_faction_w = {
+		icon = GFX_decision_generic_welfare
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_justice }
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+		}
+
+		remove_effect = {
+		}
+	}
+	ARO_comfort_faction_r = {
+		icon = GFX_decision_generic_welfare
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_tolerance }
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+		}
+
+		remove_effect = {
+		}
+	}
+	ARO_comfort_faction_c = {
+		icon = GFX_decision_generic_welfare
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_piety }
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+		}
+
+		remove_effect = {
+		}
+	}
+
+	#向派系让权
+	ARO_yield_to_faction_w = {
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = ARO_bend_to_factional_pressure
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_tolerance }
+			NOT = { has_completed_focus = ARO_the_path_of_piety }
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			add_political_power = 10
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.05
+			}
+		}
+	}
+	ARO_yield_to_faction_r = {
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = ARO_bend_to_factional_pressure
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_justice }
+			NOT = { has_completed_focus = ARO_the_path_of_piety }
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_political_power = 10
+			custom_effect_tooltip = ARO_satisfaction_up_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = 25 }
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+		}
+	}
+	ARO_yield_to_faction_c = {
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = ARO_bend_to_factional_pressure
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_justice }
+			NOT = { has_completed_focus = ARO_the_path_of_tolerance }
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_political_power = 10
+			custom_effect_tooltip = ARO_satisfaction_up_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = 25 }
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#打压派系
+	ARO_supress_faction_w = {
+		icon = generic_army_support
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_justice }
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_down_major_w
+			add_to_variable = { ARO_satisfaction_warmongers = -50 }
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = -0.05
+			}
+		}
+	}
+	ARO_supress_faction_r = {
+		icon = generic_army_support
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_tolerance }
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_down_major_r
+			add_to_variable = { ARO_satisfaction_republicans = -50 }
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.05
+			}
+		}
+	}
+	ARO_supress_faction_c = {
+		icon = generic_army_support
+
+		available = {
+		}
+		visible = {
+			NOT = { has_completed_focus = ARO_the_path_of_piety }
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_satisfaction_down_major_c
+			add_to_variable = { ARO_satisfaction_cultists = -50 }
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = -0.1
+			}
+		}
+	}
+
+	#派系索取更多权力
+	ARO_faction_demand_w = {
+		icon = generic_prepare_civil_war
+		available = {
+			always = no
+		}
+		activation = {
+			NOT = { has_country_flag = ARO_civil_war_broke_out }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 6
+		fixed_random_seed = no
+
+		ai_will_do = {
+			factor = 0.5
+		}
+		timeout_effect = {
+			set_variable = { ARO_popularity_warmongers = party_popularity_100@national_socialist }
+			add_to_variable = { ARO_popularity_warmongers = party_popularity_100@authoritarian_nationalism }
+			set_temp_variable = { ARO_satisfaction_decay = -2 }
+			add_to_temp_variable = { ARO_satisfaction_decay = stability }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_popularity_warmongers }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_internal_tense }
+			if = {
+				limit = { has_completed_focus = ARO_the_path_of_justice }
+			}
+			else = {
+				if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -9.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_minor_w
+				}
+				else_if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -24.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_medium_w
+				}
+				else = {
+					custom_effect_tooltip = ARO_satisfaction_down_major_w
+				}
+				add_to_variable = { ARO_satisfaction_warmongers = ARO_satisfaction_decay }
+				if = {
+					limit = { check_variable = { ARO_satisfaction_warmongers < 0 } }
+					custom_effect_tooltip = ARO_satisfaction_low
+					ARO_faction_demand_effect_w = yes
+					add_to_variable = { ARO_satisfaction_warmongers = 50 }
+				}
+			}
+			hidden_effect = { activate_mission = ARO_faction_demand_w }
+		}
+	}
+	ARO_faction_demand_r = {
+		icon = generic_prepare_civil_war
+		available = {
+			always = no
+		}
+		activation = {
+			NOT = { has_country_flag = ARO_civil_war_broke_out }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 6
+		fixed_random_seed = no
+
+		ai_will_do = {
+			factor = 0.5
+		}
+		timeout_effect = {
+			set_variable = { ARO_popularity_republicans = party_popularity_100@liberal_republican }
+			add_to_variable = { ARO_popularity_republicans = party_popularity_100@conservative_republican }
+			set_temp_variable = { ARO_satisfaction_decay = -2 }
+			add_to_temp_variable = { ARO_satisfaction_decay = stability }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_popularity_republicans }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_internal_tense }
+			if = {
+				limit = { has_completed_focus = ARO_the_path_of_tolerance }
+			}
+			else = {
+				if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -9.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_minor_r
+				}
+				else_if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -24.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_medium_r
+				}
+				else = {
+					custom_effect_tooltip = ARO_satisfaction_down_major_r
+				}
+				add_to_variable = { ARO_satisfaction_republicans = ARO_satisfaction_decay }
+				if = {
+					limit = { check_variable = { ARO_satisfaction_republicans < 0 } }
+					custom_effect_tooltip = ARO_satisfaction_low
+					ARO_faction_demand_effect_r = yes
+					add_to_variable = { ARO_satisfaction_republicans = 50 }
+				}
+			}
+			hidden_effect = { activate_mission = ARO_faction_demand_r }
+		}
+	}
+	ARO_faction_demand_c = {
+		icon = generic_prepare_civil_war
+		available = {
+			always = no
+		}
+		activation = {
+			NOT = { has_country_flag = ARO_civil_war_broke_out }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 6
+		fixed_random_seed = no
+
+		ai_will_do = {
+			factor = 0.5
+		}
+		timeout_effect = {
+			set_variable = { ARO_popularity_cultists = party_popularity_100@religious_extremism }
+			set_temp_variable = { ARO_satisfaction_decay = -2 }
+			add_to_temp_variable = { ARO_satisfaction_decay = stability }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_popularity_cultists }
+			multiply_temp_variable = { ARO_satisfaction_decay = ARO_internal_tense }
+			if = {
+				limit = { has_completed_focus = ARO_the_path_of_piety }
+			}
+			else = {
+				if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -9.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_minor_c
+				}
+				else_if = {
+					limit = { check_variable = { ARO_satisfaction_decay > -24.9 } }
+					custom_effect_tooltip = ARO_satisfaction_down_medium_c
+				}
+				else = {
+					custom_effect_tooltip = ARO_satisfaction_down_major_c
+				}
+				add_to_variable = { ARO_satisfaction_cultists = ARO_satisfaction_decay }
+				if = {
+					limit = { check_variable = { ARO_satisfaction_cultists < 0 } }
+					custom_effect_tooltip = ARO_satisfaction_low
+					ARO_faction_demand_effect_c = yes
+					add_to_variable = { ARO_satisfaction_cultists = 50 }
+				}
+			}
+			hidden_effect = { activate_mission = ARO_faction_demand_c }
+		}
+	}
+	
+}
+
+ARO_maraud_from_Lesnoden = {
+	
+	ARO_mfL_raid_civilian_factory = {
+		icon = GFX_decision_revolt
+
+		available = {
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_state_status_not_in_cd
+				var:ARO_mfL_state_selected = {
+					NOT = { has_state_flag = ARO_mfL_state_status_cd }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_1
+				divisions_in_state = {
+					state = var:ARO_mfL_state_selected
+					size > 0
+					unit = police_infantry
+				}
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 81 }
+				check_variable = { ARO_mfL_state_selected = 82 }
+				check_variable = { ARO_mfL_state_selected = 83 }
+				check_variable = { ARO_mfL_state_selected = 84 }
+				check_variable = { ARO_mfL_state_selected = 86 }
+			}
+			var:ARO_mfL_state_selected = {
+				industrial_complex > 0
+			}
+		}
+
+		cost = 5
+		fire_only_once = no
+		#days_re_enable = 1
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			set_temp_variable = { ARO_marauders_damage_rate = 0.45 }
+			set_temp_variable = { ARO_marauders_fail_weight = 50 }
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 1
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.2 }
+				set_temp_variable = { ARO_marauders_fail_weight = 40 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 2
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.1 }
+				set_temp_variable = { ARO_marauders_fail_weight = 30 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 3
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.05 }
+				set_temp_variable = { ARO_marauders_fail_weight = 20 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 4
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0 }
+				set_temp_variable = { ARO_marauders_fail_weight = 10 }
+			}
+			custom_effect_tooltip = ARO_mfL_marauder_actions_desc
+			var:ARO_mfL_state_selected = {
+				set_state_flag = {
+					flag = ARO_mfL_state_status_cd
+					days = 15
+					value = 1
+				}
+			}
+			damage_units = {
+				state = var:ARO_mfL_state_selected
+				limit = { tag = ARO }
+				org_damage = 0.95
+				str_damage = var:ARO_marauders_damage_rate
+				ratio = yes
+				army = yes
+				navy = no
+			}
+			random_list = {
+				40 = {
+					var:ARO_mfL_state_selected = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_216
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 108 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 162 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 216 }}
+						}
+					}
+				}
+				20 = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_81
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 27 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 54 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 81 }}
+						}
+					}
+
+				}
+				var:ARO_marauders_fail_weight = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_fail
+					var:ARO_mfL_state_selected = {
+						
+						add_resistance = 5
+					}
+				}
+			}
+		}
+	}
+
+	ARO_mfL_raid_military_factory = {
+		icon = GFX_decision_revolt
+
+		available = {
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_state_status_not_in_cd
+				var:ARO_mfL_state_selected = {
+					NOT = { has_state_flag = ARO_mfL_state_status_cd }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_1
+				divisions_in_state = {
+					state = var:ARO_mfL_state_selected
+					size > 0
+					unit = police_infantry
+				}
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 81 }
+				check_variable = { ARO_mfL_state_selected = 82 }
+				check_variable = { ARO_mfL_state_selected = 83 }
+				check_variable = { ARO_mfL_state_selected = 84 }
+				check_variable = { ARO_mfL_state_selected = 86 }
+			}
+			var:ARO_mfL_state_selected = {
+				arms_factory > 0
+			}
+		}
+
+		cost = 5
+		fire_only_once = no
+		#days_re_enable = 1
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			set_temp_variable = { ARO_marauders_damage_rate = 0.45 }
+			set_temp_variable = { ARO_marauders_fail_weight = 50 }
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 1
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.2 }
+				set_temp_variable = { ARO_marauders_fail_weight = 40 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 2
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.1 }
+				set_temp_variable = { ARO_marauders_fail_weight = 30 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 3
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.05 }
+				set_temp_variable = { ARO_marauders_fail_weight = 20 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 4
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0 }
+				set_temp_variable = { ARO_marauders_fail_weight = 10 }
+			}
+			custom_effect_tooltip = ARO_mfL_marauder_actions_desc
+			var:ARO_mfL_state_selected = {
+				set_state_flag = {
+					flag = ARO_mfL_state_status_cd
+					days = 15
+					value = 1
+				}
+			}
+			damage_units = {
+				state = var:ARO_mfL_state_selected
+				limit = { tag = ARO }
+				org_damage = 0.95
+				str_damage = var:ARO_marauders_damage_rate
+				ratio = yes
+				army = yes
+				navy = no
+			}
+			random_list = {
+				40 = {
+					var:ARO_mfL_state_selected = {
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_144
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 72 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 108 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 144 }}
+						}
+					}
+				}
+				20 = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_54
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 18 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 36 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 54 }}
+						}
+					}
+
+				}
+				var:ARO_marauders_fail_weight = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_fail
+					var:ARO_mfL_state_selected = {
+						
+						add_resistance = 5
+					}
+				}
+			}
+		}
+	}
+
+	ARO_mfL_raid_infrastructure = {
+		icon = GFX_decision_revolt
+
+		available = {
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_state_status_not_in_cd
+				var:ARO_mfL_state_selected = {
+					NOT = { has_state_flag = ARO_mfL_state_status_cd }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_1
+				divisions_in_state = {
+					state = var:ARO_mfL_state_selected
+					size > 0
+					unit = police_infantry
+				}
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 81 }
+				check_variable = { ARO_mfL_state_selected = 82 }
+				check_variable = { ARO_mfL_state_selected = 83 }
+				check_variable = { ARO_mfL_state_selected = 84 }
+				check_variable = { ARO_mfL_state_selected = 86 }
+			}
+			var:ARO_mfL_state_selected = {
+				infrastructure > 0
+			}
+		}
+
+		cost = 5
+		fire_only_once = no
+		#days_re_enable = 1
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			set_temp_variable = { ARO_marauders_damage_rate = 0.45 }
+			set_temp_variable = { ARO_marauders_fail_weight = 50 }
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 1
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.2 }
+				set_temp_variable = { ARO_marauders_fail_weight = 40 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 2
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.1 }
+				set_temp_variable = { ARO_marauders_fail_weight = 30 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 3
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.05 }
+				set_temp_variable = { ARO_marauders_fail_weight = 20 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 4
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0 }
+				set_temp_variable = { ARO_marauders_fail_weight = 10 }
+			}
+			custom_effect_tooltip = ARO_mfL_marauder_actions_desc
+			var:ARO_mfL_state_selected = {
+				set_state_flag = {
+					flag = ARO_mfL_state_status_cd
+					days = 15
+					value = 1
+				}
+			}
+			damage_units = {
+				state = var:ARO_mfL_state_selected
+				limit = { tag = ARO }
+				org_damage = 0.95
+				str_damage = var:ARO_marauders_damage_rate
+				ratio = yes
+				army = yes
+				navy = no
+			}
+			random_list = {
+				40 = {
+					var:ARO_mfL_state_selected = {
+						remove_building = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_120
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 60 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 90 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 120 }}
+						}
+					}
+				}
+				20 = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_45
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 15 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 30 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 45 }}
+						}
+					}
+
+				}
+				var:ARO_marauders_fail_weight = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_fail
+					var:ARO_mfL_state_selected = {
+						
+						add_resistance = 5
+					}
+				}
+			}
+		}
+	}
+	
+	ARO_mfL_raid_population = {
+		icon = GFX_decision_revolt
+
+		available = {
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_state_status_not_in_cd
+				var:ARO_mfL_state_selected = {
+					NOT = { has_state_flag = ARO_mfL_state_status_cd }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_1
+				divisions_in_state = {
+					state = var:ARO_mfL_state_selected
+					size > 0
+					unit = police_infantry
+				}
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 81 }
+				check_variable = { ARO_mfL_state_selected = 82 }
+				check_variable = { ARO_mfL_state_selected = 83 }
+				check_variable = { ARO_mfL_state_selected = 84 }
+				check_variable = { ARO_mfL_state_selected = 86 }
+			}
+			var:ARO_mfL_state_selected = {
+				state_population_k > 10
+			}
+		}
+
+		cost = 5
+		fire_only_once = no
+		#days_re_enable = 1
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			set_temp_variable = { ARO_marauders_damage_rate = 0.45 }
+			set_temp_variable = { ARO_marauders_fail_weight = 50 }
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 1
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.2 }
+				set_temp_variable = { ARO_marauders_fail_weight = 40 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 2
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.1 }
+				set_temp_variable = { ARO_marauders_fail_weight = 30 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 3
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0.05 }
+				set_temp_variable = { ARO_marauders_fail_weight = 20 }
+			}
+			if = {
+				limit = {
+					divisions_in_state = {
+						state = var:ARO_mfL_state_selected
+						size > 4
+						unit = police_infantry
+					}
+				}
+				set_temp_variable = { ARO_marauders_damage_rate = 0 }
+				set_temp_variable = { ARO_marauders_fail_weight = 10 }
+			}
+			custom_effect_tooltip = ARO_mfL_marauder_actions_desc
+			var:ARO_mfL_state_selected = {
+				set_state_flag = {
+					flag = ARO_mfL_state_status_cd
+					days = 15
+					value = 1
+				}
+			}
+			damage_units = {
+				state = var:ARO_mfL_state_selected
+				limit = { tag = ARO }
+				org_damage = 0.95
+				str_damage = var:ARO_marauders_damage_rate
+				ratio = yes
+				army = yes
+				navy = no
+			}
+			random_list = {
+				40 = {
+					var:ARO_mfL_state_selected = {
+						add_manpower = -10000
+					}
+					custom_effect_tooltip = ARO_mfL_maraud_action_gain_40
+					hidden_effect = {
+						random_list = {
+							1 = { add_to_variable = { ARO_marauded_resources = 20 }}
+							2 = { add_to_variable = { ARO_marauded_resources = 30 }}
+							1 = { add_to_variable = { ARO_marauded_resources = 40 }}
+						}
+					}
+				}
+				var:ARO_marauders_fail_weight = {
+					custom_effect_tooltip = ARO_mfL_maraud_action_fail
+					var:ARO_mfL_state_selected = {
+						
+						add_resistance = 5
+					}
+				}
+			}
+		}
+	}
+	
+	ARO_mfL_group_new_marauder_squad = {
+		icon = generic_industry
+
+		available = {
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_maraud_action_plenty
+				check_variable = { ARO_marauded_resources > 89.9 }
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 72 }
+				check_variable = { ARO_mfL_state_selected = 73 }
+				check_variable = { ARO_mfL_state_selected = 74 }
+				check_variable = { ARO_mfL_state_selected = 75 }
+				check_variable = { ARO_mfL_state_selected = 79 }
+				check_variable = { ARO_mfL_state_selected = 80 }
+			}
+			var:ARO_mfL_state_selected = {
+				state_population > 1500
+			}
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 6
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = ARO_mfL_maraud_action_cost_90
+			add_to_variable = { ARO_marauded_resources = -90 }
+			add_to_variable = { ARO_marauded_squads = 1 }
+			var:ARO_mfL_state_selected = {
+				add_manpower = -1500
+				create_unit = {
+					division = "name = \"忠王讨奸队\" division_template = \"忠王讨奸队\" start_experience_factor = 0"
+					owner = ARO
+					count = 1
+				}
+			}
+		}
+	}
+
+	ARO_mfL_construct_civilian_factory = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_maraud_action_plenty
+				check_variable = { ARO_marauded_resources > 215.9 }
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 72 }
+				check_variable = { ARO_mfL_state_selected = 73 }
+				check_variable = { ARO_mfL_state_selected = 74 }
+				check_variable = { ARO_mfL_state_selected = 75 }
+				check_variable = { ARO_mfL_state_selected = 79 }
+				check_variable = { ARO_mfL_state_selected = 80 }
+			}
+			var:ARO_mfL_state_selected = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = no
+				}
+			}
+		}
+
+		#cost = 0
+		fire_only_once = no
+		days_re_enable = 6
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_mfL_maraud_action_cost_216
+			add_to_variable = { ARO_marauded_resources = -216 }
+			var:ARO_mfL_state_selected = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	ARO_mfL_construct_military_factory = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_maraud_action_plenty
+				check_variable = { ARO_marauded_resources > 143.9 }
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 72 }
+				check_variable = { ARO_mfL_state_selected = 73 }
+				check_variable = { ARO_mfL_state_selected = 74 }
+				check_variable = { ARO_mfL_state_selected = 75 }
+				check_variable = { ARO_mfL_state_selected = 79 }
+				check_variable = { ARO_mfL_state_selected = 80 }
+			}
+			var:ARO_mfL_state_selected = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = no
+				}
+			}
+		}
+
+		#cost = 0
+		fire_only_once = no
+		days_re_enable = 6
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_mfL_maraud_action_cost_144
+			add_to_variable = { ARO_marauded_resources = -144 }
+			var:ARO_mfL_state_selected = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	ARO_mfL_handle_auction = {
+		icon = generic_arms_trade
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_maraud_action_plenty
+				check_variable = { ARO_marauded_resources > 99.9 }
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 72 }
+				check_variable = { ARO_mfL_state_selected = 73 }
+				check_variable = { ARO_mfL_state_selected = 74 }
+				check_variable = { ARO_mfL_state_selected = 75 }
+				check_variable = { ARO_mfL_state_selected = 79 }
+				check_variable = { ARO_mfL_state_selected = 80 }
+			}
+		}
+
+		#cost = 0
+		fire_only_once = no
+        days_remove = 30
+
+		ai_will_do = { factor = 0 }
+        modifier = {
+            consumer_goods_factor = -0.05
+			political_power_factor = 0.25
+        }
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_mfL_maraud_action_cost_50
+			add_to_variable = { ARO_marauded_resources = -50 }
+		}
+	}
+
+	ARO_mfL_elimate_Lesnoden_resistance = {
+		icon = GFX_decision_revolt
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_maraud_action_plenty
+				check_variable = { ARO_marauded_resources > 499.9 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_81
+				divisions_in_state = {
+					state = 81
+					size > 3
+					unit = police_infantry
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_82
+				divisions_in_state = {
+					state = 82
+					size > 0
+					unit = police_infantry
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_83
+				divisions_in_state = {
+					state = 83
+					size > 7
+					unit = police_infantry
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_84
+				divisions_in_state = {
+					state = 84
+					size > 0
+					unit = police_infantry
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_marauder_in_state_86
+				divisions_in_state = {
+					state = 86
+					size > 0
+					unit = police_infantry
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ARO_mfL_elimate_Lesnoden_resistance_tt
+				check_variable = { ARO_popularity_republicans < 10 }
+			}
+		}
+		visible = {
+			OR = {
+				check_variable = { ARO_mfL_state_selected = 81 }
+				check_variable = { ARO_mfL_state_selected = 82 }
+				check_variable = { ARO_mfL_state_selected = 83 }
+				check_variable = { ARO_mfL_state_selected = 84 }
+				check_variable = { ARO_mfL_state_selected = 86 }
+			}
+		}
+
+		cost = 150
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = ARO_mfL_maraud_action_cost_500
+			add_to_variable = { ARO_marauded_resources = -500 }
+			custom_effect_tooltip = ARO_mfL_elimate_Lesnoden_resistance_tt2
+			set_country_flag = ARO_faction_problem_solved_r
+			country_event = ARO.1013
+		}
+	}
+
+	ARO_mfL_purge_marauder_squads = {
+		icon = GFX_decision_revolt
+		available = {
+			OR = {
+				has_country_flag = ARO_faction_out_of_control_r
+				has_country_flag = ARO_faction_problem_solved_r
+			}
+		}
+		visible = {
+			has_country_flag = ARO_blackshirt_army_regrouped
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = ARO_marauders_is_purged
+			set_variable = { ARO_marauded_squads = 0 }
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.1
+			}
+			delete_unit_template_and_units = {
+				division_template = "忠王讨奸队"
+				disband = no
+			}
+			country_event = ARO.1014
+		}
+	}
+
+	ARO_mfL_weekly_cost = {
+		icon = ger_military_buildup
+		available = {
+			always = no
+		}
+		activation = {
+			has_completed_focus = ARO_maraud_Lesnoden_industry
+			NOT = { has_country_flag = ARO_marauders_is_purged }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 6
+		fixed_random_seed = no
+		
+		timeout_effect = {
+			if = {
+				limit = {
+					check_variable = { ARO_marauded_resources > ARO_marauded_squads }
+				}
+				custom_effect_tooltip = ARO_mfL_maraud_action_cost_weekly
+				subtract_from_variable = { ARO_marauded_resources = ARO_marauded_squads }
+			}
+			else = {
+				add_political_power = -5
+			}
+			hidden_effect = { activate_mission = ARO_mfL_weekly_cost }
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+}
+
+ARO_dawn_church = {
+	ARO_dc_send_missionary = {
+		#icon = GFX_decision_generic_construction
+		available = {
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ARO_faction_problem_solving_c
+			}
+		}
+
+		cost = 5
+		fire_only_once = no
+		days_re_enable = 15
+		
+		complete_effect = {
+			var:ARO_dc_state_selected = {
+				if = {
+					limit = {
+						OR = {
+							state = 76
+							state = 77
+							state = 78
+						}
+					}
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_10
+					add_to_variable = { ARO_influence_dawn_faith = 10 }
+					if = {
+						limit = { has_completed_focus = ARO_merge_skilight_doctrines }
+						custom_effect_tooltip = ARO_annexation_of_skilight_cult_add_15
+						add_to_variable = { ARO_annexation_of_skilight_cult = 15 }
+					}
+					else = {
+						custom_effect_tooltip = ARO_annexation_of_skilight_cult_add_5
+						add_to_variable = { ARO_annexation_of_skilight_cult = 5 }
+						custom_effect_tooltip = ARO_satisfaction_down_minor_c
+						add_to_variable = { ARO_satisfaction_cultists = -5 }
+					}
+					if = {
+						limit = { has_completed_focus = ARO_recruit_more_missionary }
+						add_to_variable = { ARO_struggle_of_religion_rt = -0.025 }
+						add_to_variable = { ARO_struggle_of_religion_cg = 0.025 }
+						custom_effect_tooltip = ARO_annexation_of_skilight_cult_add_5
+						add_to_variable = { ARO_annexation_of_skilight_cult = 5 }
+						custom_effect_tooltip = ARO_dc_send_missionary_tt1
+					}
+					else = {
+						custom_effect_tooltip = ARO_dc_send_missionary_tt2
+						add_to_variable = { ARO_struggle_of_religion_rt = -0.01 }
+						add_to_variable = { ARO_struggle_of_religion_cg = 0.01 }
+					}
+				}
+				else = {
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_20
+					add_to_variable = { ARO_influence_dawn_faith = 20 }
+				}
+			}
+		}
+	}
+	
+	ARO_dc_construct_temples = {
+		icon = GFX_decision_generic_construction
+		available = {
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ARO_faction_problem_solving_c
+			}
+			NOT = { has_completed_focus = ARO_tax_church_building }
+		}
+
+		cost = 25
+		fire_only_once = no
+        days_remove = 45
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 0 }
+        modifier = {
+            civilian_factory_use = 4
+        }
+		
+		complete_effect = {
+			var:ARO_dc_state_selected = {
+				if = {
+					limit = {
+						OR = {
+							state = 76
+							state = 77
+							state = 78
+						}
+					}
+					custom_effect_tooltip = ARO_satisfaction_down_minor_c
+					ARO = { add_to_variable = { ARO_satisfaction_cultists = -10 }}
+					custom_effect_tooltip = ARO_annexation_of_skilight_cult_add_10
+					add_to_variable = { ARO_annexation_of_skilight_cult = 10 }
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_20
+					add_to_variable = { ARO_influence_dawn_faith = 20 }
+					custom_effect_tooltip = ARO_dc_construct_temples_tt1
+					add_to_variable = { ARO_struggle_of_religion_rdtg = -0.025 }
+				}
+				else = {
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_40
+					add_to_variable = { ARO_influence_dawn_faith = 40 }
+					custom_effect_tooltip = ARO_dc_construct_temples_tt2
+					add_to_variable = { ARO_struggle_of_religion_ms = 0.025 }
+				}
+			}
+		}
+	}
+
+	ARO_dc_construct_temples_taxed = {
+		icon = GFX_decision_generic_construction
+		available = {
+		}
+		visible = {
+			NOT = {
+				has_country_flag = ARO_faction_problem_solving_c
+			}
+			has_completed_focus = ARO_tax_church_building
+		}
+
+		cost = 15
+		fire_only_once = no
+        days_remove = 30
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 0 }
+        modifier = {
+            civilian_factory_use = 2
+        }
+		
+		complete_effect = {
+			var:ARO_dc_state_selected = {
+				if = {
+					limit = {
+						OR = {
+							state = 76
+							state = 77
+							state = 78
+						}
+					}
+					custom_effect_tooltip = ARO_satisfaction_down_minor_c
+					add_to_variable = { ARO_satisfaction_cultists = -10 }
+					custom_effect_tooltip = ARO_annexation_of_skilight_cult_add_10
+					add_to_variable = { ARO_annexation_of_skilight_cult = 10 }
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_20
+					add_to_variable = { ARO_influence_dawn_faith = 20 }
+					custom_effect_tooltip = ARO_dc_construct_temples_taxed_tt1
+					add_to_variable = { ARO_struggle_of_religion_rdtg = -0.025 }
+					add_to_variable = { ARO_struggle_of_religion_cg = -0.02 }
+				}
+				else = {
+					custom_effect_tooltip = ARO_influence_dawn_faith_add_40
+					add_to_variable = { ARO_influence_dawn_faith = 40 }
+					custom_effect_tooltip = ARO_dc_construct_temples_tt2
+					add_to_variable = { ARO_struggle_of_religion_ms = 0.025 }
+				}
+				custom_effect_tooltip = ARO_influence_dawn_faith_add_10
+				add_to_variable = { ARO_influence_dawn_faith = 10 }
+			}
+		}
+	}
+
+	ARO_forced_preaching = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			var:ARO_dc_state_selected = {
+				OR = {
+					state = 76
+					state = 77
+					state = 78
+				}
+			}
+			NOT = {
+				has_country_flag = ARO_faction_problem_solving_c
+			}
+			#has_completed_focus = ARO_armed_preacher
+		}
+
+		cost = 25
+		fire_only_once = no
+        days_re_enable = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 0 }
+        modifier = {
+        }
+		
+		complete_effect = {
+			var:ARO_dc_state_selected = {
+				custom_effect_tooltip = ARO_satisfaction_down_medium_c
+				ARO = { add_to_variable = { ARO_satisfaction_cultists = -15 }}
+				add_manpower = -500
+				custom_effect_tooltip = ARO_influence_dawn_faith_add_25
+				add_to_variable = { ARO_influence_dawn_faith = 25 }
+			}
+		}
+	}
+}

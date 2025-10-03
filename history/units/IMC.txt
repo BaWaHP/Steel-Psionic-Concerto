@@ -1,0 +1,334 @@
+﻿###templates###
+division_template = {
+	name = "督战方阵"
+
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+		police_infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "桂冠方阵"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		military_police = { x = 0 y = 2 }
+		caster_attacker = { x = 0 y = 3 }
+		caster_recon = { x = 1 y = 0 }
+		logistics_company = { x = 1 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "公民方阵"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+		artillery_brigade = { x = 3 y = 3 }
+	}
+
+	support = {
+		military_police = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		melee_support = { x = 0 y = 3 }
+		logistics_company = { x = 1 y = 0 }
+		field_hospital = { x = 1 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "装甲方阵"
+
+	regiments = {
+		heavy_titan = { x = 0 y = 0 }
+		heavy_titan = { x = 0 y = 1 }
+		heavy_titan = { x = 0 y = 2 }
+		heavy_titan = { x = 0 y = 3 }
+		medium_titan = { x = 1 y = 0 }
+		medium_titan = { x = 1 y = 1 }
+		medium_titan = { x = 1 y = 2 }
+		medium_titan = { x = 1 y = 3 }
+		light_titan = { x = 2 y = 0 }
+		light_titan = { x = 2 y = 1 }
+		light_titan = { x = 2 y = 2 }
+		light_titan = { x = 2 y = 3 }
+	}
+
+	support = {
+		maintenance_company = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "战争方阵"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		melee_support = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "奴隶方阵"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+
+	priority = 0
+}
+
+division_template = {
+	name = "贵族方阵"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 0 y = 2 }
+		caster_infantry = { x = 1 y = 0 }
+		caster_infantry = { x = 1 y = 1 }
+		caster_infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		caster_attacker = { x = 0 y = 0 }
+		caster_recon = { x = 0 y = 1 }
+		caster_engineer = { x = 0 y = 2 }
+		caster_logistics = { x = 0 y = 3 }
+		caster_support = { x = 0 y = 4 }
+	}
+
+	priority = 2
+}
+
+###units###
+
+units = {
+	division = {
+		name = "“厄利斯林圣血”方阵"
+		location = 7544
+		division_template = "桂冠方阵"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“战神之子”方阵"
+		location = 7544
+		division_template = "贵族方阵"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“胜利圣神”方阵"
+		location = 7544
+		division_template = "贵族方阵"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“光复世界”方阵"
+		location = 7544
+		division_template = "贵族方阵"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“无敌太阳”方阵"
+		location = 20418
+		division_template = "公民方阵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“永恒战争”方阵"
+		location = 20418
+		division_template = "公民方阵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“雷霆闪电”方阵"
+		location = 11569
+		division_template = "公民方阵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“太阳精铁”方阵"
+		location = 11569
+		division_template = "公民方阵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“无尽英勇”方阵"
+		location = 11569
+		division_template = "装甲方阵"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“血肉升日”方阵"
+		location = 9813
+		division_template = "装甲方阵"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“星辰之子”方阵"
+		location = 9813
+		division_template = "装甲方阵"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“永恒救世”方阵"
+		location = 20127
+		division_template = "战争方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“万世之主”方阵"
+		location = 20127
+		division_template = "战争方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第一“侍鸦”方阵"
+		location = 1952
+		division_template = "奴隶方阵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "第二“侍鸦”方阵"
+		location = 1952
+		division_template = "奴隶方阵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "第三“侍鸦”方阵"
+		location = 1952
+		division_template = "奴隶方阵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "第四“侍鸦”方阵"
+		location = 1952
+		division_template = "奴隶方阵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "第一“侍狮”方阵"
+		location = 1952
+		division_template = "督战方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "第二“侍狮”方阵"
+		location = 1952
+		division_template = "督战方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "第三“侍狮”方阵"
+		location = 1952
+		division_template = "督战方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "第四“侍狮”方阵"
+		location = 1952
+		division_template = "督战方阵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

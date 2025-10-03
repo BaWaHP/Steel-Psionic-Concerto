@@ -1,0 +1,465 @@
+ideas = {
+	country = {
+		ZHE_night_short_dream_long = {		#夜短梦长：深眠
+			picture = ZHE_night_short_dream_long
+			allowed = { original_tag = ZHE }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+				org_loss_when_moving = 0.1
+				supply_consumption_factor = 0.1
+				land_reinforce_rate = -0.01
+			}
+		}
+
+		ZHE_rise_or_fall_together_culprit = {		#一荣俱荣：祸首
+			picture = ZHE_rise_or_fall_together_culprit
+			allowed = { original_tag = ZHE }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = -0.1
+				planning_speed = -0.25
+				command_power_gain_mult = -0.25
+				custom_modifier_tooltip = lock_all_troops_tt
+				disabled_ideas = 1
+			}
+			rule = {
+				can_join_opposite_factions = no
+			}
+		}
+
+		ZHE_Ill_fares_the_land = {		#沉疴遍地：病灶
+			picture = ZHE_Ill_fares_the_land
+			allowed = { original_tag = ZHE }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		ZHE_made_in_zhetysu = {		#七河制造
+			picture = ZHE_made_in_zhetysu
+			allowed = { original_tag = ZHE }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		ZHE_let_the_bullets_fly = {		#马匪之患
+			picture = ZHE_let_the_bullets_fly
+			allowed = { original_tag = ZHE }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.01
+				industry_free_repair_factor = -0.01
+			}
+		}
+	}
+
+	tank_manufacturer = {
+
+		designer = yes
+
+		ZHE_Kamen_locomotive_rolling_stock_factory = {		#卡缅机车车辆制造厂
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { 
+				infantry_tank_manufacturer
+			}
+		}
+
+		ZHE_chante_tractor_factory = {		#瞻德自走式牵引设备制造厂
+
+			picture = generic_mountain_warfare
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				fast_tank_manufacturer
+			}
+		}
+	
+		ZHE_chu_river_machinery = {		#楚河机械
+
+			picture = generic_tank_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				medium_tank_manufacturer
+			}
+		}
+
+		ZHE_suiting_heavy_industries = {		#绥定重工
+
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				heavy_tank_manufacturer
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		ZHE_balkhash_shipyard = {		#遗播海造船厂
+		
+			picture = generic_naval_manufacturer_1
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+	
+			traits = { 
+				balkhash_naval_manufacturer 
+			}
+		}
+
+		ZHE_irtysh_shipyard = {		#银水造船厂
+		
+			picture = generic_naval_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+	
+			traits = { 
+				battlefleet_designer 
+			}
+		}
+
+		ZHE_long_river_shipping = {		#长河船业
+		
+			picture = generic_naval_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+	
+			traits = { 
+				convoy_escort_naval_manufacturer 
+			}
+		}
+
+		ZHE_three_enclosures_shipping = {		#三垣船业
+		
+			picture = generic_naval_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+	
+			traits = { 
+				raiding_fleet_naval_manufacturer 
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		ZHE_zhetysu_aeronautical_and_astronautical_design_bureau = {		#七河航空航天设计局
+		
+			picture = generic_air_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				fuel_efficient_aircraft_manufacturer 
+			}
+		}
+
+		ZHE_three_enclosures_aircraft_design_agency = {		#三垣飞行器设计局
+		
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				naval_aircraft_manufacturer 
+			}
+		}
+
+		ZHE_zhetysu_southern_airlines = {		#七河南部航空
+		
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				light_aircraft_manufacturer 
+			}
+		}
+
+		ZHE_zhetysu_northern_airlines = {		#七河北部航空
+		
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				medium_aircraft_manufacturer 
+			}
+		}
+
+		ZHE_air_zhetysu = {		#七河航空
+		
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				heavy_aircraft_manufacturer 
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+		
+		ZHE_summerfield_armory = {		#夏田军械
+		
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+	
+			traits = { 
+				infantry_equipment_manufacturer
+			}
+		}
+
+		ZHE_No_47_armory = {		#47号军械
+		
+			picture = generic_artillery_manufacturer_2
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+	
+			traits = { 
+				artillery_manufacturer
+			}
+		}
+
+		ZHE_kuangjen_dynamics = {		#广仁动力
+		
+			picture = generic_motorized_equipment_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+				mot_rockets = 0.5
+			}
+	
+			traits = { 
+				motorized_equipment_manufacturer
+			}
+		}
+
+		ZHE_zhetysu_lab = {		#七河生命
+		
+			picture = generic_artillery_manufacturer_3
+
+			allowed = {
+				original_tag = ZHE
+			}
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+
+			research_bonus = {
+				secret_weapons = 0.1
+				secret_weapons = 0.1
+			}
+
+			equipment_bonus = {
+				caster_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					instant = yes
+				}
+			}
+	
+			traits = { 
+				magic_equip_manufacturer
+			}
+		}
+
+	}
+
+# 	industrial_concern = {
+# 		ZHE_tzushan_steel = {		#磁山钢铁
+# 		
+# 			picture = generic_industrial_concern_1
+# 
+# 			allowed = {
+# 				original_tag = ZHE
+# 			}
+# 			
+# 			research_bonus = {
+# 				industry = 0.15
+# 			}
+# 	
+# 			traits = { 
+# 				industrial_concern
+# 			}
+# 		}
+# 
+# 		ZHE_nine_cities_electric = {		#九城电气
+# 		
+# 			picture = generic_electronics_concern_1
+# 
+# 			allowed = {
+# 				original_tag = ZHE
+# 			}
+# 			
+# 			research_bonus = {
+# 				electronics = 0.15
+# 			}
+# 	
+# 			traits = { 
+# 				electronics_concern
+# 			}
+# 		}
+# 
+# 		ZHE_zhetysu_energy = {		#七河能源
+# 		
+# 			picture = generic_electronics_concern_3
+# 
+# 			allowed = {
+# 				original_tag = ZHE
+# 			}
+# 			
+# 			research_bonus = {
+# 				industry = 0.05
+# 				synth_resources = 0.15
+# 			}
+# 	
+# 			traits = { 
+# 				refinery_concern
+# 			}
+# 		}
+# 
+# 		ZHE_zhetysu_engineering = {		#七河建设
+# 		
+# 			picture = generic_industrial_concern_2
+# 
+# 			allowed = {
+# 				original_tag = ZHE
+# 			}
+# 			
+# 			modifier = {
+# 				production_speed_arms_factory_factor = 0.05
+# 				production_speed_industrial_complex_factor = 0.05
+# 				production_speed_dockyard_factor = 0.05
+# 			}
+# 	
+# 			traits = { 
+# 				construction_company
+# 			}
+# 		}
+#
+#	}
+
+}

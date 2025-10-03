@@ -1,0 +1,28 @@
+
+state={
+	id=336
+	name="STATE_336"
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			5127 = {
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			5127 10
+		}
+	}
+
+	provinces={
+		4262 5127 8199 11876 20599 20600 20674 20700 20722 20752 
+	}
+	manpower = 620020
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

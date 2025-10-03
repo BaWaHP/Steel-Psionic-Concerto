@@ -1,0 +1,19 @@
+PEO_congress_supporter_trigger_1 = {
+	custom_trigger_tooltip = {
+		tooltip = PEO_congress_supporter_trigger_1_tr
+		OR = {
+			is_ai = yes
+			check_variable = { PEO_congress_seats_supporter > 136 }
+		}
+	}
+}
+
+PEO_congress_supporter_trigger_2 = {
+	custom_trigger_tooltip = {
+		tooltip = PEO_congress_supporter_trigger_2_tr
+		OR = {
+			is_ai = yes
+			check_variable = { PEO_congress_seats_supporter > 206 }
+		}
+	}
+}

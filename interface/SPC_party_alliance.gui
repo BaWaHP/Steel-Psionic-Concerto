@@ -1,0 +1,30 @@
+containerWindowType = {
+	name = "SPC_party_alliance_window"
+	position = { x= 0 y = 0 }
+
+	containerWindowType = {
+		name = "party_section_1"
+		position = { x = 340 y = 308 }
+
+		iconType = {
+			name ="party_leader_1"
+			position = { x = 0 y = 16 }
+			quadTextureSprite = "GFX_party_leader"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="party_alliance_1"
+			position = { x = 0 y = 32 }
+			quadTextureSprite = "GFX_party_alliance"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="party_ban_1"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_party_ban"
+			alwaystransparent = yes
+		}
+	}
+}

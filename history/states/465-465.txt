@@ -1,0 +1,28 @@
+
+state={
+	id=465
+	name="STATE_465"
+	provinces={
+		2373 2948 3712 4452 9209 11279 11694 11937 17848 17983 18126 18140 18266 18380 18381 18520 
+	}
+	resources = {
+		magic_crystal = 15
+	}
+	history = {
+		owner = VLF
+		add_core_of = VLF
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			18266 8
+		}
+		victory_points = {
+			11279 8
+		}
+	}
+	manpower = 1100000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

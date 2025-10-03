@@ -1,0 +1,34 @@
+
+state={
+	id=176
+	name="STATE_176"
+
+	resources = {
+		magic_crystal = 4
+		oil = 12
+	}
+
+	history={
+		owner = IPK
+		add_core_of = IPK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = {
+			6027 8
+		}
+		victory_points = {
+			6925 5
+		}
+	}
+
+	provinces={
+		5173 5417 6027 6074 6925 15812 15827 15936 15951 16055 16101 16141 16172 
+	}
+	manpower = 760000 
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

@@ -1,0 +1,1543 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_SFR_startup_effect = {
+	if = {
+		limit = { tag = SFR }
+		###介绍页面###
+		set_variable = { SPC_intro_screen = 1 }
+		###普及度修正部分###
+		set_variable = { magic_development_monthly_buff = 0 }
+		set_variable = { science_development_monthly_buff = 0 }
+		every_owned_state = {
+			set_variable = { state_magic_monthly_buff = 0 }
+			set_variable = { state_science_monthly_buff = 0 }
+		}
+		###政府法案###
+		add_ideas = service_by_requirement
+		add_ideas = no_standard_at_all
+		add_ideas = partial_economic_mobilisation
+		add_ideas = closed_economy
+		add_ideas = high_taxes
+		add_ideas = NP_total_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = handcraft_industry
+		add_ideas = self_efficient_agriculture
+		add_ideas = unorganized_army
+		add_ideas = normally_living
+		add_ideas = uncomfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_asisting_research
+		add_ideas = IP_nationalization
+		add_ideas = WP_better_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_no_secreat_police
+		add_ideas = FP_joining_the_poitics
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_LingRen
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###发展度设置###
+		SPC_development_update_effect = yes
+		###其它开局设置###
+		if = {
+			limit = { has_template = "皇家卫队" }
+			delete_unit_template_and_units = { division_template = "皇家卫队" }
+		}
+		if = {
+			limit = { has_template = "远乡正规军" }
+			delete_unit_template_and_units = { division_template = "远乡正规军" }
+		}
+		if = {
+			limit = { has_template = "远乡边防军" }
+			delete_unit_template_and_units = { division_template = "远乡边防军" }
+		}
+		if = {
+			limit = { has_template = "远乡装甲部队" }
+			delete_unit_template_and_units = { division_template = "远乡装甲部队" }
+		}
+		load_oob = "SFR"
+		activate_mission = SFH_taking_actions
+		activate_mission = SFR_taking_actions
+		activate_mission = QTA_taking_actions
+		SFR_maintain_the_front_setup = yes
+		set_country_flag = SFR_opposition_bop_on
+		set_variable = { SFR_left_right_influence = 0 } #正是左，右是负
+	}
+}
+
+SFR_LinYouzhi_promote_effect = {
+	add_country_leader_role = { 
+		character = SFR_LinYouzhi
+		promote_leader = yes
+		country_leader = {
+			desc = "SFR_LinYouzhi_desc"
+			ideology = leftist_guerrilla_movement
+			traits = { SFR_soul_of_the_21st_army }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}
+
+SFR_maintain_the_front_setup = {
+	set_country_flag = SFR_maintain_the_front_on
+	set_variable = { SFR_maintain_the_front_unity = 35 }	#阵线凝聚力
+	SFR_maintain_the_front_update = yes
+	set_power_balance = {
+		id = SFR_opposition_bop
+		set_default = no
+		set_value = 0
+	}
+	activate_mission = SFR_unity_weekly_change
+}
+
+SFR_maintain_the_front_ban = {
+	custom_effect_tooltip = SFR_ban_maintain_the_front_tt
+	hidden_effect = {
+		clear_variable = SFR_maintain_the_front_unity
+		clr_country_flag = SFR_maintain_the_front_on
+		SFR_remove_all_front_unity_ideas = yes	
+	}
+}
+
+SFR_maintain_the_front_update = {
+	hidden_effect = {
+		clamp_variable = {
+			var = SFR_maintain_the_front_unity
+			min = 0
+			max = 100
+		}
+		SFR_front_unity_idea_update = yes	
+	}
+}
+
+SFR_front_unity_idea_update = {
+	SFR_remove_all_front_unity_ideas = yes
+	SFR_add_front_unity_ideas = yes
+}
+
+SFR_remove_all_front_unity_ideas = {
+	if = {
+		limit = { has_idea = SFR_front_unity_idea_1 }
+		remove_ideas = SFR_front_unity_idea_1
+	}
+	if = {
+		limit = { has_idea = SFR_front_unity_idea_2 }
+		remove_ideas = SFR_front_unity_idea_2
+	}
+	if = {
+		limit = { has_idea = SFR_front_unity_idea_3 }
+		remove_ideas = SFR_front_unity_idea_3
+	}
+	if = {
+		limit = { has_idea = SFR_front_unity_idea_4 }
+		remove_ideas = SFR_front_unity_idea_4
+	}
+	if = {
+		limit = { has_idea = SFR_front_unity_idea_5 }
+		remove_ideas = SFR_front_unity_idea_5
+	}
+}
+
+SFR_add_front_unity_ideas = {
+	if = {
+		limit = {
+			check_variable = { SFR_maintain_the_front_unity > 79 }
+			check_variable = { SFR_maintain_the_front_unity < 101 }
+		}
+		add_ideas = SFR_front_unity_idea_1
+	}
+	if = {
+		limit = {
+			check_variable = { SFR_maintain_the_front_unity > 59 }
+			check_variable = { SFR_maintain_the_front_unity < 80 }
+		}
+		add_ideas = SFR_front_unity_idea_2
+	}
+	if = {
+		limit = {
+			check_variable = { SFR_maintain_the_front_unity > 39 }
+			check_variable = { SFR_maintain_the_front_unity < 60 }
+		}
+		add_ideas = SFR_front_unity_idea_3
+	}
+	if = {
+		limit = {
+			check_variable = { SFR_maintain_the_front_unity > 19 }
+			check_variable = { SFR_maintain_the_front_unity < 40 }
+		}
+		add_ideas = SFR_front_unity_idea_4
+	}
+	if = {
+		limit = {
+			check_variable = { SFR_maintain_the_front_unity > -1 }
+			check_variable = { SFR_maintain_the_front_unity < 20 }
+		}
+		add_ideas = SFR_front_unity_idea_5
+	}
+}
+
+SFR_front_unity_up_1 = {
+	add_to_variable = { SFR_maintain_the_front_unity = 5 }
+	custom_effect_tooltip = SFR_front_unity_up_1_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_front_unity_up_2 = {
+	add_to_variable = { SFR_maintain_the_front_unity = 10 }
+	custom_effect_tooltip = SFR_front_unity_up_2_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_front_unity_up_3 = {
+	add_to_variable = { SFR_maintain_the_front_unity = 15 }
+	custom_effect_tooltip = SFR_front_unity_up_3_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_front_unity_down_1 = {
+	add_to_variable = { SFR_maintain_the_front_unity = -5 }
+	custom_effect_tooltip = SFR_front_unity_down_1_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_front_unity_down_2 = {
+	add_to_variable = { SFR_maintain_the_front_unity = -10 }
+	custom_effect_tooltip = SFR_front_unity_down_2_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_front_unity_down_3 = {
+	add_to_variable = { SFR_maintain_the_front_unity = -15 }
+	custom_effect_tooltip = SFR_front_unity_down_3_tt
+	SFR_maintain_the_front_update = yes
+}
+
+SFR_divided_bases_effect = {
+	if = {
+		limit = { has_idea = SFR_divided_bases }
+		swap_ideas = {
+			remove_idea = SFR_divided_bases
+			add_idea = SFR_divided_bases_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_divided_bases_2 }
+		swap_ideas = {
+			remove_idea = SFR_divided_bases_2
+			add_idea = SFR_divided_bases_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_divided_bases_3 }
+		swap_ideas = {
+			remove_idea = SFR_divided_bases_3
+			add_idea = SFR_divided_bases_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_divided_bases_4 }
+		remove_ideas = SFR_divided_bases_4
+	}
+}
+
+SFR_holodomor_effect = {
+	if = {
+		limit = { has_idea = SFR_holodomor }
+		swap_ideas = {
+			remove_idea = SFR_holodomor
+			add_idea = SFR_holodomor_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_2 }
+		swap_ideas = {
+			remove_idea = SFR_holodomor_2
+			add_idea = SFR_holodomor_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_3 }
+		swap_ideas = {
+			remove_idea = SFR_holodomor_3
+			add_idea = SFR_holodomor_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_4 }
+		swap_ideas = {
+			remove_idea = SFR_holodomor_4
+			add_idea = SFR_holodomor_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_5 }
+		swap_ideas = {
+			remove_idea = SFR_holodomor_5
+			add_idea = SFR_holodomor_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_6 }
+		remove_ideas = SFR_holodomor_6
+	}
+	else_if = {
+		limit = { has_idea = SFR_holodomor_7 }
+		add_stability = 0.05
+		add_political_power = 50
+		SPC_living_standard_development_amount_up_4 = yes
+	}
+	else = {
+		add_ideas = SFR_holodomor_7
+	}
+}
+
+SFR_guerrilla_army_effect = {
+	if = {
+		limit = { has_idea = SFR_guerrilla_army }
+		swap_ideas = {
+			remove_idea = SFR_guerrilla_army
+			add_idea = SFR_guerrilla_army_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_guerrilla_army_2 }
+		swap_ideas = {
+			remove_idea = SFR_guerrilla_army_2
+			add_idea = SFR_guerrilla_army_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_guerrilla_army_3 }
+		swap_ideas = {
+			remove_idea = SFR_guerrilla_army_3
+			add_idea = SFR_guerrilla_army_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_guerrilla_army_4 }
+		swap_ideas = {
+			remove_idea = SFR_guerrilla_army_4
+			add_idea = SFR_guerrilla_army_5
+		}
+	}
+}
+
+SFR_roving_army_effect = {
+	if = {
+		limit = { has_idea = SFR_roving_army }
+		swap_ideas = {
+			remove_idea = SFR_roving_army
+			add_idea = SFR_roving_army_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_roving_army_2 }
+		swap_ideas = {
+			remove_idea = SFR_roving_army_2
+			add_idea = SFR_roving_army_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_roving_army_3 }
+		swap_ideas = {
+			remove_idea = SFR_roving_army_3
+			add_idea = SFR_roving_army_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_roving_army_4 }
+		swap_ideas = {
+			remove_idea = SFR_roving_army_4
+			add_idea = SFR_roving_army_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_roving_army_5 }
+		swap_ideas = {
+			remove_idea = SFR_roving_army_5
+			add_idea = SFR_roving_army_6
+		}
+	}
+	else = {
+		army_experience = 30
+		SPC_military_development_amount_up_4 = yes
+		add_to_variable = {
+			var = military_development_mod
+			value = 4
+			tooltip = military_development_mod_tt_up_2
+		}
+	}
+}
+
+SFR_city_in_ruin_effect = {
+	if = {
+		limit = { has_idea = SFR_city_in_ruin }
+		swap_ideas = {
+			remove_idea = SFR_city_in_ruin
+			add_idea = SFR_city_in_ruin_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_city_in_ruin_2 }
+		swap_ideas = {
+			remove_idea = SFR_city_in_ruin_2
+			add_idea = SFR_city_in_ruin_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_city_in_ruin_3 }
+		swap_ideas = {
+			remove_idea = SFR_city_in_ruin_3
+			add_idea = SFR_city_in_ruin_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_city_in_ruin_4 }
+		swap_ideas = {
+			remove_idea = SFR_city_in_ruin_4
+			add_idea = SFR_city_in_ruin_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_city_in_ruin_5 }
+		swap_ideas = {
+			remove_idea = SFR_city_in_ruin_5
+			add_idea = SFR_city_in_ruin_6
+		}
+	}
+	else = {
+		add_stability = 0.05
+		SPC_living_standard_development_amount_up_3 = yes
+		SPC_industrial_development_amount_up_3 = yes
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		add_to_variable = {
+			var = industrial_development_mod
+			value = 2
+			tooltip = industrial_development_mod_tt_up_1
+		}
+	}
+}
+
+SFR_chaotic_countryside_effect = {
+	if = {
+		limit = { has_idea = SFR_chaotic_countryside }
+		swap_ideas = {
+			remove_idea = SFR_chaotic_countryside
+			add_idea = SFR_chaotic_countryside_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_chaotic_countryside_2 }
+		swap_ideas = {
+			remove_idea = SFR_chaotic_countryside_2
+			add_idea = SFR_chaotic_countryside_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_chaotic_countryside_3 }
+		swap_ideas = {
+			remove_idea = SFR_chaotic_countryside_3
+			add_idea = SFR_chaotic_countryside_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_chaotic_countryside_4 }
+		swap_ideas = {
+			remove_idea = SFR_chaotic_countryside_4
+			add_idea = SFR_chaotic_countryside_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_chaotic_countryside_5 }
+		swap_ideas = {
+			remove_idea = SFR_chaotic_countryside_5
+			add_idea = SFR_chaotic_countryside_6
+		}
+	}
+	else = {
+		add_political_power = 50
+		SPC_agricultural_development_amount_up_4 = yes
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 4
+			tooltip = agricultural_development_mod_tt_up_2
+		}
+	}
+}
+
+SFR_bureaucratic_overload_effect = {
+	if = {
+		limit = { has_idea = SFR_bureaucratic_overload }
+		swap_ideas = {
+			remove_idea = SFR_bureaucratic_overload
+			add_idea = SFR_bureaucratic_overload_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_bureaucratic_overload_2 }
+		swap_ideas = {
+			remove_idea = SFR_bureaucratic_overload_2
+			add_idea = SFR_bureaucratic_overload_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_bureaucratic_overload_3 }
+		swap_ideas = {
+			remove_idea = SFR_bureaucratic_overload_3
+			add_idea = SFR_bureaucratic_overload_4
+		}
+	}
+	else = {
+		remove_ideas = SFR_bureaucratic_overload_4
+	}
+}
+
+SFR_nation_of_people_dm_init = {
+	set_variable = { SFR_nation_of_people_dm_ppf = 0.05 }
+	set_variable = { SFR_nation_of_people_dm_mp = 0.05 }
+	hidden_effect = {
+		add_dynamic_modifier = {
+			modifier = SFR_nation_of_people_dm
+		}
+	}
+	effect_tooltip = {
+		add_ideas = SFR_nation_of_people_dm_tt_1
+	}
+}
+
+SFR_pol_reform_situ_better = {
+	if = {
+		limit = { has_idea = SFR_anti_rightist_movement }
+		swap_ideas = {
+			remove_idea = SFR_anti_rightist_movement
+			add_idea = SFR_anti_rightist_movement_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_rightist_movement_2 }
+		swap_ideas = {
+			remove_idea = SFR_anti_rightist_movement_2
+			add_idea = SFR_anti_rightist_movement_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_rightist_movement_3 }
+		swap_ideas = {
+			remove_idea = SFR_anti_rightist_movement_3
+			add_idea = SFR_anti_rightist_movement_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_rightist_movement_4 }
+		remove_ideas = SFR_anti_rightist_movement_4
+	}
+
+	if = {
+		limit = { has_idea = SFR_anti_counter_revolution }
+		swap_ideas = {
+			remove_idea = SFR_anti_counter_revolution
+			add_idea = SFR_anti_counter_revolution_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_counter_revolution_2 }
+		swap_ideas = {
+			remove_idea = SFR_anti_counter_revolution_2
+			add_idea = SFR_anti_counter_revolution_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_counter_revolution_3 }
+		swap_ideas = {
+			remove_idea = SFR_anti_counter_revolution_3
+			add_idea = SFR_anti_counter_revolution_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_anti_counter_revolution_4 }
+		remove_ideas = SFR_anti_counter_revolution_4
+	}
+
+	if = {
+		limit = { has_idea = SFR_left_right_unsatisfied }
+		swap_ideas = {
+			remove_idea = SFR_left_right_unsatisfied
+			add_idea = SFR_left_right_unsatisfied_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_left_right_unsatisfied_2 }
+		swap_ideas = {
+			remove_idea = SFR_left_right_unsatisfied_2
+			add_idea = SFR_left_right_unsatisfied_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_left_right_unsatisfied_3 }
+		swap_ideas = {
+			remove_idea = SFR_left_right_unsatisfied_3
+			add_idea = SFR_left_right_unsatisfied_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFR_left_right_unsatisfied_4 }
+		remove_ideas = SFR_left_right_unsatisfied_4
+	}
+}
+
+SFR_workers_and_peasants_congress_init = {
+	add_dynamic_modifier = {
+		modifier = SFR_red_star_over_capital
+	}
+
+	#强硬派
+	set_variable = { SFR_red_star_over_capital_group_1_1 = 30 }		#影响力
+	set_variable = { SFR_red_star_over_capital_group_1_2 = 40 }		#支持度
+
+	#稳健派
+	set_variable = { SFR_red_star_over_capital_group_2_1 = 80 }		#影响力
+	set_variable = { SFR_red_star_over_capital_group_2_2 = 60 }		#支持度
+
+	#平京派
+	set_variable = { SFR_red_star_over_capital_group_3_1 = 60 }		#影响力
+	set_variable = { SFR_red_star_over_capital_group_3_2 = 60 }		#支持度
+
+	if = {
+		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		#工农派
+		set_variable = { SFR_red_star_over_capital_group_4_1 = 30 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_4_2 = 40 }		#支持度	
+	}
+	else = {
+		#工农派
+		set_variable = { SFR_red_star_over_capital_group_4_1 = 0 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_4_2 = 0 }		#支持度
+	}
+	
+	#自治派
+	set_variable = { SFR_red_star_over_capital_group_5_1 = 20 }		#影响力
+	set_variable = { SFR_red_star_over_capital_group_5_2 = 30 }		#支持度
+
+	if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		#改革派
+		set_variable = { SFR_red_star_over_capital_group_6_1 = 40 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_6_2 = 40 }		#支持度
+	}
+	else = {
+		#改革派
+		set_variable = { SFR_red_star_over_capital_group_6_1 = 20 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_6_2 = 20 }		#支持度	
+	}
+
+	if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		#远乡社会党
+		set_variable = { SFR_red_star_over_capital_group_7_1 = 20 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_7_2 = 20 }		#支持度	
+	}
+	else = {
+		#远乡社会党
+		set_variable = { SFR_red_star_over_capital_group_7_1 = 0 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_7_2 = 0 }		#支持度	
+	}
+
+	if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		#各地民主党派
+		set_variable = { SFR_red_star_over_capital_group_8_1 = 40 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_8_2 = 40 }		#支持度	
+	}
+	else = {
+		#各地民主党派
+		set_variable = { SFR_red_star_over_capital_group_8_1 = 20 }		#影响力
+		set_variable = { SFR_red_star_over_capital_group_8_2 = 20 }		#支持度	
+	}
+
+	SFR_workers_and_peasants_congress_update = yes
+	SFR_workers_and_peasants_congress_vote_weight = yes
+}
+
+SFR_workers_and_peasants_congress_update = {
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_1_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_1_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_2_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_2_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_3_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_3_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_4_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_4_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_5_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_5_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_6_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_6_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_7_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_7_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_8_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFR_red_star_over_capital_group_8_2
+		min = 0
+		max = 100
+	}
+	SFR_red_star_over_capital_update = yes
+}
+
+SFR_red_star_over_capital_update = {
+	set_variable = { SFR_red_star_over_capital_cf = 0 }
+	set_variable = { SFR_red_star_over_capital_aof = 0 }
+	set_variable = { SFR_red_star_over_capital_sf = 0 }
+	set_variable = { SFR_red_star_over_capital_ppf = 0 }
+	set_variable = { SFR_red_star_over_capital_aor = 0 }
+	set_variable = { SFR_red_star_over_capital_pfegf = 0 }
+	set_variable = { SFR_red_star_over_capital_psbf = 0 }
+	set_variable = { SFR_red_star_over_capital_pfmef = 0 }
+	set_variable = { SFR_red_star_over_capital_mp = 0 }
+	set_variable = { SFR_red_star_over_capital_gbsf = 0 }
+	set_variable = { SFR_red_star_over_capital_cgf = 0 }
+	set_variable = { SFR_red_star_over_capital_pacf = 0 }
+	set_variable = { SFR_red_star_over_capital_icf = 0 }
+	set_variable = { SFR_red_star_over_capital_icd = 0 }
+	set_variable = { SFR_red_star_over_capital_ssdm = 0 }
+	set_variable = { SFR_red_star_over_capital_smdm = 0 }
+
+	###强硬派###
+	set_temp_variable = { SFR_red_star_over_capital_cf_temp = 0.05 }
+	set_temp_variable = { SFR_red_star_over_capital_aof_temp = 0.05 }
+
+	set_variable = { SFR_red_star_over_capital_group_1_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_1_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_1_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_1_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_1_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_1_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_1_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_1_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_1_multiplier = 2 }
+	}
+
+	multiply_temp_variable = { SFR_red_star_over_capital_cf_temp = SFR_red_star_over_capital_group_1_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_aof_temp = SFR_red_star_over_capital_group_1_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_cf = SFR_red_star_over_capital_cf_temp }
+	add_to_variable = { SFR_red_star_over_capital_aof = SFR_red_star_over_capital_aof_temp }
+
+	###稳健派###
+	set_temp_variable = { SFR_red_star_over_capital_sf_temp = 0.05 }
+	set_temp_variable = { SFR_red_star_over_capital_ppf_temp = 0.05 }
+
+	set_variable = { SFR_red_star_over_capital_group_2_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_2_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_2_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_2_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_2_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_2_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_2_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_2_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_2_multiplier = 2 }
+	}
+
+	multiply_temp_variable = { SFR_red_star_over_capital_sf_temp = SFR_red_star_over_capital_group_2_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_ppf_temp = SFR_red_star_over_capital_group_2_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_sf = SFR_red_star_over_capital_sf_temp }
+	add_to_variable = { SFR_red_star_over_capital_ppf = SFR_red_star_over_capital_ppf_temp }
+
+	###平京派###
+	set_temp_variable = { SFR_red_star_over_capital_aor_temp = 0.05 }
+	set_temp_variable = { SFR_red_star_over_capital_pfegf_temp = 0.05 }
+
+	set_variable = { SFR_red_star_over_capital_group_3_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_3_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_3_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_3_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_3_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_3_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_3_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_3_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_3_multiplier = 2 }
+	}
+	multiply_temp_variable = { SFR_red_star_over_capital_aor_temp = SFR_red_star_over_capital_group_3_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_pfegf_temp = SFR_red_star_over_capital_group_3_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_aor = SFR_red_star_over_capital_aor_temp }
+	add_to_variable = { SFR_red_star_over_capital_pfegf = SFR_red_star_over_capital_pfegf_temp }
+
+	###工农派###
+	if = {
+		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		set_temp_variable = { SFR_red_star_over_capital_psbf_temp = 0.05 }
+		set_temp_variable = { SFR_red_star_over_capital_pfmef_temp = 0.025 }
+
+		set_variable = { SFR_red_star_over_capital_group_4_multiplier = 1 }
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_1 < 25 } }
+			set_variable = { SFR_red_star_over_capital_group_4_multiplier = 0.5 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_1 < 50 } }
+			set_variable = { SFR_red_star_over_capital_group_4_multiplier = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_1 < 75 } }
+			set_variable = { SFR_red_star_over_capital_group_4_multiplier = 1.5 }
+		}
+		else = {
+			set_variable = { SFR_red_star_over_capital_group_4_multiplier = 2 }
+		}
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 < 25 } }
+			multiply_variable = { SFR_red_star_over_capital_group_4_multiplier = -2 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 < 50 } }
+			multiply_variable = { SFR_red_star_over_capital_group_4_multiplier = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 < 75 } }
+			multiply_variable = { SFR_red_star_over_capital_group_4_multiplier = 1 }
+		}
+		else = {
+			multiply_variable = { SFR_red_star_over_capital_group_4_multiplier = 2 }
+		}
+		multiply_temp_variable = { SFR_red_star_over_capital_psbf_temp = SFR_red_star_over_capital_group_4_multiplier }
+		multiply_temp_variable = { SFR_red_star_over_capital_pfmef_temp = SFR_red_star_over_capital_group_4_multiplier }
+		add_to_variable = { SFR_red_star_over_capital_psbf = SFR_red_star_over_capital_psbf_temp }
+		add_to_variable = { SFR_red_star_over_capital_pfmef = SFR_red_star_over_capital_pfmef_temp }
+	}
+
+	###自治派###
+	set_temp_variable = { SFR_red_star_over_capital_mp_temp = 0.05 }
+	set_temp_variable = { SFR_red_star_over_capital_gbsf_temp = 0.05 }
+
+	set_variable = { SFR_red_star_over_capital_group_5_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_5_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_5_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_5_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_5_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_5_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_5_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_5_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_5_multiplier = 2 }
+	}
+	multiply_temp_variable = { SFR_red_star_over_capital_mp_temp = SFR_red_star_over_capital_group_5_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_gbsf_temp = SFR_red_star_over_capital_group_5_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_mp = SFR_red_star_over_capital_mp_temp }
+	add_to_variable = { SFR_red_star_over_capital_gbsf = SFR_red_star_over_capital_gbsf_temp }
+
+	###改革派###
+	set_temp_variable = { SFR_red_star_over_capital_cgf_temp = -0.025 }
+	set_temp_variable = { SFR_red_star_over_capital_pacf_temp = -0.25 }
+
+	set_variable = { SFR_red_star_over_capital_group_6_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_6_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_6_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_6_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_6_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_6_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_6_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_7_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_6_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_6_multiplier = 2 }
+	}
+	multiply_temp_variable = { SFR_red_star_over_capital_cgf_temp = SFR_red_star_over_capital_group_6_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_pacf_temp = SFR_red_star_over_capital_group_6_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_cgf = SFR_red_star_over_capital_cgf_temp }
+	add_to_variable = { SFR_red_star_over_capital_pacf = SFR_red_star_over_capital_pacf_temp }
+
+	###远乡社会党###
+	if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		set_temp_variable = { SFR_red_star_over_capital_icf_temp = 0.05 }
+		set_temp_variable = { SFR_red_star_over_capital_icd_temp = 0.05 }
+
+		set_variable = { SFR_red_star_over_capital_group_7_multiplier = 1 }
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 25 } }
+			set_variable = { SFR_red_star_over_capital_group_7_multiplier = 0.5 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 50 } }
+			set_variable = { SFR_red_star_over_capital_group_7_multiplier = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 75 } }
+			set_variable = { SFR_red_star_over_capital_group_7_multiplier = 1.5 }
+		}
+		else = {
+			set_variable = { SFR_red_star_over_capital_group_7_multiplier = 2 }
+		}
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 25 } }
+			multiply_variable = { SFR_red_star_over_capital_group_7_multiplier = -2 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 50 } }
+			multiply_variable = { SFR_red_star_over_capital_group_7_multiplier = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 75 } }
+			multiply_variable = { SFR_red_star_over_capital_group_7_multiplier = 1 }
+		}
+		else = {
+			multiply_variable = { SFR_red_star_over_capital_group_7_multiplier = 2 }
+		}
+		multiply_temp_variable = { SFR_red_star_over_capital_icf_temp = SFR_red_star_over_capital_group_7_multiplier }
+		multiply_temp_variable = { SFR_red_star_over_capital_icd_temp = SFR_red_star_over_capital_group_7_multiplier }
+		add_to_variable = { SFR_red_star_over_capital_icf = SFR_red_star_over_capital_icf_temp }
+		add_to_variable = { SFR_red_star_over_capital_icd = SFR_red_star_over_capital_icd_temp }
+	}
+
+	###各地民主党派###
+	set_temp_variable = { SFR_red_star_over_capital_smdm_temp = 0.005 }
+	set_temp_variable = { SFR_red_star_over_capital_ssdm_temp = 0.005 }
+
+	set_variable = { SFR_red_star_over_capital_group_8_multiplier = 1 }
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 25 } }
+		set_variable = { SFR_red_star_over_capital_group_8_multiplier = 0.5 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 50 } }
+		set_variable = { SFR_red_star_over_capital_group_8_multiplier = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_1 < 75 } }
+		set_variable = { SFR_red_star_over_capital_group_8_multiplier = 1.5 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_8_multiplier = 2 }
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 25 } }
+		multiply_variable = { SFR_red_star_over_capital_group_8_multiplier = -2 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 50 } }
+		multiply_variable = { SFR_red_star_over_capital_group_8_multiplier = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 75 } }
+		multiply_variable = { SFR_red_star_over_capital_group_8_multiplier = 1 }
+	}
+	else = {
+		multiply_variable = { SFR_red_star_over_capital_group_8_multiplier = 2 }
+	}
+	multiply_temp_variable = { SFR_red_star_over_capital_smdm_temp = SFR_red_star_over_capital_group_8_multiplier }
+	multiply_temp_variable = { SFR_red_star_over_capital_ssdm_temp = SFR_red_star_over_capital_group_8_multiplier }
+	add_to_variable = { SFR_red_star_over_capital_smdm = SFR_red_star_over_capital_smdm_temp }
+	add_to_variable = { SFR_red_star_over_capital_ssdm = SFR_red_star_over_capital_ssdm_temp }
+
+	force_update_dynamic_modifier = yes
+}
+
+
+#权重列表
+#强硬派 15/10
+#稳健派 30
+#平京派 30
+#工农派 10/0
+#自治派 5
+#改革派 5/10
+#远乡社会党 0/5
+#各地民主党派 5/10
+SFR_workers_and_peasants_congress_vote_weight = {
+	if = {
+		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		set_variable = { SFR_red_star_over_capital_group_1_weight = 0.15 }
+		set_variable = { SFR_red_star_over_capital_group_2_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_3_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_4_weight = 0.1 }
+		set_variable = { SFR_red_star_over_capital_group_5_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_6_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_7_weight = 0 }
+		set_variable = { SFR_red_star_over_capital_group_8_weight = 0.05 }
+	}
+	else_if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		set_variable = { SFR_red_star_over_capital_group_1_weight = 0.1 }
+		set_variable = { SFR_red_star_over_capital_group_2_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_3_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_4_weight = 0 }
+		set_variable = { SFR_red_star_over_capital_group_5_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_6_weight = 0.1 }
+		set_variable = { SFR_red_star_over_capital_group_7_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_8_weight = 0.1 }
+	}
+	else = {
+		set_variable = { SFR_red_star_over_capital_group_1_weight = 0.15 }
+		set_variable = { SFR_red_star_over_capital_group_2_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_3_weight = 0.3 }
+		set_variable = { SFR_red_star_over_capital_group_4_weight = 0.1 }
+		set_variable = { SFR_red_star_over_capital_group_5_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_6_weight = 0.05 }
+		set_variable = { SFR_red_star_over_capital_group_7_weight = 0 }
+		set_variable = { SFR_red_star_over_capital_group_8_weight = 0.05 }
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_cal = {
+	#强硬派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_1_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_1_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#稳健派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_2_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_2_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#平京派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_3_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_3_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#工农派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_4_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_4_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#自治派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_5_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_5_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#改革派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_6_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_6_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#远乡社会党
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_7_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_7_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+	#各地民主党派
+	set_temp_variable = { temp_vote = SFR_red_star_over_capital_group_8_2 }
+	multiply_temp_variable = { temp_vote = SFR_red_star_over_capital_group_8_weight }
+	add_to_temp_variable = { SFR_current_vote = temp_vote }
+
+	round_temp_variable = SFR_current_vote
+	set_temp_variable = { SFR_current_vote_abort = 101 }
+	subtract_from_temp_variable = { SFR_current_vote_abort = SFR_current_vote }
+	clamp_temp_variable = {
+		var = SFR_current_vote_abort
+		min = 0
+		max = 100
+	}
+}
+
+SFR_land_reform_voting_result_effect = {
+	if = {
+		limit = { check_variable = { SFR_land_reform_voting_index = 0 } }
+		SFR_workers_and_peasants_congress_vote_0 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_land_reform_voting_index = 1 } }
+		SFR_workers_and_peasants_congress_vote_1 = yes
+	}
+}
+
+SFR_red_constitution_of_far_soviet_init = {
+	add_dynamic_modifier = {
+		modifier = SFR_red_constitution_of_far_soviet
+	}
+	set_variable = { SFR_red_constitution_of_far_soviet_sf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_wsf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_ppf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_pacf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_icf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_icd = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_psbf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_pfegf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_cgf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_rsf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_ddf = 0 }
+	set_variable = { SFR_red_constitution_of_far_soviet_mlsdp = 0 }
+	if = {
+		limit = { has_country_flag = SFR_2001_a }
+		clr_country_flag = SFR_2001_a
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2001_b }
+		clr_country_flag = SFR_2001_b
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = -0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_pacf = -0.33 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2001_c }
+		clr_country_flag = SFR_2001_c
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ws = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icd = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2001_d }
+		clr_country_flag = SFR_2001_d
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ws = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2001_e }
+		clr_country_flag = SFR_2001_e
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_psbf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_pfegf = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2002_a }
+		clr_country_flag = SFR_2002_a
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = -0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_cgf = -0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icd = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2002_b }
+		clr_country_flag = SFR_2002_b
+		add_to_variable = { SFR_red_constitution_of_far_soviet_cgf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_psbf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_rsf = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2002_c }
+		clr_country_flag = SFR_2002_c
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_psbf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_icd = 0.1 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2003_a }
+		clr_country_flag = SFR_2003_a
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.05 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2003_b }
+		clr_country_flag = SFR_2003_b
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = 0.1 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ddf = 0.2 }
+	}
+	if = {
+		limit = { has_country_flag = SFR_2003_c }
+		clr_country_flag = SFR_2003_c
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_psbf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_mlsdp = 1 }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+SFR_land_reform_decisions_progress_update = {
+	clamp_variable = {
+		var = SFR_land_reform_decisions_progress
+		min = 0
+		max = 100
+	}
+}
+
+SFR_land_reform_in_progress_init = {
+	set_variable = { SFR_land_reform_in_progress_sf = -0.05 }
+	set_variable = { SFR_land_reform_in_progress_ppf = -0.05 }
+	set_variable = { SFR_land_reform_in_progress_cgf = 0.2 }
+	set_variable = { SFR_land_reform_in_progress_icf = -0.2 }
+	set_variable = { SFR_land_reform_in_progress_icd = -0.2 }
+	set_variable = { SFR_land_reform_in_progress_psbf = 0 }
+	hidden_effect = { add_dynamic_modifier = { modifier = SFR_land_reform_in_progress }	 }
+	effect_tooltip = { add_ideas = SFR_land_reform_in_progress_tt_1 }
+}
+
+SFR_workers_and_peasants_congress_vote_0 = {	#测试用效果
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = { check_variable = { SFR_current_vote > SFR_current_pass } }
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_political_power = 1
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_political_power = -1
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_1 = {	#立宪会议
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = SFR_constitution_generic_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+					add_idea = SFR_red_constitution_of_far_soviet_tt_12
+				}
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		hidden_effect = { SFR_red_constitution_of_far_soviet_init = yes }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = 0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = 0.05 }
+		force_update_dynamic_modifier = yes
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_win
+		effect_tooltip = {
+			custom_effect_tooltip = SFR_constitution_generic_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_constitution_of_far_soviet_tt_0
+					add_idea = SFR_red_constitution_of_far_soviet_tt_13
+				}
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		hidden_effect = { SFR_red_constitution_of_far_soviet_init = yes }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_sf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_wsf = -0.05 }
+		add_to_variable = { SFR_red_constitution_of_far_soviet_ppf = -0.05 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_2 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		set_country_flag = SFR_workers_and_peasants_congress_vote_2_1_flag
+		custom_effect_tooltip = SFR_land_reform_monthly_check_tt_2
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_4_2_tt
+		}
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_win
+		set_country_flag = SFR_workers_and_peasants_congress_vote_2_2_flag
+		custom_effect_tooltip = SFR_land_reform_monthly_check_tt
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_1
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_4_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_4_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_4_2_tt
+		}
+	}
+}

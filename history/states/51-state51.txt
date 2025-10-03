@@ -1,0 +1,24 @@
+
+state={
+	id=51
+	name="STATE_51"
+	provinces={
+		1804 1819 2417 3261 3665 9656 19618 19667 19693 19728 19750 19760 19774 19804 19852 
+	}
+	resources = {
+		oil = 5
+		magic_crystal = 2
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+	}
+	manpower=237000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

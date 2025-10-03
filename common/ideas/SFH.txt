@@ -1,0 +1,3482 @@
+ideas = {
+
+	hidden_ideas = {
+		SFH_farhome_kingdom_idea = {		#远乡王朝
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+	}
+
+	country = {		#民族精神
+
+        SFH_angrier_aristocrats = {		#贵族不满与日俱增
+			picture = generic_agrarian_reform
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				political_advisor_cost_factor = 0.3
+			}
+		}
+
+        SFH_failure_in_democracy = {		#失败的民主化进程
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				worldunion_socialist_drift = 0.01
+				worldunion_democrat_drift = 0.01
+				liberal_republican_drift = 0.01
+				authoritarian_republican_drift = 0.01
+			}
+		}
+
+        SFH_terrible_heirs = {		#继承危机
+			picture = SFH_terrible_heirs
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+			}
+		}
+
+        SFH_passing_glory = {		#没落的丰饶之地
+			picture = SFH_passing_glory
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+        SFH_end_of_heros = {		#勇敢者的末路
+			picture = SFH_end_of_heros
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				conscription_factor = -0.2
+			}
+		}
+
+        SFH_cut_military_funds = {		#精简军用资金
+			picture = generic_economic_increase
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.025
+				war_support_factor = -0.2
+				consumer_goods_factor = -0.2
+			}
+		}
+
+        SFH_invest_military_projects = {		#投资军工项目
+			picture = GFX_focus_generic_coastal_fort
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_naval_base_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				production_speed_bunker_factor = 0.15
+				production_speed_air_base_factor = 0.15
+				production_speed_anti_air_building_factor = 0.15
+				production_speed_radar_station_factor = 0.15
+				production_speed_rocket_site_factor = 0.15
+				production_speed_nuclear_reactor_factor = 0.15
+			}
+		}
+
+		SFH_invest_military_weapons = {		#军武投资
+			picture = received_attache
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.4
+			}
+		}
+
+		SFH_purge_within_army = {		#清洗军队
+			picture = generic_purge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.2
+				army_attack_factor = -0.4
+				army_defence_factor = -0.4
+				army_org_factor = -0.4
+				max_command_power_mult = -0.4
+			}
+		}
+
+		SFH_modified_artillery_1 = {		#改良型火炮
+			name = SFH_modified_artillery
+			picture = generic_artillery_regiments
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+		    }
+		}
+
+		SFH_modified_artillery_2 = {		#改良型火炮
+			name = SFH_modified_artillery
+			picture = generic_artillery_regiments
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					soft_attack = 0.05
+					breakthrough = 0.05
+					build_cost_ic = -0.1
+				}
+		    }
+		}
+
+		SFH_infantry_tank_coordination_training = {		#步坦协同训练
+			picture = generic_armor
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+			}
+		}
+
+		SFH_conforting_nobilities = {		#安抚贵族
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_betraying_officials = {		#叛乱的军官
+			picture = tur_kemalist_officers_disloyalty_effect
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_factor = -0.2
+				max_command_power_mult = -0.2
+			}
+		}
+
+		SFH_erupted_antiwar_emotions_1 = {		#爆发的厌战情绪
+			name = SFH_erupted_antiwar_emotions
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.3
+				conscription_factor = -0.4
+			}
+		}
+
+		SFH_erupted_antiwar_emotions_2 = {		#爆发的厌战情绪
+			name = SFH_erupted_antiwar_emotions
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				stability_factor = -0.04
+				war_support_factor = -0.25
+				conscription_factor = -0.3
+			}
+		}
+
+		SFH_erupted_antiwar_emotions_3 = {		#爆发的厌战情绪
+			name = SFH_erupted_antiwar_emotions
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				stability_factor = -0.025
+				war_support_factor = -0.2
+				conscription_factor = -0.2
+			}
+		}
+
+		SFH_erupted_antiwar_emotions_4 = {		#爆发的厌战情绪
+			name = SFH_erupted_antiwar_emotions
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.05
+				war_support_factor = -0.1
+				conscription_factor = -0.1
+			}
+		}
+	
+		SFH_appeased_wariness = {		#得到安抚的厌战情绪
+			picture = FRA_matignon_agreements
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.2
+			}
+		}
+
+		SFH_reformation_investment = {		#社会支出
+			picture = received_attache
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_veterans_resettlement_program = {		#老兵安置计划署
+			picture = generic_infantry_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.1
+				political_power_factor = -0.2
+			}
+		}
+
+		SFH_exposing_and_being_exposed = {		#揭发与被揭发
+			picture = generic_spy_political
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+	
+		SFH_collapsing_social_system = {		#崩盘的社会体系
+			picture = usa_great_depression_3
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				research_speed_factor = -0.2
+				monthly_population = -0.5
+			}
+		}
+
+		SFH_collapsing_social_system_2 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_3
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				research_speed_factor = -0.15
+				monthly_population = -0.4
+			}
+		}
+
+		SFH_collapsing_social_system_3 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				research_speed_factor = -0.15
+				monthly_population = -0.2
+			}
+		}
+
+		SFH_collapsing_social_system_4 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.075
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.1
+				monthly_population = -0.1
+			}
+		}
+
+		SFH_collapsing_social_system_5 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = great_depression
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = -0.1
+				monthly_population = -0.05
+			}
+		}
+
+		SFH_citizen_living_allowance = {		#公民生活补贴
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_citizen_living_allowance_2 = {		#公民生活补贴
+			name = SFH_citizen_living_allowance
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		SFH_citizen_living_allowance_3 = {		#公民生活补贴
+			name = SFH_citizen_living_allowance
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.075
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_citizen_living_allowance_4 = {		#公民生活补贴
+			name = SFH_citizen_living_allowance
+			picture = generic_foreign_capital
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_new_look_campaign = {		#新面貌运动
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SFH_new_look_campaign_a_2 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+
+		SFH_new_look_campaign_a_3 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.075
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		SFH_new_look_campaign_a_4 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		SFH_new_look_campaign_b_2 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_new_look_campaign_b_3 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.075
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SFH_new_look_campaign_b_4 = {		#新面貌运动
+			name = SFH_new_look_campaign
+			picture = SPR_international_brigades
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SFH_collapsing_social_system_6 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_3
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.075
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				research_speed_factor = -0.2
+				monthly_population = -0.4
+			}
+		}
+
+		SFH_collapsing_social_system_7 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				research_speed_factor = -0.1
+				monthly_population = -0.3
+			}
+		}
+
+		SFH_collapsing_social_system_8 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = usa_great_depression_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.05
+				monthly_population = -0.2
+			}
+		}
+
+		SFH_collapsing_social_system_9 = {		#崩盘的社会体系
+			name = SFH_collapsing_social_system
+			picture = great_depression
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.1
+			}
+		}
+
+		SFH_chasing_for_hope = {		#追求希望
+			picture = SPR_collectivized_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.2
+				monthly_population = 0.1
+				monthly_living_standard_development_process = 2
+				monthly_research_development_process = 2
+			}
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+		}
+
+        SFH_overproud_aristocrats = {		#傲睨得志的贵族
+			picture = tur_sectarian_woes
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				stability_weekly = -0.002
+				consumer_goods_factor = 0.1
+				#disabled_ideas = 1
+			}
+		}
+
+        SFH_overproud_aristocrats_1 = {		#傲睨得志的贵族
+			name = SFH_overproud_aristocrats
+			picture = tur_sectarian_woes
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.075
+				consumer_goods_factor = 0.1
+				#disabled_ideas = 1
+			}
+		}
+
+        SFH_overproud_aristocrats_2 = {		#傲睨得志的贵族
+			name = SFH_overproud_aristocrats
+			picture = tur_sectarian_woes
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				#disabled_ideas = 1
+			}
+		}
+
+        SFH_overproud_aristocrats_3 = {		#傲睨得志的贵族
+			name = SFH_overproud_aristocrats
+			picture = tur_sectarian_woes
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.025
+				consumer_goods_factor = 0.05
+			}
+		}
+
+        SFH_concession_to_aristocrats = {		#向贵族让步
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				stability_factor = -0.05
+				political_power_factor = -0.2
+			}
+		}
+
+        SFH_concession_to_aristocrats_l = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				stability_factor = -0.025
+				political_power_factor = -0.1
+			}
+		}
+
+        SFH_concession_to_aristocrats_ll = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				stability_factor = -0.05
+			}
+		}
+
+        SFH_concession_to_aristocrats_lr = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = -0.05
+			}
+		}
+
+        SFH_concession_to_aristocrats_r = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				stability_factor = -0.05
+				political_power_factor = -0.15
+			}
+		}
+
+        SFH_concession_to_aristocrats_rl = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.003
+				stability_factor = -0.075
+				political_power_factor = -0.05
+			}
+		}
+
+		SFH_concession_to_aristocrats_rr = {		#向贵族让步
+			name = SFH_concession_to_aristocrats
+			picture = ROM_king_carol_ii_hedonist
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				stability_factor = -0.025
+				political_power_factor = -0.1
+			}
+		}
+
+		SFH_beat_aristocrats = {		#打压贵族
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				stability_factor = 0.05
+				political_power_factor = 0.2
+			}
+		}
+
+		SFH_beat_aristocrats_l = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				stability_factor = 0.075
+				political_power_factor = 0.15
+			}
+		}
+
+		SFH_beat_aristocrats_ll = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.125
+				political_power_factor = 0.1
+			}
+		}
+
+		SFH_beat_aristocrats_lr = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				stability_factor = 0.05
+				political_power_factor = 0.25
+			}
+		}
+
+		SFH_beat_aristocrats_r = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.003
+				stability_factor = 0.025
+				political_power_factor = 0.3
+			}
+		}
+
+		SFH_beat_aristocrats_rl = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.002
+				stability_factor = 0.075
+				political_power_factor = 0.25
+			}
+		}
+
+		SFH_beat_aristocrats_rr = {		#打压贵族
+			name = SFH_beat_aristocrats
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.003
+				political_power_factor = 0.4
+			}
+		}
+
+		SFH_suppression_of_nobility = {		#压制贵族
+			picture = ast_abandon_the_westminster_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.2
+			}
+		}
+
+        SFH_political_crisis = {		#政治危机
+			picture = tfv_can_conscription_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.2
+				stability_weekly = -0.004
+			}
+		}
+
+        SFH_political_crisis_1 = {		#政治危机
+			name = SFH_political_crisis
+			picture = tfv_can_conscription_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				stability_weekly = -0.002
+			}
+		}
+
+        SFH_political_crisis_2 = {		#政治危机
+			name = SFH_political_crisis
+			picture = tfv_can_conscription_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = -0.05
+				stability_weekly = -0.001
+			}
+		}
+
+        SFH_fragile_reformation = {		#脆弱的改革
+			picture = generic_democratic_opposition
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = -0.05
+				authoritarian_republican_drift = 0.01
+				conservative_republican_drift = 0.02
+				authoritarian_nationalism_drift = -0.01
+				paternal_autocrat_drift = -0.02
+			}
+		}
+
+        SFH_fragile_reformation_1 = {		#脆弱的改革
+			name = SFH_fragile_reformation
+			picture = generic_democratic_opposition
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				authoritarian_republican_drift = 0.02
+				conservative_republican_drift = 0.05
+				authoritarian_nationalism_drift = -0.02
+				paternal_autocrat_drift = -0.05
+			}
+		}
+
+        SFH_fragile_reformation_2 = {		#脆弱的改革
+			name = SFH_fragile_reformation
+			picture = generic_democratic_opposition
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.05
+				authoritarian_republican_drift = 0.05
+				conservative_republican_drift = 0.1
+				authoritarian_nationalism_drift = -0.05
+				paternal_autocrat_drift = -0.1
+			}
+		}
+
+        SFH_sucessful_reformation = {		#胜利的改革
+			picture = generic_democratic_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.001
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+				conservative_republican_drift = 0.02
+				drift_defence_factor = 0.2
+			}
+		}
+
+        SFH_appropriate_reforms = {		#适当的改革
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				authoritarian_republican_drift = 0.01
+			}
+		}
+
+        SFH_appropriate_reforms_1 = {		#适当的改革
+			name = SFH_appropriate_reforms
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = -0.15
+				stability_weekly = 0.002
+				authoritarian_republican_drift = 0.03
+				paternal_autocrat_drift = -0.01
+			}
+		}
+
+        SFH_appropriate_reforms_2 = {		#适当的改革
+			name = SFH_appropriate_reforms
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+				stability_weekly = 0.004
+				consumer_goods_factor = 0.05
+				authoritarian_republican_drift = 0.05
+				paternal_autocrat_drift = -0.03
+			}
+		}
+
+        SFH_appropriate_reforms_3 = {		#适当的改革
+			name = SFH_appropriate_reforms
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.075
+				political_power_factor = -0.05
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.1
+				authoritarian_republican_drift = 0.1
+				paternal_autocrat_drift = -0.05
+			}
+		}
+
+        SFH_stable_reformation = {		#平稳的改革
+			picture = hol_aloof_neutrality
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_republican_drift = 0.05
+				drift_defence_factor = 0.3
+			}
+		}
+
+        SFH_military_control = {		#军事管制
+			picture = generic_intel_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.05
+				war_support_factor = -0.2
+				stability_weekly = 0.001
+				weekly_manpower = -200
+				paternal_autocrat_drift = 0.01
+			}
+		}
+
+        SFH_military_control_1 = {		#军事管制
+			name = SFH_military_control
+			picture = generic_intel_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.1
+				political_power_factor = 0.1
+				stability_weekly = 0.002
+				weekly_manpower = -500
+				paternal_autocrat_drift = 0.02
+			}
+		}
+
+        SFH_military_control_2 = {		#军事管制
+			name = SFH_military_control
+			picture = generic_intel_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				political_power_factor = 0.2
+				stability_weekly = 0.005
+				weekly_manpower = -1000
+				paternal_autocrat_drift = 0.05
+			}
+		}
+
+        SFH_totalitarian_rule = {		#强权统治
+			picture = HUN_hungarian_monarchy_fascism
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.3
+				drift_defence_factor = 0.5
+				paternal_autocrat_drift = 0.05
+			}
+		}
+
+        SFH_reformation_plan = {		#改革计划
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = 0.05
+			}
+		}
+
+        SFH_reformation_plan_l = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				political_power_factor = 0.2
+				stability_weekly = 0.001
+			}
+		}
+
+        SFH_reformation_plan_ll = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.3
+				stability_weekly = 0.002
+			}
+		}
+
+        SFH_reformation_plan_lr = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.2
+				stability_weekly = 0.003
+			}
+		}
+
+        SFH_reformation_plan_r = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.05
+				stability_weekly = 0.002
+			}
+		}
+
+		SFH_reformation_plan_rl = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.15
+				stability_weekly = 0.003
+			}
+		}
+
+		SFH_reformation_plan_rr = {		#改革计划
+			name = SFH_reformation_plan
+			picture = HUN_treaty_of_triannon
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				stability_weekly = 0.004
+			}
+		}
+
+		SFH_noble_protest = {		#贵族抗议
+			picture = EST_democratic_opposition
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.2
+				stability_weekly = -0.005
+			}
+		}
+
+		SFH_stabilization_plan = {		#维稳计划
+			picture = chi_wargaming_division
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = -0.05
+				stability_weekly = 0.002
+			}
+		}
+
+		SFH_stabilization_plan_l = {		#维稳计划
+			name = SFH_stabilization_plan
+			picture = chi_wargaming_division
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.2
+				stability_weekly = 0.004
+			}
+		}
+
+		SFH_stabilization_plan_r = {		#维稳计划
+			name = SFH_stabilization_plan
+			picture = chi_wargaming_division
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = 0.05
+				stability_weekly = 0.003
+			}
+		}
+		
+		SFH_demonstrators = {		#示威者
+			picture = EST_democratic_opposition
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				stability_weekly = 0.01
+			}
+		}
+
+		SFH_repressing_people = {		#镇压民众
+			picture = tur_kemalist_army_officers_minimal_power_disloyal
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				stability_weekly = 0.02
+				weekly_manpower = -500
+			}
+		}
+
+        SFH_arrogant_revolutionaries = {		#气焰嚣张的革命党人
+			picture = MEX_revolutionary_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.002
+				war_support_factor = -0.2
+				pioneer_communism_drift = 0.01
+				revolutionary_communism_drift = 0.03
+				worldunion_socialist_drift = 0.03
+				worldunion_democrat_drift = 0.03
+				liberal_republican_drift = 0.01
+			}
+		}
+
+        SFH_arrogant_revolutionaries_1 = {		#气焰嚣张的革命党人
+			name = SFH_arrogant_revolutionaries
+			picture = MEX_revolutionary_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				war_support_factor = -0.1
+				revolutionary_communism_drift = 0.02
+				worldunion_socialist_drift = 0.02
+				worldunion_democrat_drift = 0.02
+			}
+		}
+
+        SFH_arrogant_revolutionaries_2 = {		#气焰嚣张的革命党人
+			name = SFH_arrogant_revolutionaries
+			picture = MEX_revolutionary_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				war_support_factor = -0.05
+				revolutionary_communism_drift = 0.01
+				worldunion_socialist_drift = 0.01
+				worldunion_democrat_drift = 0.01
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries = {		#同革命党人谈判
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				stability_weekly = 0.002
+				political_power_factor = -0.2
+				drift_defence_factor = 0.1
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_l = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.003
+				political_power_factor = -0.3
+				drift_defence_factor = 0.1
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_ll = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.025
+				stability_weekly = 0.004
+				political_power_factor = -0.2
+				drift_defence_factor = 0.1
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_lr = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.004
+				political_power_factor = -0.1
+				drift_defence_factor = 0.2
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_r = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				stability_weekly = 0.001
+				political_power_factor = -0.1
+				drift_defence_factor = 0.1
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_rl = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.025
+				stability_weekly = 0.002
+				drift_defence_factor = 0.1
+			}
+		}
+
+        SFH_negotiations_with_revolutionaries_rr = {		#同革命党人谈判
+			name = SFH_negotiations_with_revolutionaries
+			picture = MEX_politicised_army_2
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				political_power_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+
+        SFH_arresting_dissidents = {		#抓捕异见者
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = -0.002
+				political_power_factor = 0.2
+				weekly_manpower = -500
+			}
+		}
+
+        SFH_arresting_dissidents_l = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = -0.004
+				political_power_factor = 0.3
+				weekly_manpower = -800
+			}
+		}
+
+        SFH_arresting_dissidents_ll = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				stability_weekly = -0.006
+				political_power_factor = 0.4
+				weekly_manpower = -1200
+			}
+		}
+
+        SFH_arresting_dissidents_lr = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = -0.003
+				political_power_factor = 0.2
+				weekly_manpower = -600
+			}
+		}
+
+        SFH_arresting_dissidents_r = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = -0.001
+				political_power_factor = 0.2
+				weekly_manpower = -200
+			}
+		}
+
+        SFH_arresting_dissidents_rl = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = -0.003
+				political_power_factor = 0.3
+				weekly_manpower = -600
+			}
+		}
+
+        SFH_arresting_dissidents_rr = {		#抓捕异见者
+			name = SFH_arresting_dissidents
+			picture = ast_classify_aliens
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+        SFH_working_with_moderate_reformers = {		#同温和改革者合作
+			picture = HUN_hungarian_monarchy_democratic
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.002
+				political_power_factor = -0.1
+			}
+		}
+
+        SFH_siege_of_revolutionary_party = {		#围剿革命党
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = 0.002
+				political_power_factor = 0.1
+			}
+		}
+
+        SFH_suppression_of_industrial_oligarchs = {		#打压工业寡头
+			picture = EST_exploit_the_banks
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+        SFH_suppression_of_industrial_oligarchs_1 = {		#打压工业寡头
+			name = SFH_suppression_of_industrial_oligarchs
+			picture = EST_exploit_the_banks
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+        SFH_suppression_of_industrial_oligarchs_2 = {		#打压工业寡头
+			name = SFH_suppression_of_industrial_oligarchs
+			picture = EST_exploit_the_banks
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.2
+				consumer_goods_factor = 0.2
+			}
+		}
+
+        SFH_cooperation_with_industrial_oligarchs = {		#同工业寡头合作
+			picture = ger_mefo_bills_payment
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+        SFH_cooperation_with_industrial_oligarchs_1 = {		#同工业寡头合作
+			name = SFH_cooperation_with_industrial_oligarchs
+			picture = ger_mefo_bills_payment
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+        SFH_cooperation_with_industrial_oligarchs_2 = {		#同工业寡头合作
+			name = SFH_cooperation_with_industrial_oligarchs
+			picture = ger_mefo_bills_payment
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+        SFH_oligarch_exit_shock = {		#寡头退市冲击
+			picture = great_depression
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+        SFH_more_free_market = {		#更自由的市场
+			picture = FRA_market_dynamism
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		SFH_deformed_economy = {		#畸形的经济
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				production_speed_buildings_factor = -0.4
+			}
+		}
+
+		SFH_deformed_economy_1 = {		#畸形的经济
+			name = SFH_deformed_economy
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+		SFH_deformed_economy_2 = {		#畸形的经济
+			name = SFH_deformed_economy
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		SFH_deformed_economy_3 = {		#畸形的经济
+			name = SFH_deformed_economy
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		SFH_deformed_economy_4 = {		#畸形的经济
+			name = SFH_deformed_economy
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		SFH_agricultural_trade_l = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_agricultural_trade_l2 = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		SFH_agricultural_trade_l3 = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		SFH_agricultural_trade_r = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		SFH_agricultural_trade_r2 = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				global_building_slots_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		SFH_agricultural_trade_r3 = {		#农业贸易
+			name = SFH_agricultural_trade
+			picture = generic_agrarian_society
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				global_building_slots_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		SFH_industrial_miracle_of_farhome_idea = {		#远乡产业奇迹
+			picture = SOV_fourth_five_year_plan
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		SFH_suppression_of_landlords = {		#打压地主
+			picture = SPR_class_war
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		SFH_suppression_of_landlords_1 = {		#打压地主
+			name = SFH_suppression_of_landlords
+			picture = SPR_class_war
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = 0.15
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		SFH_suppression_of_landlords_2 = {		#打压地主
+			name = SFH_suppression_of_landlords
+			picture = SPR_class_war
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.2
+				global_building_slots_factor = 0.1
+				monthly_population = 0.1
+			}
+		}
+
+		SFH_consultation_with_landowners = {		#同地主协商
+			picture = generic_local_self_management
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		SFH_consultation_with_landowners_1 = {		#同地主协商
+			name = SFH_consultation_with_landowners
+			picture = generic_local_self_management
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		SFH_consultation_with_landowners_2 = {		#同地主协商
+			name = SFH_consultation_with_landowners
+			picture = generic_local_self_management
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		SFH_success_in_landreforms = {		#土地改革的胜利
+			picture = generic_agrarian_reform
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.1
+				monthly_population = 0.2
+				conscription_factor = 0.1
+			}
+		}
+
+		SFH_people_in_terror = {		#恐慌的民众
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.2
+			}
+		}
+
+		SFH_people_in_terror_1 = {		#恐慌的民众
+			name = SFH_people_in_terror
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+
+		SFH_people_in_terror_2 = {		#恐慌的民众
+			name = SFH_people_in_terror
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		SFH_angry_mermaid = {		#爆发的人鱼
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.2
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_angry_mermaid_1 = {		#爆发的人鱼
+			name = SFH_angry_mermaid
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		SFH_angry_mermaid_2 = {		#爆发的人鱼
+			name = SFH_angry_mermaid
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_angry_mermaid_3 = {		#爆发的人鱼
+			name = SFH_angry_mermaid
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SFH_enhanced_security_measures = {		#加强各地安保措施
+			picture = FRA_national_mobilization_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				stability_weekly = 0.005
+				conscription_factor = -0.2
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SFH_mermaid_corporate_evacuation = {		#人鱼企业撤离
+			picture = SOV_scientist_defect
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.3
+			}
+		}
+
+		SFH_mermaid_corporate_evacuation_1 = {		#人鱼企业撤离
+			name = SFH_mermaid_corporate_evacuation
+			picture = SOV_scientist_defect
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.25
+			}
+		}
+
+		SFH_mermaid_corporate_evacuation_2 = {		#人鱼企业撤离
+			name = SFH_mermaid_corporate_evacuation
+			picture = SOV_scientist_defect
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea = {		#江洲人质危机！
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				stability_weekly = -0.005
+				political_power_factor = -0.3
+				national_socialist_drift = 0.05
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_1 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.25
+				stability_weekly = -0.004
+				political_power_factor = -0.25
+				consumer_goods_factor = 0.05
+				national_socialist_drift = 0.05
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_11 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.002
+				political_power_factor = -0.3
+				consumer_goods_factor = 0.1
+				national_socialist_drift = 0.03
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_12 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.4
+				consumer_goods_factor = 0.15
+				national_socialist_drift = 0.01
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_13 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.5
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_14 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.4
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_21 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.003
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.05
+				national_socialist_drift = 0.05
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_22 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				stability_weekly = -0.002
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.1
+				national_socialist_drift = 0.03
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_23 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				national_socialist_drift = 0.01
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_24 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_31 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				stability_weekly = -0.002
+				political_power_factor = -0.2
+				national_socialist_drift = 0.07
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_32 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.35
+				political_power_factor = -0.15
+				national_socialist_drift = 0.1
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_33 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.4
+				political_power_factor = -0.1
+				national_socialist_drift = 0.125
+				command_power_gain_mult = 0.2
+			}
+		}
+
+		SFH_jiangzhou_hostage_crisis_idea_34 = {		#江洲人质危机！
+			name = SFH_jiangzhou_hostage_crisis_idea
+			picture = gre_political_instability_republican
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.4
+				national_socialist_drift = 0.15
+				command_power_gain_mult = 0.3
+				army_org_factor = 0.05
+			}
+		}
+
+		SFH_well_organized_army = {		#组织良好的军队
+			picture = generic_manpower_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_speed_factor = 0.2
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		SFH_army_in_chaos = {		#混乱的军队
+			picture = generic_purge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+				army_speed_factor = -0.4
+				command_power_gain_mult = -0.2
+			}
+		}
+
+		SFH_supportive_people = {		#支持战争的民众
+			picture = FRA_national_mobilization_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				mobilization_speed = 0.5
+				conscription_factor = 0.1
+			}
+		}
+
+		SFH_anti_war_people = {		#反对战争的民众
+			picture = tfv_can_conscription_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				mobilization_speed = -1
+				conscription_factor = -0.2
+			}
+		}
+
+		SFH_stable_society = {		#稳定的社会
+			picture = YUG_federal_defense_council
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				weekly_manpower = 200
+			}
+		}
+
+		SFH_society_in_chaos = {		#社会陷入混乱
+			picture = usa_great_depression_3
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				conscription_factor = -0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_solid_industrial_system = {		#牢固的工业体系
+			picture = man_five_year_plan_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		SFH_industrial_system_in_chaos = {		#工业体系陷入混乱！
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_attack_qingtian_army = {		#进攻青天军
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			cancel = {
+				QTA = {
+					exists = no
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+			}
+			targeted_modifier = {
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				tag = QTA
+			}
+		}
+
+		SFH_coastal_attacks_by_mermaid = {		#沿海地区遭人鱼袭击
+			picture = generic_sea_focused_navy
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SFH_clan_rebellion = {		#宗族叛乱
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.2
+				army_core_defence_factor = -0.1
+			}
+		}
+
+		SFH_attack_fever = {		#进攻狂热
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			cancel = {
+				QTA = {
+					exists = no
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.2
+			}
+		}
+
+		SFH_attack_revolution_front = {		#进攻革命阵线
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			cancel = {
+				SFR = {
+					exists = no
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+			}
+			targeted_modifier = {
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				tag = SFR
+			}
+		}
+
+		SFH_recent_econ_blockout = {		#近期的经济封锁
+			picture = generic_closed_economy
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SFH_burn_down_the_revolutionaries = {		#烧毁根据地！
+			picture = SPR_crush_the_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+				army_org_regain = 0.1
+			}
+			targeted_modifier = {
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				tag = SFR
+			}
+		}
+
+		SFH_war_time_laws = {		#战时法律
+			picture = SOV_second_five_year_plan
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = -0.002
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.2
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		SFH_war_time_laws_1 = {		#战时法律
+			name = SFH_war_time_laws
+			picture = SOV_second_five_year_plan
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				production_speed_arms_factory_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		SFH_war_time_laws_2 = {		#战时法律
+			name = SFH_war_time_laws
+			picture = SOV_second_five_year_plan
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.15
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.4
+				production_speed_arms_factory_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		SFH_war_time_laws_3 = {		#战时法律
+			name = SFH_war_time_laws
+			picture = SOV_second_five_year_plan
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.1
+				war_support_factor = 0.2
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.5
+				production_speed_arms_factory_factor = 0.3
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		SFH_civil_war_army = {		#内战军队
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = -0.2
+				land_reinforce_rate = -0.02
+			}
+		}
+
+		SFH_civil_war_army_1 = {		#内战军队
+			name = SFH_civil_war_army
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = -0.1
+				land_reinforce_rate = -0.02
+				supply_consumption_factor = 0.1
+			}
+		}
+
+		SFH_civil_war_army_2 = {		#内战军队
+			name = SFH_civil_war_army
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = 0.1
+				army_org_factor = -0.1
+				land_reinforce_rate = -0.01
+				supply_consumption_factor = 0.1
+			}
+		}
+
+		SFH_civil_war_army_3 = {		#内战军队
+			name = SFH_civil_war_army
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = 0.1
+				army_org_factor = -0.05
+				supply_consumption_factor = 0.05
+			}
+		}
+
+		SFH_civil_war_army_4 = {		#内战军队
+			name = SFH_civil_war_army
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = 0.1
+			}
+		}
+
+		SFH_civil_war_army_5 = {		#内战军队
+			name = SFH_civil_war_army
+			picture = eng_service_overseas
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_regain = 0.1
+			}
+		}
+
+		SFH_fight_against_antiwar_guys = {		#打击厌战情绪
+			picture = FRA_matignon_agreements
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				#war_exhaustion_gain_modifier = -0.1
+			}
+		}
+
+		SFH_fight_against_antiwar_guys_1 = {		#打击厌战情绪
+			name = SFH_fight_against_antiwar_guys
+			picture = FRA_matignon_agreements
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				#war_exhaustion_gain_modifier = -0.2
+			}
+		}
+
+		SFH_fight_against_antiwar_guys_2 = {		#打击厌战情绪
+			name = SFH_fight_against_antiwar_guys
+			picture = FRA_matignon_agreements
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				#war_exhaustion_gain_modifier = -0.3
+			}
+		}
+
+		SFH_fight_against_antiwar_guys_3 = {		#打击厌战情绪
+			name = SFH_fight_against_antiwar_guys
+			picture = FRA_matignon_agreements
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = 0.2
+				#war_exhaustion_gain_modifier = -0.5
+			}
+		}
+
+		SFH_war_time_propaganda = {		#战时宣传
+			picture = FRA_national_mobilization_focus
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+			}
+		}
+
+		SFH_weaker_opposition_civil_war = {		#反战情绪
+			picture = tur_disorganised_armed_forces
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				army_org_regain = -0.05
+			}
+			targeted_modifier = {
+				tag = SFH
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+
+		SFH_stronger_opposition_civil_war = {		#复仇怒火
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			cancel = {
+				has_war = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.1
+			}
+			targeted_modifier = {
+				tag = SFH
+				attack_bonus_against = 0.05
+			}
+		}
+
+		SFH_chaos_after_war_1 = {		#战后风波
+			name = SFH_chaos_after_war
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		SFH_chaos_after_war_2 = {		#战后风波
+			name = SFH_chaos_after_war
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		SFH_chaos_after_war_3 = {		#战后风波
+			name = SFH_chaos_after_war
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		SFH_chaos_after_war_4 = {		#战后风波
+			name = SFH_chaos_after_war
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		SFH_motherland_is_coming_1 = {		#远乡已至
+			name = SFH_motherland_is_coming
+			picture = ITA_bandits_war
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+		
+		SFH_motherland_is_coming_2 = {		#远乡已至
+			name = SFH_motherland_is_coming
+			picture = ITA_bandits_war
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				supply_consumption_factor = -0.1
+				army_org_regain = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		SFH_prepare_nwf_war_1 = {		#备战西北
+			name = SFH_prepare_nwf_war
+			picture = generic_war_preparation
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				mobilization_speed = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		SFH_prepare_nwf_war_2 = {		#备战西北
+			name = SFH_prepare_nwf_war
+			picture = generic_war_preparation
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				mobilization_speed = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				supply_consumption_factor = -0.1
+				terrain_penalty_reduction = 0.1
+			}
+		}
+
+		SFH_nfh_war = {		#北方战争
+			picture = generic_war_preparation
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_regain = 0.05
+				terrain_penalty_reduction = 0.1
+			}
+			targeted_modifier = {
+				tag = NFH
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SFH_msa_war = {		#人鱼特区战争
+			picture = generic_war_preparation
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				invasion_preparation = -0.2
+			}
+			targeted_modifier = {
+				tag = MSA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SFH_hunting_down_guerrillas = {		#追杀乡村游击队
+			picture = MEX_revolutionary_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				attrition = 0.05
+			}
+			targeted_modifier = {
+				tag = FFH
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SFH_mermaid_business_1 = {		#人鱼境外企业
+			name = SFH_mermaid_business
+			picture = generic_economic_increase
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		SFH_mermaid_business_2 = {		#人鱼境外企业
+			name = SFH_mermaid_business
+			picture = generic_economic_increase
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_reorganize_northern_gov = {		#重组北方政府
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				required_garrison_factor = 0.1
+				resistance_activity = -0.2
+				compliance_growth = 0.2
+			}
+		}
+
+		SFH_rebuild_farhome_navy_1 = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2 = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2_l = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				navy_org_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2_ll = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				navy_org_factor = 0.05
+				navy_max_range_factor = 0.05
+				naval_damage_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2_ll = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				navy_org_factor = 0.15
+				navy_max_range_factor = 0.1
+				naval_damage_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+		
+		SFH_new_born_navy_l = {		#新生的远乡海军
+			name = SFH_new_born_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.02
+				experience_gain_navy_factor = 0.2
+				navy_org_factor = 0.2
+				navy_max_range_factor = 0.1
+				naval_damage_factor = 0.1
+				research_speed_factor = 0.02
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2_r = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				research_speed_factor = 0.01
+				navy_anti_air_attack_factor = 0.05
+				naval_detection = 0.05
+			}
+		}
+
+		SFH_rebuild_farhome_navy_2_rr = {		#重建远乡海军
+			name = SFH_rebuild_farhome_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.1
+				research_speed_factor = 0.01
+				navy_anti_air_attack_factor = 0.05
+				naval_detection = 0.1
+				naval_defense_factor = 0.05
+				naval_speed_factor = 0.05
+			}
+		}
+
+		SFH_new_born_navy_r = {		#新生的远乡海军
+			name = SFH_new_born_navy
+			picture = generic_navy_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_navy = 0.02
+				experience_gain_navy_factor = 0.2
+				research_speed_factor = 0.02
+				navy_anti_air_attack_factor = 0.05
+				naval_detection = 0.2
+				naval_defense_factor = 0.1
+				naval_speed_factor = 0.1
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_1 = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air_factor = 0.05
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_2 = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.1
+				research_speed_factor = 0.01
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_2_l = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.1
+				research_speed_factor = 0.01
+				air_bombing_targetting = 0.05
+				air_superiority_efficiency = 0.05
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_2_ll = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.1
+				research_speed_factor = 0.01
+				air_bombing_targetting = 0.05
+				air_strategic_bomber_bombing_factor = 0.05
+				air_superiority_efficiency = 0.05
+				air_range_factor = 0.05
+			}
+		}
+
+		SFH_new_born_air_force_l = {		#新生的远乡空军
+			name = SFH_new_born_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.02
+				experience_gain_air_factor = 0.2
+				research_speed_factor = 0.02
+				air_bombing_targetting = 0.05
+				air_strategic_bomber_bombing_factor = 0.05
+				air_superiority_efficiency = 0.1
+				air_range_factor = 0.1
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_2_r = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.1
+				research_speed_factor = 0.01
+				ground_attack_factor = 0.05
+				air_cas_efficiency = 0.05
+			}
+		}
+
+		SFH_rebuild_farhome_air_force_2_rr = {		#重建远乡空军
+			name = SFH_rebuild_farhome_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.01
+				experience_gain_air_factor = 0.1
+				research_speed_factor = 0.01
+				ground_attack_factor = 0.05
+				air_cas_efficiency = 0.05
+				air_attack_factor = 0.05
+				air_close_air_support_org_damage_factor = 0.05
+			}
+		}
+
+		SFH_new_born_air_force_r = {		#新生的远乡空军
+			name = SFH_new_born_air_force
+			picture = generic_air_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.02
+				experience_gain_air_factor = 0.2
+				research_speed_factor = 0.02
+				ground_attack_factor = 0.1
+				air_cas_efficiency = 0.1
+				air_attack_factor = 0.05
+				air_close_air_support_org_damage_factor = 0.05
+			}
+		}
+
+		SFH_regaining_our_territories = {		#重夺我们的土地！
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+				mobilization_speed = 0.2
+				army_org_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+
+		SFH_battle_for_territories = {		#为夺回领土发动进攻
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_regain = 0.2
+			}
+		}
+
+		SFH_farhome_expansionism_1 = {		#远乡扩张主义
+			name = SFH_farhome_expansionism
+			picture = FRA_la_deluge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.1
+				required_garrison_factor = -0.1
+				monthly_population = 0.1
+			}
+		}
+
+		SFH_farhome_expansionism_2 = {		#远乡扩张主义
+			name = SFH_farhome_expansionism
+			picture = FRA_la_deluge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+				justify_war_goal_time = -0.3
+				required_garrison_factor = -0.2
+				monthly_population = 0.2
+			}
+		}
+
+		SFH_farhome_expansionism_3 = {		#远乡扩张主义
+			name = SFH_farhome_expansionism
+			picture = FRA_la_deluge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+				army_org_regain = 0.1
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+				justify_war_goal_time = -0.5
+				required_garrison_factor = -0.3
+				monthly_population = 0.3
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		SFH_farhome_influence_range_1 = {		#远乡势力圈
+			name = SFH_farhome_influence_range
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = 0.1
+				rulling_ideology_drift = 0.05
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		SFH_farhome_influence_range_2 = {		#远乡势力圈
+			name = SFH_farhome_influence_range
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				opinion_gain_monthly_factor = 0.1
+				faction_trade_opinion_factor = 0.1
+				rulling_ideology_drift = 0.05
+				intel_network_gain_factor = 0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		SFH_farhome_influence_range_3 = {		#远乡势力圈
+			name = SFH_farhome_influence_range
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				opinion_gain_monthly_factor = 0.1
+				faction_trade_opinion_factor = 0.1
+				rulling_ideology_drift = 0.05
+				intel_network_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		SFH_farhome_isolationism_1 = {		#远乡孤立主义
+			name = SFH_farhome_isolationism
+			picture = FRA_fortification_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				drift_defence_factor = 0.1
+			}
+		}
+
+		SFH_farhome_isolationism_1_l = {		#远乡孤立主义
+			name = SFH_farhome_isolationism
+			picture = FRA_fortification_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				drift_defence_factor = 0.1
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+			}
+		}
+
+		SFH_farhome_isolationism_1_r = {		#远乡孤立主义
+			name = SFH_farhome_isolationism
+			picture = FRA_fortification_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				drift_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+
+		SFH_farhome_isolationism_2 = {		#远乡孤立主义
+			name = SFH_farhome_isolationism
+			picture = FRA_fortification_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				drift_defence_factor = 0.1
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+
+		SFH_farhome_isolationism_3 = {		#远乡孤立主义
+			name = SFH_farhome_isolationism
+			picture = FRA_fortification_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.1
+				drift_defence_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				production_speed_coastal_bunker_factor = 0.3
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+
+        SFH_new_born_farhome = {		#新生的远乡王国
+			picture = HUN_hungarian_monarchy_democratic
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+				rulling_ideology_drift = 0.1
+				drift_defence_factor = 0.3
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+        SFH_flourished_farhome = {		#繁荣的远乡王国
+			picture = HUN_hungarian_monarchy_democratic
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+			}
+		}
+
+		SFH_stable_farhome = {		#牢固的远乡王国
+			picture = HUN_hungarian_monarchy
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				war_stability_factor = 0.3
+				command_power_gain_mult = 0.2
+			}
+		}
+
+		SFH_ZhengJun_idea = {	#郑钧
+			picture = SFH_ZhengJun
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+	}
+
+	tank_manufacturer = {
+
+		designer = yes
+
+		SFH_future_light_industrial_coop_tank = {		#明光集团装甲部
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				medium_tank_manufacturer
+			}
+		}
+
+		SFH_Le_industrial_coop_tank = {		#李氏集团装甲部
+
+			picture = generic_tank_manufacturer_2
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				heavy_tank_manufacturer 
+			}
+		}
+
+		SFH_JiShui_tank_manufactuer = {		#吉水装甲工厂
+
+			picture = generic_tank_manufacturer_3
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				armor = 0.15
+			}
+	
+			traits = { 
+				fast_tank_manufacturer 
+			}
+		}
+
+	}
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		SFH_Le_industrial_coop_naval = {		#李氏工业集团
+		
+			picture = generic_air_manufacturer_2
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+	
+			traits = { 
+				battlefleet_designer 
+			}
+		}	
+
+		SFH_big_naval_shipment = {		#大港海运
+		
+			picture = generic_naval_manufacturer_2
+
+			allowed = { original_tag = SFH }
+
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+	
+			traits = { 
+				coastal_defence_naval_manufacturer 
+			}
+		}	
+
+		SFH_XinYuan_naval_manufacturer = {		#新园海军工厂
+		
+			picture = generic_naval_manufacturer_3
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+	
+			traits = { 
+				raiding_fleet_naval_manufacturer 
+			}
+		}	
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+		SFH_future_light_industrial_coop_aircraft = {		#明光航空部
+
+			picture = generic_air_manufacturer_3
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+	
+			traits = { 
+				medium_aircraft_manufacturer
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		SFH_Zhou_military_coop = {		#周氏军工集团
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				infantry_weapons = 0.2
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					soft_attack = 0.05
+					defense = 0.05
+				}
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		SFH_TianTan_military_manufacturer = {		#天台军工厂
+
+			picture = generic_infantry_equipment_manufacturer_3
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		SFH_white_pigeon_international_coop = {		#白鸽国际
+
+			picture = generic_infantry_equipment_manufacturer_1
+
+			allowed = { original_tag = SFH }
+
+			equipment_bonus = {
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+			
+			research_bonus = {
+				support_tech = 0.1
+			}
+
+			traits = { support_equipment_manufacturer }
+		}
+
+		SFH_JiangZhou_motorized_manufacturer = {		#江洲汽修厂
+
+			picture = generic_motorized_equipment_manufacturer_3
+
+			allowed = { original_tag = SFH }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+				}
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.2
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+
+		SFH_ShuiBu_artiliery_manufacturer = {		#水步军工厂
+
+			picture = generic_artillery_manufacturer_2
+
+			allowed = { original_tag = SFH }
+
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					reliability = 0.05
+					soft_attack = 0.1
+					hard_attack = 0.1
+				}
+			}
+			
+			research_bonus = {
+				artillery = 0.2
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+	}
+
+	industrial_concern = {
+		SFH_Liu_mining_and_industrial_concern = {		#刘氏矿业集团
+
+			picture = generic_refining_concern_1
+
+			allowed = { original_tag = SFH }
+
+			modifier = {
+				local_resources_factor = 0.1
+			}
+			
+			research_bonus = {
+				excavation_tech = 0.2
+				synth_resources = 0.2
+			}
+			
+			traits = { refinery_concern }
+		}
+
+		SFH_Le_industrial_coop = {		#李氏工业集团
+
+			picture = generic_industrial_concern_1
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				industry = 0.2
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		SFH_PingJin_construction_concern = {		#平京建设有限公司
+
+			picture = generic_industrial_concern_2
+
+			allowed = { original_tag = SFH }
+			
+			research_bonus = {
+				construction_tech = 0.1
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			
+			traits = { construction_company }
+		}
+
+	}
+
+}

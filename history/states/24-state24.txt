@@ -1,0 +1,42 @@
+
+state={
+	id=24
+	name="STATE_24"
+
+	resources = {
+		steel = 4
+	}
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			dockyard = 2
+			air_base = 4
+			anti_air_building = 2
+			radar_station = 1
+			9896 = {
+				naval_base = 4
+
+			}
+
+		}
+		victory_points = {
+			6009 3 
+		}
+		victory_points = {
+			9896 3 
+		}
+
+	}
+
+	provinces={
+		6009 8035 8555 8565 9710 9861 9896 15616 15746 15871 15890 16001 16068 16181 16298 
+	}
+	manpower=1178913
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

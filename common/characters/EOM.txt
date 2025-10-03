@@ -1,0 +1,23 @@
+characters={
+
+	EOM_matt_umao = {		#马特·乌毛
+   		name = EOM_matt_umao
+   		portraits = {
+   			civilian = {
+   				large="GFX_EOM_matt_umao"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_EOM_matt_umao"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = EOM_matt_umao_desc
+   			ideology = military_dictatorship
+   			traits = { EOM_fearless_matt }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

@@ -1,0 +1,76 @@
+﻿division_template = {
+	name = "皇家陆军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "戈尔维亚陆军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "皇家“康纳”陆军师"
+		location = 15390
+		division_template = "皇家陆军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "戈尔维亚陆军一师"
+		location = 6600
+		division_template = "戈尔维亚陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "戈尔维亚陆军二师"
+		location = 15423
+		division_template = "戈尔维亚陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "戈尔维亚陆军三师"
+		location = 6175
+		division_template = "戈尔维亚陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "戈尔维亚陆军四师"
+		location = 16142
+		division_template = "戈尔维亚陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+}

@@ -1,0 +1,46 @@
+leader_traits = {
+	FCR_mental_disorders = {				#精神失常
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = {
+			always = no
+		}
+
+		planning_skill = -1
+		logistics_skill = -1
+		
+		modifier = {
+			experience_gain_factor = -0.2
+		}
+
+		new_commander_weight = { factor = 0 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	FCR_force_surpasses = {				#武力超群
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = {
+			always = no
+		}
+
+		attack_skill = 1
+		defense_skill = 1
+		
+		modifier = {
+			wounded_chance_factor = -0.25
+			sickness_chance = -0.25
+		}
+
+		new_commander_weight = { factor = 0 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

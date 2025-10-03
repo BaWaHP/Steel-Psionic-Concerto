@@ -1,0 +1,23 @@
+characters={
+
+	#夏洛特·蒂·格拉施塔特
+	AYL_charlotte_t_glashtadt = {
+		name = AYL_charlotte_t_glashtadt
+		portraits = {
+			civilian = {
+				large="GFX_AYL_charlotte_t_glashtadt"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_AYL_charlotte_t_glashtadt"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

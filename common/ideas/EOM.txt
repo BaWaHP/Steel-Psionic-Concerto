@@ -1,0 +1,53 @@
+ideas = {
+	country = {
+
+		EOM_oasis_defense = {		#绿洲防线
+			picture = FRA_fortification_focus
+			allowed = { original_tag = EOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				political_power_gain = -0.5
+			}
+		}
+
+		EOM_sweet_dream = {		#理想很美好…
+			picture = FRA_national_mobilization_focus
+			allowed = { original_tag = EOM }
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.2
+				army_org_regain = 0.1
+				conscription_factor = 0.2
+				training_time_army_factor = -0.2
+			}
+		}
+
+		EOM_but_harsh_reality = {		#…而现实残酷
+			picture = anti_soviet_pact
+			allowed = { original_tag = EOM }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_org_factor = -0.2
+				org_loss_when_moving = 0.2
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+		EOM_legion_awaiting = {		#虎视眈眈的军团
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { original_tag = EOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.2
+			}
+		}
+
+	}
+}

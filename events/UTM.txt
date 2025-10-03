@@ -1,0 +1,41 @@
+﻿add_namespace = UTM
+
+country_event = {	#南！下！
+	id = UTM.1
+	title = UTM.1.t
+	desc = UTM.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UTM.1.a
+		declare_war_on = {
+			target = NLL
+			type = annex_everything
+		}
+	}
+}
+
+add_namespace = UTMNews
+
+news_event = {
+	id = UTMNews.1		#魔兽横行于中巴边疆
+	title = UTMNews.1.t
+	desc = UTMNews.1.d
+	picture = GFX_news_event_generic_51
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UTMNews.1.a
+		trigger = { tag = UTM }
+	}
+
+	option = {
+		name = UTMNews.1.b
+		trigger = { NOT = { tag = UTM } }
+	}
+}

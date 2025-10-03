@@ -1,0 +1,78 @@
+ideas = {
+	country = {
+
+		NOH_discordant_finches = {		#不和的雀鸟
+			picture = SWE_neither_death_nor_dishonor
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				monthly_population = -0.2
+				conscription_factor = -0.2
+				global_building_slots_factor = -0.1
+			}
+		}
+
+		NOH_national_emergency = {		#国家紧急状态
+			picture = SWE_varnplikt
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				stability_weekly = 0.001
+				monthly_living_standard_development_process = -1
+			}
+		}
+
+		NOH_political_terrorism = {		#政治恐怖
+			picture = anti_soviet_pact
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.2
+				drift_defence_factor = 0.3
+				rulling_ideology_drift = 0.02
+				research_speed_factor = -0.2
+				monthly_research_development_process = -1
+			}
+		}
+
+		NOH_united_dream = {		#祖国统一之理想
+			picture = air_war_plans_division_focus
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+
+		NOH_economic_turmoil = {		#经济动荡
+			picture = POL_disjointed_industry
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				monthly_industrial_development_process = -1
+			}
+		}
+
+		NOH_crippled_army = {		#残缺的军队
+			picture = chi_army_corruption
+			allowed = { original_tag = NOH }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				army_speed_factor = -0.2
+				max_command_power_mult = -0.5
+				experience_gain_army_factor = -0.75
+				land_doctrine_cost_factor = 0.75
+			}
+		}
+
+	}
+}

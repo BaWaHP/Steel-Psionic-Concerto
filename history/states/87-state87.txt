@@ -1,0 +1,33 @@
+
+state={
+	id=87
+	name="STATE_87"
+	resources = {
+		aluminium = 10
+		steel = 10
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			17522 1
+		}
+		victory_points = {
+			9037 8
+		}
+	}
+
+	provinces={
+		2468 2549 3321 8276 8435 9037 11778 17302 17388 17522 17551 17590 17642 17708 17723 17887 
+	}
+	manpower=562200
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

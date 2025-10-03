@@ -1,0 +1,32 @@
+
+state={
+	id=376
+	name="STATE_376"
+	resources={
+		steel=12.000
+		magic_crystal=18.000
+	}
+
+	history={
+		owner = AST
+		add_core_of = AST
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			7545 15 
+		}
+
+	}
+
+	provinces={
+		7545 10706 12037 12147 19095 19184 19202 19203 19246 19322 19358 
+	}
+	manpower=1120000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

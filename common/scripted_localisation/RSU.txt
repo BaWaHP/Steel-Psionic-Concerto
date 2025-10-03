@@ -1,0 +1,100 @@
+defined_text = {
+	name = GET_RSU_union_development_north_icon
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_north_icon = 0 }
+		}
+		localization_key = "GFX_RSU_union_development_north_icon_0"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_north_icon = 1 }
+		}
+		localization_key = "GFX_RSU_union_development_north_icon_1"
+	}
+}
+
+defined_text = {
+	name = GET_RSU_union_development_east_icon
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_east_icon = 0 }
+		}
+		localization_key = "GFX_RSU_union_development_east_icon_0"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_east_icon = 1 }
+		}
+		localization_key = "GFX_RSU_union_development_east_icon_1"
+	}
+}
+
+defined_text = {
+	name = GET_RSU_union_development_south_icon
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_south_icon = 0 }
+		}
+		localization_key = "GFX_RSU_union_development_south_icon_0"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_south_icon = 1 }
+		}
+		localization_key = "GFX_RSU_union_development_south_icon_1"
+	}
+}
+
+defined_text = {
+	name = GET_RSU_union_development_west_icon
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_west_icon = 0 }
+		}
+		localization_key = "GFX_RSU_union_development_west_icon_0"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_west_icon = 1 }
+		}
+		localization_key = "GFX_RSU_union_development_west_icon_1"
+	}
+}
+
+defined_text = {
+	name = GET_RSU_union_development_get_region
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_north_icon = 1 }
+		}
+		localization_key = "GET_RSU_union_development_get_region_1"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_east_icon = 1 }
+		}
+		localization_key = "GET_RSU_union_development_get_region_2"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_south_icon = 1 }
+		}
+		localization_key = "GET_RSU_union_development_get_region_3"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_west_icon = 1 }
+		}
+		localization_key = "GET_RSU_union_development_get_region_4"
+	}
+	text = {
+		trigger = {
+			check_variable = { RSU_union_development_north_icon = 0 }
+			check_variable = { RSU_union_development_east_icon = 0 }
+			check_variable = { RSU_union_development_south_icon = 0 }
+			check_variable = { RSU_union_development_west_icon = 0 }
+		}
+		localization_key = "GET_RSU_union_development_get_region_5"
+	}
+}

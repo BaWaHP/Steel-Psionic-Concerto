@@ -1,0 +1,31 @@
+
+state={
+	id=109
+	name="STATE_109"
+	provinces={
+		386 1272 4181 4963 5862 8617 9597 11241 11399 12082 20374 20428 20457 20470 20509 20542 
+	}
+	resources = {
+		aluminium = 12
+		tungsten = 18
+		magic_crystal = 6
+	}
+	history = {
+		owner = CLD
+		add_core_of = CLD
+		add_core_of = NCD
+		buildings = {
+            infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 3
+			dockyard = 1
+        }
+		victory_points = {
+			20428 5
+		}
+	}
+	manpower=1809945
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

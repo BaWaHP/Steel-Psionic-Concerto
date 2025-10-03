@@ -1,0 +1,190 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ZBC_startup_effect = {
+	if = {
+		limit = { tag = ZBC }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = grouped_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = extra_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_locating_resource
+		add_ideas = IP_cutting_taxes
+		add_ideas = WP_limited_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_advanced_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_basic_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_working_euqality
+		add_ideas = EP_modern_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_partial_mimicry
+		add_ideas = LR_demons
+		add_ideas = SR_ink_elves
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###系统###
+		add_opinion_modifier = {
+			target = RSB
+			modifier = ZBC_business_is_business_opinion
+		}
+		RSB = {
+			add_opinion_modifier = {
+				target = ZBC
+				modifier = ZBC_business_is_business_opinion
+			}
+		}
+		add_opinion_modifier = {
+			target = RSU
+			modifier = ZBC_business_is_business_opinion
+		}
+		RSU = {
+			add_opinion_modifier = {
+				target = ZBC
+				modifier = ZBC_business_is_business_opinion
+			}
+		}
+		add_opinion_modifier = {
+			target = KOA
+			modifier = ZBC_business_is_business_opinion
+		}
+		KOA = {
+			add_opinion_modifier = {
+				target = ZBC
+				modifier = ZBC_business_is_business_opinion
+			}
+		}
+		add_opinion_modifier = {
+			target = UAC
+			modifier = ZBC_business_is_business_opinion
+		}
+		UAC = {
+			add_opinion_modifier = {
+				target = ZBC
+				modifier = ZBC_business_is_business_opinion
+			}
+		}
+		#every_owned_state = {
+		#	if = {
+		#		limit = { OR = { NOT = { state = 402 } } }
+		#		add_dynamic_modifier = {
+		#			modifier = ZBC_outstation
+		#		}
+		#	}
+		#}
+		#ZBC = {
+		#	set_variable = { ZBC_station_dynamic_modifier_ppf = -0.05 }
+		#	set_variable = { ZBC_station_dynamic_modifier_cgf = -0.05 }
+		#}
+		#ZBC_station_system_update = yes
+		#add_dynamic_modifier = {
+		#	modifier = ZBC_station_dynamic_modifier
+		#}
+		###发展度###
+		333 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }		
+		}
+		323 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }		
+		}
+		403 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		402 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		472 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		167 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		168 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		169 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+	}
+}
+
+ZBC_station_system_update = {
+	set_variable = { ZBC_station_dynamic_modifier_ppf = 0 }
+	set_variable = { ZBC_station_dynamic_modifier_cgf = 0 }
+	every_owned_state = {
+		if = {
+			limit = { has_dynamic_modifier = { modifier = ZBC_outstation } }
+			ZBC = {
+				add_to_variable = { ZBC_station_dynamic_modifier_ppf = -0.01 }
+				add_to_variable = { ZBC_station_dynamic_modifier_cgf = -0.01 }
+			}
+		}
+	}
+	clamp_variable = {
+		var = ZBC_station_dynamic_modifier_ppf
+		min = -0.15
+		max = 0
+	}
+	clamp_variable = {
+		var = ZBC_station_dynamic_modifier_cgf
+		min = -0.15
+		max = 0
+	}
+}

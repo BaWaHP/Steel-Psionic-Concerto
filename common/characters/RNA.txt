@@ -1,0 +1,23 @@
+characters={
+
+	RNA_marianne_petit = {		#玛丽安·佩蒂特
+   		name = RNA_marianne_petit
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = RNA_marianne_petit_desc
+   			ideology = social_corporatism
+   			traits = { RNA_right_wing_intellectuals }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

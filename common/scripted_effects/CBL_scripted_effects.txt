@@ -1,0 +1,686 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_CBL_startup_effect = {
+	if = {
+		limit = { tag = CBL }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = no_standard_at_all
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = normal_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = unorganized_army
+		add_ideas = hard_to_survive
+		add_ideas = uncomfortable
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_no_intervention
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_midans
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它设置###
+		country_lock_all_division_template = yes
+		###控制省份对应普及度###
+		201 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		203 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }
+		}
+		214 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		205 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		197 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		196 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		200 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		199 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		132 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		190 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		195 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		192 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		194 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		191 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		177 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		89 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		193 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		87 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		198 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		202 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		204 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		213 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		273 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		207 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		406 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		209 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		212 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		211 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		282 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		208 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		153 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+	}
+}
+
+CBL_civil_war_begin_1_effect = {
+	#OPH#
+	211 = { add_core_of = OPH transfer_state_to = OPH }
+	212 = { add_core_of = OPH transfer_state_to = OPH }
+	282 = { add_core_of = OPH transfer_state_to = OPH }
+	OPH = { load_oob = OPH }
+
+	#FWJ#
+	209 = { add_core_of = FWJ transfer_state_to = FWJ }
+	153 = { add_core_of = FWJ transfer_state_to = FWJ }
+	208 = { add_core_of = FWJ transfer_state_to = FWJ }
+	FWJ = { load_oob = FWJ }
+
+	#DMT#
+	273 = { add_core_of = DMT transfer_state_to = DMT }
+	207 = { add_core_of = DMT transfer_state_to = DMT }
+	DMT = { load_oob = DMT }
+
+	#RCC#
+	210 = { add_core_of = RCC transfer_state_to = RCC }
+	#213 = { add_core_of = RCC transfer_state_to = RCC }
+	#204 = { add_core_of = RCC transfer_state_to = RCC }
+	RCC = { load_oob = RCC }
+
+	#MNT#
+	214 = { add_core_of = MNT transfer_state_to = MNT }
+	205 = { add_core_of = MNT transfer_state_to = MNT }
+	MNT = { load_oob = MNT }
+
+	#CBI#
+	203 = { add_core_of = CBI transfer_state_to = CBI }
+	201 = { add_core_of = CBI transfer_state_to = CBI }
+	200 = { add_core_of = CBI transfer_state_to = CBI }
+	199 = { add_core_of = CBI transfer_state_to = CBI }
+	132 = { add_core_of = CBI transfer_state_to = CBI }
+	197 = { add_core_of = CBI transfer_state_to = CBI }
+	196 = { add_core_of = CBI transfer_state_to = CBI }
+	CBI = { load_oob = CBI }
+
+	#FEJ#
+	194 = { add_core_of = FEJ transfer_state_to = FEJ }
+	195 = { add_core_of = FEJ transfer_state_to = FEJ }
+	190 = { add_core_of = FEJ transfer_state_to = FEJ }
+	FEJ = { load_oob = FEJ }
+
+	#VGI#
+	202 = { add_core_of = VGI transfer_state_to = VGI }
+	VGI = { load_oob = VGI }
+
+	#AYL#
+	192 = { add_core_of = AYL transfer_state_to = AYL }
+	191 = { add_core_of = AYL transfer_state_to = AYL }
+	177 = { add_core_of = AYL transfer_state_to = AYL }
+	AYL = { load_oob = AYL }
+
+	#CLA#
+	193 = { add_core_of = CLA transfer_state_to = CLA }
+	198 = { add_core_of = CLA transfer_state_to = CLA }
+	87 = { add_core_of = CLA transfer_state_to = CLA }
+	89 = { add_core_of = CLA transfer_state_to = CLA }
+	CLA = { load_oob = CLA }
+
+	every_country = {
+		limit = {
+			SPC_generic_region_trigger_200 = yes
+			exists = yes
+		}
+		country_event = {
+			id = CBL.0
+			days = 7
+		}
+	}
+
+	CBL_clr_flag_effect = yes
+	CBL_civilwar_others_effect = yes
+
+	every_owned_state = {
+		add_core_of = RCC
+	}
+
+	RCC = {
+		annex_country = {
+			target = CBL
+			transfer_troops = no
+		}
+		change_tag_from = CBL
+	}
+}
+
+CBL_civil_war_begin_2_effect = {
+	#OPH#
+	211 = { add_core_of = OPH transfer_state_to = OPH }
+	212 = { add_core_of = OPH transfer_state_to = OPH }
+	282 = { add_core_of = OPH transfer_state_to = OPH }
+	OPH = { load_oob = OPH }
+
+	#FWJ#
+	209 = { add_core_of = FWJ transfer_state_to = FWJ }
+	153 = { add_core_of = FWJ transfer_state_to = FWJ }
+	208 = { add_core_of = FWJ transfer_state_to = FWJ }
+	FWJ = { load_oob = FWJ }
+
+	#CBI#
+	200 = { add_core_of = CBI transfer_state_to = CBI }
+	199 = { add_core_of = CBI transfer_state_to = CBI }
+	132 = { add_core_of = CBI transfer_state_to = CBI }
+	197 = { add_core_of = CBI transfer_state_to = CBI }
+	196 = { add_core_of = CBI transfer_state_to = CBI }
+	CBI = { load_oob = CBI }
+
+	#FEJ#
+	194 = { add_core_of = FEJ transfer_state_to = FEJ }
+	195 = { add_core_of = FEJ transfer_state_to = FEJ }
+	190 = { add_core_of = FEJ transfer_state_to = FEJ }
+	FEJ = { load_oob = FEJ }
+
+	#AYL#
+	192 = { add_core_of = AYL transfer_state_to = AYL }
+	191 = { add_core_of = AYL transfer_state_to = AYL }
+	177 = { add_core_of = AYL transfer_state_to = AYL }
+	AYL = { load_oob = AYL }
+
+	#CLA#
+	193 = { add_core_of = CLA transfer_state_to = CLA }
+	198 = { add_core_of = CLA transfer_state_to = CLA }
+	87 = { add_core_of = CLA transfer_state_to = CLA }
+	89 = { add_core_of = CLA transfer_state_to = CLA }
+	CLA = { load_oob = CLA }
+
+	CBL_to_RCC_set_flag_effect = yes
+	CBL_clr_flag_effect = yes
+
+	CBL_civilwar_others_effect = yes
+
+	every_owned_state = {
+		add_core_of = RCC
+	}
+
+	RCC = {
+		load_oob = RCC
+		activate_mission = CBL_take_over_key_sopts
+		annex_country = {
+			target = CBL
+			transfer_troops = no
+		}
+	}
+}
+
+CBL_civil_war_begin_3_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_3 } }
+		203 = { add_core_of = FWJ transfer_state_to = FWJ }
+		213 = { add_core_of = FWJ transfer_state_to = FWJ }
+		if = {
+			limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_1 } }
+			204 = { add_core_of = FWJ transfer_state_to = FWJ }
+		}
+		if = {
+			limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_2 } }
+			210 = { add_core_of = FWJ transfer_state_to = FWJ }
+		}
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_3 } }
+		#DMT#
+		273 = { add_core_of = DMT transfer_state_to = DMT }
+		207 = { add_core_of = DMT transfer_state_to = DMT }
+		if = {
+			limit = { has_country_flag = CBL_pre_civ_state_situ_2 }
+			210 = { add_core_of = DMT transfer_state_to = DMT }
+		}
+		DMT = { load_oob = DMT }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_4 } }
+		#VGI#
+		202 = { add_core_of = VGI transfer_state_to = VGI }
+		if = {
+			limit = { has_country_flag = CBL_pre_civ_state_situ_1 }
+			204 = { add_core_of = VGI transfer_state_to = VGI }
+		}
+		VGI = { load_oob = VGI }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_5 } }
+		#CBI#
+		201 = { add_core_of = CBI transfer_state_to = CBI }
+	}
+
+	if = {
+		limit = { NOT = { has_country_flag = CBL_pre_civ_state_situ_6 } }
+		#MNT#
+		214 = { add_core_of = MNT transfer_state_to = MNT }
+		205 = { add_core_of = MNT transfer_state_to = MNT }
+		MNT = { load_oob = MNT }
+	}
+
+	every_country = {
+		limit = {
+			SPC_generic_region_trigger_200 = yes
+			exists = yes
+		}
+		country_event = {
+			id = CBL.0
+			days = 7
+		}
+	}
+
+	CBL_clr_flag_effect = yes
+}
+
+CBL_to_RCC_set_flag_effect = {
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_1 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_1 }
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_2 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_2 }
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_3 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_3 }
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_4 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_4 }
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_5 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_5 }
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_6 }
+		RCC = { set_country_flag = CBL_pre_civ_state_situ_6 }
+	}
+}
+
+CBL_clr_flag_effect = {
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_1 }
+		clr_country_flag = CBL_pre_civ_state_situ_1
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_2 }
+		clr_country_flag = CBL_pre_civ_state_situ_2
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_3 }
+		clr_country_flag = CBL_pre_civ_state_situ_3
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_4 }
+		clr_country_flag = CBL_pre_civ_state_situ_4
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_5 }
+		clr_country_flag = CBL_pre_civ_state_situ_5
+	}
+	if = {
+		limit = { has_country_flag = CBL_pre_civ_state_situ_6 }
+		clr_country_flag = CBL_pre_civ_state_situ_6
+	}
+}
+
+CBL_civilwar_others_effect = {
+	#在这里执行中巴内战后触发给别人的内容
+	#中巴外内容设定
+	news_event = CBLNews.1
+	every_country = {
+		set_country_flag = superevent_show_flag
+		set_country_flag = SPC_SE_central_bastia_civil_war_flag
+		scoped_play_song = "SE_central_bastia_civil_war_sound"
+	}
+	ROT = {
+		country_event = {
+			id = ROT.10
+			days = 1
+		}
+	}
+	WOM = {
+		country_event = {
+			id = WOM.1
+			days = 1
+		}
+	}
+	UTM = {
+		country_event = {
+			id = UTM.1
+			days = 30
+		}
+	}
+}
+
+CBL_civilwar_war_start_effect = {
+	AYL = { 
+		create_faction = CBL_civilwar_fac_name_1
+		if = {
+			limit = { DMT = { exists = yes } }
+			add_to_faction = DMT
+		}
+		if = {
+			limit = { OPH = { exists = yes } }
+			add_to_faction = OPH
+		}
+		declare_war_on = {
+			target = CLA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = RCC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MNT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CBI
+			type = annex_everything
+		}
+		every_allied_country = {
+			declare_war_on = {
+				target = CLA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RCC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MNT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CBI
+				type = annex_everything
+			}
+		}
+	}
+	CLA = { 
+		create_faction = CBL_civilwar_fac_name_2
+		if = {
+			limit = { VGI = { exists = yes } }
+			add_to_faction = VGI
+		}
+		declare_war_on = {
+			target = AYL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = RCC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MNT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CBI
+			type = annex_everything
+		}
+		every_allied_country = {
+			declare_war_on = {
+				target = AYL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RCC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MNT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CBI
+				type = annex_everything
+			}
+		}
+	}
+	RCC = { 
+		create_faction = CBL_civilwar_fac_name_3
+		if = {
+			limit = { FWJ = { exists = yes } }
+			add_to_faction = FWJ
+		}
+		if = {
+			limit = { FEJ = { exists = yes } }
+			add_to_faction = FEJ
+		}
+		declare_war_on = {
+			target = AYL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CLA
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = MNT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CBI
+			type = annex_everything
+		}
+		every_allied_country = {
+			declare_war_on = {
+				target = AYL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CLA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MNT
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CBI
+				type = annex_everything
+			}
+		}
+	}
+	CBI = {
+		declare_war_on = {
+			target = MNT
+			type = annex_everything
+		}
+	}
+}

@@ -1,0 +1,23 @@
+characters={
+
+	SBG_dovnar_sbridge = {		#多夫纳尔·斯布里奇
+   		name = SBG_dovnar_sbridge
+   		portraits = {
+   			civilian = {
+   				large="GFX_SBG_dovnar_sbridge"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_SBG_dovnar_sbridge"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = SBG_dovnar_sbridge_desc
+   			ideology = democratic_traditionalism
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

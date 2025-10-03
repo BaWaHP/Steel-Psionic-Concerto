@@ -1,0 +1,8499 @@
+focus_tree = {
+	id = SFR_focus_1
+	#SFR_focus_1_* 革命阵线
+	#SFR_focus_1_1 * 阵线国策1 战前
+	#SFR_focus_1_2 * 阵线国策2 内战
+	#SFR_focus_1_3 * 阵线国策3 战后
+	#SFR_focus_2_* 共产党
+	#SFR_focus_3_* 革命党
+	#SFR_focus_4_* 军政府
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SFR
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 6000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#我们的革命
+		id = SFR_revolution_of_ours
+		icon = GFX_SFR_revolution_of_ours
+		x = 5
+		y = 0
+		cost = 3
+
+		available_if_capitulated = yes
+		cancelable = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			NOT = { 
+				has_country_flag = SFR_focus_1
+				has_country_flag = SFR_focus_2
+				has_country_flag = SFR_focus_3
+				has_country_flag = SFR_focus_4
+			}
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = SFR.1
+				days = 7
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_revolution_of_ours_tt
+		}
+	}
+
+	focus = {	#阴云四起...
+		id = SFR_shadows_everywhere
+		icon = GFX_SFR_shadows_everywhere
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+		cancelable = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revolution_of_ours }
+		relative_position_id = SFR_revolution_of_ours
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = SFR.4
+				days = 1
+			}
+		}
+
+		completion_reward = {
+			country_event = SFR.9
+			custom_effect_tooltip = SFR_shadows_everywhere_tt
+		}
+	}
+
+	focus = {	#反对革命阵线
+		id = SFR_against_rev_front
+		icon = GFX_SFR_against_rev_front
+		x = -3
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_shadows_everywhere }
+		relative_position_id = SFR_shadows_everywhere
+		mutually_exclusive = { focus = SFR_support_rev_front }
+
+		completion_reward = {
+			country_event = SFR.10
+			activate_mission = SFR_start_coup
+			custom_effect_tooltip = SFR_against_rev_front_tt
+		}
+	}
+
+	focus = {	#支持左翼反对派
+		id = SFR_support_left_opposition
+		icon = GFX_SFR_support_left_opposition
+		x = -2
+		y = 1
+		cost = 3
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_against_rev_front }
+		relative_position_id = SFR_against_rev_front
+		mutually_exclusive = { focus = SFR_support_right_opposition }
+
+		completion_reward = {
+			country_event = SFR.11
+			custom_effect_tooltip = SFR_support_left_opposition_tt
+		}
+	}
+
+	focus = {	#呼吁真正的革命
+		id = SFR_call_for_actual_rev
+		icon = GFX_SFR_call_for_actual_rev
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_left_opposition }
+		relative_position_id = SFR_support_left_opposition
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.05
+			}
+			country_event = SFR.13
+		}
+	}
+
+	focus = {	#秘密集结
+		id = SFR_secret_assembly
+		icon = GFX_SFR_secret_assembly
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_call_for_actual_rev }
+		relative_position_id = SFR_call_for_actual_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_manpower = 10000
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			SFR_front_unity_down_1 = yes
+			division_template = {
+				name = "工农红军"
+				regiments = {
+					light_infantry = { x = 0 y = 0 }
+					light_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 1 y = 0 }
+					light_infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"工农红军\" division_template = \"特别工农红军作战队\" start_experience_factor = 0 start_equipment_factor = 0.8"  
+					owner = SFR
+					count = 1
+				}
+			}
+			country_event = SFR.14
+		}
+	}
+
+	focus = {	#支持右翼反对派
+		id = SFR_support_right_opposition
+		icon = GFX_SFR_support_right_opposition
+		x = 2
+		y = 1
+		cost = 3
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_against_rev_front }
+		relative_position_id = SFR_against_rev_front
+		mutually_exclusive = { focus = SFR_support_left_opposition }
+
+		completion_reward = {
+			country_event = SFR.12
+			custom_effect_tooltip = SFR_support_right_opposition_tt
+		}
+	}
+
+	focus = {	#召集国际派
+		id = SFR_call_for_internationalist
+		icon = GFX_SFR_call_for_internationalist
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_right_opposition }
+		relative_position_id = SFR_support_right_opposition
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			SFR_front_unity_down_2 = yes
+			country_event = SFR.18
+		}
+	}
+
+	focus = {	#分裂联军
+		id = SFR_divide_the_front
+		icon = GFX_SFR_divide_the_front
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_call_for_internationalist }
+		relative_position_id = SFR_call_for_internationalist
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = -0.1
+			add_manpower = 20000
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			SFR_front_unity_down_3 = yes
+			country_event = SFR.19
+		}
+	}
+
+	focus = {	#拉拢民众
+		id = SFR_attract_people
+		icon = GFX_SFR_attract_people
+		x = 2
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_left_opposition
+						 focus = SFR_support_right_opposition }
+		relative_position_id = SFR_support_left_opposition
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			SFR_front_unity_down_3 = yes
+			if = {
+				limit = { has_completed_focus = SFR_support_left_opposition }
+				add_popularity = {
+					ideology = pioneer_communism
+					popularity = 0.05
+				}
+				add_power_balance_value = {
+					id = SFR_opposition_bop
+					value = -0.05
+				}
+				country_event = SFR.15
+			}
+			else_if = {
+				limit = { has_completed_focus = SFR_support_right_opposition }
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.05
+				}
+				add_power_balance_value = {
+					id = SFR_opposition_bop
+					value = 0.05
+				}
+				country_event = SFR.16
+			}
+		}
+	}
+
+	focus = {	#诋毁阵线
+		id = SFR_defamation_of_front
+		icon = GFX_SFR_defamation_of_front
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_attract_people }
+		relative_position_id = SFR_attract_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			SFR_front_unity_down_3 = yes
+			country_event = SFR.17
+		}
+	}
+
+	focus = {	#支持革命阵线
+		id = SFR_support_rev_front
+		icon = GFX_SFR_support_rev_front
+		x = 5
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_shadows_everywhere }
+		relative_position_id = SFR_shadows_everywhere
+		mutually_exclusive = { focus = SFR_against_rev_front }
+
+		completion_reward = {
+			country_event = SFR.20
+			activate_mission = SFR_purge_the_opposition
+			custom_effect_tooltip = SFR_support_rev_front_tt
+		}
+	}
+
+	focus = {	#团结左翼
+		id = SFR_unify_the_left
+		icon = GFX_SFR_unify_the_left
+		x = -4
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_rev_front }
+		relative_position_id = SFR_support_rev_front
+		mutually_exclusive = { focus = SFR_reinforce_leadership }
+		mutually_exclusive = { focus = SFR_re_enable_front_parliament }
+
+		completion_reward = {
+			country_event = SFR.21
+			custom_effect_tooltip = SFR_unify_the_left_tt
+		}
+	}
+
+	focus = {	#转向农民
+		id = SFR_turn_to_farmers
+		icon = GFX_SFR_turn_to_farmers
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_left }
+		relative_position_id = SFR_unify_the_left
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SFR_front_unity_up_2 = yes
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.05
+			}
+			country_event = SFR.22
+		}
+	}
+
+	focus = {	#发放救济物资
+		id = SFR_dispatch_relief_materials
+		icon = GFX_SFR_dispatch_relief_materials
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_turn_to_farmers }
+		relative_position_id = SFR_turn_to_farmers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.05
+			}
+			country_event = SFR.23
+			SFR_holodomor_effect = yes
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+		}
+	}
+
+	focus = {	#清洗国际派
+		id = SFR_purge_internationalists
+		icon = GFX_SFR_purge_internationalists
+		x = 2
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_left
+						 focus = SFR_reinforce_leadership
+						 focus = SFR_re_enable_front_parliament }
+		relative_position_id = SFR_unify_the_left
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			country_event = SFR.24
+		}
+	}
+
+	focus = {	#支持本土派
+		id = SFR_support_local_parties
+		icon = GFX_SFR_support_local_parties
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_purge_internationalists }
+		relative_position_id = SFR_purge_internationalists
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = SFR.25
+		}
+	}
+
+	focus = {	#巩固叶文石领导
+		id = SFR_reinforce_leadership
+		icon = GFX_SFR_reinforce_leadership
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_rev_front }
+		relative_position_id = SFR_support_rev_front
+		mutually_exclusive = { focus = SFR_unify_the_left }
+		mutually_exclusive = { focus = SFR_re_enable_front_parliament }
+
+		completion_reward = {
+			country_event = SFR.26
+			custom_effect_tooltip = SFR_reinforce_leadership_tt
+		}
+	}
+
+	focus = {	#提振信心
+		id = SFR_reinforce_confidence
+		icon = GFX_SFR_reinforce_confidence
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reinforce_leadership }
+		relative_position_id = SFR_reinforce_leadership
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			SFR_front_unity_up_3 = yes
+			country_event = SFR.27
+		}
+	}
+
+	focus = {	#确保军队支持
+		id = SFR_ensure_military_support
+		icon = GFX_SFR_ensure_military_support
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reinforce_confidence }
+		relative_position_id = SFR_reinforce_confidence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = -50
+			army_experience = 20
+			SFR_front_unity_up_2 = yes
+			country_event = SFR.28
+			SFR_guerrilla_army_effect = yes
+		}
+	}
+
+	focus = {	#重组指挥系统
+		id = SFR_reorganize_command_system
+		icon = GFX_SFR_reorganize_command_system
+		x = 2
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_left
+						 focus = SFR_reinforce_leadership
+						 focus = SFR_re_enable_front_parliament }
+		relative_position_id = SFR_reinforce_leadership
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_command_power = 50
+			country_event = SFR.29
+		}
+	}
+
+	focus = {	#调动异议分子
+		id = SFR_mobilize_away_dissidents
+		icon = GFX_SFR_mobilize_away_dissidents
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reorganize_command_system }
+		relative_position_id = SFR_reorganize_command_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			country_event = SFR.30
+		}
+	}
+
+	focus = {	#重启阵线议会
+		id = SFR_re_enable_front_parliament
+		icon = GFX_SFR_re_enable_front_parliament
+		x = 4
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_support_rev_front }
+		relative_position_id = SFR_support_rev_front
+		mutually_exclusive = { focus = SFR_unify_the_left }
+		mutually_exclusive = { focus = SFR_reinforce_leadership }
+
+		completion_reward = {
+			country_event = SFR.31
+			custom_effect_tooltip = SFR_re_enable_front_parliament_tt
+		}
+	}
+
+	focus = {	#接纳反对派
+		id = SFR_accept_opposition
+		icon = GFX_SFR_accept_opposition
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_re_enable_front_parliament }
+		relative_position_id = SFR_re_enable_front_parliament
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SFR_front_unity_up_2 = yes
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.05
+			}
+			country_event = SFR.32
+		}
+	}
+
+	focus = {	#对未来的承诺
+		id = SFR_commitment_to_the_future
+		icon = GFX_SFR_commitment_to_the_future
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_accept_opposition }
+		relative_position_id = SFR_accept_opposition
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = SFR.33
+			SFR_divided_bases_effect = yes
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	### SFR_focus_1_1 ### 阵线国策1
+
+	focus = {	#阵线幸存
+		id = SFR_front_survive
+		icon = GFX_Generic_Liberatian_Socialism
+		x = 5
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_1
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			country_event = {
+				id = SFR.100
+				days = 1
+			}
+			custom_effect_tooltip = SFR_front_survive_tt
+		}
+	}
+
+	focus = {	#巩固民心
+		id = SFR_consolidate_hearts
+		icon = GFX_focus_generic_price_controls
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_front_survive }
+		relative_position_id = SFR_front_survive
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			SFR_holodomor_effect = yes
+			country_event = {
+				id = SFR.101
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#稳固内政
+		id = SFR_stabalize_politics
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_front_survive }
+		relative_position_id = SFR_front_survive
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			SFR_divided_bases_effect = yes
+			country_event = {
+				id = SFR.102
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#准备不可避免之战
+		id = SFR_prepare_for_the_unavoidable
+		icon = GFX_Generic_Revanchism02
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_consolidate_hearts }
+		prerequisite = { focus = SFR_stabalize_politics }
+		relative_position_id = SFR_consolidate_hearts
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 5000
+			SFR_guerrilla_army_effect = yes
+			activate_advisor = SFR_LinYouzhi_idea
+			country_event = {
+				id = SFR.103
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#扩大军事存在
+		id = SFR_expanding_military_presence
+		icon = GFX_Generic_Army_Focus_Red02
+		x = -8
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_prepare_for_the_unavoidable }
+		relative_position_id = SFR_prepare_for_the_unavoidable
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_command_power = 20
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 800
+			}
+		}
+	}
+
+	focus = {	#强化部队训练
+		id = SFR_intensive_troop_training
+		icon = GFX_Generic_Infantry_Training
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_expanding_military_presence }
+		relative_position_id = SFR_expanding_military_presence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			army_experience = 30
+			SPC_military_development_amount_up_2 = yes
+			SPC_training_laws_up = yes
+		}
+	}
+
+	focus = {	#推进装备制造
+		id = SFR_push_equip_prod
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = -2
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_intensive_troop_training }
+		relative_position_id = SFR_intensive_troop_training
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+	}
+
+	focus = {	#改进指挥体系
+		id = SFR_improved_command
+		icon = GFX_goal_officers
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_intensive_troop_training }
+		relative_position_id = SFR_intensive_troop_training
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_military_development_amount_up_4 = yes
+			SFR_guerrilla_army_effect = yes
+		}
+	}
+
+	focus = {	#集结民兵武装
+		id = SFR_arm_the_militia
+		icon = GFX_Generic_Socialist_Volunteers
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_expanding_military_presence }
+		relative_position_id = SFR_expanding_military_presence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_command_power = 30
+			add_manpower = 5000
+			division_template = {
+				name = "地方民团"
+				regiments = {
+					light_infantry = { x = 0 y = 0 }
+					light_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 0 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"地方民团\" division_template = \"地方民团\" start_experience_factor = 0 start_equipment_factor = 0.5"
+					owner = SFR
+					count = 2
+				}
+			}
+		}
+	}
+
+	focus = {	#工农子弟兵
+		id = SFR_army_of_workers_and_peasants
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_arm_the_militia }
+		relative_position_id = SFR_arm_the_militia
+		mutually_exclusive = { focus = SFR_rearm_old_armies }
+
+		completion_reward = {
+			add_war_support = 0.05
+			division_template = {
+				name = "工农红军"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"工农红军\" division_template = \"工农红军\" start_experience_factor = 0.1 start_equipment_factor = 0.5"
+					owner = SFR
+					count = 3
+				}
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.1
+			}
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+		}
+	}
+
+	focus = {	#重组旧武装
+		id = SFR_rearm_old_armies
+		icon = GFX_Generic_American_Soldier2
+		x = 2
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_arm_the_militia }
+		relative_position_id = SFR_arm_the_militia
+		mutually_exclusive = { focus = SFR_army_of_workers_and_peasants }
+
+		completion_reward = {
+			add_stability = -0.05
+			army_experience = 20
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+			division_template = {
+				name = "革命党新编师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"革命党新编师\" division_template = \"革命党新编师\" start_experience_factor = 0.1 start_equipment_factor = 0.5"
+					owner = SFR
+					count = 1
+				}
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.1
+			}
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#发动群众
+		id = SFR_initiate_people
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_push_equip_prod focus = SFR_improved_command }
+		prerequisite = { focus = SFR_army_of_workers_and_peasants focus = SFR_rearm_old_armies }
+		relative_position_id = SFR_improved_command
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_manpower = 30000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 1000
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+
+	focus = {	#为人民，为革命
+		id = SFR_for_people_for_rev
+		icon = GFX_goal_Generic_Revolutionary_Republic
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_prepare_for_the_unavoidable }
+		relative_position_id = SFR_prepare_for_the_unavoidable
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			SPC_living_standard_development_amount_up_2 = yes
+			SPC_subsidies_policy_up = yes
+		}
+	}
+
+	focus = {	#组织恢复农业
+		id = SFR_org_regain_arg
+		icon = GFX_goal_improvised_farming_machinery
+		x = -2
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_for_people_for_rev }
+		relative_position_id = SFR_for_people_for_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			capital_scope = {
+				add_manpower = 20000
+			}
+			SPC_agricultural_development_amount_up_2 = yes
+			SPC_agricultural_policy_up = yes
+			SFR_holodomor_effect = yes
+		}
+	}
+
+	focus = {	#保障群众生活
+		id = SFR_protect_people
+		icon = GFX_Generic_Working_Class_Family
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_org_regain_arg }
+		prerequisite = { focus = SFR_reorg_prod }
+		relative_position_id = SFR_org_regain_arg
+		mutually_exclusive = { focus = SFR_reinforce_mobilization }
+
+		completion_reward = {
+			add_stability = 0.05
+			SPC_living_standard_development_amount_up_3 = yes
+			SFR_holodomor_effect = yes
+		}
+	}
+
+	focus = {	#强化军事动员
+		id = SFR_reinforce_mobilization
+		icon = GFX_Generic_Volunteer_Corps
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_org_regain_arg }
+		prerequisite = { focus = SFR_reorg_prod }
+		relative_position_id = SFR_org_regain_arg
+		mutually_exclusive = { focus = SFR_protect_people }
+
+		completion_reward = {
+			add_war_support = 0.05
+			SPC_military_development_amount_up_3 = yes
+			SFR_guerrilla_army_effect = yes
+		}
+	}
+
+	focus = {	#重新协调生产
+		id = SFR_reorg_prod
+		icon = GFX_focus_generic_communist_industry
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_for_people_for_rev }
+		relative_position_id = SFR_for_people_for_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			SPC_industrial_development_amount_up_2 = yes
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			SFR_holodomor_effect = yes
+		}
+	}
+
+	focus = {	#鼓励自给自足
+		id = SFR_promote_self_serve
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = 2
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_for_people_for_rev }
+		relative_position_id = SFR_for_people_for_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			SPC_living_standard_development_amount_up_2 = yes
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SFR_holodomor_effect = yes
+		}
+	}
+
+	focus = {	#优先共产党干部
+		id = SFR_commi_first
+		icon = GFX_focus_SWE_socialist_reforms
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_reorg_prod }
+		prerequisite = { focus = SFR_promote_self_serve }
+		relative_position_id = SFR_promote_self_serve
+		mutually_exclusive = { focus = SFR_united_front }
+
+		completion_reward = {
+			add_manpower = 5000
+			SPC_industrial_development_amount_up_4 = yes
+			SPC_agricultural_development_amount_up_4 = yes
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.1
+			}
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+		}
+	}
+
+	focus = {	#统一战线的平等
+		id = SFR_united_front
+		icon = GFX_focus_generic_social_democracy
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_reorg_prod }
+		prerequisite = { focus = SFR_promote_self_serve }
+		relative_position_id = SFR_promote_self_serve
+		mutually_exclusive = { focus = SFR_commi_first }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			SFR_holodomor_effect = yes
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.05
+			}
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#整风运动
+		id = SFR_rectification_movement
+		icon = GFX_Generic_State_Socialism
+		x = 0
+		y = 2
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_org_regain_arg }
+		relative_position_id = SFR_org_regain_arg
+		mutually_exclusive = { focus = SFR_expand_people_arms }
+		mutually_exclusive = { focus = SFR_enhance_unite_work }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			add_stability = 0.1
+			add_war_support = -0.05
+			add_manpower = -341
+			SFR_divided_bases_effect = yes
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.2
+			}
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+		}
+	}
+
+	focus = {	#扩大人民武装
+		id = SFR_expand_people_arms
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 0
+		y = 2
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_reorg_prod }
+		relative_position_id = SFR_reorg_prod
+		mutually_exclusive = { focus = SFR_rectification_movement }
+		mutually_exclusive = { focus = SFR_enhance_unite_work }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_manpower = 5000
+			SFR_guerrilla_army_effect = yes
+		}
+	}
+
+	focus = {	#加强统战工作
+		id = SFR_enhance_unite_work
+		icon = GFX_focus_BRA_rio_protocol
+		x = 0
+		y = 2
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_promote_self_serve }
+		relative_position_id = SFR_promote_self_serve
+		mutually_exclusive = { focus = SFR_rectification_movement }
+		mutually_exclusive = { focus = SFR_expand_people_arms }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_political_power = -50
+			SFR_divided_bases_effect = yes
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.2
+			}
+			custom_effect_tooltip = SFR_enhance_unite_work_tt
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#渗透敌占区
+		id = SFR_infiltrate_enemy_territory
+		icon = GFX_goal_Generic_Espionage
+		x = 8
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_prepare_for_the_unavoidable }
+		relative_position_id = SFR_prepare_for_the_unavoidable
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_command_power = 50
+			custom_effect_tooltip = SFR_infiltrate_enemy_territory_tt
+		}
+	}
+
+	focus = {	#对抗平京恶徒
+		id = SFR_fight_capital
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_infiltrate_enemy_territory }
+		relative_position_id = SFR_infiltrate_enemy_territory
+		mutually_exclusive = { focus = SFR_fight_enemeies }
+
+		completion_reward = {
+			add_manpower = -241
+			add_political_power = -100
+			SFH = { 
+				add_stability = -0.1 
+				add_war_support = -0.1
+				add_political_power = -50 
+			}
+			custom_effect_tooltip = SFR_fight_capital_tt
+		}
+	}
+
+	focus = {	#对抗革命之敌
+		id = SFR_fight_enemeies
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_infiltrate_enemy_territory }
+		relative_position_id = SFR_infiltrate_enemy_territory
+		mutually_exclusive = { focus = SFR_fight_capital }
+
+		completion_reward = {
+			add_manpower = -482
+			add_political_power = -50
+			SFH = { add_stability = -0.05 add_political_power = -50 }
+			QTA = { add_stability = -0.05 add_political_power = -50 }
+			custom_effect_tooltip = SFR_fight_enemeies_tt
+		}
+	}
+
+	focus = {	#扩大情报网络
+		id = SFR_expand_intel_network
+		icon = GFX_focus_generic_vatican_agents
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_fight_capital focus = SFR_fight_enemeies }
+		relative_position_id = SFR_fight_capital
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_expand_intel_network_tt
+		}
+	}
+
+	focus = {	#敌后破坏
+		id = SFR_damage_enemies
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_expand_intel_network }
+		relative_position_id = SFR_expand_intel_network
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_damage_enemies_tt
+		}
+	}
+
+	focus = {	#渗透青天军
+		id = SFR_infiltrate_qta
+		icon = GFX_Focus_Spy_Infiltration
+		x = 2
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_expand_intel_network }
+		relative_position_id = SFR_expand_intel_network
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_infiltrate_qta_tt
+		}
+	}
+
+	focus = {	#兵民是胜利之本
+		id = SFR_arms_and_people_matters
+		icon = GFX_focus_generic_workers
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_initiate_people }
+		prerequisite = { focus = SFR_rectification_movement focus = SFR_expand_people_arms focus = SFR_enhance_unite_work }
+		prerequisite = { focus = SFR_damage_enemies }
+		relative_position_id = SFR_rectification_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 400
+			}
+			SFR_holodomor_effect = yes
+		}
+	}
+
+	focus = {	#抗战到底！
+		id = SFR_fight_til_the_end
+		icon = GFX_goal_Generic_Socialist_Revolution
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_initiate_people }
+		prerequisite = { focus = SFR_rectification_movement focus = SFR_expand_people_arms focus = SFR_enhance_unite_work }
+		prerequisite = { focus = SFR_damage_enemies }
+		relative_position_id = SFR_enhance_unite_work
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			SFR_divided_bases_effect = yes
+		}
+	}
+
+	focus = {	#打倒反对派，解放全远乡！
+		id = SFR_save_the_nation
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = SFR_arms_and_people_matters }
+		prerequisite = { focus = SFR_fight_til_the_end }
+		relative_position_id = SFR_arms_and_people_matters
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.1
+			SFR_guerrilla_army_effect = yes
+			custom_effect_tooltip = SFR_save_the_nation_tt
+		}
+	}
+
+	### SFR_focus_1_2 ### 阵线国策 内战战时
+
+	focus = {	#远乡革命归来！
+		id = SFR_fh_rev_is_back
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 5
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_2
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#动员群众
+		id = SFR_moblize_people
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_fh_rev_is_back }
+		relative_position_id = SFR_fh_rev_is_back
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = 20000
+			division_template = {
+				name = "起义民众"
+				regiments = {
+					light_infantry = { x = 0 y = 0 }
+					light_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 0 y = 2 }
+					light_infantry = { x = 1 y = 0 }
+					light_infantry = { x = 1 y = 1 }
+					light_infantry = { x = 1 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"起义民众\" division_template = \"起义民众\" start_experience_factor = 0 start_equipment_factor = 0.7"
+					owner = SFR
+					count = 2
+				}
+			}
+		}
+	}
+
+	focus = {	#呼唤我们的同胞
+		id = SFR_call_our_fellas
+		icon = GFX_Generic_Break_Free
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_moblize_people }
+		relative_position_id = SFR_moblize_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = 5000
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			SFH = {
+				add_manpower = -5000
+				add_political_power = -50
+				add_stability = -0.05
+			}
+		}
+	}
+
+	focus = {	#人手一把枪
+		id = SFR_everyman_a_gun
+		icon = GFX_Generic_Machine_Gun
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_fh_rev_is_back }
+		relative_position_id = SFR_fh_rev_is_back
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 600
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+		}
+	}
+
+	focus = {	#上下一心！
+		id = SFR_unite_we_strong
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_everyman_a_gun }
+		relative_position_id = SFR_everyman_a_gun
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+
+	focus = {	#注意部队纪律
+		id = SFR_attention_military_discipline
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_fh_rev_is_back }
+		relative_position_id = SFR_fh_rev_is_back
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			army_experience = 20
+			add_timed_idea = {
+				idea = SFR_army_discipline
+				days = 70
+			}
+		}
+	}
+
+	focus = {	#革命的敢死队
+		id = SFR_rev_death_squad
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_attention_military_discipline }
+		relative_position_id = SFR_attention_military_discipline
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_timed_idea = {
+				idea = SFR_death_squad
+				days = 70
+			}
+		}
+	}
+
+	focus = {	#赌上我们的一切...
+		id = SFR_beg_everything_we_got
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_call_our_fellas }
+		prerequisite = { focus = SFR_unite_we_strong }
+		prerequisite = { focus = SFR_rev_death_squad }
+		relative_position_id = SFR_unite_we_strong
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 400
+			}
+			division_template = {
+				name = "革命红军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"革命红军\" division_template = \"革命红军\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+					owner = SFR
+					count = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#...誓要消灭那暴君！
+		id = SFR_destory_the_tyrrant
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_beg_everything_we_got }
+		relative_position_id = SFR_beg_everything_we_got
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SFR_death_battle
+				days = 140
+			}
+		}
+	}
+
+	### SFR_focus_1_3 ### 阵线国策 内战战后
+
+	focus = {	#革命阵线凯旋！
+		id = SFR_rev_return_victory
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = 5
+		y = 0
+		cost = 1
+
+		available = {
+			SFH = { exists = no }
+			QTA = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_3
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			country_event = {
+				id = SFR.200
+				days = 1
+			}
+			set_cosmetic_tag = SFR_unif_tag
+		}
+	}
+
+	focus = {	#稳定南远乡局势
+		id = SFR_stabalize_sit
+		icon = GFX_Focus_Down_in_Flames
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rev_return_victory }
+		relative_position_id = SFR_rev_return_victory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.05
+			country_event = {
+				id = SFR.201
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#处理反动派军队
+		id = SFR_handle_reactionary_army
+		icon = GFX_focus_generic_army_doctrines_2
+		x = -5
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_stabalize_sit }
+		relative_position_id = SFR_stabalize_sit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.202
+				days = 1
+			}
+			SFR_roving_army_effect = yes
+		}
+	}
+
+
+	focus = {	#应对匪患
+		id = SFR_count_equipments
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_handle_reactionary_army }
+		relative_position_id = SFR_handle_reactionary_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_manpower = -2314
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			country_event = {
+				id = SFR.203
+				days = 1
+			}
+			SFR_roving_army_effect = yes
+		}
+	}
+
+	focus = {	#清理军事机构
+		id = SFR_clean_mil_fac
+		icon = GFX_focus_SOV_military_purge
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_count_equipments }
+		relative_position_id = SFR_count_equipments
+		mutually_exclusive = { focus = SFR_integrate_part_mil_fac }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = SFH
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 1000
+				producer = SFH
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+				producer = SFH
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+				producer = SFH
+			}
+			army_experience = 30
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			add_manpower = 5000
+			SPC_training_laws_up = yes
+			SFR_roving_army_effect = yes
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+		}
+	}
+
+	focus = {	#部分整合军官团
+		id = SFR_integrate_part_mil_fac
+		icon = GFX_Generic_Volunteer_Corps
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_count_equipments }
+		relative_position_id = SFR_count_equipments
+		mutually_exclusive = { focus = SFR_clean_mil_fac }
+
+		completion_reward = {
+			division_template = {
+				name = "整编军团"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"整编军团\" division_template = \"整编军团\" start_experience_factor = 0.3"
+					owner = SFR
+					count = 2
+				}
+			}
+			army_experience = 50
+			add_stability = 0.1
+			add_war_support = 0.1
+			SPC_military_development_amount_down_3 = yes
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#审判罪行
+		id = SFR_judge_the_crime
+		icon = GFX_Socialist_Law
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_clean_mil_fac focus = SFR_integrate_part_mil_fac }
+		relative_position_id = SFR_clean_mil_fac
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			SFR_roving_army_effect = yes
+			country_event = {
+				id = SFR.205
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#接管城市
+		id = SFR_take_over_cities
+		icon = GFX_focus_generic_communist_industry
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_stabalize_sit }
+		relative_position_id = SFR_stabalize_sit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.206
+				days = 1
+			}
+			SFR_city_in_ruin_effect = yes
+		}
+	}
+
+	focus = {	#保障粮食供应
+		id = SFR_ensure_food_supply
+		icon = GFX_generic_Food_Import
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_take_over_cities }
+		relative_position_id = SFR_take_over_cities
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -50
+			if = {
+				limit = { has_idea = SPC_temp_consumption_3 }
+				modify_timed_idea = {
+					idea = SPC_temp_consumption_3
+					days = 180
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = SPC_temp_consumption_3
+					days = 180
+				}
+			}
+			country_event = {
+				id = SFR.210
+				days = 7
+			}
+			SFR_city_in_ruin_effect = yes	
+		}
+	}
+
+	focus = {	#对反动派清算
+		id = SFR_liquidation_of_the_reactionaries
+		icon = GFX_focus_BRA_rio_protocol
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_ensure_food_supply }
+		relative_position_id = SFR_ensure_food_supply
+		mutually_exclusive = { focus = SFR_accept_national_cap }
+
+		completion_reward = {
+			add_manpower = -4381
+			add_stability = -0.1
+			5 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+			custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
+		}
+	}
+
+	focus = {	#接纳民族资本家
+		id = SFR_accept_national_cap
+		icon = GFX_focus_generic_industrialists
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_ensure_food_supply }
+		relative_position_id = SFR_ensure_food_supply
+		mutually_exclusive = { focus = SFR_liquidation_of_the_reactionaries }
+
+		completion_reward = {
+			add_stability = 0.05
+			174 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			5 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			SFR_city_in_ruin_effect = yes
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#整合残存革命党
+		id = SFR_integrate_remaining_rev
+		icon = GFX_focus_GER_afrikakorps
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_liquidation_of_the_reactionaries focus = SFR_accept_national_cap }
+		relative_position_id = SFR_liquidation_of_the_reactionaries
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 2
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			add_manpower = 10000
+			country_event = {
+				id = SFR.211
+				days = 1
+			}
+			SFR_city_in_ruin_effect = yes
+		}
+	}
+
+	focus = {	#援助乡村
+		id = SFR_help_the_countryside
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 5
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_stabalize_sit }
+		relative_position_id = SFR_stabalize_sit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.212
+				days = 1
+			}
+			SFR_chaotic_countryside_effect = yes
+		}
+	}
+
+	focus = {	#扩大基层组织
+		id = SFR_expand_base_org
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_help_the_countryside }
+		relative_position_id = SFR_help_the_countryside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.216
+				days = 1
+			}
+			SFR_chaotic_countryside_effect = yes
+		}
+	}
+
+	focus = {	#大换血
+		id = SFR_overhaul_of_the_body
+		icon = GFX_focus_generic_workers
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_base_org }
+		relative_position_id = SFR_expand_base_org
+		mutually_exclusive = { focus = SFR_remain_partial_fac }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -50
+			add_manpower = -6318
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 4
+				tooltip = agricultural_development_mod_tt_up_2
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = SFR_left_stronger_tt
+			add_to_variable = { SFR_left_right_influence = 1 }
+			custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
+		}
+	}
+
+	focus = {	#保留各地行政机关
+		id = SFR_remain_partial_fac
+		icon = GFX_focus_GER_anschluss
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_base_org }
+		relative_position_id = SFR_expand_base_org
+		mutually_exclusive = { focus = SFR_overhaul_of_the_body }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_2
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_to_variable = {
+					var = state_science_progress
+					value = 20
+					tooltip = state_science_dev_tt
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_to_variable = {
+					var = state_science_progress
+					value = 20
+					tooltip = state_science_dev_tt
+				}
+			}
+			SFR_chaotic_countryside_effect = yes
+			custom_effect_tooltip = SFR_right_stronger_tt
+			add_to_variable = { SFR_left_right_influence = -1 }
+		}
+	}
+
+	focus = {	#初期土改工作
+		id = SFR_early_land_reform
+		icon = GFX_goal_improvised_farming_machinery
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_overhaul_of_the_body focus = SFR_remain_partial_fac }
+		relative_position_id = SFR_overhaul_of_the_body
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 1
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			if = {
+				limit = { has_idea = SPC_temp_consumption_3 }
+				modify_timed_idea = {
+					idea = SPC_temp_consumption_3
+					days = 180
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = SPC_temp_consumption_3
+					days = 180
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			country_event = {
+				id = SFR.217
+				days = 1
+			}
+			SFR_chaotic_countryside_effect = yes
+		}
+	}
+
+	focus = {	#王室的命运
+		id = SFR_fate_of_royal
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_judge_the_crime }
+		prerequisite = { focus = SFR_integrate_remaining_rev }
+		prerequisite = { focus = SFR_early_land_reform }
+		relative_position_id = SFR_integrate_remaining_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			country_event = {
+				id = SFR.218
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#革命阵线大会
+		id = SFR_front_grand_meeting
+		icon = GFX_focus_generic_social_democracy
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_fate_of_royal }
+		relative_position_id = SFR_fate_of_royal
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			set_party_name = {
+				ideology = pioneer_communism
+				long_name = SFR_pioneer_communism_party_2_long
+				name = SFR_pioneer_communism_party_2
+			}
+			set_party_name = {
+				ideology = revolutionary_communism
+				long_name = SFR_revolutionary_communism_party_2_long
+				name = SFR_revolutionary_communism_party_2
+			}
+			set_party_name = {
+				ideology = worldunion_socialist
+				long_name = SFR_worldunion_socialist_party_2_long
+				name = SFR_worldunion_socialist_party_2
+			}
+			set_party_name = {
+				ideology = worldunion_democrat
+				long_name = SFR_worldunion_democrat_party_2_long
+				name = SFR_worldunion_democrat_party_2
+			}
+			set_party_name = {
+				ideology = liberal_republican
+				long_name = SFR_liberal_republican_party_2_long
+				name = SFR_liberal_republican_party_2
+			}
+			set_party_name = {
+				ideology = conservative_republican
+				long_name = SFR_conservative_republican_party_2_long
+				name = SFR_conservative_republican_party_2
+			}
+			set_party_name = {
+				ideology = authoritarian_republican
+				long_name = SFR_authoritarian_republican_party_2_long
+				name = SFR_authoritarian_republican_party_2
+			}
+			set_party_name = {
+				ideology = national_socialist
+				long_name = SFR_authoritarian_nationalism_party_2_long
+				name = SFR_authoritarian_nationalism_party_2
+			}
+			set_party_name = {
+				ideology = authoritarian_nationalism
+				long_name = SFR_authoritarian_nationalism_party_2_long
+				name = SFR_authoritarian_nationalism_party_2
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SFR_paternal_autocrat_party_2_long
+				name = SFR_paternal_autocrat_party_2
+			}
+			set_party_name = {
+				ideology = wizard_rules
+				long_name = SFR_wizard_rules_party_2_long
+				name = SFR_wizard_rules_party_2
+			}
+			set_party_name = {
+				ideology = religious_extremism
+				long_name = SFR_religious_extremism_party_2_long
+				name = SFR_religious_extremism_party_2
+			}
+			set_party_name = {
+				ideology = anarchism
+				long_name = SFR_anarchism_party_2_long
+				name = SFR_anarchism_party_2
+			}
+			add_research_slot = 1
+			custom_effect_tooltip = SFR_front_grand_meeting_tt
+			country_event = {
+				id = SFR.250
+				days = 1
+			}
+			clr_country_flag = SFR_focus_1_3
+			set_country_flag = SFR_focus_1_4
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			#load_focus_tree = generic_focus
+		}
+	}
+
+	### SFR_focus_1_4 ### 阵线国策（可以之后做成通用的） 全国统一
+
+	focus = {	#崭新的革命浪潮！
+		id = SFR_new_revolution_wave
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 5
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_4
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 100
+			army_experience = 20
+			country_event = {
+				id = SFR.300
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#解放西北
+		id = SFR_free_the_northwest
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = -3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_revolution_wave }
+		relative_position_id = SFR_new_revolution_wave
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			country_event = {
+				id = SFR.301
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#革命党残部？
+		id = SFR_revolutionary_remnants
+		icon = GFX_focus_spr_crush_the_revolution
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			always = no
+			NOT = { has_government = pioneer_communism }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_northwest }
+		relative_position_id = SFR_free_the_northwest
+		mutually_exclusive = { focus = SFR_only_one_battle }
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_revolutionary_remnants_tt
+			NWF = { country_event = { id = SFR.302 days = 1 } }
+		}
+	}
+
+	focus = {	#会谈统一事宜
+		id = SFR_talk_about_unification
+		icon = GFX_Generic_Secret_Meeting
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revolutionary_remnants }
+		relative_position_id = SFR_revolutionary_remnants
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			custom_effect_tooltip = SFR_talk_about_unification_tt
+			country_event = {
+				id = SFR.303
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#唯有一战
+		id = SFR_only_one_battle
+		icon = GFX_goal_Generic_Enough
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_northwest }
+		relative_position_id = SFR_free_the_northwest
+		mutually_exclusive = { focus = SFR_revolutionary_remnants }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+			}
+			army_experience = 30
+			country_event = {
+				id = SFR.307
+				days = 1
+			}
+		}
+	}
+	
+	focus = {	#备战西北
+		id = SFR_prepare_war_northwest
+		icon = GFX_focus_generic_truck
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_only_one_battle }
+		relative_position_id = SFR_only_one_battle
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SFR_prepare_war_northwest_idea
+				days = 200
+			}
+			country_event = {
+				id = SFR.308
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#整合西北政府
+		id = SFR_integrate_northwest_gov
+		icon = GFX_goal_government_icon
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_talk_about_unification }
+		relative_position_id = SFR_talk_about_unification
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			NWF = {
+				every_unit_leader = {
+					set_nationality = SFR
+				}
+			}
+			annex_country = {
+				target = NWF
+				transfer_troops = yes
+			}
+			country_event = {
+				id = SFR.309
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#向西北进军
+		id = SFR_march_to_northwest
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			is_neighbor_of = NWF
+		}
+
+		bypass = {
+			NWF = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				add = 9999
+				has_completed_focus = SFR_prepare_war_northwest
+			}
+		}
+
+		prerequisite = { focus = SFR_talk_about_unification 
+						 focus = SFR_prepare_war_northwest }
+		relative_position_id = SFR_prepare_war_northwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			declare_war_on = {
+				target = NWF
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {	#吸纳有志之士
+		id = SFR_recruit_ambitious_people
+		icon = GFX_focus_generic_social_democracy
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NWF = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_integrate_northwest_gov 
+						 focus = SFR_march_to_northwest }
+		relative_position_id = SFR_integrate_northwest_gov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			26 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			14 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			134 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			country_event = {
+				id = SFR.310
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#重建西北地区
+		id = SFR_rebuild_northwest
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 2
+		cost = 5
+
+		available = {
+			SPC_generic_region_trigger_1_3_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_integrate_northwest_gov 
+						 focus = SFR_march_to_northwest }
+		relative_position_id = SFR_march_to_northwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+			NWF = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = {
+				limit = {
+					is_core_of = NWF
+					NOT = { is_core_of = SFR }
+				}
+				add_claim_by = SFR
+			}
+			country_event = {
+				id = SFR.311
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#解放北远乡
+		id = SFR_free_the_north
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 5
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_revolution_wave }
+		relative_position_id = SFR_new_revolution_wave
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_ideas = SFR_free_the_north_idea
+		}
+	}
+
+	focus = {	#调查北方局势
+		id = SFR_investigate_north_situation
+		icon = GFX_Generic_Espionage04
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_north }
+		relative_position_id = SFR_free_the_north
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.312
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#联络自由联军
+		id = SFR_contact_free_alliance
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -5
+		y = 1
+		cost = 5
+
+		available = {
+			FFH = { exists = yes }
+			NOT = { has_government = liberal_republican }
+			NOT = { has_government = paternal_autocrat }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_investigate_north_situation }
+		relative_position_id = SFR_investigate_north_situation
+		mutually_exclusive = { focus = SFR_prepare_north_war }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.313
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#介入内战
+		id = SFR_intervene_in_civil_war
+		icon = GFX_Generic_Invasion
+		x = 0
+		y = 1
+		cost = 5
+
+		bypass = {
+			FFH = { has_war = no }
+			has_country_flag = SFR_integrate_free_alliance_flag
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_contact_free_alliance }
+		relative_position_id = SFR_contact_free_alliance
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 1000
+			}
+			set_autonomy = {
+				target = FFH
+				autonomy_state = autonomy_puppet
+			}
+			FFH = {
+				every_enemy_country = {
+					ROOT = {
+						declare_war_on = {
+							target = PREV
+							type = annex_everything
+						}
+					}
+				}
+			}
+			country_event = {
+				id = SFR.317
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#准备北方战争
+		id = SFR_prepare_north_war
+		icon = GFX_focus_SOV_the_road_of_life
+		x = -3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_investigate_north_situation }
+		relative_position_id = SFR_investigate_north_situation
+		mutually_exclusive = { focus = SFR_contact_free_alliance }
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 20
+			13 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			121 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+			}
+		}
+	}
+
+	focus = {	#别无他选
+		id = SFR_no_other_choice
+		icon = GFX_focus_generic_total_war
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			is_neighbor_of = FFH
+		}
+
+		bypass = {
+			FFH = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_contact_free_alliance 
+						 focus = SFR_prepare_north_war }
+		relative_position_id = SFR_prepare_north_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			declare_war_on = {
+				target = FFH
+				type = annex_everything
+			}
+			country_event = {
+				id = SFR.318
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#整合自由联军
+		id = SFR_integrate_free_alliance
+		icon = GFX_focus_AFG_against_kabul
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			FFH = { 
+				has_war = no
+				is_subject_of = ROOT
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_intervene_in_civil_war }
+		relative_position_id = SFR_intervene_in_civil_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			FFH = {
+				every_unit_leader = {
+					set_nationality = SFR
+				}
+			}
+			annex_country = {
+				target = FFH
+				transfer_troops = yes
+			}
+			country_event = {
+				id = SFR.319
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#联合左翼分子
+		id = SFR_unite_leftists
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_intervene_in_civil_war
+						 focus = SFR_no_other_choice }
+		relative_position_id = SFR_no_other_choice
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			160 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			18 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			21 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = environment_development_mod
+				value = 2
+				tooltip = environment_development_mod_tt_up_1
+			}
+			country_event = {
+				id = SFR.320
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#远乡最后的反动派
+		id = SFR_last_reactionary_in_rural
+		icon = GFX_focus_AFG_anti_malaria 
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_investigate_north_situation }
+		relative_position_id = SFR_investigate_north_situation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			country_event = {
+				id = SFR.321
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#终结他们！
+		id = SFR_end_them
+		icon = GFX_Generic_Militant_Socialism
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			OR = {
+				is_neighbor_of = NFH
+				is_neighbor_of = AFH
+			}
+		}
+
+		bypass = {
+			NFH = { exists = no }
+			AFH = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_last_reactionary_in_rural }
+		relative_position_id = SFR_last_reactionary_in_rural
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { NFH = { exists = yes } }
+				declare_war_on = {
+					target = NFH
+				}
+			}
+			if = {
+				limit = { AFH = { exists = yes } }
+				declare_war_on = {
+					target = AFH
+				}
+			}
+		}
+	}
+
+	focus = {	#审判之日
+		id = SFR_judgment_day
+		icon = GFX_Generic_Arrests
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NFH = { exists = no }
+			AFH = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_end_them }
+		relative_position_id = SFR_end_them
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			country_event = {
+				id = SFR.322
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#解决人鱼问题
+		id = SFR_solve_mermaid_problem
+		icon = GFX_goal_generic_forceful_treaty
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_investigate_north_situation }
+		relative_position_id = SFR_investigate_north_situation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.323
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#没有余地的要求
+		id = SFR_no_room_for_negotiation
+		icon = GFX_Generic_Checkmate
+		x = -1
+		y = 1
+		cost = 1
+
+		available = {
+			MSA = { exists = yes }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_solve_mermaid_problem }
+		relative_position_id = SFR_solve_mermaid_problem
+		mutually_exclusive = { focus = SFR_only_solution }
+
+		completion_reward = {
+			MSA = {
+				country_event = {
+					id = SFR.324
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#唯一的解决方案
+		id = SFR_only_solution
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			MSA = { exists = yes }
+		}
+		bypass = {
+			MSA = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_solve_mermaid_problem }
+		relative_position_id = SFR_solve_mermaid_problem
+		mutually_exclusive = { focus = SFR_no_room_for_negotiation }
+
+		completion_reward = {
+			declare_war_on = {
+				target = MSA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {	#整合特区政府
+		id = SFR_integrate_special_zone_gov
+		icon = GFX_focus_AFG_establish_darulaman
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			MSA = { is_subject_of = ROOT }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_no_room_for_negotiation }
+		relative_position_id = SFR_no_room_for_negotiation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -100
+			annex_country = {
+				target = MSA
+				transfer_troops = yes
+			}
+		}
+	}
+
+	focus = {	#准备登陆战！
+		id = SFR_prepare_landing_war
+		icon = GFX_focus_generic_naval_invasion
+		x = 0
+		y = 1
+		cost = 5
+
+		bypass = {
+			MSA = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_only_solution
+						 focus = SFR_no_room_for_negotiation }
+		relative_position_id = SFR_only_solution
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			declare_war_on = {
+				target = MSA
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = SFR_prepare_landing_war_idea
+				days = 300
+			}
+		}
+	}
+
+	focus = {	#收缴人鱼资产
+		id = SFR_requisition_mermaid_assets
+		icon = GFX_goal_generic_seize_money
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_integrate_special_zone_gov
+						 focus = SFR_prepare_landing_war }
+		relative_position_id = SFR_integrate_special_zone_gov
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -100
+			410 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			20 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = research_development_mod
+				value = 2
+				tooltip = research_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = environment_development_mod
+				value = 2
+				tooltip = environment_development_mod_tt_up_1
+			}
+			country_event = {
+				id = SFR.327
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#重建北远乡地区
+		id = SFR_rebuild_north_rural
+		icon = GFX_focus_DEN_no_regulations
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			SPC_generic_region_trigger_1_2_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_integrate_free_alliance
+						 focus = SFR_unite_leftists }
+		prerequisite = { focus = SFR_judgment_day }
+		prerequisite = { focus = SFR_integrate_special_zone_gov
+						 focus = SFR_prepare_landing_war }
+		relative_position_id = SFR_judgment_day
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.05
+			NFH = { add_to_ROOT_potential_cores = yes }
+			MSA = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = {
+				limit = {
+					is_core_of = NFH
+					NOT = { is_core_of = SFR }
+				}
+				add_claim_by = SFR
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = MSA
+					NOT = { is_core_of = SFR }
+				}
+				add_claim_by = SFR
+			}
+			country_event = {
+				id = SFR.328
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#统一全国！
+		id = SFR_unify_the_nation
+		icon = GFX_goal_Generic_Revolutionary_Republic
+		x = 3
+		y = 1
+		cost = 1
+
+		available = {
+			SPC_generic_region_trigger_1_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_northwest }
+		prerequisite = { focus = SFR_rebuild_north_rural }
+		relative_position_id = SFR_rebuild_northwest
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50
+			add_research_slot = 1
+			add_timed_idea = {
+				idea = SFR_fatherland_rebirth
+				days = 180
+			}
+			country_event = {
+				id = SFR.329
+				days = 1
+			}
+			if = {
+				limit = { has_government = revolutionary_communism }
+				news_event = SFRNews.2
+			}
+			else_if = {
+				limit = { has_government = worldunion_socialist }
+				news_event = SFRNews.3
+			}
+			custom_effect_tooltip = SFR_unify_the_nation_tt
+			hidden_effect = {
+				if = {
+					limit = { has_government = revolutionary_communism }
+					every_country = {
+						set_country_flag = superevent_show_flag
+						set_country_flag = SPC_SE_reunification_SFR_1_flag
+						scoped_play_song = "SE_reunification_SFR_1_sound"
+					}
+				}
+				else_if = {
+					limit = { has_government = worldunion_socialist }
+					every_country = {
+						set_country_flag = superevent_show_flag
+						set_country_flag = SPC_SE_reunification_SFR_2_flag
+						scoped_play_song = "SE_reunification_SFR_2_sound"
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#全国普查
+		id = SFR_national_census
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_nation }
+		relative_position_id = SFR_unify_the_nation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = 20000
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			SFR_bureaucratic_overload_effect = yes
+			country_event = {
+				id = SFR.330
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#组建新地方政府
+		id = SFR_build_new_local_gov
+		icon = GFX_Generic_Pass_Legislation
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_nation }
+		relative_position_id = SFR_unify_the_nation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			SFR_bureaucratic_overload_effect = yes
+			country_event = {
+				id = SFR.331
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#重振地方秩序
+		id = SFR_rebuild_local_order
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_unify_the_nation }
+		relative_position_id = SFR_unify_the_nation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			SFR_bureaucratic_overload_effect = yes
+			country_event = {
+				id = SFR.332
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#远乡，终得解放
+		id = SFR_rural_finally_liberated
+		icon = GFX_Generic_Liberation
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_national_census }
+		prerequisite = { focus = SFR_build_new_local_gov }
+		prerequisite = { focus = SFR_rebuild_local_order }
+		relative_position_id = SFR_build_new_local_gov
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SFR_bureaucratic_overload_effect = yes
+			remove_ideas = SFR_revenge_fury
+			country_event = {
+				id = SFR.333
+				days = 1
+			}
+			hidden_effect = {
+				country_event = {
+					id = SFR.334
+					days = 30
+				}
+			}
+		}
+	}
+
+	focus = {	#升旗
+		id = SFR_raise_the_flag
+		icon = GFX_focus_RAJ_the_sun_sets
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rural_finally_liberated }
+		relative_position_id = SFR_rural_finally_liberated
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = SFR_raise_the_flag_tt
+			set_cosmetic_tag = SFR_unif_tag_2
+			country_event = {
+				id = SFR.335
+				days = 1
+			}
+		}
+	}
+
+	### SFR_focus_1_5 ### 阵线国策 统一后 农 政治线
+
+	focus = {	#人民之国
+		id = SFR_nation_of_people
+		icon = GFX_SOV_positive_heroism_ccp_2d_sov_compatibility
+		x = 5
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_5
+			has_government = revolutionary_communism
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SFR_nation_of_people_dm_init = yes
+			custom_effect_tooltip = SFR_nation_of_people_tt
+			country_event = {
+				id = SFR.350
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#事业已竟
+		id = SFR_our_career_is_over
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		x = -4
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_nation_of_people }
+		relative_position_id = SFR_nation_of_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			custom_effect_tooltip = SFR_our_career_is_over_tt
+			country_event = {
+				id = SFR.352
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#酬功维稳
+		id = SFR_reward_and_stabilize
+		icon = GFX_goal_Generic_Workers_Democracy
+		x = -2
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_our_career_is_over }
+		relative_position_id = SFR_our_career_is_over
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.05
+			}
+			country_event = {
+				id = SFR.353
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#确保控制
+		id = SFR_ensure_control
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_our_career_is_over }
+		relative_position_id = SFR_our_career_is_over
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			country_event = {
+				id = SFR.362
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#对付老顽固
+		id = SFR_persuade_old_hardliners
+		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_our_career_is_over }
+		relative_position_id = SFR_our_career_is_over
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.1
+			}
+			country_event = {
+				id = SFR.371
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#解散阵线议会
+		id = SFR_dissolve_front_parliament
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reward_and_stabilize }
+		prerequisite = { focus = SFR_ensure_control }
+		prerequisite = { focus = SFR_persuade_old_hardliners }
+		relative_position_id = SFR_ensure_control
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = SFR_dissolve_front_parliament_tt
+			country_event = {
+				id = SFR.382
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#一切权力归于工农！
+		id = SFR_all_power_to_workers_and_peasants
+		icon = GFX_focus_FIN_socialist_welfare
+		x = -2
+		y = 1
+		cost = 3
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ban_certain_focus_tooltip
+				NOT = { has_country_flag = SFR_all_power_to_workers_and_peasants_ban }
+			}
+			if = {
+				limit = { has_country_flag = SFR_temp_ban_pol_reform }
+				has_country_flag = {
+					flag = SFR_temp_ban_pol_reform
+					days = 180
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_dissolve_front_parliament }
+		relative_position_id = SFR_dissolve_front_parliament
+		mutually_exclusive = { focus = SFR_national_assembly_proposal }
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			set_party_name = {
+				ideology = pioneer_communism
+				long_name = SFR_pioneer_communism_party_3_long
+				name = SFR_pioneer_communism_party_3
+			}
+			custom_effect_tooltip = SFR_all_power_to_workers_and_peasants_tt
+		}
+	}
+
+	focus = {	#国民议会提案
+		id = SFR_national_assembly_proposal
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 3
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ban_certain_focus_tooltip
+				NOT = { has_country_flag = SFR_national_assembly_proposal_ban }
+			}
+			if = {
+				limit = { has_country_flag = SFR_temp_ban_pol_reform }
+				has_country_flag = {
+					flag = SFR_temp_ban_pol_reform
+					days = 180
+				}
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_dissolve_front_parliament }
+		relative_position_id = SFR_dissolve_front_parliament
+		mutually_exclusive = { focus = SFR_all_power_to_workers_and_peasants }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			set_party_name = {
+				ideology = worldunion_democrat
+				long_name = SFR_worldunion_democrat_party_3_long
+				name = SFR_worldunion_democrat_party_3
+			}
+			custom_effect_tooltip = SFR_national_assembly_proposal_tt
+		}
+	}
+
+	focus = {	#成立工农代表大会
+		id = SFR_establish_workers_and_peasants_congress
+		icon = GFX_SOV_found_the_pcdi_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_all_power_to_workers_and_peasants
+						 focus = SFR_national_assembly_proposal}
+		relative_position_id = SFR_all_power_to_workers_and_peasants
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = SFR.389
+				days = 3
+			}
+			country_event = {
+				id = SFR.390
+				days = 1
+			}
+			if = {
+				limit = { has_completed_focus = SFR_national_assembly_proposal }
+				country_event = {
+					id = SFR.391
+					days = 7
+				}
+			}
+			custom_effect_tooltip = SFR_establish_workers_and_peasants_congress_tt
+			hidden_effect = { SFR_workers_and_peasants_congress_init = yes }
+		}
+	}
+
+	focus = {	#开始全国土改
+		id = SFR_start_land_reform
+		icon = GFX_Land_Reform
+		x = 4
+		y = 1
+		cost = 5
+
+		available = { has_completed_focus = SFR_dissolve_front_parliament }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_nation_of_people }
+		relative_position_id = SFR_nation_of_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			set_variable = { SFR_land_reform_decisions_progress = 0 }
+			unlock_decision_category_tooltip = SFR_land_reform_decisions
+			country_event = {
+				id = SFR.400
+				days = 1
+			}
+			custom_effect_tooltip = SFR_start_land_reform_tt
+		}
+	}
+
+	focus = {	#准备集体农庄
+		id = SFR_prepare_collective_farms
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_start_land_reform }
+		relative_position_id = SFR_start_land_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_timed_idea = {
+				idea = SFR_construction_guilds
+				days = 120
+			}
+			unlock_decision_tooltip = SFR_land_reform_cooperative_pilot
+			unlock_decision_tooltip = SFR_land_reform_collective_farm
+			country_event = {
+				id = SFR.406
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#向基层派遣党员
+		id = SFR_send_party_members_to_grassroots
+		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_start_land_reform }
+		relative_position_id = SFR_start_land_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_manpower = -10000
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_land_reform_in_progress_tt_0
+					add_idea = SFR_land_reform_in_progress_tt_4
+				}
+			}
+			add_to_variable = { SFR_land_reform_in_progress_sf = 0.05 }
+			add_to_variable = { SFR_land_reform_in_progress_ppf = 0.05 }
+			add_to_variable = { SFR_land_reform_in_progress_cgf = 0.05 }
+			force_update_dynamic_modifier = yes
+			add_timed_idea = {
+				idea = SFR_expanding_grassroots_networks
+				days = 120
+			}
+			unlock_decision_tooltip = SFR_land_reform_train_peasants
+			unlock_decision_tooltip = SFR_land_reform_work_team
+			country_event = {
+				id = SFR.407
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#颁布土地法案
+		id = SFR_enact_land_reform_act
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_start_land_reform }
+		relative_position_id = SFR_start_land_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 10
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_land_reform_in_progress_tt_0
+					add_idea = SFR_land_reform_in_progress_tt_5
+				}
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 1
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			add_to_variable = { SFR_land_reform_in_progress_sf = -0.1 }
+			add_to_variable = { SFR_land_reform_in_progress_ppf = -0.1 }
+			add_to_variable = { SFR_land_reform_in_progress_cgf = 0.05 }
+			force_update_dynamic_modifier = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_2
+			custom_effect_tooltip = SFR_enact_land_reform_act_tt
+			country_event = {
+				id = SFR.408
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#对地主阶级的最后一击
+		id = SFR_final_blow_to_landlords
+		icon = GFX_focus_eng_crush_the_dream
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_collective_farms }
+		prerequisite = { focus = SFR_send_party_members_to_grassroots }
+		prerequisite = { focus = SFR_enact_land_reform_act }
+		relative_position_id = SFR_send_party_members_to_grassroots
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#请手枪同志发言
+		id = SFR_comrade_pistol_speech
+		icon = GFX_SOV_smersh_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_blow_to_landlords }
+		relative_position_id = SFR_final_blow_to_landlords
+		mutually_exclusive = { focus = SFR_land_requisition }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#土地赎买
+		id = SFR_land_requisition
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_blow_to_landlords }
+		relative_position_id = SFR_final_blow_to_landlords
+		mutually_exclusive = { focus = SFR_comrade_pistol_speech }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#清算过去之恶
+		id = SFR_settle_past_evil
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_comrade_pistol_speech
+						 focus = SFR_land_requisition }
+		relative_position_id = SFR_comrade_pistol_speech
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#准备统筹委员会
+		id = SFR_prepare_planning_committee
+		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		x = 4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_workers_and_peasants_congress }
+		prerequisite = { focus = SFR_settle_past_evil }
+		relative_position_id = SFR_establish_workers_and_peasants_congress
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#社会改革总路线
+		id = SFR_social_reform_general_line
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		x = -14
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_planning_committee }
+		relative_position_id = SFR_prepare_planning_committee
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#社会改造运动
+		id = SFR_social_reform_movement
+		icon = GFX_Generic_Working_Class_Family
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_reform_general_line }
+		relative_position_id = SFR_social_reform_general_line
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#被遗忘的部族
+		id = SFR_forgotten_tribes
+		icon = GFX_focus_SWE_refuge_from_war
+		x = -5
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_reform_movement }
+		relative_position_id = SFR_social_reform_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#暂缓融合
+		id = SFR_defer_integration
+		icon = GFX_focus_generic_surrender
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_forgotten_tribes }
+		relative_position_id = SFR_forgotten_tribes
+		mutually_exclusive = { focus = SFR_we_are_not_different }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#少数种族自治区
+		id = SFR_minority_autonomous_region
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_defer_integration }
+		relative_position_id = SFR_defer_integration
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#我们并非不同
+		id = SFR_we_are_not_different
+		icon = GFX_Generic_War_Propaganda03
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_forgotten_tribes }
+		relative_position_id = SFR_forgotten_tribes
+		mutually_exclusive = { focus = SFR_defer_integration }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#落实少数族群教育
+		id = SFR_implement_minority_education
+		icon = GFX_generic_Bookstack
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_we_are_not_different }
+		relative_position_id = SFR_we_are_not_different
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#开发少数族群地区
+		id = SFR_develop_minority_regions
+		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_minority_autonomous_region
+						 focus = SFR_implement_minority_education }
+		relative_position_id = SFR_minority_autonomous_region
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#落实民生保障
+		id = SFR_implement_living_security
+		icon = GFX_Generic_Bread_and_Peace
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_reform_movement }
+		relative_position_id = SFR_social_reform_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#开始全国扫盲
+		id = SFR_start_national_literacy_campaign
+		icon = GFX_focus_NOR_moscows_education_centers
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_implement_living_security }
+		relative_position_id = SFR_implement_living_security
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#推广义务教育
+		id = SFR_promote_compulsory_education
+		icon = GFX_focus_NORDIC_com_capstone_research
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_start_national_literacy_campaign }
+		relative_position_id = SFR_start_national_literacy_campaign
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#公共医疗
+		id = SFR_public_healthcare
+		icon = GFX_focus_generic_field_hostpital
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_implement_living_security }
+		relative_position_id = SFR_implement_living_security
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#打碎传统礼制
+		id = SFR_smash_traditional_customs
+		icon = GFX_SOV_the_new_soviet_woman_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_public_healthcare }
+		relative_position_id = SFR_public_healthcare
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建新科研所
+		id = SFR_establish_new_research_institute
+		icon = GFX_focus_research
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_promote_compulsory_education }
+		relative_position_id = SFR_promote_compulsory_education
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#魔法研究
+		id = SFR_magic_research
+		icon = GFX_SOV_socialist_humanism_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_new_research_institute }
+		relative_position_id = SFR_establish_new_research_institute
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#满怀希望的人民
+		id = SFR_people_with_hope
+		icon = GFX_Focus_SOV_To_Get_Rich
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_promote_compulsory_education }
+		prerequisite = { focus = SFR_smash_traditional_customs }
+		relative_position_id = SFR_promote_compulsory_education
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#设立中央传媒机关
+		id = SFR_establish_central_media_agency
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		x = 4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_reform_movement }
+		relative_position_id = SFR_social_reform_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#红色工业化
+		id = SFR_red_industrialization
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_planning_committee }
+		relative_position_id = SFR_prepare_planning_committee
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#真正的全国政府
+		id = SFR_real_national_government
+		icon = GFX_focus_SWE_socialist_reforms
+		x = -7
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_reform_general_line }
+		prerequisite = { focus = SFR_red_industrialization }
+		relative_position_id = SFR_red_industrialization
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#公共设施建设
+		id = SFR_public_infrastructure_construction
+		icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_real_national_government }
+		relative_position_id = SFR_real_national_government
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#敢说，敢做
+		id = SFR_dare_to_speak_and_do
+		icon = GFX_goal_CLD_new_beginning
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_central_media_agency }
+		prerequisite = { focus = SFR_public_infrastructure_construction }
+		relative_position_id = SFR_establish_central_media_agency
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组织群众参与劳动实践
+		id = SFR_organize_mass_participation
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_dare_to_speak_and_do }
+		relative_position_id = SFR_dare_to_speak_and_do
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩大行政部门
+		id = SFR_expand_administrative_departments
+		icon = GFX_focus_generic_soviet_politics
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_real_national_government }
+		relative_position_id = SFR_real_national_government
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#重建警务系统
+		id = SFR_rebuild_police_system
+		icon = GFX_goal_Generic_Secret_Police
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_administrative_departments }
+		relative_position_id = SFR_expand_administrative_departments
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#落实基层民主
+		id = SFR_implement_grassroots_democracy
+		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_dare_to_speak_and_do }
+		prerequisite = { focus = SFR_rebuild_police_system }
+		relative_position_id = SFR_dare_to_speak_and_do
+		mutually_exclusive = { focus = SFR_prioritize_party_democracy }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#优先党内民主
+		id = SFR_prioritize_party_democracy
+		icon = GFX_focus_generic_social_democracy
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_dare_to_speak_and_do }
+		prerequisite = { focus = SFR_rebuild_police_system }
+		relative_position_id = SFR_rebuild_police_system
+		mutually_exclusive = { focus = SFR_implement_grassroots_democracy }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建内务部队
+		id = SFR_establish_internal_security_forces
+		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_implement_grassroots_democracy
+						 focus = SFR_prioritize_party_democracy }
+		prerequisite = { focus = SFR_organize_mass_participation }
+		relative_position_id = SFR_implement_grassroots_democracy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#恢复全国生产
+		id = SFR_restore_national_production
+		icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_red_industrialization }
+		relative_position_id = SFR_red_industrialization
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#开发矿产资源
+		id = SFR_develop_mineral_resources
+		icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
+		x = -4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_restore_national_production }
+		relative_position_id = SFR_restore_national_production
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#发展精炼工业
+		id = SFR_develop_refining_industry
+		icon = GFX_focus_GER_factories_for_resources
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_mineral_resources }
+		relative_position_id = SFR_develop_mineral_resources
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#发展重工业
+		id = SFR_develop_heavy_industry
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_refining_industry }
+		relative_position_id = SFR_develop_refining_industry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#全国工会问题
+		id = SFR_national_trade_union_issue
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_restore_national_production }
+		relative_position_id = SFR_restore_national_production
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#赋权地方合作社
+		id = SFR_empower_local_cooperatives
+		icon = GFX_focus_generic_communist
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_national_trade_union_issue }
+		relative_position_id = SFR_national_trade_union_issue
+		mutually_exclusive = { focus = SFR_centralized_planned_economy }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#集权计划经济
+		id = SFR_centralized_planned_economy
+		icon = GFX_focus_generic_central_planning
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_national_trade_union_issue }
+		relative_position_id = SFR_national_trade_union_issue
+		mutually_exclusive = { focus = SFR_empower_local_cooperatives }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#一五计划
+		id = SFR_five_year_plan
+		icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_empower_local_cooperatives
+						 focus = SFR_centralized_planned_economy }
+		relative_position_id = SFR_empower_local_cooperatives
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#训练技术工人
+		id = SFR_train_technical_workers
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_restore_national_production }
+		relative_position_id = SFR_restore_national_production
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#完善基础设施建设
+		id = SFR_improve_infrastructure_construction
+		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_train_technical_workers }
+		relative_position_id = SFR_train_technical_workers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#连通全国的愿景
+		id = SFR_vision_of_national_connectivity
+		icon = GFX_focus_generic_railroad
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_improve_infrastructure_construction }
+		relative_position_id = SFR_improve_infrastructure_construction
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#工业复合体
+		id = SFR_industrial_complex
+		icon = GFX_Generic_Industry02
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_heavy_industry }
+		prerequisite = { focus = SFR_five_year_plan }
+		prerequisite = { focus = SFR_vision_of_national_connectivity }
+		relative_position_id = SFR_five_year_plan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#农村公社运动
+		id = SFR_rural_commune_movement
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 14
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_planning_committee }
+		relative_position_id = SFR_prepare_planning_committee
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#工农联盟
+		id = SFR_workers_and_peasants_alliance
+		icon = GFX_focus_generic_full_employment
+		x = 8
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_red_industrialization }
+		prerequisite = { focus = SFR_rural_commune_movement }
+		relative_position_id = SFR_red_industrialization
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#乡村机械化
+		id = SFR_rural_mechanization
+		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_workers_and_peasants_alliance }
+		relative_position_id = SFR_workers_and_peasants_alliance
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#修筑水利设施
+		id = SFR_construct_water_conservation_facilities
+		icon = GFX_focus_BEL_dam_the_consequences
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_workers_and_peasants_alliance }
+		relative_position_id = SFR_workers_and_peasants_alliance
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#社会所有制经济
+		id = SFR_social_ownership_economy
+		icon = GFX_focus_GER_the_peoples_victory
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rural_mechanization }
+		prerequisite = { focus = SFR_construct_water_conservation_facilities }
+		relative_position_id = SFR_rural_mechanization
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#拓展工业城区
+		id = SFR_expand_industrial_urban_areas
+		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_ownership_economy }
+		relative_position_id = SFR_social_ownership_economy
+		mutually_exclusive = { focus = SFR_develop_local_industries }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#发展地方产业
+		id = SFR_develop_local_industries
+		icon = GFX_focus_ARG_women_in_industry
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_social_ownership_economy }
+		relative_position_id = SFR_social_ownership_economy
+		mutually_exclusive = { focus = SFR_expand_industrial_urban_areas }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#携手并进
+		id = SFR_working_hand_in_hand
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_industrial_urban_areas
+						 focus = SFR_develop_local_industries }
+		relative_position_id = SFR_expand_industrial_urban_areas
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组织土地测量
+		id = SFR_organize_land_survey
+		icon = GFX_focus_generic_farmland
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rural_commune_movement }
+		relative_position_id = SFR_rural_commune_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#公社规模问题
+		id = SFR_commune_scale_issue
+		icon = GFX_goal_Generic_Land_Reform
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_organize_land_survey }
+		relative_position_id = SFR_organize_land_survey
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#农村集市贸易？
+		id = SFR_rural_market_trade
+		icon = GFX_Generic_Market_Socialism
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_organize_land_survey }
+		relative_position_id = SFR_organize_land_survey
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#自留地问题
+		id = SFR_private_plot_issue
+		icon = GFX_union_agreement
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_organize_land_survey }
+		relative_position_id = SFR_organize_land_survey
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建生产大队
+		id = SFR_establish_production_teams
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_commune_scale_issue }
+		prerequisite = { focus = SFR_rural_market_trade }
+		prerequisite = { focus = SFR_private_plot_issue }
+		relative_position_id = SFR_commune_scale_issue
+		mutually_exclusive = { focus = SFR_tillers_have_their_fields }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#设立农村银行
+		id = SFR_establish_rural_banks
+		icon = GFX_generic_Food_Import
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_production_teams }
+		relative_position_id = SFR_establish_production_teams
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#耕者有其田
+		id = SFR_tillers_have_their_fields
+		icon = GFX_focus_GER_autarky_achieved
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_commune_scale_issue }
+		prerequisite = { focus = SFR_rural_market_trade }
+		prerequisite = { focus = SFR_private_plot_issue }
+		relative_position_id = SFR_rural_market_trade
+		mutually_exclusive = { focus = SFR_establish_production_teams }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#繁荣农村经济
+		id = SFR_prosperous_rural_economy
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_tillers_have_their_fields }
+		relative_position_id = SFR_tillers_have_their_fields
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#勤劳的人民
+		id = SFR_diligent_people
+		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_rural_banks
+						 focus = SFR_prosperous_rural_economy }
+		relative_position_id = SFR_establish_rural_banks
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#红星照耀远乡
+		id = SFR_red_star_shines_on_the_farthest_villages
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_people_with_hope }
+		prerequisite = { focus = SFR_establish_internal_security_forces }
+		prerequisite = { focus = SFR_industrial_complex }
+		prerequisite = { focus = SFR_working_hand_in_hand }
+		prerequisite = { focus = SFR_diligent_people }
+		relative_position_id = SFR_industrial_complex
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#重新审视外部局势
+		id = SFR_reassess_external_situation
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = -6
+		y = 15
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			has_country_flag = SFR_focus_1_5
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#帝国主义战争的遗产
+		id = SFR_imperialist_war_legacy
+		icon = GFX_goal_Generic_Memories_of_the_War
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reassess_external_situation }
+		relative_position_id = SFR_reassess_external_situation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#解放西北人民
+		id = SFR_free_the_people_of_the_northwest
+		icon = GFX_goal_Generic_Revolutionary_Women
+		x = -3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_imperialist_war_legacy }
+		relative_position_id = SFR_imperialist_war_legacy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#准备西北战争
+		id = SFR_prepare_northwest_war
+		icon = GFX_Generic_Revanchism02
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_people_of_the_northwest }
+		relative_position_id = SFR_free_the_people_of_the_northwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#向西北发送最后通牒
+		id = SFR_send_ultimatum_to_the_northwest
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_northwest_war }
+		relative_position_id = SFR_prepare_northwest_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#解放顿恩民众
+		id = SFR_free_the_people_of_donen
+		icon = GFX_Generic_Socialist_Propaganda
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_send_ultimatum_to_the_northwest }
+		relative_position_id = SFR_send_ultimatum_to_the_northwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#收缴沃姆财产
+		id = SFR_seize_worm_property
+		icon = GFX_focus_GER_customs_union
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_send_ultimatum_to_the_northwest }
+		relative_position_id = SFR_send_ultimatum_to_the_northwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#整合西北领土
+		id = SFR_integrate_northwest_territories
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_people_of_donen }
+		prerequisite = { focus = SFR_seize_worm_property }
+		relative_position_id = SFR_free_the_people_of_donen
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#解放西南人民
+		id = SFR_free_the_people_of_the_southwest
+		icon = GFX_goal_Generic_Revolutionary_Republic
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_imperialist_war_legacy }
+		relative_position_id = SFR_imperialist_war_legacy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#准备西南战争
+		id = SFR_prepare_southwest_war
+		icon = GFX_Generic_Revanchism02
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_free_the_people_of_the_southwest }
+		relative_position_id = SFR_free_the_people_of_the_southwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#向西南发送最后通牒
+		id = SFR_send_ultimatum_to_the_southwest
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_southwest_war }
+		relative_position_id = SFR_prepare_southwest_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#水晶族裔的去向
+		id = SFR_crystal_heritage_destination
+		icon = GFX_focus_RAJ_union_busting
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_send_ultimatum_to_the_southwest }
+		relative_position_id = SFR_send_ultimatum_to_the_southwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重建西南基建
+		id = SFR_rebuild_southwest_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_send_ultimatum_to_the_southwest }
+		relative_position_id = SFR_send_ultimatum_to_the_southwest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#整合西南领土
+		id = SFR_integrate_southwest_territories
+		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_crystal_heritage_destination }
+		prerequisite = { focus = SFR_rebuild_southwest_infrastructure }
+		relative_position_id = SFR_crystal_heritage_destination
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#东巴斯蒂亚的革命新星
+		id = SFR_revolutionary_new_star_of_east_bastia
+		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_integrate_northwest_territories }
+		prerequisite = { focus = SFR_integrate_southwest_territories }
+		relative_position_id = SFR_integrate_northwest_territories
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#最后的革命堡垒
+		id = SFR_final_revolutionary_bastion
+		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revolutionary_new_star_of_east_bastia }
+		relative_position_id = SFR_revolutionary_new_star_of_east_bastia
+		mutually_exclusive = { focus = SFR_we_are_not_alone }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#我们并不孤单
+		id = SFR_we_are_not_alone
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revolutionary_new_star_of_east_bastia }
+		relative_position_id = SFR_revolutionary_new_star_of_east_bastia
+		mutually_exclusive = { focus = SFR_final_revolutionary_bastion }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扛起红旗
+		id = SFR_raise_the_red_flag
+		icon = GFX_focus_focus_fra_revolution_utmost
+		x = -3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_revolutionary_bastion
+						 focus = SFR_we_are_not_alone }
+		relative_position_id = SFR_final_revolutionary_bastion
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#整顿革命理论
+		id = SFR_reorganize_revolutionary_theory
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_raise_the_red_flag }
+		relative_position_id = SFR_raise_the_red_flag
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#统一军事行动
+		id = SFR_unify_military_operations
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reorganize_revolutionary_theory }
+		relative_position_id = SFR_reorganize_revolutionary_theory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#意识形态外交？
+		id = SFR_ideological_diplomacy
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_revolutionary_bastion
+						 focus = SFR_we_are_not_alone }
+		relative_position_id = SFR_final_revolutionary_bastion
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#解决贸易问题
+		id = SFR_solve_trade_issues
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_revolutionary_bastion
+						 focus = SFR_we_are_not_alone }
+		relative_position_id = SFR_we_are_not_alone
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#联络境外侨民
+		id = SFR_contact_overseas_expatriates
+		icon = GFX_focus_generic_concessions
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_ideological_diplomacy }
+		prerequisite = { focus = SFR_solve_trade_issues }
+		relative_position_id = SFR_ideological_diplomacy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#解放东巴人民！
+		id = SFR_free_the_people_of_east_bastia
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_contact_overseas_expatriates }
+		relative_position_id = SFR_contact_overseas_expatriates
+		mutually_exclusive = { focus = SFR_focus_on_domestic_construction }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#聚焦国内建设
+		id = SFR_focus_on_domestic_construction
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_contact_overseas_expatriates }
+		relative_position_id = SFR_contact_overseas_expatriates
+		mutually_exclusive = { focus = SFR_free_the_people_of_east_bastia }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#促进多边合作
+		id = SFR_promote_multilateral_cooperation
+		icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility
+		x = 3
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_final_revolutionary_bastion
+						 focus = SFR_we_are_not_alone }
+		relative_position_id = SFR_we_are_not_alone
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#交换革命理论
+		id = SFR_exchange_revolutionary_theories
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_promote_multilateral_cooperation }
+		relative_position_id = SFR_promote_multilateral_cooperation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#科研合作条约
+		id = SFR_scientific_cooperation_treaty
+		icon = GFX_focus_generic_socialist_science
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_exchange_revolutionary_theories }
+		relative_position_id = SFR_exchange_revolutionary_theories
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重整工农红军
+		id = SFR_reorganize_workers_and_peasants_red_army
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		x = 25
+		y = 0
+		cost = 5
+
+		offset = {
+			x = -15
+			y = 15
+			trigger = {
+				has_country_flag = SFR_focus_1_5
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = SFR_focus_1
+			OR = {
+				has_country_flag = SFR_focus_1_4
+				has_country_flag = SFR_focus_1_5
+			}
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重建红军
+		id = SFR_rebuild_red_army
+		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reorganize_workers_and_peasants_red_army }
+		relative_position_id = SFR_reorganize_workers_and_peasants_red_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新式装备生产线
+		id = SFR_new_equipment_production_line
+		icon = GFX_focus_generic_license_production
+		x = -5
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_red_army }
+		relative_position_id = SFR_rebuild_red_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#复兴装甲科研
+		id = SFR_revival_of_armor_research
+		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_equipment_production_line }
+		relative_position_id = SFR_new_equipment_production_line
+		mutually_exclusive = { focus = SFR_shift_to_magic_equipment }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#转向魔导装备
+		id = SFR_shift_to_magic_equipment
+		icon = GFX_ARO_Borwisch_legion
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_equipment_production_line }
+		relative_position_id = SFR_new_equipment_production_line
+		mutually_exclusive = { focus = SFR_revival_of_armor_research }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#火炮开发
+		id = SFR_artillery_development
+		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revival_of_armor_research
+						 focus = SFR_shift_to_magic_equipment }
+		relative_position_id = SFR_revival_of_armor_research
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#步枪研发
+		id = SFR_rifle_development
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revival_of_armor_research
+						 focus = SFR_shift_to_magic_equipment }
+		relative_position_id = SFR_shift_to_magic_equipment
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩大军工产业
+		id = SFR_expand_military_industry
+		icon = GFX_focus_generic_combined_arms
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_artillery_development }
+		prerequisite = { focus = SFR_rifle_development }
+		relative_position_id = SFR_artillery_development
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新炮兵部队
+		id = SFR_new_artillery_units
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_military_industry }
+		relative_position_id = SFR_expand_military_industry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新式训练标准
+		id = SFR_new_training_standards
+		icon = GFX_Generic_Infantry_Training
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_artillery_development }
+		prerequisite = { focus = SFR_rifle_development }
+		relative_position_id = SFR_artillery_development
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#党指挥枪
+		id = SFR_party_commands_the_gun
+		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_red_army }
+		relative_position_id = SFR_rebuild_red_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#任务式指挥模式
+		id = SFR_task_based_command_mode
+		icon = GFX_goal_integrate_the_militia
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_party_commands_the_gun }
+		relative_position_id = SFR_party_commands_the_gun
+		mutually_exclusive = { focus = SFR_large_formation_concentration_command }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#大兵团集中指挥
+		id = SFR_large_formation_concentration_command
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_party_commands_the_gun }
+		relative_position_id = SFR_party_commands_the_gun
+		mutually_exclusive = { focus = SFR_task_based_command_mode }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#人民军官团
+		id = SFR_people_officer_corps
+		icon = GFX_goal_officers
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_task_based_command_mode
+						 focus = SFR_large_formation_concentration_command }
+		relative_position_id = SFR_task_based_command_mode
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#落实军事民主
+		id = SFR_implement_military_democracy
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_people_officer_corps }
+		relative_position_id = SFR_people_officer_corps
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#精锐侦察部队
+		id = SFR_elite_reconnaissance_units
+		icon = GFX_Generic_American_Soldier2
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_training_standards }
+		prerequisite = { focus = SFR_implement_military_democracy }
+		relative_position_id = SFR_implement_military_democracy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#严格军事准则
+		id = SFR_strict_military_standards
+		icon = GFX_focus_RAJ_union_busting
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_people_officer_corps }
+		relative_position_id = SFR_people_officer_corps
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#吸取过去的经验
+		id = SFR_learn_from_past_experience
+		icon = GFX_Generic_Invasion2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_strict_military_standards }
+		relative_position_id = SFR_strict_military_standards
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#意识形态宣传
+		id = SFR_ideological_propaganda
+		icon = GFX_Generic_Liberatian_Socialism
+		x = 4
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_party_commands_the_gun }
+		relative_position_id = SFR_party_commands_the_gun
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#全民军事训练
+		id = SFR_national_military_training
+		icon = GFX_Generic_Militant_Socialism
+		x = -1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_ideological_propaganda }
+		relative_position_id = SFR_ideological_propaganda
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#逐步恢复常态
+		id = SFR_gradual_return_to_normalcy
+		icon = GFX_Generic_Medicine02
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_ideological_propaganda }
+		relative_position_id = SFR_ideological_propaganda
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#武装民兵问题
+		id = SFR_militia_issue
+		icon = GFX_focus_AUS_frontmiliz_focus
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_national_military_training
+						 focus = SFR_gradual_return_to_normalcy }
+		relative_position_id = SFR_national_military_training
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新建军事学院
+		id = SFR_establish_military_academy
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_militia_issue }
+		relative_position_id = SFR_militia_issue
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#人民后勤部队
+		id = SFR_people_logistics_units
+		icon = GFX_focus_generic_truck
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_militia_issue }
+		relative_position_id = SFR_militia_issue
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#凝聚我们的力量
+		id = SFR_consolidate_our_strength
+		icon = GFX_focus_PER_construct_air_defenses
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_elite_reconnaissance_units }
+		prerequisite = { focus = SFR_learn_from_past_experience }
+		prerequisite = { focus = SFR_establish_military_academy }
+		relative_position_id = SFR_elite_reconnaissance_units
+		mutually_exclusive = { focus = SFR_utilize_our_advantages }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#利用我们的优势
+		id = SFR_utilize_our_advantages
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_elite_reconnaissance_units }
+		prerequisite = { focus = SFR_learn_from_past_experience }
+		prerequisite = { focus = SFR_establish_military_academy }
+		relative_position_id = SFR_learn_from_past_experience
+		mutually_exclusive = { focus = SFR_consolidate_our_strength }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#火炮侵袭
+		id = SFR_artillery_strike
+		icon = GFX_goal_Artillery_Tactics
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_consolidate_our_strength }
+		relative_position_id = SFR_consolidate_our_strength
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#全速突破
+		id = SFR_full_speed_breakthrough
+		icon = GFX_Generic_War_Propaganda04
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_artillery_strike }
+		relative_position_id = SFR_artillery_strike
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#小编制战术
+		id = SFR_small_unit_tactics
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_consolidate_our_strength }
+		relative_position_id = SFR_consolidate_our_strength
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#重装部队开路！
+		id = SFR_heavy_units_clear_the_way
+		icon = GFX_Generic_Tank_through_Wall
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_small_unit_tactics }
+		relative_position_id = SFR_small_unit_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#现代机动战争
+		id = SFR_modern_maneuver_warfare
+		icon = GFX_focus_GER_wunderwaffe
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_full_speed_breakthrough }
+		prerequisite = { focus = SFR_heavy_units_clear_the_way }
+		relative_position_id = SFR_full_speed_breakthrough
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#总结轻步兵战术
+		id = SFR_summarize_light_infantry_tactics
+		icon = GFX_Generic_Colonial_Soldier
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_consolidate_our_strength
+						 focus = SFR_utilize_our_advantages }
+		relative_position_id = SFR_consolidate_our_strength
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#专业工程兵团
+		id = SFR_specialized_engineer_corps
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_summarize_light_infantry_tactics }
+		relative_position_id = SFR_summarize_light_infantry_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#子弟兵无所畏惧！
+		id = SFR_fearless_children_of_the_revolution
+		icon = GFX_CLD_forming_emergency_committe
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_specialized_engineer_corps }
+		relative_position_id = SFR_specialized_engineer_corps
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#战场千变万化...
+		id = SFR_battlefield_is_full_of_changes
+		icon = GFX_goal_Focus_Examine_Foreign_Small_Arms
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_utilize_our_advantages }
+		relative_position_id = SFR_utilize_our_advantages
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#...而我们早有准备！
+		id = SFR_we_are_already_prepared
+		icon = GFX_goal_planning_bonus
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_battlefield_is_full_of_changes }
+		relative_position_id = SFR_battlefield_is_full_of_changes
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩大最高指挥部
+		id = SFR_expand_high_command
+		icon = GFX_focus_generic_army_doctrines_2
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_utilize_our_advantages }
+		relative_position_id = SFR_utilize_our_advantages
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#为纵深，持久战作准备
+		id = SFR_prepare_for_depth_and_protracted_warfare
+		icon = GFX_goal_Generic_Soldiers_Defense
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_high_command }
+		relative_position_id = SFR_expand_high_command
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#国防人民战争
+		id = SFR_people_war_defense
+		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_we_are_already_prepared }
+		prerequisite = { focus = SFR_prepare_for_depth_and_protracted_warfare }
+		relative_position_id = SFR_we_are_already_prepared
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#重建空军
+		id = SFR_rebuild_air_force
+		icon = GFX_focus_PER_the_peoples_airforce
+		x = 12
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reorganize_workers_and_peasants_red_army }
+		relative_position_id = SFR_reorganize_workers_and_peasants_red_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#培训飞行员
+		id = SFR_train_pilots
+		icon = GFX_Generic_Pilots
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_air_force }
+		relative_position_id = SFR_rebuild_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重建军用机场
+		id = SFR_rebuild_military_airports
+		icon = GFX_focus_generic_aircraft_production
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_air_force }
+		relative_position_id = SFR_rebuild_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#组建空军科研所
+		id = SFR_establish_air_force_research_institute
+		icon = GFX_focus_generic_air_research_boost
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_air_force }
+		relative_position_id = SFR_rebuild_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新空军理论
+		id = SFR_new_air_force_theory
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_train_pilots }
+		prerequisite = { focus = SFR_rebuild_military_airports }
+		prerequisite = { focus = SFR_establish_air_force_research_institute }
+		relative_position_id = SFR_rebuild_military_airports
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#专注空中优势
+		id = SFR_focus_on_air_superiority
+		icon = GFX_SOV_intensify_pilot_training_program_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_air_force_theory }
+		relative_position_id = SFR_new_air_force_theory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#准备地面支援
+		id = SFR_prepare_ground_support
+		icon = GFX_focus_generic_armored_air_support
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_air_force_theory }
+		relative_position_id = SFR_new_air_force_theory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#发展重型战斗机
+		id = SFR_develop_heavy_fighters
+		icon = GFX_focus_generic_long_range_aircraft
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_focus_on_air_superiority }
+		relative_position_id = SFR_focus_on_air_superiority
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#修建防空设施
+		id = SFR_construct_air_defense_facilities
+		icon = GFX_Generic_Air_Defense
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_heavy_fighters }
+		relative_position_id = SFR_develop_heavy_fighters
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#开发多用途轰炸机
+		id = SFR_develop_multirole_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_focus_on_air_superiority }
+		relative_position_id = SFR_focus_on_air_superiority
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#死从天降
+		id = SFR_death_from_above
+		icon = GFX_focus_SWE_marauder_bombers
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_multirole_bombers }
+		relative_position_id = SFR_develop_multirole_bombers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#保卫祖国的领空
+		id = SFR_defend_the_homeland_s_airspace
+		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_construct_air_defense_facilities }
+		prerequisite = { focus = SFR_death_from_above }
+		relative_position_id = SFR_death_from_above
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩张航空工业
+		id = SFR_expand_aircraft_industry
+		icon = GFX_goal_industry_air
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_focus_on_air_superiority
+						 focus = SFR_prepare_ground_support }
+		relative_position_id = SFR_focus_on_air_superiority
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新修军用机场
+		id = SFR_new_military_airports
+		icon = GFX_SOV_modernize_aircraft_facilities_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_expand_aircraft_industry }
+		relative_position_id = SFR_expand_aircraft_industry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#空地一体化
+		id = SFR_air_ground_integration
+		icon = GFX_focus_generic_tank_air_support
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_ground_support }
+		relative_position_id = SFR_prepare_ground_support
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#破坏敌人的后勤
+		id = SFR_disrupt_enemy_logistics
+		icon = GFX_Generic_Bombs
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_air_ground_integration }
+		relative_position_id = SFR_air_ground_integration
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#轻型作战中队
+		id = SFR_light_combat_squadrons
+		icon = GFX_focus_eng_special_air_service
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_prepare_ground_support }
+		relative_position_id = SFR_prepare_ground_support
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#保持我们的机动性
+		id = SFR_maintain_our_mobility
+		icon = GFX_goal_new_airforce
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_light_combat_squadrons }
+		relative_position_id = SFR_light_combat_squadrons
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#现代空地一体化作战
+		id = SFR_modern_air_ground_integration
+		icon = GFX_focus_generic_air_defense
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_disrupt_enemy_logistics }
+		prerequisite = { focus = SFR_maintain_our_mobility }
+		relative_position_id = SFR_disrupt_enemy_logistics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#复兴海军
+		id = SFR_revival_of_navy
+		icon = GFX_focus_PER_the_peoples_navy
+		x = 24
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_reorganize_workers_and_peasants_red_army }
+		relative_position_id = SFR_reorganize_workers_and_peasants_red_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#组建海军航空部队
+		id = SFR_establish_naval_air_force
+		icon = GFX_goal_generic_navy_carrier
+		x = 6
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_air_force }
+		prerequisite = { focus = SFR_revival_of_navy }
+		relative_position_id = SFR_rebuild_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#海军轰炸机
+		id = SFR_naval_bombers
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_naval_air_force }
+		relative_position_id = SFR_establish_naval_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#为远航做准备
+		id = SFR_prepare_for_long_voyages
+		icon = GFX_goal_generic_navy_cruiser
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_naval_air_force }
+		relative_position_id = SFR_establish_naval_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#开发舰载机
+		id = SFR_develop_carrier_based_aircraft
+		icon = GFX_focus_generic_air_carrier
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_establish_naval_air_force }
+		relative_position_id = SFR_establish_naval_air_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#海军步兵
+		id = SFR_naval_infantry
+		icon = GFX_focus_generic_naval_invasion
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_naval_bombers }
+		prerequisite = { focus = SFR_prepare_for_long_voyages }
+		prerequisite = { focus = SFR_develop_carrier_based_aircraft }
+		relative_position_id = SFR_prepare_for_long_voyages
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#培训后勤人员
+		id = SFR_train_logistics_personnel
+		icon = GFX_Generic_Sea_Focus_Navy
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revival_of_navy }
+		relative_position_id = SFR_revival_of_navy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重建军用港口
+		id = SFR_rebuild_military_ports
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revival_of_navy }
+		relative_position_id = SFR_revival_of_navy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#组建海军科研所
+		id = SFR_establish_naval_research_institute
+		icon = GFX_Generic_Naval_Industry
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_revival_of_navy }
+		relative_position_id = SFR_revival_of_navy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#重返海洋
+		id = SFR_return_to_the_ocean
+		icon = GFX_Generic_Naval_Treaty
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_train_logistics_personnel }
+		prerequisite = { focus = SFR_rebuild_military_ports }
+		prerequisite = { focus = SFR_establish_naval_research_institute }
+		relative_position_id = SFR_rebuild_military_ports
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#注重水面战争
+		id = SFR_emphasize_surface_warfare
+		icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_return_to_the_ocean }
+		relative_position_id = SFR_return_to_the_ocean
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新时代，新战术
+		id = SFR_new_era_new_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_return_to_the_ocean }
+		relative_position_id = SFR_return_to_the_ocean
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#研发航母
+		id = SFR_develop_aircraft_carriers
+		icon = GFX_SOV_expand_the_morskaya_aviatsiya_ccp_2d_sov_compatibility
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_emphasize_surface_warfare }
+		relative_position_id = SFR_emphasize_surface_warfare
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#注重海洋防空
+		id = SFR_emphasize_naval_air_defense
+		icon = GFX_focus_generic_air_partners
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_develop_aircraft_carriers }
+		relative_position_id = SFR_develop_aircraft_carriers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#大护航编制
+		id = SFR_large_convoy_formation
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_emphasize_surface_warfare }
+		relative_position_id = SFR_emphasize_surface_warfare
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#舰队先锋
+		id = SFR_fleet_vanguard
+		icon = GFX_SOV_offensive_maritime_strategy_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_large_convoy_formation }
+		relative_position_id = SFR_large_convoy_formation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {	#红旗飘扬在海上！
+		id = SFR_red_flag_flies_on_the_sea
+		icon = GFX_focus_SMB_blue_water_fleet
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_emphasize_naval_air_defense }
+		prerequisite = { focus = SFR_fleet_vanguard }
+		relative_position_id = SFR_fleet_vanguard
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {	#重建海军船坞
+		id = SFR_rebuild_naval_docks
+		icon = GFX_GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_emphasize_surface_warfare
+						 focus = SFR_new_era_new_tactics  }
+		relative_position_id = SFR_emphasize_surface_warfare
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩建各地港口
+		id = SFR_expand_ports_everywhere
+		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility_shine
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_rebuild_naval_docks }
+		relative_position_id = SFR_rebuild_naval_docks
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#炮艇计划
+		id = SFR_patrol_boat_program
+		icon = GFX_focus_generic_destroyer
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_era_new_tactics }
+		relative_position_id = SFR_new_era_new_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#驱逐舰舰队
+		id = SFR_destroyer_fleet
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_patrol_boat_program }
+		relative_position_id = SFR_patrol_boat_program
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#兴建潜艇
+		id = SFR_build_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_new_era_new_tactics }
+		relative_position_id = SFR_new_era_new_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#水中恶魔
+		id = SFR_underwater_demons
+		icon = GFX_focus_generic_midget_submarines
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_build_submarines }
+		relative_position_id = SFR_build_submarines
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#保卫祖国的海岸
+		id = SFR_defend_the_homeland_s_coast
+		icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = SFR_destroyer_fleet }
+		prerequisite = { focus = SFR_underwater_demons }
+		relative_position_id = SFR_destroyer_fleet
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+}

@@ -1,0 +1,111 @@
+leader_traits = {
+
+	NCD_republic_struggler = {		#共和挣扎者
+		random = no
+		
+		stability_factor = 0.15
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_extremist_militarists = {		#极端军国者
+		random = no
+		
+		stability_factor = -0.2
+		war_support_factor = 0.1
+		conscription = 0.005
+		army_org_factor = 0.05
+		training_time_factor = -0.05
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_trusted_by_people = {		#人民所信赖
+		random = no
+		
+		stability_weekly = 0.002
+		political_power_gain = 0.02
+		authoritarian_republican_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_stable_royal_family_and_gov = {		#安稳的皇室与政府
+		random = no
+		
+		stability_factor = 0.05
+		political_power_gain = 0.02
+		authoritarian_republican_drift = 0.05
+		research_speed_factor = 0.05
+		industrial_capacity_factory = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_fearing_wars = {		#恐战者
+		random = no
+		
+		war_support_factor = -0.1
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_silent_supporter = {		#默默支持者
+		random = no
+		
+		authoritarian_nationalism_drift = 0.02
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_commi_cearer = {		#共产存怜者
+		random = no
+		
+		war_support_factor = -0.05
+		stability_factor = 0.08
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	NCD_creepy_smiler = {		#暗中窃笑者
+		random = no
+		
+		war_support_factor = -0.05
+		stability_factor = 0.08
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_military_organizer = {		#军队组织者
+		random = no
+		
+		war_support_factor = -0.05
+		stability_factor = 0.08
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,89 @@
+﻿capital = 118
+
+oob = "NCD"
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = conservative_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 5
+	worldunion_democrat = 10
+	liberal_republican = 5
+	conservative_republican = 18
+	authoritarian_republican = 32
+	national_socialist = 0
+	authoritarian_nationalism = 20
+	paternal_autocrat = 10
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	defensive_function_imrpovement = 1
+	tech_support = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+
+add_ideas = NCD_support_from_uk
+add_ideas = NCD_ubstable_army_and_politics
+add_ideas = NCD_dying_republic
+add_ideas = NCD_collapsed_economy
+
+recruit_character = NCD_none_1
+recruit_character = NCD_none_2
+recruit_character = NCD_west_spear_1
+recruit_character = NCD_west_spear_2
+recruit_character = NCD_ottacite_redd
+recruit_character = NCD_nalle_westerle_1
+recruit_character = NCD_nalle_westerle_2
+recruit_character = NCD_temp_order_committee
+recruit_character = NCD_per_henschel
+recruit_character = NCD_heinrich_tzur_1
+recruit_character = NCD_heinrich_tzur_2
+recruit_character = NCD_artus_tzur
+recruit_character = NCD_none_3
+recruit_character = NCD_none_4
+recruit_character = NCD_none_5
+recruit_character = NCD_kerr_celydrea
+#顾问
+recruit_character = NCD_uller_spepp
+recruit_character = NCD_portia_hall
+recruit_character = NCD_vitensiane_helenl
+recruit_character = NCD_kirsten_scherrer
+recruit_character = NCD_hispaniola
+recruit_character = NCD_ck_kljalfen
+#将领#
+recruit_character = NCD_raphael_bern
+recruit_character = NCD_heinie_zell
+recruit_character = NCD_felix_hull
+recruit_character = NCD_carl_stebbingsen
+recruit_character = NCD_kristin_wallen
+recruit_character = NCD_LingChete
+recruit_character = NCD_clivia_celidia
+recruit_character = NCD_anstre_cheliat
+
+add_ideas = NCD_nalle_westerle_idea

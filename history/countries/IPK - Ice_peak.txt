@@ -1,0 +1,75 @@
+﻿capital = 276
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 2
+
+set_oob = IPK
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 10
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 90
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	light_magic_shield = 1
+	superior_firepower = 1
+}
+
+add_ideas = {
+	CB_dangerous_borders
+	CB_central_bastia_defense_agreement
+	IPK_rule_of_gof
+	IPK_union_integrity_4
+	IPK_project_Hephaestus
+	IPK_divided_regions
+	IPK_1997_military_act
+	IPK_neustregendorf_bombing
+}
+
+create_faction = MIDDLE_BASTIA_DEFENSIVE_FACTION
+add_to_faction = TCL
+add_to_faction = BCC
+
+recruit_character = IPK_william_lyman

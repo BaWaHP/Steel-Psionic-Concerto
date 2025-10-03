@@ -1,0 +1,36 @@
+MGC_balaton_river_defense_line_west = {	#巴拉顿河防线-西段
+	enable = { always = yes }
+	icon = GFX_idea_MGC_balaton_river_defense_line_west
+
+	state_production_speed_bunker_factor = 0.15
+}
+
+MGC_balaton_river_defense_line_mid_north = {	#巴拉顿河防线-中北段
+	enable = { always = yes }
+	icon = GFX_idea_MGC_balaton_river_defense_line_mid_north
+
+	state_production_speed_bunker_factor = 0.15
+}
+
+MGC_emerging_capitals_pudrasia = {	#新兴之都 卜德佩西亚
+	enable = { always = yes }
+	icon = GFX_idea_MGC_emerging_capitals_pudrasia
+
+	state_production_speed_buildings_factor = 0.15
+	recruitable_population_factor = -0.5
+}
+
+MGC_past_capitals_navia = {	#过去之都 纳维亚
+	enable = { always = yes }
+	icon = GFX_idea_MGC_past_capitals_navia
+
+	state_production_speed_buildings_factor = -0.15
+	recruitable_population_factor = 0.2
+}
+
+MGC_dream_of_conquest_dijin = {	#征服狄银之梦
+	enable = { always = yes }
+	icon = GFX_idea_MGC_dream_of_conquest_dijin
+
+	recruitable_population_factor = 0.1
+}

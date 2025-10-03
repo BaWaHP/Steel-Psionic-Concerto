@@ -1,0 +1,211 @@
+﻿capital = 309
+
+oob = "LNR"
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_naval_oob = "LNR_Naval"
+	else = {
+		set_naval_oob = "LNR_Naval_Legacy"
+	}
+}
+
+set_convoys = 20
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = conservative_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 9
+	revolutionary_communism = 12
+	worldunion_socialist = 9
+	worldunion_democrat = 9
+	liberal_republican = 14
+	conservative_republican = 18
+	authoritarian_republican = 15
+	national_socialist = 6
+	authoritarian_nationalism = 0
+	paternal_autocrat = 8
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	caster_recon_weapons_1 = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "驱逐舰"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "巡洋舰"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+	}
+}
+
+add_ideas = {
+	LNR_clan_influence
+	LNR_urban_rural_contradictione
+	#LNR_economic_crisis
+	LNR_chaotic_political_situation
+	LNR_mountain_horror
+	LNR_military_reform_commission
+}
+
+#领导人#
+recruit_character = LNR_ginsberg_depp
+recruit_character = LNR_sorrell_capone
+recruit_character = LNR_trisco_carpe
+recruit_character = LNR_gava_adul
+recruit_character = LNR_viru_or_veru
+recruit_character = LNR_maurice_moller
+recruit_character = LNR_ritchie_van_imonto_okkonen
+recruit_character = LNR_spicer_seck
+recruit_character = LNR_heche_van_sko_oknin_1
+recruit_character = LNR_heche_van_sko_oknin_2
+recruit_character = LNR_antoma_oknin
+#内阁#
+recruit_character = LNR_jacques_van_nath_oaknin
+recruit_character = LNR_stoke_van_pink_oknin
+recruit_character = LNR_augustus_pitt
+recruit_character = LNR_andrew_thomas
+recruit_character = LNR_vic_robert
+recruit_character = LNR_nick_schindler
+recruit_character = LNR_bradick_oknin
+#recruit_character = LNR_military_reform_commission
+recruit_character = LNR_high_battle_mage_association
+recruit_character = LNR_damoy_oknin
+recruit_character = LNR_karl_bowen
+recruit_character = LNR_subunin_cleio
+recruit_character = LNR_sanse_claude
+recruit_character = LNR_kechen_forde
+recruit_character = LNR_dreke_boru
+#将领#
+recruit_character = LNR_midler_hess_vilvano
+
+#activate_advisor = LNR_military_reform_commission_idea

@@ -1,0 +1,24 @@
+spriteTypes = {	
+	###通用随机###
+	spriteType = {
+		name = "GFX_trait_artillery_general"
+		texturefile = "gfx/interface/traits/trait_bearer_of_artillery.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_raider_expert"
+		texturefile = "gfx/interface/traits/trait_trickster.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_defense_expert"
+		texturefile = "gfx/interface/traits/trait_defensive_doctrine.dds"
+		legacy_lazy_load = no
+	}
+	###特殊###
+	spriteType = {
+		name = "GFX_trait_blood_clan"
+		texturefile = "gfx/interface/traits/personal/trait_militias_officer.dds"
+		legacy_lazy_load = no
+	}
+}

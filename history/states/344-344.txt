@@ -1,0 +1,42 @@
+
+state={
+	id=344
+	name="STATE_344"
+	resources={
+		oil=24.000
+		steel=12.000
+	}
+
+	history={
+		owner = ROK
+		add_core_of = ROK
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 3
+			air_base = 4
+			anti_air_building = 2
+			19876 = {
+				land_facility = 1
+			}
+		}
+		victory_points = {
+			19876 30
+		}
+		victory_points = {
+			11182 8
+		}
+		victory_points = {
+			19868 8 
+		}
+
+	}
+
+	provinces={
+		3769 3828 5307 5940 8515 10315 11016 11182 19726 19803 19868 19876 19948 20052 20081 
+	}
+	manpower=4560000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

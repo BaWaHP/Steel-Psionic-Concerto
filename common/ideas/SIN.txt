@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+
+		SIN_oil_crop_planting_base = {		#油料作物种植基地
+			picture = LIT_invested_in_farms
+			allowed = { 
+				original_tag = SIN
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = -0.1
+				global_building_slots_factor = -0.1
+				monthly_agricultural_development_process = 2
+			}
+		}
+
+	}
+}

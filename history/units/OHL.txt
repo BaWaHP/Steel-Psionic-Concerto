@@ -1,0 +1,106 @@
+﻿###templates###
+division_template = {
+	name = "雀鸟军团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "辅助军团"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "雀鸟军团"
+		location = 15330
+		division_template = "雀鸟军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "雀鸟军团"
+		location = 14974
+		division_template = "雀鸟军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "雀鸟军团"
+		location = 15046
+		division_template = "雀鸟军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "辅助军团"
+		location = 15330
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 14974
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 15046
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 15093
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 5026
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 15247
+		division_template = "辅助军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+}

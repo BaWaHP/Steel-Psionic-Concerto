@@ -1,0 +1,26 @@
+
+state={
+	id=102
+	name="STATE_102"
+	resources = {
+		oil = 4
+		steel = 8
+	}
+	provinces={
+		2300 3033 4991 7604 7943 8572 10312 15130 15176 15177 15263 15264 15283 15355 
+	}
+	history = {
+		owner = RMN
+		add_core_of = RMN
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10312 3
+		}
+	}
+	manpower = 294943
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

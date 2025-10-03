@@ -1,0 +1,40 @@
+state={
+	id=218
+	name="STATE_218"
+	
+	resources = {
+		rubber = 10
+		oil = 20
+	}
+
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 3
+			air_base = 6
+			234 = {
+				naval_base = 6
+			}
+			8215 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			234 8
+		}
+		victory_points = {
+			8215 2
+		}
+	}
+	
+	provinces={
+		234 4562 6887 7699 8215 21861 21872 
+	}
+	manpower=1130000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,126 @@
+﻿capital = 11
+
+oob = "SFR"
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = worldunion_socialist
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 10
+	revolutionary_communism = 20
+	worldunion_socialist = 30
+	worldunion_democrat = 20
+	liberal_republican = 5
+	conservative_republican = 5
+	authoritarian_republican = 5
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 5
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+recruit_character = SFR_YeWenshi
+recruit_character = SFR_LinYouzhi
+recruit_character = SFR_ChenJian
+recruit_character = SFR_ZhaoYongjun
+recruit_character = SFR_LinQinlan
+recruit_character = SFR_ZhangYixin
+
+recruit_character = SFR_XuHongbo
+
+recruit_character = SFR_LinHongyun
+recruit_character = SFR_ZhaoTieshan
+recruit_character = SFR_SuBaihe
+recruit_character = SFR_ChenQimin
+recruit_character = SFR_WuQiuyue
+recruit_character = SFR_ZhangBeidou
+recruit_character = SFR_TangHongyin
+recruit_character = SFR_ZhouTiegui
+recruit_character = SFR_FangQingnang
+recruit_character = SFR_LuJinglei
+recruit_character = SFR_QiHongshan
+recruit_character = SFR_WeiHanjiang
+recruit_character = SFR_ShiKaijia
+recruit_character = SFR_NieChixiao
+recruit_character = SFR_ChenJianfeng
+recruit_character = SFR_FangMingyuan
+recruit_character = SFR_ZhouHailan
+recruit_character = SFR_ZhengTiechui
+recruit_character = SFR_Baihua
+recruit_character = SFR_CaiJuemin
+recruit_character = SFR_HeJingtao
+
+recruit_character = SFR_ZhouTianYi
+recruit_character = SFR_LinMoyun
+recruit_character = SFR_WuZhenxiao
+recruit_character = SFR_ShenYanhui
+recruit_character = SFR_QingYuanfeng
+recruit_character = SFR_HeShaoyang
+recruit_character = SFR_XieChangkong
+
+recruit_character = SFR_XuYuanyang
+recruit_character = SFR_FangZhenhai
+recruit_character = SFR_LuHongzhou
+recruit_character = SFR_ChengWanli
+recruit_character = SFR_QiuHangfeng
+recruit_character = SFR_GaoLinbo
+recruit_character = SFR_YeXiangtao
+recruit_character = SFR_HanDinyang
+recruit_character = SFR_SongLifeng
+
+recruit_character = SFR_LiaoChilang
+recruit_character = SFR_ChengZhenhai
+recruit_character = SFR_LinQiulu
+
+recruit_character = SFR_JiangMingzhe
+recruit_character = SFR_LuWenyin
+recruit_character = SFR_FangJimin
+recruit_character = SFR_ZhouHongmei
+recruit_character = SFR_ChenJuexin
+recruit_character = SFR_ShenSheng
+recruit_character = SFR_WuZhenggang
+recruit_character = SFR_LinShaobai
+recruit_character = SFR_SuJinqiu
+recruit_character = SFR_ZhaoGeng
+recruit_character = SFR_HeHong
+
+###开局民族精神###
+add_ideas = {
+	#民族精神
+	SFR_revenge_fury
+	SFR_divided_bases
+	SFR_holodomor
+	SFR_guerrilla_army
+	#内阁
+	SFR_LinYouzhi_idea
+}

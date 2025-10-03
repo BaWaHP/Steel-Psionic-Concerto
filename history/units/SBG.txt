@@ -1,0 +1,77 @@
+﻿division_template = {
+	name = "皇家卫队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方民团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "皇家卫队一师"
+		location = 5629
+		division_template = "皇家卫队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "皇家卫队二师"
+		location = 16228
+		division_template = "皇家卫队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团一团"
+		location = 4249
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团二团"
+		location = 10494
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团三团"
+		location = 15637
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团四团"
+		location = 10707
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+}

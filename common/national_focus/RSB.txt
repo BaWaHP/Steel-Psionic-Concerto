@@ -1,0 +1,1129 @@
+focus_tree = {
+	id = RSB_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RSB
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#1997年度财务报告
+		id = RSB_financial_report_for_1997
+		icon = GFX_goal_new_treaty
+		x = 5
+		y = 0
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.05
+			SPC_living_standard_development_amount_down_2 = yes
+		}
+	}
+
+	focus = {	#召开年度报告分析会议
+		id = RSB_convene_annual_report_meetings
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_financial_report_for_1997 }
+		relative_position_id = RSB_financial_report_for_1997
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = RSB_maligned_government
+				add_idea = RSB_maligned_government_2
+			}
+		}
+	}
+
+	focus = {	#1998财务预算调整
+		id = RSB_1998_financial_budget_adjust
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_convene_annual_report_meetings }
+		relative_position_id = RSB_convene_annual_report_meetings
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.1
+				days = 1
+			}
+			add_stability = 0.05
+			add_political_power = 20
+			swap_ideas = {
+				remove_idea = RSB_military_overspending
+				add_idea = RSB_military_overspending_2
+			}
+		}
+	}
+
+	focus = {	#七河人在哪里？
+		id = RSB_wheres_zhe_people
+		icon = GFX_goal_governor_question
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_1998_financial_budget_adjust }
+		relative_position_id = RSB_1998_financial_budget_adjust
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RSB_zhe_rsb_friendly_treaty
+				add_idea = RSB_zhe_rsb_friendly_treaty_2
+			}
+		}
+	}
+
+	focus = {	#要求中巴稳定局势
+		id = RSB_ask_central_bastia_stabalize
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_wheres_zhe_people }
+		relative_position_id = RSB_wheres_zhe_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.2
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#筹建健康财政委员会
+		id = RSB_health_financial_committe
+		icon = GFX_Generic_Loadsamoney
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_ask_central_bastia_stabalize }
+		relative_position_id = RSB_ask_central_bastia_stabalize
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 0.1
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			swap_ideas = {
+				remove_idea = RSB_maligned_government_2
+				add_idea = RSB_maligned_government_3
+			}
+			RSB_financial_health_committe_setup = yes
+		}
+	}
+
+	focus = {	#游说政客
+		id = RSB_lobby_politicians
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_health_financial_committe }
+		relative_position_id = RSB_health_financial_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -30
+			swap_ideas = {
+				remove_idea = RSB_maligned_government_3
+				add_idea = RSB_maligned_government_4
+			}
+		}
+	}
+
+	focus = {	#打理关系
+		id = RSB_manage_relationships
+		icon = GFX_Generic_Secret_Meeting
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_lobby_politicians }
+		relative_position_id = RSB_lobby_politicians
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 0.1
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#疏通脉络
+		id = RSB_clear_the_system
+		icon = GFX_Generic_Pass_Legislation
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_manage_relationships }
+		relative_position_id = RSB_manage_relationships
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.3
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#挑选专家
+		id = RSB_choose_experts
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_health_financial_committe }
+		relative_position_id = RSB_health_financial_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.4
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#明确目标
+		id = RSB_clearify_targets
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_choose_experts }
+		relative_position_id = RSB_choose_experts
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = RSB_clearify_targets_tt
+			swap_ideas = {
+				remove_idea = RSB_military_overspending_2
+				add_idea = RSB_military_overspending_3
+			}
+		}
+	}
+
+	focus = {	#调拨资金
+		id = RSB_funds_allocated
+		icon = GFX_goal_generic_seize_money
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_clearify_targets }
+		relative_position_id = RSB_clearify_targets
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 0.5
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			#add_to_variable = {
+			#	var = RSB_financial_budget_income_max
+			#	value = 5
+			#	tooltip = RSB_financial_budget_income_max_tt
+			#}
+			RSB_assets_cal = yes
+		}
+	}
+
+	focus = {	#开展工作
+		id = RSB_get_to_work
+		icon = GFX_Generic_Checkmate
+		x = 2
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_clear_the_system }
+		prerequisite = { focus = RSB_funds_allocated }
+		relative_position_id = RSB_clear_the_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 20
+			add_stability = 0.05
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 0.2
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+		}
+	}
+
+	focus = {	#加强中巴军费开支
+		id = RSB_reinforce_central_bastia_military_fees
+		icon = GFX_focus_generic_tank_air_support
+		x = -2
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_get_to_work }
+		relative_position_id = RSB_get_to_work
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.5
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#维护大铁路
+		id = RSB_maintenance_of_great_railway
+		icon = GFX_focus_generic_railroad
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_reinforce_central_bastia_military_fees }
+		relative_position_id = RSB_reinforce_central_bastia_military_fees
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 1
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			add_to_variable = { RSB_financial_health_committe_psbf = 0.05 }
+			custom_effect_tooltip = RSB_maintenance_of_great_railway_tt
+			if = {
+				limit = { has_idea = RSB_military_overspending_3_r }
+				swap_ideas = {
+					remove_idea = RSB_military_overspending_3_r
+					add_idea = RSB_military_overspending_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = RSB_military_overspending_3
+					add_idea = RSB_military_overspending_3_l
+				}
+			}
+		}
+	}
+
+	focus = {	#资助鲁萨尔经济
+		id = RSB_fund_rsu_econ
+		icon = GFX_Generic_Factory_Planning
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_maintenance_of_great_railway }
+		relative_position_id = RSB_maintenance_of_great_railway
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 0.5
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			RSU = {
+				add_opinion_modifier = {
+					target = RSB
+					modifier = RSB_support_us
+				}
+			}
+		}
+	}
+
+	focus = {	#向七河人做出承诺
+		id = RSB_promises_to_zhe
+		icon = GFX_Generic_Legislation
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_fund_rsu_econ }
+		relative_position_id = RSB_fund_rsu_econ
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.6
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#增加税费
+		id = RSB_increase_taxes
+		icon = GFX_goal_generic_price_controls
+		x = 2
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_get_to_work }
+		relative_position_id = RSB_get_to_work
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.8
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#裁剪公务员
+		id = RSB_fire_civil_servants
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_increase_taxes }
+		relative_position_id = RSB_increase_taxes
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.9
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#缩编军队
+		id = RSB_shrink_armies
+		icon = GFX_Generic_Low_Morale
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_fire_civil_servants }
+		relative_position_id = RSB_fire_civil_servants
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.10
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#减少福利
+		id = RSB_cut_welfares
+		icon = GFX_Generic_Ripping_Papers
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_shrink_armies }
+		relative_position_id = RSB_shrink_armies
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.11
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#万事大吉？
+		id = RSB_everything_good
+		icon = GFX_Generic_Mutual_Cooperation
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			has_country_flag = RSB_focus_2
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_promises_to_zhe }
+		prerequisite = { focus = RSB_cut_welfares }
+		relative_position_id = RSB_promises_to_zhe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#你们在干什么？！
+		id = RSB_what_are_you_doing
+		icon = GFX_goal_Generic_Enough
+		x = 10
+		y = 0
+		cost = 1
+
+		available = {
+		}
+
+		allow_branch = {
+			has_country_flag = RSB_focus_2
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_income_max
+				value = -20
+				tooltip = RSB_financial_budget_income_max_tt
+			}
+			RSB_assets_cal = yes
+			add_stability = -0.08
+		}
+	}
+
+	focus = {	#提供支援
+		id = RSB_provide_support
+		icon = GFX_goal_volunteer_alliance
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_what_are_you_doing }
+		relative_position_id = RSB_what_are_you_doing
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 5
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			RCC = {
+				country_event = {
+					id = RSB.12
+					days = 1
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 150
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 10
+				}
+			}
+		}
+	}
+
+	focus = {	#资金换进口
+		id = RSB_money_for_import
+		icon = GFX_goal_generic_loans
+		x = -1
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_provide_support }
+		relative_position_id = RSB_provide_support
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = -2
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			add_political_power = 20
+			326 = {
+				add_resource = {
+					type = tungsten
+					amount = 7
+				}
+				add_resource = {
+					type = aluminium
+					amount = 4
+				}
+			}
+		}
+	}
+
+	focus = {	#挽救出口
+		id = RSB_saving_export
+		icon = GFX_Focus_Export_Economy
+		x = 1
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_provide_support }
+		relative_position_id = RSB_provide_support
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = RSB_financial_budget_asset
+				value = 1
+				tooltip = RSB_financial_budget_asset_tt
+			}
+			RSB_assets_cal = yes
+			add_political_power = -40
+			custom_effect_tooltip = RSB_saving_export_tt
+			add_to_variable = { RSB_financial_health_committe_cgf = -0.04 }
+		}
+	}
+
+	focus = {	#安全了？
+		id = RSB_safe_now
+		icon = GFX_Generic_Lookout
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+		}
+
+		bypass = {
+			has_country_flag = RSB_focus_3
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_money_for_import }
+		prerequisite = { focus = RSB_saving_export }
+		relative_position_id = RSB_money_for_import
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = RSB_safe_now_desc
+		}
+	}
+
+	focus = {	#天崩地裂
+		id = RSB_end_of_world
+		icon = GFX_Generic_war_skeleton
+		x = 15
+		y = 0
+		cost = 1
+
+		available = {
+		}
+
+		allow_branch = {
+			has_country_flag = RSB_focus_3
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_to_variable = {
+				var = RSB_financial_budget_income_max
+				value = -50
+				tooltip = RSB_financial_budget_income_max_tt
+			}
+			RSB_assets_cal = yes
+			SPC_living_standard_development_amount_down_2 = yes
+			add_ideas = MP_only_our_voice
+		}
+	}
+
+	focus = {	#熊熊烈焰
+		id = RSB_burning_fire
+		icon = GFX_Generic_Molotov_Cocktail
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_end_of_world }
+		relative_position_id = RSB_end_of_world
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			SPC_industrial_development_amount_down_2 = yes
+			SPC_agricultural_development_amount_down_2 = yes
+			add_ideas = SP_sybolized_funds
+		}
+	}
+
+	focus = {	#杯水车薪
+		id = RSB_barely_nothing
+		icon = GFX_Generic_Klansman
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_burning_fire }
+		relative_position_id = RSB_burning_fire
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 50
+			SPC_military_development_amount_up_2 = yes
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+
+	focus = {	#国将不国
+		id = RSB_end_of_our_nation
+		icon = GFX_goal_split_helmet
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_barely_nothing }
+		relative_position_id = RSB_barely_nothing
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.500
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#应急法案
+		id = RSB_emergency_law
+		icon = GFX_goal_generic_forceful_treaty
+		x = 20
+		y = 0
+		cost = 2.2
+
+		available = {
+		}
+
+		allow_branch = {
+			has_country_flag = RSB_focus_4
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RSB.504
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#暗潮涌动
+		id = RSB_undercurrent_is_rising
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_emergency_law }
+		relative_position_id = RSB_emergency_law
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = RSB.505
+		}
+
+		completion_reward = {
+			country_event = RSB.506
+		}
+	}
+
+	focus = {	#动员警察
+		id = RSB_mobilize_cops
+		icon = GFX_focus_CONGO_congo_army
+		x = 0
+		y = 1
+		cost = 4.4
+
+		cancelable = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSB_undercurrent_is_rising }
+		relative_position_id = RSB_undercurrent_is_rising
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			division_template = {
+				name = "城市武装警察"
+				regiments = {
+					police_infantry = { x = 0 y = 0 }
+					melee_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+				}
+			}
+			324 = {
+				create_unit = {
+					division = "name = \"武装警队01\" division_template = \"城市武装警察\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = RSB
+					prioritize_location = 20704
+				}
+			}
+			325 = {
+				create_unit = {
+					division = "name = \"武装警队02\" division_template = \"城市武装警察\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = RSB
+					prioritize_location = 4073
+				}
+			}
+			331 = {
+				create_unit = {
+					division = "name = \"武装警队03\" division_template = \"城市武装警察\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = RSB
+					prioritize_location = 7246
+				}
+			}
+			332 = {
+				create_unit = {
+					division = "name = \"武装警队04\" division_template = \"城市武装警察\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = RSB
+					prioritize_location = 20322
+				}
+			}
+			334 = {
+				create_unit = {
+					division = "name = \"武装警队05\" division_template = \"城市武装警察\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = RSB
+					prioritize_location = 20442
+				}
+			}
+			country_event = {
+				id = RSB.508
+				days = 1
+			}
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+
+defined_text = {  #斯坦瓦夫退出选王
+	name = KOA_stanwaf_exit_txt
+	text = {
+		trigger = {
+			not ={ has_country_flag = FLAG_KOA_stanwaf_exit }
+		}
+		localization_key = KOA_stanwaf_exit_txt_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = FLAG_KOA_stanwaf_exit			
+		}
+		localization_key = KOA_stanwaf_exit_txt_2
+	}	
+}

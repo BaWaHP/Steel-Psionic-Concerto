@@ -1,0 +1,23 @@
+characters={
+
+	ASR_melidia_heartfilia = {		#梅利迪亚·哈特菲利亚
+   		name = ASR_melidia_heartfilia
+   		portraits = {
+   			civilian = {
+   				large="GFX_ASR_melidia_heartfilia"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_ASR_melidia_heartfilia"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = ASR_melidia_heartfilia_desc
+   			ideology = adventurers_league
+   			traits = { ASR_northernist ASR_fire_of_serath }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

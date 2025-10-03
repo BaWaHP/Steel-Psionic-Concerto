@@ -1,0 +1,33 @@
+RSB_federal_war_arsenal = { 	#联邦战争军火库
+	icon = ger_military_buildup
+	#picture = GFX_decision_cat_picture_faction_management_bulgaria
+	allowed = { OR = { tag = RSB tag = ZBC tag = UAC } }	
+	visible = { has_country_flag = RSB_federal_war_arsenal_on }
+	visible_when_empty = yes
+	priority = 100
+}
+
+RSB_federal_financial_budget = { 	#国家财政状况
+	#scripted_gui = RSB_federal_financial_budget_ui
+	icon = generic_economy
+	#picture = GFX_decision_cat_picture_faction_management_bulgaria
+	allowed = { original_tag = RSB }	
+	visible = { has_country_flag = RSB_federal_financial_budget_on }
+	visible_when_empty = yes
+	priority = 100
+}
+
+RSB_politic_sit = { 	#政治状况
+	icon = generic_propaganda
+	allowed = { original_tag = RSB }	
+	visible = {	}
+	visible_when_empty = yes
+	priority = 100
+}
+
+RSB_suppress_rebellion = { 	#镇压叛乱
+	icon = GFX_decision_category_NOR_fascist_deploy_prep
+	allowed = { original_tag = RSB }	
+	visible = {	}
+	priority = 100
+}

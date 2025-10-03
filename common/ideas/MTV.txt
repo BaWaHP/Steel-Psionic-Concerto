@@ -1,0 +1,154 @@
+ideas = {
+	country = {
+
+		MTV_dust_to_dust = {		#尘归尘……
+			allowed = { tag = MTV }
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -1
+				production_speed_buildings_factor = -1
+				political_power_factor = -0.5
+			}
+		}
+
+		MTV_ash_to_ash = {		#……土归土
+			allowed = { tag = MTV }
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -1
+				industrial_capacity_factory = -0.3
+				production_factory_max_efficiency_factor = -0.4
+			}
+		}
+
+		MTV_uneasy_peace = {		#不安的宁静
+			allowed = { tag = MTV }
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain_mult = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				army_org_factor = -0.5
+				army_org_regain = -1
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		MTV_human_trafficking = {		#人口贩卖与器官黑市
+			allowed = { tag = MTV }
+			removal_cost = -1
+		}
+
+		MTV_man_in_hell_1 = {		#人间炼狱
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = -0.05
+				stability_factor = -0.2
+				production_factory_max_efficiency_factor = -0.1
+				political_power_gain = -0.1
+				planning_speed = 0.2
+				production_speed_buildings_factor = -2
+			}
+		}
+
+		MTV_man_in_hell_2 = {		#人间炼狱
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = -0.1
+				stability_factor = -0.3
+				production_factory_max_efficiency_factor = -0.15
+				political_power_gain = -0.2
+				planning_speed = 0.1
+				production_speed_buildings_factor = -2
+			}
+		}
+	
+
+		MTV_man_in_hell_3 = {		#人间炼狱
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.2
+				army_org_regain = 0.2
+				army_attack_factor = 0.15
+				army_defence_factor = -0.15
+				stability_factor = -0.6
+				production_factory_max_efficiency_factor = -0.2
+				political_power_gain = -0.5
+				planning_speed = 0.05
+				production_speed_buildings_factor = -2
+			}
+		}
+
+	}
+
+	living_standard_development = {
+		law = yes
+		use_list_view = yes
+
+		MTV_elimination_society = {	#淘汰制社会
+			visible = { has_idea = MTV_IP_end_of_social_contract }
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				monthly_population = -0.3
+				conscription_factor = 0.75
+				stability_factor = -1
+				surrender_limit = 0.5
+				encryption_factor = -0.3
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	industry_policy = {
+		law = yes
+		use_list_view = yes
+
+		MTV_IP_end_of_social_contract = {	#社会契约论之终
+			visible = { has_idea = MTV_IP_end_of_social_contract }
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				stability_factor = -0.2
+				monthly_population = -0.05
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+				monthly_industrial_development_process = -6
+				monthly_living_standard_development_process = -6
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cost = 0
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+}

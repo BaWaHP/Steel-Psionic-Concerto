@@ -1,0 +1,29 @@
+
+state={
+	id=177
+	name="STATE_177"
+
+	resources = {
+		aluminium = 2
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 1
+			10842 = { bunker = 1 }
+		}
+		victory_points = {
+			10842 2
+		}
+	}
+
+	provinces={
+		8256 8439 10676 10824 16706 16841 16868 16975 
+	}
+	manpower=312200
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

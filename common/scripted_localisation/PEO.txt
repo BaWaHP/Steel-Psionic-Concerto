@@ -1,0 +1,117 @@
+defined_text = {
+	name = PEO_get_congress_status
+	text = {
+		trigger = {
+			check_variable = { PEO_congress_status_var = 0 }
+		}
+		localization_key = PEO_get_congress_status_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_congress_status_var = 1 }
+		}
+		localization_key = PEO_get_congress_status_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_congress_status_var = 2 }
+		}
+		localization_key = PEO_get_congress_status_3
+	}
+}
+
+defined_text = {
+	name = PEO_get_nationalism_emotions
+	text = {
+		trigger = {
+			check_variable = { PEO_nationalism_emotions_var = 0 }
+		}
+		localization_key = PEO_get_nationalism_emotions_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_nationalism_emotions_var = 1 }
+		}
+		localization_key = PEO_get_nationalism_emotions_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_nationalism_emotions_var = 2 }
+		}
+		localization_key = PEO_get_nationalism_emotions_3
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_nationalism_emotions_var = 3 }
+		}
+		localization_key = PEO_get_nationalism_emotions_4
+	}
+}
+
+defined_text = {
+	name = PEO_get_palace_of_republic_status
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 0 }
+		}
+		localization_key = PEO_get_palace_of_republic_status_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 1 }
+		}
+		localization_key = PEO_get_palace_of_republic_status_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 2 }
+		}
+		localization_key = PEO_get_palace_of_republic_status_3
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 3 }
+		}
+		localization_key = PEO_get_palace_of_republic_status_4
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+		localization_key = PEO_get_palace_of_republic_status_5
+	}
+}
+
+defined_text = {
+	name = PEO_get_other_departments_unhappy
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 0 }
+		}
+		localization_key = PEO_get_other_departments_unhappy_1
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 1 }
+		}
+		localization_key = PEO_get_other_departments_unhappy_2
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 2 }
+		}
+		localization_key = PEO_get_other_departments_unhappy_3
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 3 }
+		}
+		localization_key = PEO_get_other_departments_unhappy_4
+	}
+	text = {
+		trigger = {
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+		localization_key = PEO_get_other_departments_unhappy_5
+	}
+}

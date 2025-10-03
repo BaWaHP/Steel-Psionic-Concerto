@@ -1,0 +1,129 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "SFR_maintain_the_front_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 80 }
+
+		instantTextboxType = {
+			name = "Title_1"
+			position = { x = 53 y = 10 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = center
+			text = SFR_maintain_the_front_title_1_txt
+			pdx_tooltip = SFR_maintain_the_front_title_1_tt
+		}
+
+		iconType = {
+			name = "SFR_unity_bar"
+			spriteType = "GFX_SFR_unity_bar"
+			position = { x = 78 y = 40 }
+			frame = 100
+			pdx_tooltip = SFR_maintain_the_front_title_1_tt
+		}
+	}
+
+	containerWindowType = {
+		name = "SFR_land_reform_decisions_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 720 }
+
+		iconType = {
+			name = "SFR_land_reform_icon_1"
+			spriteType = "GFX_SFR_land_reform_icon_1"
+			position = { x = 23 y = 0 }
+			pdx_tooltip = SFH_land_reform_icon_1_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_1_flipped"
+			spriteType = "GFX_SFR_land_reform_icon_1_flipped"
+			position = { x = 23 y = 0 }
+			pdx_tooltip = SFH_land_reform_icon_1_flipped_tt
+		}
+
+		buttonType = {
+			name = "SFR_land_reform_btn_1"
+			position = { x = 23 y = 0 }
+			quadTextureSprite = "GFX_SFR_land_reform_btn_flipped_shine"
+			clicksound = click_default
+			pdx_tooltip = SFR_land_reform_btn_1_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_2"
+			spriteType = "GFX_SFR_land_reform_icon_2"
+			position = { x = 263 y = 0 }
+			pdx_tooltip = SFH_land_reform_icon_2_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_2_flipped"
+			spriteType = "GFX_SFR_land_reform_icon_2_flipped"
+			position = { x = 263 y = 0 }
+			pdx_tooltip = SFH_land_reform_icon_2_flipped_tt
+		}
+
+		buttonType = {
+			name = "SFR_land_reform_btn_2"
+			position = { x = 263 y = 0 }
+			quadTextureSprite = "GFX_SFR_land_reform_btn_flipped_shine"
+			clicksound = click_default
+			pdx_tooltip = SFR_land_reform_btn_2_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_3"
+			spriteType = "GFX_SFR_land_reform_icon_3"
+			position = { x = 23 y = 320 }
+			pdx_tooltip = SFH_land_reform_icon_3_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_3_flipped"
+			spriteType = "GFX_SFR_land_reform_icon_3_flipped"
+			position = { x = 23 y = 320 }
+			pdx_tooltip = SFH_land_reform_icon_3_flipped_tt
+		}
+
+		buttonType = {
+			name = "SFR_land_reform_btn_3"
+			position = { x = 23 y = 320 }
+			quadTextureSprite = "GFX_SFR_land_reform_btn_flipped_shine"
+			clicksound = click_default
+			pdx_tooltip = SFR_land_reform_btn_3_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_4"
+			spriteType = "GFX_SFR_land_reform_icon_4"
+			position = { x = 263 y = 320 }
+			pdx_tooltip = SFH_land_reform_icon_4_tt
+		}
+
+		iconType = {
+			name = "SFR_land_reform_icon_4_flipped"
+			spriteType = "GFX_SFR_land_reform_icon_4_flipped"
+			position = { x = 263 y = 320 }
+			pdx_tooltip = SFH_land_reform_icon_4_flipped_tt
+		}
+
+		buttonType = {
+			name = "SFR_land_reform_btn_4"
+			position = { x = 263 y = 320 }
+			quadTextureSprite = "GFX_SFR_land_reform_btn_flipped_shine"
+			clicksound = click_default
+			pdx_tooltip = SFR_land_reform_btn_4_tt
+		}
+
+		buttonType = {
+			name = "SFR_land_reform_btn_end"
+			position = { x = 38 y = 640 }
+			quadTextureSprite = "GFX_SFR_land_reform_btn_end_1"
+			clicksound = click_default
+			pdx_tooltip = SFR_land_reform_btn_end_tt
+		}
+	}
+}

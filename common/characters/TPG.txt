@@ -1,0 +1,307 @@
+characters = {
+	
+	TPG_Gilania_Alphonse_III = {		#“猩红皇帝”吉拉尼亚·阿方斯三世
+		name = TPG_Gilania_Alphonse_III
+		portraits = {
+			civilian = {
+				large="GFX_TPG_Gilania_Alphonse_III"
+				small="GFX_idea_TPG_Gilania_Alphonse_III"
+			}
+			army = {
+				large="GFX_TPG_Gilania_Alphonse_III"
+				small="GFX_idea_TPG_Gilania_Alphonse_III"
+			}
+		}
+		country_leader = {
+			ideology = crystal_court
+			traits = { TPG_the_everlasting TPG_bloody_emperor }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	TPG_isabella_hastings = {	#伊莎贝拉·黑斯廷斯
+		name = TPG_isabella_hastings
+		portraits = {
+			civilian = {
+				large="GFX_TPG_isabella_hastings"
+				small="GFX_idea_TPG_isabella_hastings"
+			}
+			army = {
+				large="GFX_TPG_isabella_hastings"
+				small="GFX_idea_TPG_isabella_hastings"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = TPG_isabella_hastings_idea
+			traits = { TPG_economic_commissionerr }
+		}
+	}
+
+	TPG_arabella_wentworth = {	#阿拉贝拉·温特沃斯
+		name = TPG_arabella_wentworth
+		portraits = {
+			civilian = {
+				large="GFX_TPG_arabella_wentworth"
+				small="GFX_idea_TPG_arabella_wentworth"
+			}
+			army = {
+				large="GFX_TPG_arabella_wentworth"
+				small="GFX_idea_TPG_arabella_wentworth"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = TPG_arabella_wentworth_idea
+			traits = { education_expert technocrat }
+		}
+	}
+
+	TPG_sebastian_worthington = {	#塞巴斯蒂安·沃辛顿
+		name = TPG_sebastian_worthington
+		portraits = {
+			civilian = {
+				large="GFX_TPG_sebastian_worthington"
+				small="GFX_idea_TPG_sebastian_worthington"
+			}
+			army = {
+				large="GFX_TPG_sebastian_worthington"
+				small="GFX_idea_TPG_sebastian_worthington"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = TPG_sebastian_worthington_idea
+			traits = { propaganda_expert prince_of_terror }
+		}
+	}
+
+	TPG_charlotte_pembroke = {	#夏洛特·彭布罗克
+		name = TPG_charlotte_pembroke
+		portraits = {
+			civilian = {
+				large="GFX_TPG_charlotte_pembroke"
+				small="GFX_idea_TPG_charlotte_pembroke"
+			}
+			army = {
+				large="GFX_TPG_charlotte_pembroke"
+				small="GFX_idea_TPG_charlotte_pembroke"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = TPG_charlotte_pembroke_idea
+			traits = { captain_of_industry war_industrialist }
+		}
+	}
+
+	TPG_henry_deVries = {	#亨利·德弗里斯
+		name = TPG_henry_deVries
+		portraits = {
+			civilian = {
+				large="GFX_TPG_henry_deVries"
+				small="GFX_idea_TPG_henry_deVries"
+			}
+			army = {
+				large="GFX_TPG_henry_deVries"
+				small="GFX_idea_TPG_henry_deVries"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = TPG_henry_deVries_idea
+			traits = { TPG_master_magician }
+			research_bonus = { enchantment_magic = 0.1 }
+		}
+	}
+
+	TPG_victoria_harrington = {	#维多利亚·哈林顿
+		name = TPG_victoria_harrington
+		portraits = {
+			civilian = {
+				large="GFX_TPG_victoria_harrington"
+				small="GFX_idea_TPG_victoria_harrington"
+			}
+			army = {
+				large="GFX_TPG_victoria_harrington"
+				small="GFX_idea_TPG_victoria_harrington"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = TPG_victoria_harrington_idea
+			traits = { national_idol }
+		}
+	}
+
+	TPG_amelia_sterling = {	#亚梅利亚·斯特林
+		name = TPG_amelia_sterling
+		portraits = {
+			civilian = {
+				large="GFX_TPG_amelia_sterling"
+				small="GFX_idea_TPG_amelia_sterling"
+			}
+			army = {
+				large="GFX_TPG_amelia_sterling"
+				small="GFX_idea_TPG_amelia_sterling"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = army_chief
+			idea_token = TPG_amelia_sterling_idea
+			traits = { army_chief_offensive_3 }
+		}
+		field_marshal = {
+			traits = {
+			    brilliant_strategist
+				aggressive_assaulter
+				offensive_doctrine
+				TPG_crystal
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	TPG_olivier_davis = {	#奥利维·戴维斯
+		name = TPG_olivier_davis
+		portraits = {
+			civilian = {
+				large="GFX_TPG_olivier_davis"
+				small="GFX_idea_TPG_olivier_davis"
+			}
+			army = {
+				large="GFX_TPG_olivier_davis"
+				small="GFX_idea_TPG_olivier_davis"
+			}
+		}
+		corps_commander={
+		    traits = { 
+			    brilliant_strategist
+				panzer_leader
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	
+	TPG_george_green  = {	#乔治·格林
+		name = TPG_george_green
+		portraits = {
+			civilian = {
+				large="GFX_TPG_george_green"
+				small="GFX_idea_TPG_george_green"
+			}
+			army = {
+				large="GFX_TPG_george_green"
+				small="GFX_idea_TPG_george_green"
+			}
+		}
+		corps_commander={
+		    traits = { 
+			    skilled_staffer
+				infantry_officer
+				TPG_crystal
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	
+	TPG_danny_loyd  = {	#丹尼·罗伊德
+		name = TPG_danny_loyd
+		portraits = {
+			civilian = {
+				large="GFX_TPG_danny_loyd"
+				small="GFX_idea_TPG_danny_loyd"
+			}
+			army = {
+				large="GFX_TPG_danny_loyd"
+				small="GFX_idea_TPG_danny_loyd"
+			}
+		}
+		corps_commander={
+		    traits = { 
+			    infantry_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	
+	TPG_james_duke   = {	#詹姆斯·杜克
+		name = TPG_james_duke
+		portraits = {
+			civilian = {
+				large="GFX_TPG_james_duke"
+				small="GFX_idea_TPG_james_duke"
+			}
+			army = {
+				large="GFX_TPG_james_duke"
+				small="GFX_idea_TPG_james_duke"
+			}
+		}
+		corps_commander={
+		    traits = { 
+			    harsh_leader
+				TPG_crystal
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	
+	TPG_william_anderson   = {	#威廉姆·安德森
+		name = TPG_william_anderson
+		portraits = {
+			civilian = {
+				large="GFX_TPG_william_anderson"
+				small="GFX_idea_TPG_william_anderson"
+			}
+			army = {
+				large="GFX_TPG_william_anderson"
+				small="GFX_idea_TPG_william_anderson"
+			}
+		}
+		corps_commander={
+		    traits = { 
+			    politically_connected
+				old_guard
+				TPG_crystal
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+}

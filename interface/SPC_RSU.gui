@@ -1,0 +1,54 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "RSU_full_union_development_plan_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 470 }
+
+		instantTextboxType = {
+			name = "RSU_full_union_development_plan_test"
+			position = { x = 55 y = 10 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = center
+			text = RSU_full_union_development_plan_test_txt
+		}
+		
+		iconType ={
+			name ="BG"
+			quadTextureSprite = "GFX_RSU_union_development_BG"
+			position = { x= 50 y = 50 }
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			position = { x = 128 y = 106 }
+			name = "RSU_union_development_north_button"
+			quadTextureSprite = "GFX_RSU_union_development_north_icon_0"
+			clicksound = click_checkbox
+		}
+
+		buttonType = {
+			position = { x = 299 y = 102 }
+			name = "RSU_union_development_east_button"
+			quadTextureSprite = "GFX_RSU_union_development_east_icon_0"
+			clicksound = click_checkbox
+		}
+
+		buttonType = {
+			position = { x = 180 y = 167 }
+			name = "RSU_union_development_south_button"
+			quadTextureSprite = "GFX_RSU_union_development_south_icon_0"
+			clicksound = click_checkbox
+		}
+
+		buttonType = {
+			position = { x = 15 y = 154 }
+			name = "RSU_union_development_west_button"
+			quadTextureSprite = "GFX_RSU_union_development_west_icon_0"
+			clicksound = click_checkbox
+		}
+	}
+
+}

@@ -1,0 +1,99 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+ARO_issue_of_Glonian_warmonger_dynamic_modifier = {	#格罗尼亚主战派问题
+	enable = { always = yes }
+
+	icon = GFX_idea_ARO_issue_of_Glonian_warmonger_dynamic_modifier
+
+	national_socialist_drift = ARO_issue_of_Glonian_warmonger_dynamic_modifier_nsd
+	authoritarian_nationalism_drift = ARO_issue_of_Glonian_warmonger_dynamic_modifier_and
+	political_power_factor = ARO_issue_of_Glonian_warmonger_dynamic_modifier_ppf
+	army_org_factor = ARO_issue_of_Glonian_warmonger_dynamic_modifier_aof
+	training_time_factor = ARO_issue_of_Glonian_warmonger_dynamic_modifier_ttf
+}
+
+ARO_issue_of_Lesnoden_republican_dynamic_modifier = {	#雷斯诺顿共和派问题
+	enable = { always = yes }
+
+	icon = GFX_idea_ARO_issue_of_Lesnoden_republican_dynamic_modifier
+
+	liberal_republican_drift = ARO_issue_of_Lesnoden_republican_dynamic_modifier_lrd
+	conservative_republican_drift = ARO_issue_of_Lesnoden_republican_dynamic_modifier_crd
+	conscription_factor = ARO_issue_of_Lesnoden_republican_dynamic_modifier_cf
+	political_power_factor = ARO_issue_of_Lesnoden_republican_dynamic_modifier_ppf
+	industrial_capacity_factory = ARO_issue_of_Lesnoden_republican_dynamic_modifier_icf
+}
+
+ARO_issue_of_Aurora_cultist_dynamic_modifier = {	#“拜光会”问题
+	enable = { always = yes }
+
+	icon = GFX_idea_ARO_issue_of_Aurora_cultist_dynamic_modifier
+
+	religious_extremism_drift = ARO_issue_of_Aurora_cultist_dynamic_modifier_red
+	conscription_factor = ARO_issue_of_Aurora_cultist_dynamic_modifier_cf
+	consumer_goods_factor = ARO_issue_of_Aurora_cultist_dynamic_modifier_cgf
+	monthly_agricultural_development_process = ARO_issue_of_Aurora_cultist_dynamic_modifier_madp
+}
+
+ARO_industrial_blueprint_dynamic_modifier = {	#工业蓝图
+	enable = { always = yes }
+
+	icon = GFX_ARO_industrial_blueprint_dynamic_modifier
+
+	production_speed_industrial_complex_factor = ARO_industrial_blueprint_dynamic_modifier_psicf
+	production_speed_arms_factory_factor = ARO_industrial_blueprint_dynamic_modifier_psaff
+	production_speed_infrastructure_factor = ARO_industrial_blueprint_dynamic_modifier_psif
+	consumer_goods_factor = ARO_industrial_blueprint_dynamic_modifier_cgf
+	global_building_slots_factor = ARO_industrial_blueprint_dynamic_modifier_gbsf
+	monthly_industrial_development_process = ARO_industrial_blueprint_dynamic_modifier_midp
+}
+
+ARO_reclaim_dawn_church = {	#重启曙光教会
+	enable = { always = yes }
+
+	icon = GFX_ARO_reclaim_dawn_church
+
+	research_speed_factor = ARO_reclaim_dawn_church_rsf
+	stability_factor = ARO_reclaim_dawn_church_sf
+	consumer_goods_factor = ARO_reclaim_dawn_church_cgf
+	monthly_living_standard_development_process = ARO_reclaim_dawn_church_mlsdp
+	monthly_research_development_process = ARO_reclaim_dawn_church_mrdp
+}
+
+ARO_struggle_of_religion = {	#教派斗争
+	enable = { always = yes }
+
+	icon = GFX_ARO_reclaim_dawn_church
+
+	recruitable_population  = ARO_struggle_of_religion_rp
+	recruitable_population_factor  = ARO_struggle_of_religion_rpf
+	local_factories  = ARO_struggle_of_religion_lf
+	mobilization_speed  = ARO_struggle_of_religion_ms
+	resistance_damage_to_garrison  = ARO_struggle_of_religion_rdtg
+	resistance_target  = ARO_struggle_of_religion_rt
+	compliance_growth  = ARO_struggle_of_religion_cg
+}

@@ -1,0 +1,23 @@
+characters={
+
+	IPK_william_lyman = {		#威廉·莱曼
+   		name = IPK_william_lyman
+   		portraits = {
+   			civilian = {
+   				large="GFX_IPK_william_lyman"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_IPK_william_lyman"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = IPK_william_lyman_desc
+   			ideology = colonial_government
+   			traits = { financial_expert }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

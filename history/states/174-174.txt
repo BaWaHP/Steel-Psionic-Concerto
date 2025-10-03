@@ -1,0 +1,27 @@
+
+state={
+	id=174
+	name="STATE_174"
+	provinces={
+		9939 10427 18289 18305 18336 18400 18458 
+	}
+	history = {
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			dockyard = 2
+			arms_factory = 2
+			18336 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			18336 15
+		}
+	}
+	manpower = 3615531
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+
+		UDT_rsb_elite_army = {		#南巴精锐
+			picture = chi_army_corruption3
+			allowed = { original_tag = UDT }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.2
+				supply_consumption_factor = 0.1
+			}
+		}
+
+		UDT_homeless_dog = {		#无根之木，丧家之犬
+			picture = SPR_disbanded_army
+			allowed = { original_tag = UDT }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.5
+				war_support_factor = -0.5
+				supply_factor = -0.2
+			}
+		}
+
+	}
+
+}

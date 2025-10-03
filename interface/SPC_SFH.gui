@@ -1,0 +1,401 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "SFH_future_of_the_nation_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 440 }
+
+		instantTextboxType = {
+			name = "SFH_future_Zhenghong_name_title"
+			position = { x = 180 y = 8 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = left
+			text = SFH_future_Zhenghong_name_title_txt
+		}
+
+		iconType = {
+			name ="SFH_future_Zhenghong_portraits"
+			quadTextureSprite = ""
+			position = { x = 172 y = 70 }
+			Orientation = "left"
+			pdx_tooltip = SFH_future_Zhenghong_portraits_desc
+		}
+
+		iconType = {
+			name ="SFH_future_Zhenghong_portraits_layout"
+			quadTextureSprite = "GFX_SFH_future_Zhenghong_portraits_layout"
+			position = { x = 130 y = 38 }
+			Orientation = "left"
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "SFH_preparation_title"
+			position = { x = 115 y = 308 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = left
+			text = SFH_preparation_title_txt
+			pdx_tooltip = SFH_preparation_title_tt
+		}
+
+		iconType = {
+			name = "SFH_preparation_bar_bg"
+			spriteType = "GFX_SFH_preparation_bar_bg"
+			position = { x = 127 y = 330 }
+			pdx_tooltip = SFH_preparation_bar_tt
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "SFH_preparation_bar"
+			spriteType = "GFX_SFH_preparation_bar"
+			position = { x = 136 y = 342 }
+			frame = 100
+			pdx_tooltip = SFH_preparation_bar_tt
+			scale = 1.5
+		}
+
+		instantTextboxType = {
+			name = "SFH_future_politics_intro"
+			position = { x = 62 y = 380 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = centre
+			text = SFH_future_politics_intro_txt
+			pdx_tooltip = SFH_future_politics_intro_tt
+		}
+	}
+
+	containerWindowType = {
+		name = "SFH_battle_over_territory_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 780 }
+
+		iconType = {
+			name = "SFH_bot_bg"
+			spriteType = "GFX_SFH_bot_bg"
+			position = { x = 70 y = 50 }
+		}
+
+		iconType = {
+			name = "SFH_bot_info"
+			spriteType = "GFX_SFH_bot_info"
+			position = { x = 70 y = 50 }
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_13"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_13_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_121"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_121_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_11"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_11_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_9"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_9_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_10"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_10_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_174"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_174_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_170"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_170_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_5"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_5_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_7"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_7_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_8"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_8_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_173"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_173_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_6"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_6_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_4"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_4_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_171"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_171_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_172"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_172_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_3"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_3_tt
+		}
+
+		buttonType = {
+			name = "SFH_bot_state_2"
+			position = { x = 70 y = 50 }
+			quadTextureSprite = "empty"
+			clicksound = click_default
+			pdx_tooltip = SFH_bot_state_2_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_13_selected"
+			spriteType = "GFX_SFH_bot_state_13_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_13_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_121_selected"
+			spriteType = "GFX_SFH_bot_state_121_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_121_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_11_selected"
+			spriteType = "GFX_SFH_bot_state_11_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_11_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_9_selected"
+			spriteType = "GFX_SFH_bot_state_9_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_9_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_10_selected"
+			spriteType = "GFX_SFH_bot_state_10_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_10_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_174_selected"
+			spriteType = "GFX_SFH_bot_state_174_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_174_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_170_selected"
+			spriteType = "GFX_SFH_bot_state_170_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_170_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_5_selected"
+			spriteType = "GFX_SFH_bot_state_5_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_5_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_7_selected"
+			spriteType = "GFX_SFH_bot_state_7_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_7_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_8_selected"
+			spriteType = "GFX_SFH_bot_state_8_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_8_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_173_selected"
+			spriteType = "GFX_SFH_bot_state_173_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_173_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_6_selected"
+			spriteType = "GFX_SFH_bot_state_6_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_6_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_4_selected"
+			spriteType = "GFX_SFH_bot_state_4_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_4_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_171_selected"
+			spriteType = "GFX_SFH_bot_state_171_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_171_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_172_selected"
+			spriteType = "GFX_SFH_bot_state_172_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_172_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_3_selected"
+			spriteType = "GFX_SFH_bot_state_3_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_3_tt
+		}
+
+		iconType = {
+			name = "SFH_bot_state_2_selected"
+			spriteType = "GFX_SFH_bot_state_2_selected"
+			position = { x = 70 y = 50 }
+			pdx_tooltip = SFH_bot_state_2_tt
+		}
+
+		containerwindowtype = {
+			name = "pie_chart_group"
+			position = { x = 35 y = 600 }
+	
+			iconType = {
+				name = "SFH_bot_piechart_3"
+				spriteType = "GFX_SFH_bot_piechart_3"
+				position = { x = 19 y = 18 }
+			}
+	
+			iconType = {
+				name = "SFH_bot_piechart_2"
+				spriteType = "GFX_SFH_bot_piechart_2"
+				position = { x = 19 y = 18 }
+			}
+	
+			iconType = {
+				name = "SFH_bot_piechart_1"
+				spriteType = "GFX_SFH_bot_piechart_1"
+				position = { x = 19 y = 18 }
+			}
+
+			iconType = {
+				name = "SFH_bot_piechart_overlay"
+				spriteType = "GFX_SFH_bot_piechart_overlay"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		containerwindowtype = {
+			name = "text_group"
+			position = { x = 135 y = 600 }
+
+			instantTextboxType = {
+				name = "SFH_bot_select_title"
+				position = { x = 0 y = 20 }
+				font = "hoi_24header"
+				maxWidth = 400
+				maxHeight = 30
+				format = centre
+				text = SFH_bot_select_title_txt
+			}
+
+			instantTextboxType = {
+				name = "SFH_bot_select_tt"
+				position = { x = 0 y = 60 }
+				font = "hoi_18mbs"
+				maxWidth = 400
+				maxHeight = 30
+				format = centre
+				text = SFH_bot_select_tt_txt
+			}
+		}
+		
+	}
+}

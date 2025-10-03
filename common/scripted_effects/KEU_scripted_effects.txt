@@ -1,0 +1,67 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_KEU_startup_effect = {
+	if = {
+		limit = {
+			tag = KEU
+		}
+		###政府法案###
+		add_ideas = disarmed_nation
+		add_ideas = no_standard_at_all
+		add_ideas = partial_economic_mobilisation
+		add_ideas = closed_economy
+		add_ideas = too_much_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = handcraft_industry
+		add_ideas = self_efficient_agriculture
+		add_ideas = primitive_army
+		add_ideas = death_everywhere
+		add_ideas = real_natural_environment
+		add_ideas = willing_research
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_decide_themselves
+		add_ideas = IP_no_intervention
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_no_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_we_are_watching_you
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_race_euqality
+		add_ideas = RAP_suppression
+		add_ideas = RLP_religious_state
+		add_ideas = SXP_recessing_policy
+		###事件###
+		country_event = {
+			id = KEU.1
+			days = 1
+		}
+	}
+}

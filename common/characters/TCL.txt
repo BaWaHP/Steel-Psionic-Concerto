@@ -1,0 +1,23 @@
+characters={
+
+	TCL_otto_lamberk = {		#奥托·兰博克
+   		name = TCL_otto_lamberk
+   		portraits = {
+   			civilian = {
+   				large="GFX_TCL_otto_lamberk"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_TCL_otto_lamberk"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = TCL_otto_lamberk_desc
+   			ideology = colonial_government
+   			traits = { TCL_the_exiler }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=294
+	name="STATE_294"
+	provinces={
+		502 1001 1025 3889 13767 13848 13869 
+	}
+	history={
+		owner = GOS
+		add_core_of = GOS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			13848 8
+		}
+		victory_points = {
+			13767 3
+		}
+	}
+	manpower=740000
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

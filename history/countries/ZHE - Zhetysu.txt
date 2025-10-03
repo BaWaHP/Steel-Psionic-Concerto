@@ -1,0 +1,188 @@
+﻿capital = 137
+
+oob = "ZHE"
+
+set_convoys = 0
+set_research_slots = 4
+set_stability = 0.5
+set_war_support = 0.5
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 8
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 10
+	liberal_republican = 13
+	conservative_republican = 16
+	authoritarian_republican = 34
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 19
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	early_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	armored_car1 = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	infantry_weapons = 1
+	modernized_infantry_uniforms = 1
+	armored_car2 = 1
+	anti_mob_blunt = 1
+	melee_weapons_I = 1
+	light_infantry_weapons = 1
+	tech_mountaineers = 1
+	marines = 1
+	tech_support = 1
+	basic_train = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			photo_reconnaisance = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			smoke_generator = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+recruit_character = ZHE_generic_unkown
+recruit_character = ZHE_methotrexate
+recruit_character = ZHE_diazepam
+recruit_character = ZHE_analgin
+recruit_character = ZHE_cloxacillin_sodium
+recruit_character = ZHE_isoniazid
+recruit_character = ZHE_cytarabine
+recruit_character = ZHE_white_horse
+
+#recruit_character = ZHE_hismanal
+#recruit_character = ZHE_venlafaxine
+#recruit_character = ZHE_escitalopram
+#recruit_character = ZHE_epirubicin
+#recruit_character = ZHE_amoxicillin
+#recruit_character = ZHE_moxifloxacin
+#recruit_character = ZHE_clonidine
+#recruit_character = ZHE_phenacetin
+#recruit_character = ZHE_remdesivir
+#recruit_character = ZHE_oseltamivir
+#recruit_character = ZHE_prontosil
+
+add_ideas = {
+	#民族精神#
+	ZHE_night_short_dream_long
+	ZHE_rise_or_fall_together_culprit
+	ZHE_Ill_fares_the_land
+	ZHE_made_in_zhetysu
+	ZHE_let_the_bullets_fly
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 1000
+}

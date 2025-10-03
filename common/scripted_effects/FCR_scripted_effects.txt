@@ -1,0 +1,90 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_FCR_startup_effect = {
+	if = {
+		limit = { tag = FCR }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = reinforced_training
+		add_ideas = free_trade
+		add_ideas = low_economic_mobilisation
+		add_ideas = high_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = hard_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = very_experienced_army
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_no_restriction
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_owenderos
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_traditional_policy
+		###其它初始设置###
+		set_country_flag = SPC_ban_trade_policy
+		set_country_flag = SPC_ban_econ_policy
+		set_country_flag = SPC_ban_foreign_policy
+		set_country_flag = SPC_ban_moblization_policy
+		###控制省份对应普及度###
+		351 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}
+		367 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		373 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		365 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+	}
+}

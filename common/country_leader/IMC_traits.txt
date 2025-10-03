@@ -1,0 +1,25 @@
+leader_traits = {
+
+	IMC_odysseus_ischia_superbia_title = {		#一坨
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	IMC_heros_blood = {		#不负厄利斯林元帅之血
+		random = no
+		
+		command_power_gain_mult = 0.05
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		stability_factor = 0.05
+		political_power_gain = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

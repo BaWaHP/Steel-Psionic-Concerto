@@ -1,0 +1,35 @@
+
+state={
+	id=145
+	name="STATE_145"
+
+	resources = {
+		steel = 24
+		chromium = 8
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			air_base = 1
+		}
+		victory_points = {
+			8707 3
+		}
+		victory_points = {
+			16289 1
+		}
+
+	}
+
+	provinces={
+		1054 4414 8183 8707 9551 11433 11807 12213 15867 15963 16065 16099 16119 16289 
+	}
+	manpower=2400000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

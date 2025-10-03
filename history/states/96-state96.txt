@@ -1,0 +1,35 @@
+
+state={
+	id=96
+	name="STATE_96"
+
+	resources = {
+		magic_crystal = 128
+		oil = 48
+		chromium = 24
+		steel = 36
+	}
+
+	history={
+		owner = ARZ
+		add_core_of = ARZ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			16247 8
+		}
+		victory_points = {
+			2372 3
+		}
+	}
+
+	provinces={
+		2105 2372 4420 7067 7830 8026 9692 11786 11839 15717 15870 16057 16076 16114 16124 16204 16247 
+	}
+	manpower = 490798
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=82
+	name="STATE_82"
+	resources={
+		tungsten=15.000
+	}
+
+	history={
+		owner = ARO
+		add_core_of = LTH
+		buildings = {
+			infrastructure = 1
+
+			industrial_complex = 1
+			9668 = { bunker = 3 }
+			10900 = { bunker = 3 }
+			1058 = { bunker = 3 }
+		}
+		victory_points = {
+			18794 2 
+		}
+
+	}
+
+	provinces={
+		1058 8200 8465 9096 9668 10900 18706 18746 18773 18794 18817 18840 18884 18908 
+	}
+	manpower=873000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

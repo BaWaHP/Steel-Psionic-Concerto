@@ -1,0 +1,63 @@
+defined_text = {
+	name = RLN_GetRullingFaction
+	text = {
+		trigger = { has_government = pioneer_communism }
+		localization_key = RLN_GetFaction_1
+	}
+	text = {
+		trigger = { has_government = revolutionary_communism }
+		localization_key = RLN_GetFaction_2
+	}
+	text = {
+		trigger = { has_government = worldunion_democrat }
+		localization_key = RLN_GetFaction_3
+	}
+	text = {
+		trigger = { has_government = national_socialist }
+		localization_key = RLN_GetFaction_4
+	}
+}
+
+defined_text = {
+	name = RLN_GetLargestFaction_1
+	text = {
+		trigger = { has_country_flag = RLN_largest_faction_1 }
+		localization_key = RLN_GetFaction_1
+	}
+	text = {
+		localization_key = RLN_GetFaction_empty
+	}
+}
+
+defined_text = {
+	name = RLN_GetLargestFaction_2
+	text = {
+		trigger = { has_country_flag = RLN_largest_faction_2 }
+		localization_key = RLN_GetFaction_2
+	}
+	text = {
+		localization_key = RLN_GetFaction_empty
+	}
+}
+
+defined_text = {
+	name = RLN_GetLargestFaction_3
+	text = {
+		trigger = { has_country_flag = RLN_largest_faction_3 }
+		localization_key = RLN_GetFaction_3
+	}
+	text = {
+		localization_key = RLN_GetFaction_empty
+	}
+}
+
+defined_text = {
+	name = RLN_GetLargestFaction_4
+	text = {
+		trigger = { has_country_flag = RLN_largest_faction_4 }
+		localization_key = RLN_GetFaction_4
+	}
+	text = {
+		localization_key = RLN_GetFaction_empty
+	}
+}

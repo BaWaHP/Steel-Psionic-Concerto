@@ -1,0 +1,30 @@
+
+state={
+	id=78
+	name="STATE_78"
+
+	history={
+		owner = ARO
+		add_core_of = ARC
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			19008 1
+		}
+		start_resistance = yes
+		set_compliance = 20
+		set_resistance = 40
+		set_garrison_strength = 0.8
+
+	}
+
+	provinces={
+		906 2513 3278 9115 9789 18909 18952 18959 18997 19008 19031 19032 19047 19105 
+	}
+	manpower=5760000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

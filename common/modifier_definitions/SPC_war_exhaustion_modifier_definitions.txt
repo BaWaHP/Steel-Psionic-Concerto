@@ -1,0 +1,16 @@
+war_exhaustion_gain_modifier = {	#厌战度获得
+	color_type = neutral
+	value_type = percentage
+	precision = 1
+	category = country
+	category = politics
+	category = army
+}
+
+promise_resume_chance = {			#维持承诺成功率
+	color_type = neutral
+	value_type = percentage
+	precision = 0
+	category = country
+	category = politics
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=105
+	name="STATE_105"
+	resources = {
+		chromium = 8
+		steel = 12
+		magic_crystal = 8
+	}
+	provinces={
+		152 1860 2624 3585 4444 6868 9289 9508 12092 14548 14673 14782 
+	}
+	history = {
+		owner = HLD
+		add_core_of = HLD
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14673 3
+		}
+		victory_points = {
+			4444 1
+		}
+	}
+	manpower = 235782
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

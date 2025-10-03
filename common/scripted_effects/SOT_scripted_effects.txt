@@ -1,0 +1,85 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_SOT_startup_effect = {
+	if = {
+		limit = { tag = SOT }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = normal_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_basic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_omnivorous_orcs
+		add_ideas = SR_empire_five
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###控制省份对应普及度###
+		206 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		274 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		275 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		280 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+	}
+}

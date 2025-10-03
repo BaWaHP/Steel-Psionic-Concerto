@@ -1,0 +1,27 @@
+
+state={
+	id=121
+	name="STATE_121"
+	provinces={
+		287 875 12013 17552 17633 17659 17769 17810 17889 17902 17987 
+	}
+	resources = {
+		steel = 16
+		magic_crystal = 16
+	}
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+            infrastructure = 1
+			arms_factory = 1
+        }
+		victory_points = {
+			17987 1
+		}
+	}
+	manpower = 649539 
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

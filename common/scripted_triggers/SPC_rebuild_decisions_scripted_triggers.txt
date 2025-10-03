@@ -1,0 +1,890 @@
+SPC_generic_rebuild_trigger_owns_state_TPG = {	#吉拉尼亚全省份
+	OR = { any_subject_country = { owns_state = 34 } owns_state = 34 }
+	OR = { any_subject_country = { owns_state = 35 } owns_state = 35 }
+	OR = { any_subject_country = { owns_state = 36 } owns_state = 36 }
+	OR = { any_subject_country = { owns_state = 37 } owns_state = 37 }
+	OR = { any_subject_country = { owns_state = 38 } owns_state = 38 }
+	OR = { any_subject_country = { owns_state = 54 } owns_state = 54 }
+	OR = { any_subject_country = { owns_state = 32 } owns_state = 32 }
+	OR = { any_subject_country = { owns_state = 33 } owns_state = 33 }
+	OR = { any_subject_country = { owns_state = 55 } owns_state = 55 }
+	OR = { any_subject_country = { owns_state = 56 } owns_state = 56 }
+}
+
+SPC_generic_rebuild_trigger_check_state_TPG = {	#吉拉尼亚全省份
+	OR = {
+		state = 34
+		state = 35
+		state = 36
+		state = 37
+		state = 38
+		state = 54
+		state = 32
+		state = 33
+		state = 55
+		state = 56
+	}
+}
+
+SPC_generic_rebuild_trigger_owns_state_WOM = {	#沃姆势力圈全省份
+	#沃姆
+	OR = { any_subject_country = { owns_state = 61 } owns_state = 61 }
+	OR = { any_subject_country = { owns_state = 62 } owns_state = 62 }
+	OR = { any_subject_country = { owns_state = 63 } owns_state = 63 }
+	OR = { any_subject_country = { owns_state = 64 } owns_state = 64 }
+	OR = { any_subject_country = { owns_state = 66 } owns_state = 66 }
+	OR = { any_subject_country = { owns_state = 67 } owns_state = 67 }
+	OR = { any_subject_country = { owns_state = 68 } owns_state = 68 }
+	OR = { any_subject_country = { owns_state = 69 } owns_state = 69 }
+	OR = { any_subject_country = { owns_state = 70 } owns_state = 70 }
+	OR = { any_subject_country = { owns_state = 71 } owns_state = 71 }
+	OR = { any_subject_country = { owns_state = 88 } owns_state = 88 }
+	OR = { any_subject_country = { owns_state = 90 } owns_state = 90 }
+	OR = { any_subject_country = { owns_state = 94 } owns_state = 94 }
+	#顿恩
+	OR = { any_subject_country = { owns_state = 27 } owns_state = 27 }
+	OR = { any_subject_country = { owns_state = 28 } owns_state = 28 }
+	OR = { any_subject_country = { owns_state = 57 } owns_state = 57 }
+	OR = { any_subject_country = { owns_state = 58 } owns_state = 58 }
+	OR = { any_subject_country = { owns_state = 143 } owns_state = 143 }
+	#戈尔维亚
+	OR = { any_subject_country = { owns_state = 59 } owns_state = 59 }
+	OR = { any_subject_country = { owns_state = 60 } owns_state = 60 }
+	OR = { any_subject_country = { owns_state = 100 } owns_state = 100 }
+	OR = { any_subject_country = { owns_state = 366 } owns_state = 366 }
+	#阿瑞萨
+	OR = { any_subject_country = { owns_state = 65 } owns_state = 65 }
+	OR = { any_subject_country = { owns_state = 96 } owns_state = 96 }
+	OR = { any_subject_country = { owns_state = 99 } owns_state = 99 }
+	#罗梦
+	OR = { any_subject_country = { owns_state = 102 } owns_state = 102 }
+	OR = { any_subject_country = { owns_state = 103 } owns_state = 103 }
+	OR = { any_subject_country = { owns_state = 104 } owns_state = 104 }
+	#希卡博尔
+	OR = { any_subject_country = { owns_state = 91 } owns_state = 91 }
+	OR = { any_subject_country = { owns_state = 92 } owns_state = 92 }
+	OR = { any_subject_country = { owns_state = 93 } owns_state = 93 }
+	OR = { any_subject_country = { owns_state = 413 } owns_state = 413 }
+	#斯布里奇
+	OR = { any_subject_country = { owns_state = 95 } owns_state = 95 }
+	OR = { any_subject_country = { owns_state = 97 } owns_state = 97 }
+	OR = { any_subject_country = { owns_state = 98 } owns_state = 98 }
+	#海兰德
+	OR = { any_subject_country = { owns_state = 101 } owns_state = 101 }
+	OR = { any_subject_country = { owns_state = 105 } owns_state = 105 }
+	OR = { any_subject_country = { owns_state = 106 } owns_state = 106 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_WOM_small = {	#沃姆
+	#沃姆
+	OR = { any_subject_country = { owns_state = 61 } owns_state = 61 }
+	OR = { any_subject_country = { owns_state = 62 } owns_state = 62 }
+	OR = { any_subject_country = { owns_state = 63 } owns_state = 63 }
+	OR = { any_subject_country = { owns_state = 64 } owns_state = 64 }
+	OR = { any_subject_country = { owns_state = 66 } owns_state = 66 }
+	OR = { any_subject_country = { owns_state = 67 } owns_state = 67 }
+	OR = { any_subject_country = { owns_state = 68 } owns_state = 68 }
+	OR = { any_subject_country = { owns_state = 69 } owns_state = 69 }
+	OR = { any_subject_country = { owns_state = 70 } owns_state = 70 }
+	OR = { any_subject_country = { owns_state = 71 } owns_state = 71 }
+	OR = { any_subject_country = { owns_state = 88 } owns_state = 88 }
+	OR = { any_subject_country = { owns_state = 90 } owns_state = 90 }
+	OR = { any_subject_country = { owns_state = 94 } owns_state = 94 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_GLV = {	#大戈尔维亚
+	#顿恩
+	OR = { any_subject_country = { owns_state = 27 } owns_state = 27 }
+	OR = { any_subject_country = { owns_state = 28 } owns_state = 28 }
+	OR = { any_subject_country = { owns_state = 57 } owns_state = 57 }
+	OR = { any_subject_country = { owns_state = 58 } owns_state = 58 }
+	OR = { any_subject_country = { owns_state = 143 } owns_state = 143 }
+	#戈尔维亚
+	OR = { any_subject_country = { owns_state = 59 } owns_state = 59 }
+	OR = { any_subject_country = { owns_state = 60 } owns_state = 60 }
+	OR = { any_subject_country = { owns_state = 100 } owns_state = 100 }
+	OR = { any_subject_country = { owns_state = 366 } owns_state = 366 }
+	#阿瑞萨
+	OR = { any_subject_country = { owns_state = 65 } owns_state = 65 }
+	OR = { any_subject_country = { owns_state = 96 } owns_state = 96 }
+	OR = { any_subject_country = { owns_state = 99 } owns_state = 99 }
+	#罗梦
+	OR = { any_subject_country = { owns_state = 102 } owns_state = 102 }
+	OR = { any_subject_country = { owns_state = 103 } owns_state = 103 }
+	OR = { any_subject_country = { owns_state = 104 } owns_state = 104 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_GLV_small = {	#戈尔维亚
+	#戈尔维亚
+	OR = { any_subject_country = { owns_state = 59 } owns_state = 59 }
+	OR = { any_subject_country = { owns_state = 60 } owns_state = 60 }
+	OR = { any_subject_country = { owns_state = 100 } owns_state = 100 }
+	OR = { any_subject_country = { owns_state = 366 } owns_state = 366 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_KOD = {	#顿恩
+	#顿恩
+	OR = { any_subject_country = { owns_state = 27 } owns_state = 27 }
+	OR = { any_subject_country = { owns_state = 28 } owns_state = 28 }
+	OR = { any_subject_country = { owns_state = 57 } owns_state = 57 }
+	OR = { any_subject_country = { owns_state = 58 } owns_state = 58 }
+	OR = { any_subject_country = { owns_state = 143 } owns_state = 143 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_ARZ = {	#阿瑞萨
+	#阿瑞萨
+	OR = { any_subject_country = { owns_state = 65 } owns_state = 65 }
+	OR = { any_subject_country = { owns_state = 96 } owns_state = 96 }
+	OR = { any_subject_country = { owns_state = 99 } owns_state = 99 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_RMN = {	#罗梦
+	#罗梦
+	OR = { any_subject_country = { owns_state = 102 } owns_state = 102 }
+	OR = { any_subject_country = { owns_state = 103 } owns_state = 103 }
+	OR = { any_subject_country = { owns_state = 104 } owns_state = 104 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_SBG = {	#大斯布里奇
+	#希卡博尔
+	OR = { any_subject_country = { owns_state = 91 } owns_state = 91 }
+	OR = { any_subject_country = { owns_state = 92 } owns_state = 92 }
+	OR = { any_subject_country = { owns_state = 93 } owns_state = 93 }
+	OR = { any_subject_country = { owns_state = 413 } owns_state = 413 }
+	#斯布里奇
+	OR = { any_subject_country = { owns_state = 95 } owns_state = 95 }
+	OR = { any_subject_country = { owns_state = 97 } owns_state = 97 }
+	OR = { any_subject_country = { owns_state = 98 } owns_state = 98 }
+	#海兰德
+	OR = { any_subject_country = { owns_state = 101 } owns_state = 101 }
+	OR = { any_subject_country = { owns_state = 105 } owns_state = 105 }
+	OR = { any_subject_country = { owns_state = 106 } owns_state = 106 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_SBG_small = {	#斯布里奇
+	#斯布里奇
+	OR = { any_subject_country = { owns_state = 95 } owns_state = 95 }
+	OR = { any_subject_country = { owns_state = 97 } owns_state = 97 }
+	OR = { any_subject_country = { owns_state = 98 } owns_state = 98 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_HCB = {	#希卡博尔
+	#希卡博尔
+	OR = { any_subject_country = { owns_state = 91 } owns_state = 91 }
+	OR = { any_subject_country = { owns_state = 92 } owns_state = 92 }
+	OR = { any_subject_country = { owns_state = 93 } owns_state = 93 }
+	OR = { any_subject_country = { owns_state = 413 } owns_state = 413 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_HLD = {	#海兰德
+	#海兰德
+	OR = { any_subject_country = { owns_state = 101 } owns_state = 101 }
+	OR = { any_subject_country = { owns_state = 105 } owns_state = 105 }
+	OR = { any_subject_country = { owns_state = 106 } owns_state = 106 }
+}
+
+SPC_generic_rebuild_trigger_check_state_WOM = {	#沃姆全省份
+	OR = {
+		#沃姆
+		state = 61
+		state = 62
+		state = 63
+		state = 64
+		state = 66
+		state = 67
+		state = 68
+		state = 69
+		state = 70
+		state = 71
+		state = 88
+		state = 90
+		state = 94
+		#顿恩
+		state = 27
+		state = 28
+		state = 57
+		state = 58
+		state = 143
+		#戈尔维亚
+		state = 59
+		state = 60
+		state = 100
+		state = 366
+		#阿瑞萨
+		state = 65
+		state = 96
+		state = 99
+		#罗梦
+		state = 102
+		state = 103
+		state = 104
+		#希卡博尔
+		state = 91
+		state = 92
+		state = 93
+		state = 413
+		#斯布里奇
+		state = 95
+		state = 97
+		state = 98
+		#海兰德
+		state = 101
+		state = 105
+		state = 106
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_WOM_small = {
+	OR = {
+		#沃姆
+		state = 61
+		state = 62
+		state = 63
+		state = 64
+		state = 66
+		state = 67
+		state = 68
+		state = 69
+		state = 70
+		state = 71
+		state = 88
+		state = 90
+		state = 94
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_GLV = {
+	OR = {
+		#顿恩
+		state = 27
+		state = 28
+		state = 57
+		state = 58
+		state = 143
+		#戈尔维亚
+		state = 59
+		state = 60
+		state = 100
+		state = 366
+		#阿瑞萨
+		state = 65
+		state = 96
+		state = 99
+		#罗梦
+		state = 102
+		state = 103
+		state = 104
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_small_GLV = {
+	OR = {
+		#戈尔维亚
+		state = 59
+		state = 60
+		state = 100
+		state = 366
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_KOD = {
+	OR = {
+		#顿恩
+		state = 27
+		state = 28
+		state = 57
+		state = 58
+		state = 143
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_ARZ = {
+	OR = {
+		#阿瑞萨
+		state = 65
+		state = 96
+		state = 99
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_RMN = {
+	OR = {
+		#罗梦
+		state = 102
+		state = 103
+		state = 104
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_SBG = {
+	OR = {
+		#希卡博尔
+		state = 91
+		state = 92
+		state = 93
+		state = 413
+		#斯布里奇
+		state = 95
+		state = 97
+		state = 98
+		#海兰德
+		state = 101
+		state = 105
+		state = 106
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_SBG_small = {
+	OR = {
+		#斯布里奇
+		state = 95
+		state = 97
+		state = 98
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_HCB = {
+	OR = {
+		#希卡博尔
+		state = 91
+		state = 92
+		state = 93
+		state = 413
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_HLD = {
+	OR = {
+		#海兰德
+		state = 101
+		state = 105
+		state = 106
+	}
+}
+
+#联合王国#
+SPC_generic_rebuild_trigger_owns_state_UK = {	#联合王国全省份
+	#奥罗日亚
+	OR = { any_subject_country = { owns_state = 72 } owns_state = 72 }
+	OR = { any_subject_country = { owns_state = 73 } owns_state = 73 }
+	OR = { any_subject_country = { owns_state = 74 } owns_state = 74 }
+	OR = { any_subject_country = { owns_state = 75 } owns_state = 75 }
+	OR = { any_subject_country = { owns_state = 76 } owns_state = 76 }
+	OR = { any_subject_country = { owns_state = 77 } owns_state = 77 }
+	OR = { any_subject_country = { owns_state = 78 } owns_state = 78 }
+	OR = { any_subject_country = { owns_state = 79 } owns_state = 79 }
+	OR = { any_subject_country = { owns_state = 80 } owns_state = 80 }
+	OR = { any_subject_country = { owns_state = 81 } owns_state = 81 }
+	OR = { any_subject_country = { owns_state = 82 } owns_state = 82 }
+	OR = { any_subject_country = { owns_state = 83 } owns_state = 83 }
+	OR = { any_subject_country = { owns_state = 84 } owns_state = 84 }
+	OR = { any_subject_country = { owns_state = 85 } owns_state = 85 }
+	OR = { any_subject_country = { owns_state = 86 } owns_state = 86 }
+	#皮奥瑞亚
+	OR = { any_subject_country = { owns_state = 39 } owns_state = 39 }
+	OR = { any_subject_country = { owns_state = 40 } owns_state = 40 }
+	OR = { any_subject_country = { owns_state = 41 } owns_state = 41 }
+	OR = { any_subject_country = { owns_state = 42 } owns_state = 42 }
+	OR = { any_subject_country = { owns_state = 43 } owns_state = 43 }
+	OR = { any_subject_country = { owns_state = 44 } owns_state = 44 }
+	OR = { any_subject_country = { owns_state = 45 } owns_state = 45 }
+	OR = { any_subject_country = { owns_state = 46 } owns_state = 46 }
+	OR = { any_subject_country = { owns_state = 47 } owns_state = 47 }
+	OR = { any_subject_country = { owns_state = 48 } owns_state = 48 }
+	OR = { any_subject_country = { owns_state = 49 } owns_state = 49 }
+	OR = { any_subject_country = { owns_state = 50 } owns_state = 50 }
+	OR = { any_subject_country = { owns_state = 51 } owns_state = 51 }
+	OR = { any_subject_country = { owns_state = 52 } owns_state = 52 }
+	OR = { any_subject_country = { owns_state = 53 } owns_state = 53 }
+	#西莉迪亚
+	#南
+	OR = { any_subject_country = { owns_state = 107 } owns_state = 107 }
+	OR = { any_subject_country = { owns_state = 108 } owns_state = 108 }
+	OR = { any_subject_country = { owns_state = 109 } owns_state = 109 }
+	OR = { any_subject_country = { owns_state = 110 } owns_state = 110 }
+	OR = { any_subject_country = { owns_state = 111 } owns_state = 111 }
+	OR = { any_subject_country = { owns_state = 112 } owns_state = 112 }
+	OR = { any_subject_country = { owns_state = 113 } owns_state = 113 }
+	OR = { any_subject_country = { owns_state = 114 } owns_state = 114 }
+	#北
+	OR = { any_subject_country = { owns_state = 115 } owns_state = 115 }
+	OR = { any_subject_country = { owns_state = 116 } owns_state = 116 }
+	OR = { any_subject_country = { owns_state = 117 } owns_state = 117 }
+	OR = { any_subject_country = { owns_state = 118 } owns_state = 118 }
+	OR = { any_subject_country = { owns_state = 119 } owns_state = 119 }
+	OR = { any_subject_country = { owns_state = 120 } owns_state = 120 }
+	OR = { any_subject_country = { owns_state = 477 } owns_state = 477 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_ARO = {	#奥罗日亚全省份
+	#奥罗日亚
+	OR = { any_subject_country = { owns_state = 72 } owns_state = 72 }
+	OR = { any_subject_country = { owns_state = 73 } owns_state = 73 }
+	OR = { any_subject_country = { owns_state = 74 } owns_state = 74 }
+	OR = { any_subject_country = { owns_state = 75 } owns_state = 75 }
+	OR = { any_subject_country = { owns_state = 76 } owns_state = 76 }
+	OR = { any_subject_country = { owns_state = 77 } owns_state = 77 }
+	OR = { any_subject_country = { owns_state = 78 } owns_state = 78 }
+	OR = { any_subject_country = { owns_state = 79 } owns_state = 79 }
+	OR = { any_subject_country = { owns_state = 80 } owns_state = 80 }
+	OR = { any_subject_country = { owns_state = 81 } owns_state = 81 }
+	OR = { any_subject_country = { owns_state = 82 } owns_state = 82 }
+	OR = { any_subject_country = { owns_state = 83 } owns_state = 83 }
+	OR = { any_subject_country = { owns_state = 84 } owns_state = 84 }
+	OR = { any_subject_country = { owns_state = 85 } owns_state = 85 }
+	OR = { any_subject_country = { owns_state = 86 } owns_state = 86 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_PEO = {	#皮奥瑞亚全省份
+	#皮奥瑞亚
+	OR = { any_subject_country = { owns_state = 39 } owns_state = 39 }
+	OR = { any_subject_country = { owns_state = 40 } owns_state = 40 }
+	OR = { any_subject_country = { owns_state = 41 } owns_state = 41 }
+	OR = { any_subject_country = { owns_state = 42 } owns_state = 42 }
+	OR = { any_subject_country = { owns_state = 43 } owns_state = 43 }
+	OR = { any_subject_country = { owns_state = 44 } owns_state = 44 }
+	OR = { any_subject_country = { owns_state = 45 } owns_state = 45 }
+	OR = { any_subject_country = { owns_state = 46 } owns_state = 46 }
+	OR = { any_subject_country = { owns_state = 47 } owns_state = 47 }
+	OR = { any_subject_country = { owns_state = 48 } owns_state = 48 }
+	OR = { any_subject_country = { owns_state = 49 } owns_state = 49 }
+	OR = { any_subject_country = { owns_state = 50 } owns_state = 50 }
+	OR = { any_subject_country = { owns_state = 51 } owns_state = 51 }
+	OR = { any_subject_country = { owns_state = 52 } owns_state = 52 }
+	OR = { any_subject_country = { owns_state = 53 } owns_state = 53 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_CLD = {	#西莉迪亚全省份
+	#西莉迪亚
+	#南
+	OR = { any_subject_country = { owns_state = 107 } owns_state = 107 }
+	OR = { any_subject_country = { owns_state = 108 } owns_state = 108 }
+	OR = { any_subject_country = { owns_state = 109 } owns_state = 109 }
+	OR = { any_subject_country = { owns_state = 110 } owns_state = 110 }
+	OR = { any_subject_country = { owns_state = 111 } owns_state = 111 }
+	OR = { any_subject_country = { owns_state = 112 } owns_state = 112 }
+	OR = { any_subject_country = { owns_state = 113 } owns_state = 113 }
+	OR = { any_subject_country = { owns_state = 114 } owns_state = 114 }
+	#北
+	OR = { any_subject_country = { owns_state = 115 } owns_state = 115 }
+	OR = { any_subject_country = { owns_state = 116 } owns_state = 116 }
+	OR = { any_subject_country = { owns_state = 117 } owns_state = 117 }
+	OR = { any_subject_country = { owns_state = 118 } owns_state = 118 }
+	OR = { any_subject_country = { owns_state = 119 } owns_state = 119 }
+	OR = { any_subject_country = { owns_state = 120 } owns_state = 120 }
+	OR = { any_subject_country = { owns_state = 477 } owns_state = 477 }
+}
+
+SPC_generic_rebuild_trigger_check_state_UK = {
+	OR = {
+		#奥罗日亚
+		state = 72
+		state = 73
+		state = 74
+		state = 75
+		state = 76
+		state = 77
+		state = 78
+		state = 79
+		state = 80
+		state = 81
+		state = 82
+		state = 83
+		state = 84
+		state = 85
+		state = 86
+		#皮奥瑞亚
+		state = 39
+		state = 40
+		state = 41
+		state = 42
+		state = 43
+		state = 44
+		state = 45
+		state = 46
+		state = 47
+		state = 48
+		state = 49
+		state = 50
+		state = 51
+		state = 52
+		state = 53
+		#西莉迪亚
+		#南
+		state = 107
+		state = 108
+		state = 109
+		state = 110
+		state = 111
+		state = 112
+		state = 113
+		state = 114
+		#北
+		state = 115
+		state = 116
+		state = 117
+		state = 118
+		state = 119
+		state = 120
+		state = 477
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_ARO = {
+	OR = {
+		#奥罗日亚
+		state = 72
+		state = 73
+		state = 74
+		state = 75
+		state = 76
+		state = 77
+		state = 78
+		state = 79
+		state = 80
+		state = 81
+		state = 82
+		state = 83
+		state = 84
+		state = 85
+		state = 86
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_PEO = {
+	OR = {
+		#皮奥瑞亚
+		state = 39
+		state = 40
+		state = 41
+		state = 42
+		state = 43
+		state = 44
+		state = 45
+		state = 46
+		state = 47
+		state = 48
+		state = 49
+		state = 50
+		state = 51
+		state = 52
+		state = 53
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_CLD = {
+	OR = {
+		#西莉迪亚
+		#南
+		state = 107
+		state = 108
+		state = 109
+		state = 110
+		state = 111
+		state = 112
+		state = 113
+		state = 114
+		#北
+		state = 115
+		state = 116
+		state = 117
+		state = 118
+		state = 119
+		state = 120
+		state = 477
+	}
+}
+
+#远乡#
+SPC_generic_rebuild_trigger_owns_state_FH = {	#远乡全省份
+	#西北特别行政区
+	OR = { any_subject_country = { owns_state = 12 } owns_state = 12 }
+	OR = { any_subject_country = { owns_state = 14 } owns_state = 14 }
+	OR = { any_subject_country = { owns_state = 25 } owns_state = 25 }
+	OR = { any_subject_country = { owns_state = 26 } owns_state = 26 }
+	OR = { any_subject_country = { owns_state = 29 } owns_state = 29 }
+	OR = { any_subject_country = { owns_state = 134 } owns_state = 134 }
+	OR = { any_subject_country = { owns_state = 142 } owns_state = 142 }
+	#南远乡
+	OR = { any_subject_country = { owns_state = 2 } owns_state = 2 }
+	OR = { any_subject_country = { owns_state = 3 } owns_state = 3 }
+	OR = { any_subject_country = { owns_state = 4 } owns_state = 4 }
+	OR = { any_subject_country = { owns_state = 5 } owns_state = 5 }
+	OR = { any_subject_country = { owns_state = 6 } owns_state = 6 }
+	OR = { any_subject_country = { owns_state = 7 } owns_state = 7 }
+	OR = { any_subject_country = { owns_state = 8 } owns_state = 8 }
+	OR = { any_subject_country = { owns_state = 9 } owns_state = 9 }
+	OR = { any_subject_country = { owns_state = 10 } owns_state = 10 }
+	OR = { any_subject_country = { owns_state = 11 } owns_state = 11 }
+	OR = { any_subject_country = { owns_state = 13 } owns_state = 13 }
+	OR = { any_subject_country = { owns_state = 30 } owns_state = 30 }
+	OR = { any_subject_country = { owns_state = 121 } owns_state = 121 }
+	OR = { any_subject_country = { owns_state = 170 } owns_state = 170 }
+	OR = { any_subject_country = { owns_state = 171 } owns_state = 171 }
+	OR = { any_subject_country = { owns_state = 172 } owns_state = 172 }
+	OR = { any_subject_country = { owns_state = 173 } owns_state = 173 }
+	OR = { any_subject_country = { owns_state = 174 } owns_state = 174 }
+	#北远乡
+	OR = { any_subject_country = { owns_state = 15 } owns_state = 15 }
+	OR = { any_subject_country = { owns_state = 16 } owns_state = 16 }
+	OR = { any_subject_country = { owns_state = 17 } owns_state = 17 }
+	OR = { any_subject_country = { owns_state = 18 } owns_state = 18 }
+	OR = { any_subject_country = { owns_state = 19 } owns_state = 19 }
+	OR = { any_subject_country = { owns_state = 21 } owns_state = 21 }
+	OR = { any_subject_country = { owns_state = 22 } owns_state = 22 }
+	OR = { any_subject_country = { owns_state = 23 } owns_state = 23 }
+	OR = { any_subject_country = { owns_state = 24 } owns_state = 24 }
+	OR = { any_subject_country = { owns_state = 133 } owns_state = 133 }
+	OR = { any_subject_country = { owns_state = 144 } owns_state = 144 }
+	OR = { any_subject_country = { owns_state = 160 } owns_state = 160 }
+	#人鱼
+	OR = { any_subject_country = { owns_state = 20 } owns_state = 20 }
+	OR = { any_subject_country = { owns_state = 31 } owns_state = 31 }
+	OR = { any_subject_country = { owns_state = 410 } owns_state = 410 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_NWF = {	#西北远乡全省份
+	#西北特别行政区
+	OR = { any_subject_country = { owns_state = 12 } owns_state = 12 }
+	OR = { any_subject_country = { owns_state = 14 } owns_state = 14 }
+	OR = { any_subject_country = { owns_state = 25 } owns_state = 25 }
+	OR = { any_subject_country = { owns_state = 26 } owns_state = 26 }
+	OR = { any_subject_country = { owns_state = 29 } owns_state = 29 }
+	OR = { any_subject_country = { owns_state = 134 } owns_state = 134 }
+	OR = { any_subject_country = { owns_state = 142 } owns_state = 142 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_SFH = {	#南远乡全省份
+	#南远乡
+	OR = { any_subject_country = { owns_state = 2 } owns_state = 2 }
+	OR = { any_subject_country = { owns_state = 3 } owns_state = 3 }
+	OR = { any_subject_country = { owns_state = 4 } owns_state = 4 }
+	OR = { any_subject_country = { owns_state = 5 } owns_state = 5 }
+	OR = { any_subject_country = { owns_state = 6 } owns_state = 6 }
+	OR = { any_subject_country = { owns_state = 7 } owns_state = 7 }
+	OR = { any_subject_country = { owns_state = 8 } owns_state = 8 }
+	OR = { any_subject_country = { owns_state = 9 } owns_state = 9 }
+	OR = { any_subject_country = { owns_state = 10 } owns_state = 10 }
+	OR = { any_subject_country = { owns_state = 11 } owns_state = 11 }
+	OR = { any_subject_country = { owns_state = 13 } owns_state = 13 }
+	OR = { any_subject_country = { owns_state = 30 } owns_state = 30 }
+	OR = { any_subject_country = { owns_state = 121 } owns_state = 121 }
+	OR = { any_subject_country = { owns_state = 170 } owns_state = 170 }
+	OR = { any_subject_country = { owns_state = 171 } owns_state = 171 }
+	OR = { any_subject_country = { owns_state = 172 } owns_state = 172 }
+	OR = { any_subject_country = { owns_state = 173 } owns_state = 173 }
+	OR = { any_subject_country = { owns_state = 174 } owns_state = 174 }
+}
+
+SPC_generic_rebuild_trigger_owns_state_NFH = {	#北远乡全省份
+	#北远乡
+	OR = { any_subject_country = { owns_state = 15 } owns_state = 15 }
+	OR = { any_subject_country = { owns_state = 16 } owns_state = 16 }
+	OR = { any_subject_country = { owns_state = 17 } owns_state = 17 }
+	OR = { any_subject_country = { owns_state = 18 } owns_state = 18 }
+	OR = { any_subject_country = { owns_state = 19 } owns_state = 19 }
+	OR = { any_subject_country = { owns_state = 21 } owns_state = 21 }
+	OR = { any_subject_country = { owns_state = 22 } owns_state = 22 }
+	OR = { any_subject_country = { owns_state = 23 } owns_state = 23 }
+	OR = { any_subject_country = { owns_state = 24 } owns_state = 24 }
+	OR = { any_subject_country = { owns_state = 133 } owns_state = 133 }
+	OR = { any_subject_country = { owns_state = 144 } owns_state = 144 }
+	OR = { any_subject_country = { owns_state = 160 } owns_state = 160 }
+	#人鱼
+	OR = { any_subject_country = { owns_state = 20 } owns_state = 20 }
+	OR = { any_subject_country = { owns_state = 31 } owns_state = 31 }
+	OR = { any_subject_country = { owns_state = 410 } owns_state = 410 }
+}
+
+SPC_generic_rebuild_trigger_check_state_FH = {
+	OR = {
+		#西北特别行政区
+		state = 12
+		state = 14
+		state = 25
+		state = 26
+		state = 29
+		state = 134
+		state = 142
+		#南远乡
+		state = 2
+		state = 3
+		state = 4
+		state = 5
+		state = 6
+		state = 7
+		state = 8
+		state = 9
+		state = 10
+		state = 11
+		state = 13
+		state = 30
+		state = 121
+		state = 170
+		state = 171
+		state = 172
+		state = 173
+		state = 174
+		#北远乡
+		state = 15
+		state = 16
+		state = 17
+		state = 18
+		state = 19
+		state = 21
+		state = 22
+		state = 23
+		state = 24
+		state = 133
+		state = 144
+		state = 160
+		#人鱼
+		state = 20
+		state = 31
+		state = 410
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_NWF = {
+	OR = {
+		#西北特别行政区
+		state = 12
+		state = 14
+		state = 25
+		state = 26
+		state = 29
+		state = 134
+		state = 142
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_SFH = {
+	OR = {
+		#南远乡
+		state = 2
+		state = 3
+		state = 4
+		state = 5
+		state = 6
+		state = 7
+		state = 8
+		state = 9
+		state = 10
+		state = 11
+		state = 13
+		state = 30
+		state = 121
+		state = 170
+		state = 171
+		state = 172
+		state = 173
+		state = 174
+	}
+}
+
+SPC_generic_rebuild_trigger_check_state_NFH = {
+	OR = {
+		#北远乡
+		state = 15
+		state = 16
+		state = 17
+		state = 18
+		state = 19
+		state = 21
+		state = 22
+		state = 23
+		state = 24
+		state = 133
+		state = 144
+		state = 160
+		#人鱼
+		state = 20
+		state = 31
+		state = 410
+	}
+}
+
+SPC_generic_rebuild_trigger_1 = {	#自治情况
+	OR = {
+		has_government = worldunion_socialist
+		has_government = worldunion_democrat
+		has_government = liberal_republican
+		has_government = conservative_republican
+		has_government = authoritarian_republican
+	}
+}
+
+SPC_generic_rebuild_trigger_2 = {	#傀儡情况
+	OR = {
+		has_government = pioneer_communism
+		has_government = revolutionary_communism
+		has_government = worldunion_socialist
+		has_government = authoritarian_republican
+		has_government = paternal_autocrat
+		has_government = national_socialist
+		has_government = authoritarian_nationalism
+	}
+}
+
+SPC_generic_rebuild_trigger_3 = {	#傀儡而且掌握很紧情况
+	NOT = {
+		OR = {
+			has_government = worldunion_socialist
+			has_government = worldunion_democrat
+			has_government = liberal_republican
+			has_government = conservative_republican
+		}
+	}
+}
+
+SPC_generic_rebuild_decision_category_enable_trigger = {
+	OR = {
+		tag = SFH
+	}
+}
+
+#吉拉尼亚
+SPC_generic_rebuild_TPG_trigger = {
+	TPG = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { tag = TPG }
+}
+
+#沃姆
+SPC_generic_rebuild_WOM_trigger = {
+	WOM = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_3 = yes }
+}
+
+#戈尔维亚
+SPC_generic_rebuild_GLV_trigger = {
+	GLV = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_3 = yes }
+}
+
+#斯布里奇
+SPC_generic_rebuild_SBG_trigger = {
+	SBG = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_3 = yes }
+}
+
+#联合王国
+SPC_generic_rebuild_ARO_trigger = {
+	ARO = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_2 = yes }
+}
+
+SPC_generic_rebuild_PEO_trigger = {
+	PEO = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_2 = yes }
+}
+
+SPC_generic_rebuild_CLD_trigger = {
+	CLD = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_2 = yes }
+}
+
+#远乡
+SPC_generic_rebuild_SFH_trigger = {
+	SFH = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
+	NOT = { SPC_generic_region_trigger_1 = yes }
+}

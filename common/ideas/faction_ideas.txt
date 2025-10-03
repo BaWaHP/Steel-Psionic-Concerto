@@ -1,0 +1,49 @@
+ideas = {
+	hidden_ideas = {
+		SPC_faction_south_bastia_federation_leader = {		#南巴联邦领导国
+			removal_cost = -1
+
+			cancel = { NOT = { is_in_faction_with = RSB } }
+			on_remove = { clr_country_flag = RSB_federation_icon_1 }
+
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.08
+			}
+		}
+		SPC_faction_south_bastia_federation_member = {		#南巴联邦成员国
+			removal_cost = -1
+
+			cancel = { NOT = { is_in_faction_with = RSB } }
+			on_remove = { clr_country_flag = RSB_federation_icon_2 }
+
+			modifier = {
+				political_power_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				#tag = global.SPC_faction_south_bastia_federation_leader_nation
+				tag = RSB
+				trade_opinion_factor = 0.2
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+		SPC_faction_south_bastia_federation_protected = {		#南巴斯蒂亚共和国保护国
+			removal_cost = -1
+
+			cancel = { NOT = { is_in_faction_with = RSB } }
+			on_remove = { clr_country_flag = RSB_federation_icon_3 }
+
+			modifier = {
+				stability_factor = 0.1
+				command_power_gain_mult = -0.1
+				improve_relations_maintain_cost_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = RSB
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+	}
+}

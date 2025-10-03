@@ -1,0 +1,37 @@
+
+state={
+	id=108
+	name="STATE_108"
+	provinces={
+		2074 3296 3968 6258 7732 11532 11604 11870 20190 20213 20239 20246 20261 20284 20296 20297 20317 20337 20397 
+	}
+	resources = {
+		steel = 4
+		aluminium = 12
+		magic_crystal = 6
+	}
+	history = {
+		owner = CLD
+		add_core_of = CLD
+		add_core_of = NCD
+		buildings = {
+            infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 3
+			dockyard = 1
+			20239 = {
+				naval_base = 4
+            }
+        }
+		victory_points = {
+			20284 30
+		}
+		victory_points = {
+			20239 8
+		}
+	}
+	manpower=2835740
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

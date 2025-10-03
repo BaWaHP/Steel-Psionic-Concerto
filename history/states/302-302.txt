@@ -1,0 +1,26 @@
+
+state={
+	id=302
+	name="STATE_302"
+	provinces={
+		2204 4884 7023 8802 9990 14719 14838 14974 15079 
+	}
+	history={
+		owner = OHL
+		add_core_of = OHL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			14974 5
+		}
+		victory_points = {
+			9990 5
+		}
+	}
+	manpower=760000
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

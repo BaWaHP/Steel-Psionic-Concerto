@@ -1,0 +1,847 @@
+characters={
+
+	RLN_ginsberg_depp = {		#金斯伯格·代普
+   		name = RLN_ginsberg_depp
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_ginsberg_depp"
+				small="GFX_idea_RLN_ginsberg_depp"
+			}
+			army = {
+				large="GFX_RLN_ginsberg_depp"
+				small="GFX_idea_RLN_ginsberg_depp"
+			}
+   		}
+   		country_leader = {
+			desc = RLN_ginsberg_depp_desc
+   			ideology = military_government_communism
+   			traits = { JUNO_military_socialist }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = RLN_ginsberg_depp_idea_1
+			allowed = { original_tag = RLN }
+			can_be_fired = no
+			traits = { army_infantry_2 }
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = RLN_ginsberg_depp_idea_2
+			allowed = { original_tag = RLN }
+			traits = { military_theorist }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { career_officer }
+		}
+	}
+
+	RLN_sorrell_capone = {		#索雷尔·卡彭
+   		name = RLN_sorrell_capone
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_sorrell_capone"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RLN_sorrell_capone"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = RLN_sorrell_capone_desc
+   			ideology = popular_communism
+   			traits = { RLN_long_night_torchbearer }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { NKM_leader_of_uprising }
+		}
+		advisor = {
+			slot = theorist
+			idea_token = RLN_sorrell_capone_idea
+			available = { has_completed_focus = RLN_party_leads_the_gun }
+			traits = { RLN_revolutionary_war_theory }
+			cost = 100
+		}
+	}
+
+   	RLN_none_1 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_socialist_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_karianne_berlin = {		#卡瑞安·柏林
+   		name = RLN_karianne_berlin
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_karianne_berlin"
+				small="GFX_idea_RLN_karianne_berlin"
+			}
+			army = {
+				large="GFX_RLN_karianne_berlin"
+				small="GFX_idea_RLN_karianne_berlin"
+			}
+   		}
+   		country_leader = {
+   			ideology = democratic_socialism
+   			traits = {}
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			desc = RLN_karianne_berlin_desc
+			slot = political_advisor
+			idea_token = RLN_karianne_berlin_idea
+			allowed = { original_tag = RLN }
+			can_be_fired = no
+			traits = { economy_expert armaments_organizer }
+		}
+	}
+
+	RLN_pajay_puro = {		#帕杰·普罗
+   		name = RLN_pajay_puro
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = radical_republican
+   			traits = {}
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_pajay_puro_idea
+			allowed = { original_tag = RLN }
+			available = { NOT = { has_country_leader = { character = RLN_sorrell_capone } } }
+			traits = { captain_of_industry }
+		}
+	}
+
+	RLN_none_2 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = conservative_republican_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_none_3 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = authoritarian_republican_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_spicer_seck = {		#斯派瑟·塞克
+   		name = RLN_spicer_seck
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_spicer_seck"
+				small="GFX_idea_RLN_spicer_seck"
+			}
+			army = {
+				large="GFX_RLN_spicer_seck"
+				small="GFX_idea_RLN_spicer_seck"
+			}
+   		}
+   		country_leader = {
+   			ideology = social_corporatism
+   			traits = {}
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_spicer_seck_idea
+			allowed = { original_tag = RLN }
+			can_be_fired = no
+			traits = { silent_workhorse oppressive_official }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			traits = { trait_engineer }
+		}
+	}
+
+	RLN_none_4 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = authoritarian_nationalism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_none_5 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = paternal_autocrat_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_none_6 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_none_7 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = religious_extremism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_none_8 = {		#无
+   		name = RLN_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = anarchism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RLN_ben_singler = {		#本·辛格勒
+   		name = RLN_ben_singler
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_RLN_ben_singler"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_RLN_ben_singler"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_ben_singler_idea
+			desc = RLN_ben_singler_desc
+			allowed = { original_tag = RLN }
+			traits = { popular_figurehead }
+		}
+	}
+
+	RLN_grano_ervin = {		#格拉诺·埃尔文
+   		name = RLN_grano_ervin
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = RLN_grano_ervin_idea
+			allowed = { original_tag = RLN }
+			available = { NOT = { has_government = national_socialist } }
+			traits = { RLN_worker_leader }
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { CLD_organizer_workers_uprising brilliant_strategist }
+		}
+	}
+
+	RLN_moraco_miller = {		#莫拉可·米勒
+   		name = RLN_moraco_miller
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = RLN_moraco_miller_idea
+			allowed = { original_tag = RLN }
+			available = {
+				OR = {
+					has_government = revolutionary_communism
+					has_government = worldunion_democrat
+				}
+			}
+			traits = { secretary_education ideological_crusader }
+		}
+	}
+
+	RLN_stiller_dieppe = {		#斯迪勒·代普
+   		name = RLN_stiller_dieppe
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_stiller_dieppe_idea
+			allowed = { original_tag = RLN }
+			available = { has_government = pioneer_communism }
+			traits = { quartermaster_general war_profiteer }
+		}
+	}
+	
+	RLN_nicola_capricci = {		#尼古拉·卡布里奇
+   		name = RLN_nicola_capricci
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_nicola_capricci_idea
+			allowed = { original_tag = RLN }
+			available = { has_government = revolutionary_communism }
+			traits = { RLN_farmer_coop_represent }
+		}
+	}
+
+	RLN_enver_mihok = {		#恩维尔·米霍克
+   		name = RLN_enver_mihok
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_enver_mihok_idea
+			allowed = { original_tag = RLN }
+			traits = { fortification_engineer }
+		}
+	}
+
+	RLN_prentice_henry = {		#普兰特·亨利
+   		name = RLN_prentice_henry
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_prentice_henry_idea
+			allowed = { original_tag = RLN }
+			traits = { technocrat }
+		}
+	}
+
+	RLN_salvador_milo = {		#萨尔瓦多·米卢
+   		name = RLN_salvador_milo
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_salvador_milo"
+				small="GFX_idea_RLN_salvador_milo"
+			}
+			army = {
+				large="GFX_RLN_salvador_milo"
+				small="GFX_idea_RLN_salvador_milo"
+			}
+   		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RLN_salvador_milo_idea
+			allowed = { original_tag = RLN }
+			traits = { army_infantry_2 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { trickster }
+		}
+	}
+
+	RLN_boris_walker = {		#鲍里斯·沃克
+   		name = RLN_boris_walker
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_boris_walker"
+				small="GFX_idea_RLN_boris_walker"
+			}
+			army = {
+				large="GFX_RLN_boris_walker"
+				small="GFX_idea_RLN_boris_walker"
+			}
+   		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RLN_boris_walker_idea
+			allowed = { original_tag = RLN }
+			traits = { army_regrouping_2 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { infantry_leader }
+		}
+	}
+
+	RLN_manuel_cardenas = {		#曼努埃尔·卡德纳斯
+   		name = RLN_manuel_cardenas
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_manuel_cardenas"
+				small="GFX_idea_RLN_manuel_cardenas"
+			}
+			army = {
+				large="GFX_RLN_manuel_cardenas"
+				small="GFX_idea_RLN_manuel_cardenas"
+			}
+   		}
+		advisor = {
+			cost = 200
+			slot = high_command
+			idea_token = RLN_manuel_cardenas_idea
+			allowed = { original_tag = RLN }
+			traits = { army_concealment_3 }
+		}
+		field_marshal = {
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			traits = { commando }
+		}
+	}
+
+	RLN_hanks_walzer = {		#汉克斯·沃泽
+   		name = RLN_hanks_walzer
+   		portraits = {
+			civilian = {
+				large="GFX_RLN_hanks_walzer"
+				small="GFX_idea_RLN_hanks_walzer"
+			}
+			army = {
+				large="GFX_RLN_hanks_walzer"
+				small="GFX_idea_RLN_hanks_walzer"
+			}
+   		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = RLN_hanks_walzer_idea
+			allowed = { original_tag = RLN }
+			traits = { army_chief_offensive_2 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { trait_mountaineer hill_fighter }
+		}
+	}
+
+	RLN_andrew_thomas = {		#安德鲁·托马斯
+   		name = RLN_andrew_thomas
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_andrew_thomas_idea
+			allowed = { original_tag = RLN }
+			available = {
+				OR = {
+					has_government = worldunion_democrat
+					has_government = liberal_republican
+				}
+			}
+			traits = { secretary_education }
+		}
+	}
+
+	RLN_haifipov_mova = {		#海非柏夫·莫瓦
+   		name = RLN_haifipov_mova
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = RLN_haifipov_mova_idea
+			traits = { head_of_intelligence financial_expert }
+		}
+	}
+
+	RLN_joseph_sauza = {		#约瑟夫·绍沙
+   		name = RLN_joseph_sauza
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RLN_joseph_sauza_idea
+			traits = { RLN_command_economy_believer }
+			modifier = { RLN_militarists_influence_monthly = 2 }
+		}
+	}
+
+	RLN_trisco_carpe = {		#崔斯可·卡佩
+   		name = RLN_trisco_carpe
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RLN_trisco_carpe_idea
+			available = {}
+			traits = { LNR_radical_economists }
+			modifier = { RLN_financists_influence_monthly = 2 }
+			cost = 150
+		}
+	}
+
+	RLN_inmajik_fraser = {		#英马吉克·弗拉斯
+   		name = RLN_inmajik_fraser
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor={
+			slot = political_advisor
+			idea_token = RLN_inmajik_fraser_idea
+			traits = { RLN_civil_right_revolutionary }
+			modifier = { RLN_principlists_influence_monthly = 2 }
+			cost = 200
+		}
+	}
+
+	RLN_al_plant = {		#艾尔·普兰特
+   		name = RLN_al_plant
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = theorist
+			idea_token = RLN_al_plant_idea
+			traits = { air_warfare_theorist }
+			cost = 100
+		}
+	}
+
+	RLN_sissel_hedi = {		#西塞尔·赫迪
+   		name = RLN_sissel_hedi
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = theorist
+			idea_token = RLN_sissel_hedi_idea
+			traits = { naval_theorist }
+			cost = 100
+		}
+	}
+
+	RLN_diffin_londe = {		#迪芬·朗德
+   		name = RLN_diffin_londe
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = army_chief
+			idea_token = RLN_diffin_londe_idea
+			traits = { army_chief_defensive_3 }
+			cost = 200
+		}
+	}
+
+	RLN_jose_paxi_oknin = {		#何塞·帕克西·奥克宁
+   		name = RLN_jose_paxi_oknin
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = navy_chief
+			idea_token = RLN_jose_paxi_oknin_idea
+			traits = { navy_chief_commerce_raiding_1 }
+			cost = 50
+		}
+	}
+
+	RLN_clark_adams = {		#克拉克·亚当斯
+   		name = RLN_clark_adams
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = air_chief
+			idea_token = RLN_clark_adams_idea
+			traits = { air_chief_reform_1 }
+			cost = 50
+		}
+	}
+
+	RLN_belloc_dent = {		#贝罗克·丹特
+   		name = RLN_belloc_dent
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			slot = high_command
+			idea_token = RLN_belloc_dent_idea
+			traits = { army_entrenchment_2 }
+			cost = 100
+		}
+	}
+}

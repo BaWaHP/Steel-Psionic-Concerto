@@ -1,0 +1,56 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#1976安全法
+ROK_security_act_of_1976_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_air_support_focus
+
+	political_power_factor = ROK_security_act_of_1976_political_power_factor
+	stability_factor = ROK_security_act_of_1976_stability_factor
+	conscription_factor = ROK_security_act_of_1976_conscription_factor
+	industrial_capacity_factory = ROK_security_act_of_1976_industrial_capacity_factory
+	
+}
+
+#星火重燃
+ROK_fire_reburn_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_air_support_focus
+	
+	political_power_factor = ROK_fr_political_power_factor
+	stability_factor = ROK_fr_stability_factor
+	war_support_factor = ROK_fr_war_support_factor
+	production_speed_buildings_factor = ROK_fr_production_speed_buildings_factor
+	industrial_capacity_factory = ROK_fr_industrial_capacity_factory
+	consumer_goods_factor = ROK_fr_consumer_goods_factor
+	pioneer_communism_drift = ROK_fr_pioneer_communism_drift
+	revolutionary_communism_drift = ROK_fr_revolutionary_communism_drift
+	worldunion_socialist_drift = ROK_fr_worldunion_socialist_drift
+	worldunion_democrat_drift = ROK_fr_worldunion_democrat_drift
+}

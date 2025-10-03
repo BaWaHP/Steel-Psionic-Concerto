@@ -1,0 +1,12 @@
+scripted_gui = {
+
+	NKE_citify_tso_naghara_category_ui = {
+		context_type = decision_category
+		window_name = "NKE_citify_tso_naghara_category_frame"
+		properties = {
+			NKE_citify_tso_naghara_category_progressbar = {
+				frame = NKE_citify_progress
+			}
+		}
+	}
+}

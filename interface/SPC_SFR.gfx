@@ -1,0 +1,613 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_SFR_YeWenshi"
+		texturefile = "gfx/leaders/SFR/YeWenshi.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LinYouzhi"
+		texturefile = "gfx/leaders/SFR/LinYouzhi.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ChenJian"
+		texturefile = "gfx/leaders/SFR/ChenJian.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhaoYongjun"
+		texturefile = "gfx/leaders/SFR/ZhaoYongjun.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LinQinlan"
+		texturefile = "gfx/leaders/SFR/LinQinlan.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhangYixin"
+		texturefile = "gfx/leaders/SFR/ZhangYixin.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LinHongyun"
+		texturefile = "gfx/leaders/SFR/LinHongyun.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_Baihua"
+		texturefile = "gfx/leaders/SFR/Baihua.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_CaiJuemin"
+		texturefile = "gfx/leaders/SFR/CaiJuemin.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ChenJianfeng"
+		texturefile = "gfx/leaders/SFR/ChenJianfeng.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ChenQimin"
+		texturefile = "gfx/leaders/SFR/ChenQimin.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ChengZhenhai"
+		texturefile = "gfx/leaders/SFR/ChengZhenhai.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_FangMingyuan"
+		texturefile = "gfx/leaders/SFR/FangMingyuan.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_FangQingnang"
+		texturefile = "gfx/leaders/SFR/FangQingnang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_FangZhenhai"
+		texturefile = "gfx/leaders/SFR/FangZhenhai.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_GaoLinbo"
+		texturefile = "gfx/leaders/SFR/GaoLinbo.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_HanDinyang"
+		texturefile = "gfx/leaders/SFR/HanDinyang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_HeShaoyang"
+		texturefile = "gfx/leaders/SFR/HeShaoyang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_HeJingtao"
+		texturefile = "gfx/leaders/SFR/HeJingtao.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LiaoChilang"
+		texturefile = "gfx/leaders/SFR/LiaoChilang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LinMoyun"
+		texturefile = "gfx/leaders/SFR/LinMoyun.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LinQiulu"
+		texturefile = "gfx/leaders/SFR/LinQiulu.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LuHongzhou"
+		texturefile = "gfx/leaders/SFR/LuHongzhou.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_LuJinglei"
+		texturefile = "gfx/leaders/SFR/LuJinglei.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_NieChixiao"
+		texturefile = "gfx/leaders/SFR/NieChixiao.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_QiHongshan"
+		texturefile = "gfx/leaders/SFR/QiHongshan.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_QingYuanfeng"
+		texturefile = "gfx/leaders/SFR/QingYuanfeng.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_QiuHangfeng"
+		texturefile = "gfx/leaders/SFR/QiuHangfeng.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ShenYanhui"
+		texturefile = "gfx/leaders/SFR/ShenYanhui.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ShiKaijia"
+		texturefile = "gfx/leaders/SFR/ShiKaijia.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_SuBaihe"
+		texturefile = "gfx/leaders/SFR/SuBaihe.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_TangHongyin"
+		texturefile = "gfx/leaders/SFR/TangHongyin.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_WeiHanjiang"
+		texturefile = "gfx/leaders/SFR/WeiHanjiang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_WuQiuyue"
+		texturefile = "gfx/leaders/SFR/WuQiuyue.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_WuZhenxiao"
+		texturefile = "gfx/leaders/SFR/WuZhenxiao.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_XieChangkong"
+		texturefile = "gfx/leaders/SFR/XieChangkong.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_XuYuanyang"
+		texturefile = "gfx/leaders/SFR/XuYuanyang.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_YeXiangtao"
+		texturefile = "gfx/leaders/SFR/YeXiangtao.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhangBeidou"
+		texturefile = "gfx/leaders/SFR/ZhangBeidou.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhaoTieshan"
+		texturefile = "gfx/leaders/SFR/ZhaoTieshan.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhengTiechui"
+		texturefile = "gfx/leaders/SFR/ZhengTiechui.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhouHailan"
+		texturefile = "gfx/leaders/SFR/ZhouHailan.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhouTianYi"
+		texturefile = "gfx/leaders/SFR/ZhouTianYi.png"
+	}
+	spriteType = {
+		name = "GFX_SFR_ZhouTiegui"
+		texturefile = "gfx/leaders/SFR/ZhouTiegui.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_SFR_YeWenshi"
+		texturefile = "gfx/advisors/SFR/YeWenshi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinYouzhi"
+		texturefile = "gfx/advisors/SFR/LinYouzhi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ChenJian"
+		texturefile = "gfx/advisors/SFR/ChenJian.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhaoYongjun"
+		texturefile = "gfx/advisors/SFR/ZhaoYongjun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinQinlan"
+		texturefile = "gfx/advisors/SFR/SFR_LinQinlan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhangYixin"
+		texturefile = "gfx/advisors/SFR/ZhangYixin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinHongyun"
+		texturefile = "gfx/advisors/SFR/LinHongyun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_Baihua"
+		texturefile = "gfx/advisors/SFR/Baihua.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_CaiJuemin"
+		texturefile = "gfx/advisors/SFR/CaiJuemin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ChenJianfeng"
+		texturefile = "gfx/advisors/SFR/ChenJianfeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ChenQimin"
+		texturefile = "gfx/advisors/SFR/ChenQimin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ChengZhenhai"
+		texturefile = "gfx/advisors/SFR/ChengZhenhai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_FangMingyuan"
+		texturefile = "gfx/advisors/SFR/FangMingyuan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_FangQingnang"
+		texturefile = "gfx/advisors/SFR/FangQingnang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_FangZhenhai"
+		texturefile = "gfx/advisors/SFR/FangZhenhai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_GaoLinbo"
+		texturefile = "gfx/advisors/SFR/GaoLinbo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_HanDinyang"
+		texturefile = "gfx/advisors/SFR/HanDinyang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_HeShaoyang"
+		texturefile = "gfx/advisors/SFR/HeShaoyang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_HeJingtao"
+		texturefile = "gfx/advisors/SFR/HeJingtao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LiaoChilang"
+		texturefile = "gfx/advisors/SFR/LiaoChilang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinMoyun"
+		texturefile = "gfx/advisors/SFR/LinMoyun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinQiulu"
+		texturefile = "gfx/advisors/SFR/LinQiulu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LuHongzhou"
+		texturefile = "gfx/advisors/SFR/LuHongzhou.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LuJinglei"
+		texturefile = "gfx/advisors/SFR/LuJinglei.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_NieChixiao"
+		texturefile = "gfx/advisors/SFR/NieChixiao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_QiHongshan"
+		texturefile = "gfx/advisors/SFR/QiHongshan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_QingYuanfeng"
+		texturefile = "gfx/advisors/SFR/QingYuanfeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_QiuHangfeng"
+		texturefile = "gfx/advisors/SFR/QiuHangfeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ShenYanhui"
+		texturefile = "gfx/advisors/SFR/ShenYanhui.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ShiKaijia"
+		texturefile = "gfx/advisors/SFR/ShiKaijia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_SuBaihe"
+		texturefile = "gfx/advisors/SFR/SuBaihe.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_TangHongyin"
+		texturefile = "gfx/advisors/SFR/TangHongyin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_WeiHanjiang"
+		texturefile = "gfx/advisors/SFR/WeiHanjiang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_WuQiuyue"
+		texturefile = "gfx/advisors/SFR/WuQiuyue.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_WuZhenxiao"
+		texturefile = "gfx/advisors/SFR/WuZhenxiao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_XieChangkong"
+		texturefile = "gfx/advisors/SFR/XieChangkong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_XuYuanyang"
+		texturefile = "gfx/advisors/SFR/XuYuanyang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_YeXiangtao"
+		texturefile = "gfx/advisors/SFR/YeXiangtao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhangBeidou"
+		texturefile = "gfx/advisors/SFR/ZhangBeidou.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhaoTieshan"
+		texturefile = "gfx/advisors/SFR/ZhaoTieshan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhengTiechui"
+		texturefile = "gfx/advisors/SFR/ZhengTiechui.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhouHailan"
+		texturefile = "gfx/advisors/SFR/ZhouHailan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhouTianYi"
+		texturefile = "gfx/advisors/SFR/ZhouTianYi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhouTiegui"
+		texturefile = "gfx/advisors/SFR/ZhouTiegui.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ChenJuexin"
+		texturefile = "gfx/advisors/SFR/ChenJuexin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_FangJimin"
+		texturefile = "gfx/advisors/SFR/FangJimin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_HeHong"
+		texturefile = "gfx/advisors/SFR/HeHong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_JiangMingzhe"
+		texturefile = "gfx/advisors/SFR/JiangMingzhe.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LinShaobai"
+		texturefile = "gfx/advisors/SFR/LinShaobai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_LuWenyin"
+		texturefile = "gfx/advisors/SFR/LuWenyin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ShenSheng"
+		texturefile = "gfx/advisors/SFR/ShenSheng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_SuJinqiu"
+		texturefile = "gfx/advisors/SFR/SuJinqiu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_WuZhenggang"
+		texturefile = "gfx/advisors/SFR/WuZhenggang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_XuHongbo"
+		texturefile = "gfx/advisors/SFR/XuHongbo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhaoGeng"
+		texturefile = "gfx/advisors/SFR/ZhaoGeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_ZhouHongmei"
+		texturefile = "gfx/advisors/SFR/ZhouHongmei.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_SFR_revenge_fury"
+		texturefile = "gfx/interface/ideas/SFR_revenge_fury.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_divided_bases"
+		texturefile = "gfx/interface/ideas/SFR_divided_bases.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_holodomor"
+		texturefile = "gfx/interface/ideas/SFR_holodomor.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_guerrilla_army"
+		texturefile = "gfx/interface/ideas/SFR_guerrilla_army.png"
+	}
+	###GUI###
+	progressbartype = {
+		name = "GFX_SFR_unity_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/ProgressBars/SPC_generic_bar_dye.png"
+		textureFile2 = "gfx/interface/ProgressBars/SPC_generic_bar_empty.png"
+		size = { x = 350 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_1"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_2"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_3"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_3.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_4"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_4.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_1_flipped"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_1_flipped.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_2_flipped"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_2_flipped.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_3_flipped"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_3_flipped.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_icon_4_flipped"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_4_flipped.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_btn_end_1"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_btn_end_1.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_btn_end_2"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_btn_end_2.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_btn_flipped"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_btn_flipped.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_btn_flipped_shine"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_btn_flipped.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/SFR/SFR_land_reform_btn_flipped.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1.5
+			animationdelay = 0.5
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 0.5 y = 0.5 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_SFR_revolution_of_ours"
+		texturefile = "gfx/interface/goals/SFR_revolution_of_ours.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_shadows_everywhere"
+		texturefile = "gfx/interface/goals/SFR_shadows_everywhere.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_against_rev_front"
+		texturefile = "gfx/interface/goals/SFR_against_rev_front.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_support_left_opposition"
+		texturefile = "gfx/interface/goals/SFR_support_left_opposition.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_call_for_actual_rev"
+		texturefile = "gfx/interface/goals/SFR_call_for_actual_rev.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_secret_assembly"
+		texturefile = "gfx/interface/goals/SFR_secret_assembly.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_support_right_opposition"
+		texturefile = "gfx/interface/goals/SFR_support_right_opposition.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_call_for_internationalist"
+		texturefile = "gfx/interface/goals/SFR_call_for_internationalist.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_divide_the_front"
+		texturefile = "gfx/interface/goals/SFR_divide_the_front.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_attract_people"
+		texturefile = "gfx/interface/goals/SFR_attract_people.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_defamation_of_front"
+		texturefile = "gfx/interface/goals/SFR_defamation_of_front.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_support_rev_front"
+		texturefile = "gfx/interface/goals/SFR_support_rev_front.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_unify_the_left"
+		texturefile = "gfx/interface/goals/SFR_unify_the_left.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_turn_to_farmers"
+		texturefile = "gfx/interface/goals/SFR_turn_to_farmers.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_dispatch_relief_materials"
+		texturefile = "gfx/interface/goals/SFR_dispatch_relief_materials.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_purge_internationalists"
+		texturefile = "gfx/interface/goals/SFR_purge_internationalists.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_support_local_parties"
+		texturefile = "gfx/interface/goals/SFR_support_local_parties.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_reinforce_leadership"
+		texturefile = "gfx/interface/goals/SFR_reinforce_leadership.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_reinforce_confidence"
+		texturefile = "gfx/interface/goals/SFR_reinforce_confidence.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_ensure_military_support"
+		texturefile = "gfx/interface/goals/SFR_ensure_military_support.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_reorganize_command_system"
+		texturefile = "gfx/interface/goals/SFR_reorganize_command_system.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_mobilize_away_dissidents"
+		texturefile = "gfx/interface/goals/SFR_mobilize_away_dissidents.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_re_enable_front_parliament"
+		texturefile = "gfx/interface/goals/SFR_re_enable_front_parliament.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_accept_opposition"
+		texturefile = "gfx/interface/goals/SFR_accept_opposition.png"
+	}
+	SpriteType = {
+		name = "GFX_SFR_commitment_to_the_future"
+		texturefile = "gfx/interface/goals/SFR_commitment_to_the_future.png"
+	}
+	###决议###
+	spriteType = {
+		name = "GFX_decision_category_SFR_maintain_the_front"
+		texturefile = "gfx/interface/decisions/decision_category_SFR_maintain_the_front.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_SFR_maintain_the_front"
+		texturefile = "gfx/interface/decisions/decision_category_SFR_maintain_the_front.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_SFR_workers_and_peasants_congress"
+		texturefile = "gfx/interface/decisions/decision_category_SFR_workers_and_peasants_congress.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_SFR_land_reform_decisions"
+		texturefile = "gfx/interface/decisions/decision_category_SFR_land_reform_decisions.png"
+	}
+}

@@ -1,0 +1,318 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_NCD_startup_effect = {
+	if = {
+		limit = { tag = NCD }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = too_much_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_basic_funding
+		add_ideas = IP_basic_funds
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_Celydreans
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 115
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 116
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 117
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 118
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 119
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 120
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}	
+			if = {
+				limit = {
+					state = 477
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+		}
+	}
+}
+
+NCD_skilled_worker_idea_up = {
+	custom_effect_tooltip = NCD_skilled_worker_idea_up_tt
+	if = {
+		limit = { has_idea = NCD_skilled_worker_amount_1 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_1
+			add_idea = NCD_skilled_worker_amount_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_2 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_2
+			add_idea = NCD_skilled_worker_amount_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_3 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_3
+			add_idea = NCD_skilled_worker_amount_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_4 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_4
+			add_idea = NCD_skilled_worker_amount_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_5 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_5
+			add_idea = NCD_skilled_worker_amount_6
+		}
+	}
+}
+
+NCD_skilled_worker_idea_down = {
+	custom_effect_tooltip = NCD_skilled_worker_idea_down_tt
+	if = {
+		limit = { has_idea = NCD_skilled_worker_amount_6 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_6
+			add_idea = NCD_skilled_worker_amount_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_5 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_5
+			add_idea = NCD_skilled_worker_amount_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_4 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_4
+			add_idea = NCD_skilled_worker_amount_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_3 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_3
+			add_idea = NCD_skilled_worker_amount_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_2 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_2
+			add_idea = NCD_skilled_worker_amount_1
+		}
+	}
+}
+
+NCD_skilled_worker_idea_down_3 = {
+	custom_effect_tooltip = NCD_skilled_worker_idea_down_3_tt
+	if = {
+		limit = { has_idea = NCD_skilled_worker_amount_6 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_6
+			add_idea = NCD_skilled_worker_amount_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_5 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_5
+			add_idea = NCD_skilled_worker_amount_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_4 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_4
+			add_idea = NCD_skilled_worker_amount_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_3 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_3
+			add_idea = NCD_skilled_worker_amount_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = NCD_skilled_worker_amount_2 }
+		swap_ideas = {
+			remove_idea = NCD_skilled_worker_amount_2
+			add_idea = NCD_skilled_worker_amount_1
+		}
+	}
+}
+
+NCD_interal_conflicts_init = {
+	set_variable = { NCD_interal_conflicts_var_1_1 = 15 }	#国王运动 - 政治影响力
+	set_variable = { NCD_interal_conflicts_var_1_2 = 10 }	#国王运动 - 经济影响力
+	set_variable = { NCD_interal_conflicts_var_2 = 10 }	#救国阵线 - 党派支持度
+	set_variable = { NCD_interal_conflicts_var_3 = 20 }	#联合阵线 - 游击影响度
+
+	activate_mission = NCD_interal_conflicts_take_actions_1
+	activate_mission = NCD_interal_conflicts_take_actions_3
+	activate_mission = NCD_interal_conflicts_take_actions_4
+
+	set_variable = { NCD_demand_mil_support_count = 0 }
+	set_variable = { NCD_interest_for_weapons_count = 0 }
+}
+
+NCD_interal_conflicts_var_clamp_effect = {
+	clamp_variable = { var = NCD_interal_conflicts_var_1_1 min = 0 max = 35 }
+	clamp_variable = { var = NCD_interal_conflicts_var_1_2 min = 0 max = 35 }
+	clamp_variable = { var = NCD_interal_conflicts_var_2 min = 0 max = 50 }
+	clamp_variable = { var = NCD_interal_conflicts_var_3 min = 0 max = 50 }
+	if = {
+		limit = { NCL = { exists = yes } }
+		NCL_silt_double_beam_effect = yes
+	}
+}
+
+NCL_silt_double_beam_remove = {
+	NCL = {
+		if = {
+			limit = { has_idea = NCL_silt_double_beam_1 }
+			remove_ideas = NCL_silt_double_beam_1
+		}
+		if = {
+			limit = { has_idea = NCL_silt_double_beam_2 }
+			remove_ideas = NCL_silt_double_beam_2
+		}
+		if = {
+			limit = { has_idea = NCL_silt_double_beam_3 }
+			remove_ideas = NCL_silt_double_beam_3
+		}
+		if = {
+			limit = { has_idea = NCL_silt_double_beam_4 }
+			remove_ideas = NCL_silt_double_beam_4
+		}
+		if = {
+			limit = { has_idea = NCL_silt_double_beam_5 }
+			remove_ideas = NCL_silt_double_beam_5
+		}
+	}
+}
+
+NCL_silt_double_beam_effect = {
+	hidden_effect = {
+		NCL_silt_double_beam_remove = yes
+		if = {
+			limit = { check_variable = { NCD_interal_conflicts_var_1_1 < 4.6 } }
+			NCL = { add_ideas = NCL_silt_double_beam_1 }
+		}
+		else_if = {
+			limit = { check_variable = { NCD_interal_conflicts_var_1_1 < 9.6 } }
+			NCL = { add_ideas = NCL_silt_double_beam_2 }
+		}
+		else_if = {
+			limit = { check_variable = { NCD_interal_conflicts_var_1_1 < 19.6 } }
+			NCL = { add_ideas = NCL_silt_double_beam_3 }
+		}
+		else_if = {
+			limit = { check_variable = { NCD_interal_conflicts_var_1_1 < 29.6 } }
+			NCL = { add_ideas = NCL_silt_double_beam_4 }
+		}
+		else = {
+			NCL = { add_ideas = NCL_silt_double_beam_5 }
+		}	
+	}
+}

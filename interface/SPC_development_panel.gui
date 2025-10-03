@@ -1,0 +1,727 @@
+guiTypes = {
+	containerWindowType = { #occupy_policy_entry
+		name = "SPC_development_panel_state"
+		position = { x = 0 y = -6 }
+		size = { width = 100 height = 82 }
+		clipping = no
+
+		###开启省份发展度按钮###
+		buttonType = {
+			name = "state_development_panel_button"
+			text = "state_development_panel_button_text"
+			position = { x = 270 y = 515 }
+			quadTextureSprite ="GFX_state_development_panel_button"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+		}
+	}
+
+	containerWindowType = {
+		name = "SPC_state_development_panel"
+		position = {x=0 y=0}
+		size = { width=500 height=400 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+		
+		Background = {
+			name = "state_development_panel_bg"
+			quadTextureSprite = "GFX_state_development_panel_bg"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = { x = 338 y = 20 }
+			font = "hoi_24header"
+			maxWidth = 500
+			maxHeight = 30
+			format = left
+			text = state_development_panel_title
+		}
+		
+		###魔法区###
+
+		instantTextboxType = {
+			name = "magic_title"
+			position = { x = 170 y = 185 }
+			font = "hoi_20b"
+			maxWidth = 200
+			maxHeight = 30
+			format = left
+			text = state_development_panel_magic_title
+			pdx_tooltip = magic_title_tt
+		}
+		
+		iconType = {
+			name ="mag_icon"
+			quadTextureSprite = "GFX_development_panel_mag"
+			position = { x = 80 y = 196 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = mag_level_desc
+		}
+
+		iconType = {
+			name = "mag_progress_bar_bg"
+			spriteType = "GFX_mag_progress_bar_bg"
+			position = { x = 166 y = 200 }
+			pdx_tooltip = mag_progress_bar_tt
+		}
+
+		iconType = {
+			name = "mag_progress_bar"
+			spriteType = "GFX_mag_progress_bar"
+			position = { x = 166 y = 199 }
+			frame = 100
+			pdx_tooltip = mag_progress_bar_tt
+		}
+
+		instantTextboxType = {
+			name = "mag_level"
+			position = { x = 150 y = 328 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = left
+			text = state_development_panel_magic_level
+			pdx_tooltip = mag_level_desc
+		}
+
+		###科学区###
+
+		instantTextboxType = {
+			name = "science_title"
+			position = { x = 670 y = 265 }
+			font = "hoi_20b"
+			maxWidth = 200
+			maxHeight = 30
+			format = left
+			text = state_development_panel_science_title
+			pdx_tooltip = science_title_tt
+		}
+
+		iconType = {
+			name ="sci_icon"
+			quadTextureSprite = "GFX_development_panel_sci"
+			position = { x = 804 y = 196 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = sci_level_desc
+		}
+
+		iconType = {
+			name = "sci_progress_bar_bg"
+			spriteType = "GFX_sci_progress_bar_bg"
+			position = { x = 166 y = 230 }
+			pdx_tooltip = sci_progress_bar_tt
+			rotation = 3.14
+		}
+
+		iconType = {
+			name = "sci_progress_bar"
+			spriteType = "GFX_sci_progress_bar"
+			position = { x = 788 y = 191 }
+			frame = 100
+			pdx_tooltip = sci_progress_bar_tt
+			rotation = 3.14
+		}
+
+		instantTextboxType = {
+			name = "sci_level"
+			position = { x = 692 y = 328 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = left
+			text = state_development_panel_science_level
+			pdx_tooltip = sci_level_desc
+		}
+
+		###特殊措施###		
+
+		###魔法侧特殊行动
+
+		buttonType = {
+			name = "special_op_mag_1"
+			#text = "special_op_mag_1_text"
+			position = { x = 70 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_1"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_mag_1_tt
+		}
+
+		buttonType = {
+			name = "special_op_mag_2"
+			#text = "special_op_mag_2_text"
+			position = { x = -20 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_2"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_mag_2_tt
+		}
+
+		buttonType = {
+			name = "special_op_mag_3"
+			#text = "special_op_mag_3_text"
+			position = { x = -110 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_3"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_mag_3_tt
+		}
+
+		buttonType = {
+			name = "special_op_mag_4"
+			#text = "special_op_mag_4_text"
+			position = { x = -200 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_4"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_mag_4_tt
+		}
+
+		###科学侧特殊行动
+
+		buttonType = {
+			name = "special_op_sci_1"
+			#text = "special_op_sci_1_text"
+			position = { x = 300 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_5"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_sci_1_tt
+		}
+
+		buttonType = {
+			name = "special_op_sci_2"
+			#text = "special_op_sci_2_text"
+			position = { x = 390 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_6"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_sci_2_tt
+		}
+
+		buttonType = {
+			name = "special_op_sci_3"
+			#text = "special_op_sci_3_text"
+			position = { x = 480 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_7"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_sci_3_tt
+		}
+
+		buttonType = {
+			name = "special_op_sci_4"
+			#text = "special_op_sci_4_text"
+			position = { x = 570 y = 180 }
+			spriteType ="GFX_state_development_special_op_btn_8"
+			buttonFont = "hoi_20bs"
+			Orientation = center
+			clicksound = click_default
+			pdx_tooltip = special_op_sci_4_tt
+		}
+
+		###介绍###
+
+		iconType = {
+			name = "state_development_introduction"
+			spriteType = "GFX_state_development_introduction"
+			position = { x = 408 y = 344 }
+			pdx_tooltip = state_development_introduction_tt
+		}
+		
+		###分割线###
+
+		buttonType = {
+			name = "close"
+			text = ""
+			position = { x = 550 y = -187 }
+			spriteType ="GFX_development_panel_closebutton"
+			buttonFont = "hoi_20bs"
+			shortcut = "ESCAPE"
+			Orientation = center
+			clicksound = click_close
+		}
+	}
+
+	containerWindowType = {
+		name = "SPC_development_panel_country"
+		position = { x = 0 y = -6 }
+		size = { width = 100 height = 82 }
+		clipping = no
+
+		###开启省份发展度按钮###
+		buttonType = {
+			name = "country_development_panel_button"
+			position = { x = 350 y = 504 }
+			quadTextureSprite ="GFX_country_development_panel_button"
+			Orientation = center
+		}
+
+		iconType = {
+			name ="btn_icon"
+			quadTextureSprite = "GFX_SPC_country_development_btn_icon"
+			position = { x = 402 y = 546 }
+		}
+
+		instantTextboxType = {
+			name = "btn_text"
+			position = { x = 440 y = 554 }
+			font = "hoi_16mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = left
+			text = country_development_panel_button_text
+			tooltip = country_development_panel_button_tt
+		}
+	}
+
+	containerWindowType = {
+		name = "SPC_country_development_panel"
+		position = { x = 538 y = 81 }
+		size = { width = 100%% height = 100%% }
+		moveable = no
+		clipping = no
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+
+		buttonType = {
+			name = "close"
+			position = { x = -9999 y = 0 }
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			shortcut = "Q"
+			clicksound = click_close
+		}
+
+		containerWindowType = {
+			name = group_1
+			position = { x = 0 y = 0 }
+
+			iconType = {
+				name ="bg_1"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_1"
+				quadTextureSprite = "SPC_country_development_panel_icon_1"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = industrial_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_1"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_1_txt
+				pdx_tooltip = industrial_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_1_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_1_txt"
+			}
+			iconType = {
+				name ="level_1_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_2_txt"
+			}
+			iconType = {
+				name ="level_1_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_3_txt"
+			}
+			iconType = {
+				name ="level_1_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_4_txt"
+			}
+			iconType = {
+				name ="level_1_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_5_txt"
+			}
+			iconType = {
+				name ="level_1_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_1_6_txt"
+			}
+			iconType = {
+				name = "bar_1"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = industrial_development_generic_tt
+			}
+		}
+
+		containerWindowType = {
+			name = group_2
+			position = { x = 0 y = 132 }
+
+			iconType = {
+				name ="bg_2"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_2"
+				quadTextureSprite = "SPC_country_development_panel_icon_2"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = agricultural_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_2"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_2_txt
+				pdx_tooltip = agricultural_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_2_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_1_txt"
+			}
+			iconType = {
+				name ="level_2_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_2_txt"
+			}
+			iconType = {
+				name ="level_2_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_3_txt"
+			}
+			iconType = {
+				name ="level_2_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_4_txt"
+			}
+			iconType = {
+				name ="level_2_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_5_txt"
+			}
+			iconType = {
+				name ="level_2_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_2_6_txt"
+			}
+			iconType = {
+				name = "bar_2"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = agricultural_development_generic_tt
+			}
+		}
+
+		containerWindowType = {
+			name = group_3
+			position = { x = 0 y = 264 }
+
+			iconType = {
+				name ="bg_3"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_3"
+				quadTextureSprite = "SPC_country_development_panel_icon_3"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = military_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_3"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_3_txt
+				pdx_tooltip = military_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_3_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_1_txt"
+			}
+			iconType = {
+				name ="level_3_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_2_txt"
+			}
+			iconType = {
+				name ="level_3_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_3_txt"
+			}
+			iconType = {
+				name ="level_3_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_4_txt"
+			}
+			iconType = {
+				name ="level_3_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_5_txt"
+			}
+			iconType = {
+				name ="level_3_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_3_6_txt"
+			}
+			iconType = {
+				name = "bar_3"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = military_development_generic_tt
+			}
+		}
+
+		containerWindowType = {
+			name = group_4
+			position = { x = 0 y = 396 }
+
+			iconType = {
+				name ="bg_4"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_4"
+				quadTextureSprite = "SPC_country_development_panel_icon_4"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = living_standard_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_4"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_4_txt
+				pdx_tooltip = living_standard_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_4_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_1_txt"
+			}
+			iconType = {
+				name ="level_4_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_2_txt"
+			}
+			iconType = {
+				name ="level_4_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_3_txt"
+			}
+			iconType = {
+				name ="level_4_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_4_txt"
+			}
+			iconType = {
+				name ="level_4_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_5_txt"
+			}
+			iconType = {
+				name ="level_4_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_4_6_txt"
+			}
+			iconType = {
+				name = "bar_4"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = living_standard_development_generic_tt
+			}
+		}
+
+		containerWindowType = {
+			name = group_5
+			position = { x = 0 y = 528 }
+
+			iconType = {
+				name ="bg_5"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_5"
+				quadTextureSprite = "SPC_country_development_panel_icon_5"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = environment_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_5"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_5_txt
+				pdx_tooltip = environment_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_5_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_1_txt"
+			}
+			iconType = {
+				name ="level_5_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_2_txt"
+			}
+			iconType = {
+				name ="level_5_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_3_txt"
+			}
+			iconType = {
+				name ="level_5_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_4_txt"
+			}
+			iconType = {
+				name ="level_5_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_5_txt"
+			}
+			iconType = {
+				name ="level_5_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_5_6_txt"
+			}
+			iconType = {
+				name = "bar_5"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = environment_development_generic_tt
+			}
+		}
+
+		containerWindowType = {
+			name = group_6
+			position = { x = 0 y = 660 }
+
+			iconType = {
+				name ="bg_6"
+				quadTextureSprite = "SPC_country_development_panel_bg"
+				position = { x = 0 y = 0 }
+			}
+			iconType = {
+				name ="icon_6"
+				quadTextureSprite = "SPC_country_development_panel_icon_6"
+				position = { x = 17 y = 10 }
+				pdx_tooltip = research_development_generic_tt
+			}
+			instantTextboxType = {
+				name = "title_6"
+				position = { x = 168 y = 19 }
+				font = "hoi_18mbs"
+				maxWidth = 200
+				maxHeight = 30
+				format = center
+				text = country_development_title_6_txt
+				pdx_tooltip = research_development_generic_tt_idea
+			}
+			iconType = {
+				name ="level_6_1"
+				quadTextureSprite = "SPC_country_development_panel_level_1_1"
+				position = { x = 136 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_1_txt"
+			}
+			iconType = {
+				name ="level_6_2"
+				quadTextureSprite = "SPC_country_development_panel_level_2_1"
+				position = { x = 175 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_2_txt"
+			}
+			iconType = {
+				name ="level_6_3"
+				quadTextureSprite = "SPC_country_development_panel_level_3_1"
+				position = { x = 214 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_3_txt"
+			}
+			iconType = {
+				name ="level_6_4"
+				quadTextureSprite = "SPC_country_development_panel_level_4_1"
+				position = { x = 253 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_4_txt"
+			}
+			iconType = {
+				name ="level_6_5"
+				quadTextureSprite = "SPC_country_development_panel_level_5_1"
+				position = { x = 292 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_5_txt"
+			}
+			iconType = {
+				name ="level_6_6"
+				quadTextureSprite = "SPC_country_development_panel_level_6_1"
+				position = { x = 331 y = 50 }
+				pdx_tooltip = "GET_counrty_development_idea_6_6_txt"
+			}
+			iconType = {
+				name = "bar_6"
+				spriteType = "SPC_country_development_panel_progress_bar"
+				position = { x = 138 y = 85 }
+				frame = 200
+				pdx_tooltip = research_development_generic_tt
+			}
+		}
+	}
+}

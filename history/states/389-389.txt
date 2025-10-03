@@ -1,0 +1,39 @@
+
+state={
+	id=389
+	name="STATE_389"
+	resources = {
+		magic_crystal = 4
+		tungsten = 8
+		oil = 16
+	}
+	provinces={
+		2973 5335 5461 5575 7052 7273 8918 10510 11058 19413 19429 19583 19661 22064 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			5461 = {
+				naval_base = 3
+			}
+			2973 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			5461 15
+		}
+		victory_points = {
+			2973 5
+		}
+	}
+	manpower=752200
+	state_category=city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

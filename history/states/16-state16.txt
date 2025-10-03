@@ -1,0 +1,31 @@
+
+state={
+	id=16
+	name="STATE_16"
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			8956 15
+		}
+		victory_points = {
+			17392 5
+		}
+
+	}
+
+	provinces={
+		3688 4532 4771 8956 17392 17462 17607 17710 17745 17859 
+	}
+	manpower=1930759
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

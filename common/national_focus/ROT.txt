@@ -1,0 +1,5009 @@
+focus_tree = {
+	id = ROT_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ROT
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#改革的灰烬
+		id = ROT_ash_of_reform
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = 5
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_1
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.15
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {	#加强警察
+		id = ROT_reinforce_police
+		icon = GFX_goal_Generic_Secret_Police
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_ash_of_reform }
+		relative_position_id = ROT_ash_of_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = -2000
+			add_stability = 0.1
+			SPC_secret_police_policy_up = yes
+		}
+	}
+
+	focus = {	#刺探全民革命运动
+		id = ROT_test_full_rev_mov
+		icon = GFX_Generic_Chess_Move
+		x = -3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_reinforce_police }
+		relative_position_id = ROT_reinforce_police
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.2
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#工人自治问题
+		id = ROT_worker_auto_prob
+		icon = GFX_goal_workers_for_business
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_test_full_rev_mov }
+		relative_position_id = ROT_test_full_rev_mov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.5
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#冷处理民族主义者
+		id = ROT_cooling_nationalist
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_worker_auto_prob }
+		relative_position_id = ROT_worker_auto_prob
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#人民自由党的表演
+		id = ROT_liv_people_perform
+		icon = GFX_Social_Liberal
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_reinforce_police }
+		relative_position_id = ROT_reinforce_police
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.6
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#外资至上
+		id = ROT_prem_foreign_invest
+		icon = GFX_goal_ideology_market_liberal
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_liv_people_perform }
+		relative_position_id = ROT_liv_people_perform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			415 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = ROT_gold_chains_of_the_federation
+				add_idea = ROT_gold_chains_of_the_federation_2
+			}
+		}
+	}
+
+	focus = {	#军事基地经济学
+		id = ROT_mil_base_econ
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		bypass = {
+			has_global_flag = RSB_faction_collapse
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_prem_foreign_invest }
+		relative_position_id = ROT_prem_foreign_invest
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			430 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			country_event = {
+				id = ROT.7
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#更多的瑟庞教教堂
+		id = ROT_more_churches
+		icon = GFX_goal_generic_construct_civilian
+		x = 3
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_reinforce_police }
+		relative_position_id = ROT_reinforce_police
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#圣城问题
+		id = ROT_holy_city_prob
+		icon = GFX_focus_BEL_christian_corporatism
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_more_churches }
+		relative_position_id = ROT_more_churches
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.8
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#处理狂热的教徒
+		id = ROT_deal_with_fury_religion
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_holy_city_prob }
+		relative_position_id = ROT_holy_city_prob
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_manpower = -1000
+			country_event = {
+				id = ROT.9
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#风暴中的大选
+		id = ROT_election_in_storm
+		icon = GFX_Generic_Elections
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			if = {
+				limit = { has_completed_focus = ROT_prem_foreign_invest }
+				NOT = { has_idea = ROT_gold_chains_of_the_federation_2 }
+			}
+			else = {
+				NOT = { has_idea = ROT_gold_chains_of_the_federation }
+			}
+		}
+
+		available_if_capitulated = yes
+		cancelable = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_cooling_nationalist }
+		prerequisite = { focus = ROT_mil_base_econ }
+		prerequisite = { focus = ROT_deal_with_fury_religion }
+		relative_position_id = ROT_mil_base_econ
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = ROT.12
+		}
+
+		completion_reward = {
+			country_event = {
+				id = ROT.13
+				days = 1
+			}
+		}
+	}
+
+	#社会合作路线
+
+	focus = {	#全民族的革命
+		id = ROT_rev_of_all_nations
+		icon = GFX_focus_generic_fascist_troops
+		x = 5
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_2
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.1
+			}
+			set_cosmetic_tag = ROT_national_socialist_flag
+		}
+	}
+
+	focus = {	#我们的左翼朋友
+		id = ROT_our_left_friends
+		icon = GFX_goal_Generic_Workers_Democracy
+		x = -3
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_rev_of_all_nations }
+		relative_position_id = ROT_rev_of_all_nations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			add_ideas = ROT_renaissance_alliance
+		}
+	}
+
+	focus = {	#重申纲领
+		id = ROT_reaffirm_manifesto
+		icon = GFX_focus_eng_special_air_service
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_our_left_friends }
+		relative_position_id = ROT_our_left_friends
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			country_event = {
+				id = ROT.100
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#救济法案
+		id = ROT_res_act
+		icon = GFX_focus_generic_welfare
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_econ_depression_tr
+				OR = {
+					has_idea = ROT_econ_depression_1
+					has_idea = ROT_econ_depression_2
+					has_idea = ROT_econ_depression_3
+					has_idea = ROT_econ_depression_4
+					has_idea = ROT_econ_depression_5
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_rev_of_all_nations }
+		relative_position_id = ROT_rev_of_all_nations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_subsidies_policy_up = yes
+			ROT_econ_depression_effect = yes
+		}
+	}
+
+	focus = {	#国有化铁路局
+		id = ROT_nationalize_railway_bureau
+		icon = GFX_focus_generic_railroad
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_econ_depression_tr
+				OR = {
+					has_idea = ROT_econ_depression_1
+					has_idea = ROT_econ_depression_2
+					has_idea = ROT_econ_depression_3
+					has_idea = ROT_econ_depression_4
+					has_idea = ROT_econ_depression_5
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_res_act }
+		relative_position_id = ROT_res_act
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 25
+				producer = ROT
+			}
+			add_ideas = ROT_teotland_department_of_transportation
+		}
+	}
+
+	focus = {	#组建褐衫军
+		id = ROT_form_brownshirts
+		icon = GFX_focus_IRQ_royal_iraqi_army_alt
+		x = 3
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_rev_of_all_nations }
+		relative_position_id = ROT_rev_of_all_nations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_brownshirts
+		}
+	}
+
+	focus = {	#与寡头会谈
+		id = ROT_talk_with_oligarchs
+		icon = GFX_focus_AFG_promote_the_counter_elite
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_form_brownshirts }
+		relative_position_id = ROT_form_brownshirts
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_industry_policy_up = yes
+		}
+	}
+
+
+	focus = {	#人民的元首
+		id = ROT_people_leader
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_reaffirm_manifesto }
+		prerequisite = { focus = ROT_nationalize_railway_bureau }
+		prerequisite = { focus = ROT_talk_with_oligarchs }
+		relative_position_id = ROT_nationalize_railway_bureau
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_people_leader_tt
+			remove_ideas = ROT_republic_of_discord
+			set_party_name = {
+				ideology = worldunion_democrat
+				long_name = ROT_worldunion_democrat_party_2_long
+				name = ROT_worldunion_democrat_party_2
+			}
+			retire_character = ROT_coraci_afton
+			ROT_morhardt_marrino = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = worldunion_democrat_subtype
+						expire = "2077.1.1.1"
+					}
+				}
+			}
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			set_country_flag = ROT_focus_2_1
+			mark_focus_tree_layout_dirty = yes
+			ROT_a_national_revolution_setup = yes
+		}
+	}
+
+	focus = {	#土地再分配
+		id = ROT_land_redistribution
+		icon = GFX_focus_generic_land_reclamation
+		x = -7
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_leader }
+		relative_position_id = ROT_people_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 10
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 10
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#扩种经济作物
+		id = ROT_virgin_land_movement
+		icon = GFX_Generic_Cotton_Farming
+		x = -2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_land_redistribution }
+		relative_position_id = ROT_land_redistribution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#制止宗教冲突
+		id = ROT_stop_religious_conflict
+		icon = GFX_focus_generic_sheep
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_land_redistribution }
+		relative_position_id = ROT_land_redistribution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_nation_unity_up = yes
+			add_ideas = RLP_secularism
+			add_stability = 0.1
+			unlock_decision_tooltip = ROT_develop_holy_city
+		}
+	}
+
+	focus = {	#适度的阶级斗争
+		id = ROT_moderate_class_struggle
+		icon = GFX_focus_AFG_against_kabul
+		x = -2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_stop_religious_conflict }
+		relative_position_id = ROT_stop_religious_conflict
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_working_policy_up = yes
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 10
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 10
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 10
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#整合各团体
+		id = ROT_integrate_groups
+		icon = GFX_focus_generic_subjugation
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_stop_religious_conflict }
+		relative_position_id = ROT_stop_religious_conflict
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_media_policy_up = yes
+			SPC_agricultural_policy_up = yes
+			ROT_nation_unity_up = yes
+		}
+	}
+
+	focus = {	#集体主义经济
+		id = ROT_collective_economy
+		icon = GFX_focus_GER_autarky_achieved
+		x = 2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_stop_religious_conflict }
+		relative_position_id = ROT_stop_religious_conflict
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_nationalization_policy_up = yes
+			SPC_economy_up = yes
+		}
+	}
+
+	focus = {	#同意型法团主义
+		id = ROT_guild_structure
+		icon = GFX_focus_GER_autarky_ambitions
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_moderate_class_struggle }
+		prerequisite = { focus = ROT_integrate_groups }
+		prerequisite = { focus = ROT_collective_economy }
+		relative_position_id = ROT_integrate_groups
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+			ROT_nation_unity_up = yes
+			add_ideas = ROT_corporatist_structure
+		}
+	}
+
+	focus = {	#弥补裂痕
+		id = ROT_fill_cracks
+		icon = GFX_focus_generic_surrender
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_guild_structure }
+		relative_position_id = ROT_guild_structure
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			ROT_nation_unity_up = yes
+		}
+	}
+
+	focus = {	#自由派的命运
+		id = ROT_fate_of_liberals
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_land_redistribution }
+		relative_position_id = ROT_land_redistribution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.102
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#金融改革
+		id = ROT_financial_reform
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_leader }
+		relative_position_id = ROT_people_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			ROT_econ_depression_effect = yes
+			SPC_trade_laws_down = yes
+		}
+	}
+
+	focus = {	#国有化外资
+		id = ROT_nationalize_foreign_capital
+		icon = GFX_focus_DEN_heavy_regulations
+		x = -2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_financial_reform }
+		relative_position_id = ROT_financial_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			415 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_resource = {
+					type = tungsten
+					amount = 19
+				}
+				add_resource = {
+					type = steel
+					amount = 9
+				}
+			}
+			421 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#公共工程计划
+		id = ROT_public_works_plan
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_financial_reform }
+		relative_position_id = ROT_financial_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.103
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#以军代赈
+		id = ROT_military_aid
+		icon = GFX_focus_SWE_defense_act
+		x = 2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_financial_reform }
+		relative_position_id = ROT_financial_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_economy_up = yes
+			SPC_mobilization_laws_up = yes
+			ROT_econ_depression_effect = yes
+		}
+	}
+
+	focus = {	#自给自足，独立自主
+		id = ROT_self_sufficient_independent
+		icon = GFX_focus_ICE_state_corporatism
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_nationalize_foreign_capital }
+		prerequisite = { focus = ROT_public_works_plan }
+		prerequisite = { focus = ROT_military_aid }
+		relative_position_id = ROT_public_works_plan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			SPC_resource_policy_up = yes
+			add_ideas = ROT_self_sufficient
+		}
+	}
+
+	focus = {	#打造战争机器
+		id = ROT_build_war_machine
+		icon = GFX_focus_GER_wunderwaffe
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_self_sufficient_independent }
+		relative_position_id = ROT_self_sufficient_independent
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			421 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			set_country_flag = ROT_economic_basis_of_the_restoration_war_on
+			set_variable = { ROT_war_preparation_points = 0 }
+			unlock_decision_category_tooltip = ROT_economic_basis_of_the_restoration_war
+		}
+	}
+
+	focus = {	#发行债券
+		id = ROT_issue_bonds
+		icon = GFX_focus_SWI_issue_war_bonds
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_build_war_machine }
+		relative_position_id = ROT_build_war_machine
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = ROT_bonds_of_the_restoration
+				days = 1200
+			}
+		}
+	}
+
+	focus = {	#荣誉与奖金
+		id = ROT_honor_and_bonus
+		icon = GFX_focus_AFG_afghan_bank
+		x = 7
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_leader }
+		relative_position_id = ROT_people_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_honorable_army
+		}
+	}
+
+	focus = {	#新训练标准
+		id = ROT_new_training_standard
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_honor_and_bonus }
+		relative_position_id = ROT_honor_and_bonus
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_training_laws_up = yes
+		}
+	}
+
+	focus = {	#留用南巴顾问
+		id = ROT_kept_rsb_advisor
+		icon = GFX_focus_generic_whispers
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available = {
+			has_idea = ROT_rsb_troops_compromise
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_new_training_standard }
+		relative_position_id = ROT_new_training_standard
+		mutually_exclusive = { focus = ROT_promote_zealous_officer }
+
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = -0.1
+			add_doctrine_cost_reduction = {
+				name = ROT_kept_rsb_advisor
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = ROT_rsb_troops_compromise
+				add_idea = ROT_retain_rsb_advisors
+			}
+		}
+	}
+
+	focus = {	#提拔热忱军官
+		id = ROT_promote_zealous_officer
+		icon = GFX_focus_PER_stand_with_giants
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_new_training_standard }
+		relative_position_id = ROT_new_training_standard
+		mutually_exclusive = { focus = ROT_kept_rsb_advisor }
+
+		completion_reward = {
+			add_ideas = ROT_promote_enthusiastic_officers
+		}
+	}
+
+	focus = {	#研究南巴技术兵器
+		id = ROT_research_rsb_weapons
+		icon = GFX_focus_RAJ_mountain_guns
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_kept_rsb_advisor focus = ROT_promote_zealous_officer }
+		relative_position_id = ROT_kept_rsb_advisor
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_research_rsb_weapons
+				bonus = 1
+				uses = 1
+				category = titan_equipments
+			}
+			add_tech_bonus = {
+				name = ROT_research_rsb_weapons
+				bonus = 1
+				uses = 1
+				category = infantry_equipments
+			}
+			add_tech_bonus = {
+				name = ROT_research_rsb_weapons
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {	#灌输民族主义
+		id = ROT_instill_nationalism
+		icon = GFX_focus_PER_stage_mass_protests
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			has_idea = ROT_honorable_army
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_research_rsb_weapons }
+		relative_position_id = ROT_research_rsb_weapons
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROT_honorable_army
+				add_idea = ROT_honorable_army_2
+			}
+		}
+	}
+
+	focus = {	#大提特兰之梦
+		id = ROT_dream_of_titran
+		icon = GFX_focus_GER_divide_and_conquer
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_fill_cracks }
+		prerequisite = { focus = ROT_issue_bonds }
+		prerequisite = { focus = ROT_instill_nationalism }
+		relative_position_id = ROT_issue_bonds
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = ROT_great_restoration_war
+				days = 730
+			}
+			set_country_flag = ROT_integrate_territories_on
+			unlock_decision_category_tooltip = ROT_integrate_territories
+		}
+	}
+
+	focus = {	#马加尔斯之行
+		id = ROT_mgc_journey
+		icon = GFX_focus_ETH_scavenging_tactics
+		x = -6
+		y = 1
+		cost = 2
+
+		available = {
+			MGC = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dream_of_titran }
+		relative_position_id = ROT_dream_of_titran
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			MGC = {
+				country_event = {
+					id = ROT.110
+					days = 1
+				}
+				add_to_ROOT_potential_cores = yes
+			}
+		}
+	}
+
+	focus = {	#防备西北的灾厄
+		id = ROT_defend_northwest_disaster
+		icon = GFX_focus_generic_public_works
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			MGC = { exists = no }
+			custom_trigger_tooltip = {
+				tooltip = SPC_generic_region_trigger_103_control_tr
+				all_of_scopes = {
+					array = global.SPC_generic_region_states_103
+					OR = {
+						is_owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_mgc_journey }
+		relative_position_id = ROT_mgc_journey
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			472 = {
+				add_core_of = ROOT
+				transfer_state_to = ROOT
+			}
+		}
+	}
+
+	focus = {	#向坎达德尔奔去
+		id = ROT_run_to_kandadell
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = -3
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = {
+				has_war_with = IMC
+			}
+		}
+
+		available_if_capitulated = yes
+		cancelable = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dream_of_titran }
+		relative_position_id = ROT_dream_of_titran
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = ROT.112
+				days = 1
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = KDK
+				type = annex_everything
+			}
+			KDK = {
+				add_to_ROOT_potential_cores = yes
+			}
+		}
+	}
+
+	focus = {	#告慰死难者
+		id = ROT_comfort_the_dead
+		icon = GFX_focus_SWE_form_rfsu
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			KDK = { exists = no }
+			SPC_generic_region_trigger_101_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_run_to_kandadell }
+		relative_position_id = ROT_run_to_kandadell
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_nation_unity_up = yes
+			451 = { add_extra_state_shared_building_slots = 1 }
+			446 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	focus = {	#勿忘瓦菲莱奥丽塔
+		id = ROT_dont_forget_vlf
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			VLF = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_comfort_the_dead }
+		relative_position_id = ROT_comfort_the_dead
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 360
+				producer = ROT
+			}
+			if = {
+				limit = {
+					VLF = {
+						OR = {
+							has_government = worldunion_democrat
+							has_government = liberal_republican
+							has_government = authoritarian_nationalism
+							has_government = conservative_republican
+							has_government = authoritarian_republican
+						}
+					}
+				}
+				VLF = {
+					country_event = {
+						id = ROT.110
+						days = 1
+					}
+				}
+			}
+			else = {
+				create_wargoal = {
+					target = VLF
+					type = annex_everything
+				}
+			}
+			VLF = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#蒙联烽火
+		id = ROT_mtv_fire
+		icon = GFX_focus_AFG_royal_guard
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			KDK = { exists = no }
+			IMC = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dream_of_titran }
+		relative_position_id = ROT_dream_of_titran
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_country = {
+				limit = { SPC_generic_region_trigger_102 = yes }
+				country_event = {
+					id = ROT.110
+					days = 1
+				}
+				add_to_ROOT_potential_cores = yes
+			}
+		}
+	}
+
+	focus = {	#开发自治区
+		id = ROT_develop_autonomous_region
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			SPC_generic_region_trigger_102_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_mtv_fire }
+		relative_position_id = ROT_mtv_fire
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_develop_autonomous_region_tt
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_102
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = -10
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#民族团结之歌
+		id = ROT_national_unity_song
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_develop_autonomous_region }
+		relative_position_id = ROT_develop_autonomous_region
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_nation_unity_up = yes
+		}
+	}
+
+	focus = {	#西南苦难
+		id = ROT_southwest_suffering
+		icon = GFX_focus_RAJ_i_am_death
+		x = 3
+		y = 1
+		cost = 2
+
+		available = {
+			IMC = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			IMC = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dream_of_titran }
+		relative_position_id = ROT_dream_of_titran
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { IMC = { NOT = { has_government = liberal_republican } } }
+				create_wargoal = {
+					target = IMC
+					type = annex_everything
+				}
+				country_event = {
+					id = ROT.113
+					days = 1
+				}
+			}
+			else = {
+				IMC = {
+					country_event = {
+						id = ROT.116
+						days = 1
+					}
+				}
+			}
+			IMC = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#联络游击队
+		id = ROT_contact_guerrilla
+		icon = GFX_focus_SWE_lottakoren
+		x = -1
+		y = 1
+		cost = 2
+
+		bypass = {
+			IMC = {
+				OR = {
+					exists = no
+					has_government = liberal_republican
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_southwest_suffering }
+		relative_position_id = ROT_southwest_suffering
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = ROT.119
+						days = 1
+					}
+				}
+				50 = {
+					country_event = {
+						id = ROT.120
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#救济当地民众
+		id = ROT_aid_local_people
+		icon = GFX_focus_generic_price_controls
+		x = 1
+		y = 1
+		cost = 2
+
+		available = {
+			IMC = { exists = no }
+			SPC_generic_region_trigger_104_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_southwest_suffering }
+		relative_position_id = ROT_southwest_suffering
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = -10
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_political_power = -50
+			SPC_living_standard_development_amount_up_3 = yes
+		}
+	}
+
+	focus = {	#摧毁殖民残余
+		id = ROT_destroy_colonial_remnants
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_contact_guerrilla }
+		prerequisite = { focus = ROT_aid_local_people }
+		relative_position_id = ROT_contact_guerrilla
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.121
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#提特兰重生
+		id = ROT_titran_rebirth
+		icon = GFX_focus_RAJ_the_sun_sets
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			SPC_generic_region_trigger_100_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dont_forget_vlf }
+		prerequisite = { focus = ROT_national_unity_song }
+		prerequisite = { focus = ROT_destroy_colonial_remnants }
+		relative_position_id = ROT_national_unity_song
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 200
+			remove_ideas = ROT_great_restoration_war
+			set_country_flag = ROT_focus_2_2
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#前盟友
+		id = ROT_former_allies
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		x = 7
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_2_2
+		}
+
+		prerequisite = { focus = ROT_dream_of_titran }
+		relative_position_id = ROT_dream_of_titran
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			317 = {
+				owner = {
+					country_event = {
+						id = ROT.123
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#平等的合作
+		id = ROT_equal_cooperation
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -1
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_flag = ROT_equal_cooperation_flag
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_former_allies }
+		relative_position_id = ROT_former_allies
+		mutually_exclusive = { focus = ROT_eastern_vigilance }
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			317 = {
+				owner = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#东部警戒
+		id = ROT_eastern_vigilance
+		icon = GFX_focus_PER_limit_foreign_influence
+		x = 1
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_flag = ROT_eastern_vigilance_flag
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_former_allies }
+		relative_position_id = ROT_former_allies
+		mutually_exclusive = { focus = ROT_equal_cooperation }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 3000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+		}
+	}
+
+	focus = {	#摘心岛防务
+		id = ROT_heart_island_defense
+		icon = GFX_focus_PER_construct_air_defenses
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_equal_cooperation focus = ROT_eastern_vigilance }
+		relative_position_id = ROT_equal_cooperation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			414 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 2
+				}
+				add_dynamic_modifier = {
+					modifier = ROT_heart_island_defense_idea
+				}
+			}
+		}
+	}
+
+	focus = {	#开放之门
+		id = ROT_open_the_door
+		icon = GFX_focus_RAJ_just_good_business
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_heart_island_defense }
+		relative_position_id = ROT_heart_island_defense
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			415 = {
+				add_extra_state_shared_building_slots = 5
+				add_dynamic_modifier = {
+					modifier = ROT_free_trade_zone
+				}
+			}
+		}
+	}
+
+	focus = {	#提特兰内务部
+		id = ROT_titran_interior_ministry
+		icon = GFX_focus_generic_vatican_agents
+		x = 3
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_honor_and_bonus }
+		relative_position_id = ROT_honor_and_bonus
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			create_intelligence_agency = yes
+			add_ideas = ROT_teotland_home_office
+		}
+	}
+
+	focus = {	#民事部队
+		id = ROT_civilian_army
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_titran_interior_ministry }
+		relative_position_id = ROT_titran_interior_ministry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_ideas = ROT_civilian_army_idea
+		}
+	}
+
+	focus = {	#不容动摇
+		id = ROT_unshakeable
+		icon = GFX_focus_RAJ_a_policy_of_silence
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_civilian_army }
+		relative_position_id = ROT_civilian_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROT_teotland_home_office
+				add_idea = ROT_teotland_home_office_2
+			}
+			SPC_secret_police_policy_up = yes
+		}
+	}
+
+	focus = {	#长剑入鞘
+		id = ROT_sheath_the_sword
+		icon = GFX_focus_SWE_bofors_fly_swatter
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_unshakeable }
+		relative_position_id = ROT_unshakeable
+		mutually_exclusive = { focus = ROT_night_of_the_sword }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = 5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#长剑之夜
+		id = ROT_night_of_the_sword
+		icon = GFX_focus_RAJ_circuvment_demobilization_restrictions
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			NOT = {
+				has_completed_focus = ROT_left_guild_economy
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_unshakeable }
+		relative_position_id = ROT_unshakeable
+		mutually_exclusive = { focus = ROT_sheath_the_sword }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_night_of_the_sword_tt
+			set_variable = { ROT_a_national_revolution_1 = 100 }
+			add_stability = -0.1
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.2
+			}
+			remove_ideas = ROT_renaissance_alliance
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -10
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_manpower = -1909
+			add_political_power = -100
+			retire_character = ROT_morhardt_marrino
+			retire_character = ROT_maillard_belloc
+		}
+	}
+
+	focus = {	#忠于伟大领袖
+		id = ROT_loyal_to_great_leader
+		icon = GFX_focus_generic_workers
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_sheath_the_sword focus = ROT_night_of_the_sword }
+		relative_position_id = ROT_sheath_the_sword
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = 5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 5
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+			ROT_nation_unity_up = yes
+			if = {
+				limit = { has_completed_focus = ROT_advocate_personality_cult }
+				add_political_power = 100
+			}
+		}
+	}
+
+	focus = {	#元首的旨意
+		id = ROT_will_of_leader
+		icon = GFX_focus_RAJ_red_in_the_shadows
+		x = 30
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_2_1
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#对生命的尊重
+		id = ROT_respect_the_life
+		icon = GFX_focus_generic_population_growth
+		x = -8
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_will_of_leader }
+		relative_position_id = ROT_will_of_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.03
+			}
+		}
+	}
+
+	focus = {	#自产青霉素
+		id = ROT_self_produced_penicillin
+		icon = GFX_focus_RAJ_quinine
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_respect_the_life }
+		relative_position_id = ROT_respect_the_life
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_living_standard_development_amount_up_2 = yes
+			if = {
+				limit = { NOT = { has_tech = tech_field_hospital } }
+				set_technology = {
+					tech_field_hospital = 1
+				}
+			}
+			420 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#分级医疗体系
+		id = ROT_graded_medical_system
+		icon = GFX_focus_generic_bad_medical
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_self_produced_penicillin }
+		relative_position_id = ROT_self_produced_penicillin
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_teotland_medical_system
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 5
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#鼓励合作社
+		id = ROT_encourage_cooperative
+		icon = GFX_focus_ICE_state_corporatism
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_graded_medical_system }
+		relative_position_id = ROT_graded_medical_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -10
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			ROT_a_national_revolution_update = yes
+			SPC_working_policy_up = yes
+			custom_effect_tooltip = ROT_encourage_cooperative_tt
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {	#战地志愿医疗队
+		id = ROT_field_volunteer_medical_team
+		icon = GFX_focus_generic_field_hostpital
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_encourage_cooperative }
+		relative_position_id = ROT_encourage_cooperative
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.03
+			}
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 5
+			}
+			SPC_military_development_amount_up_3 = yes
+		}
+	}
+
+	focus = {	#提特兰的救赎
+		id = ROT_titran_redemption
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_field_volunteer_medical_team }
+		relative_position_id = ROT_field_volunteer_medical_team
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_nation_unity_up = yes
+		}
+	}
+
+	focus = {	#言出必行的革命
+		id = ROT_revolution_of_action
+		icon = GFX_focus_generic_workers
+		x = -4
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_morhardt_marrino_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_will_of_leader }
+		relative_position_id = ROT_will_of_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			SPC_working_policy_up = yes
+		}
+	}
+	
+	focus = {	#男女平权
+		id = ROT_gender_equity
+		icon = GFX_Generic_Female_Soldier03
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_morhardt_marrino_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_revolution_of_action }
+		relative_position_id = ROT_revolution_of_action
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_female_policy_up = yes
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 5
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_stability = 0.1
+		}
+	}
+
+	focus = {	#巩固联盟
+		id = ROT_consolidate_alliance
+		icon = GFX_focus_BEL_v_for_victory
+		x = 2
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_morhardt_marrino_idea
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_self_produced_penicillin focus = ROT_gender_equity }
+		relative_position_id = ROT_self_produced_penicillin
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			ROT_a_national_revolution_update = yes
+			swap_ideas = {
+				remove_idea = ROT_renaissance_alliance
+				add_idea = ROT_renaissance_alliance_2
+			}
+		}
+	}
+
+	focus = {	#反腐行动
+		id = ROT_anti_corruption_action
+		icon = GFX_focus_BRA_rio_protocol
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_morhardt_marrino_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_gender_equity }
+		relative_position_id = ROT_gender_equity
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_stability = -0.1
+		}
+	}
+
+	focus = {	#左翼法团主义经济
+		id = ROT_left_guild_economy
+		icon = GFX_goal_social_reforms
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_morhardt_marrino_idea
+			has_idea = ROT_corporatist_structure
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_anti_corruption_action }
+		relative_position_id = ROT_anti_corruption_action
+		mutually_exclusive = { focus = ROT_one_party_one_country_one_army }
+		mutually_exclusive = { focus = ROT_decade_total_war_plan }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = ROT_corporatist_structure
+				add_idea = ROT_left_corporatism
+			}
+		}
+	}
+
+	focus = {	#人民之眼
+		id = ROT_peoples_eye
+		icon = GFX_focus_ARG_establish_the_free_association
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_left_guild_economy }
+		relative_position_id = ROT_left_guild_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROT_left_corporatism
+				add_idea = ROT_left_corporatism_2
+			}
+		}
+	}
+
+	focus = {	#真正的人民军队
+		id = ROT_true_peoples_army
+		icon = GFX_Generic_Militant_Socialism
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_peoples_eye }
+		relative_position_id = ROT_peoples_eye
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_teotland_defense_army
+		}
+	}
+
+	focus = {	#为了稳定与发展
+		id = ROT_for_stability_and_development
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_bilash_tricker_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_will_of_leader }
+		relative_position_id = ROT_will_of_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = 5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			ROT_a_national_revolution_update = yes
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {	#整肃党纪
+		id = ROT_clean_up_party_discipline
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_bilash_tricker_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_for_stability_and_development }
+		relative_position_id = ROT_for_stability_and_development
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#吸纳反对党
+		id = ROT_absorb_opposition_party
+		icon = GFX_goal_Generic_Meeting
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_gender_equity focus = ROT_clean_up_party_discipline }
+		relative_position_id = ROT_gender_equity
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#法团技官
+		id = ROT_guild_technical_officer
+		icon = GFX_focus_generic_university_3
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_bilash_tricker_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_clean_up_party_discipline }
+		relative_position_id = ROT_clean_up_party_discipline
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_guild_technical_officer
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = ROT_guild_technical_officer
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {	#一党一国一军
+		id = ROT_one_party_one_country_one_army
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_bilash_tricker_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_guild_technical_officer }
+		relative_position_id = ROT_guild_technical_officer
+		mutually_exclusive = { focus = ROT_left_guild_economy }
+		mutually_exclusive = { focus = ROT_decade_total_war_plan }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = -20
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -10
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = -10
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_ideas = ROT_party_state_system
+		}
+	}
+
+	focus = {	#制度化腐败
+		id = ROT_institutionalized_corruption
+		icon = GFX_focus_RAJ_trickle_down_economics
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_one_party_one_country_one_army }
+		relative_position_id = ROT_one_party_one_country_one_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = 20
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = -10
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {	#更务实的革命
+		id = ROT_more_practical_revolution
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_institutionalized_corruption }
+		relative_position_id = ROT_institutionalized_corruption
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#不容遗忘的仇恨
+		id = ROT_unforgettable_hatred
+		icon = GFX_focus_RAJ_a_private_military
+		x = 4
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_will_of_leader }
+		relative_position_id = ROT_will_of_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = -5
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 10
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {	#军国体制
+		id = ROT_military_state_system
+		icon = GFX_focus_generic_military_dictatorship
+		x = 0
+		y = 1
+		cost = 2
+		
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_unforgettable_hatred }
+		relative_position_id = ROT_unforgettable_hatred
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.1
+			}
+			add_ideas = ROT_teotland_militarism
+		}
+	}
+
+	focus = {	#提特兰优越论
+		id = ROT_titran_superiority_theory
+		icon = GFX_focus_COG_force_publique_mutiny
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_clean_up_party_discipline focus = ROT_military_state_system }
+		relative_position_id = ROT_clean_up_party_discipline
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_nation_unity_up = yes
+			SPC_research_development_amount_down_3 = yes
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {	#物尽其用
+		id = ROT_make_the_best_use_of_everything
+		icon = GFX_focus_generic_public_works
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_military_state_system }
+		relative_position_id = ROT_military_state_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_taxes_laws_up = yes
+			SPC_working_policy_down = yes
+		}
+	}
+
+	focus = {	#十年总体战计划
+		id = ROT_decade_total_war_plan
+		icon = GFX_focus_RAJ_war_taxes
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_make_the_best_use_of_everything }
+		relative_position_id = ROT_make_the_best_use_of_everything
+		mutually_exclusive = { focus = ROT_left_guild_economy }
+		mutually_exclusive = { focus = ROT_one_party_one_country_one_army }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_decade_total_war_plan_tt
+			add_ideas = tot_economic_mobilisation
+			activate_mission = ROT_limit_of_the_total_war
+		}
+	}
+
+	focus = {	#为了最伟大的提特兰
+		id = ROT_for_the_greatest_titran
+		icon = GFX_Generic_Industry_Tanks
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_decade_total_war_plan }
+		relative_position_id = ROT_decade_total_war_plan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#意志制胜
+		id = ROT_will_to_win
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_idea = ROT_decius_glaion_idea
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_for_the_greatest_titran }
+		relative_position_id = ROT_for_the_greatest_titran
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROT_teotland_militarism
+				add_idea = ROT_teotland_militarism_2
+			}
+		}
+	}
+
+	focus = {	#下一位？
+		id = ROT_next_one
+		icon = GFX_goal_governor_question
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_true_peoples_army focus = ROT_more_practical_revolution focus = ROT_will_to_win }
+		relative_position_id = ROT_more_practical_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_next_one_tt
+		}
+	}
+
+	focus = {	#鼓吹个人崇拜
+		id = ROT_advocate_personality_cult
+		icon = GFX_Generic_Liberation
+		x = 8
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_leader = {
+				character = ROT_magnimo_iromoz
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_will_of_leader }
+		relative_position_id = ROT_will_of_leader
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {	#利用党内矛盾
+		id = ROT_use_party_contradiction
+		icon = GFX_Generic_Checkmate
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_leader = {
+				character = ROT_magnimo_iromoz
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_advocate_personality_cult }
+		relative_position_id = ROT_advocate_personality_cult
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#美化战争
+		id = ROT_beautify_war
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_military_state_system focus = ROT_use_party_contradiction }
+		relative_position_id = ROT_military_state_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 15000
+		}
+	}
+
+	focus = {	#救济之手
+		id = ROT_helping_hand
+		icon = GFX_Generic_Socialist_Propaganda
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_leader = {
+				character = ROT_magnimo_iromoz
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_use_party_contradiction }
+		relative_position_id = ROT_use_party_contradiction
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_subsidies_policy_up = yes
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+	}
+
+	focus = {	#藏于袖中的匕首
+		id = ROT_dagger_in_sleeve
+		icon = GFX_Generic_Spy_Sabotage
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_leader = {
+				character = ROT_magnimo_iromoz
+			}
+			has_intelligence_agency = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_helping_hand }
+		relative_position_id = ROT_helping_hand
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			gain_random_agency_upgrade = yes
+			gain_random_agency_upgrade = yes
+			gain_random_agency_upgrade = yes
+		}
+	}
+
+	focus = {	#国家精神的象征
+		id = ROT_symbol_of_national_spirit
+		icon = GFX_Paternal_Autocrat
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			has_country_leader = {
+				character = ROT_magnimo_iromoz
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_dagger_in_sleeve }
+		relative_position_id = ROT_dagger_in_sleeve
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_rev_of_all_race
+		}
+	}
+
+	focus = {	#重新审视联盟关系
+		id = ROT_reexamine_alliance_relationship
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_renaissance_alliance_tr
+				OR = {
+					has_idea = ROT_renaissance_alliance
+					has_idea = ROT_renaissance_alliance_2
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_symbol_of_national_spirit }
+		relative_position_id = ROT_symbol_of_national_spirit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_reexamine_alliance_relationship
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
+		}
+	}
+
+	###目田线###
+
+	focus = {	#恢复首都秩序
+		id = ROT_restore_capital_order
+		icon = GFX_Generic_Urban_Warfare
+		x = 5
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_3
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_restore_capital_order_tt
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#宣布全民革非法
+		id = ROT_announce_revolution
+		icon = GFX_focus_BEL_government_resigns
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_restore_capital_order }
+		relative_position_id = ROT_restore_capital_order
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.15
+			}
+		}
+	}
+
+	focus = {	#南巴驻军的恩情
+		id = ROT_rsb_garrison_grace
+		icon = GFX_focus_RAJ_headhunt_army_personell
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_announce_revolution }
+		relative_position_id = ROT_announce_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = -0.1
+			set_country_flag = ROT_armored_protect_rsb_fed_on
+			unlock_decision_category_tooltip = ROT_armored_protect_rsb_fed
+		}
+	}
+
+	focus = {	#重建全国统治
+		id = ROT_rebuild_national_rule
+		icon = GFX_focus_AFG_establish_darulaman
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_restore_capital_order }
+		relative_position_id = ROT_restore_capital_order
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {	#以暴治乱
+		id = ROT_rule_by_force
+		icon = GFX_Generic_Molotov_Cocktail
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_rebuild_national_rule }
+		relative_position_id = ROT_rebuild_national_rule
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = -0.1
+			add_manpower = -25000
+		}
+	}
+
+	focus = {	#“不许乱说话！”
+		id = ROT_no_talking
+		icon = GFX_focus_RAJ_a_policy_of_silence
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_restore_capital_order }
+		relative_position_id = ROT_restore_capital_order
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_media_policy_up = yes
+			SPC_secret_police_policy_up = yes
+		}
+	}
+
+	focus = {	#临时选举
+		id = ROT_temp_election
+		icon = GFX_Generic_Legislation
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_no_talking }
+		relative_position_id = ROT_no_talking
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_temp_election_tt
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#人民自由党之治
+		id = ROT_people_dem_party_gov
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_rsb_garrison_grace }
+		prerequisite = { focus = ROT_rule_by_force }
+		prerequisite = { focus = ROT_temp_election }
+		relative_position_id = ROT_rule_by_force
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			remove_ideas = ROT_republic_of_discord
+			add_ideas = ROT_anti_comm_republic
+		}
+	}
+
+	focus = {	#削减多余开支
+		id = ROT_cut_excess_expenses
+		icon = GFX_focus_RAJ_trickle_down_economics
+		x = -5
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_dem_party_gov }
+		relative_position_id = ROT_people_dem_party_gov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = MP_freedom_speech
+			add_political_power = 200
+			add_manpower = -155
+		}
+	}
+
+	focus = {	#国有化提特兰铁路局
+		id = ROT_nationalize_titran_railway
+		icon = GFX_Generic_Railroads
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_cut_excess_expenses }
+		relative_position_id = ROT_cut_excess_expenses
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			add_ideas = ROT_teotland_department_of_transportation
+		}
+	}
+
+	focus = {	#安抚南巴资本
+		id = ROT_soothe_rsb_capital
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_nationalize_titran_railway }
+		relative_position_id = ROT_nationalize_titran_railway
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#夺取非南巴外资
+		id = ROT_take_over_non_rsb_foreign_capital
+		icon = GFX_focus_GER_integrated_economies
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_soothe_rsb_capital }
+		relative_position_id = ROT_soothe_rsb_capital
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {	#拯救企业
+		id = ROT_save_enterprise
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_cut_excess_expenses }
+		relative_position_id = ROT_cut_excess_expenses
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_industry_policy_up = yes
+			ROT_econ_depression_effect = yes
+		}
+	}
+
+	focus = {	#企业公平法案
+		id = ROT_enterprise_fair_law
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_save_enterprise }
+		relative_position_id = ROT_save_enterprise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_systematic_oppression_of_workers
+		}
+	}
+
+	focus = {	#白色土地改革
+		id = ROT_white_land_reform
+		icon = GFX_Land_Reform
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_enterprise_fair_law }
+		relative_position_id = ROT_enterprise_fair_law
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_agricultural_policy_up = yes
+			add_ideas = ROT_land_capitalization
+		}
+	}
+
+	focus = {	#加强税务局
+		id = ROT_strengthen_tax_bureau
+		icon = GFX_Generic_Loadsamoney
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_cut_excess_expenses }
+		relative_position_id = ROT_cut_excess_expenses
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = 1500
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#金融集团的命运
+		id = ROT_fate_of_financial_group
+		icon = GFX_focus_GER_wirtschaftswunder
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_strengthen_tax_bureau }
+		relative_position_id = ROT_strengthen_tax_bureau
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+		}
+	}
+
+	focus = {	#剥夺纳卡教资产
+		id = ROT_deprive_naka_assets
+		icon = GFX_goal_generic_seize_money
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_fate_of_financial_group }
+		relative_position_id = ROT_fate_of_financial_group
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.15
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#资本要素自由流动
+		id = ROT_capital_factor_free_flow
+		icon = GFX_Generic_Monopoly
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_take_over_non_rsb_foreign_capital }
+		prerequisite = { focus = ROT_white_land_reform }
+		prerequisite = { focus = ROT_deprive_naka_assets }
+		relative_position_id = ROT_white_land_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+			add_ideas = ROT_vibrant_market_economy
+		}
+	}
+
+	focus = {	#商品化农业
+		id = ROT_commercialized_agriculture	
+		icon = GFX_Focus_Export_Economy
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_capital_factor_free_flow }
+		relative_position_id = ROT_capital_factor_free_flow
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+		}
+	}
+
+	focus = {	#交通保障法案
+		id = ROT_transportation_security_law
+		icon = GFX_focus_generic_improve_roads
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_commercialized_agriculture }
+		relative_position_id = ROT_commercialized_agriculture
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_ensure_logistics
+		}
+	}
+
+	focus = {	#建制两党的共识
+		id = ROT_consensus_of_the_two_parties
+		icon = GFX_focus_generic_improve_the_administration
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_dem_party_gov }
+		relative_position_id = ROT_people_dem_party_gov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.2
+			}
+		}
+	}
+
+	focus = {	#崇拜南巴斯蒂亚
+		id = ROT_worship_rsb_stia
+		icon = GFX_Generic_Cult_of_Washington
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_consensus_of_the_two_parties }
+		relative_position_id = ROT_consensus_of_the_two_parties
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {	#贬低提特兰本土宗教
+		id = ROT_demean_titran_native_religion
+		icon = GFX_goal_Generic_Enough
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_worship_rsb_stia }
+		relative_position_id = ROT_worship_rsb_stia
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_manpower = -1777
+			SPC_research_development_amount_up_3 = yes
+		}
+	}
+
+	focus = {	#共和国的使命
+		id = ROT_mission_of_the_republic
+		icon = GFX_Generic_Manifest_Destiny
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_demean_titran_native_religion }
+		relative_position_id = ROT_demean_titran_native_religion
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_rsb_puppet
+		}
+	}
+
+	focus = {	#保障女性权利
+		id = ROT_protect_female_rights
+		icon = GFX_focus_AUS_womens_education_initiative
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_consensus_of_the_two_parties }
+		relative_position_id = ROT_consensus_of_the_two_parties
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_female_policy_up = yes
+			SPC_female_policy_up = yes
+		}
+	}
+
+	focus = {	#技术创新
+		id = ROT_technological_innovation
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_protect_female_rights }
+		relative_position_id = ROT_protect_female_rights
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {	#培养企业家精神
+		id = ROT_cultivate_entrepreneurial_spirit
+		icon = GFX_goal_workers_for_business
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_technological_innovation }
+		relative_position_id = ROT_technological_innovation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_entrepreneurial_spirit
+		}
+	}
+
+	focus = {	#自由禁卫军
+		id = ROT_free_guard
+		icon = GFX_focus_CONGO_congo_army
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_mission_of_the_republic }
+		prerequisite = { focus = ROT_cultivate_entrepreneurial_spirit }
+		relative_position_id = ROT_cultivate_entrepreneurial_spirit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_free_guard
+				category = electronics
+				bonus = 1
+				uses = 2
+			}
+			add_manpower = 3000
+			add_stability = 0.1
+		}
+	}
+
+	focus = {	#点燃自由的火炬
+		id = ROT_torch_of_freedom
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_free_guard }
+		relative_position_id = ROT_free_guard
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_economy_up = yes
+			SPC_mobilization_laws_up = yes
+			add_ideas = aggressive_tatic
+		}
+	}
+
+	focus = {	#罪犯充军
+		id = ROT_exile_criminals
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_torch_of_freedom }
+		relative_position_id = ROT_torch_of_freedom
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_military_development_amount_down_3 = yes
+			add_manpower = 25000
+		}
+	}
+
+	focus = {	#绝不饶恕
+		id = ROT_never_forgive
+		icon = GFX_focus_generic_subjugation
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_torch_of_freedom }
+		relative_position_id = ROT_torch_of_freedom
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_unforgiving_revolution
+		}
+	}
+
+	focus = {	#学习南巴战术
+		id = ROT_learn_rsb_tactics
+		icon = GFX_focus_generic_army_doctrines_2
+		x = 5
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_people_dem_party_gov }
+		relative_position_id = ROT_people_dem_party_gov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROT_learn_rsb_tactics_tt
+			division_template = {
+				name = "改革步兵师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			army_experience = 50
+			SPC_military_development_amount_up_3 = yes
+		}
+	}
+
+	focus = {	#研究南巴技术兵器
+		id = ROT_research_rsb_tech
+		icon = GFX_focus_generic_armored_air_support
+		x = -2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_learn_rsb_tactics }
+		relative_position_id = ROT_learn_rsb_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_research_rsb_tech
+				category = titan_equipments
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = ROT_research_rsb_tech
+				category = infantry_equipments
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = ROT_research_rsb_tech
+				category = artillery
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+
+	focus = {	#魔法之威
+		id = ROT_might_of_magic
+		icon = GFX_goal_generic_secret_weapon
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_research_rsb_tech }
+		relative_position_id = ROT_research_rsb_tech
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_might_of_magic
+				category = secret_weapons
+				bonus = 1
+				uses = 2
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {	#向自由国家求援
+		id = ROT_ask_for_help_from_free_country
+		icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_might_of_magic }
+		relative_position_id = ROT_might_of_magic
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = if_to_tag_effect_tt
+				NATION_NAME = "[LNR.GetName]"
+			}
+			effect_tooltip = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+			custom_effect_tooltip = {
+				localization_key = if_to_tag_effect_tt
+				NATION_NAME = "[RSU.GetName]"
+			}
+			effect_tooltip = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+			custom_effect_tooltip = {
+				localization_key = if_to_tag_effect_tt
+				NATION_NAME = "[RSB.GetName]"
+			}
+			effect_tooltip = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+			hidden_effect = {
+				if = {
+					limit = { LNR = { exists = yes } }
+					add_political_power = 50
+					add_stability = 0.05
+					add_war_support = 0.05
+				}
+				if = {
+					limit = { RSU = { exists = yes } }
+					add_political_power = 50
+					add_stability = 0.05
+					add_war_support = 0.05
+				}
+				if = {
+					limit = { RSB = { exists = yes } }
+					add_political_power = 50
+					add_stability = 0.05
+					add_war_support = 0.05
+				}	
+			}
+		}
+	}
+	
+	focus = {	#注重炮兵
+		id = ROT_artillery_emphasis
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_learn_rsb_tactics }
+		relative_position_id = ROT_learn_rsb_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROT_artillery_emphasis
+				category = mio_cat_artillery
+				bonus = 0.5
+				uses = 2
+			}
+		}
+	}
+
+	focus = {	#扩充提特兰宪兵
+		id = ROT_enlarge_titran_gendarmerie
+		icon = GFX_goal_Generic_Secret_Police
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_artillery_emphasis }
+		relative_position_id = ROT_artillery_emphasis
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_teotland_gendarmerie
+		}
+	}
+
+	focus = {	#民力即战力
+		id = ROT_civil_power_is_military_power
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_enlarge_titran_gendarmerie }
+		relative_position_id = ROT_enlarge_titran_gendarmerie
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 5
+				producer = ROOT
+			}
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 160
+				producer = ROOT
+			}
+			add_stability = -0.1
+		}
+	}
+
+	focus = {	#允许私企生产军备
+		id = ROT_allow_private_enterprise_to_produce_arms
+		icon = GFX_focus_PER_construct_air_defenses
+		x = 2
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_learn_rsb_tactics }
+		relative_position_id = ROT_learn_rsb_tactics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#军工复合体
+		id = ROT_military_industrial_complex
+		icon = GFX_focus_RAJ_war_taxes
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_allow_private_enterprise_to_produce_arms }
+		relative_position_id = ROT_allow_private_enterprise_to_produce_arms
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ROT_econ_depression_effect = yes
+			add_ideas = ROT_military_industrial_complex_idea
+		}
+	}
+
+	focus = {	#允许私企供应军需
+		id = ROT_allow_private_enterprise_to_supply_military
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_military_industrial_complex }
+		relative_position_id = ROT_military_industrial_complex
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROT_military_industrial_complex_idea
+				add_idea = ROT_military_industrial_complex_idea_2
+			}
+		}
+	}
+
+	focus = {	#无边铁雨
+		id = ROT_unbounded_iron_rain
+		icon = GFX_focus_SWE_marauder_bombers
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_ask_for_help_from_free_country }
+		prerequisite = { focus = ROT_civil_power_is_military_power }
+		prerequisite = { focus = ROT_allow_private_enterprise_to_supply_military }
+		relative_position_id = ROT_civil_power_is_military_power
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_unlimited_iron_rain
+		}
+	}
+
+	focus = {	#整合准军事组织
+		id = ROT_integration_of_paramilitary_organization
+		icon = GFX_focus_SWE_lottakoren
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_unbounded_iron_rain }
+		relative_position_id = ROT_unbounded_iron_rain
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = 30000
+			add_command_power = 50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+				producer = ROT
+			}
+		}
+	}
+
+	focus = {	#代号：地毯
+		id = ROT_code_carpet
+		icon = GFX_focus_SWE_varnplikt
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_integration_of_paramilitary_organization }
+		relative_position_id = ROT_integration_of_paramilitary_organization
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { has_intelligence_agency = yes }
+				gain_random_agency_upgrade = yes
+				gain_random_agency_upgrade = yes
+				gain_random_agency_upgrade = yes
+			}
+			else = {
+				create_intelligence_agency = { 
+					name = "地毯"
+					icon = GFX_intelligence_agency_logo_generic_2
+				}
+			}
+		}
+	}
+
+	focus = {	#第二次解放战争
+		id = ROT_second_liberation_war
+		icon = GFX_focus_SWE_the_lion_of_the_north
+		x = 1
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_transportation_security_law }
+		prerequisite = { focus = ROT_exile_criminals }
+		prerequisite = { focus = ROT_never_forgive }
+		prerequisite = { focus = ROT_code_carpet }
+		relative_position_id = ROT_exile_criminals
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 10000
+			set_country_flag = ROT_integrate_territories_on
+			unlock_decision_category_tooltip = ROT_integrate_territories
+		}
+	}
+
+	focus = {	#解放南方
+		id = ROT_liberate_south
+		icon = GFX_Generic_Invasion
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+			IMC = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			IMC = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_second_liberation_war }
+		relative_position_id = ROT_second_liberation_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { IMC = { has_government = liberal_republican } }
+				IMC = {
+					country_event = {
+						id = ROT.200
+						days = 1
+					}
+				}
+			}
+			else = {
+				create_wargoal = {
+					target = IMC
+					type = annex_everything
+				}
+			}
+			IMC = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#联系自由战士
+		id = ROT_contact_free_warriors
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		cost = 5
+
+		bypass = {
+			OR = {
+				IMC = { exists = no }
+				IMC = { has_government = liberal_republican }
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_liberate_south }
+		relative_position_id = ROT_liberate_south
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = ROT_support_from_southern_brother
+		}
+	}
+
+	focus = {	#一个不饶
+		id = ROT_no_mercy
+		icon = GFX_focus_RAJ_contamination_cleanup_crew
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			IMC = { exists = no }
+			SPC_generic_region_trigger_104_control = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_contact_free_warriors }
+		relative_position_id = ROT_contact_free_warriors
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROT.122
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#向西进发
+		id = ROT_move_west
+		icon = GFX_focus_PER_communist_afghanistan_intervention
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			KDK = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			KDK = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_second_liberation_war }
+		relative_position_id = ROT_second_liberation_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			create_wargoal = {
+				target = KDK
+				type = annex_everything
+			}
+			KDK = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#彻底的革命
+		id = ROT_thorough_revolution
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			owns_state = 443
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_move_west }
+		relative_position_id = ROT_move_west
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			443 = {
+				remove_dynamic_modifier = {
+					modifier = KDK_magic_city_gnoa
+				}
+			}
+		}
+	}
+
+	focus = {	#摧毁堡垒
+		id = ROT_destroy_fortress
+		icon = GFX_Generic_Firebombing
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			VLF = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			VLF = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_thorough_revolution }
+		relative_position_id = ROT_thorough_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = {
+					VLF = {
+						OR = {
+							has_government = worldunion_democrat
+							has_government = liberal_republican
+							has_government = authoritarian_nationalism
+							has_government = conservative_republican
+							has_government = authoritarian_republican
+						}
+					}
+				}
+				VLF = {
+					country_event = {
+						id = ROT.110
+						days = 1
+					}
+				}
+			}
+			else = {
+				create_wargoal = {
+					target = VLF
+					type = annex_everything
+				}
+			}
+			VLF = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#勿忘马加尔斯的沃野
+		id = ROT_remember_the_wilds_of_magal
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			MGC = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		bypass = {
+			MGC = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_no_mercy }
+		prerequisite = { focus = ROT_destroy_fortress }
+		relative_position_id = ROT_no_mercy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			create_wargoal = {
+				target = MGC
+				type = annex_everything
+			}
+			MGC = { add_to_ROOT_potential_cores = yes }
+		}
+	}
+
+	focus = {	#告慰苦难的北方
+		id = ROT_comfort_the_suffering_north
+		icon = GFX_goal_Generic_Memories_of_the_War
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_remember_the_wilds_of_magal }
+		relative_position_id = ROT_remember_the_wilds_of_magal
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_country = {
+				limit = { SPC_generic_region_trigger_102 = yes }
+				country_event = {
+					id = ROT.110
+					days = 1
+				}
+				add_to_ROOT_potential_cores = yes
+			}
+		}
+	}
+
+	focus = {	#文明开化的时代
+		id = ROT_age_of_civilization
+		icon = GFX_Social_Liberal
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			has_global_flag = SPC_region_unified_global_4
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_comfort_the_suffering_north }
+		relative_position_id = ROT_comfort_the_suffering_north
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					has_resistance = yes
+				}
+				add_resistance = -10
+			}
+			#custom_effect_tooltip = unlock_new_focus_tree_tt
+			load_focus_tree = generic_focus
+		}
+	}
+}

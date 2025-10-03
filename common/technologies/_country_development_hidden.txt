@@ -1,0 +1,290 @@
+technologies = {
+	industrial_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = primitive_industry
+			}
+		}
+	}
+	industrial_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = handcraft_industry
+			}
+		}
+	}
+	industrial_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = early_factory_industry
+			}
+		}
+	}
+	industrial_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = factory_industry
+			}
+		}
+	}
+	industrial_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = grouped_factory_industry
+			}
+		}
+	}
+	industrial_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = innovative_industry
+			}
+		}
+	}
+	agricultural_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = primitive_agriculture
+			}
+		}
+	}
+	agricultural_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = self_efficient_agriculture
+			}
+		}
+	}
+	agricultural_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = weak_agriculture
+			}
+		}
+	}
+	agricultural_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = modern_agriculture
+			}
+		}
+	}
+	agricultural_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = half_auto_agriculture
+			}
+		}
+	}
+	agricultural_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = mechanized_agriculture
+			}
+		}
+	}
+	military_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = primitive_army
+			}
+		}
+	}
+	military_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = unorganized_army
+			}
+		}
+	}
+	military_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = experienced_army
+			}
+		}
+	}
+	military_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = very_experienced_army
+			}
+		}
+	}
+	military_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = advanced_army
+			}
+		}
+	}
+	military_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = innovative_army
+			}
+		}
+	}
+	living_standard_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = death_everywhere
+			}
+		}
+	}
+	living_standard_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = struggle_to_survive
+			}
+		}
+	}
+	living_standard_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = hard_to_survive
+			}
+		}
+	}
+	living_standard_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = normally_living
+			}
+		}
+	}
+	living_standard_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = extra_living
+			}
+		}
+	}
+	living_standard_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = best_living
+			}
+		}
+	}
+	environment_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = hazard_zone
+			}
+		}
+	}
+	environment_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = unhabitable
+			}
+		}
+	}
+	environment_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = uncomfortable
+			}
+		}
+	}
+	environment_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = controlled_pollution
+			}
+		}
+	}
+	environment_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = relatively_comfortable
+			}
+		}
+	}
+	environment_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = real_natural_environment
+			}
+		}
+	}
+	research_development_idea_1 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = fuck_the_science
+			}
+		}
+	}
+	research_development_idea_2 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = nobody_cares
+			}
+		}
+	}
+	research_development_idea_3 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = few_cares
+			}
+		}
+	}
+	research_development_idea_4 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = fake_exists
+			}
+		}
+	}
+	research_development_idea_5 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = standard_research
+			}
+		}
+	}
+	research_development_idea_6 = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = willing_research
+			}
+		}
+	}
+}

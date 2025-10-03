@@ -1,0 +1,518 @@
+defined_text = { # Country
+	name = GetIsDesc
+	#国家历史部分
+	text = {
+		trigger = {
+			AND = {
+				tag = TST 
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_national_desc_NON
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = SFH 
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_SFH_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = SFH 
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_SFH_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = NFH 
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_NFH_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = NWF
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_NWF_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = CLD
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_CLD_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = NCD
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_NCD_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = SFR
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_SFR_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = SFR
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_SFR_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = QTA
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_QTA_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = QTA
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_QTA_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = PEO
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_PEO_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = ZHE
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_ZHE_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = ZHE
+				check_variable = { SPC_intro_screen = 5 } 				
+			}
+		}
+		localization_key = SPC_IS_ZHE_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = KEU
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_KEU_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = TPG
+				check_variable = { SPC_intro_screen = 1 } 				
+			}
+		}
+		localization_key = SPC_IS_TPG_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = TPG
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_TPG_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = ROK
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_ROK_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = ROK
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_ROK_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = TCW
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_TCW_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = ARO
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_ARO_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = UPV
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_UPV_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = TPG
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_TPG_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = RSU
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_RSU_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = RSU
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_RSU_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = LNR
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_LNR_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = KOA
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_KOA_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = AST
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_AST_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = AST
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_AST_national_desc_2
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = HGL
+				check_variable = { SPC_intro_screen = 1 } 
+			}
+		}
+		localization_key = SPC_IS_HGL_national_desc_1
+	}
+	text = {
+		trigger = { 
+			AND = {
+				tag = HGL
+				check_variable = { SPC_intro_screen = 5 } 
+			}
+		}
+		localization_key = SPC_IS_HGL_national_desc_2
+	}
+	text = {
+		trigger = { 
+			tag = MGC
+			check_variable = { SPC_intro_screen = 1 } 
+		}
+		localization_key = SPC_IS_MGC_national_desc_1
+	}
+	text = {
+		trigger = { 
+			tag = MGC
+			check_variable = { SPC_intro_screen = 5 } 
+		}
+		localization_key = SPC_IS_MGC_national_desc_2
+	}
+	text = {
+		trigger = { 
+			tag = ROT
+			check_variable = { SPC_intro_screen = 1 } 
+		}
+		localization_key = SPC_IS_ROT_national_desc_1
+	}
+	text = {
+		trigger = { 
+			tag = ROT
+			check_variable = { SPC_intro_screen = 5 } 
+		}
+		localization_key = SPC_IS_ROT_national_desc_2
+	}
+	text = {
+		trigger = { 
+			tag = MTV
+			check_variable = { SPC_intro_screen = 1 } 
+		}
+		localization_key = SPC_IS_MTV_national_desc_1
+	}
+	text = {
+		trigger = { 
+			tag = MTV
+			check_variable = { SPC_intro_screen = 5 } 
+		}
+		localization_key = SPC_IS_MTV_national_desc_2
+	}
+	text = {
+		trigger = { 
+			tag = RLN
+			check_variable = { SPC_intro_screen = 1 } 
+		}
+		localization_key = SPC_IS_RLN_national_desc_1
+	}
+	text = {
+		trigger = { 
+			tag = RLN
+			check_variable = { SPC_intro_screen = 5 } 
+		}
+		localization_key = SPC_IS_RLN_national_desc_2
+	}
+	#text = {	#有第二页的时候再说
+	#	trigger = { 
+	#		tag = ZZZ 
+	#		check_variable = { SPC_intro_screen = 5 } 
+	#	}
+	#	localization_key = SPC_IS_ZZZ_national_desc_2
+	#}
+	#地区历史部分
+	text = {
+		trigger = { 
+			OR = {
+				#远乡
+				tag = SFH
+				tag = SFR
+				tag = QTA
+				tag = NFH
+				tag = AFH
+				tag = FFH
+				tag = MSA
+				tag = NWF
+				#联合王国
+				tag = TPG
+				tag = PEO
+				tag = ARO
+				tag = ALR
+				tag = NCD
+				tag = CLD
+				#沃姆
+				tag = WOM
+				tag = ARZ
+				tag = KOD
+				tag = GLV
+				tag = RMN
+				tag = HCB
+				tag = SBG
+				tag = HLD
+			}
+			check_variable = { SPC_intro_screen = 2 }
+		}
+		localization_key = SPC_IS_regional_desc_1	#东巴斯蒂亚
+	}
+	text = {
+		trigger = { 
+			OR = {
+				tag = RSB
+				tag = RSU
+				tag = ROK
+				tag = TCW
+				tag = UPV
+				tag = LNR
+				tag = KOA
+				tag = ZBC
+			}
+			check_variable = { SPC_intro_screen = 2 }
+		}
+		localization_key = SPC_IS_regional_desc_2	#南巴斯蒂亚
+	}
+	text = {
+		trigger = { 
+			OR = {
+				tag = TST
+				tag = ROT
+				tag = IMC
+				tag = KDK
+				tag = MTV
+				tag = VLF
+				tag = MGC
+			}
+			check_variable = { SPC_intro_screen = 2 }
+		}
+		localization_key = SPC_IS_regional_desc_3	#提特兰
+	}
+	text = {
+		trigger = { 
+			check_variable = { SPC_intro_screen = 2 }
+		}
+		localization_key = SPC_IS_regional_desc_NON
+	}
+	#模组介绍部分
+	text = {
+		trigger = { 
+			check_variable = { SPC_intro_screen = 3 }
+		}
+		localization_key = SPC_IS_TAB_3_TXT
+	}
+	#特别鸣谢部分
+	text = {
+		trigger = { 
+			check_variable = { SPC_intro_screen = 4 }
+		}
+		localization_key = SPC_IS_TAB_4_TXT
+	}
+}
+
+defined_text = { # Country
+	name = GetRegionName
+	text = {
+		trigger = { 
+			OR = {
+				#远乡
+				tag = SFH
+				tag = SFR
+				tag = QTA
+				tag = NFH
+				tag = AFH
+				tag = FFH
+				tag = MSA
+				tag = NWF
+				#联合王国
+				tag = TPG
+				tag = PEO
+				tag = ARO
+				tag = ALR
+				tag = NCD
+				tag = CLD
+				#沃姆
+				tag = WOM
+				tag = ARZ
+				tag = KOD
+				tag = GLV
+				tag = RMN
+				tag = HCB
+				tag = SBG
+				tag = HLD
+			}
+		}
+		localization_key = SPC_IS_regional_name_1	#东巴斯蒂亚
+	}
+	text = {
+		trigger = { 
+			OR = {
+				tag = RSB
+				tag = RSU
+				tag = ROK
+				tag = TCW
+				tag = UPV
+				tag = LNR
+				tag = KOA
+				tag = ZBC
+			}
+		}
+		localization_key = SPC_IS_regional_name_2	#南巴斯蒂亚
+	}
+	text = {
+		trigger = { 
+			OR = {
+				tag = TST
+				tag = ROT
+				tag = IMC
+				tag = KDK
+				tag = MTV
+				tag = VLF
+				tag = MGC
+			}
+			check_variable = { SPC_intro_screen = 2 }
+		}
+		localization_key = SPC_IS_regional_name_3	#提特兰
+	}
+	text = {
+		localization_key = SPC_IS_regional_name_NON
+	}
+}
+
+defined_text = { 	#需要专门留国旗再弄这个
+	name = Get_IS_Flag
+	text = {
+		trigger = { 
+			tag = TST
+		}
+		localization_key = "GFX_Get_IS_Flag_TST"
+	}
+	text = {
+		trigger = { 
+			NOT = {
+				tag = TST
+			}
+		}
+		localization_key = "[ROOT.GetFlag]"
+	}
+}

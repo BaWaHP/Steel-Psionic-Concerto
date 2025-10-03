@@ -1,0 +1,684 @@
+scripted_gui = {
+	SPC_magic_panel_toggle_container = {
+		context_type = player_context
+		parent_window_token = topbar
+		window_name = "SPC_magic_panel_toggle_container"
+
+		ai_enabled = {
+			always = no
+			#always = yes
+		}
+
+        triggers = {
+            open_magic_panel_btn_visible = {
+				always = no
+                #always = yes
+            }
+        }
+
+		effects = {
+			open_magic_panel_btn_click = {
+				if = {
+					limit = {
+						AND = { check_variable = { SPC_magic_panel = 0 } }
+					}
+					set_variable = { SPC_magic_panel = 1 }
+				}
+			}
+		}
+
+		ai_weights = {
+			open_magic_panel_btn_click = {
+				base = 1
+			}
+		}
+	}
+	SPC_magic_panel_container = {
+		context_type = player_context
+		window_name = "SPC_magic_panel_container"
+
+		ai_enabled = {
+			#always = yes
+			always = no
+		}
+
+		visible = {
+            AND = { check_variable = { SPC_magic_panel = 1 } }
+		}
+
+        triggers = {
+        }
+
+		effects = {
+			close_button_click = {
+				set_variable = { SPC_magic_panel = 0 }
+			}
+			MP_btn_1_click = {
+				set_country_flag = MP_btn_1_on
+			}
+			MP_btn_2_click = {
+				set_country_flag = MP_btn_2_on
+			}
+		}
+
+		ai_weights = {
+			MP_btn_1_click = {
+				base = 1
+			}
+			MP_btn_2_click = {
+				base = 1
+			}
+		}
+	}
+	SPC_magic_panel_special_op_container = {
+		context_type = player_context
+		window_name = "SPC_magic_panel_special_op_container"
+
+		visible = {
+            has_country_flag = MP_btn_2_on
+		}
+
+        triggers = {
+        }
+
+		effects =  {
+			close_button_click = {
+				clr_country_flag = MP_btn_2_on
+			}
+		}
+	}
+	SPC_magic_panel_research_container = {
+		context_type = player_context
+		window_name = "SPC_magic_panel_research_container"
+
+		visible = {
+            has_country_flag = MP_btn_1_on
+		}
+
+        triggers = {
+        }
+
+		effects = {
+			close_button_click = {
+				clr_country_flag = MP_btn_1_on
+				set_variable = { MP_research_level_1_1_fixed = MP_research_level_1_1 }
+				set_variable = { MP_research_level_1_2_fixed = MP_research_level_1_2 }
+				set_variable = { MP_research_level_1_3_fixed = MP_research_level_1_3 }
+				set_variable = { MP_research_level_1_4_fixed = MP_research_level_1_4 }
+				set_variable = { MP_research_level_1_5_fixed = MP_research_level_1_5 }
+				set_variable = { MP_research_level_2_1_fixed = MP_research_level_2_1 }
+				set_variable = { MP_research_level_2_2_fixed = MP_research_level_2_2 }
+				set_variable = { MP_research_level_2_3_fixed = MP_research_level_2_3 }
+				set_variable = { MP_research_level_2_4_fixed = MP_research_level_2_4 }
+				set_variable = { MP_research_level_2_5_fixed = MP_research_level_2_5 }
+				set_variable = { MP_research_level_3_1_fixed = MP_research_level_3_1 }
+				set_variable = { MP_research_level_3_2_fixed = MP_research_level_3_2 }
+				set_variable = { MP_research_level_3_3_fixed = MP_research_level_3_3 }
+				set_variable = { MP_research_level_3_4_fixed = MP_research_level_3_4 }
+				set_variable = { MP_research_level_3_5_fixed = MP_research_level_3_5 }
+				set_variable = { MP_research_level_4_1_fixed = MP_research_level_4_1 }
+				set_variable = { MP_research_level_4_2_fixed = MP_research_level_4_2 }
+				set_variable = { MP_research_level_4_3_fixed = MP_research_level_4_3 }
+				set_variable = { MP_research_level_4_4_fixed = MP_research_level_4_4 }
+				set_variable = { MP_research_level_4_5_fixed = MP_research_level_4_5 }
+				set_variable = { MP_research_level_5_1_fixed = MP_research_level_5_1 }
+				set_variable = { MP_research_level_5_2_fixed = MP_research_level_5_2 }
+				set_variable = { MP_research_level_5_3_fixed = MP_research_level_5_3 }
+				set_variable = { MP_research_level_5_4_fixed = MP_research_level_5_4 }
+				set_variable = { MP_research_level_5_5_fixed = MP_research_level_5_5 }
+			}
+			MP_research_add_up_click = {
+				set_variable = { MP_research_level_1_1_fixed = MP_research_level_1_1 }
+				set_variable = { MP_research_level_1_2_fixed = MP_research_level_1_2 }
+				set_variable = { MP_research_level_1_3_fixed = MP_research_level_1_3 }
+				set_variable = { MP_research_level_1_4_fixed = MP_research_level_1_4 }
+				set_variable = { MP_research_level_1_5_fixed = MP_research_level_1_5 }
+				set_variable = { MP_research_level_2_1_fixed = MP_research_level_2_1 }
+				set_variable = { MP_research_level_2_2_fixed = MP_research_level_2_2 }
+				set_variable = { MP_research_level_2_3_fixed = MP_research_level_2_3 }
+				set_variable = { MP_research_level_2_4_fixed = MP_research_level_2_4 }
+				set_variable = { MP_research_level_2_5_fixed = MP_research_level_2_5 }
+				set_variable = { MP_research_level_3_1_fixed = MP_research_level_3_1 }
+				set_variable = { MP_research_level_3_2_fixed = MP_research_level_3_2 }
+				set_variable = { MP_research_level_3_3_fixed = MP_research_level_3_3 }
+				set_variable = { MP_research_level_3_4_fixed = MP_research_level_3_4 }
+				set_variable = { MP_research_level_3_5_fixed = MP_research_level_3_5 }
+				set_variable = { MP_research_level_4_1_fixed = MP_research_level_4_1 }
+				set_variable = { MP_research_level_4_2_fixed = MP_research_level_4_2 }
+				set_variable = { MP_research_level_4_3_fixed = MP_research_level_4_3 }
+				set_variable = { MP_research_level_4_4_fixed = MP_research_level_4_4 }
+				set_variable = { MP_research_level_4_5_fixed = MP_research_level_4_5 }
+				set_variable = { MP_research_level_5_1_fixed = MP_research_level_5_1 }
+				set_variable = { MP_research_level_5_2_fixed = MP_research_level_5_2 }
+				set_variable = { MP_research_level_5_3_fixed = MP_research_level_5_3 }
+				set_variable = { MP_research_level_5_4_fixed = MP_research_level_5_4 }
+				set_variable = { MP_research_level_5_5_fixed = MP_research_level_5_5 }
+			}
+			add_button_1_1_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_1_1 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_1_1_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_1_1 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_1_1 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_1_2_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_1_2 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_1_2_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_1_2 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_1_2 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_1_3_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_1_3 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_1_3_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_1_3 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_1_3 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_1_4_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_1_4 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_1_4_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_1_4 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_1_4 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_1_5_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_1_5 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_1_5_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_1_5 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_1_5 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_2_1_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_2_1 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_2_1_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_2_1 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_2_1 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_2_2_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_2_2 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_2_2_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_2_2 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_2_2 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_2_3_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_2_3 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_2_3_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_2_3 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_2_3 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_2_4_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_2_4 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_2_4_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_2_4 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_2_4 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_2_5_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_2_5 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_2_5_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_2_5 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_2_5 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_3_1_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_3_1 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_3_1_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_3_1 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_3_1 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_3_2_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_3_2 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_3_2_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_3_2 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_3_2 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_3_3_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_3_3 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_3_3_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_3_3 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_3_3 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_3_4_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_3_4 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_3_4_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_3_4 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_3_4 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_3_5_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_3_5 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_3_5_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_3_5 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_3_5 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_4_1_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_4_1 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_4_1_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_4_1 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_4_1 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_4_2_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_4_2 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_4_2_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_4_2 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_4_2 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_4_3_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_4_3 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_4_3_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_4_3 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_4_3 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_4_4_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_4_4 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_4_4_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_4_4 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_4_4 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_4_5_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_4_5 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_4_5_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_4_5 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_4_5 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_5_1_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_5_1 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_5_1_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_5_1 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_5_1 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_5_2_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_5_2 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_5_2_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_5_2 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_5_2 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_5_3_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_5_3 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_5_3_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_5_3 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_5_3 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			} 
+			add_button_5_4_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_5_4 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_5_4_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_5_4 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_5_4 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+			add_button_5_5_click = {
+				if = {
+					limit = {
+						check_variable = { magic_research_point > 99 }
+					}
+					add_to_variable = { MP_research_level_5_5 = 1 }
+					add_to_variable = { magic_research_point = -100 }
+				}
+			}
+			minus_button_5_5_click = {
+				if = {
+					limit = {
+						check_variable = { MP_research_level_5_5 = MP_research_level_1_1_fixed }
+					}
+					###do nothing
+				}
+				else = {
+					add_to_variable = { MP_research_level_5_5 = -1 }
+					add_to_variable = { magic_research_point = 100 }
+				}
+			}
+		}
+	}
+}

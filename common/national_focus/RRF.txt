@@ -1,0 +1,576 @@
+focus_tree = {
+	id = RRF_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RRF
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#动荡之夜
+		id = RRF_turbulent_night
+		icon = GFX_Generic_Molotov_Cocktail
+		x = 5
+		y = 0
+		cost = 1.43
+
+		available = { controls_state = 346 }
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			division_template = {
+				name = "独立师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					melee_infantry = { x = 2 y = 0 }
+					melee_infantry = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			346 = {
+				create_unit = {
+					division = "name = \"独立师\" division_template = \"独立师\" start_experience_factor = 0.1 start_equipment_factor = 0.9"  
+					owner = RRF
+					prioritize_location = 19977
+				}
+			}
+		}
+	}
+
+	focus = {	#工人动员令
+		id = RRF_workers_mobilization_order
+		icon = GFX_Generic_State_Socialism
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_turbulent_night }
+		relative_position_id = RRF_turbulent_night
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 5000
+			unlock_decision_tooltip = RRF_organizing_the_red_guards_in_the_east
+			unlock_decision_tooltip = RRF_organizing_the_red_guards_in_the_south
+			swap_ideas = {
+				remove_idea = RRF_revolutionary_enthusiasm
+				add_idea = RRF_revolutionary_enthusiasm_2
+			}
+		}
+	}
+
+	focus = {	#以革命的名义
+		id = RRF_in_the_name_of_rev
+		icon = GFX_focus_ARG_women_in_industry
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_workers_mobilization_order }
+		relative_position_id = RRF_workers_mobilization_order
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = RRF_revolutionary_enthusiasm_2
+				add_idea = RRF_revolutionary_enthusiasm_3
+			}
+		}
+	}
+
+	focus = {	#归者似箭
+		id = RRF_back_as_arrows
+		icon = GFX_goal_Generic_Spy_Communist
+		x = -4
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_in_the_name_of_rev }
+		relative_position_id = RRF_in_the_name_of_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_manpower = 10000
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			create_intelligence_agency = yes
+			country_event = RRF.2
+		}
+	}
+
+	focus = {	#代号“湖泊”
+		id = RRF_code_lake
+		icon = GFX_Generic_Socialist_Volunteers
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_back_as_arrows }
+		relative_position_id = RRF_back_as_arrows
+		mutually_exclusive = { focus = RRF_roundabout_tac }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = RRF_march_forward
+				days = 60
+			}
+		}
+	}
+
+	focus = {	#迂回战术
+		id = RRF_roundabout_tac
+		icon = GFX_goal_Generic_Soldiers_Defense
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_back_as_arrows }
+		relative_position_id = RRF_back_as_arrows
+		mutually_exclusive = { focus = RRF_code_lake }
+
+		completion_reward = {
+			army_experience = 10
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_intel = {
+				target = RSU
+				army_intel = 10
+			}
+		}
+	}
+
+	focus = {	#你死我亡
+		id = RRF_dead_or_live
+		icon = GFX_goal_Generic_Socialist_Revolution
+		x = 1
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_code_lake
+						 focus = RRF_roundabout_tac }
+		relative_position_id = RRF_code_lake
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			RSU = {
+				add_political_power = -30
+				add_timed_idea = {
+					idea = RRF_let_that_fire
+					days = 30
+				}
+			}
+		}
+	}
+
+	focus = {	#建设军队民主
+		id = RRF_const_mil_dem
+		icon = GFX_Generic_Volunteer_Corps
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_in_the_name_of_rev }
+		relative_position_id = RRF_in_the_name_of_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			army_experience = 30
+			SPC_military_development_amount_up_3 = yes
+			SPC_training_laws_up = yes
+			country_event = RRF.3
+		}
+	}
+
+	focus = {	#政委制度
+		id = RRF_political_commissar_system
+		icon = GFX_Focus_Communist_Spy02
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_const_mil_dem }
+		relative_position_id = RRF_const_mil_dem
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = RRF_workers_armed
+				add_idea = RRF_workers_armed_2
+			}
+			SPC_military_development_amount_up_2 = yes
+			country_event = RRF.4
+		}
+	}
+
+	focus = {	#人民之师
+		id = RRF_people_s_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_political_commissar_system }
+		relative_position_id = RRF_political_commissar_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
+				uses = 1
+				category = land_doctrine 
+				name = RRF_people_s_army
+			}
+			swap_ideas = {
+				remove_idea = RRF_workers_armed_2
+				add_idea = RRF_workers_armed_3
+			}
+			swap_ideas = {
+				remove_idea = RRF_revolutionary_enthusiasm_3
+				add_idea = RRF_revolutionary_enthusiasm_4
+			}
+		}
+	}
+
+	focus = {	#收拢军火
+		id = RRF_gather_armaments
+		icon = GFX_goal_Focus_Examine_Foreign_Small_Arms
+		x = 4
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_in_the_name_of_rev }
+		relative_position_id = RRF_in_the_name_of_rev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+			}
+		}
+	}
+
+	focus = {	#重启瑟格尔兰根重工厂
+		id = RRF_restart_sogerlangen_plant
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_gather_armaments }
+		relative_position_id = RRF_gather_armaments
+		mutually_exclusive = { focus = RRF_regroup_red_army }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 400
+			}
+			346 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#重组赤卫军
+		id = RRF_regroup_red_army
+		icon = GFX_Generic_Colonial_Army
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_gather_armaments }
+		relative_position_id = RRF_gather_armaments
+		mutually_exclusive = { focus = RRF_restart_sogerlangen_plant }
+
+		completion_reward = {
+			add_manpower = 5000
+			army_experience = 10
+			capital_scope = {
+				create_unit = {
+					division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1 start_equipment_factor = 0.9"  
+					owner = RRF
+					prioritize_location = 19977
+					count = 2
+				}
+			}
+			SPC_military_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#光荣啊，鲁萨尔的工人
+		id = RRF_glory_to_workers
+		icon = GFX_focus_generic_public_works
+		x = 1
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_restart_sogerlangen_plant
+						 focus = RRF_regroup_red_army }
+		relative_position_id = RRF_restart_sogerlangen_plant
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_living_standard_development_amount_up_1 = yes
+			SPC_industrial_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#为亡者
+		id = RRF_for_the_death
+		icon = GFX_focus_generic_workers
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_dead_or_live }
+		prerequisite = { focus = RRF_people_s_army }
+		prerequisite = { focus = RRF_glory_to_workers }
+		relative_position_id = RRF_people_s_army
+		mutually_exclusive = { focus = RRF_for_the_alive }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_ideas = RRF_mourners
+		}
+	}
+
+	focus = {	#及生者
+		id = RRF_for_the_alive
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_dead_or_live }
+		prerequisite = { focus = RRF_people_s_army }
+		prerequisite = { focus = RRF_glory_to_workers }
+		relative_position_id = RRF_people_s_army
+		mutually_exclusive = { focus = RRF_for_the_death }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.05
+			add_ideas = RRF_and_the_alive
+		}
+	}
+
+	focus = {	#吹响胜利的号角
+		id = RRF_blow_horn_of_victory
+		icon = GFX_focus_por_workers_of_iberia
+		x = 1
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+		bypass = { RSU = { exists = no } }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_for_the_death
+						 focus = RRF_for_the_alive }
+		relative_position_id = RRF_for_the_death
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			division_template = {
+				name = "威廉·达尔曼师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					caster_recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			346 = {
+				create_unit = {
+					division = "name = \"威廉·达尔曼师\" division_template = \"威廉·达尔曼师\" start_experience_factor = 0.1 start_equipment_factor = 0.95"  
+					owner = RRF
+					prioritize_location = 19977
+				}
+			}
+			country_event = RRF.5
+		}
+	}
+
+	focus = {	#让芙蕾施曼为我们骄傲
+		id = RRF_make_her_proud
+		icon = GFX_Generic_Liberation
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = { RSU = { exists = no } }
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RRF_blow_horn_of_victory }
+		relative_position_id = RRF_blow_horn_of_victory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			news_event = RRFNews.1
+			set_cosmetic_tag = RRF_new_tag
+			country_event = RRF.6
+			add_ideas = RRF_final_victory
+		}
+	}
+}

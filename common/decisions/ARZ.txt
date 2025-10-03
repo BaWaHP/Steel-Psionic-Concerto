@@ -1,0 +1,41 @@
+SPC_generic_sekeleton_decision_category = {
+	ARZ_generic_war_decision = {		#阿瑞萨抢夺决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3 = yes }
+
+		available = {
+			date > 2002.6.1
+			OR = {
+				SPC_generic_region_trigger_8_unif = yes
+				SPC_generic_region_trigger_9_unif = yes
+				SPC_generic_region_trigger_10_unif = yes
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					SPC_generic_region_trigger_3 = yes
+					NOT = { 
+						tag = TPG
+						tag = ARZ 
+					}
+				}
+				ARZ = { add_to_ROOT_potential_cores = yes }
+			}
+			annex_country = {
+				target = ARZ
+				transfer_troops = no
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+
+

@@ -1,0 +1,31 @@
+
+state={
+	id=348
+	name="STATE_348"
+	resources={
+		aluminium=12.000
+		magic_crystal=2.000
+	}
+
+	history={
+		owner = HGL
+		add_core_of = HGL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			7106 3 
+		}
+
+	}
+
+	provinces={
+		731 2850 3723 5947 6375 7106 8060 8187 9058 9393 10325 11096 11686 19393 19480 19504 19559 19630 19666 
+	}
+	manpower=917700
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

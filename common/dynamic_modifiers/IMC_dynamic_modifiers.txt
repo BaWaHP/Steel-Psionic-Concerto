@@ -1,0 +1,91 @@
+IMC_glory_of_colonization_1 = {	#殖民之伟业
+	enable = { always = yes }
+
+	icon = GFX_idea_IMC_glory_of_colonization_1
+
+	monthly_population = IMC_glory_of_colonization_mp
+	stability_factor = IMC_glory_of_colonization_sf
+	political_power_gain = IMC_glory_of_colonization_ppg
+	drift_defence_factor = IMC_glory_of_colonization_ddf
+}
+
+IMC_odysseus_miracle_colossus = {	#奥德修斯奇迹巨像
+	enable = { always = yes }
+	
+	icon = GFX_idea_IMC_odysseus_miracle_colossus
+
+	local_supply_impact_factor = -0.1
+	army_speed_factor_for_controller = 0.05
+}
+
+IMC_malakanda_bactra_palembang_project_2 = {	#马拉坎达-巴克特拉巨港计划：第二阶段
+	enable = { always = yes }
+	icon = GFX_idea_IMC_malakanda_bactra_palembang_project_2
+
+	state_production_speed_buildings_factor = 0.1
+	local_supply_impact_factor = -0.15
+	recruitable_population_factor = -0.1
+}
+
+IMC_eastern_expedition_memorial_valley = {	#东征纪念谷
+	enable = { always = yes }
+	icon = GFX_idea_IMC_eastern_expedition_memorial_valley
+
+	state_production_speed_buildings_factor = 0.1
+	local_supply_impact_factor = -0.15
+	recruitable_population_factor = -0.1
+}
+
+IMC_areas_undergoing_minoanization_1 = {	#正在米诺陶化的地区：第一阶段
+	enable = { always = yes }
+	icon = GFX_idea_IMC_areas_undergoing_minoanization_1
+
+	local_building_slots_factor = -0.5
+	recruitable_population_factor = -1
+	local_magic_development_monthly = -0.05
+	local_science_development_monthly = -0.05
+}
+
+IMC_areas_undergoing_minoanization_2 = {	#正在米诺陶化的地区：第二阶段
+	enable = { always = yes }
+	icon = GFX_idea_IMC_areas_undergoing_minoanization_2
+
+	local_building_slots_factor = -0.25
+	recruitable_population_factor = -0.7
+	local_magic_development_monthly = 0.02
+	local_science_development_monthly = 0.02
+}
+
+IMC_areas_undergoing_minoanization_3 = {	#正在米诺陶化的地区：第三阶段
+	enable = { always = yes }
+	icon = GFX_idea_IMC_areas_undergoing_minoanization_3
+
+	local_building_slots_factor = -0.05
+	recruitable_population_factor = -0.5
+	local_magic_development_monthly = 0.05
+	local_science_development_monthly = 0.05
+}
+
+IMC_sacred_mountains = {	#神圣山地
+	enable = { always = yes }
+	icon = GFX_idea_IMC_sacred_mountains
+
+	local_building_slots_factor = -0.9
+	recruitable_population_factor = -1
+	state_resources_factor = -1
+}
+
+IMC_centralized_processing_area = {	#集中处理区
+	enable = { always = yes }
+	icon = GFX_idea_IMC_centralized_processing_area
+
+	local_building_slots_factor = 0.1
+	local_manpower = -0.15
+}
+
+IMC_alliance_and_marshal_outpost = {	#同盟与元帅前哨站
+	enable = { always = yes }
+	icon = GFX_idea_IMC_alliance_and_marshal_outpost
+
+	state_production_speed_buildings_factor = 0.05
+}

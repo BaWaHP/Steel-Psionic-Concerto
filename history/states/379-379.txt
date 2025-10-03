@@ -1,0 +1,33 @@
+
+state={
+	id=379
+	name="STATE_379"
+
+	resources = {
+		oil = 8
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			20673 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			20673 8
+		}
+	}
+
+	provinces={
+		1873 7158 8480 8746 9060 20498 20501 20592 20650 20673 
+	}
+	manpower = 680000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

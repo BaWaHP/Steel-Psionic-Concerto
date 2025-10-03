@@ -1,0 +1,459 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_RLN_startup_effect = {
+	if = {
+		limit = { tag = RLN }
+		set_variable = { SPC_intro_screen = 1 }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = basic_training
+		add_ideas = partial_economic_mobilisation
+		add_ideas = limited_exports
+		add_ideas = low_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = real_natural_environment
+		add_ideas = few_cares
+		###产业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_joining_the_army
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_tenians
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_secularism
+		add_ideas = SXP_recessing_policy
+		###其它设定###
+		inherit_technology = LNR
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		load_oob = "RLN"
+		activate_advisor = RLN_karianne_berlin_idea
+		activate_advisor = RLN_spicer_seck_idea
+		activate_advisor = RLN_ben_singler_idea
+		activate_advisor = RLN_ginsberg_depp_idea_1
+	}
+}
+
+RLN_house_of_cards_initialization = {
+	set_variable = { RLN_militarists_influence = 102 }	#拥军派
+	set_variable = { RLN_principlists_influence = 110 }	#原则派
+	set_variable = { RLN_financists_influence = 100 }	#财务派
+	set_variable = { RLN_solidaritists_influence = 60 }	#团结派
+	add_dynamic_modifier = { modifier = RLN_one_party_four_factions }
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_house_of_cards_refresh_leadership = {
+	clr_country_flag = RLN_largest_faction_1
+	clr_country_flag = RLN_largest_faction_2
+	clr_country_flag = RLN_largest_faction_3
+	clr_country_flag = RLN_largest_faction_4
+	if = {
+		limit = {
+			check_variable = {
+				var = RLN_militarists_influence
+				value = RLN_principlists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_militarists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_militarists_influence
+				value = RLN_solidaritists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = RLN_largest_faction_1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = RLN_principlists_influence
+				value = RLN_militarists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_principlists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_principlists_influence
+				value = RLN_solidaritists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = RLN_largest_faction_2
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = RLN_financists_influence
+				value = RLN_principlists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_financists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_financists_influence
+				value = RLN_solidaritists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = RLN_largest_faction_3
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = RLN_solidaritists_influence
+				value = RLN_militarists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_solidaritists_influence
+				value = RLN_principlists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_solidaritists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = RLN_largest_faction_4
+	}
+}
+
+RLN_house_of_cards_refresh_vars = {
+	RLN_house_of_cards_refresh_leadership = yes
+
+	set_variable = { RLN_house_of_cards_largest_faction_count = 0 }
+	if = {
+		limit = { has_country_flag = RLN_largest_faction_1 }
+		add_to_variable = { RLN_house_of_cards_largest_faction_count = 1 }
+		if = {
+			limit = { has_government = pioneer_communism }
+			set_country_flag = RLN_largest_faction_controls
+		}
+	}
+	if = {
+		limit = { has_country_flag = RLN_largest_faction_2 }
+		add_to_variable = { RLN_house_of_cards_largest_faction_count = 1 }
+		if = {
+			limit = { has_government = revolutionary_communism }
+			set_country_flag = RLN_largest_faction_controls
+		}
+	}
+	if = {
+		limit = { has_country_flag = RLN_largest_faction_3 }
+		add_to_variable = { RLN_house_of_cards_largest_faction_count = 1 }
+		if = {
+			limit = { has_government = worldunion_democrat }
+			set_country_flag = RLN_largest_faction_controls
+		}
+	}
+	if = {
+		limit = { has_country_flag = RLN_largest_faction_4 }
+		add_to_variable = { RLN_house_of_cards_largest_faction_count = 1 }
+		if = {
+			limit = { has_government = national_socialist }
+			set_country_flag = RLN_largest_faction_controls
+		}
+	}
+
+	if = {
+		limit = { check_variable = { RLN_house_of_cards_largest_faction_count = 1 } }
+		if = {
+			limit = { has_country_flag = RLN_largest_faction_controls }
+			clr_country_flag = RLN_largest_faction_controls
+			set_variable = { RLN_one_party_four_factions_ppf = 0.1 }
+			set_variable = { RLN_one_party_four_factions_sf = 0 }
+		}
+		else = {
+			set_variable = { RLN_one_party_four_factions_ppf = -0.1 }
+			set_variable = { RLN_one_party_four_factions_sf = 0 }
+		}
+	}
+	else = {
+		set_variable = { RLN_one_party_four_factions_ppf = -0.1 }
+		set_variable = { RLN_one_party_four_factions_sf = -0.1 }
+	}
+
+	force_update_dynamic_modifier = yes
+}
+
+RLN_militarists_influence_up_1 = {
+	add_to_variable = { RLN_militarists_influence = 5 }
+	custom_effect_tooltip = RLN_militarists_influence_up_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_militarists_influence_up_2 = {
+	add_to_variable = { RLN_militarists_influence = 10 }
+	custom_effect_tooltip = RLN_militarists_influence_up_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_militarists_influence_up_3 = {
+	add_to_variable = { RLN_militarists_influence = 20 }
+	custom_effect_tooltip = RLN_militarists_influence_up_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_militarists_influence_up_4 = {
+	add_to_variable = { RLN_militarists_influence = 50 }
+	custom_effect_tooltip = RLN_militarists_influence_up_4_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_militarists_influence_down_1 = {
+	add_to_variable = { RLN_militarists_influence = -5 }
+	custom_effect_tooltip = RLN_militarists_influence_down_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_militarists_influence_down_2 = {
+	add_to_variable = { RLN_militarists_influence = -10 }
+	custom_effect_tooltip = RLN_militarists_influence_down_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_up_1 = {
+	add_to_variable = { RLN_principlists_influence = 5 }
+	custom_effect_tooltip = RLN_principlists_influence_up_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_up_2 = {
+	add_to_variable = { RLN_principlists_influence = 10 }
+	custom_effect_tooltip = RLN_principlists_influence_up_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_up_3 = {
+	add_to_variable = { RLN_principlists_influence = 25 }
+	custom_effect_tooltip = RLN_principlists_influence_up_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_up_4 = {
+	add_to_variable = { RLN_principlists_influence = 30 }
+	custom_effect_tooltip = RLN_principlists_influence_up_4_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_up_5 = {
+	add_to_variable = { RLN_principlists_influence = 50 }
+	custom_effect_tooltip = RLN_principlists_influence_up_5_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_down_1 = {
+	add_to_variable = { RLN_principlists_influence = -5 }
+	custom_effect_tooltip = RLN_principlists_influence_down_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_down_2 = {
+	add_to_variable = { RLN_principlists_influence = -10 }
+	custom_effect_tooltip = RLN_principlists_influence_down_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_principlists_influence_down_3 = {
+	add_to_variable = { RLN_principlists_influence = -50 }
+	custom_effect_tooltip = RLN_principlists_influence_down_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_up_1 = {
+	add_to_variable = { RLN_financists_influence = 5 }
+	custom_effect_tooltip = RLN_financists_influence_up_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_up_2 = {
+	add_to_variable = { RLN_financists_influence = 10 }
+	custom_effect_tooltip = RLN_financists_influence_up_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_up_3 = {
+	add_to_variable = { RLN_financists_influence = 30 }
+	custom_effect_tooltip = RLN_financists_influence_up_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_up_4 = {
+	add_to_variable = { RLN_financists_influence = 20 }
+	custom_effect_tooltip = RLN_financists_influence_up_4_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_up_5 = {
+	add_to_variable = { RLN_financists_influence = 50 }
+	custom_effect_tooltip = RLN_financists_influence_up_5_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_down_1 = {
+	add_to_variable = { RLN_financists_influence = -5 }
+	custom_effect_tooltip = RLN_financists_influence_down_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_down_2 = {
+	add_to_variable = { RLN_financists_influence = -10 }
+	custom_effect_tooltip = RLN_financists_influence_down_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_financists_influence_down_3 = {
+	add_to_variable = { RLN_financists_influence = -90 }
+	custom_effect_tooltip = RLN_financists_influence_down_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_solidaritists_influence_up_1 = {
+	add_to_variable = { RLN_solidaritists_influence = 5 }
+	custom_effect_tooltip = RLN_solidaritists_influence_up_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_solidaritists_influence_up_2 = {
+	add_to_variable = { RLN_solidaritists_influence = 10 }
+	custom_effect_tooltip = RLN_solidaritists_influence_up_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_solidaritists_influence_down_1 = {
+	add_to_variable = { RLN_solidaritists_influence = -5 }
+	custom_effect_tooltip = RLN_solidaritists_influence_down_1_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_solidaritists_influence_down_2 = {
+	add_to_variable = { RLN_solidaritists_influence = -10 }
+	custom_effect_tooltip = RLN_solidaritists_influence_down_2_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_solidaritists_influence_down_3 = {
+	add_to_variable = { RLN_solidaritists_influence = -30 }
+	custom_effect_tooltip = RLN_solidaritists_influence_down_3_tt
+	RLN_house_of_cards_refresh_vars = yes
+}
+
+RLN_rebuild_econs_var_clamp = {
+	clamp_variable = {
+		var = RLN_food_shortage_var
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = RLN_reproduction_var
+		min = 0
+		max = 100
+	}
+}
+
+RLN_election_result_effect = {		#赤色特尼安主席选举效果
+	if = {
+		limit = {
+			check_variable = {
+				var = RLN_principlists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_principlists_influence
+				value = RLN_militarists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		RLN_principlists_election_win_effect = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = RLN_financists_influence
+				value = RLN_principlists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_financists_influence
+				value = RLN_militarists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		RLN_financists_election_win_effect = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = RLN_militarists_influence
+				value = RLN_principlists_influence
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = RLN_militarists_influence
+				value = RLN_financists_influence
+				compare = greater_than_or_equals
+			}
+		}
+		RLN_militarists_election_win_effect = yes
+	}
+}
+
+RLN_principlists_election_win_effect = { country_event = RLN.107 news_event = RLNNews.5 }
+
+RLN_financists_election_win_effect = { country_event = RLN.108 news_event = RLNNews.6 }
+
+RLN_militarists_election_win_effect = { country_event = RLN.109 news_event = RLNNews.7 }

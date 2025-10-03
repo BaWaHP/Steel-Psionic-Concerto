@@ -1,0 +1,708 @@
+characters={
+	ROK_krakow_congress = {		#全克拉亚诺大会 
+		name = ROK_krakow_congress
+		portraits = {
+			civilian = {
+				large="GFX_ROK_krakow_congress" #图片未制作
+			}
+		}
+		# 事件 春朝漫步 ROK.12 中添加
+		# country_leader = {
+		# 	ideology = radical_republican
+		# 	#desc = 
+		# 	traits = { }
+		# 	expire = "3000.1.1.1"
+		# 	id = -1
+		# }
+	}
+	ROK_stahl_wickes = {		#施塔尔·威克斯
+		name = ROK_stahl_wickes
+		portraits = {
+			civilian = {
+				large="GFX_ROK_stahl_wickes"
+				small="GFX_idea_ROK_stahl_wickes"
+			}
+			army = {
+				large="GFX_ROK_stahl_wickes"
+				small="GFX_idea_ROK_stahl_wickes"
+			}
+		}
+		country_leader = {
+			ideology = pioneer_team_communism
+			desc = ROK_stahl_wickes_desc
+			traits = { ROK_red_parent }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_emmy_puskia = {		#埃米·普斯卡娅
+		name = ROK_emmy_puskia
+		portraits = {
+			civilian = {
+				large="GFX_ROK_emmy_puskia"
+				small="GFX_idea_ROK_emmy_puskia"
+			}
+			army = {
+				large="GFX_ROK_emmy_puskia"
+				small="GFX_idea_ROK_emmy_puskia"
+			}
+		}
+		country_leader = {
+			ideology = popular_communism
+			desc = ROK_emmy_puskia_desc
+			traits = { leftwing_intellectuals chairman_of_people }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_henrik_lofsky = {		#亨利克·洛夫斯基
+		name = ROK_henrik_lofsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_henrik_lofsky"
+				small="GFX_idea_ROK_henrik_lofsky"
+			}
+			army = {
+				large="GFX_ROK_henrik_lofsky"
+				small="GFX_idea_ROK_henrik_lofsky"
+			}
+		}
+		country_leader = {
+			ideology = utopian_socialism
+			desc = ROK_henrik_lofsky_desc
+			traits = { ROK_pigeon_of_truth }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_corriman_wickrena = {		#科里曼·威克利纳
+		name = ROK_corriman_wickrena
+		portraits = {
+			civilian = {
+				large="GFX_ROK_corriman_wickrena"
+				small="GFX_idea_ROK_corriman_wickrena"
+			}
+			army = {
+				large="GFX_ROK_corriman_wickrena"
+				small="GFX_idea_ROK_corriman_wickrena"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat
+		 	desc = ROK_corriman_wickrena_desc
+		 	traits = { heir_to_the_ideal }
+		 	expire = "3000.1.1.1"
+		 	id = -1
+		}
+	}
+	ROK_moser_heludon = {		#莫泽·赫卢东
+		name = ROK_moser_heludon
+		portraits = {
+			civilian = {
+				large="GFX_ROK_moser_heludon"
+				small="GFX_idea_ROK_moser_heludon"
+			}
+			army = {
+				large="GFX_ROK_moser_heludon"
+				small="GFX_idea_ROK_moser_heludon"
+			}
+		}
+		country_leader = {
+			ideology = radical_republican
+			desc = ROK_moser_heludon_desc
+			traits = { great_compromiser }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_katarzyna_werner = {		#卡塔日娜·维尔纳
+		name = ROK_katarzyna_werner
+		portraits = {
+			civilian = {
+				large="GFX_ROK_katarzyna_werner"
+				small="GFX_idea_ROK_katarzyna_werner"
+			}
+			army = {
+				large="GFX_ROK_katarzyna_werner"
+				small="GFX_idea_ROK_katarzyna_werner"
+			}
+		}
+		#country_leader = {
+		# 	ideology = radical_republican
+		# 	desc = ROK_katarzyna_werner_desc
+		# 	traits = { firm_heir }
+		#  	expire = "3000.1.1.1"
+		# 	id = -1
+		#}
+	}
+	ROK_osinski_heidemann = {		#奥辛斯基·海德曼
+		name = ROK_osinski_heidemann
+		portraits = {
+			civilian = {
+				large="GFX_ROK_osinski_heidemann"
+				small="GFX_idea_ROK_osinski_heidemann"
+			}
+			army = {
+				large="GFX_ROK_osinski_heidemann"
+				small="GFX_idea_ROK_osinski_heidemann"
+			}
+		}
+		country_leader = {
+		 	ideology = paternal_conservatism
+		 	desc = ROK_osinski_heidemann_desc
+			traits = { hypocritical_revivalist }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_ROK_priest_jankovsky = {		#普利斯特·扬科夫斯基
+		name = ROK_priest_jankovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_priest_jankovsky"
+				small="GFX_idea_ROK_priest_jankovsky"
+			}
+			army = {
+				large="GFX_ROK_priest_jankovsky"
+				small="GFX_idea_ROK_priest_jankovsky"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_republican_subtype
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_polz_okovsky = {		#波尔兹·奥科夫斯基
+		name = ROK_polz_okovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_polz_okovsky"
+				small="GFX_idea_ROK_polz_okovsky"
+			}
+			army = {
+				large="GFX_ROK_polz_okovsky"
+				small="GFX_idea_ROK_polz_okovsky"
+			}
+		}
+		country_leader = {
+			ideology = social_racism
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_andre_clemens = {		#安德烈·克莱门斯
+		name = ROK_andre_clemens
+		portraits = {
+			civilian = {
+				large="GFX_ROK_andre_clemens"
+				small="GFX_idea_ROK_andre_clemens"
+			}
+			army = {
+				large="GFX_ROK_andre_clemens"
+				small="GFX_idea_ROK_andre_clemens"
+			}
+		}
+		country_leader = {
+			ideology = racial_supremacy
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_josef_helvikowski = {		#约瑟夫·赫尔维克斯基
+		name = ROK_josef_helvikowski
+		portraits = {
+			civilian = {
+				large="GFX_ROK_josef_helvikowski"
+				small="GFX_idea_ROK_josef_helvikowski"
+			}
+			army = {
+				large="GFX_ROK_josef_helvikowski"
+				small="GFX_idea_ROK_josef_helvikowski"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_none_1 = {		#无
+		name = ROK_none
+		portraits = {
+			civilian = {
+				large="GFX_ROK_none"
+				small="GFX_idea_ROK_none"
+			}
+			army = {
+				large="GFX_ROK_none"
+				small="GFX_idea_ROK_none"
+			}
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_velkori_venavsky = {		#维尔科里·韦纳夫斯基
+		name = ROK_velkori_venavsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_velkori_venavsky"
+				small="GFX_idea_ROK_velkori_venavsky"
+			}
+			army = {
+				large="GFX_ROK_velkori_venavsky"
+				small="GFX_idea_ROK_velkori_venavsky"
+			}
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_konstantin_ostrovsky = {		#康斯坦丁·奥斯特洛夫斯基
+		name = ROK_konstantin_ostrovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_konstantin_ostrovsky"
+				small="GFX_idea_ROK_konstantin_ostrovsky"
+			}
+			army = {
+				large="GFX_ROK_konstantin_ostrovsky"
+				small="GFX_idea_ROK_konstantin_ostrovsky"
+			}
+		}
+		country_leader = {
+			ideology = anarchism_subtype
+			#desc = 
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ROK_velislank_yansolivsky = {		#维利斯兰克·扬索立夫斯基
+		name = ROK_velislank_yansolivsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_velislank_yansolivsky"
+				small="GFX_idea_ROK_velislank_yansolivsky"
+			}
+			army = {
+				large="GFX_ROK_velislank_yansolivsky"
+				small="GFX_idea_ROK_velislank_yansolivsky"
+			}
+		}
+	}
+
+	ROK_slimander_volinkowski = {		#斯利曼德·沃林科夫斯基
+		name = ROK_slimander_volinkowski
+		portraits = {
+			civilian = {
+				small="GFX_ROK_slimander_volinkowski"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_slimander_volinkowski
+			allowed  = {
+				original_tag = ROK
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+				OR = {
+					has_government = liberal_republican
+					has_government = worldunion_democrat
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+			}
+			traits = {
+				experienced_revolutionary_leader
+			}
+		}	
+	}
+
+	ROK_wolfschild_veliwski = {		#沃夫谢尔德·维利夫斯基
+		name = ROK_wolfschild_veliwski
+		portraits = {
+			civilian = {
+				small="GFX_ROK_wolfschild_veliwski"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_wolfschild_veliwski
+			allowed  = {
+				original_tag = ROK
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+				OR = {
+					has_government = liberal_republican
+					has_government = worldunion_democrat
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+			}
+			traits = {
+				financial_expert
+			}
+		}	
+	}
+
+	
+	ROK_andrew_fields = {		#安德格·菲尔兹
+		name = ROK_andrew_fields
+		portraits = {
+			civilian = {
+				small="GFX_ROK_andrew_fields"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_andrew_fields
+			allowed  = {
+				original_tag = ROK
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+				OR = {
+					has_government = liberal_republican
+					has_government = worldunion_democrat
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = ROK_victory_for_social_democrats_unlock
+						has_country_flag = ROK_victory_for_democratic_unlock
+					}
+				}
+			}
+			traits = {
+				education_expert
+			}
+		}	
+	}
+
+	
+	ROK_shevelid_oakleaf = {		#谢维利德·奥克利弗
+		name = ROK_shevelid_oakleaf
+		portraits = {
+			civilian = {
+				small="GFX_ROK_shevelid_oakleaf"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_shevelid_oakleaf
+			allowed  = {
+				original_tag = ROK
+			}
+			traits = {
+				silent_workhorse
+				captain_of_industry
+			}
+		}	
+	}
+
+	ROK_villarama_selianski = {		#维列拉玛·谢利安斯基
+		name = ROK_villarama_selianski
+		portraits = {
+			civilian = {
+				small="GFX_ROK_villarama_selianski"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_villarama_selianski
+			allowed  = {
+				original_tag = ROK
+			}
+			traits = {
+				popular_figurehead
+				compassionate_gentleman
+			}
+		}	
+	}
+
+	ROK_hayevcliffe_oswicki = {		#哈耶夫克利夫·奥斯维基
+		name = ROK_hayevcliffe_oswicki
+		portraits = {
+			civilian = {
+				small="GFX_ROK_hayevcliffe_oswicki"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_hayevcliffe_oswicki
+			allowed  = {
+				original_tag = ROK
+			}
+			traits = {
+				war_industrialist
+			}
+		}	
+	}
+
+	ROK_willimann_hefriede_hindriemann = {		#维利曼赫弗德里·辛的黎曼
+		name = ROK_willimann_hefriede_hindriemann
+		portraits = {
+			civilian = {
+				small="GFX_ROK_willimann_hefriede_hindriemann"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROK_ROK_willimann_hefriede_hindriemann
+			allowed  = {
+				original_tag = ROK
+			}
+			traits = {
+				magic_expert
+			}
+		}	
+	}
+
+	ROK_shadyrov_rikovskyn = {		#沙季洛夫·里科夫斯基
+		name = ROK_shadyrov_rikovskyn
+		portraits = {
+			civilian = {
+				large="GFX_ROK_shadyrov_rikovskyn"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_shadyrov_rikovskyn"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		field_marshal = {
+			traits = { inspirational_leader inflexible_strategist defensive_doctrine }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	ROK_alejandro_vednovsky = {		#亚历山得罗·韦德诺夫斯基
+		name = ROK_alejandro_vednovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_alejandro_vednovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_alejandro_vednovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		field_marshal = {
+			traits = { fast_planner offensive_doctrine }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	ROK_alexandra_vysokov = {		#亚历山德拉·维索科夫
+		name = ROK_alexandra_vysokov
+		portraits = {
+			civilian = {
+				large="GFX_ROK_alexandra_vysokov"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_alexandra_vysokov"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ROK_blanka_velimavsky = {		#布兰卡·维利马夫斯基
+		name = ROK_blanka_velimavsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_blanka_velimavsky"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_blanka_velimavsky"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { career_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	ROK_karen_swifliard = {		#卡伦·斯威夫利德
+		name = ROK_karen_swifliard
+		portraits = {
+			civilian = {
+				large="GFX_ROK_karen_swifliard"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_karen_swifliard"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	ROK_breshin_podovsky = {		#布烈兴·波多夫斯基
+		name = ROK_breshin_podovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_breshin_podovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_breshin_podovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious }
+			visible = { has_country_flag = ROK_purge_careerists_in_the_army_flag }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ROK_damian_sverloff = {		#达米安·斯维洛夫
+		name = ROK_damian_sverloff
+		portraits = {
+			civilian = {
+				large="GFX_ROK_damian_sverloff"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_damian_sverloff"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	ROK_jerzy_kosintsovsky = {		#耶日·科辛索夫斯基
+		name = ROK_jerzy_kosintsovsky
+		portraits = {
+			civilian = {
+				large="GFX_ROK_jerzy_kosintsovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_jerzy_kosintsovsky"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { SWI_communist bearer_of_artillery }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ROK_carolina_cliff = {		#卡罗莱纳·克里夫
+		name = ROK_carolina_cliff
+		portraits = {
+			civilian = {
+				large="GFX_ROK_carolina_cliff"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ROK_carolina_cliff"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist politically_connected }
+			visible = { has_country_flag = ROK_purge_careerists_in_the_army_flag }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}

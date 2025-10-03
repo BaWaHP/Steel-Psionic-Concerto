@@ -1,0 +1,235 @@
+﻿###templates###
+division_template = {
+	name = "军团镖骑兵-精锐"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 1 y = 0 }
+		centaur = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团镖骑兵"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团镖骑兵-地方民兵"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		centaur_militia = { x = 1 y = 0 }
+		centaur_militia = { x = 1 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团兵-旧七河军团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团兵-各军团主力"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		light_infantry = { x = 2 y = 0 }
+		light_infantry = { x = 2 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团兵-射击军"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团兵-魔法军团"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 1 y = 0 }
+		caster_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "军团兵-钢铁师"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		heavy_titan = { x = 2 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "第一七河军团“扎布罗夫斯基军团”"
+		location = 12171
+		division_template = "军团兵-旧七河军团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二七河军团“多饶军团”"
+		location = 12171
+		division_template = "军团镖骑兵-精锐"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第三七河军团“德·哲姆菲亚军团”"
+		location = 12171
+		division_template = "军团兵-旧七河军团"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第四七河军团“科苏特”"
+		location = 12171
+		division_template = "军团兵-旧七河军团"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第五七河军团“马达瑞斯克军团”"
+		location = 12171
+		division_template = "军团兵-钢铁师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第六七河军团“德·文尼蒂亚军团”"
+		location = 12171
+		division_template = "军团兵-射击军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "索科士迪亚工人军团"
+		location = 17221
+		division_template = "军团镖骑兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "第一卜德佩西亚军团"
+		location = 17221
+		division_template = "军团兵-各军团主力"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "卜德佩西亚射击军"
+		location = 17221
+		division_template = "军团兵-射击军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第一诺思洛普军团"
+		location = 18107
+		division_template = "军团镖骑兵-地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "第一尼奥马根西斯军团"
+		location = 1038
+		division_template = "军团兵-各军团主力"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "科多提亚特隆射击军"
+		location = 10768
+		division_template = "军团兵-射击军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第一拉克芬内维蒂斯军团"
+		location = 10223
+		division_template = "军团镖骑兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "“塞斯图斯”军团"
+		location = 10223
+		division_template = "军团兵-魔法军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "奈尔塔西斯射击军"
+		location = 158
+		division_template = "军团兵-射击军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

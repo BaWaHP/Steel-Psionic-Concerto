@@ -1,0 +1,26 @@
+
+state={
+	id=106
+	name="STATE_106"
+	resources = {
+		tungsten = 24
+	}
+	provinces={
+		1113 1756 2058 6707 8049 8591 9469 9722 10139 11157 14648 14923 14962 15011 
+	}
+	history = {
+		owner = HLD
+		add_core_of = HLD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			8049 8
+		}
+	}
+	manpower = 821713
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

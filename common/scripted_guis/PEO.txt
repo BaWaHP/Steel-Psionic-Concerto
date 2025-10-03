@@ -1,0 +1,13 @@
+scripted_gui = {
+
+	PEO_prime_minister_desk_ui = {
+		context_type = decision_category
+		window_name = "PEO_prime_minister_desk_ui_window"
+
+		properties = {
+			congress_icon = {
+				frame = PEO_current_congress_icon_frame
+			}
+		}
+	}
+}

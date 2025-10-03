@@ -1,0 +1,653 @@
+characters={
+
+   	CLD_Arle_Scherrer = {		#阿尔勒-舍尔勒
+   		name = CLD_Arle_Scherrer
+   		portraits = {
+   			civilian = {
+   				large="GFX_CLD_Arle_Scherrer"
+   				small="GFX_idea_CLD_Arle_Scherrer"
+   			}
+   			army = {
+   				large="GFX_CLD_Arle_Scherrer"
+   				small="GFX_idea_CLD_Arle_Scherrer"
+   			}
+   		}
+   		country_leader = {
+   			ideology = self_governing_communism
+			desc = CLD_Arle_Scherrer_desc
+   			traits = {
+   				union_leader
+   				worker_picket_organizer
+   			}
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	CLD_wings_Mazokav = {		#翼人族-马佐卡夫
+		name = CLD_wings_Mazokav
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_wings_Mazokav"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_wings_Mazokav"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_wings_Mazokav
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				magic_consultant
+			}
+			#on_add = {
+			#	add_to_variable = { magic_development_monthly_buff = 2 }
+			#}
+			#on_remove = {
+			#	add_to_variable = { magic_development_monthly_buff = -2 }
+			#}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CLD_human_Lorvin = {		#人类-洛尔文
+		name = CLD_human_Lorvin
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Lorvin"
+				small="GFX_idea_CLD_human_Lorvin"
+			}
+			army = {
+				large="GFX_CLD_human_Lorvin"
+				small="GFX_idea_CLD_human_Lorvin"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = CLD_human_Lorvin_desc
+			idea_token = CLD_human_Lorvin
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				union_manager
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CLD_human_Siatovia = {		#人类-思亚托维雅
+		name = CLD_human_Siatovia
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_human_Siatovia"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_human_Siatovia"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_human_Siatovia
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				secretary_education
+			}
+			on_add = {
+				add_to_variable = { research_development_process = 2 }
+				add_to_variable = { science_development_monthly_buff = 2 }
+			}
+			on_remove = {
+				add_to_variable = { research_development_process = -2 }
+				add_to_variable = { science_development_monthly_buff = -2 }
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CLD_human_Jacques_Toles = {		#人类-雅克托尔斯
+		name = CLD_human_Jacques_Toles
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_human_Jacques_Toles"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_human_Jacques_Toles"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_human_Jacques_Toles
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				worker_representative
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CLD_human_Rickelsang = {		#人类-里克尔桑
+		name = CLD_human_Rickelsang
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Rickelsang"
+				small="GFX_idea_CLD_human_Rickelsang"
+			}
+			army = {
+				large="GFX_CLD_human_Rickelsang"
+				small="GFX_idea_CLD_human_Rickelsang"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_human_Rickelsang
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				military_civilian_representative
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Velja_Childs = {		#人类-维尔亚-切尔德
+		name = CLD_human_Velja_Childs
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Velja_Childs"
+				small="GFX_idea_CLD_human_Velja_Childs"
+			}
+			army = {
+				large="GFX_CLD_human_Velja_Childs"
+				small="GFX_idea_CLD_human_Velja_Childs"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = CLD_human_Velja_Childs_desc
+			idea_token = CLD_human_Velja_Childs
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				red_shield
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_wings_Timparnov = {		#翼族-廷帕尔诺夫
+		name = CLD_wings_Timparnov
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_wings_Timparnov"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_CLD_wings_Timparnov"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_wings_Timparnov
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				correspondents
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_Mayakolonova = {		#人类-玛雅可洛诺娃
+		name = CLD_Mayakolonova
+		portraits = {
+			civilian = {
+				large="GFX_CLD_Mayakolonova"
+				small="GFX_idea_CLD_Mayakolonova"
+			}
+			army = {
+				large="GFX_CLD_Mayakolonova"
+				small="GFX_idea_CLD_Mayakolonova"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_Mayakolonova_idea
+			allowed = {
+				original_tag = CLD
+			}
+			available = {
+				has_completed_focus = CLD_proletarian_cultural_association
+			}
+			traits = {
+				proletarian_poet
+				futurist
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Anshitvia = {		#人类-安希特维亚
+		name = CLD_human_Anshitvia
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Anshitvia"
+				small="GFX_idea_CLD_human_Anshitvia"
+			}
+			army = {
+				large="GFX_CLD_human_Anshitvia"
+				small="GFX_idea_CLD_human_Anshitvia"
+			}
+		}
+		advisor={
+			slot = theorist 
+			idea_token = CLD_human_Anshitvia
+			allowed = {
+				original_tag = CLD
+			}
+			traits = {
+				superior_firepower_expert
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Strovell = {		#人类-斯特罗威尔
+		name = CLD_human_Strovell
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Strovell"
+				small="GFX_idea_CLD_human_Strovell"
+			}
+			army = {
+				large="GFX_CLD_human_Strovell"
+				small="GFX_idea_CLD_human_Strovell"
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = CLD_human_Strovell
+			allowed = {
+				original_tag = CLD
+			}
+			modifier = {
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Chelviotro = {		#人类-切尔薇特罗
+		name = CLD_human_Chelviotro
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Chelviotro"
+				small="GFX_idea_CLD_human_Chelviotro"
+			}
+			army = {
+				large="GFX_CLD_Chelviotro"
+				small="GFX_idea_CLD_Chelviotro"
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = CLD_human_Chelviotro
+			allowed = {
+				original_tag = CLD
+			}
+			modifier = {
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Janotlf = {		#人类-亚诺特尔夫
+		name = CLD_human_Janotlf
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Janotlf"
+				small="GFX_idea_CLD_human_Janotlf"
+			}
+			army = {
+				large="GFX_CLD_human_Janotlf"
+				small="GFX_idea_CLD_human_Janotlf"
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = CLD_human_Janotlf
+			allowed = {
+				original_tag = CLD
+			}
+			modifier = {
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Candelajas = {		#人类-坎德拉雅斯
+		name = CLD_human_Candelajas
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Candelajas"
+				small="GFX_idea_CLD_human_Candelajas"
+			}
+			army = {
+				large="GFX_CLD_human_Candelajas"
+				small="GFX_idea_CLD_human_Candelajas"
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = CLD_human_Candelajas
+			allowed = {
+				original_tag = CLD
+			}
+			modifier = {
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CLD_human_Moniz = {		#人类-莫尼茨
+		name = CLD_human_Moniz
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Moniz"
+				small="GFX_idea_CLD_human_Moniz"
+			}
+			army = {
+				large="GFX_CLD_human_Moniz"
+				small="GFX_idea_CLD_human_Moniz"
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = CLD_human_Moniz
+			allowed = {
+				original_tag = CLD
+			}
+			modifier = {
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	CLD_human_Sverre_Kalter = {		#人类-斯维尔-卡尔特
+		name = CLD_human_Sverre_Kalter
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Sverre_Kalter"
+				small="GFX_idea_CLD_human_Sverre_Kalter"
+			}
+			army = {
+				large="GFX_CLD_human_Sverre_Kalter"
+				small="GFX_idea_CLD_human_Sverre_Kalter"
+			}
+		}
+
+		field_marshal = {
+			traits = { CLD_organizer_workers_uprising }
+			skill = 5
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 6
+		}
+	}
+	
+	CLD_human_Newart = {			#人类-纽亚特
+		name = CLD_human_Newart
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Newart"
+				small="GFX_idea_CLD_human_Newart"
+			}
+			army = {
+				large="GFX_CLD_human_Newart"
+				small="GFX_idea_CLD_human_Newart"
+			}
+		}
+		corps_commander = {
+			traits = { army_artillery_2 raider_expert }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	CLD_human_Yato  = {			#人类-亚托
+		name = CLD_human_Yato 
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Yato"
+				small="GFX_idea_CLD_human_Yato"
+			}
+			army = {
+				large="GFX_CLD_human_Yato"
+				small="GFX_idea_CLD_human_Yato"
+			}
+		}
+		corps_commander = {
+			traits = { defense_expert inflexible_strategist old_guard }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	CLD_human_Lang_Weiwen  = {		#人类-郎维文
+		name = CLD_human_Lang_Weiwen
+		portraits = {
+			civilian = {
+				large="GFX_CLD_human_Lang_Weiwen"
+				small="GFX_idea_CLD_human_Lang_Weiwen"
+			}
+			army = {
+				large="GFX_CLD_human_Lang_Weiwen"
+				small="GFX_idea_CLD_human_Lang_Weiwen"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer brilliant_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	CLD_Blood_Opteil = {		#血族-欧普得伊尔
+		name = CLD_Blood_Opteil
+		portraits = {
+			civilian = {
+				large="GFX_CLD_Blood_Opteil"
+				small="GFX_idea_CLD_Blood_Opteil"
+			}
+			army = {
+				large="GFX_CLD_Blood_Opteil"
+				small="GFX_idea_CLD_Blood_Opteil"
+			}
+		}
+		corps_commander = {
+			traits = { blood_clan }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+  	CLD_yumiko_shiraki = {		#白木由美子
+   		name = CLD_yumiko_shiraki
+   		portraits = {
+   			civilian = {
+   				large="GFX_NKM_yumiko_shiraki"
+   				small="GFX_idea_NKM_yumiko_shiraki"
+   			}
+   			army = {
+				large="GFX_NKM_yumiko_shiraki"
+				small="GFX_idea_NKM_yumiko_shiraki"
+   			}
+   		}
+	}
+
+	#威廉·莫里茨
+	CLD_william_moritz = {
+   		name = CLD_william_moritz
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = pioneer_communism_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	#鲍勃·伯恩
+	CLD_bob_burns = {
+   		name = CLD_bob_burns
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_socialist_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	#杰恩·格雷克
+	CLD_jane_grek = {
+   		name = CLD_jane_grek
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_democrat_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	#威斯特·凯恩
+	CLD_west_cain = {
+   		name = CLD_west_cain
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = national_socialist_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

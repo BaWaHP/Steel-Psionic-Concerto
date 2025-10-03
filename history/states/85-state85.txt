@@ -1,0 +1,33 @@
+
+state={
+	id=85
+	name="STATE_85"
+	resources={
+		steel=48
+		magic_crystal=30
+	}
+
+	history={
+		owner = ALR
+		add_core_of = ALR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			10460 1 
+		}
+		victory_points = {
+			18054 3 
+		}
+
+	}
+
+	provinces={
+		4070 9420 10431 10460 10600 10660 11306 11821 17674 17779 17857 17972 18054 18055 18162 18209 
+	}
+	manpower=563100
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

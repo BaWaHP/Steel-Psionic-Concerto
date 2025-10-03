@@ -1,0 +1,32 @@
+
+state={
+	id=14
+	name="STATE_14"
+	resources={
+		aluminium=8.000
+		tungsten=6.000
+	}
+
+	history={
+		owner = NWF
+		add_core_of = NWF
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		victory_points = {
+			16934 5 
+		}
+
+	}
+
+	provinces={
+		2293 4460 7751 10599 10756 11482 12215 16857 16919 16934 17053 17106 
+	}
+	manpower=798574
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

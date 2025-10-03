@@ -1,0 +1,23 @@
+characters={
+
+	HLD_padraig_cameron = {		#帕德雷格·卡梅伦
+   		name = HLD_padraig_cameron
+   		portraits = {
+   			civilian = {
+   				large="GFX_HLD_padraig_cameron"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_HLD_padraig_cameron"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = HLD_padraig_cameron_desc
+   			ideology = oligarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

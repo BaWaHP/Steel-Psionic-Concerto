@@ -1,0 +1,26 @@
+RNA_mil_bop = {
+	initial_value = 1
+	left_side = RNA_mil_bop_left
+	right_side = RNA_mil_bop_right
+	decision_category = RNA_mil_bop_decisions
+
+	side = {
+		id = RNA_mil_bop_left
+		icon = GFX_bop_ETH_anarchist_side
+		range = {
+			id = SFR_opposition_bop_left_1
+			max = 0
+			min = -1
+		}
+	}
+
+	side = {
+		id = RNA_mil_bop_right
+		icon = GFX_bop_ITA_grand_council_side
+		range = {
+			id = SFR_opposition_bop_right_1
+			min = 0.5
+			max = 1
+		}
+	}
+} 

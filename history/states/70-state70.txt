@@ -1,0 +1,31 @@
+
+state={
+	id=70
+	name="STATE_70"
+
+	resources = {
+		steel = 12
+		tungsten = 24
+		magic_crystal = 48
+	}
+
+	history={
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			16771 5
+		}
+	}
+
+	provinces = {
+		604 1730 4048 9862 12078 16387 16465 16505 16624 16654 16736 16771 16796 16917 
+	}
+	manpower = 231487
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies = 0.000
+}

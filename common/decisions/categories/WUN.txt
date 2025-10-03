@@ -1,0 +1,15 @@
+WUN_debug_decision_category = {		#触发事件读条
+	#picture = 
+	allowed = { tag = WUN }
+	visible = { tag = WUN is_debug = yes }
+	visible_when_empty = yes
+	priority = 10
+}
+
+WUN_yarlig_decision_category = {		#被祝福的敕令
+	picture = GFX_WUN_yarlig_decision_category
+	allowed = { tag = WUN }
+	visible = { tag = WUN has_completed_focus = WUN_yarlig }
+	visible_when_empty = no
+	priority = 10
+}

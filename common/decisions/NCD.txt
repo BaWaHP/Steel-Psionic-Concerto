@@ -1,0 +1,1420 @@
+NCD_skilled_worker_construction = {
+	NCD_inviting_formal_skilled_workers = {		#“邀请”正规技术工人
+		icon = generic_brainwash
+		allowed = { tag = NCD }
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = NCD_inviting_formal_skilled_workers_tr
+				always = no
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			add_stability = -0.05
+			NCD_skilled_worker_idea_up = yes
+			add_to_variable = { NCD_inviting_formal_skilled_workers_count = 1 }
+			if = {
+				limit = { NOT = { check_variable = { NCD_inviting_formal_skilled_workers_count = 3 } } }
+				activate_mission = NCD_inviting_formal_skilled_workers
+			}
+		}
+	}
+	NCD_smuggle_foregin_workers = {		#偷渡外国边境技术工人
+		icon = generic_ignite_civil_war
+		allowed = { tag = NCD }
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = NCD_smuggle_foregin_workers_tr
+				check_variable = { NCD_smuggle_foregin_workers_count < 2 }
+			}
+		}
+		visible = { check_variable = { NCD_smuggle_foregin_workers_count < 2 } }
+		
+		cost = 75
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = { factor = 1000000 }
+
+		remove_effect = {
+			NCD_skilled_worker_idea_up = yes
+			add_to_variable = { NCD_smuggle_foregin_workers_count = 1 }
+		}
+	}
+	NCD_find_essense_of_workers = {		#究其所谓技术工人的根本
+		icon = generic_military
+		allowed = { tag = NCD }
+		available = {}
+		
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_1
+					has_idea = NCD_skilled_worker_amount_2
+				}
+				add = 100000
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = { has_idea = NCD_skilled_worker_amount_1 }
+				remove_ideas = NCD_skilled_worker_amount_1
+			}
+			else_if = {
+				limit = { has_idea = NCD_skilled_worker_amount_2 }
+				remove_ideas = NCD_skilled_worker_amount_2
+			}
+			else_if = {
+				limit = { has_idea = NCD_skilled_worker_amount_3 }
+				remove_ideas = NCD_skilled_worker_amount_3
+			}
+			else_if = {
+				limit = { has_idea = NCD_skilled_worker_amount_5 }
+				remove_ideas = NCD_skilled_worker_amount_5
+			}
+			else_if = {
+				limit = { has_idea = NCD_skilled_worker_amount_6 }
+				remove_ideas = NCD_skilled_worker_amount_6
+			}
+			add_ideas = NCD_skilled_worker_amount_4
+		}
+	}
+	NCD_enslave_betrayers_113 = {		#强制奴役塔尔图斯-温图斯的背叛者
+		icon = generic_arrest
+		allowed = { tag = NCD }
+		available = {
+			has_war_with = CLD
+			113 = { is_controlled_by = NCD }
+		}
+		visible = {
+			has_war_with = CLD
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {  factor = 1 }
+
+		remove_effect = {
+			NCD_skilled_worker_idea_up = yes
+			113 = {
+				add_dynamic_modifier = {
+					modifier = NCD_lacking_skilled_workers
+					days = 180
+				}
+			}
+		}
+	}
+	NCD_enslave_betrayers_112 = {		#强制奴役帕特特的背叛者
+		icon = generic_arrest
+		allowed = { tag = NCD }
+		available = {
+			has_war_with = CLD
+			112 = { is_controlled_by = NCD }
+		}
+		visible = {
+			has_war_with = CLD
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 5
+
+		ai_will_do = {  factor = 1 }
+
+		remove_effect = {
+			NCD_skilled_worker_idea_up = yes
+			112 = {
+				add_dynamic_modifier = {
+					modifier = NCD_lacking_skilled_workers
+					days = 180
+				}
+			}
+		}
+	}
+	NCD_temp_mil_factory_construction = {		#临时军用工厂建设
+		icon = generic_industry
+		allowed = { tag = NCD }
+		available = {
+			NOT = { has_idea = NCD_skilled_worker_amount_1 }
+			custom_trigger_tooltip = {
+				tooltip = NCD_temp_mil_factory_construction_tr
+				check_variable = { NCD_temp_mil_factory_construction_count < 5 }
+			}
+		}
+		
+		cost = 25
+		fire_only_once = no
+		days_remove = 15
+
+		ai_will_do = {  
+			factor = 1 
+			modifier = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_4
+					has_idea = NCD_skilled_worker_amount_5
+					has_idea = NCD_skilled_worker_amount_6
+				}
+				add = 100000
+			}
+			modifier = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_4
+					has_idea = NCD_skilled_worker_amount_5
+					has_idea = NCD_skilled_worker_amount_6
+				}
+				add = 50
+			}
+		}
+
+		remove_effect = {
+			NCD_skilled_worker_idea_down = yes
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_to_variable = { NCD_temp_mil_factory_construction_count = 1 }
+		}
+	}
+	NCD_regional_construction_department_expansion = {		#地区建设部门扩张
+		icon = generic_merge_plant_materiel
+		allowed = { tag = NCD }
+		available = {
+			NOT = { has_idea = NCD_skilled_worker_amount_1 }
+			custom_trigger_tooltip = {
+				tooltip = NCD_regional_construction_department_expansion_tr
+				check_variable = { NCD_regional_construction_department_expansion_count < 3 }
+			}
+		}
+		
+		cost = 30
+		fire_only_once = no
+		days_remove = 15
+
+		ai_will_do = {  
+			factor = 1 
+			modifier = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_4
+					has_idea = NCD_skilled_worker_amount_5
+					has_idea = NCD_skilled_worker_amount_6
+				}
+				add = 50000
+			}
+			modifier = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_4
+					has_idea = NCD_skilled_worker_amount_5
+					has_idea = NCD_skilled_worker_amount_6
+				}
+				add = 25
+			}
+		}
+
+		remove_effect = {
+			NCD_skilled_worker_idea_down = yes
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_to_variable = { NCD_regional_construction_department_expansion_count = 1 }
+		}
+	}
+	NCD_frontline_defensive_construction = {		#沿线防御建设
+		icon = generic_mountain_fortification
+		allowed = { tag = NCD }
+		available = {
+			NOT = { has_idea = NCD_skilled_worker_amount_1 }
+			custom_trigger_tooltip = {
+				tooltip = NCD_frontline_defensive_construction_tr
+				check_variable = { NCD_frontline_defensive_construction_count < 2 }
+			}
+		}
+		
+		cost = 50
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = decision_cost_CP_10_pp_50
+
+		fire_only_once = no
+		days_remove = 60
+
+		ai_will_do = { 
+			factor = 100000
+			modifier = {
+				check_variable = { NCD_frontline_defensive_construction_count = 1 }
+				factor = 1
+			}
+		}
+
+		remove_effect = {
+			NCD_skilled_worker_idea_down = yes
+			custom_effect_tooltip = NCD_frontline_defensive_construction_tt
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = CLD
+					}
+				}
+			}
+			add_to_variable = { NCD_frontline_defensive_construction_count = 1 }
+		}
+	}
+	NCD_alone_defensive_construction = {		#沿线防御建设
+		icon = generic_mountain_fortification
+		allowed = { tag = NCD }
+		available = {
+			NOT = {
+				OR = {
+					has_idea = NCD_skilled_worker_amount_1
+					has_idea = NCD_skilled_worker_amount_2
+					has_idea = NCD_skilled_worker_amount_3
+				}
+			}
+		}
+		visible = {
+			has_war_with = CLD
+		}
+		
+		cost = 150
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = decision_cost_CP_10_pp_150
+
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				OR = {
+					115 = { is_controlled_by = CLD }
+					116 = { is_controlled_by = CLD }
+					117 = { is_controlled_by = CLD }
+				}
+				factor = 100000
+			}
+		}
+
+		remove_effect = {
+			NCD_skilled_worker_idea_down_3 = yes
+			custom_effect_tooltip = NCD_alone_defensive_construction_tt
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = CLD
+					}
+				}
+			}
+		}
+	}
+	NCD_use_crystal_gas = {		#合成并使用魔晶矿毒气
+		icon = SWI_consolidate_council_power
+		allowed = { tag = NCD }
+		available = { 
+			NOT = { has_idea = NCD_skilled_worker_amount_1 } 
+			has_war_with = CLD
+			has_completed_focus = NCD_magic_crystal_to_synthesis_gas
+		}
+		visible = {
+			has_war_with = CLD
+		}
+		
+		cost = 100
+		fire_only_once = yes
+		days_remove = 10
+
+		ai_will_do = { factor = 10 }
+
+		remove_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			NCD_skilled_worker_idea_down = yes
+			CLD = {
+				add_stability = -0.05
+				add_war_support = 0.1
+				add_timed_idea = {
+					idea = NCD_magic_crystal_gas
+					days = 120
+				}
+			}
+		}
+	}
+
+	NCD_cancel_propaganda = {		#取消理想新闻宣传
+		icon = FIN_stop_motti_tactics
+		allowed = { tag = NCD }
+		available = { has_idea = NCD_radio_broadcast_station }
+		visible = { has_idea = NCD_radio_broadcast_station has_completed_focus = NCD_idealised_newscasts }
+		
+		cost = 10
+		fire_only_once = no
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_political_power = 50
+			remove_ideas = NCD_radio_broadcast_station
+		}
+	}
+	NCD_bring_back_propaganda = {		#恢复理想新闻宣传
+		icon = generic_speech
+		allowed = { tag = NCD }
+		available = { NOT = { has_idea = NCD_radio_broadcast_station } }
+		visible = { NOT = { has_idea = NCD_radio_broadcast_station } has_completed_focus = NCD_idealised_newscasts }
+		
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_ideas = NCD_radio_broadcast_station
+		}
+	}
+}
+
+NCD_interal_conflicts = {
+	NCD_interal_conflicts_title_1 = {
+		icon = CHL_mapuche_reorganize_the_bolivian_government
+		allowed = { tag = NCD }
+		available = { always = no }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+	}
+	NCD_interal_conflicts_1_open = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { NOT = { has_country_flag = NCD_interal_conflicts_1_on }	}
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_1_open
+			set_country_flag = NCD_interal_conflicts_1_on
+		}
+	}
+	NCD_interal_conflicts_1_close = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { has_country_flag = NCD_interal_conflicts_1_on }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_1_close
+			clr_country_flag = NCD_interal_conflicts_1_on
+		}
+	}
+	NCD_interal_conflicts_take_actions_1 = {		#至上的国王运动正在行动
+		icon = generic_civil_support
+		allowed = { tag = NCD }
+		available = { has_country_flag = NCD_interal_conflicts_ban }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 45
+
+		timeout_effect = {
+			activate_mission = NCD_interal_conflicts_take_actions_1
+			random_list = {
+				15 = {
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_1
+						value = 2.5
+						tooltip = NCD_interal_conflicts_var_1_1_tt
+					}
+				}
+				10 = {
+					add_timed_idea = {
+						idea = NCD_temp_prod_line
+						days = 30
+					}
+				}
+				15 = {
+					add_timed_idea = {
+						idea = NCD_corruption_a_lot
+						days = 30
+					}
+				}
+				20 = {
+					add_timed_idea = {
+						idea = NCD_business_investment
+						days = 30
+					}
+				}
+				5 = {
+					random_list = {
+						50 = {
+							random_owned_state = {
+								add_extra_state_shared_building_slots = 1
+							}
+						}
+						50 = {
+							random_owned_state = {
+								add_building_construction = {
+									type = infrastructure
+									level = 1
+								}
+							}
+						}
+					}
+				}
+				30 = {
+					add_political_power = 20
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_1
+						value = 1
+						tooltip = NCD_interal_conflicts_var_1_1_tt
+					}
+				}
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_beat_royalist = {		#打击至上的国王运动
+		icon = generic_arrest
+		allowed = { tag = NCD }
+
+		visible = {
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_1_on
+			}
+		}
+		
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 15
+
+		ai_will_do = { factor = 0.5 }
+
+		complete_effect = {
+			random_list = {
+				25 = {
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_1
+						value = -5
+						tooltip = NCD_interal_conflicts_var_1_1_tt
+					}
+				}
+				30 = {
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_2
+						value = -5
+						tooltip = NCD_interal_conflicts_var_1_2_tt
+					}
+				}
+				45 = {
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_1
+						value = -3
+						tooltip = NCD_interal_conflicts_var_1_1_tt
+					}
+					add_to_variable = { 
+						var = NCD_interal_conflicts_var_1_2
+						value = -3
+						tooltip = NCD_interal_conflicts_var_1_2_tt
+					}
+				}
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_request_food_fund = {		#要求粮食援助
+		icon = generic_motorized
+		allowed = { tag = NCD }
+		available = { has_completed_focus = NCD_coop_with_demon }
+
+		visible = {
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_1_on
+			}
+		}
+		
+		cost = 20
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_1_1
+					value = 2.5
+					tooltip = NCD_interal_conflicts_var_1_1_tt
+				}
+			}
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_1_2
+					value = 5
+					tooltip = NCD_interal_conflicts_var_1_2_tt
+				}
+			}	
+			NCD_interal_conflicts_var_clamp_effect = yes
+			swap_ideas = {
+				remove_idea = NCD_hunger_everywhere
+				add_idea = NCD_hunger_everywhere_better
+			}
+		}
+	}
+	NCD_request_mil_support = {		#要求军事援助
+		icon = generic_military
+		allowed = { tag = NCD }
+		available = { has_completed_focus = NCD_coop_with_demon }
+
+		visible = {
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_1_on
+			}
+		}
+		
+		cost = 30
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 30
+
+		ai_will_do = { factor = 0.2 }
+
+		remove_effect = {
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_1_1
+					value = 7.5
+					tooltip = NCD_interal_conflicts_var_1_1_tt
+				}
+			}	
+			NCD_interal_conflicts_var_clamp_effect = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = ARO
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 500
+				producer = ARO
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+				producer = ARO
+			}
+		}
+	}
+	NCD_mons_agreement = {		#蒙斯协定
+		icon = ger_mefo_bills
+		allowed = { tag = NCD }
+		available = { has_completed_focus = NCD_coop_with_demon }
+
+		visible = {
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_1_on
+			}
+		}
+		
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 0.5 }
+
+		remove_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_1
+				value = 5
+				tooltip = NCD_interal_conflicts_var_1_1_tt
+			}
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_2
+				value = 5
+				tooltip = NCD_interal_conflicts_var_1_2_tt
+			}
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -10
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+
+	NCD_interal_conflicts_title_2 = {
+		icon = CHL_mapuche_reorganize_the_bolivian_government
+		allowed = { tag = NCD }
+		available = { always = no }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+	}
+	NCD_interal_conflicts_2_open = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { NOT = { has_country_flag = NCD_interal_conflicts_2_on }	}
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_2_open
+			set_country_flag = NCD_interal_conflicts_2_on
+		}
+	}
+	NCD_interal_conflicts_2_close = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { has_country_flag = NCD_interal_conflicts_2_on }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_2_close
+			clr_country_flag = NCD_interal_conflicts_2_on
+		}
+	}
+	NCD_interal_conflicts_take_actions_2 = {		#救国阵线护国派在行动
+		icon = generic_civil_support
+		allowed = { tag = NCD }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			activate_mission = NCD_interal_conflicts_take_actions_2
+			random_list = {
+				25 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_1
+							value = 1
+							tooltip = NCD_interal_conflicts_var_3_1_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_up_var = 1 } NCD_interal_conflicts_var_3_1_up_effect = yes }
+				}
+				15 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_1
+							value = 2
+							tooltip = NCD_interal_conflicts_var_3_1_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_up_var = 2 } NCD_interal_conflicts_var_3_1_up_effect = yes }
+				}
+				30 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_2
+							value = 1
+							tooltip = NCD_interal_conflicts_var_3_2_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_up_var = 1 } NCD_interal_conflicts_var_3_2_up_effect = yes }
+				}
+				30 = {}
+			}
+		}
+	}
+	NCD_beat_protean_faction = {		#限制救国阵线护国派行动
+		icon = generic_arrest
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_country_flag = NCD_interal_conflicts_2_on 
+			always = no
+		}
+		
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 15
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			random_list = {
+				25 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_1
+							value = -5
+							tooltip = NCD_interal_conflicts_var_3_1_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_down_var = 5 } NCD_interal_conflicts_var_3_1_down_effect = yes }
+				}
+				30 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_2
+							value = -5
+							tooltip = NCD_interal_conflicts_var_3_2_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_down_var = 5 } NCD_interal_conflicts_var_3_2_down_effect = yes }
+				}
+				45 = {
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_1
+							value = -3
+							tooltip = NCD_interal_conflicts_var_3_1_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_down_var = 5 } NCD_interal_conflicts_var_3_1_down_effect = yes }
+					effect_tooltip = {
+						add_to_variable = { 
+							var = NCD_interal_conflicts_var_3_2
+							value = -3
+							tooltip = NCD_interal_conflicts_var_3_2_tt
+						}
+					}	
+					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_down_var = 5 } NCD_interal_conflicts_var_3_2_down_effect = yes }
+				}
+			}
+		}
+	}
+	NCD_integrate_high_command = {		#合并最高指挥团
+		icon = generic_army_support
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+		
+		cost = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 0.5 }
+
+		complete_effect = {
+			army_experience = 15
+			add_ideas = NCD_complete_mil_com_sys
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 10
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_close_defense_tactic = {		#缜密的防守战略
+		icon = generic_protection
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+		
+		cost = 10
+		fire_only_once = no
+		days_remove = 7
+		days_re_enable = 45
+
+		ai_will_do = { factor = 0.2 }
+
+		modifier = {
+			army_defence_factor = 0.05
+			land_reinforce_rate = 0.02
+			cannot_retreat_while_attacking = 1
+		}
+
+		remove_effect = {
+			army_experience = 10
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 2.5
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_demand_mil_support = {		#要求派系军队支援
+		icon = generic_political_address
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NCD_demand_mil_support_tr
+				check_variable = { NCD_demand_mil_support_count < 2 }
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+
+		ai_will_do = { factor = 0.7 }
+
+		remove_effect = {
+			division_template = {
+				name = "特别作战队"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+			}
+			118 = {
+				create_unit = {
+					division = "name = \"特别作战队\" division_template = \"特别作战队\" start_experience_factor = 0.3 start_equipment_factor = 0.5"  
+					owner = NCD
+					prioritize_location = 1576
+					count = 2
+				}
+			}
+
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 10
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+
+			add_to_variable = { NCD_demand_mil_support_count = 1 }
+		}
+	}
+	NCD_interest_for_weapons = {		#利益换取私存武器
+		icon = ger_military_buildup
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NCD_interest_for_weapons_tr
+				check_variable = { NCD_interest_for_weapons_count < 2 }
+			}
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 15
+
+		ai_will_do = { factor = 0.3 }
+
+		remove_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 5
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 25
+			}
+			
+			add_to_variable = { NCD_interest_for_weapons_count = 1 }
+		}
+	}
+	NCD_bribe_senior_officials = {		#贿赂高级官员
+		icon = GFX_decision_gre_investment_decisions
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 5
+
+		ai_will_do = { factor = 0.6 }
+
+		remove_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = -5
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_suppress_consertive_mind = {		#压制保守想法
+		icon = GFX_decision_gre_investment_decisions
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_completed_focus = NCD_adopt_sound_advice
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_2_on
+			}
+		}
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 30
+
+		ai_will_do = { factor = 0.5 }
+
+		modifier = {
+			army_defence_factor = -0.05
+			coordination_bonus = -0.01
+			political_power_gain = 1
+			stability_factor = 0.05
+		}
+
+		remove_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = -7.5
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+
+	NCD_interal_conflicts_title_3 = {
+		icon = CHL_mapuche_reorganize_the_bolivian_government
+		allowed = { tag = NCD }
+		available = { always = no }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+	}
+	NCD_interal_conflicts_3_open = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { NOT = { has_country_flag = NCD_interal_conflicts_3_on }	}
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_3_open
+			set_country_flag = NCD_interal_conflicts_3_on
+		}
+	}
+	NCD_interal_conflicts_3_close = {
+		icon = eng_trade_unions_support
+		allowed = { tag = NCD }
+
+		visible = { has_country_flag = NCD_interal_conflicts_3_on }
+		
+		cost = 0
+
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			custom_effect_tooltip = NCD_interal_conflicts_3_close
+			clr_country_flag = NCD_interal_conflicts_3_on
+		}
+	}
+	NCD_interal_conflicts_take_actions_3 = {		#新联合阵线在行动
+		icon = generic_civil_support
+		allowed = { tag = NCD }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			activate_mission = NCD_interal_conflicts_take_actions_3
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = 1
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_expand_police_force = {		#增添警察部队
+		icon = ger_military_buildup
+		allowed = { tag = NCD }
+		available = { has_completed_focus = NCD_suppress_new_united_front }
+
+		visible = { 
+			has_country_flag = NCD_interal_conflicts_3_on 
+			always = no
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 15
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_4_1
+					value = -3
+					tooltip = NCD_interal_conflicts_var_4_1_tt
+				}
+			}	
+			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_1_down_var = 3 } NCD_interal_conflicts_var_4_1_down_effect = yes }
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_4_2
+					value = 5
+					tooltip = NCD_interal_conflicts_var_4_2_tt
+				}
+			}	
+			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_2_up_var = 5 } NCD_interal_conflicts_var_4_2_up_effect = yes }
+		}
+	}
+	NCD_increase_threshold_for_police = {		#提高警察出动门槛
+		icon = gre_hellenic_academy
+		allowed = { tag = NCD }
+
+		visible = { 
+			has_country_flag = NCD_interal_conflicts_3_on 
+			always = no
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 15
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_4_1
+					value = 4
+					tooltip = NCD_interal_conflicts_var_4_1_tt
+				}
+			}	
+			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_1_up_var = 4 } NCD_interal_conflicts_var_4_1_up_effect = yes }
+			effect_tooltip = {
+				add_to_variable = { 
+					var = NCD_interal_conflicts_var_4_2
+					value = -5
+					tooltip = NCD_interal_conflicts_var_4_2_tt
+				}
+			}	
+			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_2_down_var = 5 } NCD_interal_conflicts_var_4_2_down_effect = yes }
+		}
+	}
+	NCD_strict_control_over_borders = {		#严格管控国境线
+		icon = generic_scorched_earth
+		allowed = { tag = NCD }
+
+		visible = {
+			has_completed_focus = NCD_suppress_new_united_front
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_3_on
+			}  
+		}
+
+		cost = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 0.8 }
+
+		complete_effect = {
+			add_stability = 0.05
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -10
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+			#PEO = { 
+			#	add_opinion_modifier = {
+			#		target = NCD
+			#		modifier = NCD_strict_controlled_borders
+			#	} 
+			#}
+		}
+	}
+	NCD_protect_supply_line = {		#守卫补给线
+		icon = generic_train
+		allowed = { tag = NCD }
+		
+		visible = {
+			has_completed_focus = NCD_suppress_new_united_front
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_3_on
+			}  
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 0.8 }
+
+		complete_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -10
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+
+			#if = {
+			#	limit = { CLD = { has_idea = CLD_underground_information_network } }
+			#	CLD = { remove_ideas = CLD_underground_information_network }
+			#}
+
+			add_ideas = NCD_stable_supply_line
+		}
+	}
+	NCD_secret_police_proj = {		#秘密警察计划
+		icon = GFX_decision_generic_police_action
+		allowed = { tag = NCD }
+		available = { has_equipment = { infantry_equipment > 50 } }
+		
+		visible = {
+			has_completed_focus = NCD_suppress_new_united_front
+			OR = {
+				is_ai = yes
+				has_country_flag = NCD_interal_conflicts_3_on
+			} 
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 15
+		days_re_enable = 30
+
+		ai_will_do = { factor = 0.8 }
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -50
+			}
+		}
+
+		remove_effect = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -10
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+	NCD_interal_conflicts_take_actions_4 = {		#新联合阵线正在游击对抗
+		icon = generic_civil_support
+		allowed = { tag = NCD }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			activate_mission = NCD_interal_conflicts_take_actions_4
+
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -1
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+			
+			if = {
+				limit = { check_variable = { NCD_interal_conflicts_var_2 < 20 } }
+				random_list = {
+					50 = {
+						add_political_power = -10
+					}
+					30 = {
+						random_owned_state = {
+							damage_building = {
+								type = infrastructure
+								damage = 0.5
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { supply_node > 0 }
+							damage_building = {
+								type = supply_node
+								damage = 0.5
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { industrial_complex > 0 }
+							damage_building = {
+								type = industrial_complex
+								damage = 0.5
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { check_variable = { NCD_interal_conflicts_var_2 < 40 } }
+				random_list = {
+					30 = {
+						add_political_power = -15
+					}
+					30 = {
+						random_owned_state = {
+							limit = { infrastructure > 0 }
+							damage_building = {
+								type = infrastructure
+								damage = 0.5
+							}
+						}
+					}
+					20 = {
+						random_owned_state = {
+							limit = { supply_node > 0 }
+							damage_building = {
+								type = supply_node
+								damage = 0.5
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { industrial_complex > 0 }
+							damage_building = {
+								type = industrial_complex
+								damage = 0.5
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { arms_factory > 0 }
+							damage_building = {
+								type = arms_factory
+								damage = 0.5
+							}
+						}
+					}
+				}
+			}
+			else = {
+				random_list = {
+					30 = {
+						add_political_power = -30
+					}
+					20 = {
+						random_owned_state = {
+							limit = { supply_node > 0 }
+							damage_building = {
+								type = supply_node
+								damage = 1
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { industrial_complex > 0 }
+							damage_building = {
+								type = industrial_complex
+								damage = 1
+							}
+						}
+					}
+					10 = {
+						random_owned_state = {
+							limit = { arms_factory > 0 }
+							damage_building = {
+								type = arms_factory
+								damage = 1
+							}
+						}
+					}
+					50 = {
+						country_event = NCD.151
+					}
+				}
+			}
+		}
+	}
+}

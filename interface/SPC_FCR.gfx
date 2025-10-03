@@ -1,0 +1,53 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_FCR_chen_yue"
+		texturefile = "gfx/leaders/FCR/chen_yue.png"
+	}
+	spriteType = {
+		name = "GFX_FCR_fras_kona"
+		texturefile = "gfx/leaders/FCR/fras_kona.png"
+	}
+	spriteType = {
+		name = "GFX_FCR_manny_strona_matteoda"
+		texturefile = "gfx/leaders/FCR/manny_strona_matteoda.png"
+	}
+	spriteType = {
+		name = "GFX_FCR_hartless_desport"
+		texturefile = "gfx/leaders/FCR/hartless_desport.png"
+	}
+	spriteType = {
+		name = "GFX_FCR_skandru_alrisis"
+		texturefile = "gfx/leaders/FCR/skandru_alrisis.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_FCR_chen_yue"
+		texturefile = "gfx/advisors/FCR/chen_yue.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FCR_fras_kona"
+		texturefile = "gfx/advisors/FCR/fras_kona.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FCR_manny_strona_matteoda"
+		texturefile = "gfx/advisors/FCR/manny_strona_matteoda.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FCR_hartless_desport"
+		texturefile = "gfx/advisors/FCR/hartless_desport.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FCR_skandru_alrisis"
+		texturefile = "gfx/advisors/FCR/skandru_alrisis.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_FCR_mental_disorders"
+		texturefile = "gfx/interface/traits/trait_operative_double_agent.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_FCR_force_surpasses"
+		texturefile = "gfx/interface/traits/personal/trait_cuts_corners.dds"
+	}
+}

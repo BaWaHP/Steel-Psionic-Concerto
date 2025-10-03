@@ -1,0 +1,32 @@
+
+state={
+	id=21
+	name="STATE_21"
+	resources={
+		steel=72
+		tungsten=20.000
+		oil=18.000
+		magic_crystal=12.000
+	}
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			16469 3 
+		}
+
+	}
+
+	provinces={
+		1307 1511 5182 7845 9128 9231 10278 16182 16315 16316 16366 16367 16469 16596 16597 16618 
+	}
+	manpower=306201
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

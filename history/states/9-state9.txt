@@ -1,0 +1,34 @@
+
+state={
+	id=9
+	name="STATE_9"
+	resources={
+		tungsten=8.000
+		aluminium=4.000
+		magic_crystal = 8
+	}
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			18468 3 
+		}
+		victory_points = {
+			11682 1 
+		}
+
+	}
+
+	provinces={
+		325 2229 4746 4910 8853 11682 18321 18337 18409 18468 18557 
+	}
+	manpower=465048
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

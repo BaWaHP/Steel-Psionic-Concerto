@@ -1,0 +1,220 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_WUN_startup_effect = {
+	if = {
+		limit = { tag = WUN }
+		###政府法案###
+		add_ideas = all_adults_serve
+		add_ideas = advanced_training
+		add_ideas = war_economy
+		add_ideas = closed_economy
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = aggressive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = self_efficient_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = nobody_cares
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_no_intervention
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_no_funds
+		add_ideas = MP_fuck_off_the_magician
+		add_ideas = SPP_cia_everywhere
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_rigil_kent
+		add_ideas = LR_herbivorous_orcs
+		add_ideas = SR_wuna_centaur
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_traditional_policy
+		#变量设置#
+		WUN_way_of_the_king_var_setup = yes
+		#加地图外#
+		set_variable = {
+			ZHE_king_behind_king_if = 3
+		}
+		set_variable = {
+			ZHE_king_behind_king_af = 3
+		}
+		add_offsite_building = {
+			type = arms_factory
+			level = 3
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 3
+		}
+		#flag#
+		set_country_flag = WUN_first_war_flag
+		###控制省份对应普及度###
+		every_state = {
+			#于摩
+			if = {
+				limit = {
+					state = 139
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 157
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 135
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}
+			if = {
+				limit = {
+					state = 158
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+		}
+		#损害建筑#
+		130 = {
+			damage_building = { type = rail_way damage = 1 }
+		}
+		129 = {
+			damage_building = { type = rail_way damage = 1 }
+		}
+		140 = {
+			damage_building = { type = rail_way damage = 1 }
+		}
+		159 = {
+			damage_building = { type = rail_way damage = 1 }
+			damage_building = { type = infrastructure damage = 1 }
+		}
+		161 = {
+			damage_building = { type = rail_way damage = 1 }
+			damage_building = { type = infrastructure damage = 1 }
+		}
+	}
+}
+
+WUN_way_of_the_king_var_setup = {
+	set_variable = { WUN_way_of_the_king_sf = 0 }
+	set_variable = { WUN_way_of_the_king_sw = 0 }
+	set_variable = { WUN_way_of_the_king_cgf = 0 }
+	set_variable = { WUN_way_of_the_king_mid = 0 }
+	set_variable = { WUN_way_of_the_king_ppsf = 0 }
+	set_variable = { WUN_way_of_the_king_aiaf = 0 }
+	set_variable = { WUN_way_of_the_king_aidf = 0 }
+	set_variable = { WUN_way_of_the_king_ms = 0 }
+	set_variable = { WUN_way_of_the_king_cf = 0 }
+	set_variable = { WUN_way_of_the_king_ncm = 0 }
+	set_variable = { WUN_way_of_the_king_ttaf = 0 }
+	set_variable = { WUN_way_of_the_king_scf = 0 }
+	set_variable = { WUN_way_of_the_king_nsg = 0 }
+}
+
+WUN_yarlig_check = {
+	clamp_variable = {
+		var = WUN_yarlig_var
+		min = 0
+		max = 350000
+	}
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { WUN_yarlig_var = 350000 } }
+			WUN_random_buff = yes
+		}
+	}
+}
+
+WUN_random_buff = {
+	set_variable = { WUN_yarlig_var = 0 }
+	set_temp_variable = { WUN_get_current_buff_count = WUN_buff_count }
+	if = {
+		limit = { check_variable = { WUN_buff_count = 5 } }
+		add_political_power = 1
+		#country_event = WUN.10
+	}
+	else = {
+		random_list = {
+			20 = {
+				if = {
+					limit = { NOT = { has_idea = WUN_sarcoma } }
+					add_ideas = WUN_sarcoma
+					country_event = WUN.100
+				}
+			}
+			20 = {
+				if = {
+					limit = { NOT = { has_idea = WUN_callus } }
+					add_ideas = WUN_callus
+					country_event = WUN.100
+				}
+			}
+			20 = {
+				if = {
+					limit = { NOT = { has_idea = WUN_tissue_fluid } }
+					add_ideas = WUN_tissue_fluid
+					country_event = WUN.100
+				}
+			}
+			20 = {
+				if = {
+					limit = { NOT = { has_idea = WUN_granulation } }
+					add_ideas = WUN_granulation
+					country_event = WUN.100
+				}
+			}
+			20 = {
+				if = {
+					limit = { NOT = { has_idea = WUN_mound_of_flesh } }
+					add_ideas = WUN_mound_of_flesh
+					country_event = WUN.100
+				}
+			}
+		}
+		if = {
+			limit = { check_variable = { WUN_get_current_buff_count = WUN_buff_count } }
+			WUN_random_buff = yes
+		}
+	}
+}

@@ -1,0 +1,957 @@
+characters = {
+
+	MGC_pedrofi_freedom_faddas = {	#裴多菲·“自由”·法达斯
+		name = MGC_pedrofi_freedom_faddas
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_government_communism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_assemblee_nationale = {	#国民议会
+		name = MGC_assemblee_nationale
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = leftist_guerrilla_movement
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_free_parliament = {	#自由议会
+		name = MGC_free_parliament
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_front
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_gyurgy_northrop = {	#久尔吉·诺思洛普
+		name = MGC_gyurgy_northrop
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = left_wing_nationalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_alani_vallars = {	#阿兰尼·瓦拉尔思
+		name = MGC_alani_vallars
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = democratic_republican
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_supreme_theological_council = {	#至高神学委员会
+		name = MGC_supreme_theological_council
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = paternal_conservatism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_supreme_court = {	#至圣庭会
+		name = MGC_supreme_court
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_the_atheist_jury_north = {	#“无神论”裁判团-北方派
+		name = MGC_the_atheist_jury_north
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = imperial_socialism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_no_uni_leadership = {	#无统一领导
+		name = MGC_no_uni_leadership
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = militaristic_hegemonism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = sacred_battles
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_the_order = {	#“教团”
+		name = MGC_the_order
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_supreme_tetrarchan_allied_forces_char = {	#至高提特兰全军联盟
+		name = MGC_supreme_tetrarchan_allied_forces_char
+		portraits = {
+			civilian = {
+				large="GFX_MGC_supreme_tetrarchan_allied_forces_char"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_MGC_supreme_tetrarchan_allied_forces_char"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = MGC_supreme_tetrarchan_allied_forces_char_desc
+			ideology = military_dictatorship
+			traits = { MGC_piety_motherland_nation }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_technological_singularity_combination = {	#技术奇点拼合体
+		name = MGC_technological_singularity_combination
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = anarcho_transhumanism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MGC_semyon_zabrovsky = {	#谢姆延·扎布罗夫斯基
+		name = MGC_semyon_zabrovsky
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_semyon_zabrovsky_desc
+			idea_token = MGC_semyon_zabrovsky_idea
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_tt }
+			traits = { MGC_may_mullers_shed_tears }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_semyon_zabrovsky_desc
+			idea_token = MGC_semyon_zabrovsky_idea_hc
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_tt }
+			traits = { army_infantry_1 }
+			cost = 50
+			ai_will_do = { factor = 1 }
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { unyielding_defender defensive_doctrine inspirational_leader infantry_expert hill_fighter }
+		}
+	}
+
+	MGC_nenleko_dora = {	#嫩勒科夫·多饶
+		name = MGC_nenleko_dora
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_nenleko_dora_desc
+			idea_token = MGC_nenleko_dora_idea
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_loyalists_tt }
+			traits = { MGC_magalhaesg_rand_la_salle }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_nenleko_dora_desc
+			idea_token = MGC_nenleko_dora_idea_hc
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_loyalists_tt }
+			traits = { army_cavalry_1 }
+			cost = 50
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 1
+			traits = { cavalry_leader cavalry_expert }
+		}
+	}
+
+	MGC_dovuzdo_de_zhemfia = {	#多夫兹多·德·哲姆菲亚
+		name = MGC_dovuzdo_de_zhemfia
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_dovuzdo_de_zhemfia_desc
+			idea_token = MGC_dovuzdo_de_zhemfia_idea
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_loyalists_tt }
+			traits = { MGC_the_incorruptible }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_dovuzdo_de_zhemfia_desc
+			idea_token = MGC_dovuzdo_de_zhemfia_idea_hc
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_loyalists_tt }
+			traits = { army_entrenchment_2 }
+			cost = 100
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { trait_engineer commando }
+		}
+	}
+
+	MGC_denis_golden_iron_kossuth = {	#德尼·“金铁”·科苏特
+		name = MGC_denis_golden_iron_kossuth
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_denis_golden_iron_kossuth_desc
+			idea_token = MGC_denis_golden_iron_kossuth_idea
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_tt }
+			traits = { MGC_long_axe_and_general }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_denis_golden_iron_kossuth_desc
+			idea_token = MGC_denis_golden_iron_kossuth_idea_hc
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_tt }
+			traits = { army_regrouping_2 }
+			cost = 100
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 5
+			traits = { organizer infantry_leader }
+		}
+	}
+
+	MGC_thorni_fire_madariske = {	#索尔尼·“烈火”·马达瑞斯克
+		name = MGC_thorni_fire_madariske
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_thorni_fire_madariske_desc
+			idea_token = MGC_thorni_fire_madariske_idea
+			can_be_fired = no
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_unsure_tt }
+			traits = { MGC_different_kind_of_dictatorship }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_thorni_fire_madariske_desc
+			idea_token = MGC_thorni_fire_madariske_idea_hc
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_dictatorship_unsure_tt }
+			traits = { army_cavalry_2 }
+			cost = 100
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { cavalry_leader cavalry_expert }
+		}
+	}
+
+	MGC_corfu_de_venetia = {	#科尔夫·德·文尼蒂亚
+		name = MGC_corfu_de_venetia
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_corfu_de_venetia_desc
+			idea_token = MGC_corfu_de_venetia_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_republican_tt }
+			traits = { MGC_republican_dictator }
+			cost = 200
+			ai_will_do = { factor = 1 }
+		}
+		advisor = {
+			slot = high_command
+			desc = MGC_corfu_de_venetia_desc
+			idea_token = MGC_corfu_de_venetia_idea_hc
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_republican_tt }
+			traits = { army_logistics_2 }
+			cost = 100
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { infantry_leader trait_engineer }
+		}
+	}
+
+	MGC_boris_janos_servio = {	#鲍里斯·亚诺什·赛维欧
+		name = MGC_boris_janos_servio
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_boris_janos_servio_desc
+			idea_token = MGC_boris_janos_servio_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_dictatorship_tt
+				custom_effect_tooltip = MGC_alliance_republican_tt
+			}
+			traits = { armaments_leader }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_salahi_vasha_fero = {	#萨拉希·瓦夏·费若
+		name = MGC_salahi_vasha_fero
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_salahi_vasha_fero_desc
+			idea_token = MGC_salahi_vasha_fero_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_dictatorship_tt
+				custom_effect_tooltip = MGC_alliance_nationalist_tt
+			}
+			traits = { prince_of_terror }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { infantry_leader }
+		}
+	}
+
+	MGC_stojai_walter_drusser = {	#斯托尧伊·瓦尔特·德鲁瑟
+		name = MGC_stojai_walter_drusser
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_stojai_walter_drusser_desc
+			idea_token = MGC_stojai_walter_drusser_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_nationalist_tt
+				custom_effect_tooltip = MGC_alliance_republican_tt
+			}
+			traits = { secretary_education }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_weisenmayer_valeri_tagino = {	#维森迈耶·瓦列里·塔吉诺
+		name = MGC_weisenmayer_valeri_tagino
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_weisenmayer_valeri_tagino_desc
+			idea_token = MGC_weisenmayer_valeri_tagino_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_republican_tt
+				custom_effect_tooltip = MGC_alliance_loyalists_tt
+			}
+			traits = { propaganda_expert }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { infantry_leader ambusher }
+		}
+	}
+
+	MGC_sextus_the_stranger_pozzuoli = {	#塞克斯图斯·“外乡人”·波佐利
+		name = MGC_sextus_the_stranger_pozzuoli
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_sextus_the_stranger_pozzuoli_desc
+			idea_token = MGC_sextus_the_stranger_pozzuoli_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_loyalists_tt }
+			traits = { popular_figurehead }
+			cost = 50
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+	MGC_orbinas_orban_woker = {	#奥宾纳斯·欧尔班·沃克
+		name = MGC_orbinas_orban_woker
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_orbinas_orban_woker_desc
+			idea_token = MGC_orbinas_orban_woker_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_nationalist_tt
+				custom_effect_tooltip = MGC_alliance_dictatorship_tt
+			}
+			traits = { oppressive_official }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_lugo_igor_zoltan = {	#卢戈·伊戈尔·佐尔坦
+		name = MGC_lugo_igor_zoltan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_lugo_igor_zoltan_desc
+			idea_token = MGC_lugo_igor_zoltan_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_neutrals_tt }
+			traits = { technocrat }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_kodais_zidan_laszlo = {	#柯达伊斯·日丹·‌‌拉斯洛
+		name = MGC_kodais_zidan_laszlo
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_kodais_zidan_laszlo_desc
+			idea_token = MGC_kodais_zidan_laszlo_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_republican_tt}
+			traits = { MGC_former_minister_of_agriculture }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_vash_natasha_east = {	#瓦什·娜塔莎·伊斯特
+		name = MGC_vash_natasha_east
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_vash_natasha_east_desc
+			idea_token = MGC_vash_natasha_east_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { 
+				custom_effect_tooltip = MGC_alliance_loyalists_tt 
+				custom_effect_tooltip = MGC_alliance_dictatorship_tt
+			}
+			traits = { MGC_chief_inquisitor }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	MGC_harius_petrov_husni = {	#哈里乌斯·彼得罗夫·胡斯尼
+		name = MGC_harius_petrov_husni
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_harius_petrov_husni_desc
+			idea_token = MGC_harius_petrov_husni_idea
+
+			available = {
+				THIS = { NOT = { has_character_flag = MGC_character_advisor_role_locked } }
+			}
+
+			on_add = { custom_effect_tooltip = MGC_alliance_neutrals_tt }
+			traits = { smooth_talking_charmer famous_ones }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	###春季阴谋用的空角色###
+	MGC_all_farmer_associations = {	#全国各省农会
+		name = MGC_all_farmer_associations
+		portraits = {	#实际上不注册应该也，，
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_all_worker_associations = {	#全国各地工人团体
+		name = MGC_all_worker_associations
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_all_religious_associations = {	#全国各省纳卡教会
+		name = MGC_all_religious_associations
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_national_police_associations = {	#祖国秩序警察
+		name = MGC_national_police_associations
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_union_protect_bureau = {	#全军联盟保卫局
+		name = MGC_union_protect_bureau
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_all_legal_parties = {	#各合法党派
+		name = MGC_all_legal_parties
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+	MGC_industrial_dep = {	#工业部门
+		name = MGC_industrial_dep
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+
+}

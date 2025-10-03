@@ -1,0 +1,375 @@
+﻿division_template = {
+	name = "泰坦师"
+
+	regiments = {
+		medium_titan = { x = 0 y = 0 }
+		medium_titan = { x = 0 y = 1 }
+		medium_titan = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		engineer = { x = 1 y = 0 }
+		maintenance_company = { x = 1 y = 1 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "骑兵师"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		engineer = { x = 1 y = 0 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "装甲师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "海军陆战队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "海岸警卫队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		police_infantry = { x = 1 y = 0 }
+	}
+
+	support = {
+		logistics_company = { x = 0 y = 0 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "山地师"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+units = {
+	division = {
+		name = "BCA泰坦251师“巴斯蒂亚曙光”"
+		location = 20704
+		division_template = "泰坦师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA泰坦252师"
+		location = 4073
+		division_template = "泰坦师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.25
+	}
+	division = {
+		name = "BCA泰坦253师"
+		location = 20442
+		division_template = "泰坦师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.25
+	}
+	division = {
+		name = "BCA骑兵一师“共和国之矛”"
+		location = 20442
+		division_template = "骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA骑兵十二师“共和国之眼”"
+		location = 20442
+		division_template = "骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA2001装甲加强旅"
+		location = 20704
+		division_template = "装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA2002装甲加强旅"
+		location = 4073
+		division_template = "装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA2003装甲加强旅"
+		location = 20322
+		division_template = "装甲师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA2004装甲加强旅"
+		location = 1601
+		division_template = "装甲师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA2005装甲加强旅"
+		location = 20673
+		division_template = "装甲师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA2006装甲加强旅"
+		location = 20875
+		division_template = "装甲师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA2007装甲加强旅"
+		location = 20442
+		division_template = "装甲师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA陆军1师“大巴斯蒂亚”"
+		location = 20704
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA陆军2师“玛丽安磐石”"
+		location = 20442
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA陆军7师“护教骑士”"
+		location = 20875
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军4师“兽人屠夫”"
+		location = 20875
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军11师“烈士”"
+		location = 20704
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA陆军37师“乡巴佬”"
+		location = 20704
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA陆军71师“地域战士”"
+		location = 4073
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA陆军188师“旗卫队”"
+		location = 4073
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA0201海军陆战旅"
+		location = 20875
+		division_template = "海军陆战队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA0202海军陆战旅"
+		location = 20875
+		division_template = "海军陆战队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA01001海岸警卫队"
+		location = 20867
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01002海岸警卫队"
+		location = 20736
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01003海岸警卫队"
+		location = 20673
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01004海岸警卫队"
+		location = 5127
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01005海岸警卫队"
+		location = 20683
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01006海岸警卫队"
+		location = 5485
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01007海岸警卫队"
+		location = 20785
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA01008海岸警卫队"
+		location = 5562
+		division_template = "海岸警卫队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+	division = {
+		name = "BCA0101山地猎兵旅“猎兽人”"
+		location = 20598
+		division_template = "山地师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+}

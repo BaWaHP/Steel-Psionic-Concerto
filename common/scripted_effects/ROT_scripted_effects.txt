@@ -1,0 +1,499 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ROT_startup_effect = {
+	if = {
+		limit = { tag = ROT }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = normal_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_locating_resource
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_unharmonized_multi_ethnic_states
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		set_country_flag = RSB_federation_icon_3
+		add_ideas = SPC_faction_south_bastia_federation_protected
+		country_event = {
+			id = ROT.1
+			days = 1
+		}
+		country_lock_all_division_template = yes
+
+		set_country_flag = ROT_focus_1
+		mark_focus_tree_layout_dirty = yes
+		###控制省份对应普及度###
+		414 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+		}
+		415 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+		}
+		416 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		417 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		418 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		419 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		420 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		421 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+		}
+		422 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = ROT_gateway_to_cb }
+		}
+		424 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		425 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		426 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		428 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		429 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = ROT_holy_city_of_mourning }
+		}
+		430 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+	}
+}
+
+ROT_econ_depression_effect = {
+	custom_effect_tooltip = ROT_econ_depression_tt
+	if = {
+		limit = { has_idea = ROT_econ_depression_1 }
+		swap_ideas = {
+			remove_idea = ROT_econ_depression_1
+			add_idea = ROT_econ_depression_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = ROT_econ_depression_2 }
+		swap_ideas = {
+			remove_idea = ROT_econ_depression_2
+			add_idea = ROT_econ_depression_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = ROT_econ_depression_3 }
+		swap_ideas = {
+			remove_idea = ROT_econ_depression_3
+			add_idea = ROT_econ_depression_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = ROT_econ_depression_4 }
+		swap_ideas = {
+			remove_idea = ROT_econ_depression_4
+			add_idea = ROT_econ_depression_5
+		}
+	}
+	else = {
+		remove_ideas = ROT_econ_depression_5
+	}
+}
+
+ROT_kick_rsb_ass_on_setup = {
+	set_country_flag = ROT_kick_rsb_ass_on
+	unlock_decision_category_tooltip = ROT_kick_rsb_ass
+
+	set_power_balance = {
+		id = ROT_two_army_stand_bop
+		set_default = no
+		set_value = 0.1
+	}
+
+	set_variable = { ROT_two_army_tension = 50 }	#紧张度
+
+	ROT_two_army_tension_clamp = yes
+
+	activate_mission = ROT_troops_approaching_capital
+	activate_mission = ROT_troops_takedown_426
+	if = {
+		limit = { has_government = national_socialist }
+		activate_mission = ROT_president_speech
+	}
+}
+
+ROT_two_army_tension_clamp = {
+	clamp_variable = {
+		var = ROT_two_army_tension
+		min = 0
+		max = 100
+	}
+}
+
+ROT_a_national_revolution_setup = {
+	set_country_flag = ROT_class_and_nation_on
+	unlock_decision_category_tooltip = ROT_class_and_nation
+
+	add_dynamic_modifier = { modifier = ROT_a_national_revolution }
+
+	set_variable = { ROT_a_national_revolution_1 = 70 } #左翼分子
+	set_variable = { ROT_a_national_revolution_2 = 40 } #社会精英
+	set_variable = { ROT_a_national_revolution_3 = 50 } #联邦裔公民
+	set_variable = { ROT_a_national_revolution_4 = 60 } #提特兰人
+	set_variable = { ROT_a_national_revolution_5 = 55 } #行政效率
+	set_variable = { ROT_a_national_revolution_6 = 20 } #民族凝聚力
+
+	ROT_a_national_revolution_update = yes
+}
+
+ROT_a_national_revolution_update = {
+	ROT_a_national_revolution_clamp = yes
+
+	set_variable = { ROT_a_national_revolution_ppc = 0 }
+	set_variable = { ROT_a_national_revolution_sf = 0 }
+	set_variable = { ROT_a_national_revolution_pfegf = 0 }
+	set_variable = { ROT_a_national_revolution_ifrf = 0 }
+	set_variable = { ROT_a_national_revolution_cgf = 0 }
+	set_variable = { ROT_a_national_revolution_plorp = 0 }
+	set_variable = { ROT_a_national_revolution_cf = 0 }
+	set_variable = { ROT_a_national_revolution_icf = 0 }
+	set_variable = { ROT_a_national_revolution_aof = 0 }
+	set_variable = { ROT_a_national_revolution_c = 0 }
+	set_variable = { ROT_a_national_revolution_ppf = 0 }
+	set_variable = { ROT_a_national_revolution_psb = 0 }
+
+	set_variable = { ROT_a_national_revolution_sf1 = 0 }
+	set_variable = { ROT_a_national_revolution_sf2 = 0 }
+	set_variable = { ROT_a_national_revolution_sf3 = 0 }
+	set_variable = { ROT_a_national_revolution_sf4 = 0 }
+	set_variable = { ROT_a_national_revolution_sf5 = 0 }
+
+	#左翼分子
+	if = {
+		limit = { check_variable = { ROT_a_national_revolution_1 > 79 } }
+		add_to_variable = { ROT_a_national_revolution_pfegf = 0.05 }
+		add_to_variable = { ROT_a_national_revolution_ppc = -0.1 }
+		add_to_variable = { ROT_a_national_revolution_ifrf = 0.3 }
+	}
+	else_if = {
+		limit = { check_variable = { ROT_a_national_revolution_1 < 21 } }
+		add_to_variable = { ROT_a_national_revolution_ppc = 0.05 }
+		add_to_variable = { ROT_a_national_revolution_sf = -0.1 }
+		set_variable = { ROT_a_national_revolution_sf1 = -0.1 }
+	}
+
+	#社会精英
+	if = {
+		limit = { check_variable = { ROT_a_national_revolution_2 > 79 } }
+		add_to_variable = { ROT_a_national_revolution_cgf = -0.2 }
+		add_to_variable = { ROT_a_national_revolution_plorp = -0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROT_a_national_revolution_2 < 21 } }
+		add_to_variable = { ROT_a_national_revolution_cgf = 0.2 }
+		add_to_variable = { ROT_a_national_revolution_sf = -0.1 }
+		set_variable = { ROT_a_national_revolution_sf2 = -0.1 }
+	}
+
+	#联邦裔公民
+	if = {
+		limit = { check_variable = { ROT_a_national_revolution_3 > 79 } }
+		add_to_variable = { ROT_a_national_revolution_cf = 0.05 }
+		add_to_variable = { ROT_a_national_revolution_icf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { ROT_a_national_revolution_3 < 21 } }
+		add_to_variable = { ROT_a_national_revolution_cf = -0.05 }
+		add_to_variable = { ROT_a_national_revolution_sf = -0.1 }
+		set_variable = { ROT_a_national_revolution_sf3 = -0.1 }
+	}
+
+	#提特兰人
+	if = {
+		limit = { check_variable = { ROT_a_national_revolution_4 > 79 } }
+		add_to_variable = { ROT_a_national_revolution_c = 0.005 }
+		add_to_variable = { ROT_a_national_revolution_aof = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROT_a_national_revolution_4 < 21 } }
+		add_to_variable = { ROT_a_national_revolution_aof = -0.15 }
+		add_to_variable = { ROT_a_national_revolution_sf = -0.15 }
+		set_variable = { ROT_a_national_revolution_sf4 = -0.15 }
+	}
+
+	#行政效率
+	if = {
+		limit = { check_variable = { ROT_a_national_revolution_5 > 79 } }
+		add_to_variable = { ROT_a_national_revolution_ppf = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROT_a_national_revolution_5 < 21 } }
+		add_to_variable = { ROT_a_national_revolution_ppf = -0.1 }
+		add_to_variable = { ROT_a_national_revolution_sf = -0.1 }
+		add_to_variable = { ROT_a_national_revolution_psb = -0.2 }
+		set_variable = { ROT_a_national_revolution_sf5 = -0.1 }
+	}
+}
+
+ROT_a_national_revolution_clamp = {
+	clamp_variable = {
+		var = ROT_a_national_revolution_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROT_a_national_revolution_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROT_a_national_revolution_3
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROT_a_national_revolution_4
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROT_a_national_revolution_5
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROT_a_national_revolution_6
+		min = 0
+		max = 100
+	}
+
+	if = {
+		limit = { has_completed_focus = ROT_night_of_the_sword }
+		set_variable = { ROT_a_national_revolution_1 = 100 }
+	}
+}
+
+ROT_nation_unity_up = {
+	custom_effect_tooltip = ROT_nation_unity_up_tt
+	add_to_variable = { ROT_a_national_revolution_6 = 5 }
+}
+
+ROT_nation_unity_down = {
+	custom_effect_tooltip = ROT_nation_unity_down_tt
+	add_to_variable = { ROT_a_national_revolution_6 = -5 }
+}
+
+ROT_war_preparation_points_clamp = {
+	clamp_variable = {
+		var = ROT_war_preparation_points
+		min = 0
+	}
+}
+
+ROT_unification_preparation_effect = {
+	if = {
+		limit = {
+			all_of_scopes = {
+				array = global.SPC_generic_region_states_100
+				OR = {
+					is_owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
+			}
+		}
+		set_global_flag = SPC_region_unified_global_4
+	}
+}
+
+ROT_remove_imc_modifiers_effect = {
+	every_owned_state = {
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_areas_undergoing_minoanization_1
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_areas_undergoing_minoanization_1
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_areas_undergoing_minoanization_2
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_areas_undergoing_minoanization_2
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_areas_undergoing_minoanization_3
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_areas_undergoing_minoanization_3
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_centralized_processing_area
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_centralized_processing_area
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_sacred_mountains
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_sacred_mountains
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_odysseus_miracle_colossus
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_odysseus_miracle_colossus
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_alliance_and_marshal_outpost
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_alliance_and_marshal_outpost
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_malakanda_bactra_palembang_project_2
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_malakanda_bactra_palembang_project_2
+			}
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = IMC_eastern_expedition_memorial_valley
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = IMC_eastern_expedition_memorial_valley
+			}
+		}
+	}
+}

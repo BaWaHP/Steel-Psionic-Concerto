@@ -1,0 +1,360 @@
+﻿###########################
+# CBL Events #
+###########################
+
+add_namespace = CBL
+
+country_event = {
+	id = CBL.0		#崩溃之始
+	title = CBL.0.t
+	desc = CBL.0.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { tag = RCC }
+			hidden_effect = {
+				CBL_civilwar_war_start_effect = yes
+			}
+		}
+	}
+	
+	option = {
+		name = CBL.0.a
+	}
+}
+
+country_event = {
+	id = CBL.1		#不速之客
+	title = CBL.1.t
+	desc = CBL.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.1.a
+		set_variable = { CBL_pre_civil_war_anger = 0 }
+	}
+}
+
+country_event = {
+	id = CBL.2		#要求释放
+	title = CBL.2.t
+	desc = CBL.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.2.a
+		add_to_variable = { CBL_pre_civil_war_anger = 1 }
+	}
+
+	option = {
+		name = CBL.2.b
+	}
+}
+
+country_event = {
+	id = CBL.3		#要求释放政治犯
+	title = CBL.3.t
+	desc = CBL.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.3.a
+		add_to_variable = { CBL_pre_civil_war_anger = 1 }
+	}
+
+	option = {
+		name = CBL.3.b
+	}
+}
+
+country_event = {
+	id = CBL.4		#要求政治民主化
+	title = CBL.4.t
+	desc = CBL.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.4.a
+		add_to_variable = { CBL_pre_civil_war_anger = 1 }
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { CBL_pre_civil_war_anger > 1 } }
+				country_event = CBL.50
+			}
+		}
+	}
+
+	option = {
+		name = CBL.4.b
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { CBL_pre_civil_war_anger > 1 } }
+				country_event = CBL.50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = CBL.50		#愤怒的群众涌入政府
+	title = CBL.50.t
+	desc = CBL.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.50.a
+		CBL_civil_war_begin_1_effect = yes
+	}
+}
+
+country_event = {
+	id = CBL.100		#最后计时
+	title = CBL.100.t
+	desc = CBL.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.100.a	#支持联邦派
+		delete_unit_template_and_units = {
+			division_template = 步兵师
+		}
+		delete_unit_template_and_units = {
+			division_template = 骑兵师
+		}
+		delete_unit_template_and_units = {
+			division_template = 装甲师
+		}
+		delete_unit_template_and_units = {
+			division_template = 民兵
+		}
+		hidden_effect = {
+			country_event = { id = CBL.101 days = 10 }
+			country_event = { id = CBL.102 days = 40 }
+			country_event = { id = CBL.103 days = 70 }
+			country_event = { id = CBL.104 days = 100 }
+		}
+	}
+
+	option = {
+		name = CBL.100.b	#支持共和派
+		delete_unit_template_and_units = {
+			division_template = 卫戍师
+		}
+		delete_unit_template_and_units = {
+			division_template = 民兵
+		}
+		hidden_effect = {
+			country_event = { id = CBL.101 days = 10 }
+			country_event = { id = CBL.102 days = 40 }
+			country_event = { id = CBL.103 days = 70 }
+			country_event = { id = CBL.104 days = 100 }
+		}
+	}
+
+	option = {
+		name = CBL.100.c	#支持中巴人
+		delete_unit_template_and_units = {
+			division_template = 步兵师
+		}
+		delete_unit_template_and_units = {
+			division_template = 骑兵师
+		}
+		delete_unit_template_and_units = {
+			division_template = 装甲师
+		}
+		delete_unit_template_and_units = {
+			division_template = 卫戍师
+		}
+		hidden_effect = {
+			country_event = { id = CBL.101 days = 10 }
+			country_event = { id = CBL.102 days = 40 }
+			country_event = { id = CBL.103 days = 70 }
+			country_event = { id = CBL.104 days = 100 }
+		}
+	}
+}
+
+country_event = {
+	id = CBL.101		#风声鹤唳
+	title = CBL.101.t
+	desc = CBL.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.101.a
+	}
+}
+
+country_event = {
+	id = CBL.102		#对方动向
+	title = CBL.102.t
+	desc = CBL.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.102.a
+	}
+}
+
+country_event = {
+	id = CBL.103		#出击！
+	title = CBL.103.t
+	desc = CBL.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.103.a
+		unlock_decision_category_tooltip = CBL_putting_down_rebellion_decision_category
+		activate_mission = CBL_suppressing_commis
+		activate_mission = CBL_resisting_knights
+	}
+}
+
+country_event = {
+	id = CBL.104		#最后决断 
+	title = CBL.104.t
+	desc = CBL.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.104.a
+		country_event = {
+			id = CBL.150
+			days = 3
+		}
+	}
+}
+
+country_event = {
+	id = CBL.150		#乱局
+	title = CBL.150.t
+	desc = CBL.150.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.150.a
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		OPH = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.150.b
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		FWJ = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.150.c
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		RCC = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.150.dd
+		country_event = CBL.151
+	}
+}
+
+country_event = {
+	id = CBL.151		#乱局
+	title = CBL.151.t
+	desc = CBL.151.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBL.151.a
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		CBI = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.151.b
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		FEJ = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.151.c
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		AYL = { change_tag_from = CBL }
+	}
+
+	option = {
+		name = CBL.151.dd
+		hidden_effect = { CBL_civil_war_begin_2_effect = yes }
+		CLA = { change_tag_from = CBL }
+	}
+}
+
+add_namespace = CBLNews
+
+news_event = {
+	id = CBLNews.1		#中巴斯蒂亚联盟陷入战火
+	title = CBLNews.1.t
+	desc = CBLNews.1.d
+	picture = GFX_news_event_CBL_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CBLNews.1.a
+		trigger = {
+			OR = {
+				tag = RSB
+				is_in_faction_with = RSB
+			}
+			SPC_generic_region_trigger_200 = no
+		}
+	}
+
+	option = {
+		name = CBLNews.1.b
+		trigger = {
+			NOT = {
+				tag = RSB
+				is_in_faction_with = RSB
+			}
+			SPC_generic_region_trigger_200 = yes
+		}
+	}
+
+	option = {
+		name = CBLNews.1.c
+		trigger = {
+			NOT = {
+				tag = RSB
+				is_in_faction_with = RSB
+			}
+			SPC_generic_region_trigger_200 = no
+		}
+	}
+}

@@ -1,0 +1,20 @@
+rulling_ideology_drift = {	#主导意识形态每日新增支持度
+	color_type = good
+	value_type = number
+	precision = 2
+	category = country
+}
+
+offsite_cic_building = {	#地图外民用工厂
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}
+
+offsite_mil_building = {	#地图外军用工厂
+	color_type = good
+	value_type = number
+	precision = 0
+	category = country
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=54
+	name="STATE_54"
+
+	resources = {
+		magic_crystal = 10
+		steel = 8
+		oil = 42
+	}
+
+	history={
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			8570 5
+		}
+	}
+
+	provinces={
+		1676 3223 3445 6368 6918 7603 7611 8070 8089 8570 9585 11521 18021 18228 18304 18457 18525 18617 
+	}
+	manpower=3130000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

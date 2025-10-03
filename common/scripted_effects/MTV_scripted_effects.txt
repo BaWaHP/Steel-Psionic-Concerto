@@ -1,0 +1,221 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_MTV_startup_effect = {
+	if = {
+		limit = { tag = MTV }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = no_standard_at_all
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = low_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = isolation_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_decide_themselves
+		add_ideas = IP_no_intervention
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_unharmonized_multi_ethnic_states
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		country_lock_all_division_template = yes
+		country_event = {
+			id = MTV.1
+			days = 29
+		}
+		###控制省份对应普及度##
+		427 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_1 }	
+		}
+		423 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_2 }	
+		}
+		460 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_3 }	
+		}
+		452 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_4 }	
+		}
+		458 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_5 }	
+		}
+		459 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_6 }	
+		}
+		463 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_7 }	
+		}
+		461 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+			add_dynamic_modifier = { modifier = MTV_ashes_of_saraiovi }	
+		}
+		462 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_8 }	
+		}
+		464 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MTV_autonomous_region_9 }	
+		}
+	}
+}
+
+MTV_redgod_effect = {
+	###政府法案###
+	add_ideas = no_standard_at_all
+	add_ideas = barely_no_taxes
+	add_ideas = NP_high_nationalization
+	add_ideas = aggressive_tatic
+	###发展度###
+	add_ideas = primitive_industry
+	add_ideas = self_efficient_agriculture
+	add_ideas = primitive_army
+	add_ideas = MTV_elimination_society
+	add_ideas = relatively_comfortable
+	add_ideas = fuck_the_science
+	###工业政策###
+	add_ideas = EP_barely_nothing
+	add_ideas = RP_decide_themselves
+	add_ideas = MTV_IP_end_of_social_contract
+	add_ideas = WP_no_specific_laws
+	add_ideas = AP_no_funds
+	add_ideas = RP_no_funds
+}
+
+MTV_civilwar_setup = {
+	set_cosmetic_tag = MTV_salvation_gov
+	every_owned_state = {
+		add_core_of = WDR
+		add_core_of = MCS
+		add_core_of = LCM
+	}
+	add_ideas = MTV_man_in_hell_1
+	WDR = {
+		transfer_state = 460
+		transfer_state = 423
+		transfer_state = 427
+		transfer_state = 452
+		transfer_state = 459
+		add_ideas = MTV_man_in_hell_1
+		activate_mission = MTV_civilwar_worsen_mission
+	}
+	MCS = {
+		transfer_state = 464
+		transfer_state = 462
+		add_ideas = MTV_man_in_hell_1
+		activate_mission = MTV_civilwar_worsen_mission
+	}
+	LCM = {
+		transfer_state = 458
+		transfer_state = 463
+		add_ideas = MTV_man_in_hell_1
+		activate_mission = MTV_civilwar_worsen_mission
+	}
+
+	declare_war_on = {
+		target = MCS
+		type = annex_everything
+	}
+}
+
+MTV_civil_idea_worse = {
+	custom_effect_tooltip = MTV_civil_idea_worse_tt
+	MTV_civil_idea_worse_update = yes
+}
+
+MTV_civil_idea_worse_update = {
+	if = {
+		limit = { has_idea = MTV_man_in_hell_1 }
+		swap_ideas = {
+			remove_idea = xMTV_man_in_hell_1
+			add_idea = MTV_man_in_hell_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = MTV_man_in_hell_2 }
+		swap_ideas = {
+			remove_idea = MTV_man_in_hell_2
+			add_idea = MTV_man_in_hell_3
+		}
+	}
+	else = {
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}

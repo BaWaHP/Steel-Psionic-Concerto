@@ -1,0 +1,389 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+
+	caster_infantry = {
+		abbreviation = "CIN"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		
+		priority = 600
+		ai_priority = 200
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_caster
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 50
+		default_morale = 0.4
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 360
+		suppression = 2
+		weight = 0.5
+		
+		supply_consumption = 0.14
+	
+		essential = { caster_equipment }
+		need = { caster_equipment = 60 }
+
+		plains = {
+			attack = 0.05
+			defense = -0.1
+		}
+
+		urban = {
+			attack = 0.1
+		}
+
+		can_be_parachuted = yes
+	}
+
+	caster_support = {
+		abbreviation = "CSP"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_special_forces
+			category_caster
+		}
+
+		combat_width = 0
+
+		essential = { caster_equipment }
+		need = { caster_equipment = 60 }
+
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 50
+		default_morale = 0.4
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 360
+		suppression = 2
+		weight = 0.5
+		
+		supply_consumption = 0.14
+
+		plains = {
+			attack = 0.05
+		}
+
+		urban = {
+			attack = 0.1
+		}
+
+		can_be_parachuted = yes
+	}
+
+	caster_recon = {
+		abbreviation = "CRE"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_special_forces
+			category_recon
+			category_signal
+			category_caster
+		}
+
+		combat_width = 0
+		
+		essential = { caster_recon_equipment }
+		need = { caster_recon_equipment = 60 }
+
+		recon = 2
+		manpower = 500
+		training_time = 200
+		max_strength = 10
+		max_organisation = 60
+		default_morale = 0.4
+		max_strength = 10
+		weight = 0.1
+		
+		supply_consumption = 0.06
+
+		# Support nerfs to combat abilities
+		defense = 0
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.4
+		air_attack = -0.4
+
+		forest = {
+			attack = 0.05
+			movement = 0.05
+		}
+
+		hills = {
+			movement = 0.05
+		}
+
+		mountain = {
+			movement = 0.05
+		}
+
+		jungle = {
+			attack = 0.05
+			movement = 0.05
+		}
+
+		river = {
+			attack = 0.05
+			movement = 0.05
+		}
+
+		amphibious = {
+			attack = 0.05
+		}
+
+		can_be_parachuted = yes
+		same_support_type = recon
+		#same_support_type = signal_company
+	}
+
+	caster_attacker = {
+		abbreviation = "CAK"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_special_forces
+			category_caster
+		}
+
+		combat_width = 0
+
+		essential = { caster_attaker_equipment }
+		need = { caster_attaker_equipment = 60 }
+
+		manpower = 1000
+		training_time = 200
+		max_organisation = 20
+		default_morale = 0.7
+		max_strength = 10
+		weight = 0.1
+		
+		supply_consumption = 0.1
+
+		# Support nerfs to combat abilities
+		defense = 0.1
+		breakthrough = 0.5
+		soft_attack = 0.5
+		hard_attack = 0.5
+		air_attack = 0.5
+
+		can_be_parachuted = yes
+	}
+
+	caster_engineer = {
+		abbreviation = "CEG"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_special_forces
+			category_engineer
+			category_maintenance
+			category_caster
+			category_caster_supporters
+		}
+
+		combat_width = 0
+
+		essential = { caster_support_equipment }
+		need = { caster_support_equipment = 60 }
+
+		#Size Definitions
+		max_strength = 5
+		max_organisation = 20
+		default_morale = 0.4
+		manpower = 1000
+		training_time = 300
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		
+		# Important Ability
+		reliability_factor = 0.1
+		equipment_capture_factor = 0.1
+		entrenchment = 3
+		
+		battalion_mult = {
+			category = category_light_infantry
+			entrenchment = 0.25
+			add = yes
+		}
+
+		forest = {
+			defence = 0.25
+			movement = 0.05
+		}
+
+		hills = {
+			defence = 0.1
+		}
+
+		jungle = {
+			defence = 0.25
+		}
+
+		marsh = {
+			defence = 0.25
+			movement = 0.2
+		}
+
+		fort = {
+			attack = 0.1
+			defence = 0.25
+		}
+
+		river = {
+			defence = 0.25
+			movement = 0.25
+		}
+
+		amphibious = {
+			attack = 0.15
+		}
+
+		can_be_parachuted = yes
+		same_support_type = maintenance_company
+		#same_support_type = engineer
+	}
+
+	caster_logistics = {
+		abbreviation = "CLG"
+		sprite = infantry
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_special_forces
+			category_logistics
+			category_field_hospital
+			category_caster
+			category_caster_supporters
+		}
+
+		combat_width = 0
+
+		essential = { caster_support_equipment }
+		need = { caster_support_equipment = 60 }
+
+		#Size Definitions
+		max_strength = 5
+		max_organisation = 20
+		default_morale = 0.4
+		manpower = 1000
+		training_time = 300
+
+		#Misc Abilities
+		weight = 0.1
+
+		# Important Ability
+		supply_consumption_factor = -0.2
+		fuel_consumption_factor = -0.1
+		casualty_trickleback = 0.20
+		experience_loss_factor = -0.15
+		
+		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
+
+		can_be_parachuted = yes
+		same_support_type = field_hospital
+		#same_support_type = logistics_company
+	}
+
+}

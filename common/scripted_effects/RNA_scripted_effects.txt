@@ -1,0 +1,100 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_RNA_startup_effect = {
+	###初始省份###
+	inherit_technology = RSB
+	RSB = { every_core_state = { add_core_of = RNA } }
+	transfer_state = 326
+	add_state_core = 326
+	transfer_state = 328
+	add_state_core = 328
+	transfer_state = 330
+	add_state_core = 330
+	transfer_state = 379
+	add_state_core = 379
+	transfer_state = 336
+	add_state_core = 336
+	transfer_state = 340
+	add_state_core = 340
+	delete_unit_template_and_units = { division_template = "泰坦师" }
+	delete_unit_template_and_units = { division_template = "骑兵师" }
+	delete_unit_template_and_units = { division_template = "装甲师" }
+	delete_unit_template_and_units = { division_template = "步兵师" }
+	delete_unit_template_and_units = { division_template = "海军陆战队" }
+	delete_unit_template_and_units = { division_template = "海岸警卫队" }
+	delete_unit_template_and_units = { division_template = "山地师" }
+	###非初始国家默认设置###
+	###介绍页面###
+	set_variable = { SPC_intro_screen = 1 }
+	###普及度修正部分###
+	set_variable = { magic_development_monthly_buff = 0 }
+	set_variable = { science_development_monthly_buff = 0 }
+	every_owned_state = {
+		set_variable = { state_magic_monthly_buff = 0 }
+		set_variable = { state_science_monthly_buff = 0 }
+	}
+	###发展度设置###
+	SPC_development_update_effect = yes
+	###自定义内容###
+	###政府法案###
+	add_ideas = volunteer_only
+	add_ideas = advanced_training
+	add_ideas = low_economic_mobilisation
+	add_ideas = free_trade
+	add_ideas = high_taxes
+	add_ideas = NP_light_nationalization
+	add_ideas = defensive_tatic
+	###发展度###
+	add_ideas = grouped_factory_industry
+	add_ideas = modern_agriculture
+	add_ideas = very_experienced_army
+	add_ideas = extra_living
+	add_ideas = controlled_pollution
+	add_ideas = fake_exists
+	###工业政策###
+	add_ideas = EP_government_target
+	add_ideas = RP_extensive_mining
+	add_ideas = IP_funding_proj
+	add_ideas = WP_limited_laws
+	add_ideas = AP_advanced_funds
+	add_ideas = RP_advanced_funds
+	###政府政策###
+	add_ideas = MP_funding_media
+	add_ideas = SP_advanced_funds
+	add_ideas = MP_open_for_application
+	add_ideas = SPP_unlimited_national_dep
+	add_ideas = FP_calling_for_equality
+	add_ideas = EP_modern_textbooks
+	###种族和特殊魔法###
+	add_ideas = SM_no_special_magic
+	add_ideas = LR_humans
+	add_ideas = SR_suderian
+	add_ideas = RAP_lower_suppression
+	add_ideas = RLP_secularism
+	add_ideas = SXP_traditional_policy
+	###其它开局设置###
+	#add_timed_idea = {
+	#	idea = RNA_national_union
+	#	days = 180
+	#}
+	load_oob = "RNA"
+
+	330 = { remove_dynamic_modifier = { modifier = RSB_new_born_industrial_zone } }
+}

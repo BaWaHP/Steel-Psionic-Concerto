@@ -1,0 +1,16 @@
+scripted_gui = {
+
+	RLN_rebuild_econs_window_ui = {
+		context_type = decision_category
+		window_name = "RLN_rebuild_econs_window"
+
+		properties = {
+			RLN_food_shortage_bar = {
+				frame = RLN_food_shortage_var
+			}
+			RLN_reproduction_bar = {
+				frame = RLN_reproduction_var
+			}
+		}
+	}
+}

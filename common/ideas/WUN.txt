@@ -1,0 +1,366 @@
+ideas = {
+	country = {
+
+		ZHE_king_behind_king = {		#王身后的王
+			picture = ZHE_king_behind_king
+			allowed = { original_tag = WUN }
+
+			on_remove = {
+				add_offsite_building = {
+					type = arms_factory
+					level = -5
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = -5
+				}
+			}
+
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 1000
+				custom_modifier_tooltip = ZHE_king_behind_king_tt
+			}
+		}
+
+		WUN_spread_of_racist_sentiment = {		#种族主义情绪蔓延
+			picture = WUN_spread_of_racist_sentiment
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				authoritarian_nationalism_drift = 0.15
+				conscription = 0.015
+			}
+			targeted_modifier = {
+				tag = ZHE
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+
+		WUN_spread_of_nationalism_sentiment = {		#民族主义情绪蔓延
+			picture = WUN_spread_of_nationalism_sentiment
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+			}
+		}
+
+		WUN_Ill_fares_the_land = {		#沉疴遍地
+			picture = ZHE_Ill_fares_the_land
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		WUN_detention_policy = {		#羁縻政策
+			picture = generic_monarchist_uprising
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				conscription_factor = -0.15
+				local_resources_factor = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		WUN_nomadic_society = {		#游牧社会
+			picture = WUN_nomadic_society
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				out_of_supply_factor = -0.2
+				supply_consumption_factor = -0.25
+				research_speed_factor = -0.2
+				equipment_capture_factor = 0.1
+				supply_node_range = 0.5
+				modifier_army_sub_unit_light_infantry_attack_factor = 0.05
+			}
+		}
+
+		WUN_boke_system = {		#伯克制度
+			picture = WUN_boke_system
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_leader_cost_factor = 1
+			}
+		}
+
+		WUN_regional_security = {		#区域安全
+			picture = ast_volunteer_defence_corps
+			allowed = { 
+				original_tag = WUN
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				rulling_ideology_drift = 0.1
+				stability_weekly = 0.001
+				consumer_goods_factor = 0.1 
+			}
+		}
+
+		WUN_untamed = {		#桀骜不驯
+			picture = FRA_matignon_agreements
+			allowed = { 
+				original_tag = WUN
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.3
+				autonomy_gain = 0.3
+			}
+		}
+
+		WUN_obey_to_king = {		#拜服于王
+			picture = WUN_obey_to_king
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				surrender_limit = 1
+				max_surrender_limit_offset = 0.15
+				mobilization_speed = 0.15
+				industry_free_repair_factor = 0.15
+			}
+		}
+
+		WUN_hot_knife_with_cold_blood = {		#热刀凉血
+			picture = WUN_hot_knife_with_cold_blood
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				out_of_supply_factor = -0.1
+			}
+		}
+
+		WUN_break_down = {		#崩坏
+			picture = WUN_break_down
+			allowed = {  original_tag = WUN }
+			rule = { can_access_market = no }
+			removal_cost = -1
+			modifier = {
+				industry_free_repair_factor = -1
+				command_power_gain_mult = -1
+				military_leader_cost_factor = 1
+				consumer_goods_factor = 1
+				wizard_rules_drift = 2
+				political_power_cost = 1
+				stability_weekly = -0.02
+				war_support_weekly = -0.02
+				industrial_capacity_factory = -1
+				production_speed_buildings_factor = -1
+				disabled_ideas = 1
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		WUN_original_desire_idea = {		#原欲
+			picture = WUN_original_desire_idea
+			allowed = { 
+				original_tag = WUN
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 1
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				experience_loss_factor = 0.25
+				experience_gain_army_factor = -0.25
+				experience_gain_air_factor = -0.25
+				experience_gain_navy_factor = -0.25
+				land_doctrine_cost_factor = 1
+				air_doctrine_cost_factor = 1
+				naval_doctrine_cost_factor = 1
+			}
+		}
+
+		WUN_sun_comes_down = {		#时日曷丧
+			picture = WUN_sun_comes_down
+			allowed = { original_tag = WUN }
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 2000
+				stability_weekly = 0.02
+				war_support_weekly = 0.02
+				compliance_growth = 0.2
+				resistance_decay = 0.2
+				resistance_activity = -0.5
+				required_garrison_factor = -0.5
+				resistance_garrison_penetration_chance = -0.5
+				resistance_damage_to_garrison = -0.5
+				foreign_subversive_activites = -0.5
+			}
+		}
+
+		WUN_sarcoma = {		#肉瘤
+			picture = WUN_sarcoma
+			allowed = { original_tag = WUN }
+
+			removal_cost = -1
+			on_add = { add_to_variable = { WUN_buff_count = 1 } }
+
+			modifier = {
+				army_attack_factor = 0.5
+				army_core_attack_factor = 0.25
+				land_night_attack = 0.25
+				mobilization_speed = 0.25
+			}
+			
+			equipment_bonus = {
+				lust_mountain_equipment = {
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					initiative_factor = 0.25
+					instant = yes
+				}
+			}
+		}
+
+		WUN_callus = {		#肉趼
+			picture = WUN_callus
+			allowed = { original_tag = WUN }
+
+			removal_cost = -1
+			on_add = { add_to_variable = { WUN_buff_count = 1 } }
+
+			modifier = {
+				army_defence_factor = 0.5
+				army_core_defence_factor = 0.25
+				enemy_army_bonus_air_superiority_factor = -0.75
+				breakthrough_factor = 0.25
+			}
+			
+			equipment_bonus = {
+				lust_mountain_equipment = {
+					max_organisation = 0.25
+					default_morale = 0.25
+					defense = 0.25
+					breakthrough = 0.25
+					instant = yes
+				}
+			}
+		}
+
+		WUN_tissue_fluid = {		#肉汁
+			picture = WUN_tissue_fluid
+			allowed = { original_tag = WUN }
+
+			removal_cost = -1
+			on_add = { add_to_variable = { WUN_buff_count = 1 } }
+
+			modifier = {
+				army_speed_factor = 0.25
+				org_loss_when_moving = -0.25
+				attrition = -0.25
+				out_of_supply_factor = -0.25
+				supply_consumption_factor = -0.25
+				army_org_regain = 0.25
+				supply_node_range = 0.25
+				no_supply_grace = 48
+			}
+		}
+
+		WUN_granulation = {		#肉芽
+			picture = WUN_granulation
+			allowed = { original_tag = WUN }
+
+			removal_cost = -1
+			on_add = { add_to_variable = { WUN_buff_count = 1 } }
+
+			modifier = {
+				political_power_factor = 1.5
+				land_reinforce_rate = 0.05
+				max_dig_in = 50
+				dig_in_speed_factor = 0.5
+				consumer_goods_factor = -1
+				production_speed_infrastructure_factor = 1
+				repair_speed_factor = 1
+				industry_free_repair_factor = 1
+			}
+		}
+		
+		WUN_mound_of_flesh = {		#肉髻
+			picture = WUN_mound_of_flesh
+			allowed = { original_tag = WUN }
+
+			removal_cost = -1
+			on_add = { add_to_variable = { WUN_buff_count = 1 } }
+
+			modifier = {
+				command_power_gain = 1
+				max_command_power = 50
+				promote_cost_factor = -0.75
+				planning_speed = 0.75
+				max_planning_factor = 0.75
+				experience_gain_army = 0.25
+				experience_gain_army_factor = 1
+				experience_loss_factor = -1
+			}
+		}
+
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		Urugnahel = {		#乌鲁格那赫尔
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = { original_tag = WUN }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					reliability_factor = -0.05
+				}
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+
+	}
+
+	industrial_concern = {
+		firdaws_allqbal = {		#幸福花园
+
+			picture = generic_industrial_concern_1
+
+			allowed = { original_tag = WUN }
+
+			modifier = {
+				industry_air_damage_factor = -0.1
+				industry_free_repair_factor = 0.1
+			}
+			
+			research_bonus = {
+				construction_tech = 0.1
+			}
+			
+			traits = { construction_company }
+		}
+
+	}
+}

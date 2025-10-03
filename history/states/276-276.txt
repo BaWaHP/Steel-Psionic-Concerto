@@ -1,0 +1,38 @@
+
+state={
+	id=276
+	name="STATE_276"
+	provinces={
+		3001 3386 8488 10672 16152 16245 16258 16349 16362 16504 16616 
+	}
+	resources = {
+		steel = 12
+		aluminium = 12
+	}
+	history={
+		owner = IPK
+		add_core_of = IPK
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 4
+			10672 = {
+				bunker = 2
+			}
+		}
+		victory_points = {
+			16362 15
+		}
+		victory_points = {
+			16152 8
+		}
+		victory_points = {
+			10672 5
+		}
+	}
+	manpower = 2250000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

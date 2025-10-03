@@ -1,0 +1,107 @@
+﻿capital = 461
+
+oob = "MTV"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = anarchism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 2
+	revolutionary_communism = 3
+	worldunion_socialist = 5
+	worldunion_democrat = 10
+	liberal_republican = 8
+	conservative_republican = 5
+	authoritarian_republican = 7
+	national_socialist = 15
+	authoritarian_nationalism = 15
+	paternal_autocrat = 20
+	wizard_rules = 1
+	religious_extremism = 8
+	anarchism = 1
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	basic_machine_tools = 1
+}
+
+add_ideas = {
+	MTV_dust_to_dust
+	MTV_ash_to_ash
+	MTV_uneasy_peace
+	MTV_human_trafficking
+}
+
+recruit_character = MTV_none
+recruit_character = MTV_government_of_saleovi
+recruit_character = MTV_luzhzhi_wattsba
+
+recruit_character = MTV_broz_caligula_walter
+
+recruit_character = MTV_unity_stadium
+recruit_character = MTV_central_water_supply
+recruit_character = MTV_holy_shells_and_bullets
+recruit_character = MTV_dream_of_fullness
+
+activate_advisor = MTV_government_of_saleovi_idea
+activate_advisor = MTV_unity_stadium_idea
+activate_advisor = MTV_central_water_supply_idea
+activate_advisor = MTV_holy_shells_and_bullets_idea
+activate_advisor = MTV_dream_of_fullness_idea
+
+complete_national_focus = MTV_zhivoinovich_was_elected
+complete_national_focus = MTV_handle_problems
+complete_national_focus = MTV_monte_grande
+complete_national_focus = MTV_divide_the_veld
+complete_national_focus = MTV_strengthen_rights_of_monts
+complete_national_focus = MTV_alliance_of_the_Monts
+complete_national_focus = MTV_Montt_an_official_language
+complete_national_focus = MTV_national_expansion_act
+complete_national_focus = MTV_chance_to_mont
+complete_national_focus = MTV_stronger_than_hell
+complete_national_focus = MTV_follow_the_marshal
+
+complete_national_focus = MTV_national_emergency
+complete_national_focus = MTV_save_legacy
+complete_national_focus = MTV_maintain_ved_conf
+complete_national_focus = MTV_org_mont_officiers
+complete_national_focus = MTV_call_religious_army
+complete_national_focus = MTV_religious_fury
+complete_national_focus = MTV_reinforce_the_wall
+complete_national_focus = MTV_for_the_motherland
+complete_national_focus = MTV_get_ready
+
+complete_national_focus = MTV_the_coup
+complete_national_focus = MTV_ask_for_help
+complete_national_focus = MTV_no_response
+complete_national_focus = MTV_burning_capital
+complete_national_focus = MTV_war_game
+complete_national_focus = MTV_sad_year_one

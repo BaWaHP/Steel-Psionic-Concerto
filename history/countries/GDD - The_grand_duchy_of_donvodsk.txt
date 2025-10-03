@@ -1,0 +1,131 @@
+﻿capital = 362
+
+oob = "GDD"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 6
+	conservative_republican = 17
+	authoritarian_republican = 31
+	national_socialist = 0
+	authoritarian_nationalism = 10
+	paternal_autocrat = 26
+	wizard_rules = 0
+	religious_extremism = 10
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	melee_training = 1
+	melee_weapons_I = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	against_terrible_weather = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_monster_tamer = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	gw_artillery = 1
+	construction1 = 1
+	excavation1 = 1
+	centaur_tech = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+		}
+	}
+}
+
+recruit_character = GDD_various_radical_groups
+recruit_character = GDD_simon_livychuk
+recruit_character = GDD_mikhail_shulikin
+recruit_character = GDD_irina_koshchenko
+recruit_character = GDD_nikolai_dolovechuk
+recruit_character = GDD_uslov_kossovsky
+recruit_character = GDD_anna_nemet
+recruit_character = GDD_kovacs_szabo
+recruit_character = GDD_empress_irina
+recruit_character = GDD_none
+recruit_character = GDD_filaret_valov
+recruit_character = GDD_peasants_committee
+
+recruit_character = GDD_ivan_kutkin
+recruit_character = GDD_alexei_nikovsky
+recruit_character = GDD_joseph_kosofsky
+recruit_character = GDD_volodymyr_kovalev
+recruit_character = GDD_ihor_shelly
+recruit_character = GDD_valentina_lauck
+recruit_character = GDD_natasha_nemet
+recruit_character = GDD_kosut_lajos
+recruit_character = GDD_karoly_janos
+recruit_character = GDD_vash_istvany
+recruit_character = GDD_magnolia_paleologue
+
+recruit_character = GDD_mikhail_melnyk
+recruit_character = GDD_sigismund_ranau
+recruit_character = GDD_hannah_ringel
+
+recruit_character = GDD_heinz_muller
+recruit_character = GDD_anthony_betsky
+
+recruit_character = GDD_andre_matena
+recruit_character = GDD_andrei_kuriev
+recruit_character = GDD_eduard_rauschkov
+recruit_character = GDD_nikola_chimichko
+recruit_character = GDD_leonidas_milaszczyk
+
+recruit_character = GDD_leon_lendunik
+recruit_character = GDD_boris_kautz
+recruit_character = GDD_wilhelm_hagen
+
+add_ideas = {
+	GDD_unfitting_nation
+	GDD_shadow_within_tents
+	GDD_the_unreliable
+	GDD_experienced_soldiers
+	GDD_great_donvodsk_dream
+	GDD_maybe_stable_church
+	GDD_rich_moutains
+	GDD_foreign_econ_influence
+
+	GDD_ivan_kutkin_idea
+	GDD_filaret_valov_idea
+	GDD_mikhail_melnyk_idea
+}

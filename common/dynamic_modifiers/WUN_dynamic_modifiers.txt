@@ -1,0 +1,64 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+WUN_way_of_the_king = {		#于摩王的为君之道
+	enable = { always = yes }
+
+	icon = GFX_idea_WUN_way_of_the_king
+
+	stability_factor = WUN_way_of_the_king_sf
+	stability_weekly = WUN_way_of_the_king_sw
+	consumer_goods_factor = WUN_way_of_the_king_cgf
+	rulling_ideology_drift = WUN_way_of_the_king_mid
+	party_popularity_stability_factor = WUN_way_of_the_king_ppsf
+	modifier_army_sub_unit_centaur_militia_defence_factor = WUN_way_of_the_king_aiaf
+	modifier_army_sub_unit_centaur_militia_max_org_factor = WUN_way_of_the_king_aidf
+	mobilization_speed = WUN_way_of_the_king_ms
+	conscription_factor = WUN_way_of_the_king_cf
+	non_core_manpower = WUN_way_of_the_king_ncm
+	training_time_army_factor = WUN_way_of_the_king_ttaf
+	supply_consumption_factor = WUN_way_of_the_king_scf
+	no_supply_grace = WUN_way_of_the_king_nsg
+}
+
+WUN_chrysalis_dynamic_modifier = {		#母胎
+	enable = { always = yes }
+
+	icon = GFX_idea_WUN_chrysalis_dynamic_modifier
+
+	local_supplies = 0.2
+	local_non_core_supply_impact_factor = 0.55
+	state_science_development_monthly = -0.02
+	state_magic_development_monthly = 0.02
+}
+
+WUN_rob_hole = {		#盗洞
+	enable = { always = yes }
+
+	icon = GFX_idea_RAJ_state_of_famine_country
+
+	local_resources_factor = -0.05
+}

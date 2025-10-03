@@ -1,0 +1,28 @@
+state={
+	id=222
+	name="STATE_222"
+
+	resources = {
+		steel = 4
+		tungsten = 4
+	}
+	
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			21482 2
+		}
+	}
+	
+	provinces={
+		3906 4799 11199 21475 21482 21565 21589 
+	}
+	manpower=920000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

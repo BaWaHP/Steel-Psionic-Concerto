@@ -1,0 +1,287 @@
+﻿capital = 5
+
+oob = "SFH"
+set_naval_oob = "SFH_naval"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 2
+	worldunion_socialist = 2
+	worldunion_democrat = 10
+	liberal_republican = 10
+	conservative_republican = 5
+	authoritarian_republican = 10
+	national_socialist = 3
+	authoritarian_nationalism = 3
+	paternal_autocrat = 55
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	gw_artillery = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_submarine = 1
+			basic_cruiser_armor_scheme = 1
+			basic_torpedo = 1
+			basic_battery = 1
+			basic_light_battery = 1
+			basic_medium_battery = 1
+			basic_heavy_battery = 1
+			mtg_transport = 1
+			basic_naval_mines = 1
+		}
+	}
+}
+
+recruit_character = SFH_ZhengJun
+recruit_character = SFH_LiGuan
+recruit_character = SFH_WangYigong
+recruit_character = SFH_LiuQi
+recruit_character = SFH_LiuSui
+recruit_character = SFH_XuSheng
+recruit_character = SFH_HaungQiu
+recruit_character = SFH_XueQingshan
+recruit_character = SFH_WangShengwu
+recruit_character = SFH_MingXiang
+recruit_character = SFH_ZhangYaowu
+recruit_character = SFH_WangYue
+recruit_character = SFH_MingXin
+recruit_character = SFH_ZhouGongli
+recruit_character = SFH_ZhouGongyi
+recruit_character = SFH_LuZhan
+recruit_character = SFH_JingYabo
+recruit_character = SFH_HaiWei
+recruit_character = SFH_HuangJi
+recruit_character = SFH_LuBo
+recruit_character = SFH_ZhangHuawu
+recruit_character = SFH_LinChun
+recruit_character = SFH_YuanHai
+recruit_character = SFH_HuaiYang
+recruit_character = SFH_NiuShou
+recruit_character = SFH_DaiGuangyao
+recruit_character = SFH_WuYue
+recruit_character = SFH_LiangYi
+recruit_character = SFH_ZongQianwan
+recruit_character = SFH_YaoBai
+recruit_character = SFH_YingQichen
+recruit_character = SFH_GanPan
+recruit_character = SFH_ZhuangFugui
+recruit_character = SFH_FengLongzhi
+recruit_character = SFH_QuanLinxin
+recruit_character = SFH_FangBufan
+recruit_character = SFH_QiYunzhou
+recruit_character = SFH_DuXinpeng
+recruit_character = SFH_GuFeng
+recruit_character = SFH_XiongYunzhi
+recruit_character = SFH_MuShaoyuan
+recruit_character = SFH_JiangLebai
+recruit_character = SFH_ZhuChen
+recruit_character = SFH_LuoYi
+recruit_character = SFH_ZhengHong
+
+###开局民族精神###
+add_ideas = {
+	#民族精神
+	SFH_angrier_aristocrats
+	SFH_failure_in_democracy
+	SFH_terrible_heirs
+	SFH_passing_glory
+	SFH_end_of_heros
+	#内阁
+	SFH_LiGuan_idea
+	SFH_WangYigong_idea
+	SFH_LiuQi_idea
+	SFH_XuSheng_idea
+}
+
+set_autonomy = {
+	target = NWF
+	autonomous_state = autonomy_puppet
+}
+
+set_autonomy = {
+	target = NFH
+	autonomous_state = autonomy_puppet
+}
+
+create_faction = SFH_INFLUENCE_FACTION
+add_to_faction = NFH
+add_to_faction = NWF
+add_to_faction = MSA
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "王国级"
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+		}
+	}
+	create_equipment_variant = {
+		name = "乡安级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "大港级"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "平京级"
+		type = ship_hull_heavy_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "麒麟级"
+		type = ship_hull_heavy_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_bb_1
+			fixed_ship_secondaries_slot = empty
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = empty
+		}
+	}
+}

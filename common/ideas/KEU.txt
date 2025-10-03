@@ -1,0 +1,55 @@
+ideas = {
+	country = {
+
+		KEU_Nation_of_Youth = {		#只有青年的国度
+			picture = KEU_Nation_of_Youth
+			allowed = { 
+				always = yes 
+				original_tag = KEU
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				stability_factor = -0.2
+				research_speed_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				conscription_factor = -0.2
+				monthly_living_standard_development_process = -4
+			}
+		}
+
+		KEU_Enforced_Breeding_Policy = {	#强制生育政策
+			picture = generic_fortify_the_borders
+			allowed = { 
+				always = yes 
+				original_tag = KEU
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 2
+				consumer_goods_factor = 0.2
+				research_speed_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				conscription_factor = -0.2
+				monthly_living_standard_development_process = -4
+			}
+		}
+
+		KEU_Legion_of_Dead = {		#死者军团
+			picture = KEU_Legion_of_Dead
+			allowed = { 
+				always = yes 
+				original_tag = KEU
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 1
+			}
+		}
+		
+	}
+}

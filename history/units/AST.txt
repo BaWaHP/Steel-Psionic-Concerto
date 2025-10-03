@@ -1,0 +1,209 @@
+﻿###templates###
+division_template = {
+	name = "王家禁卫骑兵师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "BHS装甲步兵旅"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "BHS机步旅"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "BHS步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "BHS半人马标准师"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		centaur = { x = 1 y = 0 }
+		centaur = { x = 1 y = 1 }
+		centaur = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "王国卫队"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+	}
+
+	support = {
+		military_police = { x = 0 y = 0 }
+		melee_support = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "王家禁卫骑兵王权师"
+		location = 7545
+		division_template = "王家禁卫骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BHS装甲步兵一旅"
+		location = 19434
+		division_template = "BHS装甲步兵旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS装甲步兵二旅"
+		location = 5949
+		division_template = "BHS装甲步兵旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS机步旅一旅"
+		location = 2040
+		division_template = "BHS机步旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS机步二旅"
+		location = 18893
+		division_template = "BHS机步旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS机步三旅"
+		location = 3826
+		division_template = "BHS机步旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS步兵一师"
+		location = 10142
+		division_template = "BHS步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS步兵二师"
+		location = 19340
+		division_template = "BHS步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BHS步兵三师"
+		location = 9743
+		division_template = "BHS步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BHS半人马一师"
+		location = 7647
+		division_template = "BHS半人马标准师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BHS半人马二师"
+		location = 19622
+		division_template = "BHS半人马标准师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BHS半人马三师"
+		location = 11445
+		division_template = "BHS半人马标准师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BHS半人马四师"
+		location = 1746
+		division_template = "BHS半人马标准师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "女王卫队"
+		location = 7545
+		division_template = "王国卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,328 @@
+characters={
+
+	KOA_king_electing_council = {		#选王议会
+   		name = KOA_king_electing_council
+   		portraits = {
+   			civilian = {
+   				large="GFX_KOA_king_electing_council"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_KOA_king_electing_council"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KOA_king_electing_council_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { vacant_throne }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	KOA_stanwaf = {		#斯坦瓦夫
+   		name = KOA_stanwaf
+   		portraits = {
+   			civilian = {
+   				large="GFX_KOA_stanwaf"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_KOA_stanwaf"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KOA_stanwaf_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { KOA_trait_stanwaf }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}		
+	}
+	KOA_willian = {		#威廉
+   		name = KOA_willian
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KOA_willian_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { KOA_trait_willian }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}		
+	}
+
+	KOA_yulian = {		#于连
+   		name = KOA_yulian
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KOA_yulian_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { KOA_trait_yulian }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}		
+	}
+
+	KOA_tocman_lowes = {		#托克曼·洛斯
+   		name = KOA_tocman_lowes
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = KOA_tocman_lowes_desc
+   			ideology = conservative_republican_subtype
+   			traits = { KOA_trait_tocman_lowes }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}		
+	}
+
+	KOA_merk_hill = {		#默克·希尔
+   		name = KOA_merk_hill
+   		portraits = {
+   			civilian = {
+   				large="GFX_KOA_merk_hill"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_KOA_merk_hill"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 5
+			coordination_skill = 3
+			traits = { navy_media_personality big_guns_expert cruiser_captain }
+		}
+   		country_leader = {
+			desc = KOA_merk_hill_desc
+   			ideology = military_dictatorship
+   			traits = { KOA_trait_merk_hill }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}		
+	}
+
+	KOA_william_anconin = {		#威廉·安科宁
+		name = KOA_william_anconin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = KOA_william_anconin_desc
+   			ideology = liberal_republican_subtype
+   			traits = { captain_of_industry }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}	
+		advisor={
+			slot = political_advisor
+			idea_token = KOA_william_anconin_idea
+			allowed = { original_tag = KOA }
+			traits = { captain_of_industry }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KOA_torkman_loss = {		#托克曼·洛斯
+		name = KOA_torkman_loss
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KOA_torkman_loss_idea
+			allowed = { original_tag = KOA }
+			traits = { ideological_crusader }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KOA_christian_matte = {		#克里斯蒂安·马特
+		name = KOA_christian_matte
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KOA_christian_matte_idea
+			allowed = { original_tag = KOA }
+			traits = { education_expert }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KOA_paul_van_der_laan = {		#保罗·范德兰
+		name = KOA_paul_van_der_laan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KOA_paul_van_der_laan_idea
+			allowed = { original_tag = KOA }
+			traits = { prince_of_terror }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KOA_laurence_vanniga = {		#劳伦斯·凡尼加
+		name = KOA_laurence_vanniga
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = KOA_laurence_vanniga_idea
+			allowed = { original_tag = KOA }
+			traits = { financial_expert }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KOA_simon_monteleone = {		#西蒙·蒙特里安
+		name = KOA_simon_monteleone
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		field_marshal = {
+			traits = { war_hero unyielding_defender hill_fighter infantry_leader }
+			skill = 4
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	KOA_auxier_constantinier = {		#奥希耶·康斯坦耶
+		name = KOA_auxier_constantinier
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard career_officer infantry_leader }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	KOA_carl_christian = {		#卡尔·克里斯蒂安
+		name = KOA_carl_christian
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist infantry_leader }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	
+}

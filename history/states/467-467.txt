@@ -1,0 +1,28 @@
+
+state={
+	id=467
+	name="STATE_467"
+	provinces={
+		109 158 1185 5178 9698 11063 17805 17806 17898 18019 18218 18284 18452 
+	}
+	resources = {
+		magic_crystal = 10
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			158 10
+		}
+		victory_points = {
+			18218 8
+		}
+	}
+	manpower = 976760
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

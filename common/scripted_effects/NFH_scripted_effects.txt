@@ -1,0 +1,232 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_NFH_startup_effect = {
+	if = {
+		limit = {
+			tag = NFH
+		}
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = struggle_to_survive
+		add_ideas = uncomfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_basic_funding
+		add_ideas = IP_no_intervention
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_LingRen
+		add_ideas = RAP_suppression
+		add_ideas = RLP_moralism
+		add_ideas = SXP_recessing_policy
+		###开局设置###
+		set_country_flag = SFH_farhome_kingdom_icon
+		add_ideas = SFH_farhome_kingdom_idea
+		###剧情推进事件###
+		country_event = {
+			id = NFH.1 days = 200
+		}
+		###省份普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 15
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+			if = {
+				limit = {
+					state = 16
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+			if = {
+				limit = {
+					state = 17
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+			if = {
+				limit = {
+					state = 18
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}	
+			if = {
+				limit = {
+					state = 19
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}	
+			if = {
+				limit = {
+					state = 20
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+			if = {
+				limit = {
+					state = 21
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}	
+			if = {
+				limit = {
+					state = 22
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}	
+			if = {
+				limit = {
+					state = 23
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}	
+			if = {
+				limit = {
+					state = 24
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 133
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 144
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 160
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+		}
+	}
+}
+
+SPC_NFH_civil_war_setup_1 = {	#农民内战
+	every_state = {
+		if = {
+			limit = { is_core_of = NFH }
+			add_core_of = FFH
+			add_core_of = AFH
+		}
+	}
+	FFH = {
+		transfer_state = 15
+		transfer_state = 21
+		transfer_state = 22
+		transfer_state = 23
+		transfer_state = 24
+		transfer_state = 144
+		load_oob = "FFH"
+		SPC_FFH_startup_effect = yes
+	}
+	AFH = {
+		transfer_state = 133
+		transfer_state = 19
+		load_oob = "AFH_1"
+		SPC_AFH_startup_effect = yes
+		add_ideas = AFH_unprepared_war
+	}
+	country_event = { id = NFH.3 days = 30 }
+}
+
+SPC_NFH_civil_war_setup_2 = {	#贵族内战
+	AFH = {
+		transfer_state = 22
+		transfer_state = 23
+		transfer_state = 24
+		transfer_state = 144
+		transfer_state = 18
+		transfer_state = 19
+		load_oob = "AFH_2"
+		SPC_AFH_startup_effect = yes
+		add_ideas = AFH_prepared_attack
+	}
+	country_event = { id = NFH.3 days = 30 }
+}

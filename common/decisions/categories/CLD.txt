@@ -1,0 +1,40 @@
+CLD_government_bop_decisions = {	#工人委员会与全境联席会议
+	allowed = { tag = CLD }
+	visible = { has_completed_focus = CLD_joint_meeting }
+	priority = 10
+}
+
+#紧急状态委员会
+CLD_forming_emergency_committe_decisions = {
+	icon = GFX_decision_category_generic_communist_revolution
+	allowed = { tag = CLD }
+	visible = { has_completed_focus = CLD_forming_emergency_committe }
+	priority = 10
+}
+
+#西莉迪亚公社军事委员会
+CLD_military_committe_decisions = {
+	icon = GFX_decision_SOV_the_military_conspiracy
+	allowed = { tag = CLD }
+	visible = { has_completed_focus = CLD_ensure_the_right_to_command }
+	priority = 10
+	visible_when_empty = yes
+}
+
+#西莉迪亚公社经济建设委员会
+CLD_economic_committe_decisions = {
+	icon = GFX_decision_category_SOV_permanent_revolution
+	allowed = { tag = CLD }
+	visible = { has_completed_focus = CLD_start_producing_again }
+	priority = 10
+}
+
+#敌特破坏
+CLD_enemy_sabotage_decisions = {
+	icon = GFX_decision_category_SOV_civil_war
+	allowed = { tag = CLD }
+	visible = { tag = CLD }
+	#visible_when_empty = yes
+	priority = 100
+	scripted_gui = CLD_enemy_sabotage_decisions_ui
+}

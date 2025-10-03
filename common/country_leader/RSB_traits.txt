@@ -1,0 +1,45 @@
+leader_traits = {
+
+	RSB_civil_right_supporter = {		#民权支持者
+		random = no
+		
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RSB_coop_with_democrats = {		#与民主党的合作
+		random = no
+		
+		political_power_factor = 0.05
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RSB_fighter_for_reform = {		#改革的斗士
+		random = no
+		
+		political_power_factor = 0.1
+		stability_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RSB_loyal_guard = {		#忠诚的卫士
+		random = no
+		
+		stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,308 @@
+focus_tree = {
+	id = KTL_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KTL
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	#continuous_focus_position = { x = 20 y = 2100 }
+
+	focus = {		#筹集物资
+		id = KTL_raising_supplies
+		icon = GFX_goal_Focus_Examine_Foreign_Small_Arms
+		x = 10
+		y = 0
+		cost = 5
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = KTL
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 200
+				producer = KTL
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 20
+				producer = KTL
+			}
+		}
+	}
+	focus = {		#任命元帅
+		id = KTL_appoint_marshals
+		icon = GFX_goal_new_treaty
+		x = 0
+		y = 1
+		cost = 3
+
+		prerequisite = { focus = KTL_raising_supplies }
+		relative_position_id = KTL_raising_supplies
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = KTL.1
+		}
+	}
+	focus = {		#博戈的方案
+		id = KTL_bogo_plan
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_appoint_marshals }
+		relative_position_id = KTL_appoint_marshals
+		mutually_exclusive = { focus = KTL_chino_plan }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#开设职业学校
+		id = KTL_open_vocational_schools
+		icon = GFX_focus_generic_military_academy
+		x = -2
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_bogo_plan }
+		relative_position_id = KTL_bogo_plan
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#地形适应训练
+		id = KTL_terrain_adaptation_training
+		icon = GFX_Generic_Mountain_Warfare
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_open_vocational_schools }
+		relative_position_id = KTL_open_vocational_schools
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#建立工兵训练体系
+		id = KTL_engineer_training_system
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_bogo_plan }
+		relative_position_id = KTL_bogo_plan
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#地形与工程有机结合
+		id = KTL_topographical_and_engineering_integration
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_engineer_training_system }
+		relative_position_id = KTL_engineer_training_system
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#奇诺的方案
+		id = KTL_chino_plan
+		icon = GFX_goal_industry_air
+		x = 1
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_appoint_marshals }
+		relative_position_id = KTL_appoint_marshals
+		mutually_exclusive = { focus = KTL_bogo_plan }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#完善炮手训练体系
+		id = KTL_improve_gunner_training
+		icon = GFX_goal_Artillery_Tactics
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_chino_plan }
+		relative_position_id = KTL_chino_plan
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#廉价且致命的战术
+		id = KTL_cheap_but_deadly_tactic
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_improve_gunner_training }
+		relative_position_id = KTL_improve_gunner_training
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#完善军工供给体系
+		id = KTL_improve_mil_supply
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 2
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_chino_plan }
+		relative_position_id = KTL_chino_plan
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#打造巨炮
+		id = KTL_build_giant_cannon
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_improve_mil_supply }
+		relative_position_id = KTL_improve_mil_supply
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+	focus = {		#改组常备军
+		id = KTL_rebuild_army
+		icon = GFX_Generic_Colonial_Army
+		x = -1
+		y = 1
+		cost = 4
+
+		prerequisite = { focus = KTL_terrain_adaptation_training
+						 focus = KTL_cheap_but_deadly_tactic }
+		prerequisite = { focus = KTL_topographical_and_engineering_integration
+						 focus = KTL_build_giant_cannon }
+		relative_position_id = KTL_cheap_but_deadly_tactic
+		#mutually_exclusive = { focus =  }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+		}
+	}
+}

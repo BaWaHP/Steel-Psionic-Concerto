@@ -1,0 +1,3680 @@
+SPC_war_exhaustion_inwar_decisions = {
+	SPC_WE_distribute_extra_supply = {	#分发额外配给
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
+		visible = {
+			OR = {
+				has_idea = death_everywhere
+				has_idea = struggle_to_survive
+				has_idea = hard_to_survive
+				has_idea = normally_living
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 90
+		days_re_enable = 180
+		modifier = {
+			consumer_goods_factor = 0.025
+			monthly_living_standard_development_process = 1
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_disciplining_army = {	#整肃军队纪律
+		icon = generic_prepare_civil_war
+		available = {
+			check_variable = { war_exhaustion < 0.5 }
+			surrender_progress < 0.1
+			NOT = {	has_idea = all_adults_serve }
+			NOT = {	has_idea = scraping_the_barrel }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 90
+		days_re_enable = 180
+		modifier = {
+			monthly_military_development_process = 1
+			training_time_army_factor = 0.25
+			army_org_factor = -0.05
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}	
+	SPC_WE_escalate_military_propaganda = {	#扩大军事宣传
+		icon = generic_prepare_civil_war
+		available = {
+			NOT = {	has_idea = MP_freedom_speech }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 75
+		days_remove = 90
+		days_re_enable = 120
+		modifier = {
+			war_exhaustion_gain_modifier = -0.25
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_togetherly_suffer_propaganda = {	#同甘共苦宣传
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+			OR = {
+				has_idea = MP_only_our_voice
+				AND = {
+					NOT = { has_idea = death_everywhere }
+					NOT = { has_idea = struggle_to_survive }
+				}
+			}
+			has_idea = WP_worker_council
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 90
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = -0.025
+			monthly_living_standard_development_process = -2
+			research_speed_factor = -0.1
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_call_for_duty_of_service = {	#呼吁为国服役
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+			has_war_support > 0.5
+		}
+		visible = {
+			OR = {
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 120
+		days_re_enable = 360
+		modifier = {
+			conscription = 0.01
+			monthly_military_development_process = -2
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_pay_for_their_patriotism = {	#补贴爱国军工企业
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = NP_totally_free_market
+				has_idea = NP_light_nationalization
+				has_idea = NP_medium_nationalization
+			}
+			OR = {
+				has_idea = IP_creating_business
+				has_idea = IP_funding_proj
+				has_idea = IP_cutting_taxes
+				has_idea = IP_more_business
+			}
+		}
+		visible = {
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 90
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = 0.05
+			monthly_industrial_development_process = 2
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_purge_the_antiwars = {	#搜捕反战分子
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = SPP_unlimited_national_dep
+				has_idea = SPP_cia_everywhere
+				has_idea = SPP_we_are_watching_you
+			}
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 120
+		days_re_enable = 360
+		modifier = {
+			stability_weekly = 0.007
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_incite_racism_looting = {	#鼓动劫掠异族财产
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = RAP_suppression
+				has_idea = RAP_lower_suppression
+			}
+			NOT = { has_idea = extra_living }
+			NOT = { has_idea = best_living }
+		}
+		visible = {
+			OR = {
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 90
+		days_re_enable = 360
+		modifier = {
+			war_exhaustion_gain_modifier = -0.5
+			monthly_industrial_development_process = -8
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_to_variable = {
+				war_exhaustion = -0.2
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_gratefulness_education = {	#宣传恩泽
+		icon = generic_prepare_civil_war
+		available = {
+			OR = {
+				has_idea = RLP_religious_state
+				has_idea = RLP_national_religion
+				has_idea = RLP_moralism
+			}
+			NOT = { has_idea = death_everywhere }
+			NOT = { has_idea = best_living }
+		}
+		visible = {
+			OR = {
+				has_government = paternal_autocrat
+				has_government = religious_extremism
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_proclaim_holywar = {	#宣告圣战
+		icon = generic_prepare_civil_war
+		available = {
+			has_idea = RLP_religious_state
+			has_idea = MP_only_our_voice
+		}
+		visible = {
+			OR = {
+				has_government = religious_extremism
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 200
+		days_re_enable = 720
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.25
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+	SPC_WE_leader_at_frontline = {	#御驾亲征
+		icon = generic_prepare_civil_war
+		available = {
+			has_government = wizard_rules
+		}
+		visible = {
+			OR = {
+				has_government = wizard_rules
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 120
+		days_re_enable = 360
+		modifier = {
+			war_exhaustion_gain_modifier = -0.25
+			army_attack_factor = 0.15
+			army_defence_factor = 0.15
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			random_list = {
+				80 = { country_event = SPC_War_Exh.2001 }
+				15 = { country_event = SPC_War_Exh.2002 }
+				5 = { country_event = SPC_War_Exh.2003 }
+			}
+		}
+		cancel_trigger = {
+			NOT = { has_government = wizard_rules }
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.5 }
+			}
+		}
+	}
+}
+SPC_war_exhaustion_aftermath_decisions = {
+	SPC_WE_condole_the_veterans = {	#慰问伤残老兵
+		available = {
+			always = yes
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_idea = primitive_army
+					is_debug = yes
+				}
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_re_enable = 180
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_encourage_art_creating = {	#鼓励文化产品创作
+		available = {
+			NOT = { has_idea = MP_only_our_voice }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 180
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = 0.025
+			monthly_living_standard_development_process = 4
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_arrange_veteran_reemployment = {	#安排退役士兵再就业
+		available = {
+			NOT = {
+				AND = {
+					has_idea = primitive_industry
+					has_idea = primitive_agriculture
+				}
+			}
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 150
+		days_remove = 180
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = 0.05
+			monthly_living_standard_development_process = 2
+			monthly_industrial_development_process = 2
+			monthly_agricultural_development_process = 2
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_build_more_sanatorium = {	#增设战后康复疗养院
+		available = {
+			NOT = { has_idea = death_everywhere }
+			NOT = { has_idea = struggle_to_survive }
+			NOT = { has_idea = hard_to_survive }
+			NOT = { has_idea = hazard_zone }
+			NOT = { has_idea = unhabitable }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 180
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = 0.25
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_sized_honoring = {	#大规模授勋
+		available = {
+			NOT = { has_idea = death_everywhere }
+			NOT = { has_idea = struggle_to_survive }
+			NOT = { has_idea = hard_to_survive }
+			NOT = { has_idea = primitive_army }
+			NOT = { has_idea = unorganized_army }
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 100
+		days_remove = 180
+		days_re_enable = 360
+		modifier = {
+			monthly_living_standard_development_process = -2
+			monthly_military_development_process = 2
+		}
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+	SPC_WE_suppress_antiwar_parade = {	#镇压反战游行
+		available = {
+			has_stability < 0.5
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_remove = 180
+		days_re_enable = 360
+		modifier = {
+			consumer_goods_factor = 0.025
+			monthly_military_development_process = 2
+		}
+		complete_effect = {
+			add_stability = -0.05
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				check_variable = { war_exhaustion > 0.3 }
+			}
+		}
+	}
+}
+SPC_war_exhaustion_promise_decisions = {
+	SPC_WE_promise_relief_conscription = {	#承诺：放松征兵法案
+		available = {
+			NOT = { has_idea = disarmed_nation }
+			NOT = { has_idea = volunteer_only }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = limited_conscription }
+				activate_mission = SPC_WE_promise_relief_conscription_M1
+			}
+			if = {
+				limit = { has_idea = extensive_conscription }
+				activate_mission = SPC_WE_promise_relief_conscription_M2
+			}
+			if = {
+				limit = { has_idea = service_by_requirement }
+				activate_mission = SPC_WE_promise_relief_conscription_M3
+			}
+			if = {
+				limit = { has_idea = all_adults_serve }
+				activate_mission = SPC_WE_promise_relief_conscription_M4
+			}
+			if = {
+				limit = { has_idea = scraping_the_barrel }
+				activate_mission = SPC_WE_promise_relief_conscription_M5
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_relief_conscription_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_relief_conscription_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_relief_conscription_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_relief_conscription_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_relief_conscription_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_relief_conscription_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_relief_conscription_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_relief_conscription_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_relief_conscription_M5 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = volunteer_only
+				has_idea = limited_conscription
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_relief_conscription_M5
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_decrease_taxing = {	#承诺：削减税收
+		available = {
+			NOT = { has_idea = barely_no_taxes }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 720
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = low_taxes }
+				activate_mission = SPC_WE_promise_decrease_taxing_M1
+			}
+			if = {
+				limit = { has_idea = normal_taxes }
+				activate_mission = SPC_WE_promise_decrease_taxing_M2
+			}
+			if = {
+				limit = { has_idea = high_taxes }
+				activate_mission = SPC_WE_promise_decrease_taxing_M3
+			}
+			if = {
+				limit = { has_idea = too_much_taxes }
+				activate_mission = SPC_WE_promise_decrease_taxing_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_decrease_taxing_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = barely_no_taxes
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_decrease_taxing_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_decrease_taxing_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = barely_no_taxes
+				has_idea = low_taxes
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_decrease_taxing_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_decrease_taxing_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = barely_no_taxes
+				has_idea = low_taxes
+				has_idea = normal_taxes
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_decrease_taxing_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_decrease_taxing_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = barely_no_taxes
+				has_idea = low_taxes
+				has_idea = normal_taxes
+				has_idea = high_taxes
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_decrease_taxing_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_retrieve_nationalization = {	#承诺：释放国有企业
+		available = {
+			NOT = { has_idea = NP_totally_free_market }
+		}
+		visible = {
+			OR = {
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 720
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = NP_light_nationalization }
+				activate_mission = SPC_WE_promise_retrieve_nationalization_M1
+			}
+			if = {
+				limit = { has_idea = NP_medium_nationalization }
+				activate_mission = SPC_WE_promise_retrieve_nationalization_M2
+			}
+			if = {
+				limit = { has_idea = NP_high_nationalization }
+				activate_mission = SPC_WE_promise_retrieve_nationalization_M3
+			}
+			if = {
+				limit = { has_idea = NP_total_nationalization }
+				activate_mission = SPC_WE_promise_retrieve_nationalization_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_retrieve_nationalization_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = NP_totally_free_market
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_retrieve_nationalization_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_retrieve_nationalization_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = NP_totally_free_market
+				has_idea = NP_light_nationalization
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_retrieve_nationalization_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_retrieve_nationalization_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = NP_totally_free_market
+				has_idea = NP_light_nationalization
+				has_idea = NP_medium_nationalization
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_retrieve_nationalization_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_retrieve_nationalization_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = NP_totally_free_market
+				has_idea = NP_light_nationalization
+				has_idea = NP_medium_nationalization
+				has_idea = NP_high_nationalization
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_retrieve_nationalization_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.4
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_raise_military_professionality = {	#承诺：提高军事职业度
+		available = {
+			NOT = { has_idea = innovative_army }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 720
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = advanced_army }
+				activate_mission = SPC_WE_promise_raise_military_professionality_M1
+			}
+			if = {
+				limit = { has_idea = very_experienced_army }
+				activate_mission = SPC_WE_promise_raise_military_professionality_M2
+			}
+			if = {
+				limit = { has_idea = experienced_army }
+				activate_mission = SPC_WE_promise_raise_military_professionality_M3
+			}
+			if = {
+				limit = { has_idea = unorganized_army }
+				activate_mission = SPC_WE_promise_raise_military_professionality_M4
+			}
+			if = {
+				limit = { has_idea = primitive_army }
+				activate_mission = SPC_WE_promise_raise_military_professionality_M5
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_raise_military_professionality_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = innovative_army
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_raise_military_professionality_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_raise_military_professionality_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = innovative_army
+				has_idea = advanced_army
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_raise_military_professionality_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_raise_military_professionality_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = innovative_army
+				has_idea = advanced_army
+				has_idea = very_experienced_army
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_raise_military_professionality_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_raise_military_professionality_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = innovative_army
+				has_idea = advanced_army
+				has_idea = very_experienced_army
+				has_idea = experienced_army
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_raise_military_professionality_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_raise_military_professionality_M5 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = innovative_army
+				has_idea = advanced_army
+				has_idea = very_experienced_army
+				has_idea = experienced_army
+				has_idea = unorganized_army
+			}
+		}
+		days_mission_timeout = 240
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_raise_military_professionality_M5
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_stablize_livinghood = {	#承诺：稳定居民生活水平
+		available = {
+			OR = {
+				has_idea = death_everywhere
+				has_idea = struggle_to_survive
+			}
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 180
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = best_living }
+				activate_mission = SPC_WE_promise_stablize_livinghood_M1
+			}
+			if = {
+				limit = { has_idea = extra_living }
+				activate_mission = SPC_WE_promise_stablize_livinghood_M2
+			}
+			if = {
+				limit = { has_idea = normally_living }
+				activate_mission = SPC_WE_promise_stablize_livinghood_M3
+			}
+			if = {
+				limit = { has_idea = hard_to_survive }
+				activate_mission = SPC_WE_promise_stablize_livinghood_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_stablize_livinghood_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = best_living
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			if = {
+				limit = { SPC_war_exhaustion_eligible = yes }
+				add_to_variable = {
+					war_exhaustion = 0.1
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+			else = {
+				add_to_variable = {
+					war_exhaustion = 0.2
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+		}
+	}
+	SPC_WE_promise_stablize_livinghood_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = best_living
+				has_idea = extra_living
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			if = {
+				limit = { SPC_war_exhaustion_eligible = yes }
+				add_to_variable = {
+					war_exhaustion = 0.1
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+			else = {
+				add_to_variable = {
+					war_exhaustion = 0.2
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+		}
+	}
+	SPC_WE_promise_stablize_livinghood_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = best_living
+				has_idea = extra_living
+				has_idea = normally_living
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			if = {
+				limit = { SPC_war_exhaustion_eligible = yes }
+				add_to_variable = {
+					war_exhaustion = 0.1
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+			else = {
+				add_to_variable = {
+					war_exhaustion = 0.2
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+		}
+	}
+	SPC_WE_promise_stablize_livinghood_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = best_living
+				has_idea = extra_living
+				has_idea = normally_living
+				has_idea = hard_to_survive
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			if = {
+				limit = { SPC_war_exhaustion_eligible = yes }
+				add_to_variable = {
+					war_exhaustion = 0.1
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+			else = {
+				add_to_variable = {
+					war_exhaustion = 0.2
+					tooltip = war_exhaustion_tooltip
+				}
+				SPC_war_exhaustion_clamp = yes
+			}
+		}
+	}
+	SPC_WE_promise_secure_worker_rights = {	#承诺：保障劳工权利
+		available = {
+			NOT = { has_idea = WP_better_laws }
+			NOT = { has_idea = WP_worker_council }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = WP_limited_laws }
+				activate_mission = SPC_WE_promise_secure_worker_rights_M1
+			}
+			if = {
+				limit = { has_idea = WP_basic_laws }
+				activate_mission = SPC_WE_promise_secure_worker_rights_M2
+			}
+			if = {
+				limit = { has_idea = WP_symbolic_laws }
+				activate_mission = SPC_WE_promise_secure_worker_rights_M3
+			}
+			if = {
+				limit = { has_idea = WP_no_specific_laws }
+				activate_mission = SPC_WE_promise_secure_worker_rights_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_secure_worker_rights_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = WP_worker_council
+				has_idea = WP_better_laws
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_secure_worker_rights_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_secure_worker_rights_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = WP_worker_council
+				has_idea = WP_better_laws
+				has_idea = WP_limited_laws
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_secure_worker_rights_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_secure_worker_rights_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = WP_worker_council
+				has_idea = WP_better_laws
+				has_idea = WP_limited_laws
+				has_idea = WP_basic_laws
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_secure_worker_rights_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_secure_worker_rights_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = WP_worker_council
+				has_idea = WP_better_laws
+				has_idea = WP_limited_laws
+				has_idea = WP_basic_laws
+				has_idea = WP_symbolic_laws
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_secure_worker_rights_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_increase_agriculture_funds = {	#承诺：提升农业补贴
+		available = {
+			NOT = { has_idea = AP_endless_funds }
+			NOT = { has_idea = AP_cutting_taxes }
+		}
+		visible = {
+			OR = {
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = AP_better_funds }
+				activate_mission = SPC_WE_promise_increase_agriculture_funds_M1
+			}
+			if = {
+				limit = { has_idea = AP_advanced_funds }
+				activate_mission = SPC_WE_promise_increase_agriculture_funds_M2
+			}
+			if = {
+				limit = { has_idea = AP_basic_funds }
+				activate_mission = SPC_WE_promise_increase_agriculture_funds_M3
+			}
+			if = {
+				limit = { has_idea = AP_no_funds }
+				activate_mission = SPC_WE_promise_increase_agriculture_funds_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_increase_agriculture_funds_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = AP_endless_funds
+				has_idea = AP_cutting_taxes
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_increase_agriculture_funds_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_increase_agriculture_funds_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = AP_endless_funds
+				has_idea = AP_cutting_taxes
+				has_idea = AP_better_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_increase_agriculture_funds_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_increase_agriculture_funds_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = AP_endless_funds
+				has_idea = AP_cutting_taxes
+				has_idea = AP_better_funds
+				has_idea = AP_advanced_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_increase_agriculture_funds_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_increase_agriculture_funds_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = AP_endless_funds
+				has_idea = AP_cutting_taxes
+				has_idea = AP_better_funds
+				has_idea = AP_advanced_funds
+				has_idea = AP_basic_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_increase_agriculture_funds_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_level_up_subsidy_funds = {	#承诺：提高福利水平
+		available = {
+			NOT = { has_idea = SP_full_scale_help }
+			NOT = { has_idea = SP_no_worries_for_food }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = SP_advanced_funds }
+				activate_mission = SPC_WE_promise_level_up_subsidy_funds_M1
+			}
+			if = {
+				limit = { has_idea = SP_basic_funds }
+				activate_mission = SPC_WE_promise_level_up_subsidy_funds_M2
+			}
+			if = {
+				limit = { has_idea = SP_sybolized_funds }
+				activate_mission = SPC_WE_promise_level_up_subsidy_funds_M3
+			}
+			if = {
+				limit = { has_idea = SP_no_funds }
+				activate_mission = SPC_WE_promise_level_up_subsidy_funds_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_level_up_subsidy_funds_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = SP_full_scale_help
+				has_idea = SP_no_worries_for_food
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_level_up_subsidy_funds_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_level_up_subsidy_funds_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = SP_full_scale_help
+				has_idea = SP_no_worries_for_food
+				has_idea = SP_advanced_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_level_up_subsidy_funds_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_level_up_subsidy_funds_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = SP_full_scale_help
+				has_idea = SP_no_worries_for_food
+				has_idea = SP_advanced_funds
+				has_idea = SP_basic_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_level_up_subsidy_funds_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_level_up_subsidy_funds_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = SP_full_scale_help
+				has_idea = SP_no_worries_for_food
+				has_idea = SP_advanced_funds
+				has_idea = SP_basic_funds
+				has_idea = SP_sybolized_funds
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_level_up_subsidy_funds_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.1
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.2
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_liberate_the_female = {	#承诺：解放女性
+		available = {
+			NOT = { has_idea = FP_joining_the_poitics }
+		}
+		visible = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				is_debug = yes
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 360
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.1
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+			if = {
+				limit = { has_idea = FP_joining_the_army }
+				activate_mission = SPC_WE_promise_liberate_the_female_M1
+			}
+			if = {
+				limit = { has_idea = FP_working_euqality }
+				activate_mission = SPC_WE_promise_liberate_the_female_M2
+			}
+			if = {
+				limit = { has_idea = FP_calling_for_equality }
+				activate_mission = SPC_WE_promise_liberate_the_female_M3
+			}
+			if = {
+				limit = { has_idea = FP_traditional_place }
+				activate_mission = SPC_WE_promise_liberate_the_female_M4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SPC_WE_promise_liberate_the_female_M1 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = FP_joining_the_poitics
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_liberate_the_female_M1
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_liberate_the_female_M2 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = FP_joining_the_poitics
+				has_idea = FP_joining_the_army
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_liberate_the_female_M2
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_liberate_the_female_M3 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = FP_joining_the_poitics
+				has_idea = FP_joining_the_army
+				has_idea = FP_working_euqality
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_liberate_the_female_M3
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+	SPC_WE_promise_liberate_the_female_M4 = {
+		activation = { always = no }
+		available = {
+			OR = {
+				has_idea = FP_joining_the_poitics
+				has_idea = FP_joining_the_army
+				has_idea = FP_working_euqality
+				has_idea = FP_calling_for_equality
+			}
+		}
+		days_mission_timeout = 180
+		selectable_mission = no
+		complete_effect = {
+			add_to_variable = {
+				war_exhaustion = -0.05
+				tooltip = war_exhaustion_tooltip
+			}
+			SPC_war_exhaustion_clamp = yes
+		}
+		timeout_effect = {
+			random_list = {
+				25 = {
+					activate_mission = SPC_WE_promise_liberate_the_female_M4
+					modifier = {
+						add = 20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = 50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+				75 = {
+					if = {
+						limit = { SPC_war_exhaustion_eligible = yes }
+						add_to_variable = {
+							war_exhaustion = 0.15
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					else = {
+						add_to_variable = {
+							war_exhaustion = 0.3
+							tooltip = war_exhaustion_tooltip
+						}
+						SPC_war_exhaustion_clamp = yes
+					}
+					modifier = {
+						add = -20
+						has_idea_with_trait = promising_promise_maker_1
+						NOT = { has_idea_with_trait = promising_promise_maker_2 }
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -35
+						has_idea_with_trait = promising_promise_maker_2
+						NOT = { has_idea_with_trait = promising_promise_maker_3 }
+					}
+					modifier = {
+						add = -50
+						has_idea_with_trait = promising_promise_maker_3
+					}
+				}
+			}
+		}
+	}
+}

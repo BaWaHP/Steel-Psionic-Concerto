@@ -1,0 +1,601 @@
+###########################
+# 	     NKE Events       #
+###########################
+
+add_namespace = NKE
+
+country_event = {	#维安娜·维尔的秘书
+	id = NKE.0001
+	title = NKE.0001.t
+	desc = NKE.0001.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0002
+				days = 24
+				random_days = 6
+			}
+		}
+	}
+	option = {
+		name = NKE.0001.a
+		add_political_power = -25
+	}
+}
+
+country_event = {	#维安娜·维尔的新秘书
+	id = NKE.0002
+	title = NKE.0002.t
+	desc = NKE.0002.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0003
+				days = 22
+				random_days = 6
+			}
+		}
+	}
+	option = {
+		name = NKE.0002.a
+		add_political_power = -25
+	}
+}
+
+country_event = {	#维安娜·维尔的晚宴
+	id = NKE.0003
+	title = NKE.0003.t
+	desc = NKE.0003.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0004
+				days = 20
+				random_days = 6
+			}
+		}
+	}
+	option = {
+		name = NKE.0003.a
+		add_political_power = -25
+	}
+}
+
+country_event = {	#维安娜·维尔的新秘书
+	id = NKE.0004
+	title = NKE.0004.t
+	desc = NKE.0004.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0005
+				days = 18
+				random_days = 6
+			}
+		}
+	}
+	option = {
+		name = NKE.0004.a
+		add_political_power = -25
+	}
+}
+
+country_event = {	#维安娜·维尔重新装潢总统府
+	id = NKE.0005
+	title = NKE.0005.t
+	desc = NKE.0005.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0006
+				days = 16
+				random_days = 6
+			}
+		}
+	}
+	option = {
+		name = NKE.0005.a
+		add_political_power = -50
+	}
+}
+
+country_event = {	#维安娜·维尔在总统府举办秘密派对
+	id = NKE.0006
+	title = NKE.0006.t
+	desc = NKE.0006.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = NKE.0101
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = NKE.0006.a
+		add_political_power = -50
+	}
+}
+
+news_event = {	#维安娜·维尔被发现涉嫌严重贪污腐败！
+	id = NKE.0101
+	title = NKE.0101.t
+    desc = {
+        text = NKE.0101.desc.a
+        trigger = {
+            tag = NKE
+        }
+    }
+    desc = {
+        text = NKE.0101.desc
+    }
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { tag = NKE }
+				set_country_flag = NKE_Viana_Weil_corrupt
+				add_stability = -0.1
+				mark_focus_tree_layout_dirty = yes
+				add_country_leader_trait = the_corruption_group
+			}
+		}
+	}
+	option = {
+		name = NKE.0101.a
+		trigger = { tag = NKE }
+		effect_tooltip = {
+			set_country_flag = NKE_Viana_Weil_corrupt
+			add_stability = -0.1
+			mark_focus_tree_layout_dirty = yes
+			add_country_leader_trait = the_corruption_group
+		}
+		if = {
+			limit = { has_country_flag = NKE_national_university_built }
+			country_event = NKE.3006
+		}
+	}
+	option = {
+		name = NKE.0101.b
+		trigger = { NOT = { tag = NKE } }
+	}
+}
+
+country_event = {	#审判维安娜·维尔
+	id = NKE.0201
+	title = NKE.0201.t
+	desc = NKE.0201.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = NKE_Viana_Weil_down
+	}
+	option = {
+		name = NKE.0201.a
+		add_political_power = 250
+		country_event = NKE.0202
+	}
+	option = {
+		name = NKE.0201.b
+		add_political_power = 250
+		country_event = NKE.0203
+	}
+	option = {
+		name = NKE.0201.c
+		add_political_power = 250
+		country_event = NKE.0204
+	}
+}
+
+country_event = {	#维安娜·维尔的命运
+	id = NKE.0202
+	title = NKE.0202.t
+	desc = NKE.0202.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.0202.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#维安娜·维尔的命运
+	id = NKE.0203
+	title = NKE.0203.t
+	desc = NKE.0203.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.0203.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#维安娜·维尔的命运
+	id = NKE.0204
+	title = NKE.0204.t
+	desc = NKE.0204.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.0204.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#皮奥瑞亚提出合作条约
+	id = NKE.1001
+	title = NKE.1001.t
+	desc = NKE.1001.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.1001.a
+		add_ideas = NKE_Peoria_cooperation_pact
+	}
+	option = {
+		name = NKE.1001.b
+		trigger = {
+			NOT = { has_idea = PEO_peo_permanent_econ_representative }
+		}
+		add_ideas = NKE_Peoria_cooperation_pact_refused
+	}
+}
+
+country_event = {	#皮奥瑞亚汇来一笔援助
+	id = NKE.1002
+	title = NKE.1002.t
+	desc = NKE.1002.desc
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+	}
+	option = {
+		name = NKE.1002.a
+		trigger = {
+			OR = {
+				NOT = { has_country_flag = NKE_Viana_Weil_corrupt }
+				has_country_flag = NKE_Viana_Weil_down
+			}
+		}
+		add_political_power = 100
+		SPC_living_standard_development_amount_up_2 = yes
+		SPC_industrial_development_amount_up_1 = yes
+	}
+	option = {
+		name = NKE.1002.b
+		trigger = {
+			has_country_flag = NKE_Viana_Weil_corrupt
+			NOT = { has_country_flag = NKE_Viana_Weil_down }
+		}
+		add_political_power = 50
+		SPC_living_standard_development_amount_up_1 = yes
+	}
+}
+
+country_event = {	#汀原市建成
+	id = NKE.1101
+	title = NKE.1101.t
+	desc = NKE.1101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.1101.a
+		265 = {
+			set_state_category = large_city
+		}
+		add_ideas = NKE_pearl_of_the_ocean
+		set_province_name = { id = 20398 name = "汀原市" }
+		add_victory_points = {
+			province = 20398
+			value = 10
+		}
+	}
+}
+
+country_event = {	#指挥官培训完成
+	id = NKE.2001
+	title = NKE.2001.t
+	desc = NKE.2001.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.2001.a
+	}
+}
+
+country_event = {	#李希-苏瓦特训完成
+	id = NKE.2002
+	title = NKE.2002.t
+	desc = NKE.2002.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.2002.a
+		NKE_Lihi_Suvha = {
+			add_skill_level = 1
+			add_attack = 1
+			add_defense = 2
+			add_planning = 1
+			add_max_trait = 2
+			add_unit_leader_trait = ranger
+			add_unit_leader_trait = trickster
+		}
+	}
+}
+
+country_event = {	#绝不屈服！
+	id = NKE.2101
+	title = NKE.2101.t
+	desc = NKE.2101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.2101.a
+		add_timed_idea = {
+			idea = NKE_final_devotion
+			days = 90
+		}
+		set_variable = { war_exhaustion = 0 }
+		custom_effect_tooltip = NKE_the_final_devotion_tt
+		add_manpower = 50000
+	}
+}
+
+country_event = {	#确定大学选址
+	id = NKE.3001
+	title = NKE.3001.t
+	desc = NKE.3001.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_variable = { NKE_national_university_build_phase = 1 }
+		set_variable = { NKE_national_university_quality = 0 }
+	}
+	option = {
+		name = NKE.3001.a
+		add_to_variable = { NKE_national_university_quality = -1 }
+		set_variable = { NKE_national_university_cost = 0 }
+	}
+	option = {
+		name = NKE.3001.b
+		set_variable = { NKE_national_university_cost = 1 }
+	}
+	option = {
+		name = NKE.3001.c
+		add_to_variable = { NKE_national_university_quality = 1 }
+		set_variable = { NKE_national_university_cost = 2 }
+	}
+}
+
+country_event = {	#聘请授课教师
+	id = NKE.3002
+	title = NKE.3002.t
+	desc = NKE.3002.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_variable = { NKE_national_university_build_phase = 3 }
+	}
+	option = {
+		name = NKE.3002.a
+		add_to_variable = { NKE_national_university_quality = -1 }
+	}
+	option = {
+		name = NKE.3002.b
+		add_political_power = -125
+	}
+	option = {
+		name = NKE.3002.c
+		add_to_variable = { NKE_national_university_quality = 1 }
+		add_political_power = -250
+	}
+}
+
+country_event = {	#遴选入学新生
+	id = NKE.3003
+	title = NKE.3003.t
+	desc = NKE.3003.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_variable = { NKE_national_university_build_phase = 5 }
+	}
+	option = {
+		name = NKE.3003.a
+		add_to_variable = { NKE_national_university_quality = -2 }
+		add_political_power = 150
+	}
+	option = {
+		name = NKE.3003.b
+		add_political_power = 50
+	}
+	option = {
+		name = NKE.3003.c
+		add_to_variable = { NKE_national_university_quality = 1 }
+	}
+	option = {
+		name = NKE.3003.d
+		add_to_variable = { NKE_national_university_quality = 2 }
+		add_political_power = -50
+		trigger = {
+			has_idea = NKE_Alpha_Mentur
+		}
+	}
+}
+
+country_event = {	#汀原大学建成！
+	id = NKE.3004
+	title = NKE.3004.t
+	desc = NKE.3004.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = NKE_national_university_built
+		set_country_flag = NKE_national_university_renamed
+		clear_variable = NKE_national_university_build_phase
+	}
+	option = {
+		name = NKE.3004.a
+		trigger = { check_variable = { NKE_national_university_quality = -4 } }
+		add_ideas = NKE_national_university_0
+	}
+	option = {
+		name = NKE.3004.b
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = -3 }
+				check_variable = { NKE_national_university_quality = -2 }
+			}
+		}
+		add_ideas = NKE_national_university_1
+	}
+	option = {
+		name = NKE.3004.c
+		trigger = {
+			OR = {
+				NOT = { has_variable = NKE_national_university_quality }
+				check_variable = { NKE_national_university_quality = -1 }
+				check_variable = { NKE_national_university_quality = 0 }
+				check_variable = { NKE_national_university_quality = 1 }
+			}
+		}
+		add_research_slot = 1
+		add_ideas = NKE_national_university_2
+	}
+	option = {
+		name = NKE.3004.d
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = 2 }
+				check_variable = { NKE_national_university_quality = 3 }
+			}
+		}
+		add_research_slot = 1
+		add_ideas = NKE_national_university_3
+	}
+	option = {
+		name = NKE.3004.e
+		trigger = { check_variable = { NKE_national_university_quality = -4 } }
+		add_research_slot = 2
+		add_ideas = NKE_national_university_4
+	}
+}
+
+country_event = {	#维安娜·维尔大学建成！
+	id = NKE.3005
+	title = NKE.3005.t
+	desc = NKE.3005.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_country_flag = NKE_national_university_built
+		clear_variable = NKE_national_university_build_phase
+	}
+	option = {
+		name = NKE.3005.a
+		trigger = { check_variable = { NKE_national_university_quality = -4 } }
+		add_ideas = NKE_national_university_0
+	}
+	option = {
+		name = NKE.3005.b
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = -3 }
+				check_variable = { NKE_national_university_quality = -2 }
+			}
+		}
+		add_ideas = NKE_national_university_1
+	}
+	option = {
+		name = NKE.3005.c
+		trigger = {
+			OR = {
+				NOT = { has_variable = NKE_national_university_quality }
+				check_variable = { NKE_national_university_quality = -1 }
+				check_variable = { NKE_national_university_quality = 0 }
+				check_variable = { NKE_national_university_quality = 1 }
+			}
+		}
+		add_research_slot = 1
+		add_ideas = NKE_national_university_2
+	}
+	option = {
+		name = NKE.3005.d
+		trigger = {
+			OR = {
+				check_variable = { NKE_national_university_quality = 2 }
+				check_variable = { NKE_national_university_quality = 3 }
+			}
+		}
+		add_research_slot = 1
+		add_ideas = NKE_national_university_3
+	}
+	option = {
+		name = NKE.3005.e
+		trigger = { check_variable = { NKE_national_university_quality = -4 } }
+		add_research_slot = 2
+		add_ideas = NKE_national_university_4
+	}
+}
+
+country_event = {	#将维安娜·维尔大学改名
+	id = NKE.3006
+	title = NKE.3006.t
+	desc = NKE.3006.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.3006.a
+		set_country_flag = NKE_national_university_renamed
+	}
+	option = {
+		name = NKE.3006.b
+	}
+}
+
+country_event = {	#国歌
+	id = NKE.3101
+	title = NKE.3101.t
+	desc = NKE.3101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = NKE.3101.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}

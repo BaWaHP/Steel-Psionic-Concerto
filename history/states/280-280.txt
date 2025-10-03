@@ -1,0 +1,25 @@
+
+state={
+	id=280
+	name="STATE_280"
+	provinces={
+		1775 3855 8050 11603 16760 16840 16946 17209 
+	}
+	resources = {
+		tungsten = 48
+	}
+	history={
+		owner = SOT
+		add_core_of = SOT
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			16946 3
+		}
+	}
+	manpower=240000
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

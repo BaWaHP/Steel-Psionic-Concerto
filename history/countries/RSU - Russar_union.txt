@@ -1,0 +1,315 @@
+﻿capital = 317
+
+oob = "RSU"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "RSU_naval"
+	else = {
+		set_naval_oob = "RSU_naval_legacy"
+	}
+}
+
+set_convoys = 0
+set_stability = 0.8
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = liberal_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 4
+	revolutionary_communism = 25
+	worldunion_socialist = 6
+	worldunion_democrat = 16
+	liberal_republican = 25
+	conservative_republican = 13
+	authoritarian_republican = 3
+	national_socialist = 1
+	authoritarian_nationalism = 2
+	paternal_autocrat = 1
+	wizard_rules = 0
+	religious_extremism = 1
+	anarchism = 3
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	caster_recon_weapons_1 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			smoke_generator = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+#坦克及装甲模板
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "高傲级"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = wet_ammo_storage
+			special_type_slot_3 = additional_machine_guns
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+		}
+		upgrades = { tank_nsb_engine_upgrade = 9 }
+	}
+}
+
+#空军模板#
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "福莱海特级"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+		}
+	}
+	create_equipment_variant = {
+		name = "信天翁级"
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_1_1x
+		}
+	}
+	create_equipment_variant = {
+		name = "苍鹰级"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+}
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "水獭级潜艇"
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1 
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot =ship_torpedo_sub_1
+		}
+	}
+	create_equipment_variant = {
+		name = "荷兹舞步级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_sweeper_1
+		}
+	}
+	create_equipment_variant = {
+		name = "交响乐级巡洋舰"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+
+#领导人
+recruit_character = RSU_stade_eger
+recruit_character = RSU_boden_west
+recruit_character = RSU_edelweiss_nesta
+recruit_character = RSU_teresa_meyerena
+recruit_character = RSU_edilvan_hegobogen
+recruit_character = RSU_free_enterprise_conservancy
+recruit_character = RSU_the_vassal_senate
+#内阁
+recruit_character = RSU_ludwig_hirschmann
+recruit_character = RSU_evert_otto
+recruit_character = RSU_dekrit_amos
+recruit_character = RSU_osgoodie_corridor
+recruit_character = RSU_juliana_gurdwey
+recruit_character = RSU_fritz_wayne
+recruit_character = RSU_byrdine_bott
+recruit_character = RSU_albert_berg
+#军官团
+recruit_character = RSU_ernst_fernando
+recruit_character = RSU_wallenstein_eleta_horstbach
+recruit_character = RSU_massimilian_conrad
+recruit_character = RSU_magnus_conrad
+recruit_character = RSU_otto_corean_tellis
+recruit_character = RSU_bernhard_christian
+recruit_character = RSU_vans_walken
+recruit_character = RSU_wendy_zedricket
+recruit_character = RSU_klas_tilly
+recruit_character = RSU_mansfield_palatine
+recruit_character = RSU_arnim_morris
+recruit_character = RSU_broome_rosnans
+recruit_character = RSU_braden_field
+recruit_character = RSU_hefer_ettantitha
+recruit_character = RSU_horne_oakes_dunn
+#理论家
+recruit_character = RSU_eric_hoffmann
+recruit_character = RSU_august_zimmermann
+recruit_character = RSU_elvin_lyman
+recruit_character = RSU_erich_mayer
+recruit_character = RSU_ione_wise
+recruit_character = RSU_carla_vogel
+#将领\
+recruit_character = RSU_antoine_haveros
+recruit_character = RSU_van_windertap
+recruit_character = RSU_hayes_dipren
+recruit_character = RSU_rabert_wendtemp
+recruit_character = RSU_chris_ottati
+recruit_character = RSU_karl_ancol
+
+add_ideas = {
+	RSU_torn_society
+	RSU_transport_key_of_south_bastia
+	RSU_perfect_market_econ
+	RSU_rusty_war_machine
+}
+
+add_dynamic_modifier = { modifier = RSU_majestic_haze }

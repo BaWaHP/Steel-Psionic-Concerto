@@ -1,0 +1,313 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_WOM_startup_effect = {
+	if = {
+		limit = { tag = WOM }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = reinforced_training
+		add_ideas = civilian_economy
+		add_ideas = limited_exports
+		add_ideas = normal_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = aggressive_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = normally_living
+		add_ideas = relatively_comfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_government_target
+		add_ideas = RP_asisting_research
+		add_ideas = IP_funding_proj
+		add_ideas = WP_basic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_Wome_people
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_moralism
+		add_ideas = SXP_recessing_policy
+		###其它开局设置
+		country_event = {
+			id = WOM.0
+			days = 30
+		}
+		country_event = {
+			id = WOM.3
+			days = 360
+		}
+		country_event = {
+			id = WOM.8
+			days = 730
+		}
+		#GLV = {
+		#	country_event = {
+		#		id = WOM_skeleton.1
+		#		days = 400
+		#	}
+		#}
+		###控制省份对应普及度###
+		every_owned_state = {
+			88 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			90 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			69 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 5 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			68 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			66 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			67 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			71 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			70 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			64 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			62 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			63 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			64 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			61 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+		}
+	}
+}
+
+WOM_black_frost_crisis_effect = {
+	#沃姆经济危机
+	#对内内容
+	
+	#对外内容
+	random_list = {
+		50 = {
+			IPK = {
+				annex_country = {
+					target = BCC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = TCL
+					transfer_troops = yes
+				}
+				every_owned_state = {
+					add_core_of = IPK
+				}
+			}
+		}
+		25 = {
+			BCC = {
+				annex_country = {
+					target = IPK
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = TCL
+					transfer_troops = yes
+				}
+				every_owned_state = {
+					add_core_of = BCC
+				}
+			}
+		}
+		25 = {
+			TCL = {
+				annex_country = {
+					target = IPK
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = BCC
+					transfer_troops = yes
+				}
+				every_owned_state = {
+					add_core_of = TCL
+				}
+			}
+		}
+	}
+}
+
+WOM_civil_war_begin_effect = {
+	#沃姆内战统一效果
+	#对内内容
+	WOM_influence_faction_icon_dismantle = yes
+	#load_oob = "WOM_civil_war"
+	country_event = {
+		id = WOM.9
+		days = 7
+	}
+	#SLR
+	90 = { add_core_of = SLR transfer_state_to = SLR }
+	94 = { add_core_of = SLR transfer_state_to = SLR }
+	SLR = { 
+		SPC_startup_for_laters_scripted_effect = yes load_oob = "SLR" 
+		country_event = {
+			id = WOM.9
+			days = 7
+		}
+	}
+	#PRF
+	63 = { add_core_of = PRF transfer_state_to = PRF }
+	64 = { add_core_of = PRF transfer_state_to = PRF }
+	70 = { add_core_of = PRF transfer_state_to = PRF }
+	71 = { add_core_of = PRF transfer_state_to = PRF }
+	PRF = { 
+		SPC_startup_for_laters_scripted_effect = yes inherit_technology = WOM load_oob = "PRF_1"
+		country_event = {
+			id = WOM.9
+			days = 7
+		} 
+	}
+	#IRC
+	62 = { add_core_of = IRC transfer_state_to = IRC }
+	61 = { add_core_of = IRC transfer_state_to = IRC }
+	IRC = { 
+		SPC_startup_for_laters_scripted_effect = yes inherit_technology = WOM load_oob = "IRC" 
+		country_event = {
+			id = WOM.9
+			days = 7
+		}
+	}
+
+	if = {
+		limit = { WOM = { has_government = paternal_autocrat } }
+		news_event = WOMNews.7
+		WOM_civil_war_begin_effect_alt = yes
+	}
+	else = {
+		news_event = WOMNews.6
+	}
+}
+
+WOM_civil_war_begin_effect_alt = {
+	PRF = {
+		set_politics = {
+			ruling_party = worldunion_socialist
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.15
+		}
+		swap_ideas = {
+			remove_idea = PRF_defend_the_revolution
+			add_idea = PRF_big_tent_government
+		}
+	}
+	88 = { add_core_of = PRF transfer_state_to = PRF }
+	68 = { add_core_of = PRF transfer_state_to = PRF }
+	62 = { remove_core_of = IRC transfer_state_to = WOM }
+	61 = { remove_core_of = IRC transfer_state_to = WOM }
+	PRF = { load_oob = "PRF_2" }
+}
+
+WOM_influence_faction_icon_setup = {
+	set_country_flag = WOM_influence_faction_icon
+}
+
+WOM_influence_faction_icon_remove = {
+	leave_faction = yes
+	clr_country_flag = WOM_influence_faction_icon
+	drop_cosmetic_tag = yes
+}
+
+WOM_influence_faction_icon_dismantle = {
+	every_country = {
+		limit = { has_country_flag = WOM_influence_faction_icon }
+		WOM_influence_faction_icon_remove = yes
+	}
+	dismantle_faction = yes
+}

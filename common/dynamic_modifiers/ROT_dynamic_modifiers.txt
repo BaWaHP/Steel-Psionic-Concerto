@@ -1,0 +1,122 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+ROT_gateway_to_cb = {	#通往中巴的门户
+	enable = { always = yes }
+
+	icon = GFX_idea_ROT_gateway_to_cb
+
+	recruitable_population_factor = -0.2
+	state_production_speed_buildings_factor = 0.2
+}
+
+ROT_holy_city_of_mourning = {	#恸哭之圣城
+	enable = { always = yes }
+
+	icon = GFX_idea_ROT_holy_city_of_mourning
+
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = 0.3
+}
+
+ROT_a_national_revolution = {	#全民族的革命
+	enable = { always = yes }
+
+	icon = GFX_idea_FRA_la_deluge
+
+	political_power_cost = ROT_a_national_revolution_ppc
+	stability_factor = ROT_a_national_revolution_sf
+	production_factory_efficiency_gain_factor = ROT_a_national_revolution_pfegf
+	industry_free_repair_factor = ROT_a_national_revolution_ifrf
+	consumer_goods_factor = ROT_a_national_revolution_cgf
+	production_lack_of_resource_penalty_factor = ROT_a_national_revolution_plorp
+	conscription_factor = ROT_a_national_revolution_cf
+	industrial_capacity_factory = ROT_a_national_revolution_icf
+	army_org_factor = ROT_a_national_revolution_aof
+	conscription = ROT_a_national_revolution_c
+	political_power_factor = ROT_a_national_revolution_ppf
+	production_speed_buildings_factor = ROT_a_national_revolution_psb
+}
+
+#虹灯港
+ROT_rainbow_lantern_harbor = {
+	enable = { always = yes }
+	icon = GFX_idea_brooklyn_naval_yard
+
+	local_supply_impact_factor = -0.1
+	army_speed_factor_for_controller = 0.05
+}
+
+#瑞柏超级港口
+ROT_riviera_super_port = {
+	enable = { always = yes }
+	icon = GFX_idea_SOV_an_empire_in_the_pacific_idea_ccp_sov_compatibility
+
+	state_production_speed_buildings_factor = 0.1
+	local_supply_impact_factor = 0.15
+}
+
+#大屠杀纪念馆
+ROT_massacre_memorial_hall = {
+	enable = { always = yes }
+	icon = GFX_idea_SWE_hungershield
+
+	recruitable_population_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+	army_core_defence_factor = 0.1
+}
+
+#解放者巨像
+ROT_liberator_colossus = {
+	enable = { always = yes }
+	icon = GFX_idea_SWI_spirit_of_helvetia_defensive_peace
+
+	army_speed_factor_for_controller = 0.1
+	state_production_speed_buildings_factor = 0.1
+}
+
+#摘心岛防卫
+ROT_heart_island_defense_idea = {
+	enable = { always = yes }
+	icon = GFX_idea_FRA_fortification_focus
+
+	army_core_defence_factor = 0.1
+	state_production_speed_bunker_factor = 0.1
+	state_production_speed_coastal_bunker_factor = 0.1
+	state_production_speed_radar_station_factor = 0.1
+}
+
+#自由贸易区
+ROT_free_trade_zone = {
+	enable = { always = yes }
+	icon = GFX_idea_FRA_fortification_focus
+
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = 0.2
+	local_building_slots_factor = 0.1
+	local_magic_development_monthly = 0.005
+	local_science_development_monthly = 0.005
+}

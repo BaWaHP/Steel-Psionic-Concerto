@@ -1,0 +1,851 @@
+characters={
+
+	RSU_stade_eger = {		#施塔德·埃格
+   		name = RSU_stade_eger
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_stade_eger"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_stade_eger"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = market_liberalism
+			desc = RSU_stade_eger_desc
+   			traits = { tired_compromiser }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_boden_west = {		#博登·韦斯特
+   		name = RSU_boden_west
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = democratic_traditionalism
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_reinhart_sudem = {		#莱恩哈特·苏德姆
+   		name = RSU_reinhart_sudem
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_reinhart_sudem"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_reinhart_sudem"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	RSU_edelweiss_nesta = {		#爱德怀斯·内斯塔
+   		name = RSU_edelweiss_nesta
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_edelweiss_nesta"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_edelweiss_nesta"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = utopian_socialism
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_teresa_meyerena = {		#特蕾莎·梅耶蕾娜
+   		name = RSU_teresa_meyerena
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_teresa_meyerena"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_teresa_meyerena"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = social_democrat
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_edilvan_hegobogen = {		#爱迪尔梵·黑戈博根
+   		name = RSU_edilvan_hegobogen
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_edilvan_hegobogen"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_edilvan_hegobogen"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = revolutionary_communism_subtype
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_free_enterprise_conservancy = {		#自由企业保护协会
+   		name = RSU_free_enterprise_conservancy
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_capitalism
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_the_vassal_senate = {		#“诸侯”元老会
+   		name = RSU_the_vassal_senate
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = oligarchy
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSU_ludwig_hirschmann = {	#路德维希·赫斯曼
+		name = RSU_ludwig_hirschmann
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_ludwig_hirschmann_idea
+			traits = { writer technocrat }
+		}
+	}
+
+	RSU_evert_otto = {	#艾弗特·奥托
+		name = RSU_evert_otto
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_evert_otto_idea
+			traits = { pioneer_of_industry }
+		}
+	}
+
+	RSU_dekrit_amos = {	#德克里克特·阿墨斯
+		name = RSU_dekrit_amos
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_dekrit_amos_idea
+			traits = { silent_workhorse magic_expert }
+		}
+	}
+
+	RSU_osgoodie_corridor = {	#奥斯戈提·科里德
+		name = RSU_osgoodie_corridor
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_osgoodie_corridor_idea
+			traits = { popular_figurehead industrial_oligarchs }
+		}
+	}
+
+	RSU_juliana_gurdwey = {	#朱莉安娜·古尔德薇
+		name = RSU_juliana_gurdwey
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_juliana_gurdwey_idea
+			traits = { princess_of_terror backroom_backstabber }
+		}
+	}
+
+	RSU_fritz_wayne = {	#弗里兹·韦恩
+		name = RSU_fritz_wayne
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_fritz_wayne_idea
+			traits = { smooth_talking_swindler }
+		}
+	}
+
+	RSU_byrdine_bott = {	#拜尔迪恩·博特
+		name = RSU_byrdine_bott
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_byrdine_bott_idea
+			traits = { financial_expert armament_enthusiasts }
+		}
+	}
+
+	RSU_albert_berg = {	#阿尔伯特·伯格
+		name = RSU_albert_berg
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = RSU_albert_berg_idea
+			traits = { war_industrialist }
+		}
+	}
+
+	RSU_ernst_fernando = {	#恩斯特·费尔南多
+		name = RSU_ernst_fernando
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = RSU_ernst_fernando_idea
+			traits = { army_chief_offensive_2 }
+		}
+	}
+
+	RSU_wallenstein_eleta_horstbach = {	#华伦斯坦·艾莉塔·霍斯特巴赫
+		name = RSU_wallenstein_eleta_horstbach
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = RSU_wallenstein_eleta_horstbach_idea
+			traits = { army_logistics_2 }
+		}
+	}
+
+	RSU_massimilian_conrad = {	#马西米利安·康拉德
+		name = RSU_massimilian_conrad
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = RSU_massimilian_conrad_idea
+			traits = { army_concealment_2 }
+		}
+	}
+
+	RSU_magnus_conrad = {	#马格努斯·康拉德
+		name = RSU_magnus_conrad
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = navy_chief
+			idea_token = RSU_magnus_conrad_idea
+			traits = { navy_submarine_1 }
+		}
+	}
+
+	RSU_otto_corean_tellis = {	#奥托·柯瑞安·泰利斯
+		name = RSU_otto_corean_tellis
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = navy_chief
+			idea_token = RSU_otto_corean_tellis_idea
+			traits = { navy_chief_commerce_raiding_1 }
+		}
+	}
+
+	RSU_bernhard_christian = {	#伯恩哈德·克里斯蒂安
+		name = RSU_bernhard_christian
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = navy_chief
+			idea_token = RSU_bernhard_christian_idea
+			traits = { navy_chief_maneuver_2 }
+		}
+	}
+
+	RSU_vans_walken = {	#范尔斯·沃肯
+		name = RSU_vans_walken
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = RSU_vans_walken_idea
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+
+	RSU_wendy_zedricket = {	#温蒂·泽德里凯特
+		name = RSU_wendy_zedricket
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = air_chief
+			idea_token = RSU_wendy_zedricket_idea
+			traits = { air_chief_reform_3 }
+		}
+	}
+
+	RSU_klas_tilly = {	#克拉斯·蒂利
+		name = RSU_klas_tilly
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RSU_klas_tilly_idea
+			traits = { army_infantry_2 }
+		}
+	}
+
+	RSU_mansfield_palatine = {	#曼斯菲尔德·帕拉汀
+		name = RSU_mansfield_palatine
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RSU_mansfield_palatine_idea
+			traits = { army_regrouping_2 }
+		}
+	}
+
+	RSU_arnim_morris = {	#阿尼姆·莫里斯
+		name = RSU_arnim_morris
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = RSU_arnim_morris_idea
+			traits = { army_armored_1 }
+		}
+	}
+
+	RSU_broome_rosnans = {	#布鲁姆·罗斯南斯
+		name = RSU_broome_rosnans
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RSU_broome_rosnans_idea
+			traits = { air_tactical_bombing_2 }
+		}
+	}
+
+	RSU_braden_field = {	#布莱登·菲尔德
+		name = RSU_braden_field
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RSU_braden_field_idea
+			traits = { air_air_combat_training_2 }
+		}
+	}
+
+	RSU_hefer_ettantitha = {	#海弗尔·艾坦提塔
+		name = RSU_hefer_ettantitha
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = RSU_hefer_ettantitha_idea
+			traits = { air_naval_strike_1 }
+		}
+	}
+
+	RSU_horne_oakes_dunn = {	#霍恩·奥克斯邓恩
+		name = RSU_horne_oakes_dunn
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = RSU_horne_oakes_dunn_idea
+			traits = { navy_screen_2 }
+		}
+	}
+    #理论家
+   	RSU_eric_hoffmann = { #埃里克·霍夫曼
+		name = RSU_eric_hoffmann
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_eric_hoffmann
+				small = GFX_portrait_RSU_eric_hoffmann_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			ledger = army
+			idea_token = RSU_eric_hoffmann
+			allowed = { original_tag = RSU }
+			traits = { mobile_warfare_expert }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_august_zimmermann = { #奥古斯特·齐默曼
+		name = RSU_august_zimmermann
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_august_zimmermann
+				small = GFX_portrait_RSU_august_zimmermann_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			ledger = army
+			idea_token = RSU_august_zimmermann
+			allowed = { original_tag = RSU }
+			traits = { superior_firepower_expert }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_elvin_lyman = { #埃尔文·克里斯特瑞·莱曼
+		name = RSU_elvin_lyman
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_elvin_lyman
+				small = GFX_portrait_RSU_elvin_lyman_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			ledger = navy
+			idea_token = RSU_elvin_lyman
+			allowed = { original_tag = RSU }
+			traits = { submarine_specialist }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_erich_mayer = { #埃里希·迈尔
+		name = RSU_erich_mayer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_erich_mayer
+				small = GFX_portrait_RSU_erich_mayer_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			ledger = navy
+			idea_token = RSU_erich_mayer
+			allowed = { original_tag = RSU }
+			traits = { naval_theorist }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_ione_wise = { #伊翁·维斯
+		name = RSU_ione_wise
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_ione_wise
+				small = GFX_portrait_RSU_ione_wise_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			ledger = air
+			idea_token = RSU_ione_wise
+			allowed = { original_tag = RSU }
+			traits = { close_air_support_proponent }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_carla_vogel = { #卡拉·沃格尔
+		name = RSU_carla_vogel
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RSU_carla_vogel
+				small = GFX_portrait_RSU_carla_vogel_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = RSU_carla_vogel
+			allowed = { original_tag = RSU }
+			traits = { air_warfare_theorist }
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+	RSU_antoine_haveros = { #安托德桑纳·海弗洛斯
+		name = RSU_antoine_haveros
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_antoine_haveros"
+				small = "GFX_portrait_RSU_antoine_haveros_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_antoine_haveros"
+				small = "GFX_portrait_RSU_antoine_haveros_small"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			traits = { fast_planner war_hero old_guard }
+		}
+	}
+	RSU_van_windertap = { #范·温德泰普
+		name = RSU_van_windertap
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_van_windertap"
+				small = "GFX_portrait_RSU_van_windertap_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_van_windertap"
+				small = "GFX_portrait_RSU_van_windertap_small"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 5
+			traits = { panzer_leader war_hero }
+		}
+	}
+	RSU_hayes_dipren = { #海斯·迪普伦
+		name = RSU_hayes_dipren
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_hayes_dipren"
+				small = "GFX_portrait_RSU_hayes_dipren_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_hayes_dipren"
+				small = "GFX_portrait_RSU_hayes_dipren_small"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { politically_connected career_officer RSU_left_wing_sympathisers }
+		}
+	}
+	RSU_rabert_wendtemp = { #拉伯特·温德泰普
+		name = RSU_rabert_wendtemp
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_rabert_wendtemp"
+				small = "GFX_portrait_RSU_rabert_wendtemp_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_rabert_wendtemp"
+				small = "GFX_portrait_RSU_rabert_wendtemp_small"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { brilliant_strategist infantry_leader RSU_left_wing_sympathisers }
+		}
+	}
+	RSU_chris_ottati = { #克里斯·奥塔提
+		name = RSU_chris_ottati
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_chris_ottati"
+				small = "GFX_portrait_RSU_chris_ottati_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_chris_ottati"
+				small = "GFX_portrait_RSU_chris_ottati_small"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { infantry_leader inflexible_strategist }
+		}
+	}
+	RSU_karl_ancol = { #卡尔·克里斯蒂安·安科尔
+		name = RSU_karl_ancol
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RSU_karl_ancol"
+				small = "GFX_portrait_RSU_karl_ancol_small"
+			}
+			army = {
+				large = "GFX_portrait_RSU_chris_ottati"
+				small = "GFX_portrait_RSU_chris_ottati_small"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { commando trait_mountaineer }
+		}
+	}
+}

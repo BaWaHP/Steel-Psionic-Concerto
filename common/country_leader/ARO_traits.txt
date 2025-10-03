@@ -1,0 +1,114 @@
+leader_traits = {
+
+	king_of_virtue_n_peace = {		#贤安王
+		random = no
+		
+		production_speed_industrial_complex_factor = 0.1
+		authoritarian_republican_drift = 0.15
+		required_garrison_factor = -0.15
+		stability_factor = 0.1
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lovethirst_empress = {		#缺爱的女皇
+		random = no
+		
+		national_socialist_drift = 0.05
+		authoritarian_nationalism_drift = 0.1
+		war_support_factor = 0.1
+		political_power_cost = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Andarc_octupus = {		#昂达克的八爪鱼
+		random = no
+		
+		monthly_industrial_development_process = 2
+		political_advisor_cost_factor = -0.25
+		war_support_factor = -0.05
+		surrender_limit = -0.1
+		authoritarian_republican_drift = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ruthless_Aurora_bishop = {		#冷酷奥罗拉主教
+		random = no
+		
+		research_speed_factor = 0.05
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_saint_of_Verjie = {		#维尔日的圣女
+		random = no
+		
+		religious_extremism_drift = 0.2
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ARO_masterful_puppeteer = {		#操偶大师
+		random = no
+		
+		operative_slot = 2
+		compliance_growth = 0.15
+		intel_from_operatives_factor = -0.2
+		political_power_cost = 0.1
+		training_time_factor = 0.1
+		agency_upgrade_time = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ARO_mental_morpher = {		#心灵术士
+		random = no
+		
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		consumer_goods_factor = -0.05
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ARO_Adam_Mace_theorist_trait = {
+		random = no
+		sprite = 14
+		cat_mobile_warfare_cost_factor = -0.15
+		non_core_manpower = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ARO_Marlith_Borwisch_theorist_trait = {
+		random = no
+		sprite = 14
+		command_power_gain_mult = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,141 @@
+﻿###########################
+# global Events #
+###########################
+
+#事件
+
+add_namespace = Global
+
+country_event = {		#中巴联盟内战（无需文本）
+	id = Global.1
+	title = Global.1.t
+	desc = Global.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = Global.1.a
+		news_event = GlobalNews.100
+		hidden_effect = {
+			every_country = {
+				set_country_flag = superevent_show_flag
+				set_country_flag = SPC_SE_central_bastia_civil_war_flag
+				scoped_play_song = "SE_central_bastia_civil_war_sound"
+			}
+		}
+	}
+}
+
+country_event = {		#绿洲协定签署（无需文本）
+	id = Global.2
+	title = Global.2.t
+	desc = Global.2d
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = Global.2.a
+		news_event = GlobalNews.4
+		OAS = {
+			#add_to_faction = EOM
+			#add_to_faction = SOT
+			#add_to_faction = DIF
+			#add_to_faction = NOH
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		EOM = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		SOT = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		NOH = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		DIF = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+	}
+}
+
+#新闻
+
+add_namespace = GlobalNews
+
+news_event = {
+	id = GlobalNews.1		#冒险者联盟宣布抵达北极点！
+	title = GlobalNews.1.t
+	desc = GlobalNews.1.d
+	picture = GFX_news_event_generic_34
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = GlobalNews.1.a
+	}
+}
+
+news_event = {
+	id = GlobalNews.2		#海啸袭击南部沿海地区
+	title = GlobalNews.2.t
+	desc = GlobalNews.2.d
+	picture = GFX_news_event_generic_62
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = GlobalNews.2.a
+	}
+}
+
+news_event = {
+	id = GlobalNews.4		#绿洲协定签署
+	title = GlobalNews.4.t
+	desc = GlobalNews.4.d
+	picture = GFX_news_event_generic_40
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GlobalNews.4.a
+	}
+}
+
+news_event = {
+	id = GlobalNews.5		#野生魔晶羊灭绝
+	title = GlobalNews.5.t
+	desc = GlobalNews.5.d
+	picture = GFX_news_event_generic_76
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GlobalNews.5.a
+	}
+}
+

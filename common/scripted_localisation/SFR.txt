@@ -1,0 +1,110 @@
+defined_text = {
+	name = GET_SFR_maintain_the_front_unity
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 79 }
+			check_variable = { SFR_maintain_the_front_unity < 101 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_1
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 59 }
+			check_variable = { SFR_maintain_the_front_unity < 80 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_2
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 39 }
+			check_variable = { SFR_maintain_the_front_unity < 60 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_3
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 19 }
+			check_variable = { SFR_maintain_the_front_unity < 40 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_4
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > -1 }
+			check_variable = { SFR_maintain_the_front_unity < 20 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_5
+	}
+}
+
+defined_text = {
+	name = GET_SFR_maintain_the_front_unity_desc
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 79 }
+			check_variable = { SFR_maintain_the_front_unity < 101 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 59 }
+			check_variable = { SFR_maintain_the_front_unity < 80 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 39 }
+			check_variable = { SFR_maintain_the_front_unity < 60 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > 19 }
+			check_variable = { SFR_maintain_the_front_unity < 40 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { SFR_maintain_the_front_unity > -1 }
+			check_variable = { SFR_maintain_the_front_unity < 20 }
+		}
+		localization_key = GET_SFR_maintain_the_front_unity_desc_5
+	}
+}
+
+defined_text = {
+	name = GET_SFR_workers_and_peasants_congress_desc_1
+	text = {
+		trigger = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		localization_key = GET_SFR_workers_and_peasants_congress_desc_1_on
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GET_SFR_workers_and_peasants_congress_desc_2
+	text = {
+		trigger = { has_completed_focus = SFR_national_assembly_proposal }
+		localization_key = GET_SFR_workers_and_peasants_congress_desc_2_on
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GET_SFR_land_reform_btn_end
+	text = {
+		trigger = { check_variable = { SFR_land_reform_decisions_progress = 100 } }
+		localization_key = "GFX_SFR_land_reform_btn_end_2"
+	}
+	text = {
+		localization_key = "GFX_SFR_land_reform_btn_end_1"
+	}
+}

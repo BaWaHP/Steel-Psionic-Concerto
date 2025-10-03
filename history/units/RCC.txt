@@ -1,0 +1,104 @@
+﻿###templates###
+division_template = {
+	name = "大陆军整编师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		melee_support = { x = 0 y = 1 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "大陆军装甲旅"
+
+	regiments = {
+		light_titan = { x = 0 y = 0 }
+		light_titan = { x = 0 y = 1 }
+		light_titan = { x = 0 y = 2 }
+		light_titan = { x = 0 y = 3 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+
+	support = {
+		light_tank_recon = { x = 0 y = 0 }
+		melee_support = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "大陆军整编师"
+		location = 18643
+		division_template = "大陆军整编师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军装甲旅"
+		location = 18643
+		division_template = "大陆军装甲旅"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军装甲旅"
+		location = 18643
+		division_template = "大陆军装甲旅"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军整编师"
+		location = 11381
+		division_template = "大陆军整编师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军整编师"
+		location = 11381
+		division_template = "大陆军整编师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军装甲旅"
+		location = 11381
+		division_template = "大陆军装甲旅"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军整编师"
+		location = 17922
+		division_template = "大陆军整编师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "大陆军装甲旅"
+		location = 17922
+		division_template = "大陆军装甲旅"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+}

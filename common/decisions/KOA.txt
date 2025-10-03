@@ -1,0 +1,376 @@
+SPC_generic_debug_decision_category = {
+	KOA_debug_load_focus_0 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = KOA }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = FLAG_KOA_willian_win }
+				clr_country_flag = FLAG_KOA_willian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_stanwaf_win }
+				clr_country_flag = FLAG_KOA_stanwaf_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_yulian_win }
+				clr_country_flag = FLAG_KOA_yulian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_focus_2 }
+				clr_country_flag = FLAG_KOA_focus_2
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	KOA_debug_load_focus_1 = {		#
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = KOA }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = FLAG_KOA_willian_win } }
+				set_country_flag = FLAG_KOA_willian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_stanwaf_win }
+				clr_country_flag = FLAG_KOA_stanwaf_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_yulian_win }
+				clr_country_flag = FLAG_KOA_yulian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_focus_2 }
+				clr_country_flag = FLAG_KOA_focus_2
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	KOA_debug_load_focus_2 = {		#
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = KOA }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = FLAG_KOA_willian_win }
+				clr_country_flag = FLAG_KOA_willian_win
+			}
+			if = {
+				limit = { NOT = { has_country_flag = FLAG_KOA_stanwaf_win } }
+				set_country_flag = FLAG_KOA_stanwaf_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_yulian_win }
+				clr_country_flag = FLAG_KOA_yulian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_focus_2 }
+				clr_country_flag = FLAG_KOA_focus_2
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	KOA_debug_load_focus_3 = {		#
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = KOA }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = FLAG_KOA_willian_win }
+				clr_country_flag = FLAG_KOA_willian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_stanwaf_win }
+				clr_country_flag = FLAG_KOA_stanwaf_win
+			}
+			if = {
+				limit = { NOT = { has_country_flag = FLAG_KOA_yulian_win } }
+				set_country_flag = FLAG_KOA_yulian_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_focus_2 }
+				clr_country_flag = FLAG_KOA_focus_2
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	KOA_debug_load_focus_5 = {		#
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = KOA }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = FLAG_KOA_willian_win }
+				set_country_flag = FLAG_KOA_willian_win
+			}
+			if = {
+				limit = { NOT = { has_country_flag = FLAG_KOA_stanwaf_win } }
+				set_country_flag = FLAG_KOA_stanwaf_win
+			}
+			if = {
+				limit = { has_country_flag = FLAG_KOA_yulian_win }
+				clr_country_flag = FLAG_KOA_yulian_win
+			}
+			if = {
+				limit = { NOT = { has_country_flag = FLAG_KOA_focus_2 } }
+				set_country_flag = FLAG_KOA_focus_2
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+KOA_decision_elect_king_category = {  #选王决议
+	KOA_decision_elect_king_stanwaf	= { #斯坦瓦夫开展艺术巡演
+		icon = ger_mefo_bills		
+		cost = 20
+		days_remove = 30
+		fire_only_once = no
+		visible = {
+		}	
+		available = {	
+			NOT = {
+				has_country_flag = FLAG_KOA_stanwaf_exit
+			}
+			NOT = {
+				has_country_flag = KOA_decision_elect_king_already_working
+			}
+		}					
+		ai_will_do = {
+			factor = 1			
+		}
+		complete_effect = {
+			set_country_flag = KOA_decision_elect_king_already_working	
+		}	
+		modifier = {
+			stability_factor = 0.1
+			consumer_goods_factor = 0.05
+	   	}
+		remove_effect = {
+			add_to_variable = { KOA_var_support_stanwaf = 1 }
+			custom_effect_tooltip = KOA_tooltip_var_support_stanwaf_add_1
+			clr_country_flag = KOA_decision_elect_king_already_working
+		}	
+	}
+	KOA_decision_elect_king_willian	= { #威廉举办高校演讲
+		icon = ger_mefo_bills		
+		cost = 20
+		days_remove = 30
+		fire_only_once = no
+		visible = {
+		}	
+		available = {	
+			NOT = {
+				has_country_flag = KOA_decision_elect_king_already_working
+			}		
+		}					
+		ai_will_do = {
+			factor = 1			
+		}
+		complete_effect = {
+			set_country_flag = KOA_decision_elect_king_already_working	
+		}	
+		modifier = {
+			political_power_factor = 0.1
+	   	}
+		remove_effect = {
+			add_to_variable = { KOA_var_support_willian = 1 }
+			custom_effect_tooltip = KOA_tooltip_var_support_willian_add_1
+			clr_country_flag = KOA_decision_elect_king_already_working
+		}	
+	}
+	KOA_decision_elect_king_yulian	= { #于连游历全国
+		icon = ger_mefo_bills		
+		cost = 20
+		days_remove = 30
+		fire_only_once = no
+		visible = {
+		}	
+		available = {
+			NOT = {
+				has_country_flag = KOA_decision_elect_king_already_working
+			}	
+		}					
+		ai_will_do = {
+			factor = 1			
+		}
+		complete_effect = {
+			set_country_flag = KOA_decision_elect_king_already_working
+		}	
+		modifier = {
+			political_power_factor = -0.1
+	   	}
+		remove_effect = {
+			army_experience = 20
+			add_to_variable = { KOA_var_support_yulian = 1 }
+			custom_effect_tooltip = KOA_tooltip_var_support_yulian_add_1
+			clr_country_flag = KOA_decision_elect_king_already_working
+		}
+	}
+	
+}
+
+KOA_resistance_movement_decisions = {
+	KOA_resistance_threat = { 		#抵抗运动威胁
+		icon = GFX_decision_BOL_reintegrate_acre_state
+		allowed = { tag = KOA }
+		available = { always = no }
+		activation = { always = no }
+
+		cancel_trigger = {
+			NOT = {
+				has_idea = KOA_resistance_movement_1
+				has_idea = KOA_resistance_movement_2
+				has_idea = KOA_resistance_movement_3
+				has_idea = KOA_resistance_movement_4
+				has_idea = KOA_resistance_movement_5
+			}
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 90
+
+		timeout_effect = {  
+			KOA_resistance_movement_up_effect = yes
+			activate_mission = KOA_resistance_threat
+		}
+	}
+	#武力镇压北部地区
+	KOA_suppress_north = {
+		icon = GFX_decision_generic_arrest		
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = { command_power > 24 }
+		
+		ai_will_do = {
+			factor = 1			
+		}
+
+		complete_effect = {
+			add_command_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+		}
+
+		remove_effect = {
+			KOA_resistance_movement_down_effect = yes
+		}
+	}
+	#运输救济粮食
+	KOA_transport_relief_food = {
+		icon = GFX_decision_generic_train
+		cost = 50
+		days_remove = 60
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 1			
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			KOA_resistance_movement_down_effect = yes
+		}
+	}
+	#“新明天运动”
+	KOA_new_tomorrow_mov = {
+		icon = GFX_decision_generic_civil_support
+		cost = 100
+		days_remove = 180
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 1			
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.15
+		}
+
+		remove_effect = {
+			310 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			KOA_resistance_movement_up_effect = yes
+		}
+	}
+	#“丹特”行动
+	KOA_dante_action = {
+		icon = GFX_decision_generic_police_action
+		cost = 25
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = KOA_national_education
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+		
+		ai_will_do = {
+			factor = 9999
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			if = {
+				limit = { has_idea = KOA_resistance_movement_1 }
+				remove_ideas = KOA_resistance_movement_1
+			}
+			else_if = {
+				limit = { has_idea = KOA_resistance_movement_2 }
+				remove_ideas = KOA_resistance_movement_2
+			}
+			else_if = {
+				limit = { has_idea = KOA_resistance_movement_3 }
+				remove_ideas = KOA_resistance_movement_3
+			}
+			else_if = {
+				limit = { has_idea = KOA_resistance_movement_4 }
+				remove_ideas = KOA_resistance_movement_4
+			}
+			else_if = {
+				limit = { has_idea = KOA_resistance_movement_5 }
+				remove_ideas = KOA_resistance_movement_5
+			}
+			309 = { add_core_of = ROOT }
+			310 = { add_core_of = ROOT }
+			311 = { add_core_of = ROOT }
+			312 = { add_core_of = ROOT }
+		}
+	}
+}
+

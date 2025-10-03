@@ -1,0 +1,27 @@
+
+state={
+	id=49
+	name="STATE_49"
+	provinces={
+		2917 6474 7893 7998 9797 19923 19938 19990 20008 20021 20100 20125 20152 20167 20253 
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+			19923 = {
+				bunker = 3
+			}
+		}
+		victory_points = {
+			19923 5
+		}
+	}
+	manpower=2210000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

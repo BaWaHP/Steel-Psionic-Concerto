@@ -1,0 +1,32 @@
+
+state={
+	id=172
+	name="STATE_172"
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			19366 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			19366 8
+		}
+
+	}
+
+	provinces={
+		10041 19197 19204 19271 19289 19350 19366 19425 19455 
+	}
+	manpower=2906477
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

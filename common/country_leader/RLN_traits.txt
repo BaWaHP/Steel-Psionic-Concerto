@@ -1,0 +1,76 @@
+leader_traits = {
+
+	RLN_long_night_torchbearer  = {		#长夜中的炬手
+		random = no
+		
+		stability_factor = -0.1
+		conscription_factor = 0.1
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RLN_worker_leader  = {		#工人领袖
+		random = no
+		
+		production_speed_buildings_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		local_resources_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RLN_farmer_coop_represent  = {		#农会代表
+		random = no
+		
+		war_support_factor = 0.15
+		monthly_agricultural_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RLN_command_economy_believer  = {		#指令经济信徒
+		random = no
+		
+		political_power_factor = 0.4
+		monthly_living_standard_development_process = -6
+		research_speed_factor = -0.1
+		production_speed_industrial_complex_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RLN_civil_right_revolutionary  = {		#民权革命家
+		random = no
+		
+		political_power_factor = -0.2
+		stability_factor = 0.05
+		monthly_living_standard_development_process = 2
+		monthly_environment_development_process = 2
+		global_building_slots = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	RLN_revolutionary_war_theory  = {		#革命战争理论
+		random = no
+		
+		land_doctrine_cost_factor = -0.05
+		monthly_military_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

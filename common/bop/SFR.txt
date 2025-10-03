@@ -1,0 +1,339 @@
+SFR_opposition_bop = {
+	initial_value = 1
+	left_side = SFR_opposition_bop_left
+	right_side = SFR_opposition_bop_right
+	decision_category = SFR_opposition_bop_decisions
+
+	range = {
+		id = SFR_opposition_bop_balanced 
+		min = -0.15
+		max = 0.15
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.05
+		}
+	}
+
+	side = {
+		id = SFR_opposition_bop_left
+		icon = GFX_bop_ITA_communism_side
+		range = {
+			id = SFR_opposition_bop_left_3
+			max = -0.8
+			min = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = 0.2
+				global_building_slots_factor = 0.2
+				army_core_defence_factor = 0.1
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_3_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_left_3_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_3_mod
+					}
+				}
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_left_2
+			max = -0.5
+			min = -0.8
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = 0.1
+				global_building_slots_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_2_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_left_2_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_2_mod
+					}
+				}
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_left_1
+			max = -0.15
+			min = -0.5
+			modifier = {
+				conscription_factor = 0.05
+				global_building_slots_factor = 0.05
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_1_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_left_1_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_left_1_mod
+					}
+				}
+			}
+		}
+	}
+
+	side = {
+		id = SFR_opposition_bop_right
+		icon = GFX_bop_ITA_democratic_side
+		range = {
+			id = SFR_opposition_bop_right_1
+			min = 0.15
+			max = 0.5
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_1_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_right_1_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_1_mod
+					}
+				}
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_right_2
+			min = 0.5
+			max = 0.8
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				command_power_gain_mult = 0.05
+				army_core_attack_factor = 0.05
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_2_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_right_2_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_2_mod
+					}
+				}
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_right_3
+			min = 0.8
+			max = 1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				command_power_gain_mult = 0.1
+				army_core_attack_factor = 0.1
+			}
+			on_activate = {
+				if = {
+					limit = { has_country_flag = SFR_maintain_the_front_on }
+					add_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_3_mod
+					}
+				}
+			}
+			on_deactivate = {
+				if = {
+					limit = { 
+						has_power_balance_modifier = {
+							id = SFR_opposition_bop
+							modifier = SFR_opposition_bop_right_3_mod
+						} 
+					}
+					remove_power_balance_modifier = {
+						id = SFR_opposition_bop
+						modifier = SFR_opposition_bop_right_3_mod
+					}
+				}
+			}
+		}
+	}
+} 
+
+SFR_commi_bop = {
+	initial_value = 0
+	left_side = SFR_commi_bop_left
+	right_side = SFR_commi_bop_right
+	decision_category = SFR_commi_bop_decisions
+
+	range = {
+		id = SFR_commi_bop_balanced 
+		min = -0.15
+		max = 0.15
+		modifier = {
+			stability_factor = -0.05
+			political_power_factor = -0.05
+			political_advisor_cost_factor = 0.5
+		}
+	}
+
+	side = {
+		id = SFR_commi_bop_left
+		icon = GFX_bop_ETH_communist_side
+		range = {
+			id = SFR_opposition_bop_left_1
+			max = -0.15
+			min = -0.5
+			modifier = {
+				political_power_factor = -0.05
+				monthly_population = 0.05
+				monthly_agricultural_development_process = 1
+				monthly_living_standard_development_process = 1
+				political_advisor_cost_factor = 0.33
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_left_2
+			max = -0.5
+			min = -0.8
+			modifier = {
+				political_power_factor = -0.1
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 2
+				political_advisor_cost_factor = 0.1
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_left_3
+			max = -0.8
+			min = -1
+			modifier = {
+				political_power_factor = -0.2
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = 4
+			}
+			on_activate = {
+				set_country_leader_ideology = agrarian_socialism
+			}
+		}
+	}
+
+	side = {
+		id = SFR_commi_bop_right
+		icon = GFX_bop_ETH_anarchist_side
+		range = {
+			id = SFR_opposition_bop_right_1
+			min = 0.15
+			max = 0.5
+			modifier = {
+				stability_factor = -0.05
+				monthly_industrial_development_process = 1
+				monthly_research_development_process = 1
+				political_advisor_cost_factor = 0.33
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_right_2
+			min = 0.5
+			max = 0.8
+			modifier = {
+				stability_factor = -0.1
+				monthly_industrial_development_process = 2
+				monthly_research_development_process = 2
+				political_advisor_cost_factor = 0.1
+			}
+		}
+
+		range = {
+			id = SFR_opposition_bop_right_3
+			min = 0.8
+			max = 1
+			modifier = {
+				stability_factor = -0.2
+				monthly_industrial_development_process = 4
+				monthly_research_development_process = 4
+			}
+			on_activate = {
+				set_country_leader_ideology = popular_communism
+			}
+		}
+	}
+} 

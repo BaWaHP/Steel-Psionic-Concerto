@@ -1,0 +1,19 @@
+leader_traits = {
+	TPG_crystal = {				#晶裔
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = { always = no }
+
+		modifier = {
+			PLANNING_SPEED = -0.1
+			MAX_PLANNING = 0.15
+		}
+
+		new_commander_weight = { factor = 0 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=426
+	name="STATE_426"
+	provinces={
+		750 4431 6923 12107 19356 19383 19392 19442 19448 19467 19478 19483 19531 19558 
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			19442 = {
+				bunker = 5
+			}
+		}
+		victory_points = {
+			19442 5
+		}
+	}
+	manpower = 1950000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

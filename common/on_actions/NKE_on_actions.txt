@@ -1,0 +1,14 @@
+on_actions = {
+	on_weekly_NKE = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = NKE_industrial_final_upgrade
+					NOT = { has_idea = NKE_pearl_of_the_ocean }
+				}
+				add_to_variable = { NKE_citify_progres = modifier@NKE_weekly_citify_progress }
+			}
+		}
+	}
+
+}

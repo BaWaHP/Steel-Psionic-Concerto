@@ -1,0 +1,132 @@
+﻿###templates###
+division_template = {
+	name = "特尼安赤卫队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "特尼安赤军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	support = {
+		caster_recon = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "特尼安赤军特种部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		caster_infantry = { x = 1 y = 0 }
+	}
+
+	priority = 2
+}
+
+###units###
+
+units = {
+	division = {
+		name = "特尼安赤卫队第一纵队"
+		location = 20453
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "特尼安赤卫队第二纵队"
+		location = 20453
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "特尼安赤卫队第三纵队"
+		location = 20453
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "特尼安赤卫队第四纵队"
+		location = 20482
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "特尼安赤卫队第五纵队"
+		location = 20482
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "桑德瑟兰工人起义军"
+		location = 20482
+		division_template = "特尼安赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "特尼安赤军第一师"
+		location = 7605
+		division_template = "特尼安赤军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "特尼安赤军第三师"
+		location = 7605
+		division_template = "特尼安赤军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "特尼安赤军第四师"
+		location = 7605
+		division_template = "特尼安赤军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "特尼安起义军"
+		location = 7283
+		division_template = "特尼安赤军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "野火纵队"
+		location = 7616
+		division_template = "特尼安赤军特种部队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

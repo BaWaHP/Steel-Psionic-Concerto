@@ -1,0 +1,21 @@
+RLN_house_of_cards = {		#乌托邦的纸牌屋
+	#picture = 
+	icon = GFX_decision_category_generic_communism
+	allowed = { tag = RLN }
+	visible = { has_completed_focus = RLN_the_lasting_red_flag }
+	visible_when_empty = yes
+	priority = 10
+}
+
+RLN_rebuild_econs = {		#经济重建
+	#picture = 
+	icon = GFX_decision_category_gre_paying_ifc_debt
+	allowed = { tag = RLN }
+	visible = {
+		has_completed_focus = RLN_econ_reconstruct_committe
+		NOT = { has_completed_focus = RLN_tenian_econ_miracle }
+	}
+	scripted_gui = RLN_rebuild_econs_window_ui
+	visible_when_empty = yes
+	priority = 10
+}

@@ -1,0 +1,362 @@
+characters={
+	TCW_cervantes_domingo_cristian = {		#塞万提斯·多明戈·克里斯蒂安
+		name = TCW_cervantes_domingo_cristian
+		portraits = {
+			civilian = {
+				large="GFX_TCW_cervantes_domingo_cristian"
+				small="GFX_idea_TCW_cervantes_domingo_cristian"
+			}
+			army = {
+				large="GFX_TCW_cervantes_domingo_cristian"
+				small="GFX_idea_TCW_cervantes_domingo_cristian"
+			}
+		}
+		country_leader = {
+			ideology = directed_democracy
+			desc = TCW_cervantes_domingo_cristian_desc
+			traits = { great_dictator disciplined_war_leader }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	TCW_levitch_sorrell = {		#列维奇·索雷尔
+		name = TCW_levitch_sorrell
+		portraits = {
+			civilian = {
+				large="GFX_TCW_levitch_sorrell"
+				small="GFX_idea_TCW_levitch_sorrell"
+			}
+			army = {
+				large="GFX_TCW_levitch_sorrell"
+				small="GFX_idea_TCW_levitch_sorrell"
+			}
+		}
+		country_leader = {
+			ideology = liberal_worldunion
+			desc = TCW_levitch_sorrell_desc
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_levitch_sorrell_idea
+			traits = { asistant_of_industry }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TCW_national_assembly = {		#国民大议会
+		name = TCW_national_assembly
+		portraits = {
+			civilian = {
+				large="GFX_TCW_national_assembly"
+				small="GFX_idea_TCW_national_assembly"
+			}
+			army = {
+				large="GFX_TCW_national_assembly"
+				small="GFX_idea_TCW_national_assembly"
+			}
+		}
+	}
+	TCW_arcado_vincent = {		#阿卡多·文森特
+		name = TCW_arcado_vincent
+		portraits = {
+			civilian = {
+				large="GFX_TCW_arcado_vincent"
+				small="GFX_idea_TCW_arcado_vincent"
+			}
+			army = {
+				large="GFX_TCW_arcado_vincent"
+				small="GFX_idea_TCW_arcado_vincent"
+			}
+		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			desc = TCW_arcado_vincent_desc
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_arcado_vincent_idea
+			traits = { industrial_oligarchs }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TCW_civilized_judicial_institute = {		#文明审判所
+		name = TCW_civilized_judicial_institute
+		portraits = {
+			civilian = {
+				large="GFX_TCW_civilized_judicial_institute"
+				small="GFX_idea_TCW_civilized_judicial_institute"
+			}
+			army = {
+				large="GFX_TCW_civilized_judicial_institute"
+				small="GFX_idea_TCW_civilized_judicial_institute"
+			}
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			desc = TCW_civilized_judicial_institute_desc
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	TCW_liane_alfonso = {		#连恩·阿方索
+		name = TCW_liane_alfonso
+		portraits = {
+			civilian = {
+				large="GFX_TCW_liane_alfonso"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_TCW_liane_alfonso"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = imperial_socialism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	TCW_herman_khozha = {		#赫尔曼·霍札
+		name = TCW_herman_khozha
+		portraits = {
+			civilian = {
+				large="GFX_TCW_herman_khozha"
+				small="GFX_idea_TCW_herman_khozha"
+			}
+			army = {
+				large="GFX_TCW_herman_khozha"
+				small="GFX_idea_TCW_herman_khozha"
+			}
+		}
+		country_leader = {
+			ideology = racial_homonationalism
+			desc = TCW_herman_khozha_desc
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	TCW_enterprise_federation = {		#企业联合会
+		name = TCW_enterprise_federation
+		portraits = {
+			civilian = {
+				large="GFX_TCW_enterprise_federation"
+				small="GFX_idea_TCW_enterprise_federation"
+			}
+			army = {
+				large="GFX_TCW_enterprise_federation"
+				small="GFX_idea_TCW_enterprise_federation"
+			}
+		}
+		country_leader = {
+			ideology = worldunion_democrat_subtype
+			desc = TCW_enterprise_federation_desc
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	TCW_perk_de_la_ciel = {		#珀克·德拉西尔
+		name = TCW_perk_de_la_ciel
+		portraits = {
+			civilian = {
+				large="GFX_TCW_perk_de_la_ciel"
+				small="GFX_idea_TCW_perk_de_la_ciel"
+			}
+			army = {
+				large="GFX_TCW_perk_de_la_ciel"
+				small="GFX_idea_TCW_perk_de_la_ciel"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			desc = TCW_perk_de_la_ciel_desc
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = TCW_perk_de_la_ciel_idea
+			allowed = {
+				original_tag = TCW
+			}
+			modifier = {
+				cat_mobile_warfare_cost_factor = -0.1
+				army_speed_factor = 0.07
+				org_loss_when_moving = -0.05
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { panzer_leader fast_planner }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	TCW_erdelac_doyle = {		#厄德拉克·道尔
+		name = TCW_erdelac_doyle
+		portraits = {
+			civilian = {
+				large="GFX_TCW_erdelac_doyle"
+				small="GFX_idea_TCW_erdelac_doyle"
+			}
+			army = {
+				large="GFX_TCW_erdelac_doyle"
+				small="GFX_idea_TCW_erdelac_doyle"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = TCW_erdelac_doyle_idea
+			allowed = {
+				original_tag = TCW
+			}
+			modifier = {
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { jungle_rat }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	TCW_rabbi_marciul = {		#玛修尔教士
+		name = TCW_rabbi_marciul
+		portraits = {
+			civilian = {
+				large="GFX_TCW_rabbi_marciul"
+				small="GFX_idea_TCW_rabbi_marciul"
+			}
+			army = {
+				large="GFX_TCW_rabbi_marciul"
+				small="GFX_idea_TCW_rabbi_marciul"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_rabbi_marciul_idea
+			allowed = {
+				original_tag = TCW
+			}
+			modifier = {
+			}
+			traits = {
+				majestic_bishop
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TCW_HeRuijie = {		#何瑞洁
+		name = TCW_HeRuijie
+		portraits = {
+			civilian = {
+				large="GFX_TCW_HeRuijie"
+				small="GFX_idea_TCW_HeRuijie"
+			}
+			army = {
+				large="GFX_TCW_HeRuijie"
+				small="GFX_idea_TCW_HeRuijie"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_HeRuijie_idea
+			allowed = {
+				original_tag = TCW
+			}
+			modifier = {
+			}
+			traits = {
+				old_geologists
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TCW_Victor_renal = {		#维克多·雷纳尔
+		name = TCW_Victor_renal
+		portraits = {
+			civilian = {
+				large="GFX_TCW_Victor_renal"
+				small="GFX_idea_TCW_Victor_renal"
+			}
+			army = {
+				large="GFX_TCW_Victor_renal"
+				small="GFX_idea_TCW_Victor_renal"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_Victor_renal_idea
+			allowed = {
+				original_tag = TCW
+			}
+			modifier = {
+			}
+			traits = {
+				racist_security_minister
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TCW_Hejunming = {		#何昀铭
+		name = TCW_Hejunming
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TCW_Hejunming_idea
+			available = { always = no }
+			traits = { TCW_inherited_geologists }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+}

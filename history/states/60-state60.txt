@@ -1,0 +1,30 @@
+
+state={
+	id=60
+	name="STATE_60"
+	resources = {
+		tungsten = 12
+		chromium = 4
+	}
+	provinces={
+		2200 2812 5699 6168 6175 7966 10754 15670 15795 15828 15931 16032 16125 16126 16142 16248 16249 
+	}
+	history = {
+		owner = GLV
+		add_core_of = GLV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			16142 8
+		}
+		victory_points = {
+			6175 3
+		}
+	}
+	manpower = 753315
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

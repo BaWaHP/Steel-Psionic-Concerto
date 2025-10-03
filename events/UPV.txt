@@ -1,0 +1,231 @@
+﻿###########################
+# ZHE Events #
+###########################
+
+add_namespace = UPV
+
+country_event = {
+	id = UPV.1		#一场闹剧
+	title = UPV.1.t
+	desc = UPV.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.1.a
+	}
+}
+
+country_event = {
+	id = UPV.2		#以女王之名
+	title = UPV.2.t
+	desc = UPV.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.2.a
+		set_country_flag = UPV_Duchess_reform_over
+	}
+}
+
+country_event = {
+	id = UPV.3		#黄昏
+	title = UPV.3.t
+	desc = UPV.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.3.a
+		set_country_flag = UPV_Duchess_reform_over
+		set_country_flag = UPV_Duchess_reform_failed
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = UPV.4		#飞跃
+	title = UPV.4.t
+	desc = UPV.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.4.a
+	}
+}
+
+country_event = {
+	id = UPV.50		#王宫夜谈
+	title = UPV.50.t
+	desc = UPV.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.50.a
+	}
+}
+
+country_event = {
+	id = UPV.51		#女大公的演讲
+	title = UPV.51.t
+	desc = UPV.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.51.a
+	}
+}
+
+country_event = {
+	id = UPV.52		#重新选举
+	title = UPV.52.t
+	desc = UPV.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.52.a
+	}
+}
+
+country_event = {
+	id = UPV.53		#安静的议会
+	title = UPV.53.t
+	desc = UPV.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.53.a
+	}
+}
+
+country_event = {
+	id = UPV.54		#反击
+	title = UPV.54.t
+	desc = UPV.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.54.a
+	}
+}
+
+country_event = {
+	id = UPV.55		#布朗斯基的最后一天
+	title = UPV.55.t
+	desc = UPV.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.55.a
+	}
+}
+
+country_event = {
+	id = UPV.56		#震撼的一天
+	title = UPV.56.t
+	desc = UPV.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.56.a
+	}
+}
+
+country_event = {
+	id = UPV.100		#会谈
+	title = UPV.100.t
+	desc = UPV.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.100.a
+	}
+}
+
+country_event = {
+	id = UPV.101		#封锁王宫
+	title = UPV.101.t
+	desc = UPV.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.101.a
+	}
+}
+
+country_event = {
+	id = UPV.102		#秩序得胜
+	title = UPV.102.t
+	desc = UPV.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.102.a
+	}
+}
+
+country_event = {
+	id = UPV.103		#这是一场背叛
+	title = UPV.103.t
+	desc = UPV.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.103.a
+	}
+}
+
+country_event = {
+	id = UPV.104		#笼中鸟
+	title = UPV.104.t
+	desc = UPV.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.104.a
+	}
+}
+
+country_event = {
+	id = UPV.105		#结局
+	title = UPV.105.t
+	desc = UPV.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UPV.105.a
+	}
+}

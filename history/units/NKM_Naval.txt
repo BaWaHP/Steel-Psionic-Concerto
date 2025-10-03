@@ -1,0 +1,119 @@
+units = {
+	fleet = {
+		name = "虹镜帝国联合舰队"
+		naval_base = 3069
+		task_force = {
+			name = "第一特遣舰队"
+			location = 3069
+			#编队舰队 金刚级战列舰X2，乌海级重巡洋舰X2，夕阳级轻巡洋舰X4，白晓级驱逐舰X12，海风级驱逐舰X18
+
+			#金刚级战列舰X2
+			ship = { name = "第一特遣舰队金刚级1" definition = battleship equipment ={ ship_hull_heavy_1 = { amount = 1 owner = NKM version_name = "金刚级"} } }
+			ship = { name = "第一特遣舰队金刚级2" definition = battleship equipment ={ ship_hull_heavy_1 = { amount = 1 owner = NKM version_name = "金刚级"} } }
+			#乌海级重巡洋舰X2
+			ship = { name = "第一特遣舰队乌海级1" definition = heavy_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "乌海级"} } }
+			ship = { name = "第一特遣舰队乌海级2" definition = heavy_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "乌海级"} } }
+			#夕阳级轻巡洋舰X4
+			ship = { name = "第一特遣舰队夕阳级1" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第一特遣舰队夕阳级2" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第一特遣舰队夕阳级3" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第一特遣舰队夕阳级4" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			#白晓级驱逐舰X12
+			ship = { name = "第一特遣舰队白晓级1" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级2" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级3" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级4" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级5" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级6" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级7" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级8" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级9" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级10" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级11" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第一特遣舰队白晓级12" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			#海风级驱逐舰X18
+			ship = { name = "第一特遣舰队海风级1" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级2" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级3" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级4" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级5" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级6" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级7" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级8" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级9" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级10" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级11" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级12" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级13" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级14" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级15" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级16" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级17" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第一特遣舰队海风级18" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+		}
+		task_force = {
+			name = "第二特遣舰队"
+			location = 3934
+			#编队舰队 金刚级战列舰X1，乌海级重巡洋舰X3，夕阳级轻巡洋舰X4，白晓级驱逐舰X12，海风级驱逐舰X14
+
+			#金刚级战列舰X1
+			ship = { name = "第二特遣舰队金刚级1" definition = battleship equipment ={ ship_hull_heavy_1 = { amount = 1 owner = NKM version_name = "金刚级"} } }
+			#乌海级重巡洋舰X3
+			ship = { name = "第二特遣舰队乌海级1" definition = heavy_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "乌海级"} } }
+			ship = { name = "第二特遣舰队乌海级2" definition = heavy_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "乌海级"} } }
+			ship = { name = "第二特遣舰队乌海级3" definition = heavy_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "乌海级"} } }
+			#夕阳级轻巡洋舰X4
+			ship = { name = "第二特遣舰队夕阳级1" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第二特遣舰队夕阳级2" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第二特遣舰队夕阳级3" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			ship = { name = "第二特遣舰队夕阳级4" definition = light_cruiser equipment ={ ship_hull_cruiser_1 = { amount = 1 owner = NKM version_name = "夕阳级"} } }
+			#白晓级驱逐舰X12
+			ship = { name = "第二特遣舰队白晓级1" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级2" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级3" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级4" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级5" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级6" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级7" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级8" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级9" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级10" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级11" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			ship = { name = "第二特遣舰队白晓级12" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "白晓级"} } }
+			#海风级驱逐舰X14
+			ship = { name = "第二特遣舰队海风级1" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级2" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级3" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级4" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级5" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级6" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级7" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级8" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级9" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级10" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级11" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级12" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级13" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+			ship = { name = "第二特遣舰队海风级14" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = NKM version_name = "海风级"} } }
+		}
+		task_force = {
+			name = "潜艇特遣舰队"
+			location = 8215
+			#编队舰队 巡洋甲型潜艇X12
+
+			#巡洋甲型潜艇X12
+			ship = { name = "潜艇特遣舰队巡洋甲型1"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型2"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型3"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型4"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型5"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型6"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型7"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型8"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型9"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型10"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型11"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+			ship = { name = "潜艇特遣舰队巡洋甲型12"definition = submarine equipment ={ ship_hull_submarine_1 = { amount = 1  owner = NKM version_name = "巡洋甲型" } } }
+		}
+	}
+}

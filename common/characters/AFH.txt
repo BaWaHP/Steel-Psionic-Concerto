@@ -1,0 +1,23 @@
+characters={
+
+	AFH_Huang_Jiachen = {		#黄家成
+   		name = AFH_Huang_Jiachen
+   		portraits = {
+   			civilian = {
+   				large="GFX_AFH_Huang_Jiachen"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_AFH_Huang_Jiachen"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = AFH_Huang_Jiachen_desc
+   			ideology = oligarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

@@ -1,0 +1,111 @@
+bookmarks = {
+	bookmark = {
+		name = "BASTIA_2_NAME"
+		desc = "BASTIA_2_DESC"
+		date = 1998.1.1.1
+		picture = "GFX_bookmark_bastia_2"
+		default_country = "SFH"
+		default = no
+		
+		"SFH"={
+			history = "SFH_BASTIA_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				SFH_angrier_aristocrats
+				SFH_failure_in_democracy
+				SFH_terrible_heirs
+			}
+			focuses = {
+				SFH_im_still_young
+			}
+		}
+		
+		"ARO"={
+			history = "ARO_BASTIA_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				ARO_winner_of_a_failure
+				ARO_a_charming_setting_sun
+			}
+			focuses = {
+				ARO_new_era_of_our_industrialization
+				ARO_the_fragile_balance
+			}
+		}
+
+		"CLD"={
+			history = "CLD_BASTIA_DESC"
+			ideology = revolutionary_communism
+			ideas = {
+				CLD_wound_of_betrayal
+				CLD_weak_army
+				CLD_commue_in_conflicts
+			}
+			focuses = {
+				CLD_first_glipse_of_fire_in_the_field
+			}
+		}
+
+		"NCD"={
+			history = "NCD_BASTIA_DESC"
+			ideology = conservative_republican
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		"PEO"={
+			history = "PEO_BASTIA_DESC"
+			ideology = worldunion_democrat
+			ideas = {
+				PEO_why_nobody_talking
+				PEO_new_national_constitution
+				PEO_deal_with_CLD
+			}
+			focuses = {
+				PEO_clean_up_the_mess
+				PEO_last_goodbye
+			}
+		}
+
+		"KEU"={
+			history = "KEU_BASTIA_DESC"
+			ideology = wizard_rules
+			ideas = {
+				KEU_Nation_of_Youth
+				KEU_Enforced_Breeding_Policy
+				KEU_Legion_of_Dead
+			}
+			focuses = {
+				KEU_life_extension
+			}
+		}
+
+		"TPG"={
+			history = "TPG_BASTIA_DESC"
+			ideology = wizard_rules
+			ideas = {
+				TPG_truth_beyond_silence
+				TPG_confusing_garrison_system
+				TPG_trade_treaty_with_wom
+			}
+			focuses = {
+
+			}
+		}
+
+		"---"={
+			history = "OTHER_BASTIA_DESC"
+		}
+
+		#次要国家
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

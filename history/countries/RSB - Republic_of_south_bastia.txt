@@ -1,0 +1,397 @@
+﻿capital = 5
+
+oob = "RSB"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "RSB_air_bba"
+	else = {
+		set_air_oob = "RSB_1939_air_legacy"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_naval_oob = "RSB_Naval"
+	else = {
+		set_naval_oob = "RSB_Naval_Legacy"
+	}
+}
+
+set_convoys = 50
+set_stability = 0.3
+set_war_support = 0.5
+set_research_slots = 4
+
+set_politics = {
+	ruling_party = worldunion_democrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 11
+	worldunion_socialist = 15
+	worldunion_democrat = 13
+	liberal_republican = 13
+	conservative_republican = 15
+	authoritarian_republican = 0
+	national_socialist = 16
+	authoritarian_nationalism = 15
+	paternal_autocrat = 2
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_special_forces = 1
+	marines = 1
+	tech_mountaineers = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_maintenance_company = 1
+	tech_monster_tamer = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	atlas_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	basic_machine_tools = 1
+	construction1 = 1
+	fuel_silos = 1
+	light_magic_shield = 1
+	superior_firepower = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_medium_tank_chassis = 1
+			engine_tech_1 = 1
+			armor_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+#坦克及装甲模板#
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "轻型坦克"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = dozer_blade
+			special_type_slot_4 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+	}
+	create_equipment_variant = {
+		name = "中型坦克"
+		type = medium_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_medium_one_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = empty
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = sloped_armor
+			special_type_slot_4 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+	}
+}
+
+#空军模板#
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "战斗机"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+		}
+	}
+	create_equipment_variant = {
+		name = "近距支援机"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+		}
+	}
+	create_equipment_variant = {
+		name = "海军轰炸机"
+		type = small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_1_1x
+		}
+	}
+	create_equipment_variant = {
+		name = "轰炸机"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_1_2x
+		}
+	}
+	create_equipment_variant = {
+		name = "重型战斗机"
+		type = medium_plane_fighter_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			fixed_auxiliary_weapon_slot_2 = bomb_locks
+			engine_type_slot = engine_1_2x
+		}
+	}
+}
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "伟大战争级"
+		type = ship_hull_heavy_1
+		parent_version = 0
+		modules = {
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+		}
+	}
+	create_equipment_variant = {
+		name = "联邦级"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			mid_1_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = ship_medium_battery_1
+
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+		}
+	}
+	create_equipment_variant = {
+		name = "共和国级"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_depth_charge_1
+
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+		}
+	}
+	create_equipment_variant = {
+		name = "西马拉索亚级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_depth_charge_1
+
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+		}
+	}
+	create_equipment_variant = {
+		name = "东马拉索亚级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_torpedo_1
+
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_1
+		}
+	}
+}
+
+create_intelligence_agency = { 
+	name = "BCIA" 
+	icon = "GFX_intelligence_agency_logo_ita" 
+}
+
+add_ideas = {
+	RSB_maligned_government
+	RSB_legacy_of_the_great_war
+	RSB_Ekuriel_case_fiasco
+	RSB_zhe_rsb_friendly_treaty
+	RSB_military_overspending
+	RSB_politic_sit_local_party_trust_effect_4
+}
+
+#领导人#
+recruit_character = RSB_aeeton_raymond
+recruit_character = RSB_pasti_caprivi
+recruit_character = RSB_ortland_karasasin
+recruit_character = RSB_frann_kendler
+recruit_character = RSB_auslander_makat
+recruit_character = RSB_nate_treacher_ost
+recruit_character = RSB_marianne_petit
+recruit_character = RSB_esamund_kryavik
+recruit_character = RSB_satranti_kestland
+recruit_character = RSB_labor_union_subsector
+recruit_character = RSB_adrian_fell
+#内阁#
+recruit_character = RSB_lacombe_carasasin
+recruit_character = RSB_henry_ehrlichmon
+recruit_character = RSB_shkrau_asriyas
+recruit_character = RSB_yamit_kstrand
+recruit_character = RSB_rochefort_raymond
+recruit_character = RSB_waiyang_promotion_caprivi
+recruit_character = RSB_drummenke_keoteber
+recruit_character = RSB_YaoJiulin
+#将领#
+recruit_character = RSB_saval_milikro
+recruit_character = RSB_yatril_arturs
+recruit_character = RSB_chilik_okrona
+recruit_character = RSB_mosava_caprivi
+recruit_character = RSB_val_spade
+recruit_character = RSB_sugawaki
+
+create_faction = RSB_SOUTH_BASTIA_FACTION
+add_to_faction = RSU
+add_to_faction = ROK
+add_to_faction = TCW
+add_to_faction = LNR
+add_to_faction = KOA
+add_to_faction = HGL
+add_to_faction = AST
+add_to_faction = BSK
+add_to_faction = UPV
+add_to_faction = GDD
+add_to_faction = FCR
+add_to_faction = CBL
+add_to_faction = ROT

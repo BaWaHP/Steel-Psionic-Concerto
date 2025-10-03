@@ -1,0 +1,31 @@
+
+state={
+	id=289
+	name="STATE_289"
+
+	resources = {
+		steel = 24
+	}
+
+	history={
+		owner = FTC
+		add_core_of = FTC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3853 8
+		}
+		victory_points = {
+			8751 3
+		}
+	}
+
+	provinces={
+		3853 4955 7505 7986 8103 8751 14194 
+	}
+	manpower=410000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

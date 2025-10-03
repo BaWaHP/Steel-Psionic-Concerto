@@ -1,0 +1,32 @@
+
+state={
+	id=371
+	name="STATE_371"
+
+	resources = {
+		tungsten = 30
+		aluminium = 20
+		steel = 20
+		chromium = 6
+		magic_crystal = 4
+	}
+
+	history={
+		owner = GDD
+		add_core_of = GDD
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			2578 3
+		}
+	}
+
+	provinces={
+		2578 6794 8106 8727 8772 10687 10962 18465 18477 18569 18605 
+	}
+	manpower = 583210
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

@@ -1,0 +1,14 @@
+leader_traits = {
+
+	NOH_permanent_president = {		#永久大总统
+		random = no
+		
+		political_power_factor = 0.1
+		rulling_ideology_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

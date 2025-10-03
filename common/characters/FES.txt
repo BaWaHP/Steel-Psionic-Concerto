@@ -1,0 +1,24 @@
+characters={
+
+	FES_undine = {		#温蒂妮
+   		name = FES_undine
+   		portraits = {
+   			civilian = {
+   				large="GFX_FES_undine"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_FES_undine"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			#desc = FES_undine_desc
+   			ideology = wizard_rules_subtype
+   			traits = { FES_clear_water }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+}

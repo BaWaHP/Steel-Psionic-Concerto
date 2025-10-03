@@ -1,0 +1,211 @@
+characters = {
+	NKE_Viana_Weil = {	#维安娜·维尔
+		name = NKE_Viana_Weil
+		gender = female
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NKE_Viana_Weil
+			}
+		}
+		country_leader = {
+			ideology = oligarchy
+			traits = { the_savior_of_nation }
+			expire = "2040.1.1.1"
+			id = -1
+		}
+	}
+	
+	NKE_Pramo_Evaty = {		#普拉默·艾瓦提
+		name = NKE_Pramo_Evaty
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NKE_Pramo_Evaty
+			}
+		}
+		country_leader = {
+			ideology = liberal_republican_subtype
+			traits = {  }
+			expire = "2040.1.1.1"
+			id = -1
+		}
+		advisor = {
+			cost = 50
+			slot = political_advisor
+			idea_token = NKE_Pramo_Evaty
+			allowed = {
+				has_completed_focus = NKE_constitution_democracy_movement
+				has_government = authoritarian_republican
+			}
+			traits = {
+			}
+		}
+	}
+	
+	NKE_Aratr_Masse = {		#阿拉特-马斯
+		name = NKE_Aratr_Masse
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NKE_Aratr_Masse
+			}
+		}
+		country_leader = {
+			ideology = social_democrat
+			traits = {  }
+			expire = "2040.1.1.1"
+			id = -1
+		}
+		advisor = {
+			cost = 50
+			slot = political_advisor
+			idea_token = NKE_Aratr_Masse
+			allowed = {
+				has_completed_focus = NKE_labour_representive
+				has_government = authoritarian_republican
+			}
+			traits = {
+			}
+		}
+	}
+
+	NKE_Alpha_Mentur = {	#阿尔法·门托
+		name = NKE_Alpha_Mentur
+		portraits = {
+			civilian = {
+				small="GFX_idea_NKE_Alpha_Mentur"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NKE_Alpha_Mentur
+			allowed = {
+				has_completed_focus = NKE_rise_up_from_ruins
+			}
+			traits = {
+				financial_expert
+				kind_gentleman
+			}
+		}
+	}
+
+	NKE_Sapu_Randu = {	#萨普·兰度
+		name = NKE_Sapu_Randu
+		portraits = {
+			civilian = {
+				small="GFX_idea_NKE_Sapu_Randu"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NKE_Sapu_Randu
+			allowed = {
+				has_completed_focus = NKE_vital_state
+			}
+			traits = {
+				education_scholar
+			}
+		}
+	}
+
+	NKE_Teru_Tiri = {	#特鲁-提里
+		name = NKE_Teru_Tiri
+		portraits = {
+			civilian = {
+				small="GFX_idea_NKE_Teru_Tiri"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NKE_Teru_Tiri
+			allowed = {
+				has_completed_focus = NKE_vital_state
+			}
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+
+	NKE_Maruph_Peri = {	#马鲁夫·佩利
+		name = NKE_Maruph_Peri
+		portraits = {
+			civilian = {
+				small="GFX_idea_NKE_Maruph_Peri"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NKE_Maruph_Peri
+			allowed = {
+				has_completed_focus = NKE_vital_state
+			}
+			traits = {
+				asistant_of_industry
+			}
+		}
+	}
+
+	NKE_Prutos_Grey = {	#普鲁托斯·格雷
+		name = NKE_Prutos_Grey
+		portraits = {
+			civilian = {
+				small="GFX_idea_NKE_Prutos_Grey"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NKE_Prutos_Grey
+			allowed = {
+				has_completed_focus = NKE_fortificate_project
+			}
+			traits = {
+				fortification_engineer
+			}
+		}
+	}
+	
+	NKE_Lihi_Suvha = {	#李希-苏瓦
+		name = NKE_Lihi_Suvha
+   		portraits = {
+   			army = {
+   				large = "GFX_NKE_Lihi_Suvha"
+   				small = "GFX_idea_NKE_Lihi_Suvha"
+   			}
+   		}
+		advisor = {
+			slot = high_command
+			idea_token = NKE_Lihi_Suvha
+			ledger = army
+			allowed = {
+				has_completed_focus = NKE_commander_training
+			}
+			traits = {
+				army_entrenchment_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		corps_commander = {
+			visible = {
+				has_completed_focus = NKE_commander_training
+			}
+			traits = {
+				inflexible_strategist
+				infantry_leader
+				ambusher
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+}

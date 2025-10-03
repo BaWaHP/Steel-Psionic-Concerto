@@ -1,0 +1,23 @@
+characters={
+
+	BCC_jack_jones = {		#杰克·琼斯
+   		name = BCC_jack_jones
+   		portraits = {
+   			civilian = {
+   				large="GFX_BCC_jack_jones"
+   				small="GFX_idea_BCC_jack_jones"
+   			}
+   			army = {
+				large="GFX_ALR_Slate_Moria"
+				small="GFX_idea_ALR_Slate_Moria"
+   			}
+   		}
+   		country_leader = {
+			desc = BCC_jack_jones_desc
+   			ideology = military_dictatorship
+   			traits = { BCC_border_sentinel }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

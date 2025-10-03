@@ -1,0 +1,242 @@
+division_template = {
+	name = "帝国陆军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+division_template = {
+	name = "征召兵"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+division_template = {
+	name = "帝国海军陆战队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+division_template = {
+	name = "神皇卫队"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 3 y = 0 }
+		light_armor = { x = 3 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "帝国陆军第一师团"
+		location = 1394
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国陆军第二师团"
+		location = 1394
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国陆军第三师团"
+		location = 2491
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国陆军第四师团"
+		location = 8046
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国陆军新编第一师团"
+		location = 6965
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国陆军新编第二师团"
+		location = 6
+		division_template = "帝国陆军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“濑户人”营"
+		location = 21649
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“神皇守护”营"
+		location = 21649
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“战斗玉明”营"
+		location = 21768
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“落台第一”营"
+		location = 21768
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“大宫港忠诚军”营"
+		location = 5988
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“警备大队”营"
+		location = 21790
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“北川战斗队”营"
+		location = 21567
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“樱井民防”营"
+		location = 21248
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“西部守备”营"
+		location = 10689
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“清乐山扫荡”营"
+		location = 21614
+		division_template = "征召兵"
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "尖刀一师"
+		location = 3934
+		division_template = "帝国海军陆战队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "尖刀二师"
+		location = 21484
+		division_template = "帝国海军陆战队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "尖刀三师"
+		location = 234
+		division_template = "帝国海军陆战队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "长庚护卫军"
+		location = 3069
+		division_template = "神皇卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "NKM"
+		}
+		requested_factories = 4
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "NKM"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "NKM" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+}

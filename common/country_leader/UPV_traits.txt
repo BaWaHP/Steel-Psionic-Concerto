@@ -1,0 +1,122 @@
+leader_traits = {
+
+	UPV_first_minister = {		#内阁首辅
+		random = no
+		
+		stability_factor = 0.1
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_speaker_of_parliament = {		#首席议长
+		random = no
+		
+		stability_factor = -0.05
+		political_power_factor = -0.1
+		conservative_republican_drift = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_cunning_politicians = {		#狡猾的政客
+		random = no
+		
+		consumer_goods_factor = 0.05
+		production_speed_buildings_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_representatives_of_the_old_aristocracy = {		#旧贵族代表
+		random = no
+
+		stability_factor = -0.1
+		political_power_factor = -0.05
+		industrial_capacity_factory = -0.05
+		global_building_slots_factor = -0.05
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_representatives_of_the_old_aristocracy = {		#旧贵族代表
+		random = no
+
+		stability_factor = -0.1
+		political_power_factor = -0.05
+		industrial_capacity_factory = -0.05
+		global_building_slots_factor = -0.05
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_witch_of_old = {		#“旧日魔女”
+		random = no
+
+		stability_factor = -0.05
+		monthly_population = 0.1
+		state_magic_development_monthly = 0.04
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_imperial_envoy = {		#钦差大臣
+		random = no
+
+		political_power_factor = 0.1
+		opinion_gain_monthly_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_royal_supporter = {		#王室支持者
+		random = no
+
+		paternal_autocrat_drift = 0.02
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_economic_reformer = {		#经济改革家
+		random = no
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		research_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	UPV_bird_in_cage = {		#笼中之鸟
+		random = no
+
+		stability_factor = 0.15
+		political_power_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

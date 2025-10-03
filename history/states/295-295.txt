@@ -1,0 +1,34 @@
+
+state={
+	id=295
+	name="STATE_295"
+
+	resources = {
+		aluminium = 48
+		magic_crystal = 48
+	}
+
+	history={
+		owner = GOS
+		add_core_of = GOS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			496 3
+		}
+		victory_points = {
+			13929 3
+		}
+	}
+
+	provinces={
+		496 5875 7299 10471 11836 13753 13847 13929 13936 
+	}
+	manpower=680000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

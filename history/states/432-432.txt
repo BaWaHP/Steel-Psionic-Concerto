@@ -1,0 +1,40 @@
+
+state={
+	id=432
+	name="STATE_432"
+	provinces={
+		1952 5172 6222 8497 10467 10726 20211 20224 20225 20244 20280 20281 20282 20292 20314 20329 20335 
+	}
+	resources = {
+		steel = 25
+		tungsten = 15
+		magic_crystal = 30
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 3
+			arms_factory = 5
+		}
+		victory_points = {
+			20244 2
+		}
+		victory_points = {
+			20225 2
+		}
+		victory_points = {
+			10647 2
+		}
+		victory_points = {
+			1952 5
+		}
+		victory_points = {
+			20335 5
+		}
+	}
+	manpower = 6900000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

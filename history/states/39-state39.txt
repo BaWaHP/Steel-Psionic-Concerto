@@ -1,0 +1,29 @@
+
+state={
+	id=39
+	name="STATE_39"
+	provinces={
+		316 764 2437 8786 9013 9511 9709 9983 11975 12104 18841 18936 18960 19033 
+	}
+	resources = {
+		oil = 5
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			316 4
+		}
+		victory_points = {
+			8786 4
+		}
+	}
+	manpower=256000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

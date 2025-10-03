@@ -1,0 +1,1115 @@
+###########################
+# 	     NKE Events       #
+###########################
+
+add_namespace = TCW
+
+country_event = {	#新年有新的问题
+	id = TCW.1
+	title = TCW.1.t
+	desc = TCW.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.1.a
+		hidden_effect = {
+			set_variable = { TCW_refugee_influx_sf = -0.25 }
+			set_variable = { TCW_refugee_influx_rsf = -0.1 }
+			set_variable = { TCW_refugee_influx_icf = -0.1 }
+			set_variable = { TCW_refugee_influx_mp = 0.1 }
+			set_variable = { TCW_refugee_influx_lrf = 0 }
+			add_dynamic_modifier = { modifier = TCW_refugee_influx }
+		}
+		custom_effect_tooltip = TCW.1.tt
+	}
+}
+
+country_event = {	#隐于黑暗的危机
+	id = TCW.2
+	title = TCW.2.t
+	desc = TCW.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.2.a
+		add_trait = {
+			character = TCW_cervantes_domingo_cristian_1
+			ideology = directed_democracy
+			trait = severely_injured_and_coma
+	    }
+		custom_effect_tooltip = TCW.2.att
+		hidden_effect = {
+			country_event = {
+				id = TCW.3
+				days = 3
+			}
+		}
+		leave_faction = yes
+	}
+
+	option = {
+		name = TCW.2.b
+		remove_country_leader_role = {
+			character = TCW_cervantes_domingo_cristian_1
+			ideology = directed_democracy
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		add_trait = {
+			character = TCW_perk_de_la_ciel
+			ideology = paternal_autocrat_subtype
+			trait = gov_in_struggle
+		}
+		country_event = {
+			id = TCW.9
+			days = 3
+		}
+		custom_effect_tooltip = TCW.2.btt
+		leave_faction = yes
+	}
+}
+
+country_event = {	#反动派的暴动
+	id = TCW.3
+	title = TCW.3.t
+	desc = TCW.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.3.a
+		hidden_effect = {
+			KTL = {
+				transfer_state = 384
+				transfer_state = 381
+				transfer_state = 380
+				transfer_state = 337
+				transfer_state = 338
+				transfer_state = 382
+				every_state = {
+					if = {
+						limit = { is_core_of = TCW }
+						KTL = {
+							add_state_core = PREV
+						}
+					}
+				}
+				SPC_KTL_startup_effect = yes
+				inherit_technology = TCW
+				if = {
+					limit = { NOT = { has_tech = tech_monster_tamer } }
+					set_technology = { tech_monster_tamer = 1 popup = no }
+				}
+				add_ideas = {
+					KTL_try_fighting_but_stopped
+					KTL_internal_division
+				}
+				delete_unit_template_and_units = {
+					division_template = 洛琛先锋卫队
+				}
+				delete_unit_template_and_units = {
+					division_template = 常规国防军
+				}
+				delete_unit_template_and_units = {
+					division_template = 常规骑兵巡逻队
+				}
+				load_oob = "KTL"
+			}
+			country_event = {
+				id = TCW.4
+				days = 2
+			}
+			load_focus_tree = TCW_focus_2
+		}
+	}
+}
+
+country_event = {	#反动派的试探性行动
+	id = TCW.4
+	title = TCW.4.t
+	desc = TCW.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.4.a
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 384
+				num_provinces = 2
+				on_win = TCW.5
+				on_lose = TCW.6
+				on_cancel = TCW.5
+			}	
+			defender = {
+				state = 341
+				num_provinces = 2
+				on_win = TCW.6
+				on_lose = TCW.5
+				on_cancel = TCW.6
+			}
+		}
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 382
+				num_provinces = 2
+				on_win = TCW.7
+				on_lose = TCW.8
+				on_cancel = TCW.7
+			}	
+			defender = {
+				state = 383
+				num_provinces = 2
+				on_win = TCW.8
+				on_lose = TCW.7
+				on_cancel = TCW.8
+			}
+		}
+	}
+}
+
+country_event = {	#托莱多王国拿下了岭森！
+	id = TCW.5
+	title = TCW.5.t
+	desc = TCW.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.5.a
+		KTL = {
+			transfer_state = 341
+		}
+	}
+}
+
+country_event = {	#托莱多王国在岭森的进攻受挫
+	id = TCW.6
+	title = TCW.6.t
+	desc = TCW.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.6.a
+	}
+}
+
+country_event = {	#托莱多王国拿下了涅维斯特！
+	id = TCW.7
+	title = TCW.7.t
+	desc = TCW.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.7.a
+		KTL = {
+			transfer_state = 383
+		}
+	}
+}
+
+country_event = {	#托莱多王国在涅维斯特的进攻受挫
+	id = TCW.8
+	title = TCW.8.t
+	desc = TCW.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.8.a
+	}
+}
+
+country_event = {	#荣耀的讨伐来临
+	id = TCW.9
+	title = TCW.9.t
+	desc = TCW.9.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.9.a
+		news_event = TCWNews.3
+		hidden_effect = {
+			KTL = {
+				transfer_state = 384
+				add_state_core = 384
+				transfer_state = 381
+				add_state_core = 381
+				transfer_state = 380
+				add_state_core = 380
+				transfer_state = 337
+				add_state_core = 337
+				transfer_state = 338
+				add_state_core = 338
+				transfer_state = 382
+				add_state_core = 382
+				every_state = {
+					if = {
+						limit = { is_core_of = TCW }
+						KTL = {
+							add_state_core = PREV
+						}
+					}
+				}
+				SPC_KTL_startup_effect = yes
+				inherit_technology = TCW
+				if = {
+					limit = { NOT = { has_tech = tech_monster_tamer } }
+					set_technology = { tech_monster_tamer = 1 popup = no }
+				}
+				add_ideas = KTL_frenzy_revival
+				delete_unit_template_and_units = {
+					division_template = 洛琛先锋卫队
+				}
+				delete_unit_template_and_units = {
+					division_template = 常规国防军
+				}
+				delete_unit_template_and_units = {
+					division_template = 常规骑兵巡逻队
+				}
+				load_oob = "KTL"
+			}
+		}
+		KTL = {
+			change_tag_from = TCW
+		}
+		KTL = {
+			declare_war_on = {
+				target = TCW
+				type = annex_everything
+			}
+		}
+		TCW = {
+			set_country_flag = TCW_2_b_flag
+			unlock_decision_category_tooltip = TCW_soutern_problems
+		}
+	}
+}
+
+country_event = {	#联邦胜
+	id = TCW.10
+	title = TCW.10.t
+	desc = TCW.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.10.a
+	}
+}
+
+country_event = {	#新王加冕
+	id = TCW.11
+	title = TCW.11.t
+	desc = TCW.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.11.a
+		remove_ideas = KTL_frenzy_revival
+		remove_trait = {
+			character = KTL_levant_jean_faustin
+			ideology = absolute_monarchy
+			trait = royal_bloodline
+		}
+		add_trait = {
+			character = KTL_levant_jean_faustin
+			ideology = absolute_monarchy
+			trait = Levant_VII
+		}
+	}
+}
+
+country_event = {	#苏醒之夜
+	id = TCW.12
+	title = TCW.12.t
+	desc = TCW.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.12.a
+		remove_trait = {
+			character = TCW_cervantes_domingo_cristian_1
+			ideology = directed_democracy
+			trait = severely_injured_and_coma
+	    }
+	}
+}
+
+country_event = {	#医疗效果出乎意料
+	id = TCW.13
+	title = TCW.13.t
+	desc = TCW.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.13.a
+		add_days_mission_timeout = {
+			mission = TCW_president_awake
+			days = -15
+		}
+	}
+}
+
+country_event = {	#总统病情恶化
+	id = TCW.14
+	title = TCW.14.t
+	desc = TCW.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.14.a
+		add_days_mission_timeout = {
+			mission = TCW_president_awake
+			days = 15
+		}
+	}
+}
+
+country_event = {	#护国同盟
+	id = TCW.15
+	title = TCW.15.t
+	desc = TCW.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.15.a
+		complete_national_focus = TCW_parliament_of_liberals
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = TCW.15.b
+		complete_national_focus = TCW_parliament_of_youth
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#守卫民主宣言
+	id = TCW.16
+	title = TCW.16.t
+	desc = TCW.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.16.a
+		add_war_support = 0.15
+		add_political_power = -20
+	}
+}
+
+country_event = {	#秘密行动来电
+	id = TCW.17
+	title = TCW.17.t
+	desc = TCW.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.17.a
+		add_ideas = TCW_operation_snake_head_down
+		hidden_effect = {
+			load_oob = "TCW_civil_war"
+		}
+	}
+}
+
+country_event = {	#狼首之凋
+	id = TCW.18
+	title = TCW.18.t
+	desc = TCW.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TCW.18.a
+		custom_effect_tooltip = TCW.18.tt
+		news_event = {
+			id = TCWNews.4
+			days = 1
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		hidden_effect = {
+			add_country_leader_trait = TCW_unknown_future
+			add_country_leader_trait = TCW_coming_election	
+			load_focus_tree = TCW_focus_3
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+	}
+}
+
+country_event = {	#清理蛀虫
+	id = TCW.19
+	title = TCW.19.t
+	desc = TCW.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = TCW.19.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 50
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 1000
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#内阁顾问离世
+	id = TCW.20
+	title = TCW.20.t
+	desc = TCW.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.20.a
+		retire_character = TCW_HeRuijie
+		activate_advisor = TCW_Hejunming_idea
+	}
+}
+
+country_event = {	#西南雪崩矿难
+	id = TCW.21
+	title = TCW.21.t
+	desc = TCW.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.21.a
+		add_manpower = -3871
+		add_stability = -0.15
+		add_war_support = -0.1
+		383 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.7
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.2
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		384 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.7
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.2
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.2
+			}
+		}
+		news_event = TCWNews.7
+		set_country_flag = TCW_mine_disaster_investigation_flag
+	}
+}
+
+country_event = {	#军政密信
+	id = TCW.50
+	title = TCW.50.t
+	desc = TCW.50.d
+	#picture = 
+
+	immediate = {
+		set_variable = { TCW_dem_reform_var = 0 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.50.a
+		add_ideas = TCW_political_haze
+	}
+}
+
+country_event = {	#最终表决
+	id = TCW.51
+	title = TCW.51.t
+	desc = TCW.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.51.a
+		custom_effect_tooltip = TCW.51.a.tt
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		add_to_variable = { TCW_dem_reform_var = 1 }
+	}
+
+	option = {		
+		name = TCW.51.b
+		custom_effect_tooltip = TCW.51.b.tt
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.05
+		}
+		add_to_variable = { TCW_dem_reform_var = -1 }
+	}
+}
+
+country_event = {	#金融风波
+	id = TCW.52
+	title = TCW.52.t
+	desc = TCW.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.52.a
+		custom_effect_tooltip = TCW.52.a.tt
+		341 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		set_country_flag = TCW_52_a_flag
+		unlock_decision_tooltip = TCW_nesida_river_hydropower_station
+		add_to_variable = { TCW_dem_reform_var = 1 }
+	}
+
+	option = {		
+		name = TCW.52.b
+		custom_effect_tooltip = TCW.52.b.tt
+		383 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		set_country_flag = TCW_52_b_flag
+		unlock_decision_tooltip = TCW_lingsen_military_industrial_complex
+		add_to_variable = { TCW_dem_reform_var = -1 }
+	}
+}
+
+country_event = {	#一石激起千层浪
+	id = TCW.53
+	title = TCW.53.t
+	desc = TCW.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.53.a
+		custom_effect_tooltip = TCW.53.a.tt 
+		add_to_variable = { TCW_dem_reform_var = 1 }
+		add_stability = 0.07
+	}
+
+	option = {		
+		name = TCW.53.b
+		custom_effect_tooltip = TCW.53.b.tt
+		add_to_variable = { TCW_dem_reform_var = -1 }
+		add_war_support = 0.1
+		add_manpower = -2000
+	}
+}
+
+country_event = {	#拥抱民主纪元
+	id = TCW.54
+	title = TCW.54.t
+	desc = TCW.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.54.a
+		complete_national_focus = TCW_long_awaited_democratic_cheer
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_socialist
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = -0.1
+		}
+		add_political_power = 40
+		add_stability = 0.05
+		remove_ideas = TCW_political_haze
+		TCW_perk_de_la_ciel = {
+			add_defense = 1
+			add_planning = 1
+		}
+		news_event = TCWNews.5
+	}
+}
+
+country_event = {	#回归秩序井然
+	id = TCW.55
+	title = TCW.55.t
+	desc = TCW.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.55.a
+		complete_national_focus = TCW_new_milestone_of_national_rev
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = -0.1
+		}
+		set_politics = { ruling_party = authoritarian_nationalism }
+		add_political_power = 40
+		add_stability = 0.05
+		remove_ideas = TCW_political_haze
+		retire_character = TCW_perk_de_la_ciel
+		news_event = TCWNews.6
+	}
+}
+
+country_event = {	#大选结果出炉
+	id = TCW.56
+	title = TCW.56.t
+	desc = TCW.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.56.a
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.25
+		}
+		add_political_power = 100
+		add_stability = 0.1
+		set_politics = {
+			ruling_party = conservative_republican
+		}
+		load_focus_tree = TCW_focus_4
+	}
+
+	option = {		
+		name = TCW.56.b
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.25
+		}
+		add_political_power = 100
+		add_stability = 0.1
+		set_politics = {
+			ruling_party = worldunion_democrat
+		}
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#一山不容二虎
+	id = TCW.57
+	title = TCW.57.t
+	desc = TCW.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.57.a
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.2
+		}
+		add_political_power = 100
+		add_stability = 0.05
+		add_manpower = -1000
+		set_politics = {
+			ruling_party = authoritarian_nationalism
+		}
+		add_field_marshal_role = {
+			character = TCW_herman_khozha
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { combined_arms_expert organisational_leader fast_planner }
+		}
+		add_to_variable = {
+			var = living_standard_development_amount
+			value = -10
+			tooltip = living_standard_development_amount_tt
+		}
+		load_focus_tree = generic_focus
+	}
+
+	option = {		
+		name = TCW.57.b
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.2
+		}
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_manpower = -1000
+		set_politics = {
+			ruling_party = national_socialist
+		}
+		add_field_marshal_role = {
+			character = TCW_liane_alfonso
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { infantry_expert inspirational_leader trait_engineer }
+		}
+		add_to_variable = {
+			var = living_standard_development_amount
+			value = -25
+			tooltip = living_standard_development_amount_tt
+		}
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#呐喊
+	id = TCW.58
+	title = TCW.58.t
+	desc = TCW.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.58.a
+		custom_effect_tooltip = TCW.58.a.tt
+		add_stability = 0.15
+		add_political_power = 50
+		SPC_living_standard_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#民族
+	id = TCW.59
+	title = TCW.59.t
+	desc = TCW.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.59.a
+		custom_effect_tooltip = TCW.59.a.tt
+		add_war_support = 0.1
+		SPC_living_standard_development_amount_down_2 = yes
+		if = {
+			limit = { has_idea = TCW_refugee_brigade }
+			remove_ideas = TCW_refugee_brigade
+		}
+		add_ideas = TCW_a_new_nation
+	}
+}
+
+country_event = {	#文森特的战略定位
+	id = TCW.100
+	title = TCW.100.t
+	desc = TCW.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.100.a
+		add_country_leader_trait = TCW_reformist_pope
+	}
+}
+
+country_event = {	#独裁者的画框
+	id = TCW.101
+	title = TCW.101.t
+	desc = TCW.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.101.a
+	}
+}
+
+country_event = {	#政局清朗
+	id = TCW.102
+	title = TCW.102.t
+	desc = TCW.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.102.a
+		add_stability = 0.05
+		add_political_power = 60
+	}
+}
+
+country_event = {	#水落石出
+	id = TCW.103
+	title = TCW.103.t
+	desc = TCW.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		
+		name = TCW.103.a
+	}
+}
+
+###新闻###
+
+add_namespace = TCWNews
+
+news_event = {
+	id = TCWNews.1		#联邦胜
+	title = TCWNews.1.t
+	desc = TCWNews.1.d
+	picture = GFX_news_event_generic_49
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.1.a
+		trigger = {
+			tag = TCW
+		}
+	}
+
+	option = {
+		name = TCWNews.1.b
+		trigger = {
+			NOT = { tag = TCW }
+		}
+	}
+}
+
+news_event = {
+	id = TCWNews.2		#王国胜
+	title = TCWNews.2.t
+	desc = TCWNews.2.d
+	picture = GFX_news_event_generic_38
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.2.a
+		trigger = {
+			tag = KTL
+		}
+	}
+
+	option = {
+		name = TCWNews.2.b
+		trigger = {
+			NOT = { tag = KTL }
+		}
+	}
+}
+
+news_event = {
+	id = TCWNews.3		#内战爆发
+	title = TCWNews.3.t
+	desc = TCWNews.3.d
+	picture = GFX_news_event_generic_42
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.3.a
+	}
+}
+
+news_event = {
+	id = TCWNews.4		#克里斯蒂安大元帅去世！
+	title = TCWNews.4.t
+	desc = TCWNews.4.d
+	picture = GFX_news_event_generic_50
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.4.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = anarchism
+			}
+		}
+	}
+
+	option = {
+		name = TCWNews.4.b
+		trigger = {
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+			}
+		}
+	}
+
+	option = {
+		name = TCWNews.4.c
+		trigger = {
+			OR = {
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+			}
+		}
+	}
+
+	option = {
+		name = TCWNews.4.dd
+		trigger = {
+			has_government = religious_extremism
+		}
+	}
+
+	option = {
+		name = TCWNews.4.e
+		trigger = {
+			has_government = wizard_rules
+		}
+	}
+}
+
+news_event = {
+	id = TCWNews.5		#托莱多拥抱民主
+	title = TCWNews.5.t
+	desc = TCWNews.5.d
+	picture = GFX_news_event_generic_65
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.5.a
+	}
+}
+
+news_event = {
+	id = TCWNews.6		#托莱多秩序井然
+	title = TCWNews.6.t
+	desc = TCWNews.6.d
+	picture = GFX_news_event_generic_7
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.6.a
+	}
+}
+
+news_event = {
+	id = TCWNews.7		#托莱多西南大矿难
+	title = TCWNews.7.t
+	desc = TCWNews.7.d
+	picture = GFX_news_event_generic_62
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = TCWNews.7.a
+	}
+}

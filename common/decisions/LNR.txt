@@ -1,0 +1,670 @@
+LNR_okkonens_connections = {
+	LNR_using_power_to_cover_grey_treaties = {		#使用权力给灰色交易打掩护
+		icon = generic_political_discourse
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			LNR_grey_support_up = yes
+		}
+	}
+	LNR_stating_rules_again = {		#再次强调“规矩”
+		icon = generic_speech
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_stability = 0.02
+		}
+	}
+	LNR_looking_for_secrets = {		#获取高层人士的秘密
+		icon = eng_trade_unions_demand
+
+		available = {}
+		visible = {}
+
+		cost = 20
+		fire_only_once = no
+		days_remove = 70
+		days_re_enable = 70
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			political_advisor_cost_facgtor = -0.2
+			economy_cost_factor = -0.2
+			trade_laws_cost_factor = -0.2
+			mobilization_laws_cost_factor = -0.2
+			political_power_factor = 0.1
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+	LNR_recruiting_fighters = {		#招募打手
+		icon = generic_assassination
+
+		available = {
+			NOT = { has_idea = LNR_grey_support_5 }
+		}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			add_manpower = 1500
+			LNR_grey_support_down = yes
+		}
+	}
+	LNR_getting_equipments = {		#获取军火
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 25
+			}
+		}
+	}
+	LNR_less_clean_business = {		#不太干净的交易
+		icon = hol_exchange_intelligence_data
+
+		available = {
+			has_completed_focus = LNR_done_every_businesss_nicely
+		}
+		visible = {}
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 70
+		days_re_enable = 100
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			weekly_manpower = -100
+			stability_weekly = -0.005
+			industrial_capacity_factory = -0.1
+			consumer_goods_factor = -0.1
+		}
+
+		remove_effect = {
+			LNR_grey_support_up = yes
+		}
+	}
+	LNR_ask_military_support = {		#请求军事支援
+		icon = ger_military_buildup
+
+		available = {
+			has_completed_focus = LNR_return_to_hazard_zone
+			NOT = { has_idea = LNR_grey_support_5 }
+		}
+		visible = {}
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 180
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			army_org_regain = 0.1
+		}
+
+		complete_effect = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+
+		remove_effect = {
+			add_offsite_building = {
+				type = arms_factory
+				level = -2
+			}
+			LNR_grey_support_down = yes
+			add_manpower = 1000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 200
+			}
+			add_stability = -0.1
+		}
+	}
+	LNR_demand_political_support = {		#请求政治支援
+		icon = SWI_no_elected_president
+
+		available = {
+			has_completed_focus = LNR_done_every_businesss_nicely
+			NOT = { has_idea = LNR_grey_support_5 }
+		}
+		visible = {}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 180
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_manpower = -100
+			add_political_power = 50
+			add_stability = 0.05
+			add_war_support = 0.05
+			LNR_grey_support_down = yes
+		}
+	}
+}
+
+LNR_late_land_reform = {
+	LNR_republic_in_the_great_wave = {		#巨浪中的共和国
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			OR = {
+				has_completed_focus = LNR_succeed_land_reform
+				has_completed_focus = LNR_complete_land_reform
+				has_country_flag = LNR_late_land_reform_over
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			stability_weekly = -0.005
+			political_power_factor = -0.2
+			mobilization_speed = -0.5
+		}
+
+		timeout_effect = {
+			activate_mission = LNR_republic_in_the_great_wave
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = -4
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = 2
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 2
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			add_stability = -0.02
+		}
+	}
+	LNR_indulgence_of_revolutionaries = {		#放纵革命者活动
+		icon = GFX_decision_generic_form_nation
+
+		available = {}
+		visible = {}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 7
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = -1
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -2
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 3
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			add_manpower = -100
+			add_stability = -0.05
+		}
+	}
+	LNR_expanding_progressive_propaganda = {		#扩大进步主义宣传
+		icon = GFX_decision_generic_speech
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 14
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 2
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -1
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 1
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			add_stability = 0.02
+		}
+	}
+	LNR_making_deals_with_clans = {		#与宗族达成交易
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 14
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 2
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -2
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+		}
+	}
+	LNR_political_compromise = {		#政治妥协
+		icon = GFX_decision_eng_trade_unions_support
+
+		available = {}
+		visible = {}
+
+		cost = 0
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			add_political_power = 60
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = -2
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = 1
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 1
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+	LNR_suppress_agrarian_revolutionary_party = {		#打压农工革命党
+		icon = GFX_decision_generic_arrest
+
+		available = {}
+		visible = {}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_10
+		custom_cost_trigger = { command_power > 9 }
+		fire_only_once = no
+		days_re_enable = 21
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -10 }
+			add_stability = 0.01
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 1
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -1
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+	LNR_help_for_federal_garrison = {		#向联邦驻军求援
+		icon = GFX_decision_generic_intelligence_operation
+
+		available = {}
+		visible = {}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = { command_power > 19 }
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 70
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			stability_factor = 0.15
+			political_power_gain = 0.25
+		}
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -19 }
+			add_political_power = 100
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 4
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -4
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+	LNR_impeachment_of_gawa_adul = {		#弹劾加瓦·阿杜勒
+		icon = GFX_decision_generic_police_action
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LNR_impeachment_of_gawa_adul_tr1
+				check_variable = { LNR_late_land_reform_influence_1 < 21 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = LNR_impeachment_of_gawa_adul_tr2
+				check_variable = { LNR_late_land_reform_influence_3 > 54 }
+			}
+		}
+		visible = {}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 70
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			set_country_flag = LNR_late_land_reform_flag
+			custom_effect_tooltip = LNR_impeachment_of_gawa_adul_tt
+			add_stability = -0.05
+			add_political_power = -200
+			country_event = LNR.105
+		}
+	}
+	LNR_legalize_agro_industrial_revolutionary_party = {		#农工革命党合法化
+		icon = GFX_decision_eng_trade_unions_support
+
+		available = { has_completed_focus = LNR_another_knife }
+		visible = {}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_stability = -0.1
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = -3
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -5
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 8
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			set_country_flag = LNR_coop_with_airp_flag
+			custom_effect_tooltip = LNR_legalize_agro_industrial_revolutionary_party_tt
+		}
+	}
+	LNR_push_for_land_reform = {		#与农工革命党一起推进土地改革
+		icon = GFX_decision_generic_operation
+
+		available = { has_country_flag = LNR_coop_with_airp_flag }
+		visible = { has_country_flag = LNR_coop_with_airp_flag }
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 14
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			army_experience = 15
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 2
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -5
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = 3
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+	LNR_attract_revolutionaries = {		#同化革命派中的摇摆分子
+		icon = GFX_decision_hol_drain_water_lines
+
+		available = { has_country_flag = LNR_coop_with_airp_flag }
+		visible = { has_country_flag = LNR_coop_with_airp_flag }
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 14
+
+		fixed_random_seed = no
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			random_list = {
+				30 = {
+					add_political_power = -25
+					add_stability = -0.05
+				}
+				70 = {
+					add_stability = 0.05
+					add_to_variable = {
+						var = LNR_late_land_reform_influence_1
+						value = 5
+						tooltip = LNR_late_land_reform_influence_1_tt
+					}
+					add_to_variable = {
+						var = LNR_late_land_reform_influence_3
+						value = -5
+						tooltip = LNR_late_land_reform_influence_3_tt
+					}
+				}
+			}
+		}
+	}
+	LNR_conservative_support = {		#保守派的支持
+		icon = GFX_decision_generic_political_discourse
+
+		available = { has_completed_focus = LNR_clan_harmlessness }
+		visible = {}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_war_support = -0.15
+			custom_effect_tooltip = LNR_conservative_support_tt
+			set_country_flag = LNR_coop_with_conservatist_flag
+		}
+	}
+	LNR_rebellious_clan_children = {		#反叛的宗族子弟
+		icon = GFX_decision_generic_military
+
+		available = { has_country_flag = LNR_coop_with_conservatist_flag }
+		visible = { has_country_flag = LNR_coop_with_conservatist_flag }
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 21
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 2
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -2
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+		}
+	}
+	LNR_sugar_coated_shells = {		#糖衣炮弹
+		icon = GFX_decision_generic_fundraising
+
+		available = { has_country_flag = LNR_coop_with_conservatist_flag }
+		visible = { has_country_flag = LNR_coop_with_conservatist_flag }
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			SPC_agricultural_development_amount_up_1 = yes
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = LNR_rural_investment
+				days = 30
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 5
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -3
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -2
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+	LNR_ask_landlords_for_help = {		#请求地主私兵帮忙“剿匪” 
+		icon = GFX_decision_generic_disband_irregulars
+
+		available = { has_country_flag = LNR_coop_with_conservatist_flag }
+		visible = { has_country_flag = LNR_coop_with_conservatist_flag }
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_stability = -0.05
+			add_manpower = -100
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 3
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = 2
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -5
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+		}
+	}
+}

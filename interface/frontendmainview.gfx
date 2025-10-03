@@ -1,0 +1,231 @@
+#background sprite is in frontendmainviewbg.gfx
+
+spriteTypes = {
+	textSpriteType = {
+		name = "GFX_main_lobby_button"
+		textureFile = "gfx/interface/main_lobby_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_main_lobby_button_highlight"
+		textureFile = "gfx/interface/main_lobby_button_transparent.dds"
+
+		animation = {
+			animationmaskfile = "gfx/interface/main_lobby_button_white.dds"
+			animationtexturefile = "gfx/interface/main_lobby_button_highlight.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1				# in seconds
+			animationdelay = 0.5			# in seconds
+			animationblendmode = "normal"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_main_lobby_divider"
+		textureFile = "gfx/interface/main_lobby_divider.dds"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_game_logo"
+		texturefile = "gfx/interface/logo_game.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SPC_logo"
+		texturefile = "gfx/interface/SPC_logo.png"
+	}
+
+	spriteType = {
+		name = "GFX_frontend_dev_logo"
+		texturefile = "gfx/interface/pdx_dev_logo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_alpha_stamp"
+		texturefile = "gfx/interface/alpha_stamp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_socialview_icon"
+		texturefile = "gfx/interface/icons/pi_icon.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_subscription_widget"
+		textureFile = "gfx/interface/sub/main/subscription_widget.dds"
+		noOfFrames = 7
+		animation_rate_fps = 0.15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		effectFile = "gfx/FX/buttonstate_fade_frames_to_black.lua"
+	}
+
+	spriteType = {
+		name = "GFX_subscription_widget_active"
+		textureFile = "gfx/interface/sub/main/subscription_widget_active.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_tape"
+		textureFile = "gfx/interface/bookmark/bookmark_tape.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_back_button"
+		textureFile = "gfx/interface/bookmark/bookmark_back_button.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_select_button"
+		textureFile = "gfx/interface/bookmark/bookmark_select_button.png"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_continent_2"
+		textureFile = "gfx/interface/bookmark/bookmark_continent_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_bookmark_continent_2_shine"
+		texturefile = "gfx/interface/bookmark/bookmark_continent_2.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/bookmark/bookmark_continent_2.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/bookmark/bookmark_continent_2.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_lock"
+		textureFile = "gfx/interface/bookmark/bookmark_lock.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_logo"
+		textureFile = "gfx/interface/bookmark/bookmark_logo.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_back_button_2"
+		textureFile = "gfx/interface/bookmark/bookmark_back_button_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_select_button_2"
+		textureFile = "gfx/interface/bookmark/bookmark_select_button_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_button_decor"
+		textureFile = "gfx/interface/bookmark/bookmark_button_decor.png"
+		#transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_playable_content"
+		textureFile = "gfx/interface/bookmark/bookmark_playable_content.png"
+	}
+
+	SpriteType = {
+		name = "GFX_bookmark_playable_content_shine"
+		texturefile = "gfx/interface/bookmark/bookmark_playable_content.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/bookmark/bookmark_playable_content.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/bookmark/bookmark_playable_content.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_continent_background_1"
+		textureFile = "gfx/interface/bookmark/bookmark_continent_background_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_continent_background_2"
+		textureFile = "gfx/interface/bookmark/bookmark_continent_background_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_continent_background_3"
+		textureFile = "gfx/interface/bookmark/bookmark_continent_background_3.png"
+	}
+
+	###剧本###
+	spriteType = {
+		name = "GFX_bookmark_bastia_1"
+		texturefile = "gfx/interface/bookmark/bookmark_bastia_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_bastia_2"
+		texturefile = "gfx/interface/bookmark/bookmark_bastia_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_bastia_3"
+		texturefile = "gfx/interface/bookmark/bookmark_bastia_3.png"
+	}
+
+	spriteType = {
+		name = "GFX_bookmark_bastia_4"
+		texturefile = "gfx/interface/bookmark/bookmark_bastia_4.png"
+	}
+
+}

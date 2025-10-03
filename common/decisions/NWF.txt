@@ -1,0 +1,22 @@
+NWF_debug_event_trigger = {
+	NWF_debug_event_trigger_1 = { 		#检测投降程度事件的
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = NWF }
+		available = { exists = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 1
+
+		timeout_effect = {  
+			if = {
+				limit = { surrender_progress > 0.5 }
+				SFH = { country_event = NWF.504 }
+			}
+			else = {
+				activate_mission = NWF_debug_event_trigger_1
+			}
+		}
+	}
+}

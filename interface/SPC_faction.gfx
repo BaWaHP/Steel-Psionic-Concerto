@@ -1,0 +1,22 @@
+spriteTypes = {	
+	###阵营###
+	###南巴联邦###
+	spriteType = {	#主导国
+		name = "GFX_RSB_federation_icon_1"
+		texturefile = "gfx/interface/RSB/RSB_federation_icon_1.png"
+	}
+	spriteType = {	#成员国
+		name = "GFX_RSB_federation_icon_2"
+		texturefile = "gfx/interface/RSB/RSB_federation_icon_2.png"
+	}
+	###远乡###
+	spriteType = {	#远乡王朝
+		name = "GFX_SFH_farhome_kingdom_icon"
+		texturefile = "gfx/interface/SFH/SFH_farhome_kingdom_icon.png"
+	}
+	###沃姆###
+	spriteType = {	#沃姆帝国势力圈
+		name = "GFX_WOM_influence_faction_icon"
+		texturefile = "gfx/interface/WOM/WOM_influence_faction_icon.png"
+	}
+}

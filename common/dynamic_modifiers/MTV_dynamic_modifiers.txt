@@ -1,0 +1,70 @@
+MTV_autonomous_region_1 = {	#中部维尔达-缇尼厄奥民族自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_1
+
+	recruitable_population_factor = -0.3
+}
+
+MTV_autonomous_region_2 = {	#东方维尔达人自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_2
+
+	recruitable_population_factor = -0.1
+}
+
+MTV_autonomous_region_3 = {	#中部维尔达人自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_3
+
+	recruitable_population_factor = -0.1
+}
+
+MTV_autonomous_region_4 = {	#乌齐库姆-西方维尔达人混合自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_4
+
+	recruitable_population_factor = -0.3
+}
+
+MTV_autonomous_region_5 = {	#蒙特-德里尼-西方维尔达人混合自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_5
+
+	recruitable_population_factor = -0.35
+}
+
+MTV_autonomous_region_6 = {	#西方维尔达-蒙特-希纽人自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_6
+
+	recruitable_population_factor = -0.25
+}
+
+MTV_autonomous_region_7 = {	#蒙特人自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_7
+
+	recruitable_population_factor = -0.05
+}
+
+MTV_autonomous_region_8 = {	#蒙特-莱布赫-青蒙人混合自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_8
+
+	recruitable_population_factor = -0.15
+}
+
+MTV_autonomous_region_9 = {	#青蒙-蒙特人混合自治区
+	enable = { always = yes }
+	icon = GFX_idea_MTV_autonomous_region_9
+
+	recruitable_population_factor = -0.15
+}
+
+MTV_ashes_of_saraiovi = {	#萨莱欧维之烬
+	enable = { always = yes }
+	icon = GFX_idea_MTV_ashes_of_saraiovi
+
+	recruitable_population_factor = -0.8
+	state_production_speed_buildings_factor = -0.35
+}

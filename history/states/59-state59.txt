@@ -1,0 +1,35 @@
+
+state={
+	id=59
+	name="STATE_59"
+
+	resources = {
+		steel = 4
+		magic_crystal = 4
+	}
+
+	history={
+		owner = GLV
+		add_core_of = GLV
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 4
+		}
+		victory_points = {
+			15390 15
+		}
+		victory_points = {
+			15582 8
+		}
+	}
+
+	provinces={
+		4825 7167 7237 7374 9703 15265 15314 15390 15472 15510 15572 15582 15614 15719 15902 
+	}
+	manpower = 2543219
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=1.000
+}

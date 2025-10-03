@@ -1,0 +1,16 @@
+LNR_okkonens_connections = {	#奥克宁的关系网
+	#picture = 
+	allowed = { tag = LNR }
+	visible = { has_completed_focus = LNR_leverage_social_network }
+	visible_when_empty = yes
+	priority = 10
+}
+
+LNR_late_land_reform = {	#迟来的土地改革
+	icon = GFX_decision_category_generic
+	#picture = 
+	allowed = { tag = LNR }
+	visible = { has_country_flag = LNR_late_land_reform_flag }
+	visible_when_empty = yes
+	priority = 10
+}

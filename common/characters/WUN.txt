@@ -1,0 +1,330 @@
+characters={
+	WUN_Yaqub_kuli_bek = {		#雅霍甫·胡里·伯克
+		name = WUN_Yaqub_kuli_bek
+		portraits = {
+			civilian = {
+				large="GFX_WUN_Yaqub_kuli_bek"
+				small="GFX_idea_WUN_Yaqub_kuli_bek"
+			}
+			army = {
+				large="GFX_WUN_Yaqub_kuli_bek"
+				small="GFX_idea_WUN_Yaqub_kuli_bek"
+			}
+		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { harsh_leader trickster commando inspirational_leader }
+		}
+		country_leader = {
+			desc = WUN_Yaqub_kuli_bek_desc
+			ideology = authoritarian_nationalism_subtype
+			traits = { the_king_of_ci_dshal sweep_over tyranny }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	WUN_ZhangMazi = {		#白马子
+		name = WUN_ZhangMazi
+		portraits = {
+			civilian = {
+				large="GFX_ZHE_ZhangMazi"
+				small="GFX_idea_ZHE_ZhangMazi"
+			}
+			army = {
+				large="GFX_ZHE_ZhangMazi"
+				small="GFX_idea_ZHE_ZhangMazi"
+			}
+		}
+		country_leader = {
+			#desc = 
+			ideology = anarchy_commusim
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	WUN_zidovudine = {		#齐多夫定
+		name = WUN_zidovudine
+		portraits = {
+			civilian = {
+				large="GFX_WUN_zidovudine"
+				small="GFX_idea_WUN_zidovudine"
+			}
+			army = {
+				large="GFX_WUN_zidovudine"
+				small="GFX_idea_WUN_zidovudine"
+			}
+		}
+		country_leader = {
+			#desc = 
+			ideology = republic_of_nobility
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	WUN_yaqub_huda_bek = {		#雅霍甫·胡达·伯克
+		name = WUN_yaqub_huda_bek
+		portraits = {
+			civilian = {
+				large="GFX_WUN_yaqub_huda_bek"
+				small="GFX_idea_WUN_yaqub_huda_bek"
+			}
+			army = {
+				large="GFX_WUN_yaqub_huda_bek"
+				small="GFX_idea_WUN_yaqub_huda_bek"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { trait_reckless harsh_leader }
+		}
+		advisor = {
+			slot = political_advisor
+			desc = WUN_yaqub_huda_bek_desc
+			idea_token = WUN_yaqub_huda_bek_idea
+			allowed = { original_tag = WUN }
+			visible = { 
+				has_country_flag = WUN_first_war_flag
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			available = { 
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			traits = { WUN_hakim_bek }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	WUN_yaqub_haighura_bek = {		#雅霍甫·海拉古·伯克
+		name = WUN_yaqub_haighura_bek
+		portraits = {
+			civilian = {
+				large="GFX_WUN_yaqub_haighura_bek"
+				small="GFX_idea_WUN_yaqub_haighura_bek"
+			}
+			army = {
+				large="GFX_WUN_yaqub_haighura_bek"
+				small="GFX_idea_WUN_yaqub_haighura_bek"
+			}
+		}
+		country_leader = {
+			ideology = sacred_battles
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { infantry_officer trickster }
+		}
+		advisor={
+			slot = political_advisor
+			desc = WUN_yaqub_haighura_bek_desc
+			idea_token = WUN_yaqub_haighura_bek_idea
+			allowed = { original_tag = WUN }
+			visible = { 
+				has_country_flag = WUN_first_war_flag
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			available = { 
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			traits = { WUN_hakim_bek }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	WUN_yaqub_ginsham_bek = {		#雅霍甫·引上·伯克
+		name = WUN_yaqub_ginsham_bek
+		portraits = {
+			civilian = {
+				large="GFX_WUN_yaqub_ginsham_bek"
+				small="GFX_idea_WUN_yaqub_ginsham_bek"
+			}
+			army = {
+				large="GFX_WUN_yaqub_ginsham_bek"
+				small="GFX_idea_WUN_yaqub_ginsham_bek"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { trait_reckless }
+		}
+		advisor = {
+			slot = political_advisor
+			desc = WUN_yaqub_ginsham_bek_desc
+			idea_token = WUN_yaqub_ginsham_bek_idea
+			allowed = { original_tag = WUN }
+			visible = { 
+				has_country_flag = WUN_first_war_flag
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			available = { 
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			traits = { WUN_hakim_bek }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	WUN_yunusjan_cutarai_bek = {		#玉努斯江·库达莱·伯克
+		name = WUN_yunusjan_cutarai_bek
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { career_officer }
+		}
+		advisor = {
+			slot = political_advisor
+			desc = WUN_yunusjan_cutarai_bek_desc
+			idea_token = WUN_yunusjan_cutarai_bek_idea
+			allowed = { original_tag = WUN }
+			visible = { 
+				has_country_flag = WUN_first_war_flag
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			available = { 
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			traits = { WUN_ishan_bek }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	WUN_niyaz_kharidal_bek = {		#尼牙孜·哈尔伊达尔·伯克
+		name = WUN_niyaz_kharidal_bek
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = political_advisor
+			desc = WUN_niyaz_kharidal_bek_desc
+			idea_token = WUN_niyaz_kharidal_bek_idea
+			allowed = { original_tag = WUN }
+			visible = { 
+				has_country_flag = WUN_first_war_flag
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			available = { 
+				OR = {
+					has_government = authoritarian_nationalism
+					has_government = wizard_rules
+				}
+			}
+			traits = { WUN_ishan_bek }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	WUN_lust_mountain = {		#肉山
+		name = WUN_lust_mountain
+		portraits = {
+			civilian = {
+				large="GFX_WUN_lust_mountain"
+				small="GFX_idea_WUN_lust_mountain"
+			}
+			army = {
+				large="GFX_WUN_lust_mountain"
+				small="GFX_idea_WUN_lust_mountain"
+			}
+		}
+	}
+	WUN_Libido = {		#力比多
+		name = WUN_Libido
+		portraits = {
+			civilian = {
+				large="GFX_WUN_Libido"
+				small="GFX_idea_WUN_Libido"
+			}
+			army = {
+				large="GFX_WUN_Libido"
+				small="GFX_idea_WUN_Libido"
+			}
+		}
+	}
+}

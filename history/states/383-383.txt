@@ -1,0 +1,28 @@
+
+state={
+	id=383
+	name="STATE_383"
+	provinces={
+		442 1028 8011 9430 20462 20514 20561 
+	}
+	resources = {
+		steel = 7
+		aluminium = 2
+	}
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 3
+		}
+		victory_points = {
+			20514 8
+		}
+	}
+	manpower=1530000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

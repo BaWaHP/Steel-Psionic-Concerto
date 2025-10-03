@@ -1,0 +1,1610 @@
+ideas = {
+
+	environment_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_environment_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				political_power_factor = -0.1
+				stability_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		EP_barely_nothing = {	#EP - environment policy
+			level = 6
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				monthly_environment_development_process = -2
+				monthly_research_development_process = 1
+				monthly_industrial_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = 10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 0 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 0 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = -2
+				}
+   			}
+		}
+
+		EP_minimum_control = {	#EP - environment policy
+			level = 5
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.02
+			}
+	
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process > 0 }
+					add = 5
+				}
+   			}
+		}
+
+		EP_more_observation = {	#EP - environment policy
+			level = 4
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_expected_value = 0.04
+				monthly_environment_development_process = 2
+				monthly_industrial_development_process = -1
+			}
+	
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				base = 10
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.4 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 2 }
+					add = -2
+				}
+   			}
+		}
+
+		EP_government_target = {	#EP - environment policy
+			level = 3
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				consumer_goods_expected_value = 0.06
+				monthly_agricultural_development_process = 2
+				monthly_environment_development_process = 4
+				monthly_industrial_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 15
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -15
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+
+		EP_more_limitations = {	#EP - environment policy
+			level = 2
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				stability_factor = 0.15
+				political_power_factor = -0.15
+				consumer_goods_expected_value = 0.08
+				monthly_agricultural_development_process = 4
+				monthly_environment_development_process = 6
+				monthly_industrial_development_process = -2
+				monthly_research_development_process = -1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 20
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -20
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.2 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < 3 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 2 }
+					add = -2
+				}
+   			}
+		}
+	
+		EP_maximum_punishment = {	#EP - environment policy
+			level = 1
+			available = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_environment_policy } }
+
+			modifier = {
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				stability_factor = 0.2
+				political_power_factor = -0.2
+				consumer_goods_expected_value = 0.1
+				monthly_agricultural_development_process = 6
+				monthly_environment_development_process = 8
+				monthly_industrial_development_process = -4
+				monthly_research_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 25
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -25
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < -7 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < 5 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+
+	}
+
+	resource_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_resource_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+			
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RP_decide_themselves = {	#RP - resource policy
+			level = 6
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = 10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = -5
+				}
+			}
+		}
+
+		RP_basic_funding = {	#RP - resource policy
+			level = 5
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				local_resources_factor = -0.05
+				consumer_goods_expected_value = 0.02
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process > 0 }
+					add = 5
+				}
+			}
+		}
+
+		RP_asisting_research = {	#RP - resource policy
+			level = 4
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.04
+				monthly_industrial_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+				base = 10
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.4 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = 5
+				}
+			}
+		}
+
+		RP_locating_resource = {	#RP - resource policy
+			level = 3
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_expected_value = 0.06
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = -1
+				monthly_environment_development_process = -1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 15
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -15
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 2 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 2 }
+					add = -2
+				}
+			}
+		}
+
+		RP_extensive_mining = {	#RP - resource policy
+			level = 2
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.1
+				consumer_goods_expected_value = 0.08
+				monthly_industrial_development_process = 6
+				monthly_agricultural_development_process = -2
+				monthly_environment_development_process = -2
+				monthly_research_development_process = -1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 20
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -20
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.2 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 3 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 3 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 2 }
+					add = -2
+				}
+			}
+		}
+
+		RP_total_funding = {	#RP - resource policy
+			level = 1
+			available = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_resource_policy } }
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				local_resources_factor = 0.2
+				consumer_goods_expected_value = 0.1
+				monthly_industrial_development_process = 8
+				monthly_agricultural_development_process = -4
+				monthly_environment_development_process = -4
+				monthly_research_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 25
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -25
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -7 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 5 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_environment_development_process < 5 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 3 }
+					add = -2
+				}
+			}
+		}
+	}
+	industry_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_industry_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		IP_nationalization = {	#IP - industry policy
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			cost = 0
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		IP_no_intervention = {	#IP - industry policy
+			level = 6
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				political_power_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = 10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+
+		IP_basic_funds = {	#IP - industry policy
+			level = 5
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.04
+				monthly_living_standard_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < -1 }
+					add = 5
+				}
+			}
+		}
+		
+		IP_creating_business = {	#IP - industry policy
+			level = 4
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.08
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				monthly_living_standard_development_process = 4
+				monthly_industrial_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 10
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.4 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = 5
+				}
+			}
+		}
+
+		IP_funding_proj = {	#IP - industry policy
+			level = 3
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.12
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_living_standard_development_process = 4
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = -1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 15
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -15
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 2 }
+					add = -2
+				}
+			}
+		}
+
+		IP_cutting_taxes = {	#IP - industry policy
+			level = 2
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.16
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				monthly_living_standard_development_process = 4
+				monthly_industrial_development_process = 4
+				monthly_research_development_process = 2
+				monthly_agricultural_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 20
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -20
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.2 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 3 }
+					add = -2
+				}
+			}
+		}
+
+		IP_more_business = {	#IP - industry policy
+			level = 1
+			available = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_industry_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				production_speed_buildings_factor = 0.2
+				monthly_living_standard_development_process = 6
+				monthly_industrial_development_process = 4
+				monthly_research_development_process = 2
+				monthly_agricultural_development_process = -4
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 25
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -25
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_living_standard_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 5 }
+					add = -2
+				}
+			}
+		}
+	}
+
+	working_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_working_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_no_specific_laws = {	#WP - working_policy
+			level = 6
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_industrial_development_process = 4
+				monthly_living_standard_development_process = -4
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_symbolic_laws = {	#WP - working_policy
+			level = 5
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.02
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				monthly_industrial_development_process = 2
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_basic_laws = {	#WP - working_policy
+			level = 4
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.04
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_limited_laws = {	#WP - working_policy
+			level = 3
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.06
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_living_standard_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_better_laws = {	#WP - working_policy
+			level = 2
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.08
+				stability_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				monthly_living_standard_development_process = 4
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		WP_worker_council = {	#WP - working_policy
+			level = 1
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				stability_factor = 0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.15
+				monthly_industrial_development_process = -2
+				monthly_living_standard_development_process = 6
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+	agricultural_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_agricultural_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				stability_factor = 0.1
+				monthly_population = 0.1
+				global_building_slots_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		AP_no_funds = {	#AP - agricultural_policy
+			level = 6
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.1
+				global_building_slots_factor = -0.1
+				monthly_agricultural_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = 10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+
+		AP_basic_funds = {	#AP - agricultural_policy
+			level = 5
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.04
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process > 0 }
+					add = 5
+				}
+   			}
+		}
+
+		AP_advanced_funds = {	#AP - agricultural_policy
+			level = 4
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.08
+				stability_factor = 0.05
+				monthly_population = 0.05
+				global_building_slots_factor = 0.05
+				monthly_agricultural_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 10
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.4 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -1 }
+					add = 5
+				}
+   			}
+		}
+
+		AP_better_funds = {	#AP - agricultural_policy
+			level = 3
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.12
+				stability_factor = 0.1
+				monthly_population = 0.1
+				global_building_slots_factor = 0.1
+				monthly_agricultural_development_process = 4
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 15
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -15
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -3 }
+					add = 5
+				}
+   			}
+		}
+
+		AP_cutting_taxes = {	#AP - agricultural_policy
+			level = 2
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.16
+				stability_factor = 0.15
+				monthly_population = 0.15
+				global_building_slots_factor = 0.15
+				monthly_agricultural_development_process = 6
+				monthly_industrial_development_process = -1
+				monthly_research_development_process = -1
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 20
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -20
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.2 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < 2 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 2 }
+					add = -2
+				}
+   			}
+		}
+
+		AP_endless_funds = {	#AP - agricultural_policy
+			level = 1
+			available = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_agricultural_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				stability_factor = 0.2
+				monthly_population = 0.2
+				global_building_slots_factor = 0.2
+				monthly_agricultural_development_process = 8
+				monthly_industrial_development_process = -2
+				monthly_research_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 25
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -25
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -7 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < 3 }
+					add = -2
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+	}
+
+	research_policy = {
+		law = yes
+		use_list_view = yes
+
+		ai_research_policy = {
+
+			level = 114514
+
+			available = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			visible = {
+				OR = {
+					is_ai = yes
+					is_debug = yes
+				}
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				research_speed_factor = 0.1
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				is_debug = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RP_no_funds = {	#RP - research_policy
+			level = 6
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				research_speed_factor = -0.1
+				monthly_research_development_process = -2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = 10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_research_development_process < 3 }
+					add = -2
+				}
+   			}
+		}
+
+		RP_basic_funds = {	#RP - research_policy
+			level = 5
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.02
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+			
+			default = yes
+
+			ai_will_do = {
+   				base = 5
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -5
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process > 0 }
+					add = 5
+				}
+   			}
+		}
+
+		RP_limited_funds = {	#RP - research_policy
+			level = 4
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.04
+				research_speed_factor = 0.05
+				monthly_research_development_process = 2
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 10
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -10
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.4 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -1 }
+					add = 5
+				}
+   			}
+		}
+		RP_advanced_funds = {	#RP - research_policy
+			level = 3
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.06
+				research_speed_factor = 0.1
+				monthly_research_development_process = 2
+				state_magic_development_monthly = 0.01
+				state_science_development_monthly = 0.01
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 15
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -15
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.3 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -1 }
+					add = 5
+				}
+   			}
+		}
+		RP_even_more_funds = {	#RP - research_policy
+			level = 2
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.08
+				research_speed_factor = 0.15
+				monthly_research_development_process = 4
+				state_magic_development_monthly = 0.02
+				state_science_development_monthly = 0.02
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 20
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -20
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.2 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -3 }
+					add = 5
+				}
+   			}
+		}
+		RP_full_power_in_science = {	#RP - research_policy
+			level = 1
+			available = { NOT = { has_country_flag = SPC_ban_research_policy } }
+			allowed_to_remove = { NOT = { has_country_flag = SPC_ban_research_policy } }
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				research_speed_factor = 0.2
+				monthly_research_development_process = 4
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				state_magic_development_monthly = 0.04
+				state_science_development_monthly = 0.04
+			}
+
+			on_add = { SPC_development_update_effect = yes }
+			on_remove = { custom_effect_tooltip = country_development_leaving }
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 25
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor > 0.5 }
+					add = -25
+				}
+				modifier = {
+					check_variable = { modifier@consumer_goods_factor < 0.1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_agricultural_development_process < -5 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@monthly_industrial_development_process < -1 }
+					add = 5
+				}
+				modifier = {
+					check_variable = { modifier@state_science_development_monthly < -1 }
+					add = 5
+				}
+   			}
+		}
+	}
+
+}

@@ -1,0 +1,76 @@
+ideas = {
+	country = {
+
+		#依人民的意志
+		PRF_by_the_will_of_the_people = {
+			picture = MEX_revolutionary_army
+			allowed = { original_tag = PRF }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_org_regain = 0.1
+				army_org_regain = 0.2
+				pioneer_communism_drift = 0.01
+				revolutionary_communism_drift = 0.01
+				worldunion_socialist_drift = 0.01
+				worldunion_democrat_drift = 0.01
+				surrender_limit = 0.5
+			}
+
+			targeted_modifier = {
+				tag = WOM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
+
+		#捍卫革命果实
+		PRF_defend_the_revolution = {
+			picture = home_of_revolution
+			allowed = { original_tag = PRF }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.2
+				pioneer_communism_drift = 0.01
+				revolutionary_communism_drift = 0.03
+			}
+		}
+	
+		#大帐篷政府
+		PRF_big_tent_government = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = PRF }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				political_advisor_cost_factor = 0.33
+				worldunion_socialist_drift = 0.03
+				worldunion_democrat_drift = 0.01
+			}
+		}
+
+		#破碎的经济
+		PRF_broken_economy = {
+			picture = generic_economic_crisis
+			allowed = { original_tag = PRF }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				research_speed_factor = -0.1
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				monthly_industrial_development_process = -1
+				monthly_agricultural_development_process = -1
+				monthly_living_standard_development_process = -1
+			}
+		}
+	}
+}

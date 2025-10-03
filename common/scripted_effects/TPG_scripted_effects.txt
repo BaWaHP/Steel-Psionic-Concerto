@@ -1,0 +1,413 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_TPG_startup_effect = {
+	if = {
+		limit = { tag = TPG }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = reinforced_training
+		add_ideas = partial_economic_mobilisation
+		add_ideas = export_focus
+		add_ideas = normal_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_locating_resource
+		add_ideas = IP_creating_business
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_basic_funds
+		add_ideas = MP_no_restriction
+		add_ideas = SPP_cia_everywhere
+		add_ideas = FP_working_euqality
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_crystal_secret_code
+		add_ideas = LR_demons
+		add_ideas = SR_crystals
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_recessing_policy
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 34
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 6 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }
+			}
+			if = {
+				limit = {
+					state = 32
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 33
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 55
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 56
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 35
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 38
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 54
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 37
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 36
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+		}
+		###其他开局设置###
+		#人类抵抗组织-鹰派
+		add_dynamic_modifier = { modifier = TPG_HRE_dynamic_modifier }
+		set_variable = { TPG_HRE_stability_weekly_modifier = -0.005 }
+		set_variable = { TPG_HRE_industrial_capacity_factory_modifier = -0.1 }
+		set_variable = { TPG_HRE_production_factory_efficiency_gain_factor_modifier = -0.2 }
+		set_variable = { TPG_HRE_production_speed_buildings_factor_modifier = -0.1 }
+		set_variable = { TPG_HRE_army_org_regain_modifier = -0.15 }
+		set_variable = { TPG_HRE_monthly_industrial_development_process_modifier = -2 }
+		set_variable = { TPG_HRE_monthly_agricultural_development_process_modifier = -2 }
+
+		#水晶优先
+		add_dynamic_modifier = { modifier = TPG_crystal_priority_dynamic_modifier }
+		set_variable = { TPG_crystal_priority_consumer_goods_factor_modifier = 0.1 }
+		set_variable = { TPG_crystal_priority_research_speed_factor_modifier = -0.1 }
+		set_variable = { TPG_crystal_priority_industrial_capacity_factory_modifier = -0.25 }
+		set_variable = { TPG_crystal_priority_industrial_capacity_dockyard_modifier = -0.25 }
+		set_variable = { TPG_crystal_priority_production_factory_max_efficiency_factor_modifier = -0.2 }
+		set_variable = { TPG_crystal_priority_production_speed_buildings_factor_modifier = -0.15 }
+		set_variable = { TPG_crystal_priority_conscription_factor_modifier = -0.4 }
+		set_variable = { TPG_crystal_priority_monthly_living_standard_development_process_modifier = -2 }
+
+		#人类抵抗组织-鸽派
+		add_dynamic_modifier = { modifier = TPG_HRP_dynamic_modifier }
+		set_variable = { TPG_HRP_war_support_factor_modifier = -0.1 }
+		set_variable = { TPG_HRP_local_resources_factor_modifier  = -0.1 }
+		set_variable = { TPG_HRP_production_factory_max_efficiency_factor_modifier = 0.05 }
+		set_variable = { TPG_HRP_production_speed_buildings_factor_modifier = 0.05 }
+				
+		#贵族不满
+		add_dynamic_modifier = { modifier = TPG_ND_dynamic_modifier }
+		set_variable = { TPG_ND_war_support_factor_modifier = -0.15 }
+		set_variable = { TPG_ND_war_support_weekly_modifier = -0.005 }
+		set_variable = { TPG_ND_political_power_factor_modifier = -0.15 }
+		set_variable = { TPG_ND_political_advisor_cost_factor_modifier = 0.33 }
+		set_variable = { TPG_ND_disabled_ideas_modifier = 1 }
+		
+		#落魄的胜利者
+		add_dynamic_modifier = { modifier = TPG_DV_dynamic_modifier }
+		set_variable = { TPG_DV_army_org_factor_modifier = -0.2 }
+		set_variable = { TPG_DV_army_org_regain_modifier = -0.2 }
+		set_variable = { TPG_DV_land_reinforce_rate_modifier = -0.02 }
+		set_variable = { TPG_DV_army_attack_factor_modifier = -0.2 }
+		set_variable = { TPG_DV_army_defence_factor_modifier = -0.2 }
+		set_variable = { TPG_DV_land_doctrine_cost_factor_modifier = 1 }
+		set_variable = { TPG_DV_war_support_factor_modifier = 0 }
+		
+		#沃姆帝国的影响
+		clamp_variable = {
+		    var = TPG_industrial_development_degree
+		    min = 1
+		    max = 5
+	    }
+		
+		clamp_variable = {
+		    var = TPG_corporate_influence
+		    min = 1
+		    max = 5
+	    }
+		#发展积分
+		set_variable = { TPG_development_points = 0 }
+		#公国工业发展度
+		set_variable = { TPG_industrial_development_degree = 1 }
+		#沃姆企业影响力
+		set_variable = { TPG_corporate_influence = 2 }
+		
+		force_update_dynamic_modifier = yes
+	}
+	
+}
+
+#公国工业发展度增加
+TPG_industrial_development_degree_up = {
+	if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_1_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_1_i
+			add_idea = TPG_industrial_development_degree_2_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_2_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_2_i
+			add_idea = TPG_industrial_development_degree_3_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_3_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_3_i
+			add_idea = TPG_industrial_development_degree_4_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_4_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_4_i
+			add_idea = TPG_industrial_development_degree_5_i
+		}
+	}
+	else = {
+	    
+	}
+	custom_effect_tooltip = TPG_industrial_development_degree_up_tt
+}
+
+#公国工业发展度下降
+TPG_industrial_development_degree_down = {
+	if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_5_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_5_i
+			add_idea = TPG_industrial_development_degree_4_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_4_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_4_i
+			add_idea = TPG_industrial_development_degree_3_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_3_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_3_i
+			add_idea = TPG_industrial_development_degree_2_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_industrial_development_degree_2_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_industrial_development_degree_2_i
+			add_idea = TPG_industrial_development_degree_1_i
+		}
+	}
+	else = {
+	    
+	}
+	custom_effect_tooltip = TPG_industrial_development_degree_down_tt
+}
+
+#沃姆企业影响力上升
+TPG_corporate_influence_up = {
+	if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_1_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_1_i
+			add_idea = TPG_corporate_influence_2_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_2_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_2_i
+			add_idea = TPG_corporate_influence_3_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_3_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_3_i
+			add_idea = TPG_corporate_influence_4_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_4_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_4_i
+			add_idea = TPG_corporate_influence_5_i
+		}
+	}
+	else = {
+	    
+	}
+	custom_effect_tooltip = TPG_corporate_influence_up_tt
+}
+
+#沃姆企业影响力下降
+TPG_corporate_influence_down = {
+	if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_5_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_5_i
+			add_idea = TPG_corporate_influence_4_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_4_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_4_i
+			add_idea = TPG_corporate_influence_3_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_3_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_3_i
+			add_idea = TPG_corporate_influence_2_i
+		}
+	}
+	else_if = {
+	    limit = {
+		    tag = TPG
+			has_idea = TPG_corporate_influence_2_i
+		}
+		swap_ideas = {
+			remove_idea = TPG_corporate_influence_2_i
+			add_idea = TPG_corporate_influence_1_i
+		}
+	}
+	else = {
+	    
+	}
+	custom_effect_tooltip = TPG_corporate_influence_down_tt
+}

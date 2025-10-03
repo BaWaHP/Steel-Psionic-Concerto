@@ -1,0 +1,637 @@
+
+has_industrial_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_more_than_1_tt
+		OR = {
+			has_idea = handcraft_industry
+			has_idea = early_factory_industry
+			has_idea = factory_industry
+			has_idea = grouped_factory_industry
+			has_idea = innovative_industry
+		}
+	}
+}
+
+has_industrial_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_more_than_2_tt
+		OR = {
+			has_idea = early_factory_industry
+			has_idea = factory_industry
+			has_idea = grouped_factory_industry
+			has_idea = innovative_industry
+		}
+	}
+}
+
+has_industrial_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_more_than_3_tt
+		OR = {
+			has_idea = factory_industry
+			has_idea = grouped_factory_industry
+			has_idea = innovative_industry
+		}
+	}
+}
+
+has_industrial_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_more_than_4_tt
+		OR = {
+			has_idea = grouped_factory_industry
+			has_idea = innovative_industry
+		}
+	}
+}
+
+has_industrial_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_more_than_5_tt
+		has_idea = innovative_industry
+	}
+}
+
+has_industrial_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_less_than_2_tt
+		has_idea = primitive_industry
+	}
+}
+
+has_industrial_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_less_than_3_tt
+		OR = {
+			has_idea = primitive_industry
+			has_idea = handcraft_industry
+		}
+	}
+}
+
+has_industrial_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_less_than_4_tt
+		OR = {
+			has_idea = primitive_industry
+			has_idea = handcraft_industry
+			has_idea = early_factory_industry
+		}
+	}
+}
+
+has_industrial_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_less_than_5_tt
+		OR = {
+			has_idea = primitive_industry
+			has_idea = handcraft_industry
+			has_idea = early_factory_industry
+			has_idea = factory_industry
+		}
+	}
+}
+
+has_industrial_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_industrial_development_less_than_6_tt
+		OR = {
+			has_idea = primitive_industry
+			has_idea = handcraft_industry
+			has_idea = early_factory_industry
+			has_idea = factory_industry
+			has_idea = grouped_factory_industry
+		}
+	}
+}
+
+has_agricultural_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_more_than_1_tt
+		OR = {
+			has_idea = self_efficient_agriculture
+			has_idea = weak_agriculture
+			has_idea = modern_agriculture
+			has_idea = half_auto_agriculture
+			has_idea = mechanized_agriculture
+		}
+	}
+}
+
+has_agricultural_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_more_than_2_tt
+		OR = {
+			has_idea = weak_agriculture
+			has_idea = modern_agriculture
+			has_idea = half_auto_agriculture
+			has_idea = mechanized_agriculture
+		}
+	}
+}
+
+has_agricultural_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_more_than_3_tt
+		OR = {
+			has_idea = modern_agriculture
+			has_idea = half_auto_agriculture
+			has_idea = mechanized_agriculture
+		}
+	}
+}
+
+has_agricultural_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_more_than_4_tt
+		OR = {
+			has_idea = half_auto_agriculture
+			has_idea = mechanized_agriculture
+		}
+	}
+}
+
+has_agricultural_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_more_than_5_tt
+		has_idea = mechanized_agriculture
+	}
+}
+
+has_agricultural_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_less_than_2_tt
+		has_idea = primitive_agriculture
+	}
+}
+
+has_agricultural_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_less_than_3_tt
+		OR = {
+			has_idea = primitive_agriculture
+			has_idea = self_efficient_agriculture
+		}
+	}
+}
+
+has_agricultural_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_less_than_4_tt
+		OR = {
+			has_idea = primitive_agriculture
+			has_idea = self_efficient_agriculture
+			has_idea = weak_agriculture
+		}
+	}
+}
+
+has_agricultural_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_less_than_5_tt
+		OR = {
+			has_idea = primitive_agriculture
+			has_idea = self_efficient_agriculture
+			has_idea = weak_agriculture
+			has_idea = modern_agriculture
+		}
+	}
+}
+
+has_agricultural_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_agricultural_development_less_than_6_tt
+		OR = {
+			has_idea = primitive_agriculture
+			has_idea = self_efficient_agriculture
+			has_idea = weak_agriculture
+			has_idea = modern_agriculture
+			has_idea = half_auto_agriculture
+		}
+	}
+}
+
+has_military_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_more_than_1_tt
+		OR = {
+			has_idea = unorganized_army
+			has_idea = experienced_army
+			has_idea = very_experienced_army
+			has_idea = advanced_army
+			has_idea = innovative_army
+		}
+	}
+}
+
+has_military_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_more_than_2_tt
+		OR = {
+			has_idea = experienced_army
+			has_idea = very_experienced_army
+			has_idea = advanced_army
+			has_idea = innovative_army
+		}
+	}
+}
+
+has_military_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_more_than_3_tt
+		OR = {
+			has_idea = very_experienced_army
+			has_idea = advanced_army
+			has_idea = innovative_army
+		}
+	}
+}
+
+has_military_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_more_than_4_tt
+		OR = {
+			has_idea = advanced_army
+			has_idea = innovative_army
+		}
+	}
+}
+
+has_military_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_more_than_5_tt
+		has_idea = innovative_army
+	}
+}
+
+has_military_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_less_than_2_tt
+		has_idea = primitive_army
+	}
+}
+
+has_military_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_less_than_3_tt
+		OR = {
+			has_idea = primitive_army
+			has_idea = unorganized_army
+		}
+	}
+}
+
+has_military_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_less_than_4_tt
+		OR = {
+			has_idea = primitive_army
+			has_idea = unorganized_army
+			has_idea = experienced_army
+		}
+	}
+}
+
+has_military_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_less_than_5_tt
+		OR = {
+			has_idea = primitive_army
+			has_idea = unorganized_army
+			has_idea = experienced_army
+			has_idea = very_experienced_army
+		}
+	}
+}
+
+has_military_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_military_development_less_than_6_tt
+		OR = {
+			has_idea = primitive_army
+			has_idea = unorganized_army
+			has_idea = experienced_army
+			has_idea = very_experienced_army
+			has_idea = advanced_army
+		}
+	}
+}
+
+has_living_standard_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_more_than_1_tt
+		OR = {
+			has_idea = struggle_to_survive
+			has_idea = hard_to_survive
+			has_idea = normally_living
+			has_idea = extra_living
+			has_idea = best_living
+		}
+	}
+}
+
+has_living_standard_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_more_than_2_tt
+		OR = {
+			has_idea = hard_to_survive
+			has_idea = normally_living
+			has_idea = extra_living
+			has_idea = best_living
+		}
+	}
+}
+
+has_living_standard_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_more_than_3_tt
+		OR = {
+			has_idea = normally_living
+			has_idea = extra_living
+			has_idea = best_living
+		}
+	}
+}
+
+has_living_standard_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_more_than_4_tt
+		OR = {
+			has_idea = extra_living
+			has_idea = best_living
+		}
+	}
+}
+
+has_living_standard_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_more_than_5_tt
+		has_idea = best_living
+	}
+}
+
+has_living_standard_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_less_than_2_tt
+		has_idea = death_everywhere
+	}
+}
+
+has_living_standard_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_less_than_3_tt
+		OR = {
+			has_idea = death_everywhere
+			has_idea = struggle_to_survive
+		}
+	}
+}
+
+has_living_standard_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_less_than_4_tt
+		OR = {
+			has_idea = death_everywhere
+			has_idea = struggle_to_survive
+			has_idea = hard_to_survive
+		}
+	}
+}
+
+has_living_standard_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_less_than_5_tt
+		OR = {
+			has_idea = death_everywhere
+			has_idea = struggle_to_survive
+			has_idea = hard_to_survive
+			has_idea = normally_living
+		}
+	}
+}
+
+has_living_standard_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_living_standard_development_less_than_6_tt
+		OR = {
+			has_idea = death_everywhere
+			has_idea = struggle_to_survive
+			has_idea = hard_to_survive
+			has_idea = normally_living
+			has_idea = extra_living
+		}
+	}
+}
+
+has_environment_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_more_than_1_tt
+		OR = {
+			has_idea = unhabitable
+			has_idea = uncomfortable
+			has_idea = controlled_pollution
+			has_idea = relatively_comfortable
+			has_idea = real_natural_environment
+		}
+	}
+}
+
+has_environment_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_more_than_2_tt
+		OR = {
+			has_idea = uncomfortable
+			has_idea = controlled_pollution
+			has_idea = relatively_comfortable
+			has_idea = real_natural_environment
+		}
+	}
+}
+
+has_environment_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_more_than_3_tt
+		OR = {
+			has_idea = controlled_pollution
+			has_idea = relatively_comfortable
+			has_idea = real_natural_environment
+		}
+	}
+}
+
+has_environment_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_more_than_4_tt
+		OR = {
+			has_idea = relatively_comfortable
+			has_idea = real_natural_environment
+		}
+	}
+}
+
+has_environment_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_more_than_5_tt
+		has_idea = real_natural_environment
+	}
+}
+
+has_environment_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_less_than_2_tt
+		has_idea = hazard_zone
+	}
+}
+
+has_environment_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_less_than_3_tt
+		OR = {
+			has_idea = hazard_zone
+			has_idea = unhabitable
+		}
+	}
+}
+
+has_environment_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_less_than_4_tt
+		OR = {
+			has_idea = hazard_zone
+			has_idea = unhabitable
+			has_idea = uncomfortable
+		}
+	}
+}
+
+has_environment_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_less_than_5_tt
+		OR = {
+			has_idea = hazard_zone
+			has_idea = unhabitable
+			has_idea = uncomfortable
+			has_idea = controlled_pollution
+		}
+	}
+}
+
+has_environment_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_environment_development_less_than_6_tt
+		OR = {
+			has_idea = hazard_zone
+			has_idea = unhabitable
+			has_idea = uncomfortable
+			has_idea = controlled_pollution
+			has_idea = relatively_comfortable
+		}
+	}
+}
+
+has_research_development_more_than_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_more_than_1_tt
+		OR = {
+			has_idea = nobody_cares
+			has_idea = few_cares
+			has_idea = fake_exists
+			has_idea = standard_research
+			has_idea = willing_research
+		}
+	}
+}
+
+has_research_development_more_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_more_than_2_tt
+		OR = {
+			has_idea = few_cares
+			has_idea = fake_exists
+			has_idea = standard_research
+			has_idea = willing_research
+		}
+	}
+}
+
+has_research_development_more_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_more_than_3_tt
+		OR = {
+			has_idea = fake_exists
+			has_idea = standard_research
+			has_idea = willing_research
+		}
+	}
+}
+
+has_research_development_more_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_more_than_4_tt
+		OR = {
+			has_idea = standard_research
+			has_idea = willing_research
+		}
+	}
+}
+
+has_research_development_more_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_more_than_5_tt
+		has_idea = willing_research
+	}
+}
+
+has_research_development_less_than_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_less_than_2_tt
+		has_idea = fuck_the_science
+	}
+}
+
+has_research_development_less_than_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_less_than_3_tt
+		OR = {
+			has_idea = fuck_the_science
+			has_idea = nobody_cares
+		}
+	}
+}
+
+has_research_development_less_than_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_less_than_4_tt
+		OR = {
+			has_idea = fuck_the_science
+			has_idea = nobody_cares
+			has_idea = few_cares
+		}
+	}
+}
+
+has_research_development_less_than_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_less_than_5_tt
+		OR = {
+			has_idea = fuck_the_science
+			has_idea = nobody_cares
+			has_idea = few_cares
+			has_idea = fake_exists
+		}
+	}
+}
+
+has_research_development_less_than_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_research_development_less_than_6_tt
+		OR = {
+			has_idea = fuck_the_science
+			has_idea = nobody_cares
+			has_idea = few_cares
+			has_idea = fake_exists
+			has_idea = standard_research
+		}
+	}
+}
+

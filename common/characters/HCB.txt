@@ -1,0 +1,23 @@
+characters={
+
+	HCB_neil_mcLeod = {		#尼尔·麦克劳德
+   		name = HCB_neil_mcLeod
+   		portraits = {
+   			civilian = {
+   				large="GFX_HCB_neil_mcLeod"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_HCB_neil_mcLeod"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = HCB_neil_mcLeod_desc
+   			ideology = authoritarian_republican_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

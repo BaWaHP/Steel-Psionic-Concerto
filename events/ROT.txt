@@ -1,0 +1,1887 @@
+﻿add_namespace = ROT
+
+country_event = {	#公民运动会
+	id = ROT.1
+	title = ROT.1.t
+	desc = ROT.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.1.a
+		421 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	}
+}
+
+country_event = {	#别样的革命者
+	id = ROT.2
+	title = ROT.2.t
+	desc = ROT.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.2.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.05
+		}
+		country_event = {
+			id = ROT.3
+			days = 1
+		}
+	}
+}
+
+country_event = {	#坦诚相待1
+	id = ROT.3
+	title = ROT.3.t
+	desc = ROT.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.3.a
+		country_event = {
+			id = ROT.4
+			days = 1
+		}
+	}
+}
+
+country_event = {	#坦诚相待2
+	id = ROT.4
+	title = ROT.4.t
+	desc = ROT.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.4.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {	#处理工人合作社
+	id = ROT.5
+	title = ROT.5.t
+	desc = ROT.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.5.a
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.03
+		}
+		add_stability = 0.1
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	option = {
+		name = ROT.5.b
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.05
+		}
+		add_manpower = -3000
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#新博物馆
+	id = ROT.6
+	title = ROT.6.t
+	desc = ROT.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.6.a
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.05
+		}
+	}
+}
+
+country_event = {	#反驻军游行
+	id = ROT.7
+	title = ROT.7.t
+	desc = ROT.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.7.a
+		add_manpower = -129
+	}
+}
+
+country_event = {	#圣地纠纷
+	id = ROT.8
+	title = ROT.8.t
+	desc = ROT.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.8.a
+		add_popularity = {
+			ideology = religious_extremism
+			popularity = 0.05
+		}
+		add_stability = -0.02
+	}
+
+	option = {
+		name = ROT.8.b
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.05
+		}
+		add_stability = -0.02
+	}
+
+	option = {
+		name = ROT.8.c
+		add_political_power = 100
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#圣城之子
+	id = ROT.9
+	title = ROT.9.t
+	desc = ROT.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.9.a
+		add_manpower = -55
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#经济萧条波及我国
+	id = ROT.10
+	title = ROT.10.t
+	desc = ROT.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.10.a
+		add_ideas = ROT_econ_depression_1
+	}
+}
+
+country_event = {	#提特兰之秋
+	id = ROT.11
+	title = ROT.11.t
+	desc = ROT.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.11.a
+		add_political_power = 50
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.05
+		}
+	}
+}
+
+country_event = {	#前往投票点
+	id = ROT.12
+	title = ROT.12.t
+	desc = ROT.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.12.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {	#人民的选择
+	id = ROT.13
+	title = ROT.13.t
+	desc = ROT.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.13.a
+		country_event = {
+			id = ROT.14
+			days = 1
+		}
+	}
+}
+
+country_event = {	#人民自由党反对选举结果
+	id = ROT.14
+	title = ROT.14.t
+	desc = ROT.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.14.a
+		add_stability = -0.05
+		country_event = {
+			id = ROT.15
+			days = 1
+		}
+	}
+}
+
+country_event = {	#纳迪欧的进军
+	id = ROT.15
+	title = ROT.15.t
+	desc = ROT.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.15.a
+		ai_chance = { base = 90 }
+		add_manpower = -2000
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.01
+		}
+		retire_character = ROT_nadio_nchate
+		set_politics = { ruling_party = national_socialist }
+		country_event = {
+			id = ROT.16
+			days = 1
+		}
+	}
+
+	option = {
+		name = ROT.15.b
+		ai_chance = { base = 10 }
+		add_manpower = -2000
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = religious_extremism
+			popularity = 0.1
+		}
+		set_politics = { ruling_party = religious_extremism }
+		country_event = {
+			id = ROT.17
+			days = 1
+		}
+	}
+}
+
+country_event = {	#南巴驻军向首都进军
+	id = ROT.16
+	title = ROT.16.t
+	desc = ROT.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.16.a
+		ROT_kick_rsb_ass_on_setup = yes
+		hidden_effect = { SPC_UDT_startup_effect = yes }
+	}
+}
+
+country_event = {	#揭下伪装
+	id = ROT.17
+	title = ROT.17.t
+	desc = ROT.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.17.a
+		country_event = {
+			id = ROT.18
+			days = 1
+		}
+	}
+}
+
+country_event = {	#南巴驻军的进军
+	id = ROT.18
+	title = ROT.18.t
+	desc = ROT.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.18.a
+		ROT_kick_rsb_ass_on_setup = yes
+		hidden_effect = { SPC_UDT_startup_effect = yes }
+	}
+}
+
+country_event = {	#南巴驻军已至
+	id = ROT.50
+	title = ROT.50.t
+	desc = ROT.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.50.a
+		custom_effect_tooltip = ROT.50.a.tt
+		if = {
+			limit = { is_ai = no }
+			if = {
+				limit = {
+					check_variable = { ROT_two_army_tension < 21 }
+					is_power_balance_side_active = {
+						id = ROT_two_army_stand_bop
+						side = ROT_two_army_stand_bop_left
+					}
+				}
+				country_event = {
+					id = ROT.51
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					is_power_balance_in_range = {
+						id = ROT_two_army_stand_bop
+						range = ROT_two_army_stand_bop_left_2
+					}
+				}
+				country_event = {
+					id = ROT.52
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = ROT.53
+					days = 1
+				}
+			}
+		}
+		else = {
+			random_list = {
+				20 = {
+					country_event = {
+						id = ROT.51
+						days = 1
+					}
+				}
+				50 = {
+					country_event = {
+						id = ROT.52
+						days = 1
+					}
+				}
+				30 = {
+					country_event = {
+						id = ROT.53
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#南巴驻军投降
+	id = ROT.51
+	title = ROT.51.t
+	desc = ROT.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.51.a
+		custom_effect_tooltip = ROT.51.a.tt
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		remove_ideas = ROT_military_advisors_from_rsb
+		country_lock_all_division_template = no
+		add_political_power = 200
+		add_stability = 0.1
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = -0.1
+		}
+		add_ideas = ROT_rsb_troops_compromise
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		clr_country_flag = ROT_focus_1
+		set_country_flag = ROT_focus_2
+		mark_focus_tree_layout_dirty = yes
+		#load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#第二个独立日
+	id = ROT.52
+	title = ROT.52.t
+	desc = ROT.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.52.a
+		custom_effect_tooltip = ROT.52.a.tt
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		remove_ideas = ROT_military_advisors_from_rsb
+		country_lock_all_division_template = no
+		add_political_power = 200
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = -0.1
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		clr_country_flag = ROT_focus_1
+		set_country_flag = ROT_focus_2
+		mark_focus_tree_layout_dirty = yes
+		#load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#诺兰迪亚陷落
+	id = ROT.53
+	title = ROT.53.t
+	desc = ROT.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.53.a
+		custom_effect_tooltip = ROT.53.a.tt
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		add_stability = -0.2
+		add_war_support = -0.2
+		add_popularity = {
+			ideology = national_socialist
+			popularity = -0.15
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = -0.15
+		}
+		421 = { add_manpower = -231223 }
+		swap_ideas = {
+			remove_idea = ROT_military_advisors_from_rsb
+			add_idea = ROT_military_advisors_from_rsb_2
+		}
+		country_lock_all_division_template = no
+		news_event = ROTNews.2
+		set_politics = { ruling_party = liberal_republican }
+		UDT = { UDT_devinsker_orton = { set_nationality = ROT } }
+		remove_country_leader_role = {
+			character = UDT_devinsker_orton
+			ideology = military_dictatorship
+		}
+		UDT_devinsker_orton = {
+			add_field_marshal_role = {
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+				traits = { career_officer politically_connected }
+			}
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		clr_country_flag = ROT_focus_1
+		set_country_flag = ROT_focus_3
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	#南巴驻军兵临城下
+	id = ROT.54
+	title = ROT.54.t
+	desc = ROT.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.54.a
+		custom_effect_tooltip = ROT.54.a.tt
+		if = {
+			limit = { is_ai = no }
+			if = {
+				limit = {
+					check_variable = { ROT_two_army_tension < 21 }
+					is_power_balance_side_active = {
+						id = ROT_two_army_stand_bop
+						side = ROT_two_army_stand_bop_left
+					}
+				}
+				country_event = {
+					id = ROT.55
+					days = 1
+				}
+			}
+			else_if = {
+				limit = {
+					is_power_balance_in_range = {
+						id = ROT_two_army_stand_bop
+						range = ROT_two_army_stand_bop_left_2
+					}
+				}
+				country_event = {
+					id = ROT.56
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = ROT.57
+					days = 1
+				}
+			}
+		}
+		else = {
+			random_list = {
+				20 = {
+					country_event = {
+						id = ROT.55
+						days = 1
+					}
+				}
+				50 = {
+					country_event = {
+						id = ROT.56
+						days = 1
+					}
+				}
+				30 = {
+					country_event = {
+						id = ROT.57
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#南巴驻军投降
+	id = ROT.55
+	title = ROT.55.t
+	desc = ROT.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.55.a
+		custom_effect_tooltip = ROT.55.a.tt
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		remove_ideas = ROT_military_advisors_from_rsb
+		country_lock_all_division_template = no
+		add_political_power = 200
+		add_stability = 0.1
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = -0.1
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#战神殿堂之门
+	id = ROT.56
+	title = ROT.56.t
+	desc = ROT.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.56.a
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		remove_ideas = ROT_military_advisors_from_rsb
+		country_lock_all_division_template = no
+		add_political_power = 200
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = -0.1
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {	#求告无门
+	id = ROT.57
+	title = ROT.57.t
+	desc = ROT.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.57.a
+		custom_effect_tooltip = ROT.57.a.tt
+		clr_country_flag = ROT_kick_rsb_ass_on
+		remove_power_balance = { id = ROT_two_army_stand_bop }
+		annex_country = { target = UDT }
+		remove_ideas = ROT_military_advisors_from_rsb
+		add_stability = -0.2
+		add_war_support = -0.2
+		add_popularity = {
+			ideology = religious_extremism
+			popularity = -0.15
+		}
+		421 = { add_manpower = -232780 }
+		swap_ideas = {
+			remove_idea = ROT_military_advisors_from_rsb
+			add_idea = ROT_military_advisors_from_rsb_2
+		}
+		country_lock_all_division_template = no
+		news_event = ROTNews.2
+		set_politics = { ruling_party = liberal_republican }
+		UDT = { UDT_devinsker_orton = { set_nationality = ROT } }
+		remove_country_leader_role = {
+			character = UDT_devinsker_orton
+			ideology = military_dictatorship
+		}
+		UDT_devinsker_orton = {
+			add_field_marshal_role = {
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+				traits = { career_officer politically_connected }
+			}
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		clr_country_flag = ROT_focus_1
+		set_country_flag = ROT_focus_3
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	#改革者的赠言
+	id = ROT.58
+	title = ROT.58.t
+	desc = ROT.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.58.a
+		ai_chance = { base = 90 }
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = -0.1
+		}
+		country_event = ROT.59
+	}
+
+	option = {
+		name = ROT.58.b
+		ai_chance = { base = 10 }
+	}
+}
+
+country_event = {	#最后一次掌舵
+	id = ROT.59
+	title = ROT.59.t
+	desc = ROT.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.59.a
+		add_to_variable = {
+			var = ROT_two_army_tension
+			value = -15
+			tooltip = ROT_two_army_tension_tt
+		}
+		ROT_two_army_tension_clamp = yes
+		add_power_balance_value = {
+			id = ROT_two_army_stand_bop
+			value = -0.15
+		}
+	}
+}
+
+country_event = {	#总统就大选结果发表讲话
+	id = ROT.60
+	title = ROT.60.t
+	desc = ROT.60.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.60.a
+		add_power_balance_value = {
+			id = ROT_two_army_stand_bop
+			value = 0.05
+		}
+	}
+}
+
+country_event = {	#银行同意提供贷款
+	id = ROT.61
+	title = ROT.61.t
+	desc = ROT.61.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.61.a
+		add_political_power = 120
+		add_war_support = 0.05
+	}
+}
+
+country_event = {	#银行拒绝提供贷款
+	id = ROT.62
+	title = ROT.62.t
+	desc = ROT.62.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.62.a
+		custom_effect_tooltip = ROT.62.a.tt
+		add_political_power = 120
+		add_war_support = -0.1
+	}
+
+	option = {
+		name = ROT.62.b
+		custom_effect_tooltip = ROT.62.b.tt
+		add_political_power = 200
+		421 = {
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+}
+
+country_event = {	#跨越柔水河
+	id = ROT.63
+	title = ROT.63.t
+	desc = ROT.63.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.63.a
+		add_power_balance_value = {
+			id = ROT_two_army_stand_bop
+			value = 0.1
+		}
+	}
+}
+
+country_event = {	#快速行军
+	id = ROT.64
+	title = ROT.64.t
+	desc = ROT.64.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.64.a
+		add_to_variable = {
+			var = ROT_two_army_tension
+			value = -5
+			tooltip = ROT_two_army_tension_tt
+		}
+		ROT_two_army_tension_clamp = yes
+	}
+}
+
+country_event = {	#全民革命运动纲领
+	id = ROT.100
+	title = ROT.100.t
+	desc = ROT.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.100.a
+	}
+}
+
+country_event = {	#额外要求
+	id = ROT.101
+	title = ROT.101.t
+	desc = ROT.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.101.a
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.02
+		}
+		add_stability = 0.02
+		add_to_variable = {
+			var = ROT_a_national_revolution_1
+			value = 5
+			tooltip = ROT_a_national_revolution_1_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+	}
+
+	option = {
+		name = ROT.101.b
+		add_political_power = 20
+		add_to_variable = {
+			var = ROT_a_national_revolution_2
+			value = 5
+			tooltip = ROT_a_national_revolution_2_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+	}
+
+	option = {
+		name = ROT.101.c
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.03
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+	}
+}
+
+country_event = {	#自由派的命运
+	id = ROT.102
+	title = ROT.102.t
+	desc = ROT.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.102.a
+		add_political_power = 20
+		add_cic = 3000
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.05
+		}
+	}
+
+	option = {
+		name = ROT.102.b
+		add_political_power = 50
+		add_cic = 4000
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_2
+			value = -10
+			tooltip = ROT_a_national_revolution_2_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_3
+			value = -10
+			tooltip = ROT_a_national_revolution_3_tt
+		}
+		ROT_a_national_revolution_update = yes
+		add_manpower = -2000
+	}
+}
+
+country_event = {	#经济发展最优选
+	id = ROT.103
+	title = ROT.103.t
+	desc = ROT.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.103.a
+		add_to_variable = {
+			var = ROT_a_national_revolution_2
+			value = 5
+			tooltip = ROT_a_national_revolution_2_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_3
+			value = 5
+			tooltip = ROT_a_national_revolution_3_tt
+		}
+		ROT_a_national_revolution_update = yes
+		415 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+
+	option = {
+		name = ROT.103.b
+		add_to_variable = {
+			var = ROT_a_national_revolution_4
+			value = 5
+			tooltip = ROT_a_national_revolution_4_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+		ROT_nation_unity_up = yes
+		SPC_living_standard_development_amount_up_2 = yes
+		424 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		426 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	}
+}
+
+country_event = {	#不容怠慢
+	id = ROT.104
+	title = ROT.104.t
+	desc = ROT.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.104.a
+		SPC_living_standard_development_amount_down_3 = yes
+		add_to_variable = {
+			var = ROT_a_national_revolution_1
+			value = -5
+			tooltip = ROT_a_national_revolution_1_tt
+		}
+		ROT_a_national_revolution_update = yes
+		SPC_industrial_development_amount_up_3 = yes
+		add_days_remove = {
+			decision = ROT_heavy_industry_project
+			days = -90
+		}
+		country_event = {
+			id = ROT.105
+			days = 1
+		}
+	}
+
+	option = {
+		name = ROT.104.b
+		add_to_variable = {
+			var = ROT_a_national_revolution_1
+			value = 5
+			tooltip = ROT_a_national_revolution_1_tt
+		}
+		ROT_a_national_revolution_update = yes
+		country_event = {
+			id = ROT.105
+			days = 1
+		}
+	}
+}
+
+country_event = {	#工业化之恶
+	id = ROT.105
+	title = ROT.105.t
+	desc = ROT.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.105.a
+		SPC_environment_policy_up = yes
+		add_to_variable = {
+			var = ROT_a_national_revolution_2
+			value = -5
+			tooltip = ROT_a_national_revolution_2_tt
+		}
+		ROT_a_national_revolution_update = yes
+	}
+		
+	option = {
+		name = ROT.105.b
+		add_political_power = -50
+		SPC_environment_development_amount_up_3 = yes
+	}
+}
+
+country_event = {	#长期石油贸易协议？
+	id = ROT.106
+	title = ROT.106.t
+	desc = ROT.106.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.106.a
+		add_ideas = ROT_oil_profit
+		ROT = { add_ideas = ROT_long_term_oil_trade_agreement }
+	}
+
+	option = {
+		name = ROT.106.b
+	}
+
+	option = {
+		name = ROT.106.c
+		ROT = {
+			country_event = {
+				id = ROT.107
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#鲁萨尔讨价还价
+	id = ROT.107
+	title = ROT.107.t
+	desc = ROT.107.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.107.a
+		add_political_power = -50
+		if = {
+			limit = { RSU = { exists = yes } }
+			RSU = { add_political_power = 50 add_ideas = ROT_oil_profit }
+		}
+		else = {
+			RRF = { add_political_power = 50 add_ideas = ROT_oil_profit }
+		}
+		add_ideas = ROT_long_term_oil_trade_agreement
+	}
+
+	option = {
+		name = ROT.107.b
+	}
+}
+
+country_event = {	#长期石油贸易协议？
+	id = ROT.108
+	title = ROT.108.t
+	desc = ROT.108.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.108.a
+		add_ideas = ROT_oil_profit_2
+		ROT = { add_ideas = ROT_long_term_oil_trade_agreement_2 }
+	}
+
+	option = {
+		name = ROT.108.b
+	}
+
+	option = {
+		name = ROT.108.c
+		ROT = {
+			country_event = {
+				id = ROT.109
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#特尼安人讨价还价
+	id = ROT.109
+	title = ROT.109.t
+	desc = ROT.109.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.109.a
+		add_political_power = -50
+		if = {
+			limit = { LNR = { exists = yes } }
+			LNR = { add_political_power = 50 add_ideas = ROT_oil_profit_2 }
+		}
+		else_if = {
+			limit = { RLN = { exists = yes } }
+			RLN = { add_political_power = 50 add_ideas = ROT_oil_profit_2 }
+		}
+		else = {
+			KOA = { add_political_power = 50 add_ideas = ROT_oil_profit_2 }
+		}
+		add_ideas = ROT_long_term_oil_trade_agreement_2
+	}
+
+	option = {
+		name = ROT.109.b
+	}
+}
+
+country_event = {	#[FROM.GetName]要求我们屈服
+	id = ROT.110
+	title = ROT.110.t
+	desc = {
+		text = ROT.110.d1
+		trigger = { ROT = { has_government = national_socialist } }
+	}
+	desc = {
+		text = ROT.110.d2
+		trigger = { ROT = { has_government = liberal_republican } }
+	}
+	desc = {
+		text = ROT.110.d2
+	}
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.110.a
+		FROM = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_puppet
+			}
+		}
+	}
+
+	option = {
+		name = ROT.110.b
+		trigger = { ROT = { has_government = national_socialist } }
+		FROM = { country_event = { id = ROT.111 days = 1 } }
+	}
+
+	option = {
+		name = ROT.110.c
+		trigger = { 
+			ROT = { has_government = liberal_republican }
+			tag = VLF
+		}
+		FROM = { country_event = { id = ROT.111 days = 1 } }
+	}
+
+	option = {
+		name = ROT.110.dd
+		trigger = { 
+			ROT = { has_government = liberal_republican } 
+			NOT = { tag = VLF }
+		}
+		FROM = { country_event = { id = ROT.111 days = 1 } }
+	}
+}
+
+country_event = {	#[FROM.GetName]拒绝！
+	id = ROT.111
+	title = ROT.111.t
+	desc = ROT.111.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.111.a
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		ROT_nation_unity_down = yes
+	}
+}
+
+country_event = {	#时机已至
+	id = ROT.112
+	title = ROT.112.t
+	desc = ROT.112.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.112.a
+	}
+}
+
+country_event = {	#兄弟同心？
+	id = ROT.113
+	title = ROT.113.t
+	desc = ROT.113.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.113.a
+		KDK = {
+			country_event = {
+				id = ROT.114
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = ROT.113.b
+	}
+}
+
+country_event = {	#夹击牛头人？
+	id = ROT.114
+	title = ROT.114.t
+	desc = ROT.114.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.114.a
+		create_wargoal = {
+			target = IMC
+			type = annex_everything
+		}
+		add_war_support = 0.1
+		ROT = {
+			country_event = {
+				id = ROT.115
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = ROT.114.b
+		add_political_power = -50
+	}
+}
+
+country_event = {	#斗士诚坚共抗流
+	id = ROT.115
+	title = ROT.115.t
+	desc = ROT.115.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.115.a
+		add_ideas = ROT_common_struggle
+		give_military_access = KDK
+		KDK = { 
+			add_ideas = ROT_common_struggle
+			give_military_access = ROT
+		}
+	}
+}
+
+country_event = {	#同胞，还是新主子？
+	id = ROT.116
+	title = ROT.116.t
+	desc = ROT.116.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.116.a
+		ROT = {
+			set_autonomy = {
+				target = IMC
+				autonomy_state = autonomy_puppet
+			}
+			country_event = {
+				id = ROT.117
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = ROT.116.b
+		ROT = {
+			country_event = {
+				id = ROT.117
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#度尽劫波兄弟在
+	id = ROT.117
+	title = ROT.117.t
+	desc = ROT.117.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.117.a
+		ROT_nation_unity_up = yes
+	}
+}
+
+country_event = {	#自由战士的拒绝
+	id = ROT.118
+	title = ROT.118.t
+	desc = ROT.118.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.118.a
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		create_wargoal = {
+			target = IMC
+			type = annex_everything
+		}
+		ROT_nation_unity_down = yes
+	}
+}
+
+country_event = {	#与伊斯恰游击队取得联系
+	id = ROT.119
+	title = ROT.119.t
+	desc = ROT.119.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.119.a
+		add_ideas = ROT_guerrilla_assistance
+	}
+}
+
+country_event = {	#无法与游击队取得联系
+	id = ROT.120
+	title = ROT.120.t
+	desc = ROT.120.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.120.a
+		add_political_power = -75
+		add_manpower = -77
+	}
+}
+
+country_event = {	#未完工的巨舰
+	id = ROT.121
+	title = ROT.121.t
+	desc = ROT.121.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.121.a
+		add_tech_bonus = {
+			name = ROT.121.a
+			bonus = 1
+			uses = 2
+			category = naval_equipment
+		}
+		add_tech_bonus = {
+			name = ROT.121.a
+			bonus = 1
+			uses = 2
+			category = ship_modules_tech
+		}
+		country_event = {
+			id = ROT.122
+			days = 1
+		}
+	}
+}
+
+country_event = {	#殖民者的遗产
+	id = ROT.122
+	title = ROT.122.t
+	desc = ROT.122.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.122.a
+		add_to_variable = {
+			var = ROT_a_national_revolution_4
+			value = -5
+			tooltip = ROT_a_national_revolution_4_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = -5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+		ROT_remove_imc_modifiers_effect = yes
+		440 = {
+			add_dynamic_modifier = {
+				modifier = ROT_rainbow_lantern_harbor
+			}
+		}
+		441 = {
+			add_dynamic_modifier = {
+				modifier = ROT_riviera_super_port
+			}
+		}
+		439 = {
+			add_dynamic_modifier = {
+				modifier = ROT_massacre_memorial_hall
+			}
+			set_state_name = STATE_439_1
+		}
+	}
+
+	option = {
+		name = ROT.122.b
+		add_to_variable = {
+			var = ROT_a_national_revolution_4
+			value = 5
+			tooltip = ROT_a_national_revolution_4_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+		add_political_power = 50
+		ROT_remove_imc_modifiers_effect = yes
+		439 = {
+			add_dynamic_modifier = {
+				modifier = ROT_massacre_memorial_hall
+			}
+		}
+	}
+
+	option = {
+		name = ROT.122.c
+		add_to_variable = {
+			var = ROT_a_national_revolution_2
+			value = 5
+			tooltip = ROT_a_national_revolution_2_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_4
+			value = 5
+			tooltip = ROT_a_national_revolution_4_tt
+		}
+		add_to_variable = {
+			var = ROT_a_national_revolution_5
+			value = 5
+			tooltip = ROT_a_national_revolution_5_tt
+		}
+		ROT_a_national_revolution_update = yes
+		add_political_power = -100
+		ROT_remove_imc_modifiers_effect = yes
+		441 = {
+			add_dynamic_modifier = {
+				modifier = ROT_riviera_super_port
+			}
+		}
+		440 = {
+			add_dynamic_modifier = {
+				modifier = ROT_liberator_colossus
+			}
+		}
+		439 = {
+			add_dynamic_modifier = {
+				modifier = ROT_massacre_memorial_hall
+			}
+		}
+	}
+}
+
+country_event = {	#互不侵犯？
+	id = ROT.123
+	title = ROT.123.t
+	desc = ROT.123.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.123.a
+		add_stability = 0.1
+		diplomatic_relation = {
+			country = ROT
+			relation = non_aggression_pact
+			active = yes
+		}
+		ROT = {
+			country_event = {
+				id = ROT.124
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = ROT.123.b
+		ROT = {
+			country_event = {
+				id = ROT.125
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#平等合作的基础
+	id = ROT.124
+	title = ROT.124.t
+	desc = ROT.124.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.124.a
+		set_country_flag = ROT_equal_cooperation_flag
+		add_stability = 0.1
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+}
+
+country_event = {	#卧榻之侧
+	id = ROT.125
+	title = ROT.125.t
+	desc = ROT.125.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.125.a
+		set_country_flag = ROT_eastern_vigilance_flag
+	}
+}
+
+country_event = {	#经济全面崩溃
+	id = ROT.126
+	title = ROT.126.t
+	desc = ROT.126.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.126.a
+		remove_ideas = ROT_total_war_plan
+		add_ideas = ROT_econ_complete_collapsed
+	}
+}
+
+country_event = {	#提特兰共和国的橄榄枝
+	id = ROT.200
+	title = ROT.200.t
+	desc = ROT.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.200.a
+		ROT = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_puppet
+			}
+		}
+		add_stability = 0.1
+	}
+
+	option = {
+		name = ROT.200.b
+		ROT = {
+			country_event = {
+				id = ROT.201
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#南提特兰游击队拒绝我们的提议
+	id = ROT.201
+	title = ROT.201.t
+	desc = ROT.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.201.a
+		add_war_support = -0.1
+		create_wargoal = {
+			target = IMC
+			type = annex_everything
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = ROTNews
+
+news_event = {
+	id = ROTNews.1		#1998年诺兰迪亚公民运动会
+	title = ROTNews.1.t
+	desc = ROTNews.1.d
+	picture = GFX_news_event_ROT_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROTNews.1.a
+	}
+}
+
+news_event = {
+	id = ROTNews.2		#南巴驻军推翻提特兰政府
+	title = ROTNews.2.t
+	desc = ROTNews.2.d
+	picture = GFX_news_event_generic_66
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROTNews.2.a
+		trigger = { tag = ROT }
+	}
+
+	option = {
+		name = ROTNews.2.b
+		trigger = { NOT = { tag = ROT } }
+	}
+}
+
+news_event = {
+	id = ROTNews.3		#全民革命运动统一提特兰
+	title = ROTNews.3.t
+	desc = ROTNews.3.d
+	picture = GFX_news_event_ROT_3
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROTNews.3.a
+		trigger = { NOT = { tag = ROT } }
+	}
+
+	option = {
+		name = ROTNews.3.b
+		trigger = { tag = ROT }
+	}
+}
+
+news_event = {
+	id = ROTNews.4		#提特兰共和国统一提特兰
+	title = ROTNews.4.t
+	desc = ROTNews.4.d
+	picture = GFX_news_event_ROT_4
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROTNews.4.a
+		trigger = { NOT = { tag = ROT } }
+	}
+
+	option = {
+		name = ROTNews.4.b
+		trigger = { tag = ROT }
+	}
+}

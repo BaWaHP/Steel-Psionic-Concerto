@@ -1,0 +1,1114 @@
+characters={
+
+	ROT_unkown = {	#暂无
+		name = generic_unkown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = pioneer_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = revolutionary_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = anarchism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	ROT_coraci_afton = {		#科拉西·阿夫顿
+   		name = ROT_coraci_afton
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_democrat_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	ROT_basta_ivan_ankorin = {		#巴斯塔·伊万·安科林
+   		name = ROT_basta_ivan_ankorin
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_basta_ivan_ankorin"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_ROT_basta_ivan_ankorin"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = ROT_basta_ivan_ankorin_desc
+			traits = { ROT_baleen_of_the_republic }
+   			ideology = market_liberalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	ROT_pauval_taronno = {		#波瓦尔·塔朗诺
+   		name = ROT_pauval_taronno
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_pauval_taronno"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_ROT_pauval_taronno"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = ROT_pauval_taronno_desc
+   			ideology = conservative_liberalism
+   			traits = { ROT_failed_pragmatist }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	ROT_giancarlo_fernandez = {		#吉安卡罗·费尔南德斯
+   		name = ROT_giancarlo_fernandez
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_giancarlo_fernandez"
+				small="GFX_idea_ROT_giancarlo_fernandez"
+   			}
+   			army = {
+				large="GFX_ROT_giancarlo_fernandez"
+				small="GFX_idea_ROT_giancarlo_fernandez"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_giancarlo_fernandez_idea
+			available = { has_government = liberal_republican }
+			traits = { technocrat }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_ruwani_marino = {		#鲁瓦尼·马瑞诺
+   		name = ROT_ruwani_marino
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_ruwani_marino"
+				small="GFX_idea_ROT_ruwani_marino"
+   			}
+   			army = {
+				large="GFX_ROT_ruwani_marino"
+				small="GFX_idea_ROT_ruwani_marino"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_ruwani_marino_idea
+			available = { has_government = liberal_republican }
+			traits = { prince_of_terror }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_alberto_de_jimenez = {		#阿尔贝托·德·希门尼斯
+   		name = ROT_alberto_de_jimenez
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_alberto_de_jimenez"
+				small="GFX_idea_ROT_alberto_de_jimenez"
+   			}
+   			army = {
+				large="GFX_ROT_alberto_de_jimenez"
+				small="GFX_idea_ROT_alberto_de_jimenez"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_alberto_de_jimenez_idea
+			available = { has_government = liberal_republican }
+			traits = { quartermaster_chairman }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_henry_pelos = {		#亨利·佩洛斯
+   		name = ROT_henry_pelos
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_henry_pelos"
+				small="GFX_idea_ROT_henry_pelos"
+   			}
+   			army = {
+				large="GFX_ROT_henry_pelos"
+				small="GFX_idea_ROT_henry_pelos"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_henry_pelos_idea
+			available = { has_government = national_socialist }
+			traits = { war_industrialist }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_dimoy_raine = {		#迪莫伊·雷恩
+   		name = ROT_dimoy_raine
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_dimoy_raine"
+				small="GFX_idea_ROT_dimoy_raine"
+   			}
+   			army = {
+				large="GFX_ROT_dimoy_raine"
+				small="GFX_idea_ROT_dimoy_raine"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_dimoy_raine_idea
+			available = { has_government = national_socialist }
+			traits = { head_of_intelligence }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_morhardt_marrino = {		#莫哈特·马瑞诺
+   		name = ROT_morhardt_marrino
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_morhardt_marrino"
+				small="GFX_idea_ROT_morhardt_marrino"
+   			}
+   			army = {
+				large="GFX_ROT_morhardt_marrino"
+				small="GFX_idea_ROT_morhardt_marrino"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = ROT_morhardt_marrino_desc
+			idea_token = ROT_morhardt_marrino_idea
+			available = { 
+				OR = {
+					has_government = national_socialist 
+					has_government = worldunion_democrat 
+				}
+			}
+			traits = { propaganda_master editor }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_gustizia_muller = {		#吉斯提奇亚·穆勒
+   		name = ROT_gustizia_muller
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_gustizia_muller"
+				small="GFX_idea_ROT_gustizia_muller"
+   			}
+   			army = {
+				large="GFX_ROT_gustizia_muller"
+				small="GFX_idea_ROT_gustizia_muller"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_gustizia_muller_idea
+			available = { has_government = religious_extremism }
+			traits = { ideological_crusader prince_of_terror }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_miguel_dubois = {		#米格尔·杜波伊斯
+   		name = ROT_miguel_dubois
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_miguel_dubois"
+				small="GFX_idea_ROT_miguel_dubois"
+   			}
+   			army = {
+				large="GFX_ROT_miguel_dubois"
+				small="GFX_idea_ROT_miguel_dubois"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_miguel_dubois_idea
+			available = { has_government = religious_extremism }
+			traits = { ROT_son_of_the_holy_land }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_javier_blanch = {		#哈维尔·布兰奇
+   		name = ROT_javier_blanch
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_javier_blanch"
+				small="GFX_idea_ROT_javier_blanch"
+   			}
+   			army = {
+				large="GFX_ROT_javier_blanch"
+				small="GFX_idea_ROT_javier_blanch"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = ROT_javier_blanch_desc
+			idea_token = ROT_javier_blanch_idea
+			available = { NOT = { has_government = religious_extremism } }
+			traits = { ROT_notorious_oligarchs }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+		country_leader = {
+			ideology = oligarchy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	ROT_enrique_rhodes = {		#恩瑞克·罗兹
+   		name = ROT_enrique_rhodes
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_ROT_enrique_rhodes"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_ROT_enrique_rhodes"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_enrique_rhodes_idea
+			traits = { financial_expert }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_rogdika_katim = {		#罗格迪卡·卡提姆
+   		name = ROT_rogdika_katim
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_rogdika_katim"
+				small="GFX_idea_ROT_rogdika_katim"
+   			}
+   			army = {
+				large="GFX_ROT_rogdika_katim"
+				small="GFX_idea_ROT_rogdika_katim"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_rogdika_katim_idea
+			traits = { asistant_of_industry }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_maillard_belloc = {		#美拉德·贝罗克
+   		name = ROT_maillard_belloc
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_maillard_belloc"
+				small="GFX_idea_ROT_maillard_belloc"
+   			}
+   			army = {
+				large="GFX_ROT_maillard_belloc"
+				small="GFX_idea_ROT_maillard_belloc"
+   			}
+   		}
+		country_leader = {
+			ideology = worldunion_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			desc = ROT_maillard_belloc_desc
+			idea_token = ROT_maillard_belloc_idea
+			available = {
+				NOT = {
+					has_government = religious_extremism
+					has_government = liberal_republican
+				}
+			}
+			traits = { ROT_lives_saving_doctor }
+			research_bonus = { hospital_tech = 0.3 }
+			cost = 200
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_bilash_tricker = {		#比拉克希·特里克
+   		name = ROT_bilash_tricker
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_bilash_tricker"
+				small="GFX_idea_ROT_bilash_tricker"
+   			}
+   			army = {
+				large="GFX_ROT_bilash_tricker"
+				small="GFX_idea_ROT_bilash_tricker"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = ROT_bilash_tricker_desc
+			idea_token = ROT_bilash_tricker_idea
+			available = {
+				OR = {
+					has_government = national_socialist
+					has_government = authoritarian_nationalism
+					has_government = worldunion_democrat
+				}
+			}
+			traits = { ROT_the_veteran }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_decius_glaion = {		#狄修斯·格莱昂
+   		name = ROT_decius_glaion
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_decius_glaion"
+				small="GFX_idea_ROT_decius_glaion"
+   			}
+   			army = {
+				large="GFX_ROT_decius_glaion"
+				small="GFX_idea_ROT_decius_glaion"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = ROT_decius_glaion_desc
+			idea_token = ROT_decius_glaion_idea
+			available = {
+				OR = {
+					has_government = national_socialist
+					has_government = authoritarian_nationalism
+				}
+			}
+			traits = { ROT_nationalist_militia_leader }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_theocratic_council = {		#神权议会
+   		name = ROT_theocratic_council
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ROT_theocratic_council_idea
+			available = { has_government = religious_extremism }
+			traits = { ROT_sacrifice_summoning_judgment }
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_magnimo_iromoz = {		#马格尼莫·伊罗莫兹
+   		name = ROT_magnimo_iromoz
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_magnimo_iromoz"
+				small="GFX_idea_ROT_magnimo_iromoz"
+   			}
+   			army = {
+				large="GFX_ROT_magnimo_iromoz"
+				small="GFX_idea_ROT_magnimo_iromoz"
+   			}
+   		}
+		advisor = {
+			slot = army_chief
+			idea_token = ROT_magnimo_iromoz_idea
+			available = { has_government = national_socialist }
+			traits = { army_chief_morale_3 }
+			cost = 200
+			ai_will_do = { factor = 1.000 }
+		}
+		country_leader = {
+			desc = ROT_magnimo_iromoz_desc
+			ideology = social_corporatism
+			traits = { ROT_charming_leader }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = ROT_magnimo_iromoz_desc
+			ideology = human_hegemony
+			traits = { ROT_charming_leader }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	ROT_kolot_rudile = {		#柯洛特·鲁迪勒
+   		name = ROT_kolot_rudile
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_kolot_rudile"
+				small="GFX_idea_ROT_kolot_rudile"
+   			}
+   			army = {
+				large="GFX_ROT_kolot_rudile"
+				small="GFX_idea_ROT_kolot_rudile"
+   			}
+   		}
+		advisor = {
+			slot = army_chief
+			idea_token = ROT_kolot_rudile_idea
+			available = { NOT = { has_government = national_socialist } }
+			traits = { army_chief_reform_1 }
+			cost = 50
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_fidela_grino = {		#菲迪拉·格瑞诺
+   		name = ROT_fidela_grino
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_fidela_grino"
+				small="GFX_idea_ROT_fidela_grino"
+   			}
+   			army = {
+				large="GFX_ROT_fidela_grino"
+				small="GFX_idea_ROT_fidela_grino"
+   			}
+   		}
+		advisor = {
+			slot = army_chief
+			idea_token = ROT_fidela_grino_idea
+			traits = { army_chief_defensive_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_enota_monk = {		#伊诺塔·蒙克
+   		name = ROT_enota_monk
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_enota_monk"
+				small="GFX_idea_ROT_enota_monk"
+   			}
+   			army = {
+				large="GFX_ROT_enota_monk"
+				small="GFX_idea_ROT_enota_monk"
+   			}
+   		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ROT_enota_monk_idea
+			available = { NOT = { has_government = authoritarian_nationalism } }
+			traits = { navy_chief_reform_1 }
+			cost = 50
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_sanzer_wolgner = {		#桑泽·沃尔格纳
+   		name = ROT_sanzer_wolgner
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_sanzer_wolgner"
+				small="GFX_idea_ROT_sanzer_wolgner"
+   			}
+   			army = {
+				large="GFX_ROT_sanzer_wolgner"
+				small="GFX_idea_ROT_sanzer_wolgner"
+   			}
+   		}
+		advisor = {
+			slot = air_chief
+			idea_token = ROT_sanzer_wolgner_idea
+			traits = { air_chief_reform_1 }
+			cost = 50
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	ROT_grieco_moro = {		#格里科·莫罗
+   		name = ROT_grieco_moro
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_grieco_moro"
+				small="GFX_idea_ROT_grieco_moro"
+   			}
+   			army = {
+				large="GFX_ROT_grieco_moro"
+				small="GFX_idea_ROT_grieco_moro"
+   			}
+   		}
+		advisor = {
+			slot = high_command
+			idea_token = ROT_grieco_moro_idea
+			traits = { army_regrouping_2 }
+			cost = 100
+			ai_will_do = { factor = 1.000 }
+		}
+		corps_commander = {
+			traits = {
+				trait_engineer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	ROT_edward_williams = {		#爱德华·威廉姆斯
+   		name = ROT_edward_williams
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_edward_williams"
+				small="GFX_idea_ROT_edward_williams"
+   			}
+   			army = {
+				large="GFX_ROT_edward_williams"
+				small="GFX_idea_ROT_edward_williams"
+   			}
+   		}
+		advisor = {
+			slot = high_command
+			idea_token = ROT_edward_williams_idea
+			traits = { army_infantry_1 }
+			cost = 50
+			ai_will_do = { factor = 1.000 }
+		}
+		corps_commander = {
+			traits = {
+				infantry_leader
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	ROT_nadio_nchate = {		#纳迪欧·恩查特
+   		name = ROT_nadio_nchate
+   		portraits = {
+   			civilian = {
+				large="GFX_ROT_nadio_nchate"
+				small="GFX_idea_ROT_nadio_nchate"
+   			}
+   			army = {
+				large="GFX_ROT_nadio_nchate"
+				small="GFX_idea_ROT_nadio_nchate"
+   			}
+   		}
+		advisor = {
+			slot = high_command
+			idea_token = ROT_nadio_nchate_idea
+			traits = { army_commando_3 }
+			cost = 200
+			ai_will_do = { factor = 1.000 }
+		}
+		corps_commander = {
+			traits = {
+				commando
+				FCR_force_surpasses
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		country_leader = {
+			desc = ROT_nadio_nchate_desc
+			ideology = sacred_battles
+			traits = { ROT_number_one }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	ROT_davide_enchart = {		#达维德·恩查特
+   		name = ROT_davide_enchart
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
+	ROT_lugo_igor_zoltan = {	#卢戈·伊戈尔·佐尔坦
+		name = MGC_lugo_igor_zoltan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = MGC_lugo_igor_zoltan_desc_escaped
+			idea_token = MGC_lugo_igor_zoltan_idea
+			available = { 
+				has_government = liberal_republican
+				MGC = { has_country_flag = MGC_lugo_escaped }
+			}
+			visible = {
+				MGC = { has_country_flag = MGC_lugo_escaped }
+			}
+			traits = { ROT_patriotic_entrepreneur }
+			cost = 150
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+	#达沃·凯恩
+	ROT_davo_kane = {
+		name = ROT_davo_kane
+		portraits = {
+			civilian = {
+				large="GFX_ROT_davo_kane"
+				small="GFX_idea_ROT_davo_kane"
+			}
+			army = {
+				large="GFX_ROT_davo_kane"
+				small="GFX_idea_ROT_davo_kane"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+			traits = { navy_career_officer }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = ROT_davo_kane_idea
+			traits = { navy_screen_1 }
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#巴文·安德鲁
+	ROT_bavin_andrew = {
+		name = ROT_bavin_andrew
+		portraits = {
+			civilian = {
+				large="GFX_ROT_bavin_andrew"
+				small="GFX_idea_ROT_bavin_andrewr"
+			}
+			army = {
+				large="GFX_ROT_bavin_andrew"
+				small="GFX_idea_ROT_bavin_andrewr"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ROT_bavin_andrew_idea
+			traits = { military_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	#布雷洛·凯恩
+	ROT_braylo_kane = {
+		name = ROT_braylo_kane
+		portraits = {
+			civilian = {
+				large="GFX_ROT_braylo_kane"
+				small="GFX_idea_ROT_braylo_kane"
+			}
+			army = {
+				large="GFX_ROT_braylo_kane"
+				small="GFX_idea_ROT_braylo_kane"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ROT_braylo_kane_idea
+			traits = { naval_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#艾德·科伦博
+	ROT_ed_korenbo = {
+		name = ROT_ed_korenbo
+		portraits = {
+			civilian = {
+				large="GFX_ROT_ed_korenbo"
+				small="GFX_idea_ROT_ed_korenbo"
+			}
+			army = {
+				large="GFX_ROT_ed_korenbo"
+				small="GFX_idea_ROT_ed_korenbo"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ROT_ed_korenbo_idea
+			traits = { air_warfare_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#盖里·凯恩
+	ROT_gary_kane = {
+		name = ROT_gary_kane
+		portraits = {
+			civilian = {
+				large="GFX_ROT_gary_kane"
+				small="GFX_idea_ROT_gary_kane"
+			}
+			army = {
+				large="GFX_ROT_gary_kane"
+				small="GFX_idea_ROT_gary_kane"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ROT_gary_kane_idea
+			traits = { army_artillery_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { bearer_of_artillery career_officer }
+		}
+	}
+
+	#卡恩·博伊努
+	ROT_kane_boynu = {
+		name = ROT_kane_boynu
+		portraits = {
+			civilian = {
+				large="GFX_ROT_kane_boynu"
+				small="GFX_idea_ROT_kane_boynu"
+			}
+			army = {
+				large="GFX_ROT_kane_boynu"
+				small="GFX_idea_ROT_kane_boynu"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ROT_kane_boynu_idea
+			traits = { army_entrenchment_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { old_guard trait_engineer }
+		}
+	}
+
+	#伊洛迪·斯雷姆
+	ROT_ilodi_sleim = {
+		name = ROT_ilodi_sleim
+		portraits = {
+			civilian = {
+				large="GFX_ROT_ilodi_sleim"
+				small="GFX_idea_ROT_ilodi_sleim"
+			}
+			army = {
+				large="GFX_ROT_ilodi_sleim"
+				small="GFX_idea_ROT_ilodi_sleim"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { politically_connected naval_invader }
+		}
+	}
+
+	#达武·珀克
+	ROT_dawu_poke = {
+		name = ROT_dawu_poke
+		portraits = {
+			civilian = {
+				large="GFX_ROT_dawu_poke"
+				small="GFX_idea_ROT_dawu_poke"
+			}
+			army = {
+				large="GFX_ROT_dawu_poke"
+				small="GFX_idea_ROT_dawu_poke"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	#艾朗尼克·沙姆勒斯
+	ROT_alonik_shamless = {	
+		name = ROT_alonik_shamless
+		portraits = {
+			civilian = {
+				large="GFX_ROT_alonik_shamless"
+				small="GFX_idea_ROT_alonik_shamless"
+			}
+			army = {
+				large="GFX_ROT_alonik_shamless"
+				small="GFX_idea_ROT_alonik_shamless"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { inflexible_strategist urban_assault_specialist }
+		}
+	}
+
+	#安东·瑞奇
+	ROT_anton_rich = {
+		name = ROT_anton_rich
+		portraits = {
+			civilian = {
+				large="GFX_ROT_anton_rich"
+				small="GFX_idea_ROT_anton_rich"
+			}
+			army = {
+				large="GFX_ROT_anton_rich"
+				small="GFX_idea_ROT_anton_rich"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { brilliant_strategist trickster }
+		}
+	}
+
+	#格朗尼·潘克
+	ROT_granny_pank = {
+		name = ROT_granny_pank
+		portraits = {
+			civilian = {
+				large="GFX_ROT_granny_pank"
+				small="GFX_idea_ROT_granny_pank"
+			}
+			army = {
+				large="GFX_ROT_granny_pank"
+				small="GFX_idea_ROT_granny_pank"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { panzer_leader organizer }
+		}
+	}
+
+	#卢修斯·斯特兰
+	ROT_lucius_stran = {
+		name = ROT_lucius_stran
+		portraits = {
+			civilian = {
+				large="GFX_ROT_lucius_stran"
+				small="GFX_idea_ROT_lucius_stran"
+			}
+			army = {
+				large="GFX_ROT_lucius_stran"
+				small="GFX_idea_ROT_lucius_stran"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { FCR_force_surpasses }
+		}
+	}
+
+	#达斯特·安科林
+	ROT_basta_ankorin = {
+		name = ROT_basta_ankorin
+		portraits = {
+			civilian = {
+				large="GFX_ROT_basta_ankorin"
+				small="GFX_idea_ROT_basta_ankorin"
+			}
+			army = {
+				large="GFX_ROT_basta_ankorin"
+				small="GFX_idea_ROT_basta_ankorin"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 1
+			traits = { politically_connected }
+		}
+	}
+
+	#穆勒·夏文
+	ROT_muller_shawen = {
+		name = ROT_muller_shawen
+		portraits = {
+			civilian = {
+				large="GFX_ROT_muller_shawen"
+				small="GFX_idea_ROT_muller_shawen"
+			}
+			army = {
+				large="GFX_ROT_muller_shawen"
+				small="GFX_idea_ROT_muller_shawen"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	#卡伊·夏文
+	ROT_kai_shawen = {
+		name = ROT_kai_shawen
+		portraits = {
+			civilian = {
+				large="GFX_ROT_kai_shawen"
+				small="GFX_idea_ROT_kai_shawen"
+			}
+			army = {
+				large="GFX_ROT_kai_shawen"
+				small="GFX_idea_ROT_kai_shawen"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+}

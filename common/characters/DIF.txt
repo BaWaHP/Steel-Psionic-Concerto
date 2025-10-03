@@ -1,0 +1,21 @@
+characters={
+
+	DIF_hammer_drake = {		#铁锤·德瑞克
+   		name = DIF_hammer_drake
+   		portraits = {
+   			civilian = {
+   				large="GFX_DIF_hammer_drake"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_DIF_hammer_drake"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = directed_democracy
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

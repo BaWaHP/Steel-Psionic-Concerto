@@ -1,0 +1,24 @@
+KDK_gnoa_tower = {		#格诺亚高塔
+	name = KDK_gnoa_tower
+	include = generic_caster_equipment_manufacturer_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+	allowed = { tag = KDK }
+	
+	initial_trait = {
+		name = generic_mio_initial_trait_caster_equipment_manufacturer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+
+KDK_agropoli_flames = {		#阿格罗波里烈焰
+	name = KDK_agropoli_flames
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { tag = KDK }
+}

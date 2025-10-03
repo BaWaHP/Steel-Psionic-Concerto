@@ -1,0 +1,25 @@
+
+state={
+	id=285
+	name="STATE_285"
+
+	resources = {
+		chromium = 48
+	}
+
+	history={
+		owner = NOH
+		add_core_of = NOH
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1933 15080 15164 15175 15261 15301 15402 
+	}
+	manpower=360000
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

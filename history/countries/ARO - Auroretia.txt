@@ -1,0 +1,283 @@
+﻿capital = 79
+
+set_convoys = 0
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.3
+
+oob = "ARO"
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 2
+	worldunion_democrat = 3
+	liberal_republican = 12
+	conservative_republican = 15
+	authoritarian_republican = 26
+	national_socialist = 13
+	authoritarian_nationalism = 9
+	paternal_autocrat = 0
+	wizard_rules = 0
+	religious_extremism = 20
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	gw_artillery = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	improved_energy_storage = 1
+	caster_weapons_1 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+		set_air_oob = "ARO_air"
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+recruit_character = ARO_Authrinton_Glonia
+recruit_character = ARO_Arthytton_Glonia
+recruit_character = ARO_Syawither_Glonia
+#顾问
+recruit_character = ARO_Fareblave_Leight
+recruit_character = ARO_Halifax_Kimmel
+recruit_character = ARO_Delius_Dover
+recruit_character = ARO_Cheng_Yulu
+recruit_character = ARO_Granerl_Suth
+recruit_character = ARO_Cellyn_Tira
+recruit_character = ARO_Mans_Dorn
+recruit_character = ARO_Davin_Colnick
+recruit_character = ARO_Xerxes
+recruit_character = ARO_Heist_Seor
+recruit_character = ARO_Blant_King
+recruit_character = ARO_Halmed_Ranster
+recruit_character = ARO_Duren_Meld
+#将领
+recruit_character = ARO_Adam_Mace
+recruit_character = ARO_Herman_Heathrin
+recruit_character = ARO_Marlith_Borwisch
+recruit_character = ARO_Herez_Delint
+recruit_character = ARO_Berris_Hardegg
+recruit_character = ARO_Alex_Wilson
+recruit_character = ARO_Bob_Jones
+recruit_character = ARO_Colse_Glonia
+recruit_character = ARO_Damil_Exsart
+recruit_character = ARO_Glock_Andarc
+recruit_character = ARO_Hanister_Bashral
+recruit_character = ARO_Jack_Brenhildt
+recruit_character = ARO_Lucas_Taylors
+recruit_character = ARO_Maltha_Lockhart
+recruit_character = ARO_Valor_Bejean
+recruit_character = ARO_Walls_Buck
+
+
+add_ideas = {
+	ARO_winner_of_a_failure
+	ARO_a_charming_setting_sun
+	ARO_Arthytton_Glonia_political_advisor
+}
+
+add_dynamic_modifier = { modifier = ARO_issue_of_Glonian_warmonger_dynamic_modifier }
+set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_nsd = 0.05 }
+set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_and = 0.05 }
+set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ppf = -0.1 }
+set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_aof = -0.2 }
+set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ttf = 0.5 }
+add_dynamic_modifier = { modifier = ARO_issue_of_Lesnoden_republican_dynamic_modifier }
+set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_lrd = 0.05 }
+set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_crd = 0.05 }
+set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_cf = -0.2 }
+set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_ppf = -0.1 }
+set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_icf = -0.2 }
+add_dynamic_modifier = { modifier = ARO_issue_of_Aurora_cultist_dynamic_modifier }
+set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_red = 0.1 }
+set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cf = -0.2 }
+set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cgf = 0.1 }
+set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_madp = -2 }
+
+set_autonomy = {
+	target = ALR
+	autonomous_state = autonomy_dominion
+}
+
+add_opinion_modifier = {
+	target = PEO
+	modifier = ARO_enemy_of_East_Bastian_War
+}
+add_opinion_modifier = {
+	target = CLD
+	modifier = ARO_enemy_of_East_Bastian_War
+}
+add_opinion_modifier = {
+	target = WOM
+	modifier = ARO_betrayer_of_East_Bastian_War
+}
+add_opinion_modifier = {
+	target = TPG
+	modifier = ARO_betrayer_of_East_Bastian_War
+}
+
+#坦克及装甲模板
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "MT-30 “科纳琴”"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+		}
+		upgrades = { }
+	}
+}
+
+#空军模板#
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "薛勒-布莱德 Mk II"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			#special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
+	create_equipment_variant = {
+		name = "GS-10 “卡梅尔幽灵”"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = empty	
+		}
+	}
+	create_equipment_variant = {
+		name = "GSH-3 “殉道者”"
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
+}

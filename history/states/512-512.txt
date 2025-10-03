@@ -1,0 +1,35 @@
+state={
+	id=512
+	name="STATE_512"
+	resources = {
+		steel = 8
+		aluminium = 4
+		magic_crystal = 35
+	}
+	history = {
+		owner = SRB
+		add_core_of = SRB
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			13704 10
+		}
+		victory_points = {
+			13691 1
+		}
+		victory_points = {
+			13885 3
+		}
+	}
+	provinces={
+		1582 7670 13602 13691 13704 13788 13802 13870 13885 
+	}
+	manpower=2080000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

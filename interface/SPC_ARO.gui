@@ -1,0 +1,205 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ARO_maraud_from_Lesnoden_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 305 }
+		
+
+		iconType = {
+			name ="ARO_maraud_from_Lesnoden_gui_canvas"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_canvas"
+			position = { x = 80 y = 0 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_gui_canvas_desc
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_72"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_72_0"
+			position = { x = 323 y = 167 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_72_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_73"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_73_0"
+			position = { x = 300 y = 129 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_73_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_74"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_74_0"
+			position = { x = 306 y = 80 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_74_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_75"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_75_0"
+			position = { x = 276 y = 184 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_75_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_79"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_79_0"
+			position = { x = 240 y = 131 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_79_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_80"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_80_0"
+			position = { x = 239 y = 75 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_80_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_81"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_81_0"
+			position = { x = 197 y = 97 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_81_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_82"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_82_0"
+			position = { x = 120 y = 134 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_82_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_83"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_83_0"
+			position = { x = 181 y = 72 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_83_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_84"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_84_0"
+			position = { x = 98 y = 72 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_84_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_maraud_from_Lesnoden_state_86"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_state_86_0"
+			position = { x = 160 y = 24 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_state_86_desc
+			clicksound = click_default
+		}
+		iconType = {
+			name ="ARO_maraud_from_Lesnoden_state_s"
+			quadTextureSprite = "GFX_ARO_generic_gui_state_79_s"
+			position = { x = 238 y = 129 }
+			Orientation = "left"
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "ARO_dawn_church_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 305 }
+
+		iconType = {
+			name ="ARO_dawn_church_gui_canvas"
+			quadTextureSprite = "GFX_ARO_maraud_from_Lesnoden_canvas"
+			position = { x = 80 y = 0 }
+			Orientation = "left"
+			pdx_tooltip = ARO_maraud_from_Lesnoden_gui_canvas_desc
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_72"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_72_0_0"
+			position = { x = 323 y = 167 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_72_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_73"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_73_0_0"
+			position = { x = 300 y = 129 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_73_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_74"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_74_0_0"
+			position = { x = 306 y = 80 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_74_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_75"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_75_0_0"
+			position = { x = 276 y = 184 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_75_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_76"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_76_0_0"
+			position = { x = 213 y = 217 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_76_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_77"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_77_0_0"
+			position = { x = 185 y = 196 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_77_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_78"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_78_0_0"
+			position = { x = 172 y = 158 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_78_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_79"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_79_0_0"
+			position = { x = 240 y = 131 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_79_desc
+			clicksound = click_default
+		}
+		buttonType = {
+			name ="ARO_dawn_church_state_80"
+			quadTextureSprite = "GFX_ARO_dawn_church_state_80_0_0"
+			position = { x = 239 y = 75 }
+			Orientation = "left"
+			pdx_tooltip = ARO_dawn_church_state_80_desc
+			clicksound = click_default
+		}
+		iconType = {
+			name ="ARO_dawn_church_state_s"
+			quadTextureSprite = "GFX_ARO_generic_gui_state_79_s"
+			position = { x = 238 y = 129 }
+			Orientation = "left"
+			alwaystransparent = yes
+		}
+	}
+}

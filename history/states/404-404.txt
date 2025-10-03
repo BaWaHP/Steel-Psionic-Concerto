@@ -1,0 +1,30 @@
+
+state={
+	id=404
+	name="STATE_404"
+	provinces={
+		7320 7334 8604 9113 9496 20097 20136 20156 20187 20236 
+	}
+	resources = {
+		rubber = 8
+	}
+	history={
+		owner = KOA
+		add_core_of = KOA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			20187 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			20187 3
+		}
+	}
+	manpower = 872220
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

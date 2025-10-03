@@ -1,0 +1,69 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ALR_startup_effect = {
+	if = {
+		limit = {
+			tag = ALR
+		}
+		###政府法案###
+		add_ideas = extensive_conscription
+		add_ideas = no_standard_at_all
+		add_ideas = low_economic_mobilisation
+		add_ideas = free_trade
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = unorganized_army
+		add_ideas = hard_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = nobody_cares
+		###产业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_total_funding
+		add_ideas = IP_no_intervention
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_no_secreat_police
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_heart_of_the_mountain
+		add_ideas = LR_Subhuman
+		add_ideas = SR_dwarves
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_secularism
+		add_ideas = SXP_reactionary_policy
+		###控制省份对应普及度###
+		85 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }		
+		}
+	}
+}

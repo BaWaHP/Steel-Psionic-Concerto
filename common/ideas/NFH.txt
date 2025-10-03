@@ -1,0 +1,73 @@
+ideas = {
+
+	country = {
+
+        NFH_influence_from_south = {		#南方宗主国的干涉
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.2
+				disabled_ideas = 1
+			}
+			targeted_modifier = {
+				tag = SFH
+				cic_to_target_factor = 0.2
+				mic_to_target_factor = 0.2
+			}
+		}
+
+        NFH_terrible_environment = {		#穷山恶水
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.3
+				production_speed_buildings_factor = -0.3
+				global_building_slots_factor = -0.2
+				conscription_factor = -0.5
+			}
+		}
+
+        NFH_suppressing_nobles = {		#压制食利集团
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = 0.002
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.25
+				rulling_ideology_drift = 0.01
+			}
+		}
+
+        NFH_supportive_army = {		#来自军队的支持
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.1
+				conscription_factor = 0.1
+				max_command_power_mult = 0.2
+				max_planning_factor = 0.1
+			}
+		}
+
+		NFH_common_banditry = {		#匪患横行
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.2
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				global_building_slots_factor = -0.05
+				conscription_factor = -0.2
+			}
+		}
+		
+	}
+
+}

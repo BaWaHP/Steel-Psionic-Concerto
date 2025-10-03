@@ -1,0 +1,245 @@
+VLF_regents_wish = {
+	VLF_refugee_crisis = { 		#难民潮危机
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = VLF }
+		available = {
+			has_completed_focus = VLF_internal_solution
+			#custom_trigger_tooltip = {
+			#	tooltip = VLF_refugee_crisis_tr
+			#	check_variable = { 457.building_level@industrial_complex > VLF_refugee_crisis_new_fac_457 }
+			#	check_variable = { 465.building_level@industrial_complex > VLF_refugee_crisis_new_fac_465 }
+			#}
+		}
+		activation = { always = no }
+		
+		cost = 300
+
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = VLF_refugee_crisis_time
+
+		complete_effect = {
+			clear_variable = VLF_refugee_crisis_new_fac_457
+			clear_variable = VLF_refugee_crisis_new_fac_465
+			set_country_flag = VLF_refugee_crisis_done
+		}
+
+		timeout_effect = {
+			if = {
+				limit = { NOT = { has_completed_focus = VLF_looking_for_talent } }
+				add_political_power = -50
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_1_1
+				value = -5
+				tooltip = VLF_regents_wish_1_1_tt
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_2_1
+				value = -5
+				tooltip = VLF_regents_wish_2_1_tt
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_3_2
+				value = 5
+				tooltip = VLF_regents_wish_3_2_tt
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_3_1
+				value = -5
+				tooltip = VLF_regents_wish_3_1_tt
+			}
+			VLF_regents_wish_update = yes
+			if = {
+				limit = { has_completed_focus = VLF_strengthen_border_facilities }
+				add_popularity = {
+					ideology = revolutionary_communism
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = conservative_republican
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = anarchism
+					popularity = 0.1
+				}
+			}
+			activate_mission = VLF_refugee_crisis
+		}
+	}
+
+	VLF_gov_distable = { 		#政府动摇
+		icon = GFX_decision_generic_scorched_earth
+		allowed = { tag = VLF }
+		available = { has_completed_focus = VLF_stable_government_system }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		cancel_effect = {
+			if = {
+				limit = { has_country_flag = VLF_show_respect_flag }
+				clr_country_flag = VLF_show_respect_flag
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = VLF_show_respect_flag }
+				clr_country_flag = VLF_show_respect_flag
+			}
+		}
+
+		timeout_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_2_1
+				value = -5
+				tooltip = VLF_regents_wish_2_1_tt
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_2_2
+				value = 5
+				tooltip = VLF_regents_wish_2_2_tt
+			}
+			VLF_regents_wish_update = yes
+			activate_mission = VLF_gov_distable
+		}
+	}
+
+	VLF_fix_church_facilities = { 		#修缮教会设施
+		icon = GFX_decision_generic_welfare
+		allowed = { tag = VLF }
+
+		cost = 100
+		days_remove = 50
+		fire_only_once = no
+
+		remove_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_1_1
+				value = 5
+				tooltip = VLF_regents_wish_1_1_tt
+			}
+			VLF_regents_wish_update = yes
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = 0.01
+			}
+		}
+	}
+
+	VLF_invest_civil_capital = { 		#投资民间资本
+		icon = GFX_decision_gre_investment_decisions
+		allowed = { tag = VLF }
+
+		cost = 100
+
+		days_remove = 50
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_3_2
+				value = 5
+				tooltip = VLF_regents_wish_3_2_tt
+			}
+			VLF_regents_wish_update = yes
+		}
+	}
+
+	VLF_meet_famous_researchers = { 		#接见著名学者
+		icon = GFX_decision_eng_ally_imperialist_coup
+		allowed = { tag = VLF }
+
+		cost = 25
+		fire_only_once = no
+
+		remove_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_3_1
+				value = 5
+				tooltip = VLF_regents_wish_3_1_tt
+			}
+			VLF_regents_wish_update = yes
+			random_list = {
+				30 = {
+					add_popularity = {
+						ideology = worldunion_democrat
+						popularity = 0.01
+					}
+				}
+				30 = {
+					add_popularity = {
+						ideology = liberal_republican
+						popularity = 0.01
+					}
+				}
+				30 = {
+					add_popularity = {
+						ideology = authoritarian_nationalism
+						popularity = 0.01
+					}
+				}
+				10 = {}
+			}
+		}
+	}
+
+	VLF_show_respect = { 		#表达诚意
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { tag = VLF }
+
+		visible = { 
+			has_country_flag = VLF_show_respect_flag
+			NOT = { has_completed_focus = VLF_stable_government_system }
+		}
+
+		available = { NOT = { has_completed_focus = VLF_stable_government_system } }
+
+		cost = 25
+		days_remove = 30
+		fire_only_once = no
+
+		modifier = {
+			paternal_autocrat_drift = 0.02
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_2_1
+				value = 5
+				tooltip = VLF_regents_wish_2_1_tt
+			}
+			VLF_regents_wish_update = yes
+		}
+	}
+
+	VLF_release_contracts = { 		#向合资公司发放订单
+		icon = GFX_decision_generic_fundraising
+		allowed = { tag = VLF }
+
+		cost = 100
+		days_remove = 100
+		fire_only_once = no
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = VLF_regents_wish_1_1
+				value = -10
+				tooltip = VLF_regents_wish_1_1_tt
+			}
+			VLF_regents_wish_update = yes
+		}
+	}
+
+}

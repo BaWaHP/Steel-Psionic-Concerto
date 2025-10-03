@@ -1,0 +1,29 @@
+integration_occupation = {
+	icon = 16
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+	tooltip = "integration_occupation_desc"
+	
+	visible = {
+		check_variable = { potential_cores^num > 0 }
+	}
+
+	available = {
+		can_core_nation_through_compliance = yes
+	}
+
+	fallback_law = foreign_civilian_oversight
+	
+	state_modifier = {
+		resistance_target 				= -0.20
+		required_garrison_factor 		= -0.60	
+		resistance_damage_to_garrison 	= -0.25	
+		compliance_gain 				= 0.03
+		local_factories 				= 0.00
+		local_resources 				= 0.00
+		resistance_decay 				= 0.5
+	}
+	
+	ai_will_do = {
+		base = 9000
+	}
+}

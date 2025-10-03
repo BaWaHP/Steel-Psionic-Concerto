@@ -1,0 +1,39 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_magic_panel_button"
+		texturefile = "gfx/interface/topbar/toolbar/trade_button.dds"
+		noOfFrames = 2	
+	}
+	spriteType = {
+		name = "GFX_MP_BG"
+		textureFile = "gfx/interface/magic_panel/GFX_MP_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_information_btn"
+		textureFile = "gfx/interface/history_report_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_MP_research_bg_fix"
+		textureFile = "gfx/interface/MP_research_bg_fix.dds"
+	}
+	spriteType = {
+		name = "GFX_SPC_MP_btn_1"
+		textureFile = "gfx/achievements/sunset_invasion.dds"
+	}
+	spriteType = {
+		name = "GFX_SPC_MP_btn_2"
+		textureFile = "gfx/achievements/forge_of_victory.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_MP_research_bg"
+		size= { x=192 y=192 }
+		textureFile = "gfx//interface//tiles//MP_research_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}	
+	spriteType = {
+		name = "GFX_SPC_MP_research_frame"
+		textureFile = "gfx/interface/MP_research_frame.dds"
+	}
+}

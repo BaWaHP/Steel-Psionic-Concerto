@@ -1,0 +1,30 @@
+
+state={
+	id=359
+	name="STATE_359"
+	resources={
+		chromium=6.000
+	}
+
+	history={
+		owner = BSK
+		add_core_of = BSK
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6221 1 
+		}
+
+	}
+
+	provinces={
+		3955 5132 6221 8557 11391 18581 18687 18772 
+	}
+	manpower=321100
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,38 @@
+CBL_civil_war_intensify = {
+	allowed = { SPC_generic_region_trigger_200 = yes }
+	enable = {
+		any_enemy_country = {
+			SPC_generic_region_trigger_200 = yes
+		}
+	}
+
+	abort = {
+		has_global_flag = SPC_region_unified_global_11
+	}
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+
+	ai_strategy = {
+        type = ignore_army_incompetence
+        value = 100
+    }
+
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = { SPC_generic_region_trigger_200 = yes }
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = { SPC_generic_region_trigger_200 = yes }
+		ratio = 0.6
+		priority = 100
+		ordertype = front
+		execution_type = rush
+	}
+}
+

@@ -1,0 +1,33 @@
+
+state={
+	id=215
+	name="STATE_215"
+
+	resources = {
+		steel = 12
+		magic_crystal = 6
+	}
+
+	history={
+		owner = EOM
+		add_core_of = EOM
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			1247 5
+		}
+		victory_points = {
+			5194 3
+		}
+	}
+
+	provinces={
+		1247 2785 5194 8311 10715 15965 16067 16201 16311 16348 16442 
+	}
+	manpower=420000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

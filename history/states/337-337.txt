@@ -1,0 +1,30 @@
+
+state={
+	id=337
+	name="STATE_337"
+	resources={
+		rubber=13.000
+	}
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 1
+		}
+		victory_points = {
+			20760 5 
+		}
+	}
+
+	provinces={
+		20757 20760 
+	}
+	manpower=1110000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

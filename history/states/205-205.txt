@@ -1,0 +1,33 @@
+
+state={
+	id=205
+	name="STATE_205"
+
+	resources = {
+		steel = 2
+		magic_crystal = 22
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			9933 3
+		}
+		victory_points = {
+			17445 2
+		}
+	}
+
+	provinces={
+		3000 6518 7261 8844 9509 9933 10237 17033 17162 17314 17357 17445 17508 17549 17588 17694 17740 17756 17777 
+	}
+	manpower=533000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

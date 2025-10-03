@@ -1,0 +1,26 @@
+
+state={
+	id=413
+	name="STATE_413"
+	provinces={
+		3063 5668 6538 7042 11868 12172 16478 16546 16675 16869 16894 16964 17063 17104 
+	}
+	resources = {
+		steel = 24
+	}
+	history={
+		owner = HCB
+		add_core_of = HCB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			16964 8
+		}
+	}
+	manpower = 827132
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,142 @@
+###########################
+# KEU Events #
+###########################
+
+add_namespace = KEU
+
+country_event = {	#大寿
+	id = KEU.1
+	title = KEU.1.t
+	desc = KEU.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KEU.1.a
+		hidden_effect = { load_oob = "KEU" }
+	}
+}
+
+country_event = {	#死亡
+	id = KEU.2
+	title = KEU.2.t
+	desc = KEU.2.d
+	#picture = 
+	
+	immediate = {
+		country_event = {
+			id = KEU.10
+			days = 7
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KEU.2.a
+		hidden_effect = {
+			country_event = KEU.3
+			country_event = {
+				id = KEU.4
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = {		#英雄
+	id = KEU.3
+	title = KEU.3.t
+	desc = KEU.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KEU.3.a
+		263 = {
+			set_state_name = "桑山"
+		}
+		265 = {
+			set_state_name = "左汀原"
+		}
+		set_province_name = { id = 20546 name = "耻辱碑" }
+		add_victory_points = {
+			province = 20546
+			value = -7
+		}
+		set_province_name = { id = 10232 name = "白洋浜" }
+		add_victory_points = {
+			province = 10232
+			value = 4
+		}
+		set_province_name = { id = 20398 name = "汀原镇" }
+		add_victory_points = {
+			province = 20398
+			value = 4
+		}
+		set_province_name = { id = 11394 name = "洪风角" }
+		add_victory_points = {
+			province = 11394
+			value = 2
+		}
+		set_cosmetic_tag = KEU_Nagakai
+		retire_country_leader = yes
+		promote_leader = KEU_Viana_Weil
+	}
+}
+
+country_event = {
+	id = KEU.10
+	title = KEU.10.t
+	desc = KEU.10.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = { 
+		name = KEU.10.a
+		hidden_effect = {
+			265 = { add_core_of = NKE } 
+			263 = { add_core_of = SKE }
+			NKE = {
+				transfer_state = 265
+				load_oob = "NKE"
+				SPC_NKE_startup_effect = yes
+			}
+		}
+		NKE = {
+			change_tag_from = KEU
+		}
+		hidden_effect = {
+			SKE = {
+				transfer_state = 263
+			}
+		}
+	}
+
+	option = { 
+		name = KEU.10.b
+		hidden_effect = {
+			265 = { add_core_of = NKE } 
+			263 = { add_core_of = SKE }
+			SKE = {
+				transfer_state = 263
+			}
+		}
+		SKE = {
+			change_tag_from = KEU
+		}
+		hidden_effect = {
+			NKE = {
+				transfer_state = 265
+			}
+		}
+	}
+
+}

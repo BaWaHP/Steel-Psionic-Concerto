@@ -1,0 +1,37 @@
+
+state={
+	id=407
+	name="STATE_407"
+	resources = {
+		rubber = 16
+		oil = 8
+		steel = 4
+	}
+	provinces={
+		2267 6717 6869 10411 11879 11881 14160 14211 14281 14363 14436 14443 14453 14454 14561 14565 14656 14709 21870 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			arms_factory = 2
+			21870 = {
+				naval_base = 1
+			}
+			6869 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			21870 3
+		}
+		victory_points = {
+			6869 5
+		}
+	}
+	manpower = 197200
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

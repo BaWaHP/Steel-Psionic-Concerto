@@ -1,0 +1,25 @@
+
+state={
+	id=435
+	name="STATE_435"
+	provinces={
+		1920 2647 8413 9733 10212 19908 19919 19969 19974 19996 20041 20091 
+	}
+	resources = {
+		magic_crystal = 60
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 0
+		}
+		victory_points = {
+			20091 1
+		}
+	}
+	manpower = 3220
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

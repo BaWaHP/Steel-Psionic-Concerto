@@ -1,0 +1,32 @@
+
+state={
+	id=421
+	name="STATE_421"
+	provinces={
+		3162 5868 10148 10862 18904 19004 19093 19128 
+	}
+	resources = {
+		steel = 12
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 4
+			air_base = 10
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 3
+			10862 = {
+				naval_base = 8
+			}
+		}
+		victory_points = {
+			10862 25
+		}
+	}
+	manpower = 5350000
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

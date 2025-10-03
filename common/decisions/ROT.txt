@@ -1,0 +1,1550 @@
+
+SPC_generic_debug_decision_category = {
+	ROT_debug_load_focus_1 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = ROT }
+
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = ROT_focus_1
+			clr_country_flag = ROT_focus_2
+			clr_country_flag = ROT_focus_2_1
+			clr_country_flag = ROT_focus_2_2
+			clr_country_flag = ROT_focus_3
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	ROT_debug_load_focus_2 = {		#读取社会合作国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = ROT }
+
+		fire_only_once = no
+
+		complete_effect = {
+			clr_country_flag = ROT_focus_1
+			set_country_flag = ROT_focus_2
+			set_country_flag = ROT_focus_2_1
+			set_country_flag = ROT_focus_2_2
+			clr_country_flag = ROT_focus_3
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	ROT_debug_load_focus_3 = {		#读取目田国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = ROT }
+
+		fire_only_once = no
+
+		complete_effect = {
+			clr_country_flag = ROT_focus_1
+			clr_country_flag = ROT_focus_2
+			clr_country_flag = ROT_focus_2_1
+			clr_country_flag = ROT_focus_2_2
+			set_country_flag = ROT_focus_3
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+ROT_kick_rsb_ass = {  #帝国残影 or 驱逐南巴遗毒
+	ROT_troops_approaching_capital = { 		#南巴驻军逼近首都……
+		icon = GFX_decision_SWE_set_army_budget
+		allowed = { tag = ROT }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 40
+
+		timeout_effect = {  
+			if = {
+				limit = { has_government = national_socialist }
+				country_event = {
+					id = ROT.50
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = ROT.54
+					days = 1
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_troops_takedown_426 = { 		#南巴驻军进入罗达威亚……
+		icon = GFX_decision_SWE_set_army_budget
+		allowed = { tag = ROT }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 14
+
+		timeout_effect = { 
+			426 = { add_core_of = UDT }
+			UDT = { transfer_state = 426 }
+			activate_mission = ROT_troops_takedown_424
+			country_event = {
+				id = ROT.63
+				days = 1
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_troops_takedown_424 = { 		#南巴驻军攻陷康克尼勒……
+		icon = GFX_decision_SWE_set_army_budget
+		allowed = { tag = ROT }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 14
+
+		timeout_effect = {  
+			424 = { add_core_of = UDT }
+			UDT = { transfer_state = 424 }
+			country_event = {
+				id = ROT.64
+				days = 1
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_president_speech = { 		#总统波瓦尔就大选结果发表讲话……
+		icon = GFX_decision_generic_speech
+		allowed = { tag = ROT }
+		activation = { always = no }
+		
+		cost = 50
+
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 7
+
+		complete_effect = {
+			country_event = {
+				id = ROT.58
+				days = 1
+			}
+		}
+
+		timeout_effect = {  
+			country_event = {
+				id = ROT.60
+				days = 1
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_reinforce_cap_def = { 		#加强首都防御工事
+		icon = GFX_decision_generic_mountain_fortification
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = ROT_two_army_stand_bop
+				value = -0.1
+			}
+			421 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 10862
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_seek_mil_sup = { 		#寻求军队支持
+		icon = GFX_decision_generic_political_discourse
+
+		visible = { has_government = religious_extremism }
+
+		cost = 20
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.1
+					}
+				}
+				50 = {}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_destroy_the_road = { 		#破坏道路
+		icon = GFX_decision_generic_ignite_civil_war
+
+		cost = 5
+		days_re_enable = 14
+		fire_only_once = no
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = ROT_troops_approaching_capital
+				days = 3
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_send_troops_stop = { 		#派遣部队阻拦
+		icon = GFX_decision_FIN_stop_motti_tactics
+
+		custom_cost_text = decision_cost_CP_10
+		custom_cost_trigger = { command_power > 9 }
+
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			add_command_power = -10
+			random_list = {
+				70 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.1
+					}
+					add_days_mission_timeout = {
+						mission = ROT_troops_approaching_capital
+						days = 3
+					}
+				}
+				30 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = 5
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+					add_manpower = -100
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_assault_enemy_goods = { 		#袭击敌人物资
+		icon = GFX_decision_generic_confiscation
+
+		visible = { has_government = national_socialist }
+
+		custom_cost_text = decision_cost_CP_10_pp_10
+		custom_cost_trigger = { 
+			command_power > 9 
+			has_political_power > 9
+		}
+
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			add_command_power = -10
+			add_political_power = -10
+			random_list = {
+				40 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.05
+					}
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = -10
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+				}
+				60 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = 5
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+					add_manpower = -55
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_call_for_peace_reso = { 		#呼吁和平解决
+		icon = GFX_decision_generic_political_address
+
+		visible = { has_government = national_socialist }
+
+		cost = 10
+		days_re_enable = 7
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = -5
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+				}
+				30 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = 10
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+					add_manpower = -10
+				}
+				20 = {}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_surprise_attack = { 		#发动奇袭
+		icon = GFX_decision_generic_political_discourse
+
+		visible = { has_government = religious_extremism }
+
+		custom_cost_text = decision_cost_CP_10_pp_10
+		custom_cost_trigger = { 
+			command_power > 9 
+			has_political_power > 9
+		}
+
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			add_command_power = -10
+			add_political_power = -10
+			random_list = {
+				50 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.1
+					}
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = -10
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+				}
+				50 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = 5
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+					add_manpower = -55
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_god_comes_himself = { 		#神使亲临
+		icon = GFX_decision_generic_political_discourse
+
+		visible = { has_government = religious_extremism }
+
+		custom_cost_text = decision_cost_CP_5
+		custom_cost_trigger = { command_power > 4 }
+
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			add_command_power = -5
+			#custom_effect_tooltip = ROT_god_comes_himself_desc
+			random_list = {
+				80 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.1
+					}
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = -10
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+				}
+				20 = {
+					add_to_variable = {
+						var = ROT_two_army_tension
+						value = 10
+						tooltip = ROT_two_army_tension_tt
+					}
+					ROT_two_army_tension_clamp = yes
+					add_political_power = -20
+					add_command_power = -30
+					add_manpower = -55
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_ask_for_loans = { 		#向首都银行请求贷款
+		icon = GFX_decision_gre_investment_decisions
+
+		custom_cost_text = decision_cost_ST_2
+		custom_cost_trigger = { has_stability > 0.02 }
+
+		fire_only_once = yes
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			add_stability = -0.02
+			random_list = {
+				70 = {
+					country_event = {
+						id = ROT.61
+						days = 1
+					}
+				}
+				30 = {
+					country_event = {
+						id = ROT.62
+						days = 1
+					}
+				}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	ROT_seek_local_sup = { 		#寻求地方支持
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		visible = { has_government = national_socialist }
+
+		cost = 20
+		days_re_enable = 14
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					add_power_balance_value = {
+						id = ROT_two_army_stand_bop
+						value = -0.1
+					}
+				}
+				50 = {}
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+}
+
+ROT_class_and_nation = {
+	ROT_hatred_spread = { 		#厌恶蔓延……
+		icon = GFX_decision_SWI_expand_covert_operations
+		allowed = { tag = ROT }
+		available = { always = no }
+
+		activation = { ROT_hatred_spread_sp_trigger = yes }
+
+		cancel_trigger = { ROT_hatred_spread_sp_trigger = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 180
+
+		timeout_effect = {  
+			add_stability = -0.15
+			add_war_support = -0.15
+			activate_mission = ROT_hatred_spread
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#支持合作社
+	ROT_support_cooperative = {
+		icon = GFX_decision_CHL_grant_full_rights_to_the_mapuche
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		visible = {
+			NOT = {
+				has_completed_focus = ROT_encourage_cooperative
+			}
+		}
+
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 5
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#支持合作社
+	ROT_support_cooperative_2 = {
+		name = ROT_support_cooperative
+		icon = GFX_decision_CHL_grant_full_rights_to_the_mapuche
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		visible = {
+			has_completed_focus = ROT_encourage_cooperative
+		}
+
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = -5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = 5
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#支持私营企业
+	ROT_support_private_enterprise = {
+		icon = GFX_decision_gre_investment_decisions
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_2
+				value = 5
+				tooltip = ROT_a_national_revolution_2_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#提拔左派
+	ROT_promote_leftists = {
+		icon = GFX_decision_BOL_reintegrate_acre_state
+
+		cost = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = 5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#鼓动极端民族主义
+	ROT_incite_extreme_nationalism = {
+		icon = GFX_decision_BOL_reintegrate_acre_state
+
+		cost = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_1
+				value = -5
+				tooltip = ROT_a_national_revolution_1_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#整肃党风
+	ROT_clean_up_party_style = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		cost = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_5
+				value = 5
+				tooltip = ROT_a_national_revolution_5_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#临时增税
+	ROT_temporary_tax_increase = {
+		icon = GFX_decision_generic_welfare
+
+		cost = 30
+		days_remove = 180
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = -0.2
+			political_power_gain = 0.3
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = ROT_a_national_revolution_3
+				value = -10
+				tooltip = ROT_a_national_revolution_3_tt
+			}
+			add_to_variable = {
+				var = ROT_a_national_revolution_4
+				value = -10
+				tooltip = ROT_a_national_revolution_4_tt
+			}
+			ROT_a_national_revolution_update = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#扩大官僚队伍
+	ROT_expand_bureaucracy = {
+		icon = GFX_decision_generic_wreckers
+
+		cost = 30
+		days_remove = 60
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			country_event = ROT.101
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#让美拉德慰问前线
+	ROT_mirad_frontline = {
+		icon = GFX_decision_SWE_set_army_budget
+
+		available = {
+			has_idea = ROT_maillard_belloc_idea
+			has_war = yes
+		}
+
+		custom_cost_text = decision_cost_CP_20_pp_20
+		custom_cost_trigger = { command_power > 19 has_political_power > 19 }
+
+		days_remove = 21
+		days_re_enable = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_command_power = -20
+			add_political_power = -20
+		}
+
+		modifier = {
+			experience_loss_factor = -0.1
+			army_org_regain = 0.05
+			worldunion_socialist_drift = 0.05
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#团结国家
+	ROT_unite_country = {
+		icon = GFX_decision_generic_speech
+
+		available = { 
+			ROT_unite_country_sp_trigger = yes 
+		}
+
+		cost = 100
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			ROT_nation_unity_up = yes
+		}
+
+		ai_will_do = { factor = 114514 }
+	}
+
+	#提特兰民族的新生
+	ROT_new_life_of_teotland = {
+		icon = GFX_decision_SWI_guisan_speech
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_new_life_of_teotland_tr
+				check_variable = { ROT_a_national_revolution_6 = 100 }
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SR_unharmonized_multi_ethnic_states
+				add_idea = SR_teotland_people
+			}
+		}
+
+		ai_will_do = { factor = 114514 }
+	}
+}
+
+ROT_economic_basis_of_the_restoration_war = {
+	#战争机器准备就绪
+	ROT_war_machine_ready = {
+		icon = GFX_decision_SWI_guisan_speech
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_war_machine_ready_tr
+				check_variable = { ROT_war_preparation_points > 349 }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROT_war_machine_full_speed
+				days = 888
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#推广现代农业技术
+	ROT_promote_modern_agricultural_technology = {
+		icon = GFX_decision_CHL_mapuche_liberate_isthmo_amerindia
+
+		cost = 100
+		days_remove = 360
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			monthly_agricultural_development_process = 2
+			monthly_living_standard_development_process = 1
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+			add_stability = 0.05
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#重工业项目
+	ROT_heavy_industry_project = {
+		icon = GFX_decision_generic_industry
+
+		cost = 150
+		days_remove = 400
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.2
+			monthly_industrial_development_process = 4
+		}
+
+		complete_effect = {
+			country_event = ROT.104
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 200
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}	
+			set_country_flag = ROT_heavy_industry_project_complished
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#双杰水电站计划
+	ROT_doubleje_hydroelectric_project = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		cost = 100
+		days_remove = 730
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			420 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6247
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			416 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 19286
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#提特兰科学院
+	ROT_teotland_academy_of_sciences = {
+		icon = GFX_decision_SOV_academy_of_sciences
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ROT_teotland_academy_of_sciences_tr
+				check_variable = { ROT_a_national_revolution_2 > 49 }
+			}
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#教育改革
+	ROT_education_reform = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			SPC_education_policy_up = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#“元首之声”
+	ROT_voice_of_the_leader = {
+		icon = GFX_decision_generic_speech
+
+		cost = 100
+		days_remove = 90
+		fire_only_once = yes
+		
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+			add_tech_bonus = {
+				name = ROT_voice_of_the_leader
+				category = electronics
+				uses = 2
+				bonus = 1
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#发展圣城
+	ROT_develop_holy_city = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			has_completed_focus = ROT_stop_religious_conflict
+			has_stability > 0.2
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		cost = 100
+		days_remove = 730
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_manpower = 10000
+			429 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#摘心岛军工城计划
+	ROT_heart_island_military_industrial_city_plan = {
+		icon = GFX_decision_ger_military_buildup
+
+		available = {
+			has_country_flag = ROT_heavy_industry_project_complished
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		cost = 100
+		days_remove = 60
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			414 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#延长军工厂工作时间
+	ROT_extend_military_factory_working_hours = {
+		icon = GFX_decision_generic_military
+
+		available = {
+			has_country_flag = ROT_heavy_industry_project_complished
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		cost = 50
+		days_remove = 90
+		days_re_enable = 90
+		fire_only_once = no
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+			monthly_living_standard_development_process = -4
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 20
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#发展军事工业
+	ROT_develop_military_industry = {
+		icon = GFX_decision_ger_military_buildup
+
+		cost = 100
+		days_remove = 180
+		days_re_enable = 180
+		fire_only_once = no
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#合成油计划
+	ROT_synthetic_oil_plan = {
+		icon = GFX_decision_oil
+
+		available = {
+			has_tech = synth_oil_experiments
+			num_of_civilian_factories_available_for_projects > 0
+			has_country_flag = ROT_heavy_industry_project_complished
+		}
+
+		cost = 50
+		days_remove = 180
+		days_re_enable = 180
+		fire_only_once = no
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 20
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#向鲁萨尔寻求长期石油贸易
+	ROT_seek_long_term_oil_trade_with_rsu = {
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+			FROM = { 
+				SPC_generic_region_trigger_6_unif = yes
+				NOT = { has_war_with = ROOT }
+			}
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		target_trigger = { FROM = { SPC_generic_region_trigger_52 = yes } }
+		targets_dynamic = yes
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			FROM = {
+				country_event = ROT.106
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#向特尼安人寻求长期石油贸易
+	ROT_seek_long_term_oil_trade_with_tni = {
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+			FROM = { 
+				SPC_generic_region_trigger_5_unif = yes
+				NOT = { has_war_with = ROOT }
+			}
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		target_trigger = { FROM = { SPC_generic_region_trigger_50 = yes } }
+		targets_dynamic = yes
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			FROM = {
+				country_event = ROT.108
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#提特兰汽车制造业
+	ROT_teotland_automobile_manufacturing = {
+		icon = GFX_decision_generic_factory
+
+		available = {
+			has_country_flag = ROT_heavy_industry_project_complished
+			OR = {
+				has_resources_in_country = {
+					resource = oil
+					amount > 7
+				}
+				OR = {
+					has_idea = ROT_long_term_oil_trade_agreement
+					hidden_trigger = {
+						has_idea = ROT_long_term_oil_trade_agreement_2
+					}
+				}
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_tech = tech_trucks } }
+				set_technology = {
+					tech_trucks = 1
+				}
+			}
+			415 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = ROT_war_preparation_points
+				value = 50
+				tooltip = ROT_war_preparation_points_tt
+			}
+			ROT_war_preparation_points_clamp = yes
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	ROT_limit_of_the_total_war = { 		#总体战的期限
+		icon = GFX_decision_CHL_mapuche_reorganize_the_bolivian_government
+		allowed = { tag = ROT }
+		available = { always = no }
+		activation = { always = no }
+
+		cancel_trigger = {
+			has_completed_focus = ROT_titran_rebirth
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 3000
+
+		cancel_effect = {
+			remove_ideas = ROT_total_war_plan
+		}
+
+		timeout_effect = {  
+			country_event = ROT.126
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+}
+
+ROT_integrate_territories = {
+	#提特兰再统一
+	ROT_teotland_reunification = {
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPC_generic_region_trigger_100_control_tr
+				all_of_scopes = {
+					array = global.SPC_generic_region_states_100
+					OR = {
+						is_owned_by = FROM
+						owner = { is_subject_of = FROM }
+					}
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { has_government = national_socialist }
+				news_event = ROTNews.3
+			}
+			else_if = {
+				limit = { has_government = liberal_republican }
+				news_event = ROTNews.4
+			}
+			set_global_flag = SPC_region_unified_global_4
+			hidden_effect = {
+				if = {
+					limit = { has_government = national_socialist }
+					every_country = {
+						set_country_flag = superevent_show_flag
+						set_country_flag = SPC_SE_reunification_ROT_1_flag
+						scoped_play_song = "SE_reunification_ROT_1_sound"
+					}
+				}
+				else_if = {
+					limit = { has_government = liberal_republican }
+					every_country = {
+						set_country_flag = superevent_show_flag
+						set_country_flag = SPC_SE_reunification_ROT_2_flag
+						scoped_play_song = "SE_reunification_ROT_2_sound"
+					}
+				}
+			}
+		}
+
+		ai_will_do = { factor = 114514 }
+	}
+
+	#西北谈判
+	ROT_northwest_negotiation = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		visible = { has_government = liberal_republican }
+
+		available = {
+			MGC = { exists = no }
+			any_owned_state = {
+				any_neighbor_state = {
+					state = 472
+				}
+			}
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			472 = { add_core_of = ROOT }
+			transfer_state = 472
+		}
+
+		ai_will_do = { factor = 114514 }
+	}
+
+	#整合
+	ROT_integrate_target = {
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			FROM = { is_subject_of = ROOT }
+		}
+
+		target_trigger = { 
+			FROM = { 
+				SPC_generic_region_trigger_100 = yes
+				is_subject_of = ROOT
+			} 
+		}
+		targets_dynamic = yes
+
+		cost = 100
+		fire_only_once = no
+
+		complete_effect = {
+			FROM = {
+				every_unit_leader = {
+					set_nationality = ROOT
+				}
+				every_core_state = {
+					add_core_of = ROOT
+				}
+			}
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+			ROT_nation_unity_up = yes
+		}
+
+		ai_will_do = { factor = 114514 }
+	}
+}
+
+ROT_armored_protect_rsb_fed = {
+	#援助鲁萨尔
+	ROT_help_rsu_decision = {
+		icon = GFX_decision_generic_prepare_civil_war
+		cost = 50
+
+		available = {
+			RSU = {
+				exists = yes
+				has_war_with = RRF
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = ROT_help_rsu
+		}
+	}
+	#保卫南巴
+	ROT_help_rsb_decision = {
+		icon = GFX_decision_generic_prepare_civil_war
+		cost = 50
+
+		available = {
+			RSB = {
+				exists = yes
+				OR = {
+					has_war_with = RNA
+					has_war_with = RSC
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = ROT_help_rsb
+		}
+	}
+	#保卫我们的特尼安远亲
+	ROT_help_lnr_decision = {
+		icon = GFX_decision_generic_prepare_civil_war
+		cost = 50
+
+		available = {
+			LNR = {
+				exists = yes
+				OR = {
+					has_war_with = RLN
+					has_war_with = KOA
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = ROT_help_lnr
+		}
+	}
+}
+

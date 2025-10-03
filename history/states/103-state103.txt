@@ -1,0 +1,27 @@
+
+state={
+	id=103
+	name="STATE_103"
+	resources = {
+		magic_crystal = 6
+		aluminium = 24
+	}
+	provinces={
+		203 1453 2440 3477 3550 7493 9258 10632 14674 14952 15033 15084 15153 15313 15389 15433 
+	}
+	history = {
+		owner = RMN
+		add_core_of = RMN
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			14952 5
+		}
+	}
+	manpower = 421375
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

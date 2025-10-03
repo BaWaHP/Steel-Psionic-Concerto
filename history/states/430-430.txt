@@ -1,0 +1,31 @@
+
+state={
+	id=430
+	name="STATE_430"
+	provinces={
+		6842 7412 10368 11275 11780 19432 19525 19552 19602 19603 19654 19655 19673 19699 19718 19725 19745 
+	}
+	resources = {
+		chromium = 24
+		aluminium = 30
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			anti_air_building = 5
+		}
+		victory_points = {
+			7412 5
+		}
+		victory_points = {
+			6842 5
+		}
+	}
+	manpower = 877000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

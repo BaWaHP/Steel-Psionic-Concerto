@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+
+		#群山之民
+		MNT_mountain_people = {
+			picture = hol_shell_shocked_spectator
+			allowed = { original_tag = MNT }
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				terrain_penalty_reduction = 0.25
+				army_org_factor = -0.1
+				army_org_regain = -0.2
+				industrial_capacity_factory = -0.5
+			}
+		}
+	}
+}

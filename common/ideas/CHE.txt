@@ -1,0 +1,60 @@
+ideas = {
+	country = {
+
+		CHE_hegemony_and_detention_policy = {		#共主与羁縻
+			picture = HUN_hungarian_monarchy_habsburg
+			allowed = { 
+				original_tag = CHE
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.3
+				political_power_factor = -0.15
+			}
+		}
+
+		CHE_dangerous_frontier = {		#危险的边疆
+			picture = ENG_the_war_to_end_all_wars
+			allowed = { 
+				original_tag = CHE
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.25
+				local_resources_factor = -0.25
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+			}
+		}
+
+		CHE_nomadic_society = {		#游牧社会
+			picture = FRA_army_of_aggression_focus
+			allowed = { 
+				original_tag = CHE
+			}
+			removal_cost = -1
+			modifier = {
+				out_of_supply_factor = -0.2
+				supply_consumption_factor = -0.25
+				research_speed_factor = -0.2
+				equipment_capture_factor = 0.1
+				supply_node_range = 0.5
+			}
+		}
+
+		CHE_regional_security = {		#区域安全
+			picture = ast_volunteer_defence_corps
+			allowed = { 
+				original_tag = CHE
+			}
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				autonomy_manpower_share = 1
+				cic_to_overlord_factor = -0.25
+				mic_to_overlord_factor = -0.25
+			}
+		}
+
+	}
+}

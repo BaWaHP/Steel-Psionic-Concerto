@@ -1,0 +1,33 @@
+
+state={
+	id=334
+	name="STATE_334"
+
+	resources = {
+		oil = 2
+		magic_crystal = 4
+		steel = 8
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = {
+			20442 20
+		}
+	}
+
+	provinces={
+		3362 5743 7687 8624 20379 20380 20433 20442 20454 20485 
+	}
+	manpower = 3830000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=48
+	name="STATE_48"
+	provinces={
+		2617 3882 9708 11457 11612 20074 20138 20142 20160 20180 20227 20269 20303 20327 20361 20389 
+	}
+	resources = {
+		steel = 20
+		magic_crystal = 10
+		chromium = 10
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			20180 = {
+				bunker = 1
+			}
+			2617 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			20180 3
+		}
+		victory_points = {
+			2617 9
+		}
+	}
+	manpower=712450
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

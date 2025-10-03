@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+
+		TEG_model_dominion = {		#模范自治领
+			picture = new_deal
+			allowed = { 
+				original_tag = TEG
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				drift_defence_factor = 0.1
+			}
+		}
+
+		TEG_zeal_of_the_convert = {		#皈依者狂热
+			picture = SOV_new_old_church
+			allowed = { 
+				original_tag = TEG
+			}
+			removal_cost = -1
+			modifier = {
+				rulling_ideology_drift = 0.1
+				autonomy_gain = 0.1
+			}
+		}
+
+	}
+}

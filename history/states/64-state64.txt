@@ -1,0 +1,34 @@
+
+state={
+	id=64
+	name="STATE_64"
+
+	resources = {
+		tungsten = 4
+		oil = 48
+	}
+
+	history={
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			17118 3
+		}
+		victory_points = {
+			2130 8
+		}
+	}
+
+	provinces = {
+		2130 5712 7079 7695 7891 9282 11408 11826 12054 16578 16772 16918 16991 17003 17118 
+	}
+	manpower = 792200
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+	local_supplies = 0.000
+}

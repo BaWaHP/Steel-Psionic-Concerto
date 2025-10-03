@@ -1,0 +1,27 @@
+
+state={
+	id=32
+	name="STATE_32"
+	provinces={
+		898 4201 6286 11331 11333 11982 17809 17934 17948 17986 18041 18042 18131 18220 
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		add_claim_by = SFH
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			18042 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			4201 3
+		}
+	}
+	manpower=2120000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

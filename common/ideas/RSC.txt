@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+
+		RSC_let_fire_burns = {		#革命之火依旧在燃烧
+			picture = MEX_revolutionary_army
+			allowed = { original_tag = RNA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				mobilization_speed = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+
+	}
+}

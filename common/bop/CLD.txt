@@ -1,0 +1,135 @@
+CLD_government_bop = {
+	initial_value = 1
+	left_side = CLD_government_bop_council
+	right_side = CLD_government_bop_meeting
+	decision_category = CLD_government_bop_decisions
+
+	range = {
+		id = CLD_government_bop_balanced 
+		min = -0.15
+		max = 0.15
+		modifier = {
+			stability_factor = 0.1
+		}
+	}
+
+	side = {
+		id = CLD_government_bop_council
+		icon = GFX_bop_SWI_centralization_council_side
+		range = {
+			id = CLD_government_bop_absolutely_council
+			min = -0.9
+			max = -1
+			modifier = {
+				pioneer_communism_drift = 0.04
+				revolutionary_communism_drift = 0.04
+				worldunion_socialist_drift = 0.04
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				monthly_industrial_development_process = 2
+				monthly_living_standard_development_process = 2
+			}
+		}
+		
+		range = {
+			id = CLD_government_bop_completely_council
+			min = -0.75
+			max = -0.9
+			modifier = {
+				pioneer_communism_drift = 0.03
+				revolutionary_communism_drift = 0.03
+				worldunion_socialist_drift = 0.03
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				monthly_industrial_development_process = 2
+			}
+		}
+
+		range = {
+			id = CLD_government_bop_fully_council
+			min = -0.5
+			max = -0.75
+			modifier = {
+				pioneer_communism_drift = 0.02
+				revolutionary_communism_drift = 0.02
+				worldunion_socialist_drift = 0.02
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_industrial_development_process = 1
+			}
+		}
+
+		range = {
+			id = CLD_government_bop_very_council
+			min = -0.15
+			max = -0.5
+			modifier = {
+				pioneer_communism_drift = 0.01
+				revolutionary_communism_drift = 0.01
+				worldunion_socialist_drift = 0.01
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+
+	side = {
+		id = CLD_government_bop_meeting
+		icon = GFX_bop_SWI_centralization_canton_side
+		range = {
+			id = CLD_government_bop_very_meeting
+			min = 0.15
+			max = 0.5
+			modifier = {
+				worldunion_democrat_drift = 0.01
+				liberal_republican_drift = 0.01
+				national_socialist_drift = 0.01
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		range = {
+			id = CLD_government_bop_fully_meeting
+			min = 0.5
+			max = 0.75
+			modifier = {
+				worldunion_democrat_drift = 0.02
+				liberal_republican_drift = 0.02
+				national_socialist_drift = 0.02
+				consumer_goods_factor = -0.075
+				political_power_factor = 0.1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		range = {
+			id = CLD_government_bop_completely_meeting
+			min = 0.75
+			max = 0.9
+			modifier = {
+				worldunion_democrat_drift = 0.03
+				liberal_republican_drift = 0.03
+				national_socialist_drift = 0.03
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.15
+				monthly_agricultural_development_process = 2
+			}
+		}
+
+		range = {
+			id = CLD_government_bop_absolutely_meeting
+			min = 0.9
+			max = 1
+			modifier = {
+				worldunion_democrat_drift = 0.04
+				liberal_republican_drift = 0.04
+				national_socialist_drift = 0.04
+				consumer_goods_factor = -0.15
+				political_power_factor = 0.2
+				monthly_agricultural_development_process = 2
+				monthly_research_development_process = 2
+			}
+		}
+	}
+} 

@@ -1,0 +1,265 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+state_magic_level_modifier_0 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_0
+
+	recruitable_population_factor = -0.2
+	#local_supplies_for_controller = -0.2
+	local_resources_factor = -0.2
+	army_speed_factor_for_controller = -0.2
+}
+
+state_magic_level_modifier_1 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_1
+
+	recruitable_population_factor = -0.15
+	#local_supplies_for_controller = -0.15
+	local_resources_factor = -0.15
+	army_speed_factor_for_controller = -0.15
+}
+
+state_magic_level_modifier_2 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_2
+
+	recruitable_population_factor = -0.1
+	#local_supplies_for_controller = -0.1
+	local_resources_factor = -0.1
+	army_speed_factor_for_controller = -0.1
+}
+
+state_magic_level_modifier_3 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_3
+
+	recruitable_population_factor = -0.05
+	#local_supplies_for_controller = -0.05
+	local_resources_factor = -0.05
+	army_speed_factor_for_controller = -0.05
+}
+
+state_magic_level_modifier_4 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_4
+
+	recruitable_population_factor = 0.05
+	local_supplies_for_controller = 0.05
+	local_resources_factor = 0.05
+	army_speed_factor_for_controller = 0.05
+}
+
+state_magic_level_modifier_5 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_5
+
+	recruitable_population_factor = 0.1
+	local_supplies_for_controller = 0.1
+	local_resources_factor = 0.1
+	army_speed_factor_for_controller = 0.1
+}
+
+state_magic_level_modifier_6 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_6
+
+	recruitable_population_factor = 0.15
+	local_supplies_for_controller = 0.15
+	local_resources_factor = 0.15
+	army_speed_factor_for_controller = 0.15
+}
+
+state_magic_level_modifier_7 = {
+	enable = { always = yes }
+
+	icon = GFX_state_magic_level_modifier_7
+
+	recruitable_population_factor = 0.2
+	local_supplies_for_controller = 0.2
+	local_resources_factor = 0.2
+	army_speed_factor_for_controller = 0.2
+}
+
+state_science_level_modifier_0 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_0
+
+	recruitable_population_factor = 0.2
+	compliance_growth = -0.2
+	starting_compliance = -0.2
+	resistance_growth = 0.2
+	resistance_target = 0.2
+	state_production_speed_buildings_factor = -0.1
+	local_building_slots_factor = -0.2
+}
+
+state_science_level_modifier_1 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_1
+
+	recruitable_population_factor = 0.15
+	compliance_growth = -0.15
+	starting_compliance = -0.15
+	resistance_growth = 0.15
+	resistance_target = 0.15
+	state_production_speed_buildings_factor = -0.1
+	local_building_slots_factor = -0.15
+}
+
+state_science_level_modifier_2 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_2
+
+	recruitable_population_factor = 0.1
+	compliance_growth = -0.1
+	starting_compliance = -0.1
+	resistance_growth = 0.1
+	resistance_target = 0.1
+	state_production_speed_buildings_factor = -0.05
+	local_building_slots_factor = -0.1
+}
+
+state_science_level_modifier_3 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_3
+
+	recruitable_population_factor = 0.05
+	compliance_growth = -0.05
+	starting_compliance = -0.05
+	resistance_growth = 0.05
+	resistance_target = 0.05
+	state_production_speed_buildings_factor = -0.05
+	local_building_slots_factor = -0.05
+}
+
+state_science_level_modifier_4 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_4
+
+	recruitable_population_factor = -0.05
+	compliance_growth = 0.05
+	starting_compliance = 0.05
+	resistance_growth = -0.05
+	resistance_target = -0.05
+	state_production_speed_buildings_factor = 0.05
+	local_building_slots_factor = 0.05
+}
+
+state_science_level_modifier_5 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_5
+
+	recruitable_population_factor = -0.05
+	compliance_growth = 0.1
+	starting_compliance = 0.1
+	resistance_growth = -0.1
+	resistance_target = -0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.1
+}
+
+state_science_level_modifier_6 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_6
+
+	recruitable_population_factor = -0.1
+	compliance_growth = 0.15
+	starting_compliance = 0.15
+	resistance_growth = -0.15
+	resistance_target = -0.15
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots_factor = 0.15
+}
+
+state_science_level_modifier_7 = {
+	enable = { always = yes }
+
+	icon = GFX_state_science_level_modifier_7
+
+	recruitable_population_factor = -0.1
+	compliance_growth = 0.2
+	starting_compliance = 0.2
+	resistance_growth = -0.2
+	resistance_target = -0.2
+	state_production_speed_buildings_factor = 0.2
+	local_building_slots_factor = 0.2
+}
+
+state_development_special_op_modifier_1 = {
+	enable = { always = yes }
+
+	icon = GFX_state_development_special_op_modifier_1
+
+	recruitable_population_factor = -0.05
+	army_speed_factor_for_controller = -0.05
+	resistance_growth = 0.1
+	resistance_target = 0.1
+}
+
+state_development_special_op_modifier_2 = {
+	enable = { always = yes }
+
+	icon = GFX_state_development_special_op_modifier_2
+
+	local_building_slots_factor = -0.05
+	state_production_speed_buildings_factor = -0.05
+}
+
+state_development_special_op_modifier_3 = {
+	enable = { always = yes }
+
+	icon = GFX_state_development_special_op_modifier_3
+
+	recruitable_population_factor = -0.05
+	army_speed_factor_for_controller = -0.05
+	resistance_growth = 0.1
+	resistance_target = 0.1
+}
+
+state_development_special_op_modifier_4 = {
+	enable = { always = yes }
+
+	icon = GFX_state_development_special_op_modifier_4
+
+	local_building_slots_factor = -0.05
+	state_production_speed_buildings_factor = -0.05
+}

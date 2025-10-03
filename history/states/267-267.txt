@@ -1,0 +1,30 @@
+
+state={
+	id=267
+	name="STATE_267"
+
+	history={
+		owner = OAS
+		add_core_of = OAS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 2
+		}
+		victory_points = {
+			1456 20
+		}
+		victory_points = {
+			15930 10
+		}
+	}
+
+	provinces={
+		1456 4795 5264 7925 9433 15768 15811 15930 15988 16008 16066 
+	}
+	manpower = 1800000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

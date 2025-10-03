@@ -1,0 +1,28 @@
+
+state={
+	id=401
+	name="STATE_401"
+	resources = {
+		rubber = 8
+	}
+	provinces={
+		3101 8042 20804 20831 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 0
+			3101 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			3101 1
+		}
+	}
+	manpower=92200
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

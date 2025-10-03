@@ -1,0 +1,31 @@
+
+state={
+	id=398
+	name="STATE_398"
+	resources = {
+		rubber = 16
+		oil = 16
+	}
+	provinces={
+		340 693 1911 4222 9688 19150 19189 19241 19272 19316 19381 19428 19528 19593 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			19198 10
+		}
+		victory_points = {
+			19528 3
+		}
+	}
+	manpower=2600000
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,453 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ROK_startup_effect = {
+	if = {
+		limit = {
+			tag = ROK
+		}
+		###介绍页面###
+		set_variable = { SPC_intro_screen = 1 }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = normal_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_limited_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		#add_ideas = SR_
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它开局###
+		country_event = {
+			id = ROK.6
+			days = 2
+		}
+		set_country_flag = ROK_focus_1
+		mark_focus_tree_layout_dirty = yes
+		###控制省份对应普及度###
+		344 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 6 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }
+		}
+		343 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		360 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		375 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		345 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+	}
+}
+
+#ROK选举事件结束效果 确定哪个政党获胜
+SPC_ROK_vote_event_end_effect = {
+	if = {
+		limit = {
+			AND = {
+				check_variable = { rok_worldunion_democrat_votes < 3 }
+				check_variable = { rok_liberal_republican_votes < 3 }
+				check_variable = { rok_conservative_republican_votes < 3 }
+			}
+		}
+		country_event = { id = ROK.5 days = 7 } #选举陷入僵局
+	}
+	
+	if = {
+		limit = {
+			check_variable = { rok_worldunion_democrat_votes > 2 }
+		}
+		country_event = { id = ROK.13 days = 7 } #选举 社民党获胜 
+	}
+	
+	if = {
+		limit = {
+			check_variable = { rok_liberal_republican_votes > 2 }
+		}
+		country_event = { id = ROK.14 days = 7 } #选举 新民主党获胜 
+	}
+	
+	if = {
+		limit = {
+			check_variable = { rok_conservative_republican_votes > 2 }
+		}
+		country_event = { id = ROK.15 days = 7 } #选举 民主党获胜 
+	}
+}
+
+ROK_internal_external_conflict_setup = {
+	unlock_decision_category_tooltip = ROK_internal_external_conflict
+	set_country_flag = ROK_internal_external_conflict_on
+
+	set_variable = { ROK_leader_1_prop = 35 }	#埃米
+	set_variable = { ROK_leader_2_prop = 30 }	#施塔尔
+	set_variable = { ROK_leader_3_prop = 25 }	#亨利克
+}
+
+ROK_internal_external_conflict_clamp_aio = {
+	clamp_variable = {
+		var = ROK_leader_1_prop
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROK_leader_2_prop
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = ROK_leader_3_prop
+		min = 0
+		max = 100
+	}
+}
+
+ROK_temp_pass_check_effet = {
+	set_temp_variable = { ROK_temp_pass_check = 0 }
+	if = {
+		limit = { check_variable = { ROK_faction_alt_1_var = 1 } }
+		add_to_temp_variable = { ROK_temp_pass_check = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROK_faction_alt_1_var = 3 } }
+		add_to_temp_variable = { ROK_temp_pass_check = 1 }
+	}
+	if = {
+		limit = { check_variable = { ROK_faction_alt_2_var = 1 } }
+		add_to_temp_variable = { ROK_temp_pass_check = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROK_faction_alt_2_var = 3 } }
+		add_to_temp_variable = { ROK_temp_pass_check = 1 }
+	}
+	if = {
+		limit = { check_variable = { ROK_faction_alt_3_var = 1 } }
+		add_to_temp_variable = { ROK_temp_pass_check = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROK_faction_alt_3_var = 3 } }
+		add_to_temp_variable = { ROK_temp_pass_check = 1 }
+	}
+	if = {
+		limit = { check_variable = { ROK_faction_alt_4_var = 1 } }
+		add_to_temp_variable = { ROK_temp_pass_check = -1 }
+	}
+	else_if = {
+		limit = { check_variable = { ROK_faction_alt_4_var = 3 } }
+		add_to_temp_variable = { ROK_temp_pass_check = 1 }
+	}
+	if = {
+		limit = { check_variable = { ROK_temp_pass_check > 0 } }
+		custom_effect_tooltip = ROK_proposal_pass_tt
+		ROK_proposal_is_being_voted_on_effect = yes
+	}
+	else = {
+		if = {
+			limit = { is_ai = yes }
+			random_list = {
+				80 = {
+					ROK_proposal_is_being_voted_on_effect = yes
+				}
+			}
+		}
+		custom_effect_tooltip = ROK_proposal_fail_tt
+	}
+}
+
+ROK_faction_decisions_flag_clr = {
+	if = {
+		limit = { has_country_flag = ROK_faction_1_decision_1_clicked }
+		clr_country_flag = ROK_faction_1_decision_1_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_1_decision_2_clicked }
+		clr_country_flag = ROK_faction_1_decision_2_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_2_decision_1_clicked }
+		clr_country_flag = ROK_faction_2_decision_1_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_2_decision_2_clicked }
+		clr_country_flag = ROK_faction_2_decision_2_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_3_decision_1_clicked }
+		clr_country_flag = ROK_faction_3_decision_1_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_3_decision_2_clicked }
+		clr_country_flag = ROK_faction_3_decision_2_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_4_decision_1_clicked }
+		clr_country_flag = ROK_faction_4_decision_1_clicked
+	}
+	if = {
+		limit = { has_country_flag = ROK_faction_4_decision_2_clicked }
+		clr_country_flag = ROK_faction_4_decision_2_clicked
+	}
+}
+
+ROK_faction_alt_var_clamp = {
+	clamp_variable = {
+		var = ROK_faction_alt_1_var
+		min = 1
+		max = 3
+	}
+	clamp_variable = {
+		var = ROK_faction_alt_2_var
+		min = 1
+		max = 3
+	}
+	clamp_variable = {
+		var = ROK_faction_alt_3_var
+		min = 1
+		max = 3
+	}
+	clamp_variable = {
+		var = ROK_faction_alt_4_var
+		min = 1
+		max = 3
+	}
+}
+
+ROK_proposal_is_being_voted_on_effect = {
+	if = {
+		limit = { check_variable = { ROK_proposal_index = 1 } }
+		#推广现代主义设计
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 2 } }
+		#摒弃古典主义美学
+		add_ideas = MP_open_for_application
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 3 } }
+		#要求构成主义至上
+		add_tech_bonus = {
+			name = ROK_social_and_cultural_proposal_3
+			bonus = 0.5
+			uses = 2
+			category = caster_equipments
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 4 } }
+		#消灭守旧势力“根据地”
+		add_tech_bonus = {
+			name = ROK_social_and_cultural_proposal_4
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 5 } }
+		#确立现代人思维
+		add_political_power = 100
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 6 } }
+		#扶正《先锋艺术报》
+		add_to_variable = {
+			var = industrial_development_mod
+			value = 2
+			tooltip = research_development_mod_tt_up_1
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 7 } }
+		#扶正《先锋艺术报》
+		random_owned_state = {
+			add_to_variable = {
+				var = state_science_progress
+				value = 50
+				tooltip = state_science_dev_tt
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 8 } }
+		#打倒艺术势力守旧派
+		random_owned_state = {
+			add_to_variable = {
+				var = state_magic_level
+				value = 50
+				tooltip = state_magic_dev_tt
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 9 } }
+		#确立农业合作化
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 2
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 10 } }
+		#推行工人民主
+		add_to_variable = {
+			var = industrial_development_mod
+			value = 2
+			tooltip = industrial_development_mod_tt_up_1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 11 } }
+		#第二次全国电气化计划
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 12 } }
+		#确立集体所有制
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 13 } }
+		#赎买生产资料
+		add_ideas = IP_basic_funds
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 14 } }
+		#鼓励生产合作社
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 2
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 15 } }
+		#削弱私有制基础
+		add_ideas = normal_taxes
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 16 } }
+		#开放公私合营
+		add_ideas = NP_high_nationalization
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 17 } }
+		#民族融合法案
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_17_passed
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 18 } }
+		#推广新艺术到全党
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_18_passed
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 19 } }
+		#崭新的不稳定艺术
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_19_passed
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 20 } }
+		#加强左翼新艺术宣传
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_20_passed
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 21 } }
+		#证明列特斯彻哲学
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_21_passed
+	}
+	else_if = {
+		limit = { check_variable = { ROK_proposal_index = 22 } }
+		#艺术之乌托邦
+		custom_effect_tooltip = unlock_new_focus_tt
+		set_country_flag = ROK_proposal_22_passed
+	}
+}

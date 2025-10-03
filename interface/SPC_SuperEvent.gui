@@ -1,0 +1,80 @@
+guiTypes = { 
+
+	containerWindowType = {
+        name = "SPC_superevents_container"		#超事件框架
+        size = { width = 600 height = 600 }
+        position = { x=0 y=0 }
+        Orientation = center
+        Origo = center
+		moveable = yes
+        clipping = no
+        #show_sound = 音乐写在触发的地方，用scoped_play_song
+
+        background = {
+            name = "background"
+            quadTextureSprite ="GFX_SE_bg"
+        }
+
+		iconType = {
+            name ="image"
+            position = { x= -258 y = -170 }
+            Orientation = center
+            alwaystransparent = yes
+        }
+
+		iconType = {
+            name ="shader"
+            spriteType = "GFX_SE_shader"
+            position = { x= -300 y = -190 }
+            Orientation = center
+            alwaystransparent = yes
+        }
+
+		buttonType = {
+			name = "option"
+			position = { x = 200 y = 550 }
+			quadTextureSprite ="GFX_SE_bottom_btn"
+			font = "hoi_18mbs"
+			buttonText = "superevent_btn_txt"
+			pdx_tooltip = "superevent_btn_txt_tt"
+			clicksound = click_default
+			shortcut = "ESCAPE"
+		}
+
+     	instantTextBoxType = {
+			name = "title"
+			position = { x = 230 y = 45 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "superevent_title_txt"
+			maxWidth = 290
+			maxHeight = 150
+			fixedsize = yes	
+			format = centre
+		}
+
+		instantTextboxType = {
+			name = "desc"
+			position = { x = 100 y = 400 }	#373
+			font = "hoi_24header"
+			text = "superevent_desc"
+			maxWidth = 600
+			maxHeight = 200
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "famous_man"
+			position = { x = 80 y = 450 }
+			font = "hoi_24header"
+			text = "superevent_famous_people"
+			maxWidth = 600
+			maxHeight = 200
+			fixedsize = yes
+			format = right
+			alwaystransparent = yes
+		}
+    }
+}

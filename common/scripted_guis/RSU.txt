@@ -1,0 +1,41 @@
+scripted_gui = {
+
+	RSU_full_union_development_plan_ui = {
+		context_type = decision_category
+		window_name = "RSU_full_union_development_plan_window"
+
+		effects = {
+			RSU_union_development_north_button_click = {
+				RSU_union_development_clear_var = yes
+				set_variable = { RSU_union_development_north_icon = 1 }
+			}
+			RSU_union_development_east_button_click = {
+				RSU_union_development_clear_var = yes
+				set_variable = { RSU_union_development_east_icon = 1 }
+			}
+			RSU_union_development_south_button_click = {
+				RSU_union_development_clear_var = yes
+				set_variable = { RSU_union_development_south_icon = 1 }
+			}
+			RSU_union_development_west_button_click = {
+				RSU_union_development_clear_var = yes
+				set_variable = { RSU_union_development_west_icon = 1 }
+			}
+		}
+
+		properties = {
+			RSU_union_development_north_button = {
+				image = "[GET_RSU_union_development_north_icon]"
+			}
+			RSU_union_development_east_button = {
+				image = "[GET_RSU_union_development_east_icon]"
+			}
+			RSU_union_development_south_button = {
+				image = "[GET_RSU_union_development_south_icon]"
+			}
+			RSU_union_development_west_button = {
+				image = "[GET_RSU_union_development_west_icon]"
+			}
+		}
+	}
+}

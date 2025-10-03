@@ -1,0 +1,308 @@
+WUN_debug_decision_category = {
+	WUN_news_debug = {		#新闻读条
+		allowed = {	tag = WUN }
+		available = {
+			always = no
+		}
+		activation = {
+			tag = WUN
+			has_country_flag = WUN_hate_a_lot_flag_1
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 15
+
+		timeout_effect = {  
+			if = {
+				limit = { WUN = { has_war_with = ZHE } }
+				news_event = WUNNews.1
+			}
+			clr_country_flag = WUN_hate_a_lot_flag_1
+		}
+	}
+	WUN_event_debug = {		#事件读条
+		allowed = {	tag = WUN }
+		available = {
+			always = no
+		}
+		activation = {
+			tag = WUN
+			has_country_flag = WUN_hate_a_lot_flag_2
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			if = {
+				limit = { WUN = { has_war_with = ZHE } }
+				WUN = { country_event = WUN.2 }
+				WCH = { country_event = WUN.3 }
+				ZHE = { country_event = WUN.4 }
+			}
+			clr_country_flag = WUN_hate_a_lot_flag_2
+		}
+	}
+}
+
+WUN_yarlig_decision_category = {
+	WUN_new_blood_of_lust_moutain = {		#肉山的每月新血
+		icon = GFX_WUN_yarlig_decisions
+	
+		allowed = {	tag = WUN }
+		available = {
+			NOT = { has_country_leader = { character = WUN_lust_mountain } }
+			AND = {
+				has_idea = WUN_sarcoma
+				has_idea = WUN_callus
+				has_idea = WUN_tissue_fluid
+				has_idea = WUN_granulation
+				has_idea = WUN_mound_of_flesh
+			}
+		}
+		activation = {
+			tag = WUN
+			has_completed_focus = WUN_yarlig
+			AND = {
+				has_idea = WUN_sarcoma
+				has_idea = WUN_callus
+				has_idea = WUN_tissue_fluid
+				has_idea = WUN_granulation
+				has_idea = WUN_mound_of_flesh
+			}
+		}
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = { 
+			custom_effect_tooltip = WUN_new_blood_of_lust_moutain_tt
+			hidden_effect = {
+				every_owned_state = {
+					if = {
+						limit = { is_core_of = WUN }
+						set_temp_variable = { WUN_state_pop = state_population_k }
+						multiply_temp_variable = { WUN_state_pop = 50 }
+						add_to_variable = { ROOT.WUN_yarlig_var = WUN_state_pop }
+						multiply_temp_variable = { WUN_state_pop = -1 }
+						add_manpower = WUN_state_pop
+					}
+					else_if = {
+						limit = { NOT = { is_core_of = WUN } }
+						set_temp_variable = { WUN_state_pop = state_population_k }
+						multiply_temp_variable = { WUN_state_pop = 25 }
+						add_to_variable = { ROOT.WUN_yarlig_var = WUN_state_pop }
+						multiply_temp_variable = { WUN_state_pop = -1 }
+						add_manpower = WUN_state_pop
+					}
+				}
+				WUN_yarlig_check = yes
+			}
+		}
+	}
+	WUN_preference_1 = {		#偏爱
+		icon = GFX_WUN_yarlig_decisions
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				NOT = { has_state_flag = WUN_state_prefered }
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		on_map_mode = map_only
+
+		cost = 75
+		days_remove = 75
+
+		modifier = {
+			custom_modifier_tooltip = WUN_preference_tt
+		}
+
+		complete_effect = {
+			FROM = { 
+				set_state_flag = WUN_state_prefering
+			}
+		}
+		
+		cancel_effect = {
+			FROM = { 
+				clr_state_flag = WUN_state_prefering
+			}
+		}
+
+		remove_effect = {
+			FROM = { 
+				clr_state_flag = WUN_state_prefering
+				set_state_flag = WUN_state_prefered
+				add_core_of = WUN
+				add_dynamic_modifier = { modifier = WUN_chrysalis_dynamic_modifier }
+			}
+		}
+	}
+	WUN_preference_2 = {		#偏爱
+		icon = GFX_WUN_yarlig_decisions
+		available = { tag = WUN }
+		
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				NOT = { has_state_flag = WUN_state_prefered }
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		on_map_mode = map_only
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 25
+		}
+		days_remove = 75
+
+		modifier = {
+			custom_modifier_tooltip = WUN_preference_tt
+		}
+
+		complete_effect = {
+			add_command_power = -50
+			FROM = { 
+				set_state_flag = WUN_state_prefering
+			}
+		}
+
+		cancel_effect = {
+			FROM = { 
+				clr_state_flag = WUN_state_prefering
+			}
+		}
+
+		remove_effect = {
+			FROM = { 
+				clr_state_flag = WUN_state_prefering
+				set_state_flag = WUN_state_prefered
+				add_core_of = WUN
+				add_dynamic_modifier = { modifier = WUN_chrysalis_dynamic_modifier }
+			}
+		}
+	}
+	WUN_life_join_1 = {		#偏爱让5万生命加入我们
+		icon = GFX_WUN_yarlig_decisions
+		available = { has_manpower > 50000 }
+		visible = { has_country_leader = { character = WUN_lust_mountain } }
+
+		cost = 0
+
+		complete_effect = {
+			add_manpower = -50000
+			capital_scope = {
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+			}
+			add_to_variable = {
+				WUN_yarlig_var = 50000
+			}
+			WUN_yarlig_check = yes
+		}
+	}
+	WUN_life_join_2 = {		#偏爱让25万生命加入我们
+		icon = GFX_WUN_yarlig_decisions
+		available = { has_manpower > 250000 }
+		visible = { has_country_leader = { character = WUN_lust_mountain } }
+
+		cost = 0
+
+		complete_effect = {
+			add_manpower = -250000
+			capital_scope = {
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+			}
+			add_to_variable = {
+				WUN_yarlig_var = 250000
+			}
+			WUN_yarlig_check = yes
+		}
+	}
+	WUN_life_join_3 = {		#偏爱让50万生命加入我们
+		icon = GFX_WUN_yarlig_decisions
+		available = { has_manpower > 500000 }
+		visible = { has_country_leader = { character = WUN_lust_mountain } }
+
+		cost = 0
+
+		complete_effect = {
+			add_manpower = -500000
+			capital_scope = {
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+			}
+			add_to_variable = {
+				WUN_yarlig_var = 500000
+			}
+			WUN_yarlig_check = yes
+		}
+	}
+}

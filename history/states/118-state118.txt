@@ -1,0 +1,32 @@
+
+state={
+	id=118
+	name="STATE_118"
+	resources={
+		magic_crystal=2
+		aluminium=3
+		steel=8
+	}
+
+	history={
+		owner = NCD
+		add_core_of = NCD
+		add_core_of = CLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			1576 20 
+		}
+	}
+
+	provinces={
+		1576 5474 6709 19347 19468 19555 
+	}
+	manpower=3451229
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

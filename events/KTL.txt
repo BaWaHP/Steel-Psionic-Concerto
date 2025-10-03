@@ -1,0 +1,31 @@
+﻿###########################
+# 事件 #
+###########################
+
+add_namespace = KTL
+
+#君王的抉择
+country_event = {
+	id = KTL.1
+	title = KTL.1.t
+	desc = KTL.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = KTL.1.a
+		activate_advisor = KTL_wagner_bogo_idea
+		KTL_wagner_bogo = {
+			promote_leader = yes
+		}
+	}
+
+	option = {
+		name = KTL.1.b
+		activate_advisor = KTL_darke_chino_idea
+		KTL_darke_chino = {
+			promote_leader = yes
+		}
+	}
+}

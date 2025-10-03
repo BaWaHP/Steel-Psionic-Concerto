@@ -1,0 +1,187 @@
+characters={
+	NWF_Qiu_Xiangrong = {		#邱向荣
+		name = NWF_Qiu_Xiangrong
+		portraits = {
+			civilian = {
+				large="GFX_NWF_Qiu_Xiangrong"
+				small="GFX_idea_NWF_Qiu_Xiangrong"
+			}
+			army = {
+				large="GFX_NWF_Qiu_Xiangrong"
+				small="GFX_idea_NWF_Qiu_Xiangrong"
+			}
+		}
+		country_leader = {
+			desc = "NWF_Qiu_Xiangrong_desc"
+			ideology = military_dictatorship
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	NWF_Qiu_Haiqin = {		#邱海清
+		name = NWF_Qiu_Haiqin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	NWF_Zheng_Wenyuan = {		#郑文远
+		name = NWF_Zheng_Wenyuan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	
+	
+	NWF_Zhanghe = {		#张河
+		name = NWF_Zhanghe
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Zhanghe_desc
+			idea_token = NWF_Zhanghe
+			traits = {
+				NWF_elite_in_junta
+			}
+			cost = 150
+		}
+	}
+	
+	NWF_Fangzhiyuan = {		#方志远
+		name = NWF_Fangzhiyuan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Fangzhiyuan_desc
+			idea_token = NWF_Fangzhiyuan
+			traits = {
+				NWF_sergeant_major
+			}
+			cost = 150
+		}
+	}
+	
+	NWF_Luoziqi = {		#洛子奇
+		name = NWF_Luoziqi
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Luoziqi_desc
+			idea_token = NWF_Luoziqi
+			traits = {
+				NWF_special_advisor_for_reconstruction_plans
+			}
+			cost = 150
+		}
+	}
+	
+	NWF_Kongyan = {		#孔岩
+		name = NWF_Kongyan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Kongyan_desc
+			idea_token = NWF_Kongyan
+			traits = {
+				NWF_nobility_of_district
+			}
+			cost = 150
+		}
+	}
+	
+	NWF_Huangyun = {		#黄云
+		name = NWF_Huangyun
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Huangyun_desc
+			idea_token = NWF_Huangyun
+			traits = {
+				NWF_social_butterfly_of_district
+			}
+			cost = 150
+		}
+	}
+	
+	NWF_Shaxingyuan = {		#沙兴远
+		name = NWF_Shaxingyuan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			desc = NWF_Shaxingyuan_desc
+			idea_token = NWF_Shaxingyuan
+			traits = {
+				NWF_minister_of_education
+			}
+			cost = 150
+		}
+	}
+}

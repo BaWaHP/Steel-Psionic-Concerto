@@ -1,0 +1,109 @@
+SFH_JiShui_tank_manufactuer = {		#吉水装甲工厂
+	name = SFH_JiShui_tank_manufactuer
+	include = generic_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 4 } }
+}
+
+SFH_future_light_industrial_coop_tank = {		#明光集团装甲部
+	name = SFH_future_light_industrial_coop_tank
+	include = generic_medium_tank_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_2
+	allowed = { tag = SFH }
+}
+
+SFH_Le_industrial_coop_tank = {		#李氏集团装甲部
+	name = SFH_Le_industrial_coop_tank
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+	allowed = { tag = SFH }
+}
+
+SFH_Le_industrial_coop_naval = {		#李氏集团海洋部
+	name = SFH_Le_industrial_coop_naval
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	allowed = { tag = SFH }
+}
+
+SFH_big_naval_shipment = {		#大港海运
+	name = SFH_big_naval_shipment
+	include = generic_submarine_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 174 } }
+}
+
+SFH_XinYuan_naval_manufacturer = {		#新园海军工厂
+	name = SFH_XinYuan_naval_manufacturer
+	include = generic_raider_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 8 } }
+}
+
+SFH_future_light_industrial_coop_aircraft = {		#明光集团航空部
+	name = SFH_future_light_industrial_coop_aircraft
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	allowed = { tag = SFH }
+}
+
+SFH_Zhou_military_coop = {		#周氏军工集团
+	name = SFH_Zhou_military_coop
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	allowed = { tag = SFH }
+
+	initial_trait = {
+		name = generic_infantry_equipment_organization
+		equipment_bonus = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+	}
+}
+
+SFH_TianTan_military_manufacturer = {		#天台军工厂
+	name = SFH_TianTan_military_manufacturer
+	include = generic_armament_enchantment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 7 } }
+}
+
+SFH_white_pigeon_international_coop = {		#白鸽国际
+	name = SFH_white_pigeon_international_coop
+	include = generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 5 } }
+
+	initial_trait = {
+		name = generic_mio_initial_trait_support_equipment_manufacturer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.1
+		}
+	}
+}
+
+SFH_JiangZhou_motorized_manufacturer = {		#江洲汽修厂
+	name = SFH_JiangZhou_motorized_manufacturer
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 10 } }
+}
+
+SFH_ShuiBu_artiliery_manufacturer = {		#水步军工厂
+	name = SFH_ShuiBu_artiliery_manufacturer
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { SPC_generic_region_trigger_1 = yes }
+	available = { FROM = { controls_state = 2 } }
+}

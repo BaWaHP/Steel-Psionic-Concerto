@@ -1,0 +1,62 @@
+ideas = {
+	country = {
+
+		HLD_autonomous_archdiocese = {		#自治大教区
+			picture = HLD_autonomous_archdiocese
+			allowed = {  original_tag = HLD }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = -0.5
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				training_time_factor = 0.5
+				conscription_factor = -0.3
+				disabled_ideas = 1
+			}
+			targeted_modifier = {
+				tag = WOM
+				cic_to_target_factor = 0.2
+			}
+		}
+
+		HLD_closed_church_college = {		#闭塞的教会学院
+			picture = HLD_closed_church_college
+			allowed = {  original_tag = HLD }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				rulling_ideology_drift = 0.05
+				drift_defence_factor = 0.5
+				research_speed_factor = -0.3
+				state_science_development_monthly = -0.02
+				state_magic_development_monthly = 0.01
+			}
+		}
+
+		HLD_less_human = {		#“人”迹罕至
+			picture = HLD_less_human
+			allowed = {  original_tag = HLD }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.3
+				conscription_factor = 0.1
+			}
+		}
+
+		HLD_tale_of_dream_lake = {		#梦之湖的传说
+			picture = HLD_tale_of_dream_lake
+			allowed = {  original_tag = HLD }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.01
+			}
+		}
+
+	}
+}

@@ -1,0 +1,113 @@
+defined_text = {
+	name = Get_aristocrat_attitude
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 1 }
+		}
+		localization_key = Get_aristocrat_attitude_1
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 2 }
+		}
+		localization_key = Get_aristocrat_attitude_2
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 3 }
+		}
+		localization_key = Get_aristocrat_attitude_3
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 4 }
+		}
+		localization_key = Get_aristocrat_attitude_4
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 5 }
+		}
+		localization_key = Get_aristocrat_attitude_5
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_aristocrat_attitude = 6 }
+		}
+		localization_key = Get_aristocrat_attitude_6
+	}
+}
+
+defined_text = {
+	name = Get_parliament_attitude
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 1 }
+		}
+		localization_key = Get_parliament_attitude_1
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 2 }
+		}
+		localization_key = Get_parliament_attitude_2
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 3 }
+		}
+		localization_key = Get_parliament_attitude_3
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 4 }
+		}
+		localization_key = Get_parliament_attitude_4
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 5 }
+		}
+		localization_key = Get_parliament_attitude_5
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_parliament_attitude = 6 }
+		}
+		localization_key = Get_parliament_attitude_6
+	}
+}
+
+defined_text = {
+	name = Get_military_reform_title
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_title_var = 1 }
+		}
+		localization_key = Get_military_reform_title_1
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_title_var = 2 }
+		}
+		localization_key = Get_military_reform_title_2
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_title_var = 3 }
+		}
+		localization_key = Get_military_reform_title_3
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_title_var = 4 }
+		}
+		localization_key = Get_military_reform_title_4
+	}
+	text = {
+		trigger = {
+			check_variable = { UPV_Duchess_reform_title_var = 5 }
+		}
+		localization_key = Get_military_reform_title_5
+	}
+}

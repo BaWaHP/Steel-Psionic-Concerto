@@ -1,0 +1,23 @@
+characters={
+
+	#玛格丽特·蒂·埃斯特哈希
+	RCC_margarete_ti_esterhazy = {
+		name = RCC_margarete_ti_esterhazy
+		portraits = {
+			civilian = {
+				large="GFX_RCC_margarete_ti_esterhazy"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RCC_margarete_ti_esterhazy"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = paternal_conservatism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

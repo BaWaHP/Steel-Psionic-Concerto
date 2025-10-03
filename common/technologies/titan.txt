@@ -1,0 +1,1573 @@
+technologies = {
+	
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+
+	@1700 = 0
+	@1800 = 2
+	@1900 = 4
+	@1998 = 6
+	@2000 = 8
+	@2002 = 10
+	@2004 = 12
+	@2006 = 14
+	@2008 = 16
+	@2010 = 18
+	@2012 = 20
+
+	###SPC内容###
+
+	#大战机甲
+	great_war_titan = {
+		
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_start_efficiency_factor = 0.05
+
+		enable_subunits = {
+			light_titan
+		}
+
+		enable_equipments = {
+			great_war_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = stryder_titan
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = atlas_titan
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = ogre_titan
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1990
+
+		folder = {
+			name = titan_folder
+			position = { x = 11 y = 0 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#游侠级泰坦
+	stryder_titan = {
+
+		enable_equipments = {
+			light_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = lightweight_transformation
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1998
+
+		folder = {
+			name = titan_folder
+			position = { x = 3 y = 2 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#轻量化改造
+	lightweight_transformation = {
+
+		light_titan = {
+			maximum_speed = 0.1
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = ronin_titan_core
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = northstar_titan_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2000
+
+		folder = {
+			name = titan_folder
+			position = { x = 3 y = 4 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#浪人核心
+	ronin_titan_core = {
+
+		enable_equipments = {
+			ronin_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = echanted_swords
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			northstar_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 1 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#附魔巨剑
+	echanted_swords = {
+
+		light_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = echantment_destroyer
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = shrapnel_ejection
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 1 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#魔法回路破坏
+	echantment_destroyer = {
+
+		light_titan = {
+			hard_attack = 0.1
+			breakthrough = 0.05
+			defense = -0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_ronin_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#霰弹弹射
+	shrapnel_ejection = {
+
+		light_titan = {
+			soft_attack = 0.1
+			breakthrough = 0.05
+			defense = -0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_ronin_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化浪人核心
+	reinforced_ronin_core = {
+
+		enable_equipments = {
+			ronin_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = short_range_instantaneous_movement
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 1 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#短距瞬间移动
+	short_range_instantaneous_movement = {
+
+		light_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = advanced_ronin_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 1 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级浪人核心
+	advanced_ronin_core = {
+
+		enable_equipments = {
+			ronin_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 1 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#北极星核心
+	northstar_titan_core = {
+
+		enable_equipments = {
+			northstar_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = handheld_ship_guns
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			ronin_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 5 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#手持舰炮
+	handheld_ship_guns = {
+
+		light_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+
+		path = {
+			leads_to_tech = proliferation_missiles
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = trip_lock_trap
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			ronin_titan_core
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 5 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#扩散导弹
+	proliferation_missiles = {
+
+		light_titan = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+			defense = -0.05
+			breakthrough = -0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_northstar_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#绊锁陷阱
+	trip_lock_trap = {
+
+		light_titan = {
+			hard_attack = 0.05
+			defense = 0.05
+			breakthrough = -0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_northstar_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 6 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化北极星核心
+	reinforced_northstar_core = {
+
+		enable_equipments = {
+			northstar_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = short_range_flight_capability
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 5 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#短距飞行能力
+	short_range_flight_capability = {
+
+		light_titan = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			breakthrough = 0.05
+			defense = -0.1
+		}
+
+		path = {
+			leads_to_tech = advanced_northstar_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 5 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级北极星核心
+	advanced_northstar_core = {
+
+		enable_equipments = {
+			northstar_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 5 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#天图级泰坦
+	atlas_titan = {
+
+		enable_subunits = {
+			medium_titan
+		}
+
+		enable_equipments = {
+			medium_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = adaptive_enhancement
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1998
+
+		folder = {
+			name = titan_folder
+			position = { x = 11 y = 2 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#适应性强化
+	adaptive_enhancement = {
+
+		medium_titan = {
+			reliability = 0.05
+			max_organisation = 10
+			max_strength = 0.1
+		}
+
+		path = {
+			leads_to_tech = ion_titan_core
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = tone_titan_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2000
+
+		folder = {
+			name = titan_folder
+			position = { x = 11 y = 4 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#离子核心
+	ion_titan_core = {
+
+		enable_equipments = {
+			ion_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = diffusion_magic_launcher
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			tone_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 9 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#扩散魔力发射器
+	diffusion_magic_launcher = {
+
+		medium_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = vortex_shield
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = laser_mega_cannon
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 9 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#漩涡护盾
+	vortex_shield = {
+
+		medium_titan = {
+			defense = 0.1
+			breakthrough = 0.2
+			max_organisation = 5
+		}
+
+		path = {
+			leads_to_tech = reinforced_ion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 8 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#激光巨炮
+	laser_mega_cannon = {
+
+		medium_titan = {
+			hard_attack = 0.1
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_ion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化离子核心
+	reinforced_ion_core = {
+
+		enable_equipments = {
+			ion_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = reinforced_magic_storation
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 9 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化魔力储蓄装置
+	reinforced_magic_storation = {
+
+		medium_titan = {
+			defense = 0.05
+			breakthrough = 0.05
+			max_organisation = 5
+			max_strength = 0.1
+		}
+
+		path = {
+			leads_to_tech = advanced_ion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 9 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级离子核心
+	advanced_ion_core = {
+
+		enable_equipments = {
+			ion_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 9 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强力核心
+	tone_titan_core = {
+
+		enable_equipments = {
+			tone_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = small_missile_launcher
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			ion_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 13 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#小型导弹发射器
+	small_missile_launcher = {
+
+		medium_titan = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = tracking_missiles
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = energy_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 13 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#追踪导弹
+	tracking_missiles = {
+
+		medium_titan = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_tone_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 12 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#能量护盾
+	energy_shield = {
+
+		medium_titan = {
+			defense = 0.2
+			breakthrough = 0.1
+			max_strength = 0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_tone_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 14 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化强力核心
+	reinforced_tone_core = {
+
+		enable_equipments = {
+			tone_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = hostile_unit_detection_system
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 13 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#敌对单位探测系统
+	hostile_unit_detection_system = {
+
+		medium_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.1
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = advanced_tone_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 13 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级强力核心
+	advanced_tone_core = {
+
+		enable_equipments = {
+			tone_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 13 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#巨妖级泰坦
+	ogre_titan = {
+
+		enable_subunits = {
+			heavy_titan
+		}
+
+		enable_equipments = {
+			heavy_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = high_energy_weapons
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1998
+
+		folder = {
+			name = titan_folder
+			position = { x = 19 y = 2 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高效能武器
+	high_energy_weapons = {
+
+		heavy_titan = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = scorch_titan_core
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = legion_titan_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2000
+
+		folder = {
+			name = titan_folder
+			position = { x = 19 y = 4 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#烈焰核心
+	scorch_titan_core = {
+
+		enable_equipments = {
+			scorch_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = aluminum_thermite_emitter
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			legion_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 17 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#铝热剂发射器
+	aluminum_thermite_emitter = {
+
+		heavy_titan = {
+			soft_attack = 0.2
+			hard_attack = 0.1
+			defense = 0.05
+			breakthrough = -0.1
+		}
+
+		path = {
+			leads_to_tech = aluminum_thermite_wall
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = heat_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 17 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#铝热火墙
+	aluminum_thermite_wall = {
+
+		heavy_titan = {
+			hard_attack = 0.05
+			defense = 0.1
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = reinforced_scorch_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#热能护盾
+	heat_shield = {
+
+		heavy_titan = {
+			soft_attack = 0.05
+			max_strength = 0.2
+			defense = 0.1
+		}
+
+		path = {
+			leads_to_tech = reinforced_scorch_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 18 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化烈焰核心
+	reinforced_scorch_core = {
+
+		enable_equipments = {
+			scorch_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = flame_trap
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 17 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#烈焰陷阱
+	flame_trap = {
+
+		heavy_titan = {
+			max_organisation = 10
+			max_strength = 0.1
+			defense = 0.2
+		}
+
+		path = {
+			leads_to_tech = advanced_scorch_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 17 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级烈焰核心
+	advanced_scorch_core = {
+
+		enable_equipments = {
+			scorch_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 17 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#军团核心
+	legion_titan_core = {
+
+		enable_equipments = {
+			legion_titan_equipment_0
+		}
+
+		path = {
+			leads_to_tech = giant_rotary_machine_gun
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			scorch_titan_core
+		}
+
+		research_cost = 2
+		start_year = 2002
+
+		folder = {
+			name = titan_folder
+			position = { x = 21 y = 6 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#巨型转轮机枪
+	giant_rotary_machine_gun = {
+
+		heavy_titan = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			defense = 0.05
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = high_performance_ammunition
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = blast_type_ammunition
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+
+		folder = {
+			name = titan_folder
+			position = { x = 21 y = 8 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高效能弹药
+	high_performance_ammunition = {
+
+		heavy_titan = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = reinforced_legion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 20 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#爆破型弹药
+	blast_type_ammunition = {
+
+		heavy_titan = {
+			soft_attack = 0.1
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = reinforced_legion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = titan_folder
+			position = { x = 22 y = 10 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#强化军团核心
+	reinforced_legion_core = {
+
+		enable_equipments = {
+			legion_titan_equipment_1
+		}
+
+		path = {
+			leads_to_tech = machinegun_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2008
+
+		folder = {
+			name = titan_folder
+			position = { x = 21 y = 12 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#机枪护盾
+	machinegun_shield = {
+
+		heavy_titan = {
+			max_organisation = 10
+			max_strength = 0.1
+			defense = 0.1
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = advanced_legion_core
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = titan_folder
+			position = { x = 21 y = 14 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级军团核心
+	advanced_legion_core = {
+
+		enable_equipments = {
+			legion_titan_equipment_2
+		}
+
+		research_cost = 2
+		start_year = 2012
+
+		folder = {
+			name = titan_folder
+			position = { x = 21 y = 16 }
+		}
+		
+		categories = {
+			titan_equipments
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

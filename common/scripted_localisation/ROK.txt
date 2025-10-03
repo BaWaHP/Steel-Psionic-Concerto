@@ -1,0 +1,250 @@
+defined_text = {
+	name = Current_agenda_txt_loc
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 0 } }
+		localization_key = Current_agenda_txt_loc_0
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 1 } }
+		localization_key = Current_agenda_txt_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 2 } }
+		localization_key = Current_agenda_txt_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 3 } }
+		localization_key = Current_agenda_txt_loc_3
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 4 } }
+		localization_key = Current_agenda_txt_loc_4
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 5 } }
+		localization_key = Current_agenda_txt_loc_5
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 6 } }
+		localization_key = Current_agenda_txt_loc_6
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 7 } }
+		localization_key = Current_agenda_txt_loc_7
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 8 } }
+		localization_key = Current_agenda_txt_loc_8
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 9 } }
+		localization_key = Current_agenda_txt_loc_9
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 10 } }
+		localization_key = Current_agenda_txt_loc_10
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 11 } }
+		localization_key = Current_agenda_txt_loc_11
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 12 } }
+		localization_key = Current_agenda_txt_loc_12
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 13 } }
+		localization_key = Current_agenda_txt_loc_13
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 14 } }
+		localization_key = Current_agenda_txt_loc_14
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 15 } }
+		localization_key = Current_agenda_txt_loc_15
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 16 } }
+		localization_key = Current_agenda_txt_loc_16
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 17 } }
+		localization_key = Current_agenda_txt_loc_17
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 18 } }
+		localization_key = Current_agenda_txt_loc_18
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 19 } }
+		localization_key = Current_agenda_txt_loc_19
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 20 } }
+		localization_key = Current_agenda_txt_loc_20
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 21 } }
+		localization_key = Current_agenda_txt_loc_21
+	}
+	text = {
+		trigger = { check_variable = { ROK_proposal_index = 22 } }
+		localization_key = Current_agenda_txt_loc_22
+	}
+	text = {
+		localization_key = Current_agenda_txt_loc_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_1_gfx
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 1 } }
+		localization_key = GFX_faction_alt_gfx_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 2 } }
+		localization_key = GFX_faction_alt_gfx_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 3 } }
+		localization_key = GFX_faction_alt_gfx_3
+	}
+	text = {
+		localization_key = GFX_faction_alt_gfx_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_2_gfx
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 1 } }
+		localization_key = GFX_faction_alt_gfx_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 2 } }
+		localization_key = GFX_faction_alt_gfx_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 3 } }
+		localization_key = GFX_faction_alt_gfx_3
+	}
+	text = {
+		localization_key = GFX_faction_alt_gfx_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_3_gfx
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 1 } }
+		localization_key = GFX_faction_alt_gfx_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 2 } }
+		localization_key = GFX_faction_alt_gfx_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 3 } }
+		localization_key = GFX_faction_alt_gfx_3
+	}
+	text = {
+		localization_key = GFX_faction_alt_gfx_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_4_gfx
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 1 } }
+		localization_key = GFX_faction_alt_gfx_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 2 } }
+		localization_key = GFX_faction_alt_gfx_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 3 } }
+		localization_key = GFX_faction_alt_gfx_3
+	}
+	text = {
+		localization_key = GFX_faction_alt_gfx_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_1_loc
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 1 } }
+		localization_key = ROK_faction_alt_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 2 } }
+		localization_key = ROK_faction_alt_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_1_var = 3 } }
+		localization_key = ROK_faction_alt_loc_3
+	}
+	text = {
+		localization_key = ROK_faction_alt_loc_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_2_loc
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 1 } }
+		localization_key = ROK_faction_alt_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 2 } }
+		localization_key = ROK_faction_alt_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_2_var = 3 } }
+		localization_key = ROK_faction_alt_loc_3
+	}
+	text = {
+		localization_key = ROK_faction_alt_loc_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_3_loc
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 1 } }
+		localization_key = ROK_faction_alt_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 2 } }
+		localization_key = ROK_faction_alt_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_3_var = 3 } }
+		localization_key = ROK_faction_alt_loc_3
+	}
+	text = {
+		localization_key = ROK_faction_alt_loc_0
+	}
+}
+
+defined_text = {
+	name = ROK_faction_alt_4_loc
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 1 } }
+		localization_key = ROK_faction_alt_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 2 } }
+		localization_key = ROK_faction_alt_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROK_faction_alt_4_var = 3 } }
+		localization_key = ROK_faction_alt_loc_3
+	}
+	text = {
+		localization_key = ROK_faction_alt_loc_0
+	}
+}

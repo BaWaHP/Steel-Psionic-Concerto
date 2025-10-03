@@ -1,0 +1,67 @@
+ideas = {
+	country = {
+
+		KOD_knights_of_bad_timing = {		#不合时宜的骑士团
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = KOD }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = GLV
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+		}
+
+		KOD_empty_leader_position = {		#空悬的团长之位
+			picture = KOD_empty_leader_position
+			allowed = {  original_tag = KOD }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.3
+				army_org_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.1
+				training_time_army_factor = 1
+				conscription_factor = -0.5
+				disabled_ideas = 1
+			}
+		}
+
+		KOD_cultural_conflicts = {		#文化冲突
+			picture = KOD_cultural_conflicts
+			allowed = {  original_tag = KOD }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_dockyard_factor = -0.2
+			}
+		}
+
+		KOD_servant_to_two_nations = {		#两国的仆从
+			picture = KOD_servant_to_two_nations
+			allowed = {  original_tag = KOD }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				min_export = 0.2
+			}
+			targeted_modifier = {
+				tag = WOM
+				mic_to_target_factor = 0.3
+				cic_to_target_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = GLV
+				mic_to_target_factor = 0.1
+				cic_to_target_factor = 0.1
+			}
+		}
+
+	}
+}

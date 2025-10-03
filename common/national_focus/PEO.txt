@@ -1,0 +1,1369 @@
+focus_tree = {
+	id = PEO_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PEO
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 20 y = 1500 }
+
+	focus = {		#收拾烂摊子
+		id = PEO_clean_up_the_mess
+		icon = GFX_Generic_Tear_Paper
+		x = 10
+		y = 0
+		cost = 2
+
+		allow_branch = {
+			NOT = { has_country_flag = PEO_phase_one_over }
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.1
+		}
+	}
+
+	focus = {		#国家复兴计划
+		id = PEO_national_revive_plan
+		icon = GFX_goal_manage_industries
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_clean_up_the_mess }
+		relative_position_id = PEO_clean_up_the_mess
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.2
+			add_ideas = PEO_nation_revive_plan_1
+		}
+	}
+
+	focus = {		#重组共和国中央银行
+		id = PEO_rebuild_central_bank
+		icon = GFX_goal_state_economy
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_national_revive_plan }
+		relative_position_id = PEO_national_revive_plan
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_timed_idea = {
+				idea = PEO_rebuilding_financial_sys
+				days = 70
+			}
+			custom_effect_tooltip = PEO_new_idea_coming_after
+		}
+	}
+
+	focus = {		#议会，党派与军队
+		id = PEO_parliament_party_army
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_rebuild_central_bank }
+		relative_position_id = PEO_rebuild_central_bank
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 30
+			country_event = PEO.3
+			remove_ideas = PEO_army_under_politics
+			add_timed_idea = {
+				idea = PEO_rebuilding_army
+				days = 360
+			}
+			hidden_effect = {
+				set_division_template_lock = {
+					division_template = "皮奥瑞亚陆军教导队"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "皮奥瑞亚国防军步兵师"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "共和国武装警察部队"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "皮奥瑞亚装甲突击师"
+					is_locked = no
+				}
+				set_division_template_lock = {
+					division_template = "皮奥瑞亚国防军装甲突击师"
+					is_locked = no
+				}
+			}
+			custom_effect_tooltip = PEO_new_idea_coming_after
+			custom_effect_tooltip = unlock_all_troops_tt
+		}
+	}
+
+	focus = {		#重建联邦警察制度
+		id = PEO_bring_back_cops
+		icon = GFX_goal_Generic_Secret_Police
+		x = -1
+		y = 1
+		cost = 1
+
+		prerequisite = { focus = PEO_parliament_party_army }
+		relative_position_id = PEO_parliament_party_army
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_stability = 0.05
+			country_event = PEO.4
+			SPC_secret_police_policy_up = yes
+		}
+	}
+
+	focus = {		#放宽社会言论管制
+		id = PEO_deregulation_of_social_speech
+		icon = GFX_Generic_Liberalism
+		x = 1
+		y = 1
+		cost = 2
+
+		prerequisite = { focus = PEO_parliament_party_army }
+		relative_position_id = PEO_parliament_party_army
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			remove_ideas = PEO_why_nobody_talking
+			add_timed_idea = {
+				idea = PEO_cultural_bloom
+				days = 70
+			}
+			SPC_media_policy_down = yes
+		}
+	}
+
+	focus = {		#授权社会党进行议会改革
+		id = PEO_authorize_socialist_reform
+		icon = GFX_goal_Generic_Workers_Democracy
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_bring_back_cops }
+		prerequisite = {focus = PEO_deregulation_of_social_speech }
+		relative_position_id = PEO_bring_back_cops
+		mutually_exclusive = { focus = PEO_authorize_republican_reform }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {		#授权共和党进行议会改革
+		id = PEO_authorize_republican_reform
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_bring_back_cops }
+		prerequisite = {focus = PEO_deregulation_of_social_speech }
+		relative_position_id = PEO_deregulation_of_social_speech
+		mutually_exclusive = { focus = PEO_authorize_socialist_reform }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {		#组建选举委员会
+		id = PEO_form_election_commitee
+		icon = GFX_goal_Generic_Meeting
+		x = -1
+		y = 1
+		cost = 2
+
+		prerequisite = { focus = PEO_authorize_socialist_reform focus = PEO_authorize_republican_reform }
+		relative_position_id = PEO_authorize_republican_reform
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = -0.02
+			}
+		}
+	}
+
+	focus = {		#拆分共和国经济事务
+		id = PEO_splitting_econ_responsibility
+		icon = GFX_Generic_Loadsamoney
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_rebuild_central_bank }
+		relative_position_id = PEO_rebuild_central_bank
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {		#下放联邦贸易权
+		id = PEO_lower_trade_right
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		cost = 10
+
+		prerequisite = { focus = PEO_splitting_econ_responsibility }
+		relative_position_id = PEO_splitting_econ_responsibility
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			remove_ideas = PEO_nation_revive_plan_1
+			add_timed_idea = {
+				idea = PEO_nation_revive_plan_2
+				days = 240
+			}
+		}
+	}
+
+	focus = {		#扩展首都港口
+		id = PEO_expand_capital_port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_splitting_econ_responsibility }
+		relative_position_id = PEO_splitting_econ_responsibility
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			41 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
+			PEO_maritime_trade_administration_add_50 = yes
+		}
+	}
+
+	focus = {		#经济刺激计划
+		id = PEO_econ_boost_proj
+		icon = GFX_focus_mex_privatisation
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_expand_capital_port }
+		prerequisite = { focus = PEO_lower_trade_right }
+		relative_position_id = PEO_lower_trade_right
+		mutually_exclusive = { focus = PEO_bussi_readj_act }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_stability = 0.05
+			SPC_taxes_laws_down = yes
+		}
+	}
+
+	focus = {		#商业调整法
+		id = PEO_bussi_readj_act
+		icon = GFX_Generic_Monopoly
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_expand_capital_port }
+		prerequisite = { focus = PEO_lower_trade_right }
+		relative_position_id = PEO_expand_capital_port
+		mutually_exclusive = { focus = PEO_econ_boost_proj }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.6
+			SPC_industry_policy_up = yes
+		}
+	}
+
+	focus = {		#科技立国
+		id = PEO_science_first
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = PEO_econ_boost_proj  focus = PEO_bussi_readj_act }
+		relative_position_id = PEO_bussi_readj_act
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			SPC_research_policy_up = yes
+		}
+	}
+
+	focus = {		#最后的告别
+		id = PEO_last_goodbye
+		icon = GFX_Generic_Pass_Legislation
+		x = -3
+		y = 1
+		cost = 0.5
+
+		prerequisite = { focus = PEO_form_election_commitee }
+		prerequisite = { focus = PEO_science_first }
+		relative_position_id = PEO_science_first
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.5
+			set_party_name = {
+				ideology = authoritarian_republican
+				long_name = PEO_election_commitee_long
+				name = PEO_election_commitee
+			}
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = PEO_republic_parliament
+				promote_leader = yes
+				country_leader = {
+					ideology = directed_democracy
+					expire = "2040.1.1.1"
+					traits = { }
+				}
+			}
+		}
+	}
+
+	#柏维线
+	focus = {		#新旗帜飘扬
+		id = PEO_new_flag_arises
+		icon = GFX_Generic_Liberatian_Socialism
+		x = 10
+		y = 0
+		cost = 0.43
+
+		allow_branch = {
+			has_country_flag = PEO_phase_one_over
+			has_government = worldunion_democrat
+		}
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PEO_new_national_constitution
+				add_idea = PEO_third_republic_constitution_mid_left
+			}
+			PEO_prime_minister_desk_initialization = yes
+			unlock_decision_category_tooltip = PEO_prime_minister_desk_category
+			country_event = PEO.207
+			hidden_effect = {
+				news_event = PEONews.1
+			}
+		}
+	}
+
+	focus = {		#第72号国情咨文
+		id = PEO_union_address_no_72
+		icon = GFX_Generic_Legislation
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_new_flag_arises }
+		relative_position_id = PEO_new_flag_arises
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_to_variable = {
+				var = PEO_flourished_ocean_trade_var
+				value = 20
+				tooltip = PEO_maritime_trade_administration_tt
+			}
+			PEO_maritime_trade_administration_add_at_once = yes
+			add_to_variable = {
+				var = PEO_econ_reform_var
+				value = 10
+				tooltip = PEO_econ_reform_var_tt
+			}
+			PEO_econ_var_clamp = yes
+			country_event = PEO.200
+		}
+	}
+
+	focus = {		#国民民主主义
+		id = PEO_national_democracy
+		icon = GFX_Social_Liberal
+		x = -2
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_union_address_no_72 }
+		relative_position_id = PEO_union_address_no_72
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_to_variable = {
+				var = PEO_congress_seats_supporter
+				value = 10
+				tooltip = PEO_congress_seats_supporter_tt
+			}
+			PEO_congress_seats_update = yes
+		}
+	}
+
+	focus = {		#社会市场体制
+		id = PEO_social_market
+		icon = GFX_Generic_Market_Socialism
+		x = -4
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_national_democracy }
+		relative_position_id = PEO_national_democracy
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_to_variable = {
+				var = PEO_flourished_ocean_trade_var
+				value = 10
+				tooltip = PEO_maritime_trade_administration_tt
+			}
+			PEO_maritime_trade_administration_add_at_once = yes
+			add_to_variable = {
+				var = PEO_econ_reform_var
+				value = 8
+				tooltip = PEO_econ_reform_var_tt
+			}
+			PEO_econ_var_clamp = yes
+			custom_effect_tooltip = PEO_unlock_more_econ_decisions_tt
+		}
+	}
+
+	focus = {		#全国工商论坛
+		id = PEO_national_business_forum
+		icon = GFX_Generic_Industry02
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_social_market }
+		relative_position_id = PEO_social_market
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_to_variable = {
+				var = PEO_congress_seats_supporter
+				value = -5
+				tooltip = PEO_congress_seats_supporter_tt
+			}
+			PEO_congress_seats_update = yes
+			country_event = PEO.201
+			add_political_power = 50
+		}
+	}
+
+	focus = {		#皮奥瑞亚优先
+		id = PEO_peo_first
+		icon = GFX_goal_ideology_social_conservative
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			always = no
+		}
+
+		prerequisite = { focus = PEO_national_business_forum }
+		relative_position_id = PEO_national_business_forum
+		mutually_exclusive = { focus = PEO_stating_free_trade }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_to_variable = {
+				var = PEO_flourished_ocean_trade_var
+				value = 10
+				tooltip = PEO_maritime_trade_administration_tt
+			}
+			PEO_maritime_trade_administration_add_at_once = yes
+			add_to_variable = {
+				var = PEO_econ_reform_var
+				value = 8
+				tooltip = PEO_econ_reform_var_tt
+			}
+			PEO_econ_var_clamp = yes
+			custom_effect_tooltip = PEO_unlock_more_econ_decisions_tt
+		}
+	}
+
+	focus = {		#强调自由贸易
+		id = PEO_stating_free_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			always = no
+		}
+
+		prerequisite = { focus = PEO_national_business_forum }
+		relative_position_id = PEO_national_business_forum
+		mutually_exclusive = { focus = PEO_peo_first }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_ideas = free_trade
+			add_to_variable = {
+				var = PEO_flourished_ocean_trade_var
+				value = 4
+				tooltip = PEO_maritime_trade_administration_tt
+			}
+			PEO_maritime_trade_administration_add_at_once = yes
+			add_to_variable = {
+				var = PEO_congress_seats_supporter
+				value = -15
+				tooltip = PEO_congress_seats_supporter_tt
+			}
+			PEO_congress_seats_update = yes
+			custom_effect_tooltip = PEO_unlock_more_econ_decisions_tt
+		}
+	}
+
+	focus = {		#严格劳动执法
+		id = PEO_enact_strict_laws
+		icon = GFX_focus_por_workers_of_iberia
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			always = no
+		}
+
+		prerequisite = { focus = PEO_peo_first
+						 focus = PEO_stating_free_trade }
+		relative_position_id = PEO_peo_first
+		mutually_exclusive = { focus = PEO_support_partial_requests }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			SPC_working_policy_up = yes
+			SPC_living_standard_development_amount_up_2 = yes
+			add_to_variable = {
+				var = PEO_congress_seats_supporter
+				value = -10
+				tooltip = PEO_congress_seats_supporter_tt
+			}
+			PEO_congress_seats_update = yes
+		}
+	}
+
+	focus = {		#支持部分诉求
+		id = PEO_support_partial_requests
+		icon = GFX_focus_BRA_tribunal
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			always = no
+		}
+
+		prerequisite = { focus = PEO_peo_first
+						 focus = PEO_stating_free_trade }
+		relative_position_id = PEO_stating_free_trade
+		mutually_exclusive = { focus = PEO_enact_strict_laws }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			SPC_living_standard_development_amount_down_2 = yes
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = PEO_support_partial_requests_tt
+		}
+	}
+
+	focus = {		#新工商从业法
+		id = PEO_neo_business_law
+		icon = GFX_focus_DEN_limited_regulations
+		x = 1
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_1 = yes
+		}
+
+		prerequisite = { focus = PEO_enact_strict_laws
+						 focus = PEO_support_partial_requests }
+		relative_position_id = PEO_enact_strict_laws
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.203
+			custom_effect_tooltip = PEO_unlock_more_econ_decisions_tt
+		}
+	}
+
+	focus = {		#固定宪保局编制
+		id = PEO_fixed_GPC_establishment
+		icon = GFX_goal_Generic_Secret_Police
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_national_democracy }
+		relative_position_id = PEO_national_democracy
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			SPC_secret_police_policy_down = yes
+			swap_ideas = {
+				remove_idea = PEO_third_republic_constitution_mid_left
+				add_idea = PEO_third_republic_constitution_mid_left_2
+			}
+			SPC_research_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {		#对话孔斯年
+		id = PEO_converse_Kong
+		icon = GFX_Generic_Shady_Deal
+		x = 0
+		y = 1
+		cost = 0.43
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_fixed_GPC_establishment }
+		relative_position_id = PEO_fixed_GPC_establishment
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.202
+		}
+	}
+
+	focus = {		#临时军事拨款
+		id = PEO_temp_military_fund
+		icon = GFX_focus_BRA_ethical_internationalism
+		x = -1
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_1 = yes
+		}
+
+		prerequisite = { focus = PEO_converse_Kong }
+		relative_position_id = PEO_converse_Kong
+		mutually_exclusive = { focus = PEO_new_defense_politics_curriculum }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_to_variable = {
+				var = PEO_congress_seats_supporter
+				value = -26
+				tooltip = PEO_congress_seats_supporter_tt
+			}
+			PEO_congress_seats_update = yes
+			swap_ideas = {
+				remove_idea = PEO_new_army
+				add_idea = PEO_stabalized_army
+			}
+		}
+	}
+
+	focus = {		#新国防政治课标
+		id = PEO_new_defense_politics_curriculum
+		icon = GFX_focus_BRA_tribunal
+		x = 1
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_1 = yes
+		}
+
+		prerequisite = { focus = PEO_converse_Kong }
+		relative_position_id = PEO_converse_Kong
+		mutually_exclusive = { focus = PEO_temp_military_fund }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			remove_ideas = PEO_new_army
+			add_timed_idea = {
+				idea = PEO_political_reconstructed_army
+				days = 365
+			}
+		}
+	}
+
+	focus = {		#国家的守夜人
+		id = PEO_nations_night_watchman
+		icon = GFX_Generic_War_Propaganda03
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_1 = yes
+		}
+
+		prerequisite = { focus = PEO_temp_military_fund
+						 focus = PEO_new_defense_politics_curriculum }
+		relative_position_id = PEO_temp_military_fund
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_ideas = PEO_defense_force_officer_corps
+		}
+	}
+
+	focus = {		#重组国防部高层
+		id = PEO_reorganize_high_command
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_1 = yes
+		}
+
+		prerequisite = { focus = PEO_nations_night_watchman }
+		relative_position_id = PEO_nations_night_watchman
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.204
+		}
+	}
+
+	focus = {		#有限干涉外交
+		id = PEO_limited_diplo_intervention
+		icon = GFX_Generic_Factionalism
+		x = 2
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_union_address_no_72 }
+		relative_position_id = PEO_union_address_no_72
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_political_power = 50
+			country_event = PEO.250
+			NKE = { country_event = PEO.251 }
+		}
+	}
+	
+	focus = {		#增派驻左使团
+		id = PEO_additional_missions_to_nke
+		icon = GFX_Generic_Urban_Partisans
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_limited_diplo_intervention }
+		relative_position_id = PEO_limited_diplo_intervention
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.252
+		}
+	}
+
+	focus = {		#海外就业机会
+		id = PEO_oversea_employment
+		icon = GFX_goal_generic_loans
+		x = -1
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			has_completed_focus = PEO_what_do_nke_needs
+			NOT = { NKE = { has_idea = PEO_gov_funded_surveys } }
+			NOT = { NKE = { has_idea = PEO_peo_permanent_econ_representative } }
+		}
+
+		prerequisite = { focus = PEO_additional_missions_to_nke }
+		relative_position_id = PEO_additional_missions_to_nke
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.255
+		}
+	}
+
+	focus = {		#深入人心
+		id = PEO_deepen_in_heart
+		icon = GFX_Generic_Working_Class_Family
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_oversea_employment }
+		relative_position_id = PEO_oversea_employment
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.258
+			NKE = {
+				every_owned_state = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+					random_select_amount = 2
+				}
+			}
+			custom_effect_tooltip = PEO_deepen_in_heart_tt
+		}
+	}
+
+	focus = {		#大吉大利的路
+		id = PEO_road_to_great_fortune
+		icon = GFX_focus_generic_full_employment
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_deepen_in_heart }
+		relative_position_id = PEO_deepen_in_heart
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_advisor_role = {
+				character = PEO_gilbert_mcWhite
+				advisor = {
+					cost = 150
+					slot = political_advisor
+					idea_token = PEO_gilbert_mcWhite_idea
+					allowed = { original_tag = PEO }
+					traits = { PEO_friendly_invervention }
+				}
+			}
+			NKE = { country_event = PEO.263 }
+			country_event = PEO.264
+		}
+	}
+
+	focus = {		#左汀原需要什么
+		id = PEO_what_do_nke_needs
+		icon = GFX_goal_generic_seize_money
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_additional_missions_to_nke }
+		relative_position_id = PEO_additional_missions_to_nke
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			NKE = { country_event = PEO.259 }
+			country_event = PEO.260
+		}
+	}
+
+	focus = {		#外交天使队
+		id = PEO_diplo_angels
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			NKE = { has_idea = PEO_peo_permanent_econ_representative }
+		}
+
+		prerequisite = { focus = PEO_what_do_nke_needs }
+		relative_position_id = PEO_what_do_nke_needs
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			NKE = { country_event = PEO.256 }
+			country_event = PEO.257
+		}
+	}
+
+	focus = {		#专业军事人员
+		id = PEO_military_professionals
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			has_completed_focus = PEO_nations_night_watchman
+		}
+
+		prerequisite = { focus = PEO_diplo_angels }
+		relative_position_id = PEO_diplo_angels
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			PEO = { give_military_access = NKE }
+			NKE = {
+				give_military_access = PEO
+				division_template = {
+					name = "皮奥瑞亚驻左汀原志愿军"
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						logistics_company = { x = 0 y = 2 }
+					}
+				}
+				41 = {
+					create_unit = {
+						division = "name = \"皮奥瑞亚驻左汀原志愿军\" division_template = \"皮奥瑞亚驻左汀原志愿军\" start_experience_factor = 1 start_equipment_factor = 1"  
+						owner = WUN
+						count = 2
+					}
+				}
+				add_ideas = PEO_peo_military_representative
+			}
+		}
+	}
+
+	focus = {		#东巴自由电台
+		id = PEO_eastern_bastia_free_radio
+		icon = GFX_focus_SWE_radiotjanst
+		x = 4
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_limited_diplo_intervention }
+		relative_position_id = PEO_limited_diplo_intervention
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.253
+			every_country = {
+				limit = { tag = WOM tag = NCD tag = TPG tag = SFH }
+				country_event = PEO.254
+			}
+		}
+	}
+
+	focus = {		#国防军对外署
+		id = PEO_oversea_army_department
+		icon = GFX_Generic_Pilots
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_eastern_bastia_free_radio }
+		relative_position_id = PEO_eastern_bastia_free_radio
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_ideas = PEO_foreign_service
+		}
+	}
+
+	focus = {		#强化边境检查
+		id = PEO_enhanced_border_inspections
+		icon = GFX_goal_Generic_Soldiers_Defense
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			has_completed_focus = PEO_fixed_GPC_establishment
+		}
+
+		prerequisite = { focus = PEO_oversea_army_department }
+		relative_position_id = PEO_oversea_army_department
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			country_event = PEO.261
+			every_country = {
+				limit = { tag = ARO tag = CLD tag = TPG }
+				country_event = PEO.262
+			}
+			swap_ideas = {
+				remove_idea = PEO_flourished_ocean_trade_var_idea
+				add_idea = PEO_flourished_ocean_trade_var_idea_2
+			}
+			swap_ideas = {
+				remove_idea = PEO_third_republic_constitution_mid_left_2
+				add_idea = PEO_third_republic_constitution_mid_left_3
+			}
+		}
+	}
+
+	focus = {		#强化民族主义教育
+		id = PEO_strengthening_nationalism_education
+		icon = GFX_Generic_Manifest_Destiny
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+		}
+
+		prerequisite = { focus = PEO_enhanced_border_inspections }
+		relative_position_id = PEO_enhanced_border_inspections
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			PEO_nationalism_emotions_up = yes
+			country_event = PEO.265
+			add_political_power = 150
+		}
+	}
+
+	focus = {		#宪法第二修正案
+		id = PEO_second_amendment
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			NOT = { has_idea = PEO_national_emergency_act }
+			has_war = no
+			PEO_congress_supporter_trigger_2 = yes
+		}
+
+		prerequisite = { focus = PEO_road_to_great_fortune
+						 focus = PEO_military_professionals }
+		prerequisite = { focus = PEO_strengthening_nationalism_education }
+		relative_position_id = PEO_military_professionals
+		#mutually_exclusive = { focus =  }
+
+		ai_will_do = {
+			factor = 1
+		}
+  
+		completion_reward = {
+			add_ideas = defensive_tatic
+			add_war_support = 0.1
+			add_manpower = 50000
+		}
+	}
+}

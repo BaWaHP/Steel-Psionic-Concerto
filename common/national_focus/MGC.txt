@@ -1,0 +1,732 @@
+focus_tree = {
+	id = MGC_focus_1
+
+	#MGC_focus_1
+	#MGC_focus_2
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MGC
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#二十年如一日
+		id = MGC_years_as_day
+		icon = GFX_MGC_years_as_day
+		x = 5
+		y = 0
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = MGC_focus_1
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = { id = MGC.1 days = 1 }
+			MGC_spring_conspiracy_setup = yes
+			unlock_decision_category_tooltip = MGC_spring_conspiracy
+			set_country_flag = MGC_spring_conspiracy_on
+		}
+	}
+
+	focus = {	#回望过去
+		id = MGC_looking_at_past
+		icon = GFX_MGC_looking_at_past
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_years_as_day }
+		relative_position_id = MGC_years_as_day
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.2
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#先看看军人们...
+		id = MGC_check_out_mil_men
+		icon = GFX_MGC_check_out_mil_men
+		x = -4
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_looking_at_past }
+		relative_position_id = MGC_looking_at_past
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.3
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#德尼...
+		id = MGC_deni
+		icon = GFX_MGC_deni
+		x = -2
+		y = 1
+		cost = 0.72
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPC_unlock_through_event
+				has_country_flag = MGC_deni_unlock_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_check_out_mil_men }
+		relative_position_id = MGC_check_out_mil_men
+		mutually_exclusive = { focus = MGC_or_dovuzdo }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.4
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#"圣火行动"党规范化
+		id = MGC_operation_holy_fire
+		icon = GFX_MGC_operation_holy_fire
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_deni }
+		relative_position_id = MGC_deni
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.6
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#或多夫兹多
+		id = MGC_or_dovuzdo
+		icon = GFX_MGC_or_dovuzdo
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPC_unlock_through_event
+				has_country_flag = MGC_or_dovuzdo_unlock_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_check_out_mil_men }
+		relative_position_id = MGC_check_out_mil_men
+		mutually_exclusive = { focus = MGC_deni }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.7
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#减少虔敬学会成员
+		id = MGC_deminish_royalist
+		icon = GFX_MGC_deminish_royalist
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_or_dovuzdo }
+		relative_position_id = MGC_or_dovuzdo
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.9
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#...再看看革新者们...
+		id = MGC_then_for_innovators
+		icon = GFX_MGC_then_for_innovators
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			OR = {
+				has_completed_focus = MGC_operation_holy_fire
+				has_completed_focus = MGC_deminish_royalist
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_looking_at_past }
+		relative_position_id = MGC_looking_at_past
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.10
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#嫩勒科夫...
+		id = MGC_nenlekov
+		icon = GFX_MGC_nenlekov
+		x = -1
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_then_for_innovators }
+		relative_position_id = MGC_then_for_innovators
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.11
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#保皇派与共和派的桥梁
+		id = MGC_bridge_between
+		icon = GFX_MGC_bridge_between
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_nenlekov }
+		relative_position_id = MGC_nenlekov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.12
+				days = 1
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -5
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#...与我自己
+		id = MGC_and_myself
+		icon = GFX_MGC_and_myself
+		x = 1
+		y = 1
+		cost = 0.72
+
+		available = {
+			has_completed_focus = MGC_bridge_between
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_then_for_innovators }
+		relative_position_id = MGC_then_for_innovators
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.13
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#点上一根烟
+		id = MGC_light_cig
+		icon = GFX_MGC_light_cig
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_and_myself }
+		relative_position_id = MGC_and_myself
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.16
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#...最后照顾激进派
+		id = MGC_last_for_the_radicals
+		icon = GFX_MGC_last_for_the_radicals
+		x = 4
+		y = 1
+		cost = 0.72
+
+		available = {
+			has_completed_focus = MGC_bridge_between
+			has_completed_focus = MGC_light_cig
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_looking_at_past }
+		relative_position_id = MGC_looking_at_past
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.17
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#索尔尼...
+		id = MGC_solny
+		icon = GFX_MGC_solny
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPC_unlock_through_event
+				has_country_flag = MGC_solny_unlock_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_last_for_the_radicals }
+		relative_position_id = MGC_last_for_the_radicals
+		mutually_exclusive = { focus = MGC_or_korf }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.18
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#在工业上放任他
+		id = MGC_release_on_ind
+		icon = GFX_MGC_release_on_ind
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_solny }
+		relative_position_id = MGC_solny
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.19
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#...或科尔夫
+		id = MGC_or_korf
+		icon = GFX_MGC_or_korf
+		x = 2
+		y = 1
+		cost = 0.72
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SPC_unlock_through_event
+				has_country_flag = MGC_or_korf_unlock_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_last_for_the_radicals }
+		relative_position_id = MGC_last_for_the_radicals
+		mutually_exclusive = { focus = MGC_solny }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.20
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#打击红金白
+		id = MGC_beat_red_white_gold
+		icon = GFX_MGC_beat_red_white_gold
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_or_korf }
+		relative_position_id = MGC_or_korf
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.21
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#环形监狱之囚
+		id = MGC_prisoner_of_the_panopticon
+		icon = GFX_MGC_prisoner_of_the_panopticon
+		x = 0
+		y = 3
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_operation_holy_fire 
+						 focus = MGC_deminish_royalist }
+		prerequisite = { focus = MGC_bridge_between }
+		prerequisite = { focus = MGC_light_cig }
+		prerequisite = { focus = MGC_release_on_ind 
+						 focus = MGC_beat_red_white_gold }
+		relative_position_id = MGC_then_for_innovators
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.23
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#嫩勒科夫挺身而出
+		id = MGC_nenlekov_stepped_forward
+		icon = GFX_MGC_nenlekov_stepped_forward
+		x = 5
+		y = 0
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = MGC_focus_2
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MGC.50
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#大拉萨尔之友
+		id = MGC_friends_of_Greater_La_Salle
+		icon = GFX_MGC_friends_of_Greater_La_Salle
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_nenlekov_stepped_forward }
+		relative_position_id = MGC_nenlekov_stepped_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			activate_advisor = MGC_weisenmayer_valeri_tagino_idea
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 5
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = -0.1
+			add_to_variable = {
+				var = MGC_spring_conspiracy_influence_2
+				value = 5
+				tooltip = MGC_spring_conspiracy_influence_2_tt
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_influence_3
+				value = 5
+				tooltip = MGC_spring_conspiracy_influence_3_tt
+			}
+			country_event = {
+				id = MGC.51
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#稳定军心
+		id = MGC_stabilize_the_morale
+		icon = GFX_MGC_stabilize_the_morale
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_friends_of_Greater_La_Salle }
+		relative_position_id = MGC_friends_of_Greater_La_Salle
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			unlock_decision_tooltip = MGC_unite_the_union
+			set_country_flag = MGC_unite_the_union_flag
+			add_ideas = MGC_settle_the_controversy
+		}
+	}
+
+	focus = {	#三驾马车
+		id = MGC_the_three_horsemen
+		icon = GFX_MGC_the_three_horsemen
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_friends_of_Greater_La_Salle }
+		relative_position_id = MGC_friends_of_Greater_La_Salle
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -20
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_ideas = MGC_whitewash_the_situation
+		}
+	}
+
+	focus = {	#处理保卫局与秩序警察
+		id = MGC_handle_the_cops
+		icon = GFX_MGC_handle_the_cops
+		x = 2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_friends_of_Greater_La_Salle }
+		relative_position_id = MGC_friends_of_Greater_La_Salle
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_ideas = MGC_angry_cops
+		}
+	}
+
+	focus = {	#宏伟葬礼
+		id = MGC_grand_funeral
+		icon = GFX_MGC_grand_funeral
+		x = 0
+		y = 1
+		cost = 30
+
+		available_if_capitulated = yes
+		cancelable = no
+
+		cancel = { has_country_flag = MGC_nenleko_is_dead }
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MGC_stabilize_the_morale }
+		prerequisite = { focus = MGC_the_three_horsemen }
+		prerequisite = { focus = MGC_handle_the_cops }
+		relative_position_id = MGC_the_three_horsemen
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = MGC.55
+			country_event = {
+				id = MGC.56
+				days = 5
+			}
+			country_event = {
+				id = MGC.57
+				days = 10
+			}
+			country_event = {
+				id = MGC.58
+				days = 15
+			}
+			country_event = {
+				id = MGC.59
+				days = 20
+			}
+			country_event = {
+				id = MGC.60
+				days = 45
+			}
+		}
+
+		completion_reward = {
+			country_event = MGC.64
+		}
+	}
+
+}

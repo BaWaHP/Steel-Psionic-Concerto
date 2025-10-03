@@ -1,0 +1,105 @@
+﻿###templates###
+division_template = {
+	name = "人鱼武装部队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "联合志愿军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "自治区警备队"
+
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 0 y = 3 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "特别武装师“白洋之心”"
+		location = 20469
+		division_template = "人鱼武装部队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "联合军第一师“海葵”"
+		location = 20469
+		division_template = "联合志愿军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "联合军第二师“珊瑚”"
+		location = 20506
+		division_template = "联合志愿军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "联合军第三师“水母”"
+		location = 20369
+		division_template = "联合志愿军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "自治区警备第一大队"
+		location = 16115
+		division_template = "自治区警备队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "自治区警备第二大队"
+		location = 7923
+		division_template = "自治区警备队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "自治区警备第三大队"
+		location = 2842
+		division_template = "自治区警备队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+}

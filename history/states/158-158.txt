@@ -1,0 +1,30 @@
+
+state={
+	id=158
+	name="STATE_158"
+
+	resources = {
+		tungsten = 8
+		magic_crystal = 8
+	}
+
+	history={
+		owner = WUN
+		add_core_of = WUN
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			15021 1
+		}
+
+	}
+
+	provinces={
+		338 1404 1975 4488 5923 6046 6540 11702 14781 14882 15021 15181 15239 15274 
+	}
+	manpower=913220
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

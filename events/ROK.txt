@@ -1,0 +1,1266 @@
+###########################
+# 	     ROK Events       #
+###########################
+
+add_namespace = ROK
+add_namespace = ROK_default_industry
+add_namespace = ROK_left
+add_namespace = ROK_right
+
+#通用经济线事件
+country_event = {		#民众不满
+	id = ROK_default_industry.1
+	title = ROK_default_industry.1.t
+	desc = ROK_default_industry.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_default_industry.1.a
+	}
+}
+
+
+#民主线事件
+country_event = {		#陆军议题
+	id = ROK.0
+	title = ROK.0.t
+	desc = ROK.0.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.0.a
+		
+		add_popularity = { ideology = worldunion_democrat popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_worldunion_democrat_tooltip
+		add_to_variable = { var = rok_worldunion_democrat_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.1 days = 7 }
+		}
+	}
+
+
+	option = {
+		name = ROK.0.b
+		
+		add_popularity = { ideology = liberal_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_liberal_republican_tooltip
+		add_to_variable = { var = rok_liberal_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.1 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.0.c
+		
+		add_popularity = { ideology = conservative_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_conservative_republican_tooltip
+		add_to_variable = { var = rok_conservative_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.1 days = 7 }
+		}
+	}
+}
+
+country_event = {		#工人问题
+	id = ROK.1
+	title = ROK.1.t
+	desc = ROK.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.1.a
+		
+		add_popularity = { ideology = worldunion_democrat popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_worldunion_democrat_tooltip
+		add_to_variable = { var = rok_worldunion_democrat_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.2 days = 7 }
+		}
+	}
+
+	option = {
+		
+		name = ROK.1.b
+		add_popularity = { ideology = liberal_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_liberal_republican_tooltip
+		add_to_variable = { var = rok_liberal_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.2 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.1.c
+		
+		add_popularity = { ideology = conservative_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_conservative_republican_tooltip
+		add_to_variable = { var = rok_conservative_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.2 days = 7 }
+		}
+	}
+}
+
+country_event = {		#外交姿态
+	id = ROK.2
+	title = ROK.2.t
+	desc = ROK.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.2.a
+		
+		add_popularity = { ideology = worldunion_democrat popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_worldunion_democrat_tooltip
+		add_to_variable = { var = rok_worldunion_democrat_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.3 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.2.b
+		
+		add_popularity = { ideology = liberal_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_liberal_republican_tooltip
+		add_to_variable = { var = rok_liberal_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.3 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.2.c
+		
+		add_popularity = { ideology = conservative_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_conservative_republican_tooltip
+		add_to_variable = { var = rok_conservative_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.3 days = 7 }
+		}
+	}
+}
+
+country_event = {		#新革命党问题
+	id = ROK.3
+	title = ROK.3.t
+	desc = ROK.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.3.a
+		
+		add_popularity = { ideology = worldunion_democrat popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_worldunion_democrat_tooltip
+		add_to_variable = { var = rok_worldunion_democrat_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.4 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.3.b
+		
+		add_popularity = { ideology = liberal_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_liberal_republican_tooltip
+		add_to_variable = { var = rok_liberal_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.4 days = 7 }
+		}
+	}
+
+	option = {
+		name = ROK.3.c
+		
+		add_popularity = { ideology = conservative_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_conservative_republican_tooltip
+		add_to_variable = { var = rok_conservative_republican_votes value = 1 }
+		
+		hidden_effect = {
+			country_event = { id = ROK.4 days = 7 }
+		}
+	}
+}
+
+
+country_event = {		#极端民族主义问题
+	id = ROK.4
+	title = ROK.4.t
+	desc = ROK.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.4.a
+		
+		add_popularity = { ideology = worldunion_democrat popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_worldunion_democrat_tooltip
+		add_to_variable = { var = rok_worldunion_democrat_votes value = 1 }
+		
+		SPC_ROK_vote_event_end_effect = yes
+	}
+
+	option = {
+		name = ROK.4.b
+		
+		add_popularity = { ideology = liberal_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_liberal_republican_tooltip
+		add_to_variable = { var = rok_liberal_republican_votes value = 1 }
+		
+		SPC_ROK_vote_event_end_effect = yes
+	}
+
+	option = {
+		name = ROK.4.c
+		
+		add_popularity = { ideology = conservative_republican popularity = 0.02 }
+		custom_effect_tooltip = rok_vote_for_conservative_republican_tooltip
+		add_to_variable = { var = rok_conservative_republican_votes value = 1 }
+		
+		SPC_ROK_vote_event_end_effect = yes
+	}
+}
+
+country_event = {		#选举陷入僵局
+	id = ROK.5
+	title = ROK.5.t
+	desc = ROK.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.16 #未来的道路
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = ROK.5.a
+		custom_effect_tooltip = ROK.5_tt
+	}
+
+}
+
+country_event = {		#总统府会谈
+	id = ROK.6
+	title = ROK.6.t
+	desc = ROK.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.7
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = ROK.6.a
+	}
+
+}
+
+country_event = {		#党内选举
+	id = ROK.7
+	title = ROK.7.t
+	desc = ROK.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate ={
+		hidden_effect = {
+			country_event = {
+				id = ROK.8
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = ROK.7.a
+	}
+
+}
+
+country_event = {		#夜间会面
+	id = ROK.8
+	title = ROK.8.t
+	desc = ROK.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.9
+				days = 19
+			}
+		}
+	}
+
+	option = {
+		name = ROK.8.a
+	}
+
+}
+
+country_event = {		#克拉亚诺共和电台：516号广播
+	id = ROK.9
+	title = ROK.9.t
+	desc = ROK.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.10
+				days = 17
+			}
+		}
+	}
+
+	option = {
+		name = ROK.9.a
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.02
+		}
+	}
+
+}
+
+country_event = {		#克拉亚诺共和电台：113号广播
+	id = ROK.10
+	title = ROK.10.t
+	desc = ROK.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.11
+				days = 17
+			}
+		}
+	}
+
+	option = {
+		name = ROK.10.a
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.02
+		}
+	}
+
+}
+
+country_event = {		#克拉亚诺国家电台：1号广播
+	id = ROK.11
+	title = ROK.11.t
+	desc = ROK.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ROK.12
+				days = 29
+			}
+		}
+	}
+	
+	option = {
+		name = ROK.11.a
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.02
+		}	
+	}
+
+}
+
+country_event = {		#春朝漫步 
+	id = ROK.12
+	title = ROK.12.t
+	desc = ROK.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.12.a
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.02
+		}
+		add_political_power = -50
+		
+		remove_country_leader_role = {
+			character = ROK_moser_heludon 
+			ideology = radical_republican
+		}
+		
+		add_country_leader_role = { 
+			character = ROK_krakow_congress 
+			promote_leader = yes 
+			country_leader = {
+				ideology = radical_republican
+				#desc = 
+				traits = { }
+				expire = "3000.1.1.1"
+				id = -1
+			}
+		}
+		
+		complete_national_focus = ROK_he_has_passed_away
+	}
+}
+
+
+
+country_event = {		#选举 社民党获胜
+	id = ROK.13
+	title = ROK.13.t
+	desc = ROK.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.13.a
+
+		hidden_effect = {
+			remove_country_leader_role = {
+				character = ROK_krakow_congress 
+				ideology = radical_republican
+			}
+		}
+
+		set_politics = {
+			ruling_party = worldunion_democrat
+		}
+		set_country_flag = ROK_victory_for_social_democrats_unlock
+		custom_effect_tooltip = ROK_vote_end_remove_ideas_tooltip
+	}
+}
+
+country_event = {		#选举 新民主党
+	id = ROK.14
+	title = ROK.14.t
+	desc = ROK.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.14.a
+
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_government = liberal_republican } }
+				set_politics = { ruling_party = liberal_republican }
+			}
+			remove_country_leader_role = {
+				character = ROK_krakow_congress 
+				ideology = radical_republican
+			}
+		}
+		
+		add_country_leader_role = {
+			character = ROK_katarzyna_werner
+			promote_leader = yes
+			country_leader = {
+				desc = ROK_katarzyna_werner_desc
+				ideology = radical_republican
+				expire = "2040.1.1.1"
+				traits = { firm_heir }
+			}
+		}
+		set_country_flag = ROK_victory_for_new_democratic_unlock
+		custom_effect_tooltip = ROK_liberal_republican_win_again
+	}
+}
+
+country_event = {		#选举 民主党获胜
+	id = ROK.15
+	title = ROK.15.t
+	desc = ROK.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.15.a
+
+		hidden_effect = {
+			remove_country_leader_role = {
+				character = ROK_krakow_congress 
+				ideology = radical_republican
+			}
+			remove_ideas = ROK_slimander_volinkowski
+			remove_ideas = ROK_wolfschild_veliwski
+			remove_ideas = ROK_andrew_fields
+		}
+		
+		set_politics = {
+			ruling_party = conservative_republican
+		}
+		set_country_flag = ROK_victory_for_democratic_unlock
+		custom_effect_tooltip = ROK_vote_end_remove_ideas_tooltip
+	}
+}
+
+country_event = {		#未来的道路？
+	id = ROK.16
+	title = ROK.16.t
+	desc = ROK.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK.16.a #我们会和人民站在一起！
+		complete_national_focus = ROK_fire_and_rose
+	}
+	option = {
+		name = ROK.16.b #左翼的畜生们只会害了克拉亚诺！
+		complete_national_focus = ROK_declare_martial_law
+	}
+}
+
+#左派事件
+country_event = {		#左派事件1
+	id = ROK_left.1
+	title = ROK_left.t
+	desc = ROK_left.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.1.a
+	}
+	
+}
+
+country_event = {		#左派事件2
+	id = ROK_left.2
+	title = ROK_left.2.t
+	desc = ROK_left.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.2.a
+	}
+	
+}
+
+country_event = {		#左派事件3
+	id = ROK_left.3
+	title = ROK_left.3,t
+	desc = ROK_left.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.3.a
+	}
+	
+}
+
+country_event = {		#新的太阳
+	id = ROK_left.4
+	title = ROK_left.4.t
+	desc = ROK_left.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.4.a
+	}
+	
+}
+
+country_event = {		#军队政治
+	id = ROK_left.5
+	title = ROK_left.5.t
+	desc = ROK_left.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.5.a
+		set_country_flag = ROK_purge_careerists_in_the_army_flag
+		custom_effect_tooltip = ROK_purge_careerists_in_the_army_tt
+	}
+}
+
+country_event = {		#六届新革命党党代会
+	id = ROK_left.50
+	title = ROK_left.50.t
+	desc = ROK_left.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.50.a
+		country_event = {
+			id = ROK_left.51
+			days = 1
+		}
+	}
+}
+
+country_event = {		#党代会上的演讲
+	id = ROK_left.51
+	title = ROK_left.51.t
+	desc = ROK_left.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.51.a
+		country_event = {
+			id = ROK_left.52
+			days = 1
+		}
+	}
+}
+
+country_event = {		#大会闭幕
+	id = ROK_left.52
+	title = ROK_left.52.t
+	desc = ROK_left.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.52.a
+		set_party_name = {
+			ideology = pioneer_communism
+			name = ROK_pioneer_communism_party_2
+			long_name = ROK_pioneer_communism_party_2_long
+		}
+		set_party_name = {
+			ideology = revolutionary_communism
+			name = ROK_revolutionary_communism_party_2
+			long_name = ROK_revolutionary_communism_party_2_long
+		}
+		set_party_name = {
+			ideology = worldunion_socialist
+			name = ROK_worldunion_socialist_party_2
+			long_name = ROK_worldunion_socialist_party_2_long
+		}
+		set_party_name = {
+			ideology = worldunion_democrat
+			name = ROK_worldunion_democrat_party_2
+			long_name = ROK_worldunion_democrat_party_2_long
+		}
+	}
+}
+
+country_event = {		#我们的党
+	id = ROK_left.53
+	title = ROK_left.53.t
+	desc = ROK_left.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.53.a
+		custom_effect_tooltip = ROK_left.53.a.tt
+		set_variable = { ROK_conflict_supported_char = 2 }
+		ROK_internal_external_conflict_setup = yes
+		activate_mission = ROK_internal_external_conflict_mission_1
+		activate_mission = ROK_internal_external_conflict_mission_3
+	}
+
+	option = {
+		name = ROK_left.53.b
+		custom_effect_tooltip = ROK_left.53.b.tt
+		set_variable = { ROK_conflict_supported_char = 1 }
+		ROK_internal_external_conflict_setup = yes
+		activate_mission = ROK_internal_external_conflict_mission_2
+		activate_mission = ROK_internal_external_conflict_mission_3
+	}
+
+	option = {
+		name = ROK_left.53.c
+		custom_effect_tooltip = ROK_left.53.c.tt
+		set_variable = { ROK_conflict_supported_char = 3 }
+		ROK_internal_external_conflict_setup = yes
+		activate_mission = ROK_internal_external_conflict_mission_1
+		activate_mission = ROK_internal_external_conflict_mission_2
+	}
+}
+
+country_event = {		#夜晚的阳台
+	id = ROK_left.54
+	title = ROK_left.54.t
+	desc = ROK_left.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.54.a
+	}
+}
+
+country_event = {		#与克里特同志的漫谈
+	id = ROK_left.55
+	title = ROK_left.55.t
+	desc = ROK_left.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.55.a
+	}
+}
+
+country_event = {		#急不得
+	id = ROK_left.56
+	title = ROK_left.56.t
+	desc = ROK_left.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.56.a
+	}
+}
+
+country_event = {		#聚少离多
+	id = ROK_left.57
+	title = ROK_left.57.t
+	desc = ROK_left.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.57.a
+	}
+}
+
+country_event = {		#又是这样的一天
+	id = ROK_left.58
+	title = ROK_left.58.t
+	desc = ROK_left.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.58.a
+	}
+}
+
+country_event = {		#与科里曼的会面
+	id = ROK_left.59
+	title = ROK_left.59.t
+	desc = ROK_left.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.59.a
+	}
+}
+
+country_event = {		#向前看
+	id = ROK_left.60
+	title = ROK_left.60.t
+	desc = ROK_left.60.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.60.a
+	}
+}
+
+country_event = {		#一反既往
+	id = ROK_left.100
+	title = ROK_left.100.t
+	desc = ROK_left.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.100.a
+	}
+}
+
+country_event = {		#转变
+	id = ROK_left.101
+	title = ROK_left.101.t
+	desc = ROK_left.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.101.a
+	}
+}
+
+country_event = {		#与幽灵的对话
+	id = ROK_left.102
+	title = ROK_left.102.t
+	desc = ROK_left.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.102.a
+	}
+}
+
+country_event = {		#抓捕
+	id = ROK_left.103
+	title = ROK_left.103.t
+	desc = ROK_left.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.103.a
+	}
+}
+
+country_event = {		#为了艺术与革命
+	id = ROK_left.104
+	title = ROK_left.104.t
+	desc = ROK_left.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.104.a
+	}
+}
+
+country_event = {		#旧时代，新时代
+	id = ROK_left.105
+	title = ROK_left.105.t
+	desc = ROK_left.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.105.a
+	}
+}
+
+country_event = {		#自由的自由
+	id = ROK_left.106
+	title = ROK_left.106.t
+	desc = ROK_left.106.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.106.a
+	}
+}
+
+country_event = {		#第二次思想革命
+	id = ROK_left.107
+	title = ROK_left.107.t
+	desc = ROK_left.107.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.107.a
+	}
+}
+
+country_event = {		#你我也随之歌唱
+	id = ROK_left.108
+	title = ROK_left.108.t
+	desc = ROK_left.108.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.108.a
+	}
+}
+
+country_event = {		#构成主义的未来
+	id = ROK_left.109
+	title = ROK_left.109.t
+	desc = ROK_left.109.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.109.a
+	}
+}
+
+country_event = {		#维拉帕米的一切
+	id = ROK_left.110
+	title = ROK_left.110.t
+	desc = ROK_left.110.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_left.110.a
+	}
+}
+
+#右派事件
+country_event = {		#喧闹的早晨
+	id = ROK_right.1
+	title = ROK_right.1.t
+	desc = ROK_right.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_right.1.a
+	}
+}
+
+country_event = {		#把枪口指向谁？
+	id = ROK_right.2
+	title = ROK_right.2.t
+	desc = ROK_right.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_right.2.a
+	}
+}
+
+country_event = {		#街头的骚动
+	id = ROK_right.3
+	title = ROK_right.3.t
+	desc = ROK_right.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_right.3.a
+	}
+}
+
+country_event = {		#对革命者的最后一击
+	id = ROK_right.4
+	title = ROK_right.4.t
+	desc = ROK_right.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_right.4.a
+	}
+}
+
+country_event = {		#宵禁时间
+	id = ROK_right.5
+	title = ROK_right.5.t
+	desc = ROK_right.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROK_right.5.a
+	}
+}
+
+add_namespace = ROKNews
+
+news_event = {
+	id = ROKNews.1		#克拉亚诺共产主义的胜利
+	title = ROKNews.1.t
+	desc = ROKNews.1.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROKNews.1.a
+		trigger = {
+			tag = ROK
+		}
+	}
+
+	option = {
+		name = ROKNews.1.b
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.1.c
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.1.dd
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = wizard_rules
+				has_government = religious_extremism
+				has_government = paternal_autocrat
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ROKNews.2		#克拉亚诺民主的凯旋
+	title = ROKNews.2.t
+	desc = ROKNews.2.d
+	picture = GFX_news_event_generic_74
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROKNews.2.a
+		trigger = {
+			tag = ROK
+		}
+	}
+
+	option = {
+		name = ROKNews.2.b
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.2.c
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.2.dd
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = wizard_rules
+				has_government = religious_extremism
+				has_government = paternal_autocrat
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ROKNews.3		#克拉亚诺民主的凯旋
+	title = ROKNews.3.t
+	desc = ROKNews.3.d
+	picture = GFX_news_event_generic_23
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROKNews.3.a
+		trigger = {
+			tag = ROK
+		}
+	}
+
+	option = {
+		name = ROKNews.3.b
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.3.c
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+				has_government = conservative_republican
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.3.dd
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = wizard_rules
+				has_government = religious_extremism
+				has_government = paternal_autocrat
+			}
+		}
+	}
+}
+
+news_event = {
+	id = ROKNews.4		#克拉亚诺民主的凯旋
+	title = ROKNews.4.t
+	desc = ROKNews.4.d
+	picture = GFX_news_event_generic_63
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ROKNews.4.a
+		trigger = {
+			OR = {
+				tag = ROK
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.4.b
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = wizard_rules
+				has_government = religious_extremism
+				has_government = paternal_autocrat
+			}
+		}
+	}
+
+	option = {
+		name = ROKNews.4.c
+		trigger = {
+			NOT = { tag = ROK }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+}

@@ -1,0 +1,164 @@
+﻿capital = 440
+
+oob = "MGC"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 100
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+add_ideas = {
+	MGC_supreme_tetrarchan_allied_forces
+	MGC_so_be_the_end
+	MGC_beneath_the_luxrious
+	MGC_rich_black_earth
+	MGC_free_hussars
+
+	MGC_supreme_industria_ministry
+}
+
+recruit_character = MGC_pedrofi_freedom_faddas
+recruit_character = MGC_assemblee_nationale
+recruit_character = MGC_free_parliament
+recruit_character = MGC_gyurgy_northrop
+recruit_character = MGC_alani_vallars
+recruit_character = MGC_supreme_theological_council
+recruit_character = MGC_supreme_court
+recruit_character = MGC_the_atheist_jury_north
+recruit_character = MGC_no_uni_leadership
+recruit_character = MGC_the_order
+recruit_character = MGC_supreme_tetrarchan_allied_forces_char
+recruit_character = MGC_technological_singularity_combination	
+
+recruit_character = MGC_semyon_zabrovsky
+recruit_character = MGC_nenleko_dora
+recruit_character = MGC_dovuzdo_de_zhemfia
+recruit_character = MGC_denis_golden_iron_kossuth
+recruit_character = MGC_thorni_fire_madariske
+recruit_character = MGC_corfu_de_venetia
+recruit_character = MGC_boris_janos_servio
+recruit_character = MGC_salahi_vasha_fero
+recruit_character = MGC_stojai_walter_drusser
+recruit_character = MGC_weisenmayer_valeri_tagino
+recruit_character = MGC_sextus_the_stranger_pozzuoli
+recruit_character = MGC_orbinas_orban_woker
+recruit_character = MGC_lugo_igor_zoltan
+recruit_character = MGC_kodais_zidan_laszlo
+recruit_character = MGC_vash_natasha_east
+recruit_character = MGC_harius_petrov_husni
+
+recruit_character = MGC_all_farmer_associations
+recruit_character = MGC_all_worker_associations
+recruit_character = MGC_all_religious_associations
+recruit_character = MGC_national_police_associations
+recruit_character = MGC_union_protect_bureau
+recruit_character = MGC_all_legal_parties
+recruit_character = MGC_industrial_dep
+
+activate_advisor = MGC_semyon_zabrovsky_idea
+activate_advisor = MGC_nenleko_dora_idea
+activate_advisor = MGC_dovuzdo_de_zhemfia_idea
+activate_advisor = MGC_denis_golden_iron_kossuth_idea
+activate_advisor = MGC_thorni_fire_madariske_idea
+
+activate_advisor = MGC_semyon_zabrovsky_idea_hc

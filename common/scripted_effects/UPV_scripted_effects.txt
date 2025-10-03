@@ -1,0 +1,343 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_UPV_startup_effect = {
+	if = {
+		limit = {
+			tag = UPV
+		}
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = limited_exports
+		add_ideas = high_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_cia_everywhere
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_Virtuoso
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_reactionary_policy
+		###女大公的改革###
+		set_variable = { UPV_Duchess_reform_progress = 0 }
+		set_variable = { UPV_Duchess_reform_aristocrat_attitude = 5 }
+		set_variable = { UPV_Duchess_reform_parliament_attitude = 5 }
+		set_variable = { UPV_Duchess_reform_title_var = 1 }
+		###工业改革###
+		add_dynamic_modifier = { modifier = UPV_newly_developed_industries_dynamic_modifier }
+		set_variable = { UPV_newly_developed_industries_dynamic_modifier_lrf = 0.1 }
+		set_variable = { UPV_newly_developed_industries_dynamic_modifier_icf = 0.05 }
+		set_variable = { UPV_newly_developed_industries_dynamic_modifier_gbsf = 0.05 }
+		set_variable = { UPV_newly_developed_industries_dynamic_modifier_pfmef = -0.05 }
+		set_variable = { UPV_industrialization_point = 0 }
+		set_variable = { UPV_industrialization_point_weekly = 1 }
+		activate_mission = UPV_industrilization_point_weekly_add
+		set_variable = { UPV_invest_military_facility_count = 0 }
+		set_variable = { UPV_invest_civilian_construction_count = 0 }
+		set_variable = { UPV_renew_industrial_equipment_count = 0 }
+		set_variable = { UPV_reinforce_factory_management_count = 0 }
+		###控制省份对应普及度##
+		every_state = {
+			if = {
+				limit = {
+					state = 361
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 374
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 364
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+		}
+	}
+}
+
+UPV_Duchess_reform_attitude_check = {
+	hidden_effect = {
+		if = {
+			limit = {
+				OR = {
+					check_variable = { UPV_Duchess_reform_aristocrat_attitude = 1 }
+					check_variable = { UPV_Duchess_reform_parliament_attitude = 1 }
+				}
+			}
+			country_event = UPV.3
+		}	
+	}
+}
+
+UPV_Duchess_reform_aristocrat_attitude_up_1 = {
+	if = {
+		limit = { NOT = { check_variable = { UPV_Duchess_reform_aristocrat_attitude = 6 } } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = 1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_aristocrat_attitude_up_1_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_aristocrat_attitude_up_2 = {
+	if = {
+		limit = { check_variable = { UPV_Duchess_reform_aristocrat_attitude < 5 } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = 2
+		}
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_aristocrat_attitude = 5 } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = 1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_aristocrat_attitude_up_2_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_aristocrat_attitude_down_1 = {
+	if = {
+		limit = { NOT = { check_variable = { UPV_Duchess_reform_aristocrat_attitude = 1 } } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = -1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_aristocrat_attitude_down_1_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_aristocrat_attitude_down_2 = {
+	if = {
+		limit = { check_variable = { UPV_Duchess_reform_aristocrat_attitude > 1 } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = -2
+		}
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_aristocrat_attitude = 1 } }
+		add_to_variable = {
+			UPV_Duchess_reform_aristocrat_attitude = -1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_aristocrat_attitude_down_2_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_parliament_attitude_up = {
+	if = {
+		limit = { NOT = { check_variable = { UPV_Duchess_reform_parliament_attitude = 6 } } }
+		add_to_variable = {
+			UPV_Duchess_reform_parliament_attitude = 1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_parliament_attitude_up_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_parliament_attitude_down_1 = {
+	if = {
+		limit = { NOT = { check_variable = { UPV_Duchess_reform_parliament_attitude = 1 } } }
+		add_to_variable = {
+			UPV_Duchess_reform_parliament_attitude = -1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_parliament_attitude_down_1_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_parliament_attitude_down_2 = {
+	if = {
+		limit = { check_variable = { UPV_Duchess_reform_parliament_attitude > 1 } }
+		add_to_variable = {
+			UPV_Duchess_reform_parliament_attitude = -2
+		}
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_parliament_attitude = 1 } }
+		add_to_variable = {
+			UPV_Duchess_reform_parliament_attitude = -1
+		}
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_parliament_attitude_down_2_tt
+	UPV_Duchess_reform_attitude_check = yes
+}
+
+UPV_Duchess_reform_progress_check = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { UPV_Duchess_reform_progress = 100 } }
+			country_event = UPV.2
+		}	
+	}
+}
+
+UPV_Duchess_reform_progress_up_1 = {
+	add_to_variable = { UPV_Duchess_reform_progress = 5 }
+	clamp_variable = {
+		var = UPV_Duchess_reform_progress
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_progress_up_1_tt
+	UPV_Duchess_reform_progress_check = yes
+}
+
+UPV_Duchess_reform_progress_up_2 = {
+	add_to_variable = { UPV_Duchess_reform_progress = 10 }
+	clamp_variable = {
+		var = UPV_Duchess_reform_progress
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_progress_up_2_tt
+	UPV_Duchess_reform_progress_check = yes
+}
+
+UPV_Duchess_reform_progress_down_1 = {
+	add_to_variable = { UPV_Duchess_reform_progress = -5 }
+	clamp_variable = {
+		var = UPV_Duchess_reform_progress
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_progress_down_1_tt
+	UPV_Duchess_reform_progress_check = yes
+}
+
+UPV_Duchess_reform_progress_down_2 = {
+	add_to_variable = { UPV_Duchess_reform_progress = -10 }
+	clamp_variable = {
+		var = UPV_Duchess_reform_progress
+		min = 0
+		max = 100
+	}
+	custom_effect_tooltip = UPV_Duchess_reform_progress_down_2_tt
+	UPV_Duchess_reform_progress_check = yes
+}
+
+UPV_military_reform_effect = {
+	if = {
+		limit = { check_variable = { UPV_Duchess_reform_title_var = 1 } }
+		swap_ideas = {
+			remove_idea = UPV_loose_military
+			add_idea = UPV_loose_military_2
+		}
+		add_to_variable = { UPV_Duchess_reform_title_var = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_title_var = 2 } }
+		swap_ideas = {
+			remove_idea = UPV_loose_military_2
+			add_idea = UPV_loose_military_3
+		}
+		add_to_variable = { UPV_Duchess_reform_title_var = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_title_var = 3 } }
+		swap_ideas = {
+			remove_idea = UPV_loose_military_3
+			add_idea = UPV_loose_military_4
+		}
+		add_to_variable = { UPV_Duchess_reform_title_var = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_title_var = 4 } }
+		swap_ideas = {
+			remove_idea = UPV_loose_military_4
+			add_idea = UPV_loose_military_5
+		}
+		add_to_variable = { UPV_Duchess_reform_title_var = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { UPV_Duchess_reform_title_var = 5 } }
+		swap_ideas = {
+			remove_idea = UPV_loose_military_5
+			add_idea = UPV_reinvigorated_army
+		}
+		set_division_template_lock = {
+			division_template = 上维尔陶常备军
+			is_locked = no
+		}
+		set_division_template_lock = {
+			division_template = 国民警卫队
+			is_locked = no
+		}
+		add_to_variable = { UPV_Duchess_reform_title_var = 1 }
+	}
+}
+
+UPV_industrialization_point_20 = {
+	add_to_variable = { UPV_industrialization_point = 20 }
+	custom_effect_tooltip = UPV_industrialization_point_20_tt
+	clamp_variable = {
+		var = UPV_industrialization_point
+		min = 0
+		max = 100
+	}
+}
+
+UPV_industrialization_point_weekly_1 = {
+	add_to_variable = { UPV_industrialization_point_weekly = 1 }
+	custom_effect_tooltip = UPV_industrialization_point_weekly_1_tt
+}
+
+UPV_industrialization_point_cost_100 = {
+	add_to_variable = { UPV_industrialization_point = -100 }
+	custom_effect_tooltip = UPV_industrialization_point_cost_100_tt
+}

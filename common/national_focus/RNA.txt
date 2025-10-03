@@ -1,0 +1,281 @@
+focus_tree = {
+	id = RNA_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RNA
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	#第三次委员会议
+	focus = {
+		id = RNA_third_committee_meeting
+		icon = GFX_focus_AFG_establish_darulaman
+		x = 5
+		y = 0
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			set_power_balance = {
+				id = RNA_mil_bop
+				set_default = no
+				set_value = 0
+			}
+		}
+	}
+
+	#士官生速成学校
+	focus = {
+		id = RNA_NCO_academy
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_third_committee_meeting }
+		relative_position_id = RNA_third_committee_meeting
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = RNA_mil_bop
+				value = 0.1
+			}
+			add_ideas = RNA_NCO_training
+		}
+	}
+
+	#借调陆军军官
+	focus = {
+		id = RNA_lend_army_officer
+		icon = GFX_focus_AFG_adopt_nufus
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_NCO_academy }
+		relative_position_id = RNA_NCO_academy
+		mutually_exclusive = { focus = RNA_maintain_NG_independence }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = RNA_mil_bop
+				value = 0.05
+			}
+			add_ideas = RNA_professional_officers
+			add_units_to_division_template = {
+				template_name = "国民卫队"
+				regiments = {
+					light_infantry = 2
+					light_infantry = 2
+					infantry = 2
+				}
+				support = {
+					artillery = 0
+				}
+			}
+			328 = {
+				create_unit = {
+					division = "name = \"国民卫队7师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 20736
+				}
+			}
+			330 = {
+				create_unit = {
+					division = "name = \"国民卫队8师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 6483
+				}
+				create_unit = {
+					division = "name = \"国民卫队9师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 6483
+				}
+			}
+			336 = {
+				create_unit = {
+					division = "name = \"国民卫队10师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 5127
+				}
+			}
+		}
+	}
+
+	#设立联合指挥部
+	focus = {
+		id = RNA_establish_joint_command
+		icon = GFX_focus_generic_army_doctrines_2
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_lend_army_officer }
+		relative_position_id = RNA_lend_army_officer
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = RNA_mil_bop
+				value = 0.05
+			}
+			swap_ideas = {
+				remove_idea = RNA_professional_officers
+				add_idea = RNA_professional_officers_2
+			}
+		}
+	}
+
+	#保持国民卫队独立性
+	focus = {
+		id = RNA_maintain_NG_independence
+		icon = GFX_focus_AFG_against_kabul
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_NCO_academy }
+		relative_position_id = RNA_NCO_academy
+		mutually_exclusive = { focus = RNA_lend_army_officer }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = RNA_mil_bop
+				value = -0.1
+			}
+			add_ideas = RNA_parallel_organization
+			328 = {
+				create_unit = {
+					division = "name = \"国民卫队7师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 20736
+				}
+			}
+			330 = {
+				create_unit = {
+					division = "name = \"国民卫队8师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 6483
+				}
+				create_unit = {
+					division = "name = \"国民卫队9师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 6483
+				}
+			}
+			336 = {
+				create_unit = {
+					division = "name = \"国民卫队10师\" division_template = \"国民卫队\" start_experience_factor = 0.3"
+					owner = RNA
+					count = 1
+					prioritize_location = 5127
+				}
+			}
+		}
+	}
+
+	#各自为战
+	focus = {
+		id = RNA_fight_alone
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_maintain_NG_independence }
+		relative_position_id = RNA_maintain_NG_independence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RNA_parallel_organization
+				add_idea = RNA_parallel_organization_2
+			}
+		}
+	}
+
+	#委员大会
+	focus = {
+		id = RNA_committee_meeting
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			always = no
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RNA_establish_joint_command focus = RNA_fight_alone }
+		relative_position_id = RNA_establish_joint_command
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+}

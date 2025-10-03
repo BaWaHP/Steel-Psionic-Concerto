@@ -1,0 +1,31 @@
+
+state={
+	id=120
+	name="STATE_120"
+
+	resources = {
+		tungsten = 12
+	}
+
+	history={
+		owner = NCD
+		add_core_of = NCD
+		add_core_of = CLD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			19185 5
+		}
+
+	}
+
+	provinces={
+		1938 5118 5886 8906 9299 10701 19119 19137 19158 19185 19238 19248 19269 19313 19323 19341 
+	}
+	manpower=1046043
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

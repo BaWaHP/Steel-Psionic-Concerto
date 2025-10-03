@@ -1,0 +1,29 @@
+
+state={
+	id=185
+	name="STATE_185"
+
+	history={
+		owner = BCC
+		add_core_of = BCC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		victory_points = {
+			3666 8
+		}
+		victory_points = {
+			8942 5
+		}
+	}
+
+	provinces={
+		733 3666 4875 6553 6645 8942 11371 15166 15248 15331 15377 15387 15468 15469 15470 15571 15580 15689 15804 
+	}
+	manpower=810000 
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

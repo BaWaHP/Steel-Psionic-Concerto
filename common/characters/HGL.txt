@@ -1,0 +1,23 @@
+characters={
+
+	HGL_sechenyi_till = {		#赛切尼.蒂尔（tél）
+   		name = HGL_sechenyi_till
+   		portraits = {
+   			civilian = {
+   				large="GFX_HGL_sechenyi_till"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_HGL_sechenyi_till"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = HGL_sechenyi_till_desc
+   			ideology = oligarchy
+   			traits = { HGL_puppet_prime_minister }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

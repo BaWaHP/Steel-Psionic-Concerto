@@ -1,0 +1,70 @@
+﻿capital = 263
+
+#oob = "KEU"
+set_convoys = 0
+
+set_politics = {
+	ruling_party = wizard_rules
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 0
+	wizard_rules = 100
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+
+set_stability = 1
+set_war_support = 1
+
+recruit_character = KEU_Merciful_Overlord
+recruit_character = KEU_Quirathka_Butagn 
+recruit_character = KEU_Urru_Maluv
+recruit_character = KEU_Dhjikha_Phalabr
+recruit_character = KEU_He_Hongmei
+recruit_character = KEU_Viana_Weil
+set_variable = { KEU_offering_available = 0 }
+set_variable = { KEU_merciful_overlord_life_energy = 5 }
+
+add_ideas = {
+	#民族精神
+	KEU_Nation_of_Youth
+	KEU_Enforced_Breeding_Policy
+	KEU_Legion_of_Dead
+	#内阁
+	KEU_Quirathka_Butagn_idea
+	KEU_Urru_Maluv_idea
+	KEU_Dhjikha_Phalabr_idea
+	KEU_He_Hongmei_idea
+}

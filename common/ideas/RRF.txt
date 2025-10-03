@@ -1,0 +1,216 @@
+ideas = {
+	country = {
+
+		RRF_revolutionary_enthusiasm = {		#革命热情
+			picture = por_iberian_workers_united
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				conscription = 0.001
+				industrial_capacity_factory = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+			}
+		}
+		
+		RRF_revolutionary_enthusiasm_2 = {		#革命热情
+			name = RRF_revolutionary_enthusiasm
+			picture = por_iberian_workers_united
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				conscription = 0.001
+				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		RRF_revolutionary_enthusiasm_3 = {		#革命热情
+			name = RRF_revolutionary_enthusiasm
+			picture = por_iberian_workers_united
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				war_support_factor = 0.05
+				conscription = 0.001
+				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		RRF_revolutionary_enthusiasm_4 = {		#革命热情
+			name = RRF_revolutionary_enthusiasm
+			picture = por_iberian_workers_united
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				war_support_factor = 0.05
+				conscription = 0.005
+				industrial_capacity_factory = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_regain = 0.1
+				army_speed_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		RRF_workers_armed = {		#工人武装
+			picture = generic_communist_army
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.15
+				training_time_army_factor = 0.15
+			}
+		}
+
+		RRF_workers_armed_2 = {		#工人武装
+			name = RRF_workers_armed
+			picture = generic_communist_army
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				land_reinforce_rate = 0.02
+				experience_gain_army_factor = 0.1
+				army_org_factor = -0.05
+				army_org_regain = -0.1
+				training_time_army_factor = 0.1
+			}
+		}
+
+		RRF_workers_armed_3 = {		#工人武装
+			name = RRF_workers_armed
+			picture = generic_communist_army
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				supply_consumption_factor = -0.05
+				land_reinforce_rate = 0.02
+				experience_gain_army_factor = 0.1
+				army_org_factor = -0.05
+				army_org_regain = -0.05
+				training_time_army_factor = 0.05
+			}
+		}
+
+		RRF_march_forward = {		#向玛蒂宸湖进军！
+			picture = FRA_army_of_aggression_focus
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RSU = { exists = no } }
+
+			modifier = {
+				planning_speed = 0.2
+				army_org_regain = 0.1
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = RSU
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.05
+			}
+		}
+
+		RRF_let_that_fire = {		#革命烈火
+			picture = anti_soviet_pact
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RRF = { exists = no } }
+
+			modifier = {
+				war_support_factor = -0.1
+				army_org_factor = -0.05
+				army_core_defence_factor = -0.1
+				army_speed_factor = -0.2
+			}
+		}
+
+		RRF_mourners = {		#悼亡者
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RRF = { exists = no } }
+
+			modifier = {
+				army_org_regain = 0.1
+				army_org_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = RSU
+				attack_bonus_against = 0.2
+				breakthrough_bonus_against = 0.1
+				defense_bonus_against = -0.1
+			}
+		}
+
+		RRF_and_the_alive = {		#念生者
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			cancel = { RRF = { exists = no } }
+
+			modifier = {
+				stability_factor = 0.05
+				army_org_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}
+
+			targeted_modifier = {
+				tag = RSU
+				breakthrough_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+
+		RRF_final_victory = {		#终得胜利
+			picture = FRA_national_mobilization_focus
+			allowed = { original_tag = RRF }
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				war_support_factor = -0.2
+				monthly_industrial_development_process = 1
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+	}
+}

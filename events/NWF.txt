@@ -1,0 +1,151 @@
+﻿###########################
+# NWF Events #
+###########################
+
+add_namespace = NWF
+
+country_event = {
+	id = NWF.500		#意料之外？
+	title = NWF.500.t
+	desc = NWF.500.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.500.a
+	}
+}
+
+country_event = {
+	id = NWF.501		#情理之中
+	title = NWF.501.t
+	desc = NWF.501.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.501.a
+	}
+}
+
+country_event = {
+	id = NWF.502		#归乡
+	title = NWF.502.t
+	desc = NWF.502.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.502.a
+	}
+}
+
+country_event = {
+	id = NWF.503		#如梦初醒
+	title = NWF.503.t
+	desc = NWF.503.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.503.a
+	}
+}
+
+country_event = {
+	id = NWF.504		#终于醒来了？
+	title = NWF.504.t
+	desc = NWF.504.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.504.a
+	}
+}
+
+country_event = {
+	id = NWF.1000		#剧情推进
+	title = NWF.1000.t
+	desc = NWF.1000.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.1000.a
+		swap_ideas = {
+			remove_idea = NWF_complete_meltdown
+			add_idea = NWF_restabalizing
+		}
+		random_list = {
+			70 = { 	#和谈
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = authoritarian_republican
+				}
+				add_country_leader_role = {
+					character = NWF_Qiu_Haiqin
+					promote_leader = yes
+					country_leader = {
+						ideology = authoritarian_republican_subtype
+						expire = "2040.1.1.1"
+					}
+				}
+			}
+			30 = { 	#干仗
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				add_country_leader_role = {
+					character = NWF_Zheng_Wenyuan
+					promote_leader = yes
+					country_leader = {
+						ideology = military_dictatorship
+						expire = "2040.1.1.1"
+					}
+				}
+				load_oob = "NWF_war"
+				random_list = {
+					20 = {
+						country_event = { id = NWF.1001 days = 90 }
+					}
+					30 = {
+						country_event = { id = NWF.1001 days = 180 }
+					}
+					30 = {
+						country_event = { id = NWF.1001 days = 270 }
+					}
+					20 = {
+						country_event = { id = NWF.1001 days = 360 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NWF.1001		#剧情推进
+	title = NWF.1001.t
+	desc = NWF.1001.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NWF.1001.a
+		SFH = { country_event = NWF.503 }
+		activate_mission = NWF_debug_event_trigger_1
+		#declare_war_on = {
+		#	target = SFH
+		#	type = annex_everything
+		#}
+	}
+}

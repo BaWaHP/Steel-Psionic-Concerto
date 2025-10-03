@@ -1,0 +1,35 @@
+
+state={
+	id=309
+	name="STATE_309"
+
+	resources = {
+		steel = 25
+		magic_crystal = 18
+		oil = 7
+	}
+
+	history={
+		owner = LNR
+		add_core_of = LNR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 1
+			air_base = 1
+			5864 = { naval_base = 1 }
+		}
+		victory_points = {
+			5864 25
+		}
+	}
+
+	provinces={
+		5864 9240 10206 10258 20497 20499 20531 20578 20597 20630 20648 20670 
+	}
+	manpower = 3900000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies = 1
+}

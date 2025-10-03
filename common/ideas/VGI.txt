@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+
+		#革命向前
+		VGI_revolution_forward = {
+			picture = ETH_conservative_high_command
+			allowed = { original_tag = VGI }
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 500
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				army_defence_factor = 0.15
+				equipment_capture_factor = 0.15
+			}
+		}
+	}
+}

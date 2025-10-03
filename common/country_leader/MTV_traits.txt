@@ -1,0 +1,77 @@
+leader_traits = {
+
+	MTV_out_of_contact = {		#……你所拨打是空号，请稍后再拨……
+		random = no
+		
+		production_factory_max_efficiency_factor = -0.2
+		local_resources_factor = -0.5
+		political_power_gain = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_shelter_government = {		#防空洞政府
+		random = no
+		
+		stability_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_mass_grave = {		#万人坑
+		random = no
+		
+		war_support_factor = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_poison_water = {		#毒水
+		random = no
+		
+		stability_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_wartime_schedule = {		#战争时间表
+		random = no
+		
+		stability_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_manmade_famine = {		#人为饥荒
+		random = no
+		
+		war_support_factor = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MTV_red_god = {		#红神
+		random = no
+		
+		monthly_population = -0.05
+		war_support_factor = 0.3
+		stability_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

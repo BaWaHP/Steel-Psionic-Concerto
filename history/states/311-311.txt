@@ -1,0 +1,29 @@
+
+state={
+	id=311
+	name="STATE_311"
+
+	resources = {
+		oil = 10
+	}
+
+	history={
+		owner = LNR
+		add_core_of = LNR
+		buildings = {
+			infrastructure = 1
+			20258 = { naval_base = 1 }
+		}
+		victory_points = {
+			11771 5
+		}
+	}
+
+	provinces={
+		5179 6829 11373 11771 20258 20320 20355 20372 
+	}
+	manpower=500000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

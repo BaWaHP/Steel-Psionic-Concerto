@@ -1,0 +1,32 @@
+
+state={
+	id=44
+	name="STATE_44"
+	provinces={
+		2497 2863 3736 4982 6052 18699 18711 18804 18819 18910 18922 18986 
+	}
+	resources = {
+		steel = 10
+		aluminium = 5
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			radar_station = 1
+			18819 = {
+				bunker = 3
+			}
+		}
+		victory_points = {
+			18819 6
+		}
+	}
+	manpower=1200000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

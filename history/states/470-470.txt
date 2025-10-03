@@ -1,0 +1,27 @@
+
+state={
+	id=470
+	name="STATE_470"
+	provinces={
+		561 1065 3373 5671 9649 11625 12171 17584 17719 
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			12171 20
+		}
+		victory_points = {
+			3373 10
+		}
+	}
+	manpower = 3100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

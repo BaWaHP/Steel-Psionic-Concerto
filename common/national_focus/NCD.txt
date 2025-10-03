@@ -1,0 +1,1706 @@
+focus_tree = {
+	id = NCD_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NCD
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+	
+	focus = {	#威斯特尔计划
+		id = NCD_westminster_project
+		icon = GFX_NCD_westminster_project
+		x = 10
+		y = 0
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_completed_focus = NCD_purge_unloyal_officiers
+					has_completed_focus = NCD_formal_political_changes
+				}
+			}
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			118 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			119 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_ideas = NCD_westminster_project_idea
+		}
+	}
+
+	focus = {	#高耸的危楼
+		id = NCD_towering_dangerous_buildings
+		icon = GFX_NCD_towering_dangerous_buildings
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_westminster_project }
+		relative_position_id = NCD_westminster_project
+		#mutually_exclusive = { focus =  }
+
+		select_effect = {
+			add_ideas = NCD_reforming_policies
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_towering_dangerous_buildings_tt
+			remove_ideas = NCD_reforming_policies
+			add_political_power = 150
+			swap_ideas = {
+				remove_idea = NCD_collapsed_economy
+				add_idea = NCD_collapsed_economy_2
+			}
+		}
+	}
+
+	focus = {	#边境开放法令
+		id = NCD_open_border_act
+		icon = GFX_NCD_open_border_act
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_towering_dangerous_buildings }
+		relative_position_id = NCD_towering_dangerous_buildings
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			120 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = NCD_westminster_project_idea
+				add_idea = NCD_westminster_project_idea_2
+			}
+		}
+	}
+
+	focus = {	#巩固中央权力
+		id = NCD_consolidate_central_power
+		icon = GFX_NCD_consolidate_central_power
+		x = -1
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_open_border_act }
+		relative_position_id = NCD_open_border_act
+		mutually_exclusive = { focus = NCD_a_secret_letter }
+		select_effect = {
+			add_ideas = NCD_reforming_policies
+		}
+
+		completion_reward = {
+			country_event = NCD.2
+			custom_effect_tooltip = NCD_towering_dangerous_buildings_tt
+			remove_ideas = NCD_reforming_policies
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = -0.08
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.03
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#南方工业网重建
+		id = NCD_rebuild_south_indusries
+		icon = GFX_NCD_rebuild_south_indusries
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available = {
+			117 = {
+				is_owned_and_controlled_by = NCD
+			}
+		}
+
+		bypass = {
+			CLD = {
+				exists = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_consolidate_central_power }
+		relative_position_id = NCD_consolidate_central_power
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			117 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 117
+			}
+		}
+	}
+
+	focus = {	#共和国战前临时宪法
+		id = NCD_republic_pre_war_laws
+		icon = GFX_NCD_republic_pre_war_laws
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		bypass = {
+			CLD = {
+				exists = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_rebuild_south_indusries }
+		relative_position_id = NCD_rebuild_south_indusries
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_westminster_project_idea_2
+				add_idea = NCD_republic_pre_war_laws_idea
+			}
+		}
+	}
+
+	focus = {	#清理反对军官
+		id = NCD_purge_unloyal_officiers
+		icon = GFX_NCD_purge_unloyal_officiers
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		bypass = {
+			CLD = {
+				exists = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_republic_pre_war_laws }
+		relative_position_id = NCD_republic_pre_war_laws
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.1
+			remove_ideas = NCD_dying_republic
+			remove_ideas = NCD_ubstable_army_and_politics
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			mark_focus_tree_layout_dirty = yes
+			country_event = NCD.1
+		}
+	}
+	
+	focus = {	#一封密信
+		id = NCD_a_secret_letter
+		icon = GFX_NCD_a_secret_letter
+		x = 1
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_open_border_act }
+		relative_position_id = NCD_open_border_act
+		mutually_exclusive = { focus = NCD_consolidate_central_power }
+
+		completion_reward = {
+			country_event = NCD.3
+			add_stability = 0.05
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.03
+			}
+			set_politics = {
+				ruling_party = authoritarian_republican
+			}
+			remove_ideas = NCD_westminster_project_idea
+		}
+	}
+
+	focus = {	#人民的选择
+		id = NCD_choice_of_people
+		icon = GFX_NCD_choice_of_people
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_a_secret_letter }
+		relative_position_id = NCD_a_secret_letter
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_celydrea_royal_family
+		}
+	}
+
+	focus = {	#路切尔纳工业对接区
+		id = NCD_industrial_access_zone
+		icon = GFX_NCD_industrial_access_zone
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_choice_of_people }
+		relative_position_id = NCD_choice_of_people
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			120 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			remove_ideas = NCD_collapsed_economy_2
+		}
+	}
+
+	focus = {	#正式移交权利
+		id = NCD_formal_political_changes
+		icon = GFX_NCD_formal_political_changes
+		x = 0
+		y = 1
+		cost = 2.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_industrial_access_zone }
+		relative_position_id = NCD_industrial_access_zone
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			remove_country_leader_role = {
+				character = NCD_temp_order_committee
+				ideology = dual_system_of_constitutional_monarchy
+			}
+			add_country_leader_role = {
+				character = NCD_kerr_celydrea
+				promote_leader = yes
+				country_leader = {
+					ideology = dual_system_of_constitutional_monarchy
+					expire = "2040.1.1.1"
+					traits = { NCD_stable_royal_family_and_gov }
+				}
+			}
+			swap_ideas = {
+				remove_idea = NCD_celydrea_royal_family
+				add_idea = NCD_celydrea_royal_family_2
+			}
+			set_cosmetic_tag = NCD_monarchy
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	###军政府内战前线###
+
+	focus = {	#铁靴落地......
+		id = NCD_now_the_army_takes_over
+		icon = GFX_NCD_now_the_army_takes_over
+		x = 10
+		y = 0
+		cost = 2.15
+		
+		allow_branch = {
+			has_completed_focus = NCD_purge_unloyal_officiers
+			NOT = { has_completed_focus = NCD_put_down_the_fire }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		select_effect = {
+			add_political_power = 50
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_now_the_army_takes_over_tt
+			hidden_effect = {
+				SPC_economy_up = yes
+				SPC_economy_up = yes
+			}
+			add_stability = 0.15
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = 1
+				category = land_doctrine
+			}
+			remove_ideas = NCD_support_from_uk
+			NCD_anstre_cheliat = {
+				remove_unit_leader_trait = NCD_military_republican
+				add_unit_leader_trait = NCD_military_radicalist
+			}
+		}
+	}
+
+	focus = {	#切断对外来往
+		id = NCD_cutting_external_contacts
+		icon = GFX_NCD_cutting_external_contacts
+		x = -3
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_now_the_army_takes_over }
+		relative_position_id = NCD_now_the_army_takes_over
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.07
+			add_war_support = 0.05
+			country_event = NCD.50
+		}
+	}
+
+	focus = {	#复仇主义宣传
+		id = NCD_avenirist_propaganda
+		icon = GFX_NCD_avenirist_propaganda
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_cutting_external_contacts }
+		relative_position_id = NCD_cutting_external_contacts
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_mobilization_laws_up = yes
+			SPC_mobilization_laws_up = yes
+			add_ideas = aggressive_tatic
+			custom_effect_tooltip = NCD_avenirist_propaganda_tt
+		}
+	}
+
+	focus = {	#纯净的西莉迪亚人
+		id = NCD_the_pure_celydreans
+		icon = GFX_NCD_the_pure_celydreans
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_avenirist_propaganda }
+		relative_position_id = NCD_avenirist_propaganda
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_celydrea_purism_1
+		}
+	}
+
+	focus = {	#规格化建筑建设
+		id = NCD_standarlized_construction
+		icon = GFX_NCD_standarlized_construction
+		x = -2
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_the_pure_celydreans }
+		relative_position_id = NCD_the_pure_celydreans
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_celydrea_purism_1
+				add_idea = NCD_celydrea_purism_2
+			}
+		}
+	}
+
+	focus = {	#技术工人征为国有
+		id = NCD_nationalize_skilled_labour
+		icon = GFX_NCD_nationalize_skilled_labour
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_standarlized_construction }
+		relative_position_id = NCD_standarlized_construction
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_working_policy_down = yes
+			unlock_decision_category_tooltip = NCD_skilled_worker_construction
+			add_ideas = NCD_skilled_worker_amount_4
+			set_variable = { NCD_inviting_formal_skilled_workers_count = 0 }
+			set_variable = { NCD_smuggle_foregin_workers_count = 0 }
+			set_variable = { NCD_temp_mil_factory_construction_count = 0 }
+			activate_mission = NCD_inviting_formal_skilled_workers
+		}
+	}
+
+	focus = {	#前线预先战略建设
+		id = NCD_preconstruct_borders
+		icon = GFX_NCD_preconstruct_borders
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_nationalize_skilled_labour }
+		relative_position_id = NCD_nationalize_skilled_labour
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = -5000
+			116 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = CLD
+						level < 1
+					}
+				}
+			}
+			117 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = CLD
+						level < 3
+					}
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+						limit_to_border_country = CLD
+						level < 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#修改临时宪法
+		id = NCD_change_constitution_temporarily
+		icon = GFX_NCD_change_constitution_temporarily
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_the_pure_celydreans }
+		relative_position_id = NCD_the_pure_celydreans
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_republic_pre_war_laws_idea
+				add_idea = NCD_protect_nation_constitution
+			}
+		}
+	}
+
+	focus = {	#授权秘密警察部队
+		id = NCD_authorize_secret_police
+		icon = GFX_NCD_authorize_secret_police
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_change_constitution_temporarily }
+		relative_position_id = NCD_change_constitution_temporarily
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			create_intelligence_agency = yes
+			add_political_power = 100
+			SPC_secret_police_policy_up = yes
+			SPC_secret_police_policy_up = yes
+			SPC_secret_police_policy_up = yes
+			custom_effect_tooltip = NCD_authorize_secret_police_tt
+		}
+	}
+
+	focus = {	#国家正在看着你
+		id = NCD_nation_is_watching_you
+		icon = GFX_NCD_nation_is_watching_you
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_authorize_secret_police }
+		relative_position_id = NCD_authorize_secret_police
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.25
+			}
+			add_ideas = closed_economy
+			SPC_media_policy_up = yes
+			SPC_media_policy_up = yes
+			custom_effect_tooltip = NCD_nation_is_watching_you_tt
+		}
+	}
+
+	focus = {	#“志愿”后天教育
+		id = NCD_volunteer_afterwards_education
+		icon = GFX_NCD_volunteer_afterwards_education
+		x = 2
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_the_pure_celydreans }
+		relative_position_id = NCD_the_pure_celydreans
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 50
+			SPC_living_standard_development_amount_down_3 = yes
+		}
+	}
+
+	focus = {	#英明的领袖
+		id = NCD_the_perfect_leader
+		icon = GFX_NCD_the_perfect_leader
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_volunteer_afterwards_education }
+		relative_position_id = NCD_volunteer_afterwards_education
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#忠诚与兽性测试
+		id = NCD_loyalty_and_bestiality_test
+		icon = GFX_NCD_loyalty_and_bestiality_test
+		x = 0
+		y = 1
+		cost = 2.15
+		
+		available = {
+			has_completed_focus = NCD_standarlized_construction
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_the_perfect_leader }
+		relative_position_id = NCD_the_perfect_leader
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_celydrea_purism_2
+				add_idea = NCD_celydrea_purism_3
+			}
+		}
+	}
+
+	focus = {	#西莉迪亚军国万岁
+		id = NCD_hail_to_the_military_government
+		icon = GFX_NCD_hail_to_the_military_government
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_preconstruct_borders }
+		prerequisite = { focus = NCD_nation_is_watching_you }
+		prerequisite = { focus = NCD_loyalty_and_bestiality_test }
+		relative_position_id = NCD_nation_is_watching_you
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_training_laws_up = yes
+			country_event = NCD.52
+		}
+	}
+
+	focus = {	#建立工业垄断企业
+		id = NCD_establish_monopoly_industries
+		icon = GFX_NCD_establish_monopoly_industries
+		x = 3
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		available = {
+			num_of_military_factories > 3
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_now_the_army_takes_over }
+		relative_position_id = NCD_now_the_army_takes_over
+		#mutually_exclusive = { focus =  }
+
+		select_effect = {
+			add_timed_idea = {
+				idea = NCD_madnes_of_string_puppets
+				days = 30
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_establish_monopoly_industries_tt
+		}
+	}
+
+	focus = {	#生活用品国家计划
+		id = NCD_national_plan_for_consumer_goods
+		icon = GFX_NCD_national_plan_for_consumer_goods
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_establish_monopoly_industries }
+		relative_position_id = NCD_establish_monopoly_industries
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_oligopolistic_industry
+		}
+	}
+	
+	focus = {	#一切都为战争服务！
+		id = NCD_everything_for_war
+		icon = GFX_NCD_everything_for_war
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_national_plan_for_consumer_goods }
+		relative_position_id = NCD_national_plan_for_consumer_goods
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_oligopolistic_industry
+				add_idea = NCD_complete_war_industries_1
+			}
+		}
+	}
+
+	focus = {	#驱逐腐败的科学家
+		id = NCD_expel_corrupted_scientists
+		icon = GFX_NCD_expel_corrupted_scientists
+		x = -1
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_everything_for_war }
+		relative_position_id = NCD_everything_for_war
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_complete_war_industries_1
+				add_idea = NCD_complete_war_industries_2
+			}
+		}
+	}
+
+	focus = {	#魔晶矿合成毒气
+		id = NCD_magic_crystal_to_synthesis_gas
+		icon = GFX_NCD_magic_crystal_to_synthesis_gas
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_expel_corrupted_scientists }
+		relative_position_id = NCD_expel_corrupted_scientists
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_magic_crystal_to_synthesis_gas_tt
+		}
+	}
+
+	focus = {	#前线魔法辅助部队
+		id = NCD_frontline_magician_supporter
+		icon = GFX_NCD_frontline_magician_supporter
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_magic_crystal_to_synthesis_gas }
+		relative_position_id = NCD_magic_crystal_to_synthesis_gas
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_magic_war_plan_1
+		}
+	}
+
+	focus = {	#国家钢铁公司扩张
+		id = NCD_national_steel_company_expansion
+		icon = GFX_NCD_national_steel_company_expansion
+		x = 1
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_everything_for_war }
+		relative_position_id = NCD_everything_for_war
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 118
+			}
+			add_resource = {
+				type = tungsten
+				amount = 5
+				state = 118
+			}
+		}
+	}
+
+	focus = {	#陆军装备批量简化
+		id = NCD_army_equipment_simplified
+		icon = GFX_NCD_army_equipment_simplified
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+			has_completed_focus = NCD_frontline_magician_supporter
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_national_steel_company_expansion }
+		relative_position_id = NCD_national_steel_company_expansion
+		#mutually_exclusive = { focus =  }
+
+		select_effect = {
+			add_timed_idea = {
+				idea = NCD_changing_production_line
+				days = 30
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_army_equipment_simplified_tt
+			swap_ideas = {
+				remove_idea = NCD_magic_war_plan_1
+				add_idea = NCD_magic_war_plan_2
+			}
+		}
+	}
+
+	focus = {	#魔法理论科学窃取
+		id = NCD_magical_theory_stealing
+		icon = GFX_NCD_magical_theory_stealing
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_army_equipment_simplified }
+		relative_position_id = NCD_army_equipment_simplified
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 35
+			add_tech_bonus = {
+				name = NCD_magical_theory_stealing
+				category = secret_weapons
+				bonus = 0.5
+				uses = 2
+			}
+		}
+	}
+
+	focus = {	#魔法敢死队
+		id = NCD_magic_daredevil
+		icon = GFX_NCD_magic_daredevil
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_frontline_magician_supporter }
+		prerequisite = { focus = NCD_magical_theory_stealing }
+		relative_position_id = NCD_frontline_magician_supporter
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_magic_war_plan_2
+				add_idea = NCD_magic_war_plan_3
+			}
+		}
+	}
+
+	focus = {	#先手掐灭火苗
+		id = NCD_put_down_the_fire
+		icon = GFX_NCD_put_down_the_fire
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_hail_to_the_military_government }
+		prerequisite = { focus = NCD_magic_daredevil }
+		relative_position_id = NCD_hail_to_the_military_government
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			declare_war_on = {
+				target = CLD
+				type = annex_everything
+			}
+			add_war_support = 0.05
+			mark_focus_tree_layout_dirty = yes
+			CLD = { mark_focus_tree_layout_dirty = yes }
+		}
+	}
+
+	#战时
+
+	focus = {	#战争行，故园离
+		id = NCD_war_goes_on
+		icon = GFX_NCD_war_goes_on
+		x = 0
+		y = 1
+		cost = 2.2
+
+		allow_branch = { has_completed_focus = NCD_put_down_the_fire }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NCD.100
+		}
+	}
+
+	focus = {	#理想化新闻播报
+		id = NCD_idealised_newscasts
+		icon = GFX_NCD_idealised_newscasts
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			if = {
+				limit = { is_ai = no }
+				has_political_power > 49
+			}
+		}
+		#cancel_if_invalid = yes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_war_goes_on }
+		relative_position_id = NCD_war_goes_on
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_radio_broadcast_station
+			unlock_decision_tooltip = NCD_cancel_propaganda
+			unlock_decision_tooltip = NCD_bring_back_propaganda
+		}
+	}
+
+	focus = {	#完善工业的所谓保障
+		id = NCD_try_protect_industry
+		icon = GFX_NCD_try_protect_industry
+		x = -5
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_idealised_newscasts }
+		relative_position_id = NCD_idealised_newscasts
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NCD_industrial_supervisory_team
+				days = 60
+			}
+		}
+	}
+
+	focus = {	#为虚生之龌龊
+		id = NCD_despicable_as_an_imaginary_life
+		icon = GFX_NCD_despicable_as_an_imaginary_life
+		x = 0
+		y = 2
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_try_protect_industry }
+		relative_position_id = NCD_try_protect_industry
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {	#统一工民生活管理
+		id = NCD_unify_lives_of_workers_and_civilians
+		icon = GFX_NCD_unify_lives_of_workers_and_civilians
+		x = 0
+		y = 2
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_despicable_as_an_imaginary_life }
+		relative_position_id = NCD_despicable_as_an_imaginary_life
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			120 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_command_power = 10
+		}
+	}
+
+	focus = {	#血色桃，焦尸海
+		id = NCD_bloody_peach_and_bodies
+		icon = GFX_NCD_bloody_peach_and_bodies
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_idealised_newscasts }
+		relative_position_id = NCD_idealised_newscasts
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = NCD_interal_conflicts
+			NCD_interal_conflicts_init = yes
+		}
+	}
+
+	focus = {	#决策层有限度合作
+		id = NCD_limited_coop_within_leaders
+		icon = GFX_NCD_limited_coop_within_leaders
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_bloody_peach_and_bodies }
+		relative_position_id = NCD_bloody_peach_and_bodies
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = NCD_limited_coop_within_leaders
+				bonus = 0.5
+				uses = 1
+				category = infantry_equipments
+			}
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 2
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+
+	focus = {	#与恶魔的交易
+		id = NCD_coop_with_demon
+		icon = GFX_NCD_coop_with_demon
+		x = -2
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_limited_coop_within_leaders }
+		relative_position_id = NCD_limited_coop_within_leaders
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_2
+				value = 2.5
+				tooltip = NCD_interal_conflicts_var_1_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+
+			unlock_decision_tooltip = NCD_request_food_fund
+			unlock_decision_tooltip = NCD_request_mil_support
+			unlock_decision_tooltip = NCD_mons_agreement
+		}
+	}
+
+	focus = {	#处理中部饥荒
+		id = NCD_address_middle_famine
+		icon = GFX_NCD_address_middle_famine
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_idea = NCD_hunger_everywhere_better
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_coop_with_demon }
+		relative_position_id = NCD_coop_with_demon
+		#mutually_exclusive = { focus =  }
+
+		select_effect = {
+			add_timed_idea = {
+				idea = NCD_famine_programme
+				days = 15
+			}
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = -1
+			}
+			remove_ideas = NCD_hunger_everywhere_better
+		}
+	}
+
+	focus = {	#扩大民用工厂建设
+		id = NCD_expand_cic_const
+		icon = GFX_NCD_expand_cic_const
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_address_middle_famine }
+		relative_position_id = NCD_address_middle_famine
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_2
+				value = 10
+				tooltip = NCD_interal_conflicts_var_1_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+
+			add_timed_idea = {
+				idea = NCD_uk_adds_up
+				days = 120
+			}
+		}
+	}
+
+	focus = {	#采纳稳妥意见
+		id = NCD_adopt_sound_advice
+		icon = GFX_NCD_adopt_sound_advice
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_limited_coop_within_leaders }
+		relative_position_id = NCD_limited_coop_within_leaders
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_3
+				value = 2.5
+				tooltip = NCD_interal_conflicts_var_3_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+			
+			custom_effect_tooltip = NCD_adopt_sound_advice_tt
+		}
+	}
+
+	focus = {	#处理军队腐败
+		id = NCD_take_care_mil_cor
+		icon = GFX_NCD_take_care_mil_cor
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_adopt_sound_advice }
+		relative_position_id = NCD_adopt_sound_advice
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NCD_united_anti_cor_act
+				days = 45
+			}
+		}
+	}
+
+	focus = {	#恢复部分民主
+		id = NCD_regain_partial_dem
+		icon = GFX_NCD_regain_partial_dem
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_take_care_mil_cor }
+		relative_position_id = NCD_take_care_mil_cor
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = NCD_regain_partial_dem_tt
+		}
+	}
+
+	focus = {	#镇压新联合阵线
+		id = NCD_suppress_new_united_front
+		icon = GFX_NCD_suppress_new_united_front
+		x = 2
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_limited_coop_within_leaders }
+		relative_position_id = NCD_limited_coop_within_leaders
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -5
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+			
+			custom_effect_tooltip = NCD_suppress_new_united_front_tt
+		}
+	}
+
+	focus = {	#人民武装运动
+		id = NCD_people_arm_mov
+		icon = GFX_NCD_people_arm_mov
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_suppress_new_united_front }
+		relative_position_id = NCD_suppress_new_united_front
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = -1
+			}
+			division_template = {
+				name = "人民武装"
+				regiments = {
+					light_infantry = { x = 0 y = 0 }
+					light_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 1 y = 0 }
+					light_infantry = { x = 1 y = 1 }
+				}
+			}
+			118 = {
+				create_unit = {
+					division = "name = \"人民武装\" division_template = \"人民武装\" start_experience_factor = 0.1 start_equipment_factor = 0.75"  
+					owner = NCD
+					prioritize_location = 1576
+					count = 2
+				}
+			}
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_2
+				value = -10
+				tooltip = NCD_interal_conflicts_var_2_tt
+			}
+			NCD_interal_conflicts_var_clamp_effect = yes
+		}
+	}
+
+	focus = {	#强迫流浪者充军
+		id = NCD_forced_enlistment_of_vagrants
+		icon = GFX_NCD_forced_enlistment_of_vagrants
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_people_arm_mov }
+		relative_position_id = NCD_people_arm_mov
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			CLD = { remove_ideas = NCD_chaos_near_border }
+			add_ideas = NCD_properly_settled_mobs
+		}
+	}
+
+	focus = {	#建立前线督战队
+		id = NCD_form_frontline_supervisory_unit
+		icon = GFX_NCD_form_frontline_supervisory_unit
+		x = 5
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_idealised_newscasts }
+		relative_position_id = NCD_idealised_newscasts
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NCD_division_of_the_eagle_lion_cross
+		}
+	}
+	
+	focus = {	#为国死之荣光
+		id = NCD_glory_of_sacrifice
+		icon = GFX_NCD_glory_of_sacrifice
+		x = 0
+		y = 2
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_form_frontline_supervisory_unit }
+		relative_position_id = NCD_form_frontline_supervisory_unit
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_division_of_the_eagle_lion_cross
+				add_idea = NCD_division_of_the_eagle_lion_cross_2
+			}
+		}
+	}
+
+	focus = {	#终止家属书信联系
+		id = NCD_end_soldier_communication
+		icon = GFX_NCD_end_soldier_communication
+		x = 0
+		y = 2
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_glory_of_sacrifice }
+		relative_position_id = NCD_glory_of_sacrifice
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NCD_division_of_the_eagle_lion_cross_2
+				add_idea = NCD_division_of_the_eagle_lion_cross_3
+			}
+		}
+	}
+
+	focus = {	#光荣回归西莉迪亚
+		id = NCD_glory_back_to_cd
+		icon = GFX_NCD_glory_back_to_cd
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			CLD = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_unify_lives_of_workers_and_civilians }
+		prerequisite = { focus = NCD_expand_cic_const }
+		prerequisite = { focus = NCD_regain_partial_dem }
+		prerequisite = { focus = NCD_forced_enlistment_of_vagrants }
+		prerequisite = { focus = NCD_end_soldier_communication }
+		relative_position_id = NCD_regain_partial_dem
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			set_cosmetic_tag = NCD_militarism_nation_plus_tag
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+		}
+	}
+
+}

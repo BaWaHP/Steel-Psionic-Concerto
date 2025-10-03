@@ -1,0 +1,78 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_RSB_ortland_karasasin"
+		texturefile = "gfx/leaders/RSB/ortland_karasasin.png"
+	}
+	spriteType = {
+		name = "GFX_RSB_val_spade"
+		texturefile = "gfx/leaders/RSB/val_spade.png"
+	}
+	spriteType = {
+		name = "GFX_RSB_sugawaki"
+		texturefile = "gfx/leaders/RSB/sugawaki.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_RSB_lacombe_carasasin"
+		texturefile = "gfx/advisors/RSB/lacombe_carasasin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_yamit_kstrand"
+		texturefile = "gfx/advisors/RSB/yamit_kstrand.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_YaoJiulin"
+		texturefile = "gfx/advisors/RSB/YaoJiulin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_val_spade"
+		texturefile = "gfx/advisors/RSB/val_spade.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_sugawaki"
+		texturefile = "gfx/advisors/RSB/sugawaki.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_RSB_the_etropolis"
+		texturefile = "gfx/interface/ideas/RSB_the_etropolis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_new_born_industrial_zone"
+		texturefile = "gfx/interface/ideas/RSB_new_born_industrial_zone.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSB_trade_key_point"
+		texturefile = "gfx/interface/ideas/RSB_trade_key_point.png"
+	}
+	###GUI###
+	spriteType = {
+		name = "GFX_RSB_financial_budget_bar_bg"
+		textureFile = "gfx/interface/occupation/collaboration_bar_large_bg.dds"
+	}
+	progressbartype = {
+		name = "GFX_RSB_financial_budget_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/occupation/collaboration_bar_large.dds"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 249 y = 21 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_RSB_asset_bar_bg"
+		textureFile = "gfx/interface/occupation/collaboration_bar_large_bg.dds"
+	}
+	progressbartype = {
+		name = "GFX_RSB_asset_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/occupation/collaboration_bar_large.dds"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 249 y = 21 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

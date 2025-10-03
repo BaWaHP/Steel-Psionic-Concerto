@@ -1,0 +1,45 @@
+units = {
+	fleet = {
+		name = "鲁萨尔北方舰队"
+		naval_base = 4613
+		task_force = {
+			name = "第一特遣舰队"
+			location = 4613
+			ship = { name = "D13" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D14" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D15" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D16" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D17" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D19" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+		}
+	}
+	fleet = {
+		name = "鲁萨尔南方舰队"
+		naval_base = 5795
+		task_force = {
+			name = "第二特遣舰队"
+			location = 5795
+			ship = { name = "D1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D7" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D8" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D9" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D10" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D11" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+			ship = { name = "D12" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = RSU version_name = "水獭级潜艇"} } }
+
+			ship = { name = "沃斯派特号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSU version_name = "荷兹舞步级"} } }
+			ship = { name = "互助号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSU version_name = "荷兹舞步级"} } }
+			ship = { name = "科瑞戈号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSU version_name = "荷兹舞步级"} } }
+			ship = { name = "内斯底号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSU version_name = "荷兹舞步级"} } }
+			ship = { name = "独伊炽号" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSU version_name = "荷兹舞步级"} } }
+
+			ship = { name = "天籁号" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSU version_name = "交响乐级巡洋舰"} } }
+		}
+	}
+}

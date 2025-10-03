@@ -1,0 +1,4355 @@
+ZHE_interest_group_decision_category = {
+	ZHE_coup_time_count = { 		#政变
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			NOT = {
+				has_country_flag = ZHE_no_more_coup
+			}
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 1
+
+		timeout_effect = {  
+			activate_mission = ZHE_coup_time_count
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_1
+					}
+					NOT = {
+						has_government = conservative_republican
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@conservative_republican
+						compare = less_than
+					}
+				}
+				country_event = ZHE.1000
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_2
+					}
+					NOT = {
+						has_government = paternal_autocrat
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@paternal_autocrat
+						compare = less_than
+					}
+				}
+				country_event = ZHE.1001
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_3
+					}
+					NOT = {
+						has_government = liberal_republican
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@liberal_republican
+						compare = less_than
+					}
+				}
+				country_event = ZHE.1002
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_4
+					}
+					NOT = {
+						has_government = worldunion_democrat
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@worldunion_democrat
+						compare = less_than
+					}
+				}
+				country_event = ZHE.1003
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_5
+					}
+					NOT = {
+						has_government = pioneer_communism
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@pioneer_communism
+						compare = less_than
+					}
+				}
+				country_event = ZHE.1004
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_failed_to_coup_6
+					}
+					NOT = {
+						has_government = authoritarian_republican
+					}
+					check_variable = {
+						var = party_popularity@ruling_party
+						value = party_popularity@authoritarian_republican
+						compare = less_than
+					}
+				}
+				country_event =	ZHE.1005
+			}
+		}
+	}
+	ZHE_coup_cooling_down_1 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_1
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_1
+		}
+	}
+	ZHE_coup_cooling_down_2 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_2
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_2
+		}
+	}
+	ZHE_coup_cooling_down_3 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_3
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_3
+		}
+	}
+	ZHE_coup_cooling_down_4 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_4
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_4
+		}
+	}
+	ZHE_coup_cooling_down_5 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_5
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_5
+		}
+	}
+	ZHE_coup_cooling_down_6 = { 		#政变冷却
+		allowed = { tag = ZHE }
+		available = {
+			always = no
+		}
+		visible = {
+			is_debug = yes
+		}
+		activation = {
+			has_country_flag = ZHE_failed_to_coup_6
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {  
+			clr_country_flag = ZHE_failed_to_coup_6
+		}
+	}
+	ZHE_change_payment_mode = {		#切换支付的方式
+		icon = generic_civil_support
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ZHE_interest_group_payment_mode_change
+					}
+				}
+				set_country_flag = ZHE_interest_group_payment_mode_change
+			}
+			else = {
+				clr_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+	}
+	ZHE_maintain_board_authority_cp = {		#维持董事会权威
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.05
+			}
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_maintain_board_authority_pp = {		#维持董事会权威
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.05
+			}
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_negotiate_with_elite_club_cp = {		#与会菁英会洽谈
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_1 = 1 }
+			custom_effect_tooltip = ZHE_negotiate_with_elite_club_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_negotiate_with_elite_club_pp = {		#与会菁英会洽谈
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_1 = 1 }
+			custom_effect_tooltip = ZHE_negotiate_with_elite_club_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_pay_to_iron_triangle_cp = {		#拨付铁三角经费
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_2 = 1 }
+			custom_effect_tooltip = ZHE_pay_to_iron_triangle_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_pay_to_iron_triangle_pp = {		#拨付铁三角经费
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_2 = 1 }
+			custom_effect_tooltip = ZHE_pay_to_iron_triangle_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_help_reclamation_department_cp = {		#打点垦殖系上下
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_3 = 1 }
+			custom_effect_tooltip = ZHE_help_reclamation_department_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_help_reclamation_department_pp = {		#打点垦殖系上下
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_3 = 1 }
+			custom_effect_tooltip = ZHE_help_reclamation_department_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_support_concentric_knot_proposition_cp = {		#支持同心结主张
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_4 = 1 }
+			custom_effect_tooltip = ZHE_support_concentric_knot_proposition_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_support_concentric_knot_proposition_pp = {		#支持同心结主张
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_4 = 1 }
+			custom_effect_tooltip = ZHE_support_concentric_knot_proposition_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_fund_pioneers_research_cp = {		#资助先锋派研究
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ZHE_interest_group_payment_mode_change
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_20
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_5 = 1 }
+			custom_effect_tooltip = ZHE_fund_pioneers_research_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_fund_pioneers_research_pp = {		#资助先锋派研究
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			has_country_flag = ZHE_interest_group_payment_mode_change
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_to_variable = { ZHE_faction_atitude_5 = 1 }
+			custom_effect_tooltip = ZHE_fund_pioneers_research_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+}
+
+ZHE_social_experiment_decision_category = {
+	ZHE_adopt_proposal_from_elite_club = {		#采纳菁英会方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count = -1 }
+			add_to_variable = { ZHE_faction_atitude_5 = -1 }
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_elite_club_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_iron_triangle = {		#采纳铁三角方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count = -1 }
+			add_to_variable = { ZHE_faction_atitude_1 = -1 }
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_iron_triangle_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_reclamation_department = {		#采纳垦殖系方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count = -1 }
+			add_to_variable = { ZHE_faction_atitude_4 = -1 }
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_reclamation_department_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_solidarity_knot = {		#采纳同心结方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count = -1 }
+			add_to_variable = { ZHE_faction_atitude_2 = -1 }
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_solidarity_knot_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_pioneer_faction = {		#采纳先锋派方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count > 0
+				}
+			}
+		}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count = -1 }
+			add_to_variable = { ZHE_faction_atitude_3 = -1 }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_pioneer_faction_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_elite_club_2 = {		#采纳菁英会方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count_2 = -1 }
+			add_to_variable = { ZHE_faction_atitude_5 = -1 }
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade_2 = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_elite_club_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_iron_triangle_2 = {		#采纳铁三角方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count_2 = -1 }
+			add_to_variable = { ZHE_faction_atitude_1 = -1 }
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade_2 = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_iron_triangle_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_reclamation_department_2 = {		#采纳垦殖系方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count_2 = -1 }
+			add_to_variable = { ZHE_faction_atitude_4 = -1 }
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade_2 = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_reclamation_department_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_solidarity_knot_2 = {		#采纳同心结方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count_2 = -1 }
+			add_to_variable = { ZHE_faction_atitude_2 = -1 }
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade_2 = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_solidarity_knot_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+	ZHE_adopt_proposal_from_pioneer_faction_2 = {		#采纳先锋派方的提案
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		visible = {
+			custom_trigger_tooltip = {
+				tooltip = ZHE_adopting_proposal_fnish_stage_1
+				check_variable = {
+					ZHE_social_experiment_decision_count = 0
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_social_experiment_decision_count_2_tr
+				check_variable = {
+					ZHE_social_experiment_decision_count_2 > 0
+				}
+			}
+			date > 1998.12.25 
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_to_variable = { ZHE_social_experiment_decision_count_2 = -1 }
+			add_to_variable = { ZHE_faction_atitude_3 = -1 }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			ZHE_made_in_zhetysu_upgrade_2 = yes
+			custom_effect_tooltip = ZHE_adopt_proposal_from_pioneer_faction_tt
+			ZHE_group_atitude_generic_update = yes
+		}
+	}
+}
+
+ZHE_arms_trading_decision_category = {
+	ZHE_market_input_change_1 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_input_size_1
+			set_country_flag = ZHE_market_input_size_2
+		}
+	}
+	ZHE_market_input_change_2 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_input_size_2
+			set_country_flag = ZHE_market_input_size_3
+		}
+	}
+	ZHE_market_input_change_3 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_input_size_3
+			set_country_flag = ZHE_market_input_size_4
+		}
+	}
+	ZHE_market_input_change_4 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_input_size_4
+			set_country_flag = ZHE_market_input_size_1
+		}
+	}
+	ZHE_put_police_equip_1 = {		#投放镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				police_equipment > 499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = -500 }
+			add_to_variable = { ZHE_arms_market_police_equipment = 500 }
+		}
+	}
+	ZHE_put_police_equip_2 = {		#投放镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				police_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_police_equipment = 1000 }
+		}
+	}
+	ZHE_put_police_equip_3 = {		#投放镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				police_equipment > 2499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = -2500 }
+			add_to_variable = { ZHE_arms_market_police_equipment = 2500 }
+		}
+	}
+	ZHE_put_police_equip_4 = {		#投放镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				police_equipment > 4999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = -5000 }
+			add_to_variable = { ZHE_arms_market_police_equipment = 5000 }
+		}
+	}
+	ZHE_put_melee_equip_1 = {		#投放近战装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				melee_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_melee_equipment = 200 }
+		}
+	}
+	ZHE_put_melee_equip_2 = {		#投放近战装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				melee_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_melee_equipment = 400 }
+		}
+	}
+	ZHE_put_melee_equip_3 = {		#投放近战装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				melee_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_melee_equipment = 1000 }
+		}
+	}
+	ZHE_put_melee_equip_4 = {		#投放近战装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				melee_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_melee_equipment = 2000 }
+		}
+	}
+	ZHE_put_infantry_equip_1 = {		#投放步兵装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
+			add_to_variable = { ZHE_arms_market_infantry_equipment = 500 }
+		}
+	}
+	ZHE_put_infantry_equip_2 = {		#投放步兵装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_infantry_equipment = 1000 }
+		}
+	}
+	ZHE_put_infantry_equip_3 = {		#投放步兵装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				infantry_equipment > 2499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -2500 }
+			add_to_variable = { ZHE_arms_market_infantry_equipment = 2500 }
+		}
+	}
+	ZHE_put_infantry_equip_4 = {		#投放步兵装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -5000 }
+			add_to_variable = { ZHE_arms_market_infantry_equipment = 5000 }
+		}
+	}
+	ZHE_put_uniform_equip_1 = {		#投放步兵装具
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				uniform_equipment > 499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = -500 }
+			add_to_variable = { ZHE_arms_market_uniform_equipment = 500 }
+		}
+	}
+	ZHE_put_uniform_equip_2 = {		#投放步兵装具
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				uniform_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_uniform_equipment = 1000 }
+		}
+	}
+	ZHE_put_uniform_equip_3 = {		#投放步兵装具
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				uniform_equipment > 2499
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = -2500 }
+			add_to_variable = { ZHE_arms_market_uniform_equipment = 2500 }
+		}
+	}
+	ZHE_put_uniform_equip_4 = {		#投放步兵装具
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				uniform_equipment > 4999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = -5000 }
+			add_to_variable = { ZHE_arms_market_uniform_equipment = 5000 }
+		}
+	}
+	ZHE_put_truck_1 = {		#投放卡车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				motorized_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_trucks = 200 }
+		}
+	}
+	ZHE_put_truck_2 = {		#投放卡车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				motorized_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_trucks = 400 }
+		}
+	}
+	ZHE_put_truck_3 = {		#投放卡车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				motorized_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_trucks = 1000 }
+		}
+	}
+	ZHE_put_truck_4 = {		#投放卡车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				motorized_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_trucks = 2000 }
+		}
+	}
+	ZHE_put_mechanized_equipment_1 = {		#投放机械化装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				mechanized_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_mechanized_equipment = 200 }
+		}
+	}
+	ZHE_put_mechanized_equipment_2 = {		#投放机械化装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				mechanized_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_mechanized_equipment = 400 }
+		}
+	}
+	ZHE_put_mechanized_equipment_3 = {		#投放机械化装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				mechanized_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_mechanized_equipment = 1000 }
+		}
+	}
+	ZHE_put_mechanized_equipment_4 = {		#投放机械化装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				mechanized_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_mechanized_equipment = 2000 }
+		}
+	}
+	ZHE_put_armored_car_equipment_1 = {		#投放装甲车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				armored_car_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_armored_car = 200 }
+		}
+	}
+	ZHE_put_armored_car_equipment_2 = {		#投放装甲车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				armored_car_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_armored_car = 400 }
+		}
+	}
+	ZHE_put_armored_car_equipment_3 = {		#投放装甲车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				armored_car_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_armored_car = 1000 }
+		}
+	}
+	ZHE_put_armored_car_equipment_4 = {		#投放装甲车
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				armored_car_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_armored_car = 2000 }
+		}
+	}
+	ZHE_put_special_forces_equipment_1 = {		#投放特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				special_forces_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_special_forces = 200 }
+		}
+	}
+	ZHE_put_special_forces_equipment_2 = {		#投放特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				special_forces_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_special_forces = 400 }
+		}
+	}
+	ZHE_put_special_forces_equipment_3 = {		#投放特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				special_forces_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_special_forces = 1000 }
+		}
+	}
+	ZHE_put_special_forces_equipment_4 = {		#投放特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				special_forces_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_special_forces = 2000 }
+		}
+	}
+	ZHE_put_support_equipment_1 = {		#投放支援装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				support_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_support_equipment = 200 }
+		}
+	}
+	ZHE_put_support_equipment_2 = {		#投放支援装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				support_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_support_equipment = 400 }
+		}
+	}
+	ZHE_put_support_equipment_3 = {		#投放支援装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				support_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_support_equipment = 1000 }
+		}
+	}
+	ZHE_put_support_equipment_4 = {		#投放支援装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				support_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_support_equipment = 2000 }
+		}
+	}
+	ZHE_put_caster_equipment_1 = {		#投放魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				caster_equipment > 199
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = -200 }
+			add_to_variable = { ZHE_arms_market_caster_equipment = 200 }
+		}
+	}
+	ZHE_put_caster_equipment_2 = {		#投放魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				caster_equipment > 399
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = -400 }
+			add_to_variable = { ZHE_arms_market_caster_equipment = 400 }
+		}
+	}
+	ZHE_put_caster_equipment_3 = {		#投放魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				caster_equipment > 999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = -1000 }
+			add_to_variable = { ZHE_arms_market_caster_equipment = 1000 }
+		}
+	}
+	ZHE_put_caster_equipment_4 = {		#投放魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				caster_equipment > 1999
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = -2000 }
+			add_to_variable = { ZHE_arms_market_caster_equipment = 2000 }
+		}
+	}
+	ZHE_put_convoy_1 = {		#投放运输船
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				convoy > 9
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = -10 }
+			add_to_variable = { ZHE_arms_market_convoys = 10 }
+		}
+	}
+	ZHE_put_convoy_2 = {		#投放运输船
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				convoy > 19
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = -20 }
+			add_to_variable = { ZHE_arms_market_convoys = 20 }
+		}
+	}
+	ZHE_put_convoy_3 = {		#投放运输船
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				convoy > 49
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = -50 }
+			add_to_variable = { ZHE_arms_market_convoys = 50 }
+		}
+	}
+	ZHE_put_convoy_4 = {		#投放运输船
+		icon = generic_civil_support
+
+		available = {
+			tag = ZHE
+			has_equipment = {
+				convoy > 99
+			}
+		}
+
+		visible = {
+			tag = ZHE
+			has_country_flag = ZHE_market_input_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = -100 }
+			add_to_variable = { ZHE_arms_market_convoys = 100 }
+		}
+	}
+	ZHE_market_purchase_change_1 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				tag = ZHE
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_purchase_size_1
+			set_country_flag = ZHE_market_purchase_size_2
+		}
+	}
+	ZHE_market_purchase_change_2 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				tag = ZHE
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_purchase_size_2
+			set_country_flag = ZHE_market_purchase_size_3
+		}
+	}
+	ZHE_market_purchase_change_3 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				tag = ZHE
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_purchase_size_3
+			set_country_flag = ZHE_market_purchase_size_4
+		}
+	}
+	ZHE_market_purchase_change_4 = {		#切换投放市场的装备数量
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				tag = ZHE
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			clr_country_flag = ZHE_market_purchase_size_4
+			set_country_flag = ZHE_market_purchase_size_1
+		}
+	}
+	ZHE_purchase_police_equipment_1 = {		#购买镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_police_equipment > 499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = 500 producer = ZHE }
+			ZHE = {
+				add_political_power = 25
+				add_to_variable = { ZHE_arms_market_police_equipment = -500 }
+			}
+		}
+	}
+	ZHE_purchase_police_equipment_2 = {		#购买镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_police_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 50
+				add_to_variable = { ZHE_arms_market_police_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_police_equipment_3 = {		#购买镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_police_equipment > 2499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 100
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = 2500 producer = ZHE }
+			ZHE = {
+				add_political_power = 100
+				add_to_variable = { ZHE_arms_market_police_equipment = -2500 }
+			}
+		}
+	}
+	ZHE_purchase_police_equipment_4 = {		#购买镇暴装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_police_equipment > 4999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 250
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = police_equipment amount = 5000 producer = ZHE }
+			ZHE = {
+				add_political_power = 250
+				add_to_variable = { ZHE_arms_market_police_equipment = -5000 }
+			}
+		}
+	}
+	ZHE_purchase_melee_equipment_1 = {		#购买近战装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_melee_equipment > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 50
+				add_to_variable = { ZHE_arms_market_melee_equipment = -200 }
+			}
+		}
+	}
+	ZHE_purchase_melee_equipment_2 = {		#购买近战装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_melee_equipment > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 100
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 100
+				add_to_variable = { ZHE_arms_market_melee_equipment = -400 }
+			}
+		}
+	}
+	ZHE_purchase_melee_equipment_3 = {		#购买近战装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_melee_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 250
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 250
+				add_to_variable = { ZHE_arms_market_melee_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_melee_equipment_4 = {		#购买近战装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_melee_equipment > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 500
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = melee_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 500
+				add_to_variable = { ZHE_arms_market_melee_equipment = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_infantry_equipment_1 = {		#购买步兵装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_infantry_equipment > 499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 500 producer = ZHE }
+			ZHE = {
+				add_political_power = 30
+				add_to_variable = { ZHE_arms_market_infantry_equipment = -500 }
+			}
+		}
+	}
+	ZHE_purchase_infantry_equipment_2 = {		#购买步兵装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_infantry_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 60
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 60
+				add_to_variable = { ZHE_arms_market_infantry_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_infantry_equipment_3 = {		#购买步兵装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_infantry_equipment > 2499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 120
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = ZHE }
+			ZHE = {
+				add_political_power = 120
+				add_to_variable = { ZHE_arms_market_infantry_equipment = -2500 }
+			}
+		}
+	}
+	ZHE_purchase_infantry_equipment_4 = {		#购买步兵装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_infantry_equipment > 4999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 300
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = ZHE }
+			ZHE = {
+				add_political_power = 300
+				add_to_variable = { ZHE_arms_market_infantry_equipment = -5000 }
+			}
+		}
+	}
+	ZHE_purchase_uniform_equipment_1 = {		#购买步兵装具
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_uniform_equipment > 499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = 500 producer = ZHE }
+			ZHE = {
+				add_political_power = 30
+				add_to_variable = { ZHE_arms_market_uniform_equipment = -500 }
+			}
+		}
+	}
+	ZHE_purchase_uniform_equipment_2 = {		#购买步兵装具
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_uniform_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 60
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 60
+				add_to_variable = { ZHE_arms_market_uniform_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_uniform_equipment_3 = {		#购买步兵装具
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_uniform_equipment > 2499
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 120
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = 2500 producer = ZHE }
+			ZHE = {
+				add_political_power = 120
+				add_to_variable = { ZHE_arms_market_uniform_equipment = -2500 }
+			}
+		}
+	}
+	ZHE_purchase_uniform_equipment_4 = {		#购买步兵装具
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_uniform_equipment > 4999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 300
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = uniform_equipment amount = 5000 producer = ZHE }
+			ZHE = {
+				add_political_power = 300
+				add_to_variable = { ZHE_arms_market_uniform_equipment = -5000 }
+			}
+		}
+	}
+	ZHE_purchase_truck_1 = {		#购买卡车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_trucks > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 35
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 35
+				add_to_variable = { ZHE_arms_market_trucks = -200 }
+			}
+		}
+	}
+	ZHE_purchase_truck_2 = {		#购买卡车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_trucks > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 70
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 70
+				add_to_variable = { ZHE_arms_market_trucks = -400 }
+			}
+		}
+	}
+	ZHE_purchase_truck_3 = {		#购买卡车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_trucks > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 175
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 175
+				add_to_variable = { ZHE_arms_market_trucks = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_truck_4 = {		#购买卡车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_trucks > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 350
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 350
+				add_to_variable = { ZHE_arms_market_trucks = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_mechanized_equipment_1 = {		#购买机械化装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_mechanized_equipment > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 135
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 135
+				add_to_variable = { ZHE_arms_market_mechanized_equipment = -200 }
+			}
+		}
+	}
+	ZHE_purchase_mechanized_equipment_2 = {		#购买机械化装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_mechanized_equipment > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 270
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 270
+				add_to_variable = { ZHE_arms_market_mechanized_equipment = -400 }
+			}
+		}
+	}
+	ZHE_purchase_mechanized_equipment_3 = {		#购买机械化装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_mechanized_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 675
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 675
+				add_to_variable = { ZHE_arms_market_mechanized_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_mechanized_equipment_4 = {		#购买机械化装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_mechanized_equipment > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 1350
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = mechanized_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 1350
+				add_to_variable = { ZHE_arms_market_mechanized_equipment = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_armored_car_equipment_1 = {		#购买装甲车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_armored_car > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 80
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 80
+				add_to_variable = { ZHE_arms_market_armored_car = -200 }
+			}
+		}
+	}
+	ZHE_purchase_armored_car_equipment_2 = {		#购买装甲车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_armored_car > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 160
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 160
+				add_to_variable = { ZHE_arms_market_armored_car = -400 }
+			}
+		}
+	}
+	ZHE_purchase_armored_car_equipment_3 = {		#购买装甲车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_armored_car > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 400
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 400
+				add_to_variable = { ZHE_arms_market_armored_car = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_armored_car_equipment_4 = {		#购买装甲车
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_armored_car > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 800
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = armored_car_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 800
+				add_to_variable = { ZHE_arms_market_armored_car = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_special_forces_equipment_1 = {		#购买特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_special_forces > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 40
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 40
+				add_to_variable = { ZHE_arms_market_special_forces = -200 }
+			}
+		}
+	}
+	ZHE_purchase_special_forces_equipment_2 = {		#购买特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_special_forces > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 80
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 80
+				add_to_variable = { ZHE_arms_market_special_forces = -400 }
+			}
+		}
+	}
+	ZHE_purchase_special_forces_equipment_3 = {		#购买特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_special_forces > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 200
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 200
+				add_to_variable = { ZHE_arms_market_special_forces = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_special_forces_equipment_4 = {		#购买特种部队装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_special_forces > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 400
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = special_forces_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 400
+				add_to_variable = { ZHE_arms_market_special_forces = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_support_equipment_1 = {		#购买支援装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_support_equipment > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 55
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 55
+				add_to_variable = { ZHE_arms_market_support_equipment = -200 }
+			}
+		}
+	}
+	ZHE_purchase_support_equipment_2 = {		#购买支援装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_support_equipment > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 110
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 110
+				add_to_variable = { ZHE_arms_market_support_equipment = -400 }
+			}
+		}
+	}
+	ZHE_purchase_support_equipment_3 = {		#购买支援装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_support_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 275
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 275
+				add_to_variable = { ZHE_arms_market_support_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_support_equipment_4 = {		#购买支援装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_support_equipment > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 550
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 550
+				add_to_variable = { ZHE_arms_market_support_equipment = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_caster_equipment_1 = {		#购买魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_caster_equipment > 199
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 105
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 200 producer = ZHE }
+			ZHE = {
+				add_political_power = 105
+				add_to_variable = { ZHE_arms_market_caster_equipment = -200 }
+			}
+		}
+	}
+	ZHE_purchase_caster_equipment_2 = {		#购买魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_caster_equipment > 399
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 210
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 400 producer = ZHE }
+			ZHE = {
+				add_political_power = 210
+				add_to_variable = { ZHE_arms_market_caster_equipment = -400 }
+			}
+		}
+	}
+	ZHE_purchase_caster_equipment_3 = {		#购买魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_caster_equipment > 999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 525
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 1000 producer = ZHE }
+			ZHE = {
+				add_political_power = 525
+				add_to_variable = { ZHE_arms_market_caster_equipment = -1000 }
+			}
+		}
+	}
+	ZHE_purchase_caster_equipment_4 = {		#购买魔导师装备
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_caster_equipment > 1999
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 1050
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 2000 producer = ZHE }
+			ZHE = {
+				add_political_power = 1050
+				add_to_variable = { ZHE_arms_market_caster_equipment = -2000 }
+			}
+		}
+	}
+	ZHE_purchase_convoy_1 = {		#购买运输船
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_convoys > 9
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_1
+		}
+
+		cost = 45
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy amount = 10 producer = ZHE }
+			ZHE = {
+				add_political_power = 45
+				add_to_variable = { ZHE_arms_market_convoys = -10 }
+			}
+		}
+	}
+	ZHE_purchase_convoy_2 = {		#购买运输船
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_convoys > 19
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_2
+		}
+
+		cost = 90
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = convoy amount = 20 producer = ZHE }
+			ZHE = {
+				add_political_power = 90
+				add_to_variable = { ZHE_arms_market_convoys = -20 }
+			}
+		}
+	}
+	ZHE_purchase_convoy_3 = {		#购买运输船
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_convoys > 49
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_3
+		}
+
+		cost = 225
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 50 producer = ZHE }
+			ZHE = {
+				add_political_power = 225
+				add_to_variable = { ZHE_arms_market_convoys = -50 }
+			}
+		}
+	}
+	ZHE_purchase_convoy_4 = {		#购买运输船
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_war_with = ZHE
+			}
+			custom_trigger_tooltip = {
+				tooltip = ZHE_market_purchase_tr
+				ZHE = {
+					check_variable = {
+						ZHE_arms_market_convoys > 99
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ZHE_market_purchase_size_4
+		}
+
+		cost = 250
+		fire_only_once = no
+		days_re_enable = 0
+
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = caster_equipment amount = 100 producer = ZHE }
+			ZHE = {
+				add_political_power = 250
+				add_to_variable = { ZHE_arms_market_convoys = -100 }
+			}
+		}
+	}
+}
+
+ZHE_progressive_disease_decision_category = {
+	ZHE_chronic_inflammation = { 		#慢性炎症
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = ZHE }
+		available = {
+			NOT = { has_war_with = WUN }
+			NOT = { is_subject_of = WUN }
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 85
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			mobilization_speed = -0.1
+			surrender_limit = -0.1
+			drift_defence_factor = -0.1
+			wizard_rules_drift = 0.05
+			religious_extremism_drift = 0.05
+		}
+
+		timeout_effect = {  
+			activate_mission = ZHE_apoptosis
+		}
+	}
+
+	ZHE_apoptosis = { 		#固缩坏死
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = ZHE }
+		available = {
+			NOT = { has_war_with = WUN }
+			NOT = { is_subject_of = WUN }
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 85
+
+		modifier = {
+			consumer_goods_factor = 0.2
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			mobilization_speed = -0.2
+			surrender_limit = -0.2
+			drift_defence_factor = -0.2
+			wizard_rules_drift = 0.05
+			religious_extremism_drift = 0.05
+		}
+
+		timeout_effect = {  
+			activate_mission = ZHE_acute_failure
+		}
+	}
+
+	ZHE_acute_failure = { 		#急性衰竭
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = ZHE }
+		available = {
+			NOT = { has_war_with = WUN }
+			NOT = { is_subject_of = WUN }
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 85
+
+		modifier = {
+			consumer_goods_factor = 0.3
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			mobilization_speed = -0.3
+			surrender_limit = -0.3
+			drift_defence_factor = -0.3
+			wizard_rules_drift = 0.05
+			religious_extremism_drift = 0.05
+		}
+
+		timeout_effect = {  
+			activate_mission = ZHE_hypersensitivity_reaction
+		}
+	}
+
+	ZHE_hypersensitivity_reaction = { 		#超敏反应
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = ZHE }
+		available = {
+			NOT = { has_war_with = WUN }
+			NOT = { is_subject_of = WUN }
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 85
+
+		modifier = {
+			consumer_goods_factor = 0.4
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			mobilization_speed = -0.4
+			surrender_limit = -0.4
+			drift_defence_factor = -0.4
+			wizard_rules_drift = 0.05
+			religious_extremism_drift = 0.05
+		}
+
+		timeout_effect = {  
+			activate_mission = ZHE_clinical_death
+		}
+	}
+
+	ZHE_clinical_death = { 		#临床死亡
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = ZHE }
+		available = {
+			NOT = { has_war_with = WUN }
+			NOT = { is_subject_of = WUN }
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 20
+
+		modifier = {
+			consumer_goods_factor = 0.5
+			stability_weekly = -0.001
+			war_support_weekly = -0.001
+			mobilization_speed = -0.5
+			surrender_limit = -0.5
+			drift_defence_factor = -0.5
+			wizard_rules_drift = 0.05
+			religious_extremism_drift = 0.05
+		}
+
+		timeout_effect = {  
+			country_event = ZHE.1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=288
+	name="STATE_288"
+
+	history={
+		owner = ASR
+		add_core_of = ASR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 4
+		}
+		victory_points = {
+			34 15
+		}
+		victory_points = {
+			6933 8
+		}
+	}
+
+	provinces={
+		34 103 4022 6316 6827 6933 10181 14145 14220 
+	}
+	manpower=880000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

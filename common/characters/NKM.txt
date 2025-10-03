@@ -1,0 +1,24 @@
+characters={
+
+   	NKM_yoshisuke_togo = {		#东乡吉助
+   		name = NKM_yoshisuke_togo
+   		portraits = {
+   			civilian = {
+   				large="GFX_NKM_yoshisuke_togo"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_NKM_yoshisuke_togo"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = NKM_yoshisuke_togo_desc
+   			ideology = oligarchy
+   			traits = { NKM_dude_who_brings_luck }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+}

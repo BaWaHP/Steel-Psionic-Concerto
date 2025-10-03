@@ -1,0 +1,30 @@
+
+state={
+	id=332
+	name="STATE_332"
+
+	resources = {
+		oil = 4
+		steel = 4
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		victory_points = {
+			20322 8
+		}
+	}
+
+	provinces={
+		1659 5708 6700 9179 20260 20283 20321 20322 20326 
+	}
+	manpower = 850000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

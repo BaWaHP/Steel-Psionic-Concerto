@@ -1,0 +1,73 @@
+SPC_generic_sekeleton_decision_category = {
+	NOH_start_civil_war = {		#雀鸟内战
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_251 = yes }
+
+		available = {
+			date > 1999.6.1
+			NOT = {
+				any_enemy_country = {
+					SPC_generic_region_trigger_251 = yes
+				}
+			}
+			any_country = {
+				exists = yes
+				SPC_generic_region_trigger_251 = yes
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			every_country = {
+				limit = { SPC_generic_region_trigger_251 = yes }
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+SPC_generic_national_reunification_decision_category = {
+	NOH_reunification_decision = {		#雀鸟统一决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_251 = yes }
+
+		available = {
+			SPC_generic_region_trigger_251_control = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 200
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_251
+				if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_core_of = ROOT
+				}
+			}
+			set_global_flag = SPC_region_unified_global_251
+			if = {
+				limit = { tag = NOH }
+				OAS = { add_to_faction = NOH }
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+	}
+}
+

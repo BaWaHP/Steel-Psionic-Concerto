@@ -1,0 +1,44 @@
+﻿capital = 5
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 25
+	national_socialist = 0
+	authoritarian_nationalism = 20
+	paternal_autocrat = 55
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+recruit_character = KTL_noble_parliament
+recruit_character = KTL_levant_jean_faustin
+recruit_character = KTL_herman_von_salza_1
+recruit_character = KTL_herman_von_salza_2
+#将领
+recruit_character = KTL_darke_chino
+recruit_character = KTL_wagner_bogo
+
+add_ideas = {
+	KTL_army_of_ambition
+	KTL_a_society_in_its_own_right
+	TCW_division_of_power
+	TCW_civ_of_matters
+}

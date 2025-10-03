@@ -1,0 +1,69 @@
+on_actions = {
+	on_declare_war = {
+		###FROM - 目标###
+		###ROOT - 攻击方###
+		effect = {
+			###打奥科特尼安王国###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = KOA NOT = { has_cosmetic_tag = KOA_republic_nation_tag } }
+							ROOT = { tag = LNR NOT = { has_war_with = RLN } }		
+						}
+						AND = {
+							FROM = { tag = LNR NOT = { has_war_with = RLN } }
+							ROOT = { tag = KOA NOT = { has_cosmetic_tag = KOA_republic_nation_tag } }		
+						}
+					}
+				}
+				set_global_flag = SB_tenian_civil_war_global
+				FROM = { add_ideas = SB_Tenian_civil_war }
+				ROOT = { add_ideas = SB_Tenian_civil_war }
+				news_event = LNRNews.3
+			}
+			###打奥科特尼安临时政府###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = KOA has_cosmetic_tag = KOA_republic_nation_tag }
+							ROOT = { tag = LNR NOT = { has_war_with = RLN } }	
+						}
+						AND = {
+							FROM = { tag = LNR NOT = { has_war_with = RLN } }
+							ROOT = { tag = KOA has_cosmetic_tag = KOA_republic_nation_tag }		
+						}
+					}
+				}
+				set_global_flag = SB_tenian_civil_war_global
+				FROM = { add_ideas = SB_Tenian_civil_war }
+				ROOT = { add_ideas = SB_Tenian_civil_war }
+				news_event = LNRNews.4
+			}
+			###半岛混战###
+			if = {
+				limit = {
+					ROOT = { tag = KOA }
+					FROM = {
+						OR = {
+							AND = {
+								tag = RLN
+								ROOT = { has_war_with = LNR }
+							}
+							AND = {
+								tag = LNR
+								ROOT = { has_war_with = RLN }
+							}
+						}
+					}
+				}
+				set_global_flag = SB_tenian_civil_war_global
+				KOA = { add_ideas = SB_Tenian_civil_war }
+				LNR = { add_ideas = SB_Tenian_civil_war }
+				RLN = { add_ideas = SB_Tenian_civil_war }
+				news_event = LNRNews.5
+			}
+		}
+	}
+}

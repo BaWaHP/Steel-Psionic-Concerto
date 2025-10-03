@@ -1,0 +1,906 @@
+focus_tree = {
+	id = UPV_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UPV
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#王的决意
+		id = UPV_determination_of_the_queen
+		icon = GFX_UPV_determination_of_the_queen
+		x = 10
+		y = 0
+		cost = 1
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = UPV.50
+			add_ideas = UPV_the_determination
+		}
+	}
+
+	focus = {	#打击腐败
+		id = UPV_battle_over_corruption
+		icon = GFX_UPV_battle_over_corruption
+		x = -3
+		y = 1
+		cost = 3.6
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_determination_of_the_queen }
+		relative_position_id = UPV_determination_of_the_queen
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			UPV_Duchess_reform_progress_up_1 = yes
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere
+				add_idea = UPV_corruption_everywhere_2
+			}
+			activate_advisor = UPV_dvor_vandel_idea
+			UPV_Duchess_reform_parliament_attitude_down_1 = yes
+			add_stability = -0.05
+			37 = { add_manpower = -500 }
+		}
+	}
+
+	focus = {	#核对清单
+		id = UPV_checking_the_list
+		icon = GFX_UPV_checking_the_list
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_battle_over_corruption }
+		relative_position_id = UPV_battle_over_corruption
+		mutually_exclusive = { focus = UPV_buying_the_loyalty }
+
+		completion_reward = {
+			UPV_Duchess_reform_progress_up_1 = yes
+			374 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			UPV_Duchess_reform_parliament_attitude_down_2 = yes
+		}
+	}
+
+	focus = {	#收买人心
+		id = UPV_buying_the_loyalty
+		icon = GFX_UPV_buying_the_loyalty
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_battle_over_corruption }
+		relative_position_id = UPV_battle_over_corruption
+		mutually_exclusive = { focus = UPV_checking_the_list }
+
+		completion_reward = {
+			add_stability = 0.05
+			UPV_Duchess_reform_progress_down_1 = yes
+			UPV_Duchess_reform_parliament_attitude_up = yes
+		}
+	}
+
+	focus = {	#在议会的演讲
+		id = UPV_speech_on_the_parliament
+		icon = GFX_UPV_speech_on_the_parliament
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = UPV_speech_on_the_parliament_tr
+				check_variable = {
+					UPV_Duchess_reform_progress > 44
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_checking_the_list
+						 focus = UPV_buying_the_loyalty }
+		relative_position_id = UPV_checking_the_list
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = UPV.51
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere_2
+				add_idea = UPV_corruption_everywhere_3
+			}
+			UPV_Duchess_reform_parliament_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#议会重选
+		id = UPV_parliament_reelection
+		icon = GFX_UPV_parliament_reelection
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_speech_on_the_parliament }
+		relative_position_id = UPV_speech_on_the_parliament
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere_3
+				add_idea = UPV_corruption_everywhere_4
+			}
+			country_event = UPV.52
+			UPV_Duchess_reform_parliament_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#与资产阶级会谈
+		id = UPV_meeting_with_the_capitalists
+		icon = GFX_UPV_meeting_with_the_capitalists
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_speech_on_the_parliament }
+		relative_position_id = UPV_speech_on_the_parliament
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			UPV_Duchess_reform_progress_down_1 = yes
+			374 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere_4
+				add_idea = UPV_corruption_everywhere_5
+			}
+			UPV_Duchess_reform_parliament_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#“稳定”的议会
+		id = UPV_the_stable_parliament
+		icon = GFX_UPV_the_stable_parliament
+		x = 1
+		y = 1
+		cost = 3.6
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = UPV_the_stable_parliament_tr
+				check_variable = {
+					UPV_Duchess_reform_progress > 79
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_parliament_reelection }
+		prerequisite = { focus = UPV_meeting_with_the_capitalists }
+		relative_position_id = UPV_parliament_reelection
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = UPV.53
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere_5
+				add_idea = UPV_corruption_everywhere_6
+			}
+		}
+	}
+
+	focus = {	#收回议会权力
+		id = UPV_taking_parliament_power_back
+		icon = GFX_UPV_taking_parliament_power_back
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_the_stable_parliament }
+		relative_position_id = UPV_the_stable_parliament
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPV_corruption_everywhere_6
+				add_idea = UPV_clean_royal_dictatorship
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			deactivate_advisor = UPV_urias_bartoszewicz_idea
+			UPV_Duchess_reform_parliament_attitude_down_2 = yes
+		}
+	}
+
+	focus = {	#整顿官僚体系
+		id = UPV_rectify_the_bureaucracy
+		icon = GFX_UPV_rectify_the_bureaucracy
+		x = 3
+		y = 1
+		cost = 3.6
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_determination_of_the_queen }
+		relative_position_id = UPV_determination_of_the_queen
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			UPV_Duchess_reform_progress_up_1 = yes
+			UPV_Duchess_reform_aristocrat_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#肃清蛀虫
+		id = UPV_purge_of_moths
+		icon = GFX_UPV_purge_of_moths
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_rectify_the_bureaucracy }
+		relative_position_id = UPV_rectify_the_bureaucracy
+		mutually_exclusive = { focus = UPV_holding_the_handle }
+
+		completion_reward = {
+			374 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"上维尔陶常备军\" division_template = \"上维尔陶常备军\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = UPV
+				}
+			}
+			UPV_Duchess_reform_aristocrat_attitude_down_2 = yes
+		}
+	}
+
+	focus = {	#掌握把柄
+		id = UPV_holding_the_handle
+		icon = GFX_UPV_holding_the_handle
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_rectify_the_bureaucracy }
+		relative_position_id = UPV_rectify_the_bureaucracy
+		mutually_exclusive = { focus = UPV_purge_of_moths }
+
+		completion_reward = {
+			add_political_power = 25
+			UPV_Duchess_reform_progress_down_1 = yes
+			UPV_Duchess_reform_aristocrat_attitude_up_2 = yes
+		}
+	}
+
+	focus = {	#套上锁链
+		id = UPV_put_in_a_chain
+		icon = GFX_UPV_put_in_a_chain
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = UPV_speech_on_the_parliament_tr
+				check_variable = {
+					UPV_Duchess_reform_progress > 44
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_purge_of_moths
+						 focus = UPV_holding_the_handle }
+		relative_position_id = UPV_purge_of_moths
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = UPV.54
+			swap_ideas = {
+				remove_idea = UPV_deeply_rooted_aristocracy
+				add_idea = UPV_deeply_rooted_aristocracy_2
+			}
+			UPV_Duchess_reform_aristocrat_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#精简官僚机构
+		id = UPV_streamlining_the_bureaucracy
+		icon = GFX_UPV_streamlining_the_bureaucracy
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_put_in_a_chain }
+		relative_position_id = UPV_put_in_a_chain
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = UPV.55
+			UPV_Duchess_reform_aristocrat_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#清除旧贵族
+		id = UPV_remove_old_nobility
+		icon = GFX_UPV_remove_old_nobility
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_put_in_a_chain }
+		relative_position_id = UPV_put_in_a_chain
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPV_deeply_rooted_aristocracy_2
+				add_idea = UPV_deeply_rooted_aristocracy_3
+			}
+			UPV_Duchess_reform_aristocrat_attitude_down_1 = yes
+		}
+	}
+
+	focus = {	#宣布法案作废
+		id = UPV_announcing_laws_abandoned
+		icon = GFX_UPV_announcing_laws_abandoned
+		x = 1
+		y = 1
+		cost = 3.6
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = UPV_the_stable_parliament_tr
+				check_variable = {
+					UPV_Duchess_reform_progress > 79
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_streamlining_the_bureaucracy }
+		prerequisite = { focus = UPV_remove_old_nobility }
+		relative_position_id = UPV_streamlining_the_bureaucracy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = UPV.56
+			swap_ideas = {
+				remove_idea = UPV_deeply_rooted_aristocracy_3
+				add_idea = UPV_deeply_rooted_aristocracy_4
+			}
+		}
+	}
+
+	focus = {	#听话的贵族才是好贵族
+		id = UPV_those_who_listened_are_good
+		icon = GFX_UPV_those_who_listened_are_good
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_announcing_laws_abandoned }
+		relative_position_id = UPV_announcing_laws_abandoned
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = UPV_deeply_rooted_aristocracy_4
+				add_idea = UPV_listened_aristocracy
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.15
+			}
+			deactivate_advisor = UPV_pribor_kolupa_idea
+		}
+	}
+
+	focus = {	#王室新政
+		id = UPV_royal_new_politics
+		icon = GFX_UPV_royal_new_politics
+		x = 3
+		y = 1
+		cost = 5
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			has_country_flag = UPV_Duchess_reform_over
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_taking_parliament_power_back }
+		prerequisite = { focus = UPV_those_who_listened_are_good }
+		relative_position_id = UPV_taking_parliament_power_back
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			374 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = UPV_the_determination
+				add_idea = UPV_iron_fist_dictatorship
+			}
+			deactivate_advisor = UPV_herbis_nepokav_idea
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+		}
+	}
+
+	focus = {	#都给我停下来！
+		id = UPV_stop_for_god_sake
+		icon = GFX_goal_government_centralised_icon
+		x = 20
+		y = 0
+		cost = 2
+
+		available = {
+			UPV_focus_leader_check_1_trigger = yes
+			has_country_flag = UPV_Duchess_reform_over
+			NOT = { has_government = paternal_autocrat }
+		}
+
+		allow_branch = {
+			has_country_flag = UPV_Duchess_reform_failed
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = UPV.100
+		}
+	}
+
+	focus = {	#击碎铁腕
+		id = UPV_break_the_iron_wrist
+		icon = GFX_Generic_Break_Free
+		x = -3
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_stop_for_god_sake }
+		relative_position_id = UPV_stop_for_god_sake
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			remove_country_leader_trait = iron_fist_monarch
+			country_event = UPV.101
+		}
+	}
+
+	focus = {	#清除王室支持者
+		id = UPV_clear_royalists
+		icon = GFX_goal_Generic_Political_Purge
+		x = -1
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_break_the_iron_wrist }
+		relative_position_id = UPV_break_the_iron_wrist
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = -2415
+			deactivate_advisor = UPV_hawk_faulner_idea
+			deactivate_advisor = UPV_dvor_vandel_idea
+		}
+	}
+
+	focus = {	#中断改革
+		id = UPV_stop_the_reforms
+		icon = GFX_Generic_Ripping_Papers
+		x = 1
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_break_the_iron_wrist }
+		relative_position_id = UPV_break_the_iron_wrist
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = UPV_remain_present_forever
+		}
+	}
+
+	focus = {	#不过是一次过家家
+		id = UPV_nothing_but_playdate
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_clear_royalists }
+		prerequisite = { focus = UPV_stop_the_reforms }
+		relative_position_id = UPV_clear_royalists
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			country_event = UPV.102
+		}
+	}
+
+	focus = {	#囚禁
+		id = UPV_captivity
+		icon = GFX_Generic_Lookout
+		x = 3
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_stop_for_god_sake }
+		relative_position_id = UPV_stop_for_god_sake
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -25
+			country_event = UPV.103
+		}
+	}
+
+	focus = {	#笼中之鸟
+		id = UPV_enprisoned_bird
+		icon = GFX_Authoritarian_Democracy
+		x = -1
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_captivity }
+		relative_position_id = UPV_captivity
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_country_leader_trait = UPV_bird_in_cage
+			country_event = UPV.104
+		}
+	}
+
+	focus = {	#稳定人心
+		id = UPV_stablize_crowds
+		icon = GFX_Generic_Bread_and_Peace
+		x = 1
+		y = 1
+		cost = 2.9
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_captivity }
+		relative_position_id = UPV_captivity
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = UPV_stablize_crowds_tt
+		}
+	}
+
+	focus = {	#受人喜爱的花瓶
+		id = UPV_lovely_jar
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_enprisoned_bird }
+		prerequisite = { focus = UPV_stablize_crowds }
+		relative_position_id = UPV_enprisoned_bird
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			country_event = UPV.105
+		}
+	}
+
+	focus = {	#恢复旧秩序
+		id = UPV_restore_old_order
+		icon = GFX_Liberal_Conservatism
+		x = 3
+		y = 1
+		cost = 3.6
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = UPV_nothing_but_playdate }
+		prerequisite = { focus = UPV_lovely_jar }
+		relative_position_id = UPV_nothing_but_playdate
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = UPV_victory_of_the_old_order
+		}
+	}
+
+}

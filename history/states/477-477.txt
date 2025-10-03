@@ -1,0 +1,34 @@
+
+state={
+	id=477
+	name="STATE_477"
+	resources={
+		magic_crystal=28
+		aluminium=5
+		steel=5
+	}
+
+	provinces={
+		5439 5659 7433 8893 9306 9327 19495 19554 19639 19692 
+	}
+	history = {
+		owner = NCD
+		add_core_of = NCD
+		add_core_of = CLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			9306 8 
+		}
+		victory_points = {
+			19692 2
+		}
+	}
+	manpower = 987520
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

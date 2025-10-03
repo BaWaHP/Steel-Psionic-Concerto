@@ -1,0 +1,458 @@
+SPC_generic_rebuild_decision_category = {
+	###############
+	###东巴斯蒂亚###
+	###############
+
+	SPC_generic_rebuild_TPG = {		#重建吉拉尼亚地区
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_3_4_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_3_4_control = yes
+			SPC_generic_region_trigger_3_4 = no
+			NOT = { TPG = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_3_4
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			country_event = generic_territory.100
+		}
+	}
+	SPC_generic_rebuild_large_WOM = {		#重建沃姆地区
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_3_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_3_control = yes
+			NOT = { WOM = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_3
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = {
+				GLV = { is_subject_of = ROOT }
+				WOM = { is_subject_of = ROOT }
+				SBG = { is_subject_of = ROOT }
+			}
+			OR = {
+				SPC_generic_region_trigger_3 = no
+				tag = TPG
+			}
+			OR = {
+				NOT = { has_country_flag = ban_SPC_generic_rebuild_large_WOM }
+				AND = {
+					GLV = { exists = no }
+					WOM = { exists = no }
+					SBG = { exists = no }
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = is_SPC_generic_rebuild_large_WOM
+		}
+
+		remove_effect = {
+			country_event = generic_territory.200
+		}
+	}
+	SPC_generic_rebuild_WOM = {		#重建沃姆
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_3_1_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_3_1_control = yes
+			SPC_generic_region_trigger_3_1 = no
+			NOT = { WOM = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_3_1
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_WOM
+		}
+
+		remove_effect = {
+			country_event = generic_territory.240
+		}
+	}
+	SPC_generic_rebuild_large_GLV = {		#重建大戈尔维亚
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_3_2_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_3_2_control = yes
+			SPC_generic_region_trigger_3_2 = no
+			NOT = { GLV = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_3_2
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_WOM
+		}
+
+		remove_effect = {
+			country_event = generic_territory.220
+		}
+	}
+	SPC_generic_rebuild_large_SBG = {		#重建斯布里奇地区
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_3_3_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_3_3_control = yes
+			SPC_generic_region_trigger_3_3 = no
+			NOT = { SBG = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_3_3
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_WOM
+		}
+
+		complete_effect = {
+			country_event = generic_territory.260
+		}
+	}
+	SPC_generic_rebuild_large_ARO = {		#重建联合王国地区
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_2_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_2_control = yes
+			SPC_generic_region_trigger_2 = no
+			NOT = { ARO = { is_subject_of = ROOT } }
+			NOT = { PEO = { is_subject_of = ROOT } }
+			NOT = { CLD = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_2
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			OR = {
+				NOT = { has_country_flag = ban_SPC_generic_rebuild_large_ARO }
+				AND = {
+					ARO = { exists = no }
+					PEO = { exists = no }
+					CLD = { exists = no }
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = is_SPC_generic_rebuild_large_ARO
+		}
+
+		remove_effect = {
+			country_event = generic_territory.300
+		}
+	}
+	SPC_generic_rebuild_ARO = {		#重建奥罗日亚
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_2_1_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_2_1_control = yes
+			SPC_generic_region_trigger_2_1 = no
+			NOT = { ARO = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_2_1
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_ARO
+		}
+
+		remove_effect = {
+			country_event = generic_territory.320
+		}
+	}
+	SPC_generic_rebuild_PEO = {		#重建皮奥瑞亚
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_2_3_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_2_3_control = yes
+			SPC_generic_region_trigger_2_3 = no
+			NOT = { PEO = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_2_3
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_ARO
+		}
+
+		remove_effect = {
+			country_event = generic_territory.340
+		}
+	}
+	SPC_generic_rebuild_CLD = {		#重建西莉迪亚
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_2_2_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_2_2_control = yes
+			SPC_generic_region_trigger_2_2 = no
+			NOT = { CLD = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_2_2
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+			NOT = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			set_country_flag = ban_SPC_generic_rebuild_large_ARO
+		}
+
+		remove_effect = {
+			country_event = generic_territory.360
+		}
+	}
+	SPC_generic_rebuild_FH = {		#重建远乡地区
+		icon = generic_form_nation
+
+		available = {
+			SPC_generic_region_trigger_1_control = yes
+		}
+
+		visible = {
+			SPC_generic_region_trigger_1_control = yes
+			SPC_generic_region_trigger_1 = no
+			NOT = { SFH = { is_subject_of = ROOT } }
+			any_of_scopes = {
+				array = global.SPC_generic_region_states_1
+				NOT = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 7
+
+		ai_will_do = { factor = 500 }
+
+		modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			country_event = generic_territory.400
+		}
+	}
+}
+
+SPC_generic_coring_decision_category = {
+	SPC_generic_coring_decision = {
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			FROM = {
+				compliance > 40
+			}
+		}
+
+		state_target = yes
+		target_array = ROOT.potential_decision_cores
+		target_trigger = {
+			FROM = { 
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 50
+		
+		complete_effect = {
+			FROM = { add_core_of = ROOT }
+		}
+	}	
+}

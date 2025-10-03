@@ -1,0 +1,225 @@
+﻿add_namespace = MTV
+
+country_event = {	#第二年的末尾
+	id = MTV.1
+	title = MTV.1.t
+	desc = MTV.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.1.a
+		complete_national_focus = MTV_desperate_year_two
+	}
+}
+
+country_event = {	#雄心壮志
+	id = MTV.2
+	title = MTV.2.t
+	desc = MTV.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.2.a
+		country_event = {
+			id = MTV.3
+			days = 1
+		}
+	}
+}
+
+country_event = {	#黑色的影子
+	id = MTV.3
+	title = MTV.3.t
+	desc = MTV.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.3.a
+		country_event = {
+			id = MTV.4
+			days = 1
+		}
+	}
+}
+
+country_event = {	#癫狂
+	id = MTV.4
+	title = MTV.4.t
+	desc = MTV.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.4.a
+		country_event = {
+			id = MTV.5
+			days = 1
+		}
+	}
+}
+
+country_event = {	#社会契约论之终结
+	id = MTV.5
+	title = MTV.5.t
+	desc = MTV.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.5.a
+		country_event = {
+			id = MTV.6
+			days = 1
+		}
+	}
+}
+
+country_event = {	#之后
+	id = MTV.6
+	title = MTV.6.t
+	desc = MTV.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.6.a
+		country_event = {
+			id = MTV.7
+			days = 1
+		}
+	}
+}
+
+country_event = {	#新年快乐！
+	id = MTV.7
+	title = MTV.7.t
+	desc = MTV.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.7.a
+		country_event = {
+			id = MTV.8
+			days = 1
+		}
+	}
+}
+
+country_event = {	#最终胜利
+	id = MTV.8
+	title = MTV.8.t
+	desc = MTV.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.8.a
+		country_event = {
+			id = MTV.9
+			days = 1
+		}
+	}
+}
+
+country_event = {	#罐装国家
+	id = MTV.9
+	title = MTV.9.t
+	desc = MTV.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.9.a
+		country_event = {
+			id = MTV.10
+			days = 1
+		}
+		set_victory_points = { province = 18267 value = 1 }
+		set_province_name = { id = 18267 name = VICTORY_POINTS_18267_1 }
+		set_province_name = { id = 4228 name = VICTORY_POINTS_4228_1 }
+		461 = { remove_dynamic_modifier = { modifier = MTV_ashes_of_saraiovi } add_manpower = -1000000 }
+		remove_country_leader_role = {
+			character = MTV_none
+			ideology = wizard_rules_subtype
+		}
+		add_country_leader_role = {
+			character = MTV_broz_caligula_walter
+			promote_leader = yes
+			country_leader = {
+				desc = MTV_broz_caligula_walter_desc
+				ideology = magician_dictatorship
+				traits = { MTV_red_god }
+				expire = "3000.1.1.1"
+				id = -1
+			}
+		}
+		set_politics = { ruling_party = wizard_rules }
+		hidden_effect = {
+			MTV_redgod_effect = yes
+		}
+		set_party_name = {
+			ideology = wizard_rules
+			long_name = MTV_wizard_rules_party_long_2
+			name = MTV_wizard_rules_party_2
+		}
+		country_event = {
+			id = MTV.10
+			days = 1
+		}
+	}
+}
+
+country_event = {	#不承认，不承认，不承认
+	id = MTV.10
+	title = MTV.10.t
+	desc = MTV.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { MTV_civilwar_setup = yes } }
+	
+	option = {
+		name = MTV.10.a
+		custom_effect_tooltip = MTV.10.a.tt
+		unlock_decision_category_tooltip = MTV_civilwar_worsen
+		set_country_flag = MTV_civilwar_worsen_on
+		activate_mission = MTV_civilwar_worsen_mission
+		declare_war_on = {
+			target = MCS
+			type = annex_everything
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = MTVNews
+
+news_event = {		#
+	id = MTVNews.1
+	title = MTVNews.1.t
+	desc = MTVNews.1.d
+	picture = GFX_news_event_chinese_soldiers_city_ruin
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = MTVNews.1.a
+	}
+}

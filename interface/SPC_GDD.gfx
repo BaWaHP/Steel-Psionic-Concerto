@@ -1,0 +1,16 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_GDD_uslov_kossovsky"
+		texturefile = "gfx/leaders/GDD/uslov_kossovsky.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_GDD_human_top_officer"
+		texturefile = "gfx/interface/traits/personal/trait_infantry_officer.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_GDD_traitor_of_empire"
+		texturefile = "gfx/interface/traits/trait_operative_double_agent.dds"
+	}
+}

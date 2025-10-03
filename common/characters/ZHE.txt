@@ -1,0 +1,468 @@
+characters={
+	ZHE_generic_unkown = {	#暂无
+		name = generic_unkown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = worldunion_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = national_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_nationalism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_diazepam = {		#地西泮
+		name = ZHE_diazepam
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_analgin = {		#安乃近
+		name = ZHE_analgin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = market_liberalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_cloxacillin_sodium = {		#氯唑西林钠
+		name = ZHE_cloxacillin_sodium
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = conservative_liberalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_isoniazid = {		#异烟肼
+		name = ZHE_isoniazid
+		portraits = {
+			civilian = {
+				large="GFX_ZHE_isoniazid"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_ZHE_isoniazid"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = republic_of_nobility
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_cytarabine = {		#阿糖胞苷
+		name = ZHE_cytarabine
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_white_horse = {		#白马
+		name = ZHE_white_horse
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = anarchy_commusim
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	ZHE_escitalopram = {		#艾司西酞普兰
+		name = ZHE_escitalopram
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_escitalopram_idea
+			allowed = { original_tag = ZHE }
+			traits = { captain_of_industry compassionate_gentleman }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_methotrexate = {		#甲氨蝶呤
+		name = ZHE_methotrexate
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = rational_communism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = ZHE_methotrexate_idea
+		#	allowed = { original_tag = ZHE }
+		#	traits = { technocrat small_editor }
+		#	cost = 150
+		#	ai_will_do = {
+		#		factor = 1.000
+		#	}
+		#}
+	}
+	ZHE_moxifloxacin = {		#莫西沙星
+		name = ZHE_moxifloxacin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_moxifloxacin_idea
+			allowed = { original_tag = ZHE }
+			traits = { economy_learner promising_promise_maker_1 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_phenacetin = {		#非那西汀
+		name = ZHE_phenacetin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_phenacetin_idea
+			allowed = { original_tag = ZHE }
+			traits = { head_of_intelligence smooth_talking_charmer }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_oseltamivir = {		#奥司他韦
+		name = ZHE_oseltamivir
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_oseltamivir_idea
+			allowed = { original_tag = ZHE }
+			traits = { war_industrialist armaments_organizer }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_hismanal = {		#息斯敏
+		name = ZHE_hismanal
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_hismanal_idea
+			allowed = { original_tag = ZHE }
+			traits = { little_secretary_general }
+			cost = 150
+			can_be_fired = no
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_venlafaxine = {		#文拉法辛
+		name = ZHE_venlafaxine
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_venlafaxine_idea
+			allowed = { original_tag = ZHE }
+			available = { 
+				OR = { 
+					has_government = pioneer_communism
+					has_government = worldunion_democrat
+				} 
+			}
+			traits = { chief_quality_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_epirubicin = {		#表柔比星
+		name = ZHE_epirubicin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_epirubicin_idea
+			allowed = { original_tag = ZHE }
+			available = { 
+				OR = { 
+					has_government = pioneer_communism
+					has_government = worldunion_democrat
+				} 
+			}
+			traits = { chief_tech_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_amoxicillin = {		#阿莫西林
+		name = ZHE_amoxicillin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_amoxicillin_idea
+			allowed = { original_tag = ZHE }
+			available = { 
+				OR = { 
+					has_government = conservative_republican
+					has_government = authoritarian_republican
+				} 
+			}
+			traits = { chief_finance_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_clonidine = {		#可乐定
+		name = ZHE_clonidine
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_clonidine_idea
+			allowed = { original_tag = ZHE }
+			available = { 
+				OR = { 
+					has_government = liberal_republican
+					has_government = paternal_autocrat
+				} 
+			}
+			traits = { chief_hr_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_remdesivir = {		#瑞德西韦
+		name = ZHE_remdesivir
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_remdesivir_idea
+			allowed = { original_tag = ZHE }
+			available = { 
+				OR = { 
+					has_government = liberal_republican
+					has_government = paternal_autocrat
+				} 
+			}
+			traits = { chief_manage_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	ZHE_prontosil = {		#百浪多息
+		name = ZHE_prontosil
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ZHE_prontosil_idea
+			allowed = { original_tag = ZHE }
+			available = {
+				NOT = { has_country_flag = ZHE_prontosil_dead }
+			}
+			traits = { chief_compliance_officer }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

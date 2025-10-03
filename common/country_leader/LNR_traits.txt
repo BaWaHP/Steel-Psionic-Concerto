@@ -1,0 +1,147 @@
+leader_traits = {
+    LNR_compromising_artist = { #妥协的艺术家
+		random = no
+		political_power_factor = -0.05
+		stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_special_goods_traders = { #特供货物贸易人
+		random = no
+		consumer_goods_factor = -0.25
+		stability_factor = -0.15
+		political_advisor_cost_factor = -0.2
+		monthly_industrial_development_process = -2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_population_mobility_specialists = { #人口流动专家
+		random = no
+		monthly_population = -0.1
+		stability_factor = -0.1
+		production_speed_buildings_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_reformist_farmers = { #改革派农场主
+		random = no
+		conscription_factor = -0.1
+		state_science_development_monthly = -0.01
+		state_magic_development_monthly = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LNR_cunning_villain = { #手眼通天的恶棍
+		random = no
+		political_power_gain = 0.15
+		operative_slot = 2
+		agency_upgrade_time = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_traitor_to_the_clan = { #宗族的叛徒
+		random = no
+		political_power_factor = 0.1
+		production_speed_industrial_complex_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_radical_economists = { #激进的经济学家
+		random = no
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.15
+		stability_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_minister_of_security = { #安全部长
+		random = no
+		stability_factor = 0.05
+		political_power_factor = -0.05
+		max_planning_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    LNR_helmer_of_giant_wave = { #巨浪中的掌舵人
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.1
+		army_org_regain = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LNR_black_hand_at_helm = { #黑手掌舵
+		random = no
+		political_power_factor = 0.05
+		consumer_goods_factor = 0.05
+		stability_factor = -0.05
+		local_resources_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LNR_ldhill_of_tenian = { #特尼安的洛德希尔
+		random = no
+		political_power_factor = 0.05
+		operative_slot = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#军事改革委员会
+	LNR_military_reform_commission_trait = {
+		random = no
+		army_org_regain = -0.1
+		experience_gain_navy = 0.1
+		stability_factor = 0.15
+		traning_laws_cost_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#魔法战争论
+	LNR_magic_war_theory = {
+		random = no
+		land_doctrine_cost_factor = -0.05
+		naval_doctrine_cost_factor = -0.05
+		operative_slot = 1
+		army_core_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#白水将军
+	LNR_general_baishui = {
+		random = no
+		army_org_regain = 0.1
+		naval_invasion_penalty = -0.15
+		supply_consumption_factor = -0.05
+		special_forces_attack_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

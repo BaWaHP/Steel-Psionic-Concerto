@@ -1,0 +1,30 @@
+state={
+	id=234
+	name="STATE_234"
+	
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			21248 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			21248 3
+		}
+		victory_points = {
+			10689 1
+		}
+	}
+	
+	provinces={
+		879 3946 6641 10689 12040 21248 21346 21365 21372 
+	}
+	manpower=1140000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

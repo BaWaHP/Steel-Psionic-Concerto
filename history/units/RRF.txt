@@ -1,0 +1,103 @@
+﻿###templates###
+division_template = {
+	name = "工人纠察队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "赤卫军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "工人纠察队"
+		location = 19977
+		division_template = "工人纠察队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "工人纠察队"
+		location = 20178
+		division_template = "工人纠察队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "工人纠察队"
+		location = 9443
+		division_template = "工人纠察队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "工人纠察队"
+		location = 19929
+		division_template = "工人纠察队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "工人纠察队"
+		location = 19929
+		division_template = "工人纠察队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "赤卫军"
+		location = 19977
+		division_template = "赤卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "赤卫军"
+		location = 19977
+		division_template = "赤卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "赤卫军"
+		location = 9443
+		division_template = "赤卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "赤卫军"
+		location = 6572
+		division_template = "赤卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

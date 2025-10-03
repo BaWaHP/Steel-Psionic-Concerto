@@ -1,0 +1,226 @@
+guiTypes = {
+	scrollbarType = {
+		name = "IS_standardtext_slider"	
+		slider = "IS_listboxSliderButton"
+		track= "IS_listboxTrackButton"
+		leftbutton = "downButton"
+		rightbutton = "upButton"
+		size = {x = 12 y = 12 }
+		position = { x = 100 y = 100 }
+		priority = 100			
+		borderSize = { x = 12 y = 12 }	
+		maxValue =1
+		minValue =0
+		stepSize =8
+		startValue = 0
+		horizontal = 0
+
+		guiButtonType = {
+			name = "IS_listboxSliderButton"	
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			name = "IS_listboxTrackButton"
+			quadTextureSprite = "GFX_scroll_track"
+			position = { x=12 y =12}		
+		}	
+
+		guiButtonType = {
+			parent = "IS_listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_scroll_up"
+			position = { x=0 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "IS_listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_scroll_down"
+			position = { x=0 y =120}	
+		}
+	}	
+
+	containerWindowType = {
+		name = "SPC_intro_screen_toggle"
+		position = { x= 0 y = 0 }
+
+		buttonType = {
+			name = "open_intro_screen"
+			quadTextureSprite = "GFX_open_intro_screen_btn"
+			pdx_tooltip = "SPC_IS_OPEN_BTN"
+			position = { x = 425 y = 10 }
+		}
+	}
+
+	containerWindowType = {
+		name = "SPC_intro_screen_container"
+		size = { width = 1000 height = 500 }
+		position = { x=-600 y=-300 }
+		Orientation = center
+		moveable = yes
+		clipping = no
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+
+		Background = {
+			name = "SPC_intro_screen_bg"
+			quadTextureSprite = "GFX_SPC_intro_screen_bg"
+		}
+
+		instantTextboxType = {
+			name = "header_desc"
+			position = { x = 327 y = 95 }
+			font = "hoi_24header"
+			text = "SPC_is_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 100
+			maxHeight = 100
+		}
+
+		iconType = {
+			name ="national_flag_picture"
+			position = { x = 81 y = 85 }
+			quadTextureSprite = "GFX_player_flag"
+			pdx_tooltip = look_at_me_tt
+		}
+
+		iconType = {
+			name = "flag_frame"
+			quadTextureSprite ="GFX_large_flag_frame"
+			position = { x = 77 y = 82 }
+			pdx_tooltip = look_at_me_tt
+		}
+
+		buttonType = {
+			name = "tab_1"
+			position = { x = 40 y = 500 }
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			font = "hoi_18mbs"
+			buttonText = "SPC_IS_TAB_1"
+			pdx_tooltip = "SPC_IS_TAB_1_TT"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_2"
+			position = { x = 170 y = 500 }
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			font = "hoi_18mbs"
+			buttonText = "SPC_IS_TAB_2"
+			pdx_tooltip = "SPC_IS_TAB_2_TT"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_3"
+			position = { x = 300 y = 500 }
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			font = "hoi_18mbs"
+			buttonText = "SPC_IS_TAB_3"
+			pdx_tooltip = "SPC_IS_TAB_3_TT"
+			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "tab_4"
+			position = { x = 430 y = 500 }
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			font = "hoi_18mbs"
+			buttonText = "SPC_IS_TAB_4"
+			pdx_tooltip = "SPC_IS_TAB_4_TT"
+			clicksound = click_default
+		}
+
+		instantTextboxType = {
+			name = "tab_1_header"
+			position = { x=-200 y=102 }
+			font = "hoi_24header"
+			text = "SPC_IS_TAB_1_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 400
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "ALL_THE_TEXT"
+			position = { x=54 y=170 }
+			font = "hoi_20bs"
+			text = "SPC_IS_TXT"
+			maxWidth = 910
+			maxHeight = 300
+			#fixedsize = yes
+			scrollbarType = standardtext_slider
+		}
+
+		instantTextboxType = {
+			name = "tab_2_header"
+			position = { x=-200 y=102 }
+			font = "hoi_24header"
+			text = "SPC_IS_TAB_2_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 400
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_3_header"
+			position = { x=-200 y=102 }
+			font = "hoi_24header"
+			text = "SPC_IS_TAB_3_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 400
+			maxHeight = 30
+		}
+
+		instantTextboxType = {
+			name = "tab_4_header"
+			position = { x=-200 y=102 }
+			font = "hoi_24header"
+			text = "SPC_IS_TAB_4_HEADER"
+			Orientation = center_up
+			format = center
+			maxWidth = 400
+			maxHeight = 30
+		}
+
+		buttonType = {
+			name = "close_button"
+			position = { x = -298 y = 500 }
+			font = "hoi_18mbs"
+			quadTextureSprite ="GFX_SPC_IS_close_button"
+			shortcut = "ESCAPE"
+			#buttonText = "close_button_TXT"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		buttonType = {
+			name = "page_change_button"
+			position = { x = -440 y = 500 }
+			font = "hoi_18mbs"
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			buttonText = "page_change_button_TXT"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "change_back"
+		}
+
+		buttonType = {
+			name = "back_change_button"
+			position = { x = -440 y = 500 }
+			font = "hoi_18mbs"
+			quadTextureSprite ="GFX_SPC_intro_screen_btn"
+			buttonText = "back_change_button_TXT"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "change_back"
+		}
+	}
+}

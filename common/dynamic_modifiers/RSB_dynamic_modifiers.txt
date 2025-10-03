@@ -1,0 +1,83 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+RSB_the_etropolis = {	#大都会
+	enable = { always = yes }
+
+	icon = GFX_idea_RSB_the_etropolis
+
+	recruitable_population_factor = -0.5
+	local_building_slots_factor = 0.2
+	state_production_speed_buildings_factor = 0.15
+}
+
+RSB_new_born_industrial_zone = {	#新兴工业区
+	enable = { always = yes }
+
+	icon = GFX_idea_RSB_new_born_industrial_zone
+
+	recruitable_population_factor = -0.3
+	local_building_slots_factor = 0.2
+	state_production_speed_buildings_factor = 0.15
+}
+
+RSB_trade_key_point = {	#贸易枢纽
+	enable = { always = yes }
+
+	icon = GFX_idea_RSB_trade_key_point
+
+	recruitable_population_factor = -0.2
+	local_building_slots_factor = 0.2
+	state_production_speed_buildings_factor = 0.15
+}
+
+RSB_gov_finance_risk_dynamic_modifier = {	#政府财政超支风险
+	enable = { always = yes }
+
+	icon = GFX_idea_civilian_economy
+}
+
+RSB_central_gov_investment = {	#中央政府投资
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_foreign_capital
+
+	state_production_speed_infrastructure_factor = 0.05
+	state_production_speed_industrial_complex_factor = 0.05
+}
+
+RSB_financial_health_committe = {	#健康财政委员会
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_goods_red_bonus
+
+	political_power_factor = RSB_financial_health_committe_ppf
+	consumer_goods_factor = RSB_financial_health_committe_cgf
+	production_speed_buildings_factor = RSB_financial_health_committe_psbf
+	research_speed_factor = RSB_financial_health_committe_rsf
+	stability_factor = RSB_financial_health_committe_sf
+}
+

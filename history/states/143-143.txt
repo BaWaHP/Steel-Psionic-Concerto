@@ -1,0 +1,29 @@
+
+state={
+	id=143
+	name="STATE_143"
+
+	history={
+		owner = KOD
+		add_core_of = KOD
+		add_claim_by = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			1939 5
+		}
+		victory_points = {
+			10582 3 
+		}
+	}
+
+	provinces={
+		1939 3448 7142 8890 10582 10640 15770 15782 15805 15888 15939 
+	}
+	manpower = 827899
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

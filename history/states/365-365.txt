@@ -1,0 +1,29 @@
+
+state={
+	id=365
+	name="STATE_365"
+
+	history={
+		owner = FCR
+		add_core_of = FCR
+		
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			synthetic_refinery = 1
+		}
+		
+		victory_points = {
+			19638 20
+		}
+
+	}
+
+	provinces={
+		3504 3860 4326 5719 6468 10739 19400 19485 19508 19560 19566 19638 
+	}
+	manpower=2950000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,44 @@
+
+state={
+	id=140
+	name="STATE_140"
+
+	history={
+		owner = WUN
+		add_core_of = SHA
+		add_core_of = WUN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			16064 = {
+				bunker = 3
+			}
+			15792 = {
+				bunker = 1
+			}
+			8205 = {
+				bunker = 1
+			}
+			8837 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			16064 8
+		}
+		victory_points = {
+			5291 5
+		}
+		victory_points = {
+			15792 5
+		}
+	}
+
+	provinces={
+		5291 6373 8205 8837 11342 15792 15934 16051 16052 16064 16083 16111 16169 
+	}
+	manpower=2490000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

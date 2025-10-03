@@ -1,0 +1,589 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ARO_startup_effect = {
+	if = {
+		limit = {
+			tag = ARO
+		}
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = basic_training
+		add_ideas = export_focus
+		add_ideas = civilian_economy
+		add_ideas = low_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = uncomfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_basic_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_basic_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_Auroretians
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_recessing_policy
+		###控制省份对应普及度###
+		72 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		73 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		74 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		75 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }		
+		}
+		76 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }		
+		}
+		77 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 6 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }		
+		}
+		78 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }		
+		}
+		79 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }		
+		}
+		80 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }		
+		}
+		81 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		82 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+		83 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 6 }		
+		}
+		84 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 6 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+		86 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+		
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_psicf = 0 }
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_psaff = 0 }
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_psif = 0 }
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_cgf = 0 }
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_gbsf = 0 }
+		set_variable = { ARO_industrial_blueprint_dynamic_modifier_midp = 1 }
+
+		set_variable = { ARO_satisfaction_warmongers = 90 }
+		set_variable = { ARO_satisfaction_republicans = 70 }
+		set_variable = { ARO_satisfaction_cultists = 50 }
+		set_variable = { ARO_popularity_warmongers = 22 }
+		set_variable = { ARO_popularity_republicans = 25 }
+		set_variable = { ARO_popularity_cultists = 20 }
+		set_variable = { ARO_internal_tense = 0.05 }
+
+		set_variable = { ARO_mfL_state_selected_icon_x = 238 }
+		set_variable = { ARO_mfL_state_selected_icon_y = 129 }
+
+		country_event = ARO.0001
+	}
+}
+
+###GUI###
+###内部危机###
+ARO_faction_demand_effect_w = {
+	random_list = {
+		5 = { add_war_support = 0.05 }
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 81
+						state = 82
+						state = 83
+						state = 84
+						state = 86
+					}
+					industrial_complex > 0
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+		}
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+					industrial_complex > 0
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_cultists = 5 }
+		}
+		15 = { add_political_power = -50 }
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 81
+						state = 82
+						state = 83
+						state = 84
+						state = 86
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+		}
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_cultists = -10 }
+		}
+		10 = {
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_nsd = 0.025 }
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_and = 0.025 }
+			custom_effect_tooltip = ARO_faction_demand_effect_drift_w
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ppf = -0.05 }
+			custom_effect_tooltip = ARO_faction_demand_effect_1_w
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_aof = -0.1 }
+			custom_effect_tooltip = ARO_faction_demand_effect_2_w
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ttf = 0.25 }
+			custom_effect_tooltip = ARO_faction_demand_effect_3_w
+		}
+	}
+}
+
+ARO_faction_demand_effect_r = {
+	random_list = {
+		5 = { add_stability = 0.05 }
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 79
+						state = 80
+					}
+					arms_factory > 0
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+		}
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+					arms_factory > 0
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_cultists = 5 }
+		}
+		15 = { add_political_power = -50 }
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 79
+						state = 80
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+		}
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_cultists = -10 }
+		}
+		10 = {
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_lrd = 0.025 }
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_crd = 0.025 }
+			custom_effect_tooltip = ARO_faction_demand_effect_drift_r
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_cf = -0.1 }
+			custom_effect_tooltip = ARO_faction_demand_effect_1_r
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_ppf = -0.05 }
+			custom_effect_tooltip = ARO_faction_demand_effect_2_r
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_icf = -0.1 }
+			custom_effect_tooltip = ARO_faction_demand_effect_3_r
+		}
+	}
+}
+
+ARO_faction_demand_effect_c = {
+	random_list = {
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		10 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 76
+						state = 77
+						state = 78
+					}
+					arms_factory > 0
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		5 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 79
+						state = 80
+					}
+					industrial_complex > 0
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+		}
+		5 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 79
+						state = 80
+					}
+					arms_factory > 0
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+		}
+		5 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 81
+						state = 82
+						state = 83
+						state = 84
+						state = 86
+					}
+					industrial_complex > 0
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+		}
+		5 = {
+			random_owned_controlled_state = {
+				limit = {
+					OR = {
+						state = 81
+						state = 82
+						state = 83
+						state = 84
+						state = 86
+					}
+					arms_factory > 0
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+		}
+		5 = { add_political_power = -50 }
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 79
+						state = 80
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+		}
+		5 = {
+			random_state = {
+				limit = {
+					OR = {
+						state = 81
+						state = 82
+						state = 83
+						state = 84
+						state = 86
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+		}
+		10 = {
+			add_to_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_red = 0.05 }
+			custom_effect_tooltip = ARO_faction_demand_effect_drift_c
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cf = -0.1 }
+			custom_effect_tooltip = ARO_faction_demand_effect_1_c
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cgf = 0.05 }
+			custom_effect_tooltip = ARO_faction_demand_effect_2_c
+		}
+		5 = {
+			add_to_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_madp = -1 }
+			custom_effect_tooltip = ARO_faction_demand_effect_3_c
+		}
+	}
+}
+
+###掠夺雷斯诺顿###
+ARO_mfL_status_update = {
+	ROOT = {
+		every_controlled_state = {
+			limit = {
+				OR = {
+					state = 72
+					state = 73
+					state = 74
+					state = 75
+					state = 79
+					state = 80
+				}
+			}
+			if = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = no
+					}
+				}
+				set_variable = { ARO_mfL_state_status = 1 }
+			}
+			else = {
+				set_variable = { ARO_mfL_state_status = 0 }
+			}
+		}
+		every_controlled_state = {
+			limit = {
+				OR = {
+					state = 81
+					state = 82
+					state = 83
+					state = 84
+					state = 86
+				}
+			}
+			set_variable = { ARO_mfL_state_status = 0 }
+			if = {
+				limit = {
+					arms_factory > 0
+				}
+				add_to_variable = { ARO_mfL_state_status = 1 }
+			}
+			if = {
+				limit = {
+					industrial_complex > 0
+				}
+				add_to_variable = { ARO_mfL_state_status = 1 }
+			}
+			if = {
+				limit = {
+					infrastructure > 0
+				}
+				add_to_variable = { ARO_mfL_state_status = 1 }
+			}
+		}
+	}
+}

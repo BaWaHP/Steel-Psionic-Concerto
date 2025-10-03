@@ -1,0 +1,23 @@
+characters={
+
+	#西蒙·威利斯
+	VGI_simon_willis = {
+		name = VGI_simon_willis
+		portraits = {
+			civilian = {
+				large="GFX_VGI_simon_willis"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_VGI_simon_willis"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_government_communism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

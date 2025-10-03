@@ -1,0 +1,41 @@
+MTV_civilwar_worsen = {		#内战恶化
+	MTV_civilwar_worsen_mission = { 		#内战恶化
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = MTV }
+		available = {
+			if = {
+				limit = { tag = MTV }
+				WDR = { exists = no }
+				MCS = { exists = no }
+				LCM = { exists = no }
+			}
+			if = {
+				limit = { tag = WDR }
+				MTV = { exists = no }
+				MCS = { exists = no }
+				LCM = { exists = no }
+			}
+			if = {
+				limit = { tag = MCS }
+				WDR = { exists = no }
+				MTV = { exists = no }
+				LCM = { exists = no }
+			}
+			if = {
+				limit = { tag = LCM }
+				WDR = { exists = no }
+				MCS = { exists = no }
+				MTV = { exists = no }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 100
+
+		timeout_effect = {  
+			MTV_civil_idea_worse = yes
+		}
+	}
+}

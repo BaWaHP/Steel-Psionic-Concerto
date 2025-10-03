@@ -1,0 +1,32 @@
+
+state={
+	id=314
+	name="STATE_314"
+	resources={
+		steel = 46
+		tungsten = 32
+		aluminium = 8
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			6080 3 
+		}
+
+	}
+
+	provinces={
+		524 1687 2545 3068 5891 6080 8411 10943 19834 19875 20065 20128 
+	}
+	manpower=822310
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

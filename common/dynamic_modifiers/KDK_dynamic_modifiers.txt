@@ -1,0 +1,17 @@
+KDK_great_agropoli_theological_seminary = {		#大阿格罗波里神学院
+	enable = { always = yes }
+
+	icon = GFX_idea_KDK_great_agropoli_theological_seminary
+
+	recruitable_population_factor = -0.3
+	resistance_damage_to_garrison = 0.05
+	state_production_speed_buildings_factor = -0.05
+}
+
+KDK_magic_city_gnoa = {		#魔导都市格诺亚
+	enable = { always = yes }
+
+	icon = GFX_idea_KDK_magic_city_gnoa
+
+	state_production_speed_buildings_factor = 0.2
+}

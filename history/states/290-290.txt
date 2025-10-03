@@ -1,0 +1,32 @@
+
+state={
+	id=290
+	name="STATE_290"
+	provinces={
+		2598 4266 4697 8240 9855 10432 11906 15386 15442 15559 15647 15659 15769 
+	}
+
+	resources = {
+		steel = 12
+	}
+
+	history={
+		owner = UTM
+		add_core_of = UTM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		victory_points = {
+			15386 8
+		}
+		victory_points = {
+			15647 5
+		}
+	}
+	manpower = 690000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

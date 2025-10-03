@@ -1,0 +1,29 @@
+
+state={
+	id=335
+	name="STATE_335"
+
+	resources = {
+		oil = 6
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			20388 5
+		}
+	}
+
+	provinces={
+		1217 3809 5513 7186 7437 20201 20252 20268 20373 20388 20412 20443 20545 
+	}
+	manpower = 720000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

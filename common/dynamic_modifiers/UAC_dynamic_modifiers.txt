@@ -1,0 +1,66 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+UAC_malaria_epidemic = {		#疟疾流行
+	enable = { always = yes }
+
+	icon = GFX_idea_UAC_malaria_epidemic
+
+	local_manpower = -0.15
+	local_supplies = -0.15
+	attrition_for_controller = 0.15
+	local_org_regain = -0.15
+}
+
+UAC_highly_prevalent_malaria_epidemic = {		#疟疾高度流行
+	enable = { always = yes }
+
+	icon = GFX_idea_UAC_highly_prevalent_malaria_epidemic
+
+	local_manpower = -0.2
+	local_supplies = -0.2
+	attrition_for_controller = 0.2
+	local_org_regain = -0.2
+}
+
+UAC_fulminant_malaria_epidemic = {		#疟疾爆发流行
+	enable = { always = yes }
+
+	icon = GFX_idea_UAC_fulminant_malaria_epidemic
+
+	local_manpower = -0.25
+	local_supplies = -0.25
+	attrition_for_controller = 0.25
+	local_org_regain = -0.25
+}
+
+ZBC_destructive_development = {		#破坏性开发
+	enable = { always = yes }
+
+	icon = GFX_idea_air_war_plans_division_focus
+
+	state_resources_factor = -0.35
+}

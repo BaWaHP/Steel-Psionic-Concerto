@@ -1,0 +1,36 @@
+
+state={
+	id=400
+	name="STATE_400"
+	resources = {
+		oil = 48
+		rubber = 96
+		oil = 4
+		magic_crystal = 2
+		tungsten = 4
+		chromium = 4
+	}
+	provinces={
+		60 1000 2934 4041 4496 4581 4736 4803 6515 7653 10032 10540 20254 20290 20339 20344 20357 20368 20376 20391 20422 20516 20580 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 2
+			60 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			60 20
+		}
+	}
+	manpower=3200000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

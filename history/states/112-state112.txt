@@ -1,0 +1,25 @@
+
+state={
+	id=112
+	name="STATE_112"
+	provinces={
+		568 1817 1924 5751 6606 6973 9246 11735 20130 20381 20427 20435 
+	}
+	history = {
+		owner = CLD
+		add_core_of = CLD
+		add_core_of = NCD
+		buildings = {
+            infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+        }
+		victory_points = {
+			6973 2
+		}
+	}
+	manpower = 887316 
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

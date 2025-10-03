@@ -1,0 +1,1042 @@
+generic_armament_enchantment_organization = {		#军火附魔研究组
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
+
+	allowed = {
+		NOT = { 
+			OR = {
+				tag = SFH 
+			}
+		}
+	}
+
+	equipment_type = { infantry_equipment melee_equipment }
+	research_categories = { infantry_weapons melee_equipment }
+
+	tree_header_text = {
+		text = mio_header_enchanted_bullets
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_header_enchanted_melees
+		x = 6
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_armament_enchantment
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.05
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+
+	trait = {		#附魔子弹
+		token = generic_mio_trait_enchanted_bullets
+		name = generic_mio_trait_enchanted_bullets
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x = 2 y = 0 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+
+	trait = {		#杀伤型魔力回路
+		token = generic_mio_trait_harming_enchantment
+		name = generic_mio_trait_harming_enchantment
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x = -1 y = 1 }
+		parent = { traits = { generic_mio_trait_enchanted_bullets } }
+		relative_position_id = generic_mio_trait_enchanted_bullets
+
+		mutually_exclusive = { generic_mio_trait_ap_enchantment }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {		#破甲型魔力回路
+		token = generic_mio_trait_ap_enchantment
+		name = generic_mio_trait_ap_enchantment
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		position = { x = 1 y = 1 }
+		parent = { traits = { generic_mio_trait_enchanted_bullets } }
+		relative_position_id = generic_mio_trait_enchanted_bullets
+
+		mutually_exclusive = { generic_mio_trait_harming_enchantment }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
+	}
+
+	trait = {		#微型爆破魔法
+		token = generic_mio_trait_micro_blast_magic
+		name = generic_mio_trait_micro_blast_magic
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x = 1 y = 1 }
+		any_parent = { generic_mio_trait_harming_enchantment generic_mio_trait_ap_enchantment }
+		relative_position_id = generic_mio_trait_harming_enchantment
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = -0.05
+			build_cost_ic = 0.1
+		}
+	}
+
+	trait = {		#大规模生产
+		token = generic_mio_trait_massive_production
+		name = generic_mio_trait_massive_production
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = -1 y = 1 }
+		parent = { traits = { generic_mio_trait_micro_blast_magic } }
+		relative_position_id = generic_mio_trait_micro_blast_magic
+
+		mutually_exclusive = { generic_mio_trait_improve_production_tech }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+			production_efficiency_cap_factor = 0.03
+		}
+	}
+
+	trait = {		#改良制造工艺
+		token = generic_mio_trait_improve_production_tech
+		name = generic_mio_trait_improve_production_tech
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 1 y = 1 }
+		parent = { traits = { generic_mio_trait_micro_blast_magic } }
+		relative_position_id = generic_mio_trait_micro_blast_magic
+
+		mutually_exclusive = { generic_mio_trait_massive_production }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			reliability = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#附魔刀刃
+		token = generic_mio_trait_enchanted_blade
+		name = generic_mio_trait_enchanted_blade
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 6 y = 0 }
+
+		limit_to_equipment_type = { melee_equipments }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			ap_attack = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+
+	trait = {		#稳固型魔力回路
+		token = generic_mio_trait_stabalization_enchantment
+		name = generic_mio_trait_stabalization_enchantment
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		position = { x = -1 y = 1 }
+		parent = { traits = { generic_mio_trait_enchanted_blade } }
+		relative_position_id = generic_mio_trait_enchanted_blade
+
+		mutually_exclusive = { generic_mio_trait_pulse_enchantment }
+
+		limit_to_equipment_type = { melee_equipments }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+			production_capacity_factor = -0.01
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+			max_strength = 0.1
+			reliability = 0.05
+		}
+	}
+
+	trait = {		#冲击型魔力回路
+		token = generic_mio_trait_pulse_enchantment
+		name = generic_mio_trait_pulse_enchantment
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x = 1 y = 1 }
+		parent = { traits = { generic_mio_trait_enchanted_blade } }
+		relative_position_id = generic_mio_trait_enchanted_blade
+
+		mutually_exclusive = { generic_mio_trait_stabalization_enchantment }
+
+		limit_to_equipment_type = { melee_equipments }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.1
+			hard_attack = 0.05
+			ap_attack = 0.1
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {		#自动要害定位
+		token = generic_mio_trait_weakness_location
+		name = generic_mio_trait_weakness_location
+		icon = GFX_generic_mio_trait_icon_batteries_hit_chance
+
+		position = { x = 1 y = 1 }
+		any_parent = { generic_mio_trait_stabalization_enchantment generic_mio_trait_pulse_enchantment }
+		relative_position_id = generic_mio_trait_stabalization_enchantment
+
+		limit_to_equipment_type = { melee_equipments }
+
+		equipment_bonus = {
+			defense = 0.05
+			max_strength = 0.1
+			reliability = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#提高锻造技术
+		token = generic_mio_trait_improved_forging_technology
+		name = generic_mio_trait_improved_forging_technology
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 0 y = 1 }
+		parent = { traits = { generic_mio_trait_weakness_location } }
+		relative_position_id = generic_mio_trait_weakness_location
+
+		limit_to_equipment_type = { melee_equipments }
+
+		equipment_bonus = {
+			reliability = 0.03
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+			production_capacity_factor = 0.03
+		}
+	}
+
+	trait = {		#辅助瞄准系统
+		token = generic_mio_trait_aiming_aid
+		name = generic_mio_trait_aiming_aid
+		icon = GFX_generic_mio_trait_icon_sub_detection
+
+		position = { x = 2 y = 1 }
+		all_parents = { generic_mio_trait_enchanted_bullets generic_mio_trait_enchanted_blade }
+		relative_position_id = generic_mio_trait_enchanted_bullets
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#改良回路制造体系
+		token = generic_mio_trait_improved_production_line
+		name = generic_mio_trait_improved_production_line
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 0 y = 2 }
+		parent = { traits = { generic_mio_trait_aiming_aid } }
+		relative_position_id = generic_mio_trait_aiming_aid
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_capacity_factor = 0.05
+		}
+	}
+
+	trait = {		#自适应型魔力回路
+		token = generic_mio_trait_automatic_enchantment
+		name = generic_mio_trait_automatic_enchantment
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
+
+		position = { x = 0 y = 1 }
+		any_parent = { generic_mio_trait_massive_production generic_mio_trait_improve_production_tech }
+		all_parents = { generic_mio_trait_improved_forging_technology generic_mio_trait_improved_production_line }
+		relative_position_id = generic_mio_trait_improved_production_line
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+			build_cost_ic = 0.1
+		}
+	}
+
+	trait = {		#魔力回路屏障
+		token = generic_mio_trait_magic_circuit_barrier
+		name = generic_mio_trait_magic_circuit_barrier
+		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
+
+		position = { x = -2 y = 1 }
+		parent = { traits = { generic_mio_trait_automatic_enchantment } }
+		relative_position_id = generic_mio_trait_automatic_enchantment
+
+		equipment_bonus = {
+			defense = 0.05
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {		#魔力回路屏障
+		token = generic_mio_trait_magic_circuit_barrier
+		name = generic_mio_trait_magic_circuit_barrier
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x = -2 y = 1 }
+		parent = { traits = { generic_mio_trait_automatic_enchantment } }
+		relative_position_id = generic_mio_trait_automatic_enchantment
+
+		equipment_bonus = {
+			defense = 0.05
+			armor_value = 0.1
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {		#学习能力强化
+		token = generic_mio_trait_automatic_enchantment_reinforcement
+		name = generic_mio_trait_automatic_enchantment_reinforcement
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x = 0 y = 1 }
+		parent = { traits = { generic_mio_trait_automatic_enchantment } }
+		relative_position_id = generic_mio_trait_automatic_enchantment
+
+		equipment_bonus = {
+			defense = 0.03
+			breakthrough = 0.1
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {		#机体结构破坏
+		token = generic_mio_trait_body_system_destroy
+		name = generic_mio_trait_body_system_destroy
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x = 2 y = 1 }
+		parent = { traits = { generic_mio_trait_automatic_enchantment } }
+		relative_position_id = generic_mio_trait_automatic_enchantment
+
+		equipment_bonus = {
+			soft_attack = 0.02
+			hard_attack = 0.03
+			ap_attack = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+
+}
+
+generic_uniform_manufacturer_organization = {		#步兵装具制造商
+	icon = GFX_idea_generic_air_manufacturer_3
+
+	allowed = {
+		NOT = { 
+			OR = {
+				#tag = SFH 
+			}
+		}
+	}
+
+	equipment_type = { uniform_equipment }
+	research_categories = { infantry_uniforms }
+
+	tree_header_text = {
+		text = mio_header_magic_shields
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_materials
+		x = 4
+	}
+
+	tree_header_text = {
+		text = mio_header_food
+		x = 7
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_uniform_manufacturer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.05
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			defense = 0.01
+		}
+	}
+
+	trait = {		#轻型魔力护盾
+		token = generic_mio_trait_light_magic_shield
+		name = generic_mio_trait_light_magic_shield
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x = 1 y = 0 }
+
+		equipment_bonus = {
+			defense = 0.01
+			breakthrough = 0.02
+		}
+	}
+
+	trait = {		#压缩装置
+		token = generic_mio_trait_compression_device
+		name = generic_mio_trait_compression_device
+		icon = GFX_generic_mio_trait_icon_weight
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_light_magic_shield
+		parent = { traits = { generic_mio_trait_light_magic_shield } }
+
+		mutually_exclusive = { generic_mio_trait_highly_compatible_accessories }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+		}
+
+		equipment_bonus = {
+			defense = 0.02
+			breakthrough = 0.03
+		}
+	}
+
+	trait = {		#提高魔力精炼效率
+		token = generic_mio_trait_better_magic_refining
+		name = generic_mio_trait_better_magic_refining
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_compression_device
+		parent = { traits = { generic_mio_trait_compression_device } }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+			production_capacity_factor = 0.01
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.05
+			build_cost_ic = -0.03
+		}
+	}
+
+	trait = {		#高兼容配件
+		token = generic_mio_trait_highly_compatible_accessories
+		name = generic_mio_trait_highly_compatible_accessories
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_light_magic_shield
+		parent = { traits = { generic_mio_trait_light_magic_shield } }
+
+		mutually_exclusive = { generic_mio_trait_compression_device }
+
+		equipment_bonus = {
+			defense = 0.01
+			reliability = 0.01
+			build_cost_ic = 0.02
+		}
+	}
+
+	trait = {		#全身覆盖设计
+		token = generic_mio_trait_fully_body_covered
+		name = generic_mio_trait_fully_body_covered
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_highly_compatible_accessories
+		parent = { traits = { generic_mio_trait_highly_compatible_accessories } }
+
+		equipment_bonus = {
+			max_strength = 0.03
+			max_organisation = 0.03
+			build_cost_ic = 0.03
+		}
+	}
+
+	trait = {		#复合型魔法护盾
+		token = generic_mio_trait_comprehensive_magic_shield
+		name = generic_mio_trait_comprehensive_magic_shield
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_better_magic_refining
+		any_parent = { generic_mio_trait_better_magic_refining generic_mio_trait_fully_body_covered }
+
+		equipment_bonus = {
+			defense = 0.03
+			breakthrough = 0.03
+			max_strength = 0.02
+			max_organisation = 0.02
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#优化材料
+		token = generic_mio_trait_optimized_materials
+		name = generic_mio_trait_optimized_materials
+		icon = GFX_generic_mio_department_icon_support_materials
+
+		position = { x = 4 y = 0 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+			production_resource_penalty_factor = -0.05
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.02
+		}
+	}
+
+	trait = {		#魔矿化合物
+		token = generic_mio_trait_magic_ore_compound
+		name = generic_mio_trait_magic_ore_compound
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_optimized_materials
+		parent = { traits = { generic_mio_trait_optimized_materials } }
+
+		mutually_exclusive = { generic_mio_trait_magic_ore_compound }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+			production_capacity_factor = -0.01
+		}
+		
+		equipment_bonus = {
+			defense = 0.05
+			hardness = 0.05
+			armor_value = 0.05
+		}
+	}
+
+	trait = {		#特殊布料
+		token = generic_mio_trait_special_fabric
+		name = generic_mio_trait_special_fabric
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_optimized_materials
+		parent = { traits = { generic_mio_trait_optimized_materials } }
+		
+		mutually_exclusive = { generic_mio_trait_magic_ore_compound }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+		}
+		
+		equipment_bonus = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+	}
+
+	trait = {		#提高耐久度
+		token = generic_mio_trait_increase_durability
+		name = generic_mio_trait_increase_durability
+		icon = GFX_generic_mio_department_icon_support_line_efficiency
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_magic_ore_compound
+		any_parent = { generic_mio_trait_magic_ore_compound generic_mio_trait_special_fabric }
+		
+		equipment_bonus = {
+			reliability = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#备件生产
+		token = generic_mio_trait_spare_parts_production
+		name = generic_mio_trait_spare_parts_production
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_increase_durability
+		parent = { traits = { generic_mio_trait_increase_durability } }
+		
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_capacity_factor = 0.02
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+
+	trait = {		#野战军粮
+		token = generic_mio_trait_field_feeding
+		name = generic_mio_trait_field_feeding
+		icon = GFX_generic_mio_department_icon_support_conversion
+
+		position = { x = 7 y = 0 }
+
+		equipment_bonus = {
+			max_strength = 0.03
+			max_organisation = 0.03
+			build_cost_ic = 0.01
+		}
+	}
+
+	trait = {		#精神类药物
+		token = generic_mio_trait_psychotropic_drugs
+		name = generic_mio_trait_psychotropic_drugs
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_field_feeding
+		parent = { traits = { generic_mio_trait_field_feeding } }
+
+		mutually_exclusive = { generic_mio_trait_taste_improvement }
+
+		equipment_bonus = {
+			max_strength = -0.02
+			breakthrough = 0.05
+			default_morale = 0.02
+			build_cost_ic = 0.02
+		}
+	}
+
+	trait = {		#口感改良
+		token = generic_mio_trait_taste_improvement
+		name = generic_mio_trait_taste_improvement
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_field_feeding
+		parent = { traits = { generic_mio_trait_field_feeding } }
+
+		mutually_exclusive = { generic_mio_trait_psychotropic_drugs }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+		}
+
+		equipment_bonus = {
+			max_strength = 0.02
+			default_morale = 0.01
+		}
+	}
+
+	trait = {		#整合工业物流
+		token = generic_mio_trait_integrate_industrial_logistics
+		name = generic_mio_trait_integrate_industrial_logistics
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_psychotropic_drugs
+		any_parent = { generic_mio_trait_psychotropic_drugs generic_mio_trait_taste_improvement }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_capacity_factor = 0.05
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+
+generic_caster_equipment_manufacturer_organization = {		#魔导装备制造商
+	icon = GFX_idea_generic_air_manufacturer_2
+
+	allowed = {
+		NOT = { OR = { tag = KDK } }
+	}
+
+	equipment_type = { caster_equipment caster_attaker_equipment caster_recon_equipment caster_support_equipment }
+	research_categories = { caster_equipments }
+
+	tree_header_text = {
+		text = mio_header_battle_unit
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_support_unit
+		x = 4
+	}
+
+	tree_header_text = {
+		text = mio_header_production
+		x = 7
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_caster_equipment_manufacturer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.05
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#改进战斗模块
+		token = generic_mio_trait_improve_combat_mode
+		name = generic_mio_trait_improve_combat_mode
+		icon = GFX_generic_mio_department_icon_infantry_technology
+
+		position = { x = 1 y = 0 }
+
+		limit_to_equipment_type = { caster_equipment caster_attaker_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.03
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			breakthrough = 0.02
+			defense = 0.02
+		}
+	}
+
+	trait = {		#稳固基础
+		token = generic_mio_trait_stabalization_first
+		name = generic_mio_trait_stabalization_first
+		icon = GFX_generic_mio_department_icon_infantry_conversion
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_improve_combat_mode
+		parent = { traits = { generic_mio_trait_improve_combat_mode } }
+
+		mutually_exclusive = { generic_mio_trait_push_for_the_limit }
+
+		limit_to_equipment_type = { caster_equipment }
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.03
+			max_organisation = 0.03
+		}
+	}
+
+	trait = {		#推向极限
+		token = generic_mio_trait_push_for_the_limit
+		name = generic_mio_trait_push_for_the_limit
+		icon = GFX_generic_mio_department_icon_infantry_offense
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_improve_combat_mode
+		parent = { traits = { generic_mio_trait_improve_combat_mode } }
+
+		mutually_exclusive = { generic_mio_trait_stabalization_first }
+
+		limit_to_equipment_type = { caster_attaker_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.1
+			breakthrough = 0.02
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#肉体强化药物
+		token = generic_mio_trait_methylphenidate
+		name = generic_mio_trait_methylphenidate
+		icon = GFX_generic_mio_department_icon_support_technology
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_stabalization_first
+		any_parent = { generic_mio_trait_stabalization_first generic_mio_trait_push_for_the_limit }
+
+		limit_to_equipment_type = { caster_equipment caster_attaker_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+			defense = 0.02
+			breakthrough = 0.02
+			max_organisation = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#改进支援模块
+		token = generic_mio_trait_improve_support_mode
+		name = generic_mio_trait_improve_support_mode
+		icon = GFX_generic_mio_department_icon_support_production
+
+		position = { x = 5 y = 0 }
+
+		limit_to_equipment_type = { caster_recon_equipment caster_support_equipment }
+
+		equipment_bonus = {
+			reliability = 0.01
+			supply_consumption_factor = -0.02
+			fuel_consumption_factor = -0.02
+			build_cost_ic = -0.03
+		}
+	}
+
+	trait = {		#轻型作战模块
+		token = generic_mio_trait_light_combat_module
+		name = generic_mio_trait_light_combat_module
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_improve_support_mode
+		parent = { traits = { generic_mio_trait_improve_support_mode } }
+
+		limit_to_equipment_type = { caster_recon_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.05
+		}
+
+		equipment_bonus = {
+			recon = 0.02
+			breakthrough = 0.05
+			max_organisation = 0.05
+			max_strength = 0.05
+		}
+	}
+
+	trait = {		#轻量级改造
+		token = generic_mio_trait_light_modification
+		name = generic_mio_trait_light_modification
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_improve_support_mode
+		parent = { traits = { generic_mio_trait_improve_support_mode } }
+
+		limit_to_equipment_type = { caster_recon_equipment caster_support_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_capacity_factor = 0.02
+		}
+
+		equipment_bonus = {
+			reliability = -0.01
+			build_cost_ic = -0.02
+		}
+	}
+
+	trait = {		#提高魔法效益
+		token = generic_mio_trait_higher_magic_efficiency
+		name = generic_mio_trait_higher_magic_efficiency
+		icon = GFX_generic_mio_trait_icon_night_penalty
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_light_combat_module
+		any_parent = { generic_mio_trait_light_combat_module generic_mio_trait_light_modification }
+
+		limit_to_equipment_type = { caster_equipments }
+
+		equipment_bonus = {
+			reliability = 0.01
+			default_morale = 0.01
+			max_strength = 0.05
+			build_cost_ic = -0.05
+		}
+	}
+
+	trait = {		#扩大部门投资
+		token = generic_mio_trait_expand_department_investment
+		name = generic_mio_trait_expand_department_investment
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 2 y = 1 }
+		relative_position_id = generic_mio_trait_improve_combat_mode
+		all_parents = { generic_mio_trait_improve_combat_mode generic_mio_trait_improve_support_mode }
+
+		limit_to_equipment_type = { caster_equipments }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_design_team_change_cost = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_capacity_factor = 0.02
+		}
+	}
+
+	trait = {		#专精项目管理
+		token = generic_mio_trait_specialized_project_management
+		name = generic_mio_trait_specialized_project_management
+		icon = GFX_generic_mio_trait_icon_conversion_speed
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_expand_department_investment
+		parent = { traits = { generic_mio_trait_expand_department_investment } }
+
+		limit_to_equipment_type = { caster_equipments }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.02
+			military_industrial_organization_design_team_change_cost = -0.1
+			military_industrial_organization_task_capacity = 1
+		}
+	}
+
+	trait = {		#智慧魔导核心
+		token = generic_mio_trait_smart_magic_core
+		name = generic_mio_trait_smart_magic_core
+		icon = GFX_generic_mio_trait_icon_unique
+
+		position = { x = 0 y = 1 }
+		relative_position_id = generic_mio_trait_specialized_project_management
+		all_parents = {
+			generic_mio_trait_methylphenidate
+			generic_mio_trait_specialized_project_management
+			generic_mio_trait_higher_magic_efficiency
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 0.05
+			max_strength = 0.1
+			build_cost_ic = 0.05
+		}
+	}
+
+	trait = {		#统一开发规格
+		token = generic_mio_trait_unified_development_specifications
+		name = generic_mio_trait_unified_development_specifications
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 8 y = 0 }
+
+		organization_modifier = {
+			military_industrial_organization_task_capacity = 1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_capacity_factor = 0.05
+		}
+	}
+
+	trait = {		#改进魔矿加工技艺
+		token = generic_mio_trait_better_ore_processing_tech
+		name = generic_mio_trait_better_ore_processing_tech
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x = -1 y = 1 }
+		relative_position_id = generic_mio_trait_unified_development_specifications
+		parent = { traits = { generic_mio_trait_unified_development_specifications } }
+
+		mutually_exclusive = { generic_mio_trait_massive_production_line }
+
+		production_bonus = {
+			production_resource_need_factor = -0.1
+			production_resource_penalty_factor = -0.05
+			production_efficiency_gain_factor = -0.03
+		}
+	}
+
+	trait = {		#大规模产线
+		token = generic_mio_trait_massive_production_line
+		name = generic_mio_trait_massive_production_line
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_unified_development_specifications
+		parent = { traits = { generic_mio_trait_unified_development_specifications } }
+
+		mutually_exclusive = { generic_mio_trait_better_ore_processing_tech }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_capacity_factor = 0.05
+		}
+	}
+
+	trait = {		#先进锻造技术
+		token = generic_mio_trait_advanced_forging_technology
+		name = generic_mio_trait_advanced_forging_technology
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		position = { x = 1 y = 1 }
+		relative_position_id = generic_mio_trait_better_ore_processing_tech
+		any_parent = { generic_mio_trait_better_ore_processing_tech generic_mio_trait_massive_production_line }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			reliability = 0.01
+			build_cost_ic = -0.05
+		}
+	}
+}

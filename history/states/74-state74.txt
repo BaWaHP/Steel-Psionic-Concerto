@@ -1,0 +1,29 @@
+
+state={
+	id=74
+	name="STATE_74"
+	provinces={
+		1166 3856 8838 9756 11914 11928 18371 18385 18418 18490 18499 
+	}
+	history = {
+		owner = ARO
+		add_core_of = ARO
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			18371 = {
+				bunker = 3
+			}
+			8838 = {
+				bunker = 3
+			}
+		}
+		victory_points = {
+			18371 1
+		}
+	}
+	manpower=1730000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

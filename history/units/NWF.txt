@@ -1,0 +1,62 @@
+﻿###templates###
+division_template = {
+	name = "西北军整备大队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "西北军第一整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "西北军第二整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "西北军第三整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "西北军第四整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "西北军第五整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "西北军第六整备大队"
+		location = 3806
+		division_template = "西北军整备大队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+}

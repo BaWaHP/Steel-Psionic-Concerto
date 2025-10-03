@@ -1,0 +1,27 @@
+
+state={
+	id=385
+	name="STATE_385"
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			8977 5
+		}
+
+	}
+
+	provinces={
+		2982 5192 8977 10107 10654 20172 
+	}
+	manpower=510000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

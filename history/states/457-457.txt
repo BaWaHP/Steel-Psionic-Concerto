@@ -1,0 +1,30 @@
+
+state={
+	id=457
+	name="STATE_457"
+	provinces={
+		841 5357 5860 18653 18710 18743 18802 18824 18836 18880 18903 18916 18933 
+	}
+	resources = {
+		magic_crystal = 5
+	}
+	history = {
+		owner = VLF
+		add_core_of = VLF
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			18824 8
+		}
+		victory_points = {
+			18880 10
+		}
+	}
+	manpower = 987500
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

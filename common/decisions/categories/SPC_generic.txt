@@ -1,0 +1,39 @@
+SPC_generic_rebuild_decision_category = {
+	icon = decision_category_generic_political_actions
+	allowed = {}
+	#visible = { SPC_generic_rebuild_decision_category_enable_trigger = yes }
+	visible_when_empty = no
+	priority = 300
+}
+
+SPC_generic_debug_decision_category = {
+	icon = decision_category_generic_political_actions
+	allowed = {}
+	visible = { is_debug = yes }
+	visible_when_empty = no
+	priority = 99999999
+}
+
+SPC_generic_coring_decision_category = {
+	icon = decision_category_generic_political_actions
+	allowed = {}
+	visible = {}
+	visible_when_empty = no
+	priority = 300
+}
+
+SPC_generic_sekeleton_decision_category = {
+	icon = decision_category_generic_political_actions
+	allowed = {}
+	visible = {}
+	visible_when_empty = no
+	priority = 300
+}
+
+SPC_generic_national_reunification_decision_category = {
+	icon = decision_category_generic_political_actions
+	allowed = {}
+	visible = {}
+	visible_when_empty = no
+	priority = 300
+}

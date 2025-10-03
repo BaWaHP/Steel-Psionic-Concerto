@@ -1,0 +1,29 @@
+characters={
+
+	#克拉格萨·铁嚎
+	SLR_Kragasa_Ironroar = {
+   		name = SLR_Kragasa_Ironroar
+   		portraits = {
+   			civilian = {
+   				large="GFX_SLR_Kragasa_Ironroar"
+   				small="GFX_idea_SLR_Kragasa_Ironroar"
+   			}
+   			army = {
+				large="GFX_SLR_Kragasa_Ironroar"
+				small="GFX_idea_SLR_Kragasa_Ironroar"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_populism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

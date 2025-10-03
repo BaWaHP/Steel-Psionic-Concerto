@@ -1,0 +1,37 @@
+
+state={
+	id=320
+	name="STATE_320"
+	resources={
+		steel=22.000
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			radar_station = 1
+			9443 = {
+				air_facility = 1
+			}
+		}
+		victory_points = {
+			9443 3 
+		}
+		victory_points = {
+			20178 5 
+		}
+
+	}
+
+	provinces={
+		3692 6208 6572 6702 6777 9443 20151 20178 20179 20259 
+	}
+	manpower=1620000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

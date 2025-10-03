@@ -1,0 +1,73 @@
+﻿###templates###
+division_template = {
+	name = "坎达德尔禁卫军"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 0 y = 2 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "王国保卫军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "“王国之荣”"
+		location = 11678
+		division_template = "坎达德尔禁卫军"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“穆勒斯保佑”军"
+		location = 19770
+		division_template = "王国保卫军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "“上主”军"
+		location = 19664
+		division_template = "王国保卫军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "“斩蛇”军"
+		location = 11990
+		division_template = "王国保卫军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "“呼神唤卫”军"
+		location = 19319
+		division_template = "王国保卫军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.1
+	}
+}

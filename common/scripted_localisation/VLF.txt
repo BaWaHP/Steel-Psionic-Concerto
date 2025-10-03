@@ -1,0 +1,32 @@
+defined_text = {
+	name = GET_VLF_regents_wish_1_1_color
+	text = {
+		trigger = { check_variable = { VLF_regents_wish_1_1 > 49 } }
+		localization_key = GET_VLF_regents_wish_1_1_color_1
+	}
+	text = {
+		localization_key = GET_VLF_regents_wish_1_1_color_2
+	}
+}
+
+defined_text = {
+	name = GET_VLF_regents_wish_2_1_color
+	text = {
+		trigger = { check_variable = { VLF_regents_wish_2_1 > 49 } }
+		localization_key = GET_VLF_regents_wish_2_1_color_1
+	}
+	text = {
+		localization_key = GET_VLF_regents_wish_2_1_color_2
+	}
+}
+
+defined_text = {
+	name = GET_VLF_regents_wish_3_1_color
+	text = {
+		trigger = { check_variable = { VLF_regents_wish_3_1 > 49 } }
+		localization_key = GET_VLF_regents_wish_3_1_color_1
+	}
+	text = {
+		localization_key = GET_VLF_regents_wish_3_1_color_2
+	}
+}

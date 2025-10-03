@@ -1,0 +1,254 @@
+characters = {
+
+	WDR_princip_methodius = {		#普林西普·美多德
+   		name = WDR_princip_methodius
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = pioneer_team_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_tsereteli_levski = {		#策烈铁里·列夫斯基
+   		name = WDR_tsereteli_levski
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = self_governing_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_christo_zegelbaum = {		#赫里斯托·策杰尔鲍姆
+   		name = WDR_christo_zegelbaum
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = humane_socialism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_mitrofan_stamblov = {		#米特罗范·斯塔姆博洛夫
+   		name = WDR_mitrofan_stamblov
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = people_worldunion
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_luzhzhi_vatsba = {		#卢日支·瓦茨巴
+   		name = WDR_luzhzhi_vatsba
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = WDR_luzhzhi_vatsba_desc
+   			ideology = liberal_racism
+   			traits = { WDR_dem_dictator }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_plekhanov_hristov = {		#普列汉诺夫·赫里斯托夫
+   		name = WDR_plekhanov_hristov
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = agrarian_popularism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_kubrat_maher = {		#库布拉特·马赫
+   		name = WDR_kubrat_maher
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = republic_of_nobility
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_stetko_panov = {		#斯捷茨科·帕诺夫
+   		name = WDR_stetko_panov
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = social_racism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_konovalets_vasov = {		#科诺瓦列茨·瓦梭夫
+   		name = WDR_konovalets_vasov
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = racial_supremacy
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_dmytro_dunov = {		#德米特罗·“半人马”·杜诺夫
+   		name = WDR_dmytro_dunov
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_ved_churches = {		#维尔德各教区
+   		name = WDR_ved_churches
+   		portraits = {
+   			civilian = {
+   				large = "GFX_unknown"
+   				small = "GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large = "GFX_unknown"
+				small = "GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = independent_world
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_broz_caligula_walter = {		#布罗兹·“卡里古拉”·瓦尔特
+   		name = WDR_broz_caligula_walter
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = MTV_broz_caligula_walter_desc
+   			ideology = magician_dictatorship
+   			traits = { MTV_red_god }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	WDR_jaroslav_rakovsky = {		#雅罗斯拉夫·拉科夫斯基
+   		name = WDR_jaroslav_rakovsky
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_populism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+}

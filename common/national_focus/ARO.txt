@@ -1,0 +1,1826 @@
+focus_tree = {
+	id = ARO_focus_generic
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARO
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 6000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = ARO_blueprint_of_new_industry
+		icon = GFX_ARO_blueprint_of_new_industry
+		x = 7
+		y = 0
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 150
+			add_dynamic_modifier = {
+				modifier = ARO_industrial_blueprint_dynamic_modifier
+			}
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 5 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = -25 }
+		}
+	}
+
+	focus = {
+		id = ARO_primary_plan_of_military_industry
+		icon = GFX_Generic_State_Socialism
+		x = -3
+		y = 1
+		cost = 1.43
+
+		available = {}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_blueprint_of_new_industry }
+		relative_position_id = ARO_blueprint_of_new_industry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 5 }
+			custom_effect_tooltip = ARO_primary_plan_of_military_industry_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psaff = 0.1 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_cgf = 0.02 }
+		}
+	}
+
+	focus = {
+		id = ARO_primary_plan_of_civilian_industry
+		icon = GFX_Generic_Industry02
+		x = 3
+		y = 1
+		cost = 1.43
+
+		available = {}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_blueprint_of_new_industry }
+		relative_position_id = ARO_blueprint_of_new_industry
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 5 }
+			custom_effect_tooltip = ARO_primary_plan_of_civilian_industry_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psicf = 0.1 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_cgf = 0.02 }
+		}
+	}
+
+	focus = {
+		id = ARO_factory_construction_Glonia_First
+		icon = GFX_ARO_factory_construction_Glonia_First
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+			OR = {
+				controls_state = 72
+				controls_state = 73
+				controls_state = 74
+				controls_state = 75
+				controls_state = 79
+				controls_state = 80
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_primary_plan_of_military_industry
+						focus = ARO_primary_plan_of_civilian_industry }
+		relative_position_id = ARO_primary_plan_of_military_industry
+		mutually_exclusive = { focus = ARO_factory_construction_balanced }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			custom_effect_tooltip = ARO_satisfaction_down_medium_r
+			add_to_variable = { ARO_satisfaction_warmongers = 20 }
+			add_to_variable = { ARO_satisfaction_republicans = -20 }
+		}
+	}
+
+	focus = {
+		id = ARO_factory_construction_balanced
+		icon = GFX_ARO_factory_construction_balanced
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+			OR = {
+				controls_state = 81
+				controls_state = 82
+				controls_state = 83
+				controls_state = 84
+				controls_state = 86
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_primary_plan_of_military_industry
+						focus = ARO_primary_plan_of_civilian_industry }
+		relative_position_id = ARO_primary_plan_of_civilian_industry
+		mutually_exclusive = { focus = ARO_factory_construction_Glonia_First }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+		}
+	}
+
+	focus = {
+		id = ARO_Konatsen_Tswig_military_factory
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 73
+			custom_trigger_tooltip = {
+				tooltip = ARO_Konatsen_Tswig_military_factory_tt
+				check_variable = { ARO_popularity_warmongers > ARO_popularity_republicans }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_factory_construction_Glonia_First }
+		relative_position_id = ARO_factory_construction_Glonia_First
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+			73 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ARO_purge_moderate_military_enterpreneurs
+		icon = GFX_goal_purge_opposition
+		x = -1
+		y = 1
+		cost = 2.15
+
+		available = {
+			controls_state = 79
+			controls_state = 86
+			86 = {
+				arms_factory > 0
+			}
+			#OR = {
+			#	has_idea = SPP_unlimited_national_dep
+			#	has_idea = SPP_cia_everywhere
+			#	has_idea = SPP_we_are_watching_you
+			#}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_Konatsen_Tswig_military_factory }
+		relative_position_id = ARO_Konatsen_Tswig_military_factory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			custom_effect_tooltip = ARO_satisfaction_down_major_r
+			country_event = ARO.1001
+			86 = {
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			79 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			custom_effect_tooltip = ARO_purge_moderate_military_enterpreneurs_tt
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_ppf = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ARO_threat_neutral_military_enterpreneurs
+		icon = GFX_goal_skull_treaty
+		x = 1
+		y = 1
+		cost = 2.15
+
+		available = {
+			#OR = {
+			#	has_idea = SPP_unlimited_national_dep
+			#	has_idea = SPP_cia_everywhere
+			#	has_idea = SPP_we_are_watching_you
+			#}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_Konatsen_Tswig_military_factory }
+		relative_position_id = ARO_Konatsen_Tswig_military_factory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			custom_effect_tooltip = ARO_satisfaction_down_major_r
+			country_event = ARO.1002
+			effect_tooltip = {
+				add_political_power = 50
+			}
+			custom_effect_tooltip = ARO_threat_neutral_military_enterpreneurs_tt
+			add_to_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_icf = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ARO_Glonia_military_production_expansion
+		icon = GFX_focus_generic_modernize_industry
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 72
+			controls_state = 75
+			controls_state = 79
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_purge_moderate_military_enterpreneurs }
+		prerequisite = { focus = ARO_threat_neutral_military_enterpreneurs }
+		relative_position_id = ARO_purge_moderate_military_enterpreneurs
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			72 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			79 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			custom_effect_tooltip = ARO_Glonia_military_production_expansion_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psaff = 0.1 }
+		}
+	}
+
+	focus = {
+		id = ARO_rebuild_Glonia_highways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 3
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 73
+			controls_state = 75
+			controls_state = 79
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_factory_construction_Glonia_First
+						focus = ARO_factory_construction_balanced }
+		relative_position_id = ARO_factory_construction_Glonia_First
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			73 = { add_building_construction = { type = infrastructure level = 1 } }
+			75 = { add_building_construction = { type = infrastructure level = 1 } }
+			79 = { add_building_construction = { type = infrastructure level = 1 } }
+			custom_effect_tooltip = ARO_rebuild_Glonia_highways_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psif = 0.1 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_cgf = 0.02 }
+		}
+	}
+
+	focus = {
+		id = ARO_raise_industrial_funds
+		icon = GFX_Generic_Loadsamoney
+		x = -1
+		y = 1
+		cost = 2.15
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_rebuild_Glonia_highways }
+		relative_position_id = ARO_rebuild_Glonia_highways
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 5 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 5 }
+			SPC_industry_policy_up = yes
+			custom_effect_tooltip = ARO_raise_industrial_funds_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_midp = 2 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_cgf = 0.04 }
+		}
+	}
+
+	focus = {
+		id = ARO_retreat_agricultural_funds
+		icon = GFX_Generic_Bread_and_Peace
+		x = 1
+		y = 1
+		cost = 2.15
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_rebuild_Glonia_highways }
+		relative_position_id = ARO_rebuild_Glonia_highways
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = -25 }
+			SPC_agricultural_policy_down = yes
+		}
+	}
+
+	focus = {
+		id = ARO_Glonia_Andarc_industry_district
+		icon = GFX_Generic_Major_City
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 79
+			OR = {
+				has_idea = IP_creating_business
+				has_idea = IP_funding_proj
+				has_idea = IP_cutting_taxes
+				has_idea = IP_more_business
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_raise_industrial_funds
+						focus = ARO_retreat_agricultural_funds }
+		relative_position_id = ARO_raise_industrial_funds
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			79 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ARO_Lesnoden_Glonia_cooperation
+		icon = GFX_Generic_Legislation
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 81
+			custom_trigger_tooltip = {
+				tooltip = ARO_Lesnoden_Glonia_cooperation_tt
+				check_variable = { ARO_popularity_warmongers < ARO_popularity_republicans }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_factory_construction_balanced }
+		relative_position_id = ARO_factory_construction_balanced
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+			81 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			country_event = ARO.1101
+		}
+	}
+
+	focus = {
+		id = ARO_appease_Madnum_peasants
+		icon = GFX_Generic_Social_Democracy
+		x = -1
+		y = 1
+		cost = 2.15
+
+		available = {
+			OR = {
+				controls_state = 76
+				controls_state = 77
+				controls_state = 78
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_Lesnoden_Glonia_cooperation }
+		relative_position_id = ARO_Lesnoden_Glonia_cooperation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = -25 }
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = ARO_reprospect_Srikka_minerals
+		icon = GFX_focus_generic_resource_extraction
+		x = 1
+		y = 1
+		cost = 2.15
+
+		available = {
+			OR = {
+				controls_state = 84
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_Lesnoden_Glonia_cooperation }
+		relative_position_id = ARO_Lesnoden_Glonia_cooperation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = -25 }
+			custom_effect_tooltip = ARO_reprospect_Srikka_minerals_tt
+		}
+	}
+	
+	focus = {
+		id = ARO_Placius_railway_project
+		icon = GFX_Generic_Railroads
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+			controls_state = 78
+			controls_state = 81
+			custom_trigger_tooltip = {
+				tooltip = ARO_Placius_railway_project_tt
+				check_variable = { ARO_satisfaction_cultists > 74.9 }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_appease_Madnum_peasants }
+		relative_position_id = ARO_appease_Madnum_peasants
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = 25 }
+			build_railway = {
+				level = 1
+				path = { 19008 18952 18818 7021 11404 }
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+		id = ARO_neutralize_warmonger_activists
+		icon = GFX_goal_selective_enforcement
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+			#NOT = {
+			#	OR = {
+			#		has_idea = SPP_unlimited_national_dep
+			#		has_idea = SPP_cia_everywhere
+			#		has_idea = SPP_we_are_watching_you
+			#	}
+			#}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_reprospect_Srikka_minerals }
+		relative_position_id = ARO_reprospect_Srikka_minerals
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = 25 }
+			custom_effect_tooltip = ARO_satisfaction_down_major_w
+			add_to_variable = { ARO_satisfaction_warmongers = -50 }
+			custom_effect_tooltip = ARO_neutralize_warmonger_activists_tt
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_nsd = -0.05 }
+			add_to_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_and = -0.05 }
+			country_event = ARO.1102
+		}
+	}
+	
+	focus = {
+		id = ARO_maraud_Lesnoden_industry
+		icon = GFX_ARO_maraud_Lesnoden_industry
+		x = -2
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_factional_conflict_broke_out
+			has_country_flag = ARO_chose_the_path_of_justice
+			custom_trigger_tooltip = {
+				tooltip = ARO_maraud_Lesnoden_industry_tt
+				check_variable = { ARO_popularity_republicans < 25 }
+			}
+			controls_state = 81
+			controls_state = 82
+			controls_state = 83
+			controls_state = 84
+			controls_state = 86
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_Glonia_military_production_expansion }
+		prerequisite = { focus = ARO_Glonia_Andarc_industry_district }
+		relative_position_id = ARO_Glonia_Andarc_industry_district
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_internal_tense_level_up
+			add_to_variable = { ARO_internal_tense = 0.05 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+			custom_effect_tooltip = ARO_satisfaction_down_major_r
+			add_to_variable = { ARO_satisfaction_republicans = -50 }
+			add_stability = -0.2
+			
+			81 = { add_compliance = -100 }
+			82 = { add_compliance = -100 }
+			83 = { add_compliance = -100 }
+			84 = { add_compliance = -100 }
+			86 = { add_compliance = -100 }
+
+			division_template = {
+				name = "忠王讨奸队"
+				is_locked = yes
+				priority = 0
+				regiments = {
+					police_infantry = { x = 0 y = 0 }
+					police_infantry = { x = 0 y = 1 }
+					police_infantry = { x = 0 y = 2 }
+					police_infantry = { x = 1 y = 0 }
+					police_infantry = { x = 1 y = 1 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"忠王讨奸队\" division_template = \"忠王讨奸队\" start_manpower_factor = 0.1 start_experience_factor = 0"
+					owner = ARO
+					count = 2
+				}
+			}
+			custom_effect_tooltip = ARO_maraud_Lesnoden_industry_tt2
+			set_variable = { ARO_marauded_resources = 10 }
+			set_variable = { ARO_marauded_squads = 2 }
+			set_variable = { ARO_mfL_state_selected = 79 }
+			ARO_mfL_status_update = yes
+		}
+	}
+	
+	focus = {
+		id = ARO_give_in_to_cultists
+		icon = GFX_goal_coercion
+		x = 2
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_factional_conflict_broke_out
+			has_country_flag = ARO_chose_the_path_of_piety
+			custom_trigger_tooltip = {
+				tooltip = ARO_give_in_to_cultists_tt
+				check_variable = { ARO_popularity_cultists > 39.9 }
+			}
+			controls_state = 76
+			controls_state = 77
+			controls_state = 78
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_Placius_railway_project }
+		prerequisite = { focus = ARO_Glonia_Andarc_industry_district }
+		relative_position_id = ARO_Glonia_Andarc_industry_district
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_internal_tense_level_up
+			add_to_variable = { ARO_internal_tense = 0.05 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = 25 }
+			custom_effect_tooltip = ARO_satisfaction_down_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = -25 }
+			
+			76 = {
+				set_building_level = {
+					type = arms_factory
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = industrial_complex
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = synthetic_refinery
+					level = 0
+					instant_build = yes
+				}
+			}
+			77 = {
+				set_building_level = {
+					type = arms_factory
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = industrial_complex
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = synthetic_refinery
+					level = 0
+					instant_build = yes
+				}
+			}
+			78 = {
+				set_building_level = {
+					type = arms_factory
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = industrial_complex
+					level = 0
+					instant_build = yes
+				}
+				set_building_level = {
+					type = synthetic_refinery
+					level = 0
+					instant_build = yes
+				}
+			}
+			SPC_environment_policy_up = yes
+			SPC_environment_policy_up = yes
+		}
+	}
+	
+	focus = {
+		id = ARO_the_second_enclosure_movement
+		icon = GFX_Generic_Manifest_Destiny
+		x = 4
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_factional_conflict_broke_out
+			has_country_flag = ARO_chose_the_path_of_tolerance
+			custom_trigger_tooltip = {
+				tooltip = ARO_the_second_enclosure_movement_tt
+				check_variable = { ARO_popularity_cultists < 25 }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_neutralize_warmonger_activists }
+		prerequisite = { focus = ARO_Glonia_Andarc_industry_district }
+		relative_position_id = ARO_Glonia_Andarc_industry_district
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_internal_tense_level_up
+			add_to_variable = { ARO_internal_tense = 0.05 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			custom_effect_tooltip = ARO_satisfaction_down_major_c
+			add_to_variable = { ARO_satisfaction_republicans = -50 }
+			
+			custom_effect_tooltip = ARO_the_second_enclosure_movement_tt2
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_gbsf = 0.1 }
+		}
+	}
+	
+	focus = {
+		id = ARO_new_era_of_our_industrialization
+		icon = GFX_ARO_new_era_of_our_industrialization
+		x = 0
+		y = 2
+		cost = 4.29
+
+		available = {
+			OR = {
+				has_idea = factory_industry
+				has_idea = grouped_factory_industry
+				has_idea = innovative_industry
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_maraud_Lesnoden_industry
+						focus = ARO_the_second_enclosure_movement }
+		relative_position_id = ARO_Glonia_Andarc_industry_district
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_new_era_of_our_industrialization_tt
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psaff = 0.05 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psicf = 0.05 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_psif = 0.05 }
+			add_to_variable = { ARO_industrial_blueprint_dynamic_modifier_midp = 2 }
+		}
+	}
+	
+	focus = {
+		id = ARO_the_fragile_balance
+		icon = GFX_ARO_the_fragile_balance
+		x = 18
+		y = 0
+		cost = 1.43
+
+		available = {
+		}
+		bypass = {
+			has_country_flag = ARO_factional_conflict_broke_out
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+		}
+	}
+	
+	focus = {
+		id = ARO_confort_lower_classes
+		icon = GFX_focus_generic_population_growth
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		bypass = {
+			has_country_flag = ARO_factional_conflict_broke_out
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_the_fragile_balance }
+		relative_position_id = ARO_the_fragile_balance
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_living_standard_development_amount_up_3 = yes
+			custom_effect_tooltip = ARO_satisfaction_down_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = -10 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = 25 }
+			SPC_subsidies_policy_up = yes
+		}
+	}
+	
+	focus = {
+		id = ARO_penalize_radical_cultists
+		icon = GFX_Generic_Execute_Dissidents02
+		x = -3
+		y = 1
+		cost = 4.29
+
+		available = {
+			controls_state = 76
+			controls_state = 77
+			controls_state = 78
+		}
+		bypass = {
+			has_country_flag = ARO_factional_conflict_broke_out
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_the_fragile_balance }
+		relative_position_id = ARO_the_fragile_balance
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_down_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = -10 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			76 = {
+				add_to_variable = { state_science_progress = 30 }
+				custom_effect_tooltip = ARO_penalize_radical_cultists_tt
+			}
+			77 = {
+				add_to_variable = { state_science_progress = 30 }
+				custom_effect_tooltip = ARO_penalize_radical_cultists_tt
+			}
+			78 = {
+				add_to_variable = { state_science_progress = 30 }
+				custom_effect_tooltip = ARO_penalize_radical_cultists_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = ARO_crack_down_pollutive_factories
+		icon = GFX_focus_generic_land_reclamation
+		x = 3
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		bypass = {
+			has_country_flag = ARO_factional_conflict_broke_out
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_the_fragile_balance }
+		relative_position_id = ARO_the_fragile_balance
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_environment_development_amount_up_3 = yes
+			custom_effect_tooltip = ARO_satisfaction_down_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = -10 }
+			custom_effect_tooltip = ARO_satisfaction_up_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = 25 }
+			SPC_environment_policy_up = yes
+		}
+	}
+	
+	focus = {
+		id = ARO_bend_to_factional_pressure
+		icon = GFX_ARO_bend_to_factional_pressure
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+			authoritarian_republican < 0.15
+		}
+		bypass = {
+			has_country_flag = ARO_factional_conflict_broke_out
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_confort_lower_classes }
+		prerequisite = { focus = ARO_penalize_radical_cultists }
+		prerequisite = { focus = ARO_crack_down_pollutive_factories }
+		relative_position_id = ARO_confort_lower_classes
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_bend_to_factional_pressure_tt
+			custom_effect_tooltip = ARO_satisfaction_up_minor_w
+			add_to_variable = { ARO_satisfaction_warmongers = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_r
+			add_to_variable = { ARO_satisfaction_republicans = 10 }
+			custom_effect_tooltip = ARO_satisfaction_up_minor_c
+			add_to_variable = { ARO_satisfaction_cultists = 10 }
+		}
+	}
+	
+	focus = {
+		id = ARO_the_future_path_of_Auroretia
+		icon = GFX_ARO_the_future_path_of_Auroretia
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+			has_country_flag = ARO_factional_conflict_broke_out
+			authoritarian_republican < 0.1
+		}
+		bypass = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_bend_to_factional_pressure }
+		relative_position_id = ARO_bend_to_factional_pressure
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.1
+		}
+	}
+	
+	focus = {
+		id = ARO_the_path_of_justice
+		icon = GFX_ARO_the_path_of_justice
+		x = -2
+		y = 2
+		cost = 2.15
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_justice
+		}
+		bypass = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ARO_the_future_path_of_Auroretia }
+		relative_position_id = ARO_the_future_path_of_Auroretia
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_the_path_of_justice_tt
+			set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ppf = 0.05 }
+			set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_aof = 0.1 }
+			set_variable = { ARO_issue_of_Glonian_warmonger_dynamic_modifier_ttf = -0.1 }
+		}
+	}
+	
+	focus = {
+		id = ARO_the_path_of_tolerance
+		icon = GFX_ARO_the_path_of_tolerance
+		x = 2
+		y = 2
+		cost = 2.15
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_tolerance
+		}
+		bypass = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_the_future_path_of_Auroretia }
+		relative_position_id = ARO_the_future_path_of_Auroretia
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_the_path_of_tolerance_tt
+			set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_cf = 0.1 }
+			set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_ppf = 0.05 }
+			set_variable = { ARO_issue_of_Lesnoden_republican_dynamic_modifier_icf = 0.1 }
+		}
+	}
+	
+	focus = {
+		id = ARO_the_path_of_piety
+		icon = GFX_ARO_the_path_of_piety
+		x = 0
+		y = 2
+		cost = 2.15
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_piety
+		}
+		bypass = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		prerequisite = { focus = ARO_the_future_path_of_Auroretia }
+		relative_position_id = ARO_the_future_path_of_Auroretia
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_the_path_of_piety_tt
+			set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cf = 0.1 }
+			set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_cgf = -0.05 }
+			set_variable = { ARO_issue_of_Aurora_cultist_dynamic_modifier_madp = 1 }
+		}
+	}
+	
+	focus = {
+		id = ARO_warhammer_of_steel
+		icon = GFX_ARO_warhammer_of_steel
+		x = 24
+		y = 0
+		cost = 4.29
+
+		available = {
+			has_tech = ogre_titan
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = 25 }
+			division_template = {
+				name = "重锤军团"
+				priority = 2
+				division_names_group = ARO_TIT_01
+				template_counter = 45
+				regiments = {
+					heavy_titan = { x = 0 y = 0 }
+					heavy_titan = { x = 0 y = 1 }
+					heavy_titan = { x = 0 y = 2 }
+					melee_infantry = { x = 1 y = 0 }
+					melee_infantry = { x = 1 y = 1 }
+					melee_infantry = { x = 1 y = 2 }
+				}
+
+				support = {
+					recon = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+				}
+			}
+
+			capital_scope = {
+				create_unit = {
+					division = "name = \"重锤军团\" division_template = \"重锤军团\" start_manpower_factor = 0.25 start_equipment_factor = 0.5 start_experience_factor = 0.25"
+					owner = ARO
+					count = 3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARO_rather_lack_than_degeneration
+		icon = GFX_ARO_rather_lack_than_degeneration
+		x = 2
+		y = 0
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		#prerequisite = { focus =  }
+		relative_position_id = ARO_warhammer_of_steel
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = 25 }
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = ARO_in_research_of_myths
+		icon = GFX_ARO_in_research_of_myths
+		x = 2
+		y = 0
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		#prerequisite = { focus =  }
+		relative_position_id = ARO_rather_lack_than_degeneration
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_up_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = 25 }
+			add_tech_bonus = {
+				bonus = 0.75
+				ahead_reduction = 2
+				uses = 1
+				category = caster_equipments
+			}
+			76 = {
+				add_to_variable = { state_magic_progress = 20 }
+				custom_effect_tooltip = ARO_in_research_of_myths_tt
+			}
+			77 = {
+				add_to_variable = { state_magic_progress = 20 }
+				custom_effect_tooltip = ARO_in_research_of_myths_tt
+			}
+			78 = {
+				add_to_variable = { state_magic_progress = 20 }
+				custom_effect_tooltip = ARO_in_research_of_myths_tt
+			}
+		}
+	}
+
+	focus = {
+		id = ARO_supreme_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -1
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_warhammer_of_steel
+						focus = ARO_rather_lack_than_degeneration }
+		relative_position_id = ARO_rather_lack_than_degeneration
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_down_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = -15 }
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = train_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = ARO_reinforce_defense_line
+		icon = GFX_focus_SWE_hedgehog_defense
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_in_research_of_myths
+						focus = ARO_rather_lack_than_degeneration }
+		relative_position_id = ARO_rather_lack_than_degeneration
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_down_medium_w
+			add_to_variable = { ARO_satisfaction_warmongers = -15 }
+		}
+	}
+
+	focus = {
+		id = ARO_cruelty_is_virtue
+		icon = GFX_ARO_cruelty_is_virtue
+		x = -1
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_justice
+			custom_trigger_tooltip = {
+				tooltip = ARO_cruelty_is_virtue_tt
+				check_variable = { ARO_popularity_warmongers > 50 }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_supreme_artillery
+						focus = ARO_reinforce_defense_line }
+		relative_position_id = ARO_supreme_artillery
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_command_power = 20
+			custom_effect_tooltip = ARO_cruelty_is_virtue_tt2
+			show_ideas_tooltip = ARO_Adam_Mace_theorist
+		}
+	}
+
+	focus = {
+		id = ARO_constraint_of_army
+		icon = GFX_Generic_Low_Morale
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_tolerance
+			custom_trigger_tooltip = {
+				tooltip = ARO_constraint_of_army_tt
+				check_variable = { ARO_popularity_republicans > 50 }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_supreme_artillery
+						focus = ARO_reinforce_defense_line }
+		relative_position_id = ARO_supreme_artillery
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = ARO_constrainted_army
+		}
+	}
+
+	focus = {
+		id = ARO_the_twittering_of_Aurora
+		icon = GFX_Generic_Secret_Meeting
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_piety
+			custom_trigger_tooltip = {
+				tooltip = ARO_the_twittering_of_Aurora_tt
+				check_variable = { ARO_popularity_cultists > 50 }
+			}
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_supreme_artillery
+						focus = ARO_reinforce_defense_line }
+		relative_position_id = ARO_reinforce_defense_line
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			76 = {
+				add_to_variable = { state_magic_progress = 30 }
+				custom_effect_tooltip = ARO_the_twittering_of_Aurora_tt2
+			}
+			77 = {
+				add_to_variable = { state_magic_progress = 30 }
+				custom_effect_tooltip = ARO_the_twittering_of_Aurora_tt2
+			}
+			78 = {
+				add_to_variable = { state_magic_progress = 30 }
+				custom_effect_tooltip = ARO_the_twittering_of_Aurora_tt2
+			}
+			SPC_research_development_amount_up_3 = yes
+			SPC_magician_policy_up = yes
+		}
+	}
+
+	focus = {
+		id = ARO_the_glory_of_steel_n_fire
+		icon = GFX_focus_NORDIC_com_army
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_cruelty_is_virtue }
+		relative_position_id = ARO_cruelty_is_virtue
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_military_development_amount_up_4 = yes
+			SPC_training_laws_up = yes
+		}
+	}
+
+	focus = {
+		id = ARO_Borwisch_legion
+		icon = GFX_ARO_Borwisch_legion
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_constraint_of_army }
+		relative_position_id = ARO_constraint_of_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			division_template = {
+				name = "布尔维什军团"
+				is_locked = yes
+				priority = 2
+				template_counter = 41
+				regiments = {
+					caster_infantry = { x = 0 y = 0 }
+					caster_infantry = { x = 0 y = 1 }
+					caster_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 1 y = 0 }
+					melee_infantry = { x = 1 y = 1 }
+					melee_infantry = { x = 1 y = 2 }
+				}
+
+				support = {
+					recon = { x = 0 y = 0 }
+					artillery = { x = 1 y = 0 }
+				}
+			}
+			84 = {
+				create_unit = {
+					division = "name = \"布尔维什军团\" division_template = \"布尔维什军团\" start_manpower_factor = 1 start_equipment_factor = 0.75 start_experience_factor = 0.5"
+					owner = ARO
+					count = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ARO_warrior_of_faith
+		icon = GFX_ARO_warrior_of_faith
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_the_twittering_of_Aurora }
+		relative_position_id = ARO_the_twittering_of_Aurora
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = 0.15
+			}
+			add_ideas = ARO_a_priest_per_company
+		}
+	}
+
+	focus = {
+		id = ARO_the_faith_of_dawn
+		icon = GFX_
+		x = 34
+		y = 0
+		cost = 4.29
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_justice
+			controls_state = 72
+			controls_state = 73
+			controls_state = 74
+			controls_state = 75
+			controls_state = 76
+			controls_state = 77
+			controls_state = 78
+			controls_state = 79
+			controls_state = 80
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_down_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = -25 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = -25 }
+
+			set_variable = { ARO_reclaim_dawn_church_rsf = -0.05 }
+			set_variable = { ARO_reclaim_dawn_church_sf = 0.05 }
+			set_variable = { ARO_reclaim_dawn_church_cgf = 0 }
+			set_variable = { ARO_reclaim_dawn_church_mlsdp = 0 }
+			set_variable = { ARO_reclaim_dawn_church_mrdp = 0 }
+			add_dynamic_modifier = {
+				modifier = ARO_reclaim_dawn_church
+			}
+			set_variable = { ARO_dc_state_selected_icon_x = 238 }
+			set_variable = { ARO_dc_state_selected_icon_y = 129 }
+
+			set_variable = { ARO_build_church_ci_cost = 4 }
+			custom_effect_tooltip = ARO_the_faith_of_dawn_tt
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 72
+						state = 73
+						state = 74
+						state = 75
+						state = 76
+						state = 77
+						state = 78
+						state = 79
+						state = 80
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = ARO_struggle_of_religion
+				}
+				set_variable = { ARO_struggle_of_religion_rp = 0 }
+				set_variable = { ARO_struggle_of_religion_rpf = 0 }
+				set_variable = { ARO_struggle_of_religion_lf = 0 }
+				set_variable = { ARO_struggle_of_religion_ms = 0 }
+				set_variable = { ARO_struggle_of_religion_rdtg = 0 }
+				set_variable = { ARO_struggle_of_religion_rt = 0 }
+				set_variable = { ARO_struggle_of_religion_cg = 0 }
+			}
+		}
+	}
+
+	focus = {
+		id = ARO_build_more_churches
+		icon = GFX_
+		x = -3
+		y = 1
+		cost = 2.15
+
+		available = {
+			has_country_flag = ARO_chose_the_path_of_justice
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		prerequisite = { focus = ARO_the_faith_of_dawn }
+		relative_position_id = ARO_the_faith_of_dawn
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = ARO_satisfaction_down_medium_r
+			add_to_variable = { ARO_satisfaction_republicans = -25 }
+			custom_effect_tooltip = ARO_satisfaction_down_medium_c
+			add_to_variable = { ARO_satisfaction_cultists = -25 }
+
+			set_variable = { ARO_reclaim_dawn_church_rsf = -0.05 }
+			set_variable = { ARO_reclaim_dawn_church_sf = 0.05 }
+			set_variable = { ARO_reclaim_dawn_church_cgf = 0 }
+			set_variable = { ARO_reclaim_dawn_church_mlsdp = 0 }
+			set_variable = { ARO_reclaim_dawn_church_mrdp = 0 }
+			add_dynamic_modifier = {
+				modifier = ARO_reclaim_dawn_church
+			}
+			custom_effect_tooltip = ARO_the_faith_of_dawn_tt
+		}
+	}
+}

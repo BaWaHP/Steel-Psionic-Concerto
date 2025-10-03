@@ -1,0 +1,2085 @@
+SPC_generic_debug_decision_category = {
+	SFR_debug_load_focus_0 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = SFR_focus_1 }
+				clr_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_1 }
+				clr_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_2 }
+				clr_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_3 }
+				clr_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_4 }
+				clr_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_5 }
+				clr_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_1_1 = {		#读取阵线国策-内战前
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1 } }
+				set_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1_1 } }
+				set_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_2 }
+				clr_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_3 }
+				clr_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_4 }
+				clr_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_5 }
+				clr_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_1_2 = {		#读取阵线国策-内战战时
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1 } }
+				set_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_1 }
+				clr_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1_2 } }
+				set_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_3 }
+				clr_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_4 }
+				clr_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_5 }
+				clr_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_1_3 = {		#读取阵线国策-内战后
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1 } }
+				set_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_1 }
+				clr_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_2 }
+				clr_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1_3 } }
+				set_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_4 }
+				clr_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_5 }
+				clr_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_1_4 = {		#读取阵线国策-全国统一
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1 } }
+				set_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_1 }
+				clr_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_2 }
+				clr_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_3 }
+				clr_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1_4 } }
+				set_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_5 }
+				clr_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_1_5_1 = {		#读取阵线国策-全国统一后
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1 } }
+				set_country_flag = SFR_focus_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_1 }
+				clr_country_flag = SFR_focus_1_1
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_2 }
+				clr_country_flag = SFR_focus_1_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_3 }
+				clr_country_flag = SFR_focus_1_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_1_4 }
+				clr_country_flag = SFR_focus_1_4
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SFR_focus_1_5 } }
+				set_country_flag = SFR_focus_1_5
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_2 }
+				clr_country_flag = SFR_focus_2
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_3 }
+				clr_country_flag = SFR_focus_3
+			}
+			if = {
+				limit = { has_country_flag = SFR_focus_4 }
+				clr_country_flag = SFR_focus_4
+			}
+			set_politics = {
+				ruling_party = revolutionary_communism
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+SFR_maintain_the_front = {
+	SFR_unity_weekly_change = { 		#阵线团结度变化
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		available = { hidden_trigger = { NOT = { has_country_flag = SFR_maintain_the_front_on } } }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {  
+			add_to_variable = {
+				var = SFR_maintain_the_front_unity
+				value = modifier@SFR_unity_weekly
+				tooltip = SFR_unity_weekly_tt
+			}
+			activate_mission = SFR_unity_weekly_change
+			SFR_maintain_the_front_update = yes
+		}
+	}
+	SFR_unify_the_front = {		#团结阵线
+		icon = generic_civil_support
+
+		available = {}
+		#visible = { has_completed_focus = SFR_support_rev_front }
+
+		cost = 30
+		days_remove = 10
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		remove_effect = {
+			SFR_front_unity_up_1 = yes
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_completed_focus = SFR_against_rev_front
+				add = -10000
+			}
+			modifier = {
+				has_completed_focus = SFR_support_rev_front
+				add = 10000
+			}
+		}
+	}
+	SFR_purge_the_opposition = { 		#清洗反对派
+		icon = generic_civil_support
+		allowed = { tag = SFR }
+		available = { has_idea = SFR_front_unity_idea_1 }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = SFR.50
+		}
+
+		timeout_effect = {  
+			country_event = SFR.52
+		}
+
+		ai_will_do = {
+			base = 10000
+		}
+	}
+	SFR_divide_the_front = {		#分裂阵线
+		icon = generic_civil_support
+
+		available = {}
+		visible = { has_completed_focus = SFR_against_rev_front }
+
+		cost = 30
+		days_remove = 10
+
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		remove_effect = {
+			SFR_front_unity_down_1 = yes
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				has_completed_focus = SFR_against_rev_front
+				add = 10000
+			}
+			modifier = {
+				has_completed_focus = SFR_support_rev_front
+				add = -10000
+			}
+		}
+	}
+	SFR_start_coup = { 		#发动政变
+		icon = generic_civil_support
+		allowed = { tag = SFR }
+		available = { has_idea = SFR_front_unity_idea_5 }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = SFR.52
+		}
+
+		timeout_effect = {  
+			country_event = SFR.50
+		}
+
+		ai_will_do = {
+			base = 10000
+		}
+	}
+}
+
+SFR_opposition_bop_decisions = {
+	SFR_opposition_bop_desc_1 = {
+		icon = generic_civil_support
+
+		available = { always = no }
+		visible = {}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = SFR_opposition_bop_desc_1_tt
+		}
+	}
+	SFR_support_commi_activity = {		#支持共产党活动
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.1
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_left_opposition
+					has_completed_focus = SFR_unify_the_left
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.5
+				}
+				add = 5
+			}
+		}
+	}
+	SFR_support_base_construction = {		#协助根据地建设
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		days_remove = 120
+		days_re_enable = 30
+
+		modifier = {
+			stability_factor = 0.05
+			production_speed_buildings_factor = 0.1
+			monthly_agricultural_development_process = 1
+			monthly_living_standard_development_process = 1
+		}
+
+		remove_effect = {
+			random_list = {
+				25 = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				25 = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+						}
+					}
+				}
+				25 = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+					}
+				}
+				25 = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 2
+					}
+				}
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.1
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_left_opposition
+					has_completed_focus = SFR_unify_the_left
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.5
+				}
+				add = 5
+			}
+		}
+	}
+	SFR_expand_land_reform = {		#扩大土地改革
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_political_power = 50
+			capital_scope = {
+				add_manpower = 5000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			SPC_agricultural_development_amount_up_3 = yes
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = -0.2
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_left_opposition
+					has_completed_focus = SFR_unify_the_left
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.5
+				}
+				add = 5
+			}
+		}
+	}
+	SFR_opposition_bop_desc_2 = {
+		icon = generic_civil_support
+
+		available = { always = no }
+		visible = {}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = SFR_opposition_bop_desc_2_tt
+		}
+	}
+	SFR_support_rev_activity = {		#支持革命党活动
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.1
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_right_opposition
+					has_completed_focus = SFR_reinforce_leadership
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value < 0.5
+				}
+				add = 5
+			}
+		}
+	}
+	SFR_take_rev_talent = {		#吸纳革命党人才
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		days_remove = 120
+		days_re_enable = 30
+
+		modifier = {
+			industrial_capacity_factory = 0.1
+			research_speed_factor = 0.1
+			monthly_industrial_development_process = 1
+			monthly_research_development_process = 1
+		}
+
+		remove_effect = {
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.1
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_right_opposition
+					has_completed_focus = SFR_reinforce_leadership
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value < 0.5
+				}
+				add = 5
+			}
+		}
+	}
+	SFR_reorganize_rev_army = {		#整编革命党残部
+		icon = generic_civil_support
+
+		available = {}
+		visible = {}
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+
+		modifier = {
+			war_support_factor = -0.1
+			experience_gain_army_factor = -0.1
+			command_power_gain_mult = -0.2
+		}
+
+		remove_effect = {
+			army_experience = 30
+			SPC_military_development_amount_up_3 = yes
+			division_template = {
+				name = "革命党整编部队"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 0 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 0 }
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"革命党整编部队\" division_template = \"革命党整编部队\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = SFR
+					count = 2
+				}
+			}
+			add_power_balance_value = {
+				id = SFR_opposition_bop
+				value = 0.2
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				OR = {
+					has_completed_focus = SFR_support_right_opposition
+					has_completed_focus = SFR_reinforce_leadership
+				}
+				add = 10
+			}
+			modifier = {
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value > 0.95
+				}
+				add = -10
+			}
+			modifier = {
+				has_completed_focus = SFR_reinforce_leadership
+				power_balance_value = {
+					id = SFR_opposition_bop
+					value < 0.5
+				}
+				add = 5
+			}
+		}
+	}
+}
+
+SFH_battle_over_territory = {		#领土争夺战
+	SFR_infiltrate_state = { 		#渗透[SFH_bot_state_pointer:getName]
+		icon = GFX_decision_generic_scorched_earth
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+			}
+		}
+
+		cost = 20
+		days_remove = 20
+		days_re_enable = 10
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 5
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 5
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 5 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_2 = { 		#在[?SFH_bot_state_pointer:getName]安插内应
+		icon = GFX_decision_generic_political_discourse
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+			}
+			OR = {
+				has_completed_focus = SFR_fight_capital
+				has_completed_focus = SFR_fight_enemeies
+			}
+		}
+
+		cost = 25
+		custom_cost_text = decision_cost_CP_25_pp_25
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+
+		days_remove = 30
+		days_re_enable = 20
+
+		modifier = {
+			command_power_gain_mult = -0.2
+		}
+
+		complete_effect = { add_political_power = -25 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 10
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 10
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 10 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_3 = { 		#在[?SFH_bot_state_pointer:getName]发展组织
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+				custom_trigger_tooltip = {
+					tooltip = SFR_infiltrate_state_3_tr
+					check_variable = { SFR_state_influence_var < 50 }
+				}
+			}
+			OR = {
+				has_completed_focus = SFR_fight_capital
+				has_completed_focus = SFR_fight_enemeies
+			}
+		}
+
+		available = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				var:SFH_bot_decision_pointer_1 = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_3_tr
+						check_variable = { SFR_state_influence_var < 50 }
+					}
+				}
+			}
+			else = {
+				var:SFH_bot_state_pointer = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_3_tr
+						check_variable = { SFR_state_influence_var < 50 }
+					}
+				}
+			}
+		}
+
+		cost = 50
+		custom_cost_text = decision_cost_CP_25_pp_50
+		custom_cost_trigger = {
+			has_political_power > 49
+			command_power > 24
+		}
+
+		days_remove = 30
+		days_re_enable = 30
+
+		modifier = {
+			command_power_gain_mult = -0.2
+		}
+
+		complete_effect = { add_political_power = -50 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 8
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 8
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 8 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_4 = { 		#在§Y[?SFH_bot_state_pointer:getName]§!维持根据地
+		icon = GFX_decision_generic_operation
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+			}
+			OR = {
+				has_completed_focus = SFR_fight_capital
+				has_completed_focus = SFR_fight_enemeies
+			}
+		}
+
+		available = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				var:SFH_bot_decision_pointer_1 = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_4_tr
+						check_variable = { SFR_state_influence_var > 49 }
+					}
+				}
+			}
+			else = {
+				var:SFH_bot_state_pointer = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_4_tr
+						check_variable = { SFR_state_influence_var > 49 }
+					}
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 20
+
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 6
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = 6
+							tooltip = SFR_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 6 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_5 = { 		#在§Y[?SFH_bot_state_pointer:getName]§!对抗青天军的影响
+		icon = GFX_decision_generic_military
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+				custom_trigger_tooltip = {
+					tooltip = SFR_infiltrate_state_5_tr
+					check_variable = {
+						QTA_state_influence_var > 0
+					}
+				}
+			}
+			has_completed_focus = SFR_fight_enemeies
+		}
+
+		available = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				var:SFH_bot_decision_pointer_1 = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_5_tr
+						check_variable = {
+							QTA_state_influence_var > 0
+						}
+					}
+				}
+			}
+			else = {
+				var:SFH_bot_state_pointer = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_5_tr
+						check_variable = {
+							QTA_state_influence_var > 0
+						}
+					}
+				}
+			}
+		}
+
+		cost = 30
+
+		days_remove = 30
+		days_re_enable = 20
+
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = QTA_state_influence_var
+							value = -4
+							tooltip = QTA_state_influence_var_tt
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = QTA_state_influence_var
+							value = -4
+							tooltip = QTA_state_influence_var_tt
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { QTA_state_influence_var_down_var = 4 } QTA_state_influence_var_down_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_6 = { 		#从§Y[?SFH_bot_state_pointer:getName]§!盗取物资
+		icon = GFX_decision_generic_motorized
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+			}
+			has_completed_focus = SFR_expand_intel_network
+		}
+
+		available = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				var:SFH_bot_decision_pointer_1 = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_6_tr
+						check_variable = {
+							SFR_state_influence_var > 5
+						}
+					}
+				}
+			}
+			else = {
+				var:SFH_bot_state_pointer = {
+					custom_trigger_tooltip = {
+						tooltip = SFR_infiltrate_state_6_tr
+						check_variable = {
+							SFR_state_influence_var > 5
+						}
+					}
+				}
+			}
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 24
+		}
+
+		days_remove = 30
+		days_re_enable = 60
+
+		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = -5
+							tooltip = SFR_state_influence_var_tt
+						}
+						owner = {
+							add_stability = -0.02
+						}
+					}
+				}
+				random_list = {
+					20 = {}
+					20 = {
+						add_political_power = 20
+					}
+					25 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 200
+						}
+						add_equipment_to_stockpile = {
+							type = uniform_equipment
+							amount = 200
+						}
+					}
+					25 = {
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 20
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 20
+						}
+					}
+					5 = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					5 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = -5
+							tooltip = SFR_state_influence_var_tt
+						}
+						owner = {
+							add_stability = -0.02
+						}
+					}
+				}	
+				random_list = {
+					20 = {}
+					20 = {
+						add_political_power = 20
+					}
+					25 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 200
+						}
+						add_equipment_to_stockpile = {
+							type = uniform_equipment
+							amount = 200
+						}
+					}
+					25 = {
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 20
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 20
+						}
+					}
+					5 = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+					5 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } owner = { add_stability = -0.02 } }
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+	SFR_infiltrate_state_7 = { 		#破坏§Y[?SFH_bot_state_pointer:getName]§!的设施
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		
+		visible = {
+			var:SFH_bot_state_pointer = { 
+				NOT = { has_state_flag = SFH_state_influence_lock }
+				OR = {
+					has_state_flag = SFH_state_influence_under_control
+					has_state_flag = SFH_state_influence_not_under_control
+				}
+			}
+			has_completed_focus = SFR_damage_enemies
+		}
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 24
+		}
+
+		days_remove = 30
+		days_re_enable = 60
+
+		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				effect_tooltip = {
+					var:SFH_bot_decision_pointer_1 = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = -5
+							tooltip = SFR_state_influence_var_tt
+						}
+						random_list = {
+							33 = {
+								damage_building = {
+									type = infrastructure
+									damage = 0.5
+								}
+							}
+							33 = {
+								damage_building = {
+									type = arms_factory
+									damage = 0.5
+								}
+							}
+							33 = {
+								damage_building = {
+									type = industrial_complex
+									damage = 0.5
+								}
+							}
+							1 = {}
+						}
+					}
+				}
+			}
+			else = {
+				effect_tooltip = {
+					var:SFH_bot_state_pointer = {
+						add_to_variable = { 
+							var = SFR_state_influence_var
+							value = -5
+							tooltip = SFR_state_influence_var_tt
+						}
+						random_list = {
+							33 = {
+								damage_building = {
+									type = infrastructure
+									damage = 0.5
+								}
+							}
+							33 = {
+								damage_building = {
+									type = arms_factory
+									damage = 0.5
+								}
+							}
+							33 = {
+								damage_building = {
+									type = industrial_complex
+									damage = 0.5
+								}
+							}
+							1 = {}
+						}
+					}
+				}	
+			}
+			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } }
+			hidden_effect = {
+				var:SFH_bot_decision_pointer_1 = {
+					random_list = {
+						33 = {
+							damage_building = {
+								type = infrastructure
+								damage = 0.5
+							}
+						}
+						33 = {
+							damage_building = {
+								type = arms_factory
+								damage = 0.5
+							}
+						}
+						33 = {
+							damage_building = {
+								type = industrial_complex
+								damage = 0.5
+							}
+						}
+						1 = {}
+					}
+				}
+			}
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+		}
+	}
+
+	SFR_infiltrate_state_8 = { 		#破坏青天军内部的稳定
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		
+		visible = {
+			has_completed_focus = SFR_infiltrate_qta
+		}
+
+		cost = 50
+		custom_cost_text = decision_cost_CP_25_pp_50
+		custom_cost_trigger = {
+			has_political_power > 49
+			command_power > 24
+		}
+
+		modifier = {
+			political_power_factor = -0.05
+			command_power_gain_mult = -0.1
+		}
+
+		days_remove = 30
+		days_re_enable = 90
+
+		complete_effect = {
+			add_political_power = -50
+			add_command_power = -25
+		}
+
+		remove_effect = {
+			QTA = {
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+}
+
+SFR_commi_bop_decisions = {
+	SFR_commi_bop_left = {
+		icon = generic_civil_support
+
+		available = { always = no }
+		visible = {}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = SFR_commi_bop_left_tt
+		}
+	}
+	SFR_commi_bop_goes_left = { 		#倾向稳健派
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 50
+		days_remove = 180
+		days_re_enable = 30
+
+		modifier = {
+			power_balance_weekly = -0.01
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = SFR_commi_bop
+				value = -0.05
+			}
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = SFR_commi_bop
+				value = -0.05
+			}
+		}
+	}
+	SFR_commi_bop_right = {
+		icon = generic_civil_support
+
+		available = { always = no }
+		visible = {}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = SFR_commi_bop_right_tt
+		}
+	}
+	SFR_commi_bop_goes_right = { 		#倾向平京派
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 50
+		days_remove = 180
+		days_re_enable = 30
+
+		modifier = {
+			power_balance_weekly = 0.01
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = SFR_commi_bop
+				value = 0.05
+			}
+		}
+		remove_effect = {
+			add_power_balance_value = {
+				id = SFR_commi_bop
+				value = 0.05
+			}
+		}
+	}
+}
+
+SFR_workers_and_peasants_congress = {
+	SFR_workers_and_peasants_congress_debug_law = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		visible = { is_debug = yes }
+
+		cost = 1
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 0 }	}
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_0 = yes }
+		}
+	}
+	SFR_workers_and_peasants_congress_law_1 = {		#立宪会议
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_establish_workers_and_peasants_congress
+		}
+		visible = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = SFR.2000
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+		}
+	}
+	SFR_workers_and_peasants_congress_law_2 = {		#土地登记法
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_enact_land_reform_act
+		}
+		visible = { has_completed_focus = SFR_enact_land_reform_act }
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_2 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 2 }	}
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_2 = yes }
+		}
+	}
+	#正在表决
+	SFR_land_reform_voting = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = var:SFR_land_reform_voting_days
+
+		timeout_effect = {
+			clr_country_flag = SFR_workers_and_peasants_congress_voting
+			SFR_land_reform_voting_result_effect = yes
+		}
+	}
+}
+
+SFR_land_reform_decisions = {
+	#改革之期限
+	SFR_land_reform_time_limit = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SFR_land_reform_time_limit_tr
+				check_variable = { SFR_land_reform_decisions_progress = 100 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 540
+
+		complete_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_land_reform_time_limit_late } }
+				country_event = { id = SFR.401 days = 1 }
+			}
+			else = {
+				country_event = { id = SFR.402 days = 1 }
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = SFR_land_reform_time_limit_late } }
+				activate_mission = SFR_land_reform_time_limit
+				add_stability = -0.2
+				add_war_support = -0.2
+				add_political_power = -200
+				add_timed_idea = {
+					idea = SFR_declined_gov_credit
+					days = 180
+				}
+				country_event = { id = SFR.404 days = 1 }
+				custom_effect_tooltip = SFR_land_reform_time_limit_tt
+				set_country_flag = SFR_land_reform_time_limit_late
+			}
+			else = {
+				country_event = { id = SFR.403 days = 1 }
+			}
+		}
+	}
+	#月度改革推进
+	SFR_land_reform_monthly_check = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SFR_land_reform_time_limit_tr
+				check_variable = { SFR_land_reform_decisions_progress = 100 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 1
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			if = {
+				limit = { has_country_flag = SFR_land_reform_nationwide_survey_flag }
+				custom_effect_tooltip = {
+					localization_key = due_to_done_certain_decision_tooltip
+					DECISION_NAME = SFR_land_reform_nationwide_survey
+				}
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 1
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+			}
+			if = {
+				limit = { has_country_flag = SFR_land_reform_cooperative_pilot_flag }
+				custom_effect_tooltip = {
+					localization_key = due_to_done_certain_decision_tooltip
+					DECISION_NAME = SFR_land_reform_cooperative_pilot
+				}
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 1
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+			}
+			if = {
+				limit = { has_country_flag = SFR_land_reform_train_peasants_flag }
+				custom_effect_tooltip = {
+					localization_key = due_to_done_certain_decision_tooltip
+					DECISION_NAME = SFR_land_reform_train_peasants
+				}
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 1
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+			}
+			if = {
+				limit = { has_country_flag = SFR_workers_and_peasants_congress_vote_2_1_flag }
+				custom_effect_tooltip = {
+					localization_key = due_to_pass_certain_laws_tooltip
+					LAW_NAME = SFR_workers_and_peasants_congress_law_2
+				}
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 5
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = SFR_workers_and_peasants_congress_vote_2_2_flag }
+				custom_effect_tooltip = {
+					localization_key = due_to_pass_certain_laws_tooltip
+					LAW_NAME = SFR_workers_and_peasants_congress_law_2
+				}
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 2.5
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			activate_mission = SFR_land_reform_time_limit
+		}
+	}
+	#发出全国丈量令
+	SFR_land_reform_nationwide_survey = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			set_country_flag = SFR_land_reform_nationwide_survey_flag
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 2.5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			set_country_flag = SFR_land_reform_nationwide_survey_flag
+			custom_effect_tooltip = SFR_land_reform_monthly_check_tt
+		}
+	}
+	#设立临时仲裁庭
+	SFR_land_reform_temporary_tribunal = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = 0.1
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+		}
+	}
+	#下乡宣传队月
+	SFR_land_reform_propaganda_team = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			stability_factor = 0.05
+			consumer_goods_factor = 0.05
+		}
+
+		remove_effect = {
+			random_list = {
+				60 = {
+					add_to_variable = {
+						var = SFR_land_reform_decisions_progress
+						value = 2.5
+						tooltip = SFR_land_reform_decisions_progress_tt
+					}
+				}
+				20 = {
+					add_to_variable = {
+						var = SFR_land_reform_decisions_progress
+						value = 5
+						tooltip = SFR_land_reform_decisions_progress_tt
+					}
+				}
+				20 = {
+					add_political_power = 50
+					add_to_variable = {
+						var = SFR_land_reform_decisions_progress
+						value = 5
+						tooltip = SFR_land_reform_decisions_progress_tt
+					}
+				}
+			}
+			SFR_land_reform_decisions_progress_update = yes
+		}
+	}
+	#敲打反对派
+	SFR_land_reform_oppose_suppress = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			political_power_factor = -0.1
+			stability_factor = -0.1
+		}
+
+		remove_effect = {
+			add_stability = 0.02
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_8_1
+				value = -5
+				tooltip = SFR_red_star_over_capital_group_8_1_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_8_2
+				value = -5
+				tooltip = SFR_red_star_over_capital_group_8_2_tt
+			}
+			if = {
+				limit = { has_completed_focus = SFR_national_assembly_proposal }
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_7_1
+					value = -5
+					tooltip = SFR_red_star_over_capital_group_7_1_tt
+				}
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_7_2
+					value = -5
+					tooltip = SFR_red_star_over_capital_group_7_2_tt
+				}
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 2
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+		}
+	}
+	#合作社试点
+	SFR_land_reform_cooperative_pilot = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_prepare_collective_farms }
+
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			political_power_factor = -0.1
+			stability_factor = -0.1
+			consumer_goods_factor = 0.1
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_production_speed_infrastructure_factor = 0.1
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			if = {
+				limit = { has_completed_focus = ROK_all_rights_to_people }
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_4_2
+					value = 5
+					tooltip = SFR_red_star_over_capital_group_4_2_tt
+				}
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 10
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			random_owned_state = {
+				add_manpower = 2000
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = SFR_land_reform_monthly_check_tt
+			set_country_flag = SFR_land_reform_cooperative_pilot_flag
+			country_event = {
+				id = SFR.405
+				days = 1
+			}
+		}
+	}
+	#扩建集体农庄
+	SFR_land_reform_collective_farm = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_prepare_collective_farms }
+
+		cost = 30
+		days_remove = 60
+		days_re_enable = 60
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			random_owned_state = {
+				add_manpower = 1000
+				add_extra_state_shared_building_slots = 1
+				random_list = {
+					50 = {
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					50 = {
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	#培训农民
+	SFR_land_reform_train_peasants = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_send_party_members_to_grassroots }
+
+		cost = 60
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			political_power_factor = -0.1
+			production_speed_buildings_factor = 0.05
+		}
+
+		complete_effect = {
+			SPC_agricultural_development_amount_up_2 = yes
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 10
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			set_country_flag = SFR_land_reform_train_peasants_flag
+			custom_effect_tooltip = SFR_land_reform_monthly_check_tt
+		}
+	}
+	#工作队下乡
+	SFR_land_reform_work_team = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_send_party_members_to_grassroots }
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_political_power = 50
+			SPC_agricultural_development_amount_up_1 = yes
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 5
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+		}
+	}
+}
+

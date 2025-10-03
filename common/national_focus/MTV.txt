@@ -1,0 +1,1233 @@
+focus_tree = {
+	id = MTV_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MTV
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#日沃伊诺维奇当选
+		id = MTV_zhivoinovich_was_elected
+		icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+		x = 5
+		y = 0
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_zhivoinovich_was_elected_tt
+		}
+	}
+
+	focus = {	#处理问题
+		id = MTV_handle_problems
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_zhivoinovich_was_elected }
+		relative_position_id = MTV_zhivoinovich_was_elected
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_handle_problems_tt
+		}
+	}
+
+	focus = {	#蒙特至大！
+		id = MTV_monte_grande
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 2
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_handle_problems }
+		relative_position_id = MTV_handle_problems
+		mutually_exclusive = { focus = MTV_st_more_than_anything }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_monte_grande_tt
+		}
+	}
+
+	focus = {	#继续分裂维尔德人
+		id = MTV_divide_the_veld
+		icon = GFX_focus_AUS_disregard_the_treaties
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_monte_grande }
+		relative_position_id = MTV_monte_grande
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_divide_the_veld_tt
+		}
+	}
+	
+	focus = {	#强化蒙特人权利
+		id = MTV_strengthen_rights_of_monts
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_divide_the_veld }
+		relative_position_id = MTV_divide_the_veld
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_strengthen_rights_of_monts_tt
+		}
+	}
+
+	focus = {	#蒙特人的联盟
+		id = MTV_alliance_of_the_Monts
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_strengthen_rights_of_monts }
+		relative_position_id = MTV_strengthen_rights_of_monts
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_alliance_of_the_Monts_tt
+		}
+	}
+
+	focus = {	#将蒙特语列为官方语
+		id = MTV_Montt_an_official_language
+		icon = GFX_Generic_Pilots
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_alliance_of_the_Monts }
+		relative_position_id = MTV_alliance_of_the_Monts
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_Montt_an_official_language_tt
+		}
+	}
+
+	focus = {	#诸民族扩张条例法
+		id = MTV_national_expansion_act
+		icon = GFX_goal_planning_bonus
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_monte_grande }
+		relative_position_id = MTV_monte_grande
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_national_expansion_act_tt
+		}
+	}
+
+	focus = {	#机会给与蒙特！
+		id = MTV_chance_to_mont
+		icon = GFX_goal_volunteer_alliance
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_national_expansion_act }
+		relative_position_id = MTV_national_expansion_act
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_chance_to_mont_tt
+		}
+	}
+
+	focus = {	#我们比地狱更强大
+		id = MTV_stronger_than_hell
+		icon = GFX_Generic_Unchecked_Expansionism
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_chance_to_mont }
+		relative_position_id = MTV_chance_to_mont
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_stronger_than_hell_tt
+		}
+	}
+
+	focus = {	#紧紧跟随瓦尔特大元帅
+		id = MTV_follow_the_marshal
+		icon = GFX_Paternal_Autocrat
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_stronger_than_hell }
+		relative_position_id = MTV_stronger_than_hell
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_follow_the_marshal_tt
+		}
+	}
+
+	focus = {	#1997年宪法
+		id = MTV_1997_constitution
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_1997_constitution_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_Montt_an_official_language }
+		prerequisite = { focus = MTV_follow_the_marshal }
+		relative_position_id = MTV_Montt_an_official_language
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_1997_constitution_tt
+		}
+	}
+
+	focus = {	#发展蒙特人产业
+		id = MTV_develop_mont_industries
+		icon = GFX_focus_generic_military_industry
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			date < 1997.02.01
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_1997_constitution }
+		relative_position_id = MTV_1997_constitution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_develop_mont_industries_tt
+		}
+	}
+
+	focus = {	#与南巴斯蒂亚合作
+		id = MTV_coop_with_rsb
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_develop_mont_industries }
+		relative_position_id = MTV_develop_mont_industries
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_coop_with_rsb_tt
+		}
+	}
+
+	focus = {	#穆勒斯保佑蒙特
+		id = MTV_god_bless_mont
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_coop_with_rsb }
+		relative_position_id = MTV_coop_with_rsb
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_god_bless_mont_tt
+		}
+	}
+
+	focus = {	#稳定高于一切
+		id = MTV_st_more_than_anything
+		icon = GFX_Generic_Conservatism
+		x = -2
+		y = 1
+		cost = 0.72
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_handle_problems }
+		relative_position_id = MTV_handle_problems
+		mutually_exclusive = { focus = MTV_monte_grande }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_st_more_than_anything_tt
+		}
+	}
+
+	focus = {	#缓和蒙-维矛盾
+		id = MTV_ease_conflict
+		icon = GFX_goal_Generic_Meeting
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_st_more_than_anything }
+		relative_position_id = MTV_st_more_than_anything
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_ease_conflict_tt
+		}
+	}
+
+	focus = {	#少数民族权利
+		id = MTV_minority_rights
+		icon = GFX_focus_COG_force_publique_mutiny
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_ease_conflict }
+		relative_position_id = MTV_ease_conflict
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_minority_rights_tt
+		}
+	}
+
+	focus = {	#终结大民族主义思想
+		id = MTV_end_to_grand_nationalism
+		icon = GFX_focus_CONGO_chefs_coutumiers
+		x = 0
+		y = 1
+		cost = 3.58
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_minority_rights }
+		relative_position_id = MTV_minority_rights
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_end_to_grand_nationalism_tt
+		}
+	}
+
+	focus = {	#和而不同
+		id = MTV_unite_but_different
+		icon = GFX_Generic_Liberation
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_end_to_grand_nationalism }
+		relative_position_id = MTV_end_to_grand_nationalism
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_unite_but_different_tt
+		}
+	}
+
+	focus = {	#人口迁移扩张条例
+		id = MTV_migration_and_expansion_Act
+		icon = GFX_goal_Generic_Refugees
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_st_more_than_anything }
+		relative_position_id = MTV_st_more_than_anything
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_migration_and_expansion_Act_tt
+		}
+	}
+
+	focus = {	#完善民族法
+		id = MTV_complete_nation_laws
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_migration_and_expansion_Act }
+		relative_position_id = MTV_migration_and_expansion_Act
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_complete_nation_laws_tt
+		}
+	}
+	
+	focus = {	#解放党禁
+		id = MTV_open_party_restriction
+		icon = GFX_Generic_Liberalism
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_complete_nation_laws }
+		relative_position_id = MTV_complete_nation_laws
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_open_party_restriction_tt
+		}
+	}
+	
+	focus = {	#防备共产党
+		id = MTV_watch_out_commis
+		icon = GFX_Focus_Communist_Spy02
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_open_party_restriction }
+		relative_position_id = MTV_open_party_restriction
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_watch_out_commis_tt
+		}
+	}
+
+	focus = {	#1997年大和解
+		id = MTV_1997_Grand_Reconciliation
+		icon = GFX_focus_ETH_support_from_the_japanese_communists
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_unite_but_different }
+		prerequisite = { focus = MTV_watch_out_commis }
+		relative_position_id = MTV_unite_but_different
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_1997_Grand_Reconciliation_tt
+		}
+	}
+
+	focus = {	#引入南巴斯蒂亚资本
+		id = MTV_introduce_rsb_capital
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_1997_Grand_Reconciliation }
+		relative_position_id = MTV_1997_Grand_Reconciliation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_introduce_rsb_capital_tt
+		}
+	}
+
+	focus = {	#承认提特兰共和国
+		id = MTV_recognize_rot
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_introduce_rsb_capital }
+		relative_position_id = MTV_introduce_rsb_capital
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_recognize_rot_tt
+		}
+	}
+
+	focus = {	#嘿！蒙特维尔德人！
+		id = MTV_hey_vedmont
+		icon = GFX_Generic_Outside_Aid
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_recognize_rot }
+		relative_position_id = MTV_recognize_rot
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_hey_vedmont_tt
+		}
+	}
+
+	focus = {	#国家紧急状态
+		id = MTV_national_emergency
+		icon = GFX_focus_generic_military_dictatorship
+		x = 2
+		y = 2
+		cost = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_national_emergency_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		relative_position_id = MTV_hey_vedmont
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_national_emergency_tt
+		}
+	}
+
+	focus = {	#挽救日沃伊诺维奇的遗产
+		id = MTV_save_legacy
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = -1
+		y = 1
+		cost = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_save_legacy_tt
+				always = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_national_emergency }
+		relative_position_id = MTV_national_emergency
+		mutually_exclusive = { focus = MTV_give_up_legacy }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_save_legacy_tt
+		}
+	}
+
+	focus = {	#维持蒙特信心
+		id = MTV_maintain_ved_conf
+		icon = GFX_focus_generic_advanced_military_studies
+		x = -3
+		y = 1
+		cost = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_save_legacy_tt
+				always = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_national_emergency }
+		relative_position_id = MTV_national_emergency
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_maintain_ved_conf_tt
+		}
+	}
+
+	focus = {	#召集蒙特军官
+		id = MTV_org_mont_officiers
+		icon = GFX_focus_generic_military_mission
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_maintain_ved_conf }
+		prerequisite = { focus = MTV_save_legacy }
+		relative_position_id = MTV_maintain_ved_conf
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_org_mont_officiers_tt
+		}
+	}
+
+	focus = {	#号召宗教兵
+		id = MTV_call_religious_army
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = -1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_org_mont_officiers }
+		relative_position_id = MTV_org_mont_officiers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_call_religious_army_tt
+		}
+	}
+
+	focus = {	#宗教狂热
+		id = MTV_religious_fury
+		icon = GFX_Focus_Guy_Raising_Hand_Propaganda
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_call_religious_army }
+		relative_position_id = MTV_call_religious_army
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_religious_fury_tt
+		}
+	}
+
+	focus = {	#加固城墙
+		id = MTV_reinforce_the_wall
+		icon = GFX_goal_generic_fortify_city
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_org_mont_officiers }
+		relative_position_id = MTV_org_mont_officiers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_reinforce_the_wall_tt
+		}
+	}
+
+	focus = {	#为了祖国！
+		id = MTV_for_the_motherland
+		icon = GFX_Generic_Invasion
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_reinforce_the_wall }
+		relative_position_id = MTV_reinforce_the_wall
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_for_the_motherland_tt
+		}
+	}
+
+	focus = {	#准备！
+		id = MTV_get_ready
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_religious_fury }
+		prerequisite = { focus = MTV_for_the_motherland }
+		relative_position_id = MTV_religious_fury
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_get_ready_tt
+		}
+	}
+
+	focus = {	#放弃日沃伊诺维奇的遗产
+		id = MTV_give_up_legacy
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 1
+		y = 1
+		cost = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_give_up_legacy_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_national_emergency }
+		relative_position_id = MTV_national_emergency
+		mutually_exclusive = { focus = MTV_save_legacy }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_give_up_legacy_tt
+		}
+	}
+
+	focus = {	#放弃蒙特至上
+		id = MTV_give_up_mont_top
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 3
+		y = 1
+		cost = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_give_up_legacy_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_national_emergency }
+		relative_position_id = MTV_national_emergency
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_give_up_mont_top_tt
+		}
+	}
+
+	focus = {	#败中求胜
+		id = MTV_loss_but_win
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_give_up_legacy }
+		prerequisite = { focus = MTV_give_up_mont_top }
+		relative_position_id = MTV_give_up_legacy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_loss_but_win_tt
+		}
+	}
+
+	focus = {	#做出承诺
+		id = MTV_make_promises
+		icon = GFX_Generic_Legislation
+		x = -1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_loss_but_win }
+		relative_position_id = MTV_loss_but_win
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_make_promises_tt
+		}
+	}
+
+	focus = {	#重新修宪
+		id = MTV_remake_constitution
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_make_promises }
+		relative_position_id = MTV_make_promises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_remake_constitution_tt
+		}
+	}
+
+	focus = {	#团结共和制度党
+		id = MTV_unite_the_party
+		icon = GFX_goal_government_centralised_icon
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_loss_but_win }
+		relative_position_id = MTV_loss_but_win
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_unite_the_party_tt
+		}
+	}
+
+	focus = {	#放弃政治主导地位
+		id = MTV_give_up_pol_leadership
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_unite_the_party }
+		relative_position_id = MTV_unite_the_party
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_give_up_pol_leadership_tt
+		}
+	}
+
+	focus = {	#联盟的终结
+		id = MTV_end_of_union
+		icon = GFX_focus_BEL_la_dame_blanche
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_remake_constitution }
+		prerequisite = { focus = MTV_give_up_pol_leadership }
+		relative_position_id = MTV_remake_constitution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_end_of_union_tt
+		}
+	}
+
+	focus = {	#政变！
+		id = MTV_the_coup
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		x = 2
+		y = 2
+		cost = 1
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_the_coup_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		relative_position_id = MTV_get_ready
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_the_coup_tt
+		}
+	}
+
+	focus = {	#请求自治区援助
+		id = MTV_ask_for_help
+		icon = GFX_focus_BRA_ethical_internationalism
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_the_coup }
+		relative_position_id = MTV_the_coup
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_ask_for_help_tt
+		}
+	}
+
+	focus = {	#没有回应
+		id = MTV_no_response
+		icon = GFX_Generic_Lookout
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_ask_for_help }
+		relative_position_id = MTV_ask_for_help
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_no_response_tt
+		}
+	}
+
+	focus = {	#萨莱欧维熊熊燃烧
+		id = MTV_burning_capital
+		icon = GFX_goal_Generic_Socialist_Revolution
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_no_response }
+		relative_position_id = MTV_no_response
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_burning_capital_tt
+		}
+	}
+
+	focus = {	#战争游戏
+		id = MTV_war_game
+		icon = GFX_goal_split_helmet
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_burning_capital }
+		relative_position_id = MTV_burning_capital
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_war_game_tt
+		}
+	}
+
+	focus = {	#苦涩的第一年
+		id = MTV_sad_year_one
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_war_game }
+		relative_position_id = MTV_war_game
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = MTV_sad_year_one_tt
+		}
+	}
+
+	focus = {	#绝望的第二年
+		id = MTV_desperate_year_two
+		icon = GFX_focus_generic_total_war
+		x = 0
+		y = 1
+		cost = 0
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MTV_desperate_year_two_tr
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = MTV_sad_year_one }
+		relative_position_id = MTV_sad_year_one
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = MTV.2
+				days = 1
+			}
+		}
+	}
+
+}

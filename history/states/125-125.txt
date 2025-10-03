@@ -1,0 +1,54 @@
+
+state={
+	id=125
+	name="STATE_125"
+	resources={
+		tungsten = 4
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = CHE
+		add_claim_by = WUN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			6146 = {
+				bunker = 1
+			}
+			4725 = {
+				bunker = 1
+			}
+			2521 = {
+				bunker = 1
+			}
+			9823 = {
+				bunker = 1
+			}
+			14320 = {
+				bunker = 1
+			}
+			4904 = {
+				bunker = 1
+			}
+			14500 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			14500 3
+		}
+		victory_points = {
+			2521 3
+		}
+	}
+
+	provinces={
+		296 544 2521 4725 4748 4904 6146 9823 10040 14320 14500 
+	}
+	manpower=1670000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+UPV_focus_leader_check_1_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = UPV_focus_leader_check_1
+		OR = {
+			has_country_leader = {
+				character = UPV_elizabeth_supim_1
+				ruling_only = yes
+			}
+			has_country_leader = {
+				character = UPV_elizabeth_supim_2
+				ruling_only = yes
+			}
+		}
+	}
+}
+
+UPV_focus_leader_check_2_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = UPV_focus_leader_check_2
+		NOT = {
+			OR = {
+				has_country_leader = {
+					character = UPV_elizabeth_supim_1
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = UPV_elizabeth_supim_2
+					ruling_only = yes
+				}
+			}
+		}
+	}
+}

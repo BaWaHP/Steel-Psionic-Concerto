@@ -1,0 +1,24 @@
+leader_traits = {
+	GDD_human_top_officer = {				#人类高级军官
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = { always = no }
+
+		modifier = {
+			promote_cost_factor = 0.75
+		}
+
+		new_commander_weight = { factor = 0 }
+		ai_will_do = { factor = 1 }
+	}
+	GDD_traitor_of_empire = {				#沃姆帝国叛逃者
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = { always = no }
+
+		new_commander_weight = { factor = 0 }
+		ai_will_do = { factor = 1 }
+	}
+}

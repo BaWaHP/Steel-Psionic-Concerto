@@ -1,0 +1,230 @@
+ideas = {
+	country = {
+
+		MGC_supreme_tetrarchan_allied_forces = {		#至高提特兰全军联盟
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.1
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		MGC_so_be_the_end = {		#大幕已落…吗？
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				industrial_capacity_factory = -0.1
+				revolutionary_communism_drift = 0.03
+				pioneer_communism_drift = 0.02
+			}
+		}
+
+		MGC_beneath_the_luxrious = {		#纸醉金迷之下……
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = -0.1
+				consumer_goods_factor = 0.1
+				min_export = 0.2
+			}
+			targeted_modifier = {
+				tag = ZHE
+				trade_opinion_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+			targeted_modifier = {
+				tag = RSB
+				trade_opinion_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+		}
+
+		MGC_rich_black_earth = {		#黑土地，血沃肥
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				stability_factor = -0.05
+				conscription_factor = -0.05
+				monthly_population = -0.02
+			}
+		}
+
+		MGC_free_hussars = {		#自由骠骑军
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+
+		MGC_black_trade = {		#黑色贸易
+			picture = generic_spy_coup
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+				industrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+		MGC_regaining_industries = {		#收复工业
+			picture = generic_production_bonus
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		MGC_settle_the_controversy = {		#平息争议
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			on_add = {
+				country_event = {
+					id = MGC.52
+					days = 10
+				}
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		MGC_ineffective_compromise = {		#无效的妥协
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		MGC_whitewash_the_situation = {		#粉饰太平
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			on_add = {
+				country_event = {
+					id = MGC.53
+					days = 10
+				}
+			}
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		MGC_chaotic_economy = {		#经济混乱
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.3
+			}
+		}
+
+		MGC_angry_cops = {		#秩序警察极度不满
+			allowed = { original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		MGC_supreme_industria_ministry_inf = {		#全军联盟最高工业部
+			name = MGC_supreme_industria_ministry
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = { original_tag = MGC }
+			visible = { has_character = MGC_lugo_igor_zoltan }
+			removal_cost = -1
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+
+		MGC_supreme_industria_ministry_art = {		#全军联盟最高工业部
+			name = MGC_supreme_industria_ministry
+			picture = generic_artillery_manufacturer_2
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		MGC_supreme_industria_ministry = {		#全军联盟最高工业部
+			picture = generic_industrial_concern_2
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_arms_factory_factor = 0.02
+				production_speed_industrial_complex_factor = 0.02
+				research_speed_factor = -0.025
+			}
+
+			research_bonus = {
+				industry = 0.2
+			}
+
+			traits = { industrial_concern }
+		}
+
+		MGC_peninsula_railway_n = {		#半岛铁路总局-北方局
+			picture = generic_industrial_concern_3
+			allowed = {  original_tag = MGC }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+			}
+
+			traits = { railway_company }
+		}
+	}
+}

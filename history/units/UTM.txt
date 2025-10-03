@@ -1,0 +1,161 @@
+﻿###templates###
+division_template = {
+	name = "帝国军团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "魔导军团"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 0 y = 2 }
+		caster_infantry = { x = 1 y = 0 }
+		caster_infantry = { x = 1 y = 1 }
+		caster_infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		caster_recon = { x = 0 y = 0 }
+		caster_attacker = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "辅助军团"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "帝国军团"
+		location = 11376
+		division_template = "帝国军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "帝国军团"
+		location = 5214
+		division_template = "帝国军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "帝国军团"
+		location = 15386
+		division_template = "帝国军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "帝国军团"
+		location = 8121
+		division_template = "帝国军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "魔导军团"
+		location = 11376
+		division_template = "魔导军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "魔导军团"
+		location = 1210
+		division_template = "魔导军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "魔导军团"
+		location = 1210
+		division_template = "魔导军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "辅助军团"
+		location = 15731
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 15731
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 15647
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 15647
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 5214
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 8121
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "辅助军团"
+		location = 15108
+		division_template = "辅助军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

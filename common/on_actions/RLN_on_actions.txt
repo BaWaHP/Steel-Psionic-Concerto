@@ -1,0 +1,79 @@
+on_actions = {
+	on_monthly_RLN = {
+		effect = {
+			add_to_variable = { RLN_militarists_influence = modifier@RLN_militarists_influence_monthly }
+			add_to_variable = { RLN_principlists_influence = modifier@RLN_principlists_influence_monthly }
+			add_to_variable = { RLN_financists_influence = modifier@RLN_financists_influence_monthly }
+			add_to_variable = { RLN_solidaritists_influence = modifier@RLN_solidaritists_influence_monthly }
+			RLN_house_of_cards_refresh_vars = yes
+		}
+	}
+	on_war = {
+		effect = {
+			if = {
+				limit = { has_country_flag = RLN_event_56_flag }
+				country_event = RLN.57
+			}	
+		}
+	}
+	on_declare_war = {
+		###FROM - 目标###
+		###ROOT - 攻击方###
+		effect = {
+			###内战###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = LNR }
+							ROOT = { tag = RLN }
+						}
+						AND = {
+							ROOT = { tag = LNR }
+							FROM = { tag = RLN }
+						}
+					}
+				}
+				news_event = RLNNews.1
+			}
+			###打奥科特尼安王国###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = KOA NOT = { has_cosmetic_tag = KOA_republic_nation_tag } }
+							ROOT = { tag = RLN }
+						}
+						AND = {
+							FROM = { tag = RLN }
+							ROOT = { tag = KOA NOT = { has_cosmetic_tag = KOA_republic_nation_tag } NOT = { has_war_with = LNR } }
+						}
+					}
+				}
+				set_global_flag = SB_tenian_civil_war_global
+				FROM = { add_ideas = SB_Tenian_civil_war }
+				ROOT = { add_ideas = SB_Tenian_civil_war }
+				news_event = RLNNews.2
+			}
+			###打奥科特尼安临时政府###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = KOA has_cosmetic_tag = KOA_republic_nation_tag }
+							ROOT = { tag = RLN }
+						}
+						AND = {
+							FROM = { tag = RLN }
+							ROOT = { tag = KOA has_cosmetic_tag = KOA_republic_nation_tag NOT = { has_war_with = LNR } }
+						}
+					}
+				}
+				set_global_flag = SB_tenian_civil_war_global
+				FROM = { add_ideas = SB_Tenian_civil_war }
+				ROOT = { add_ideas = SB_Tenian_civil_war }
+				news_event = RLNNews.3
+			}
+		}
+	}
+}

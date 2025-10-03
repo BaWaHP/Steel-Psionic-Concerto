@@ -1,0 +1,32 @@
+
+state={
+	id=147
+	name="STATE_147"
+
+	resources = {
+		magic_crystal = 8
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = SIN
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3640 1
+		}
+		victory_points = {
+			17134 3
+		}
+	}
+
+	provinces={
+		3640 4734 5384 8122 8163 8925 9308 9975 11900 17134 17205 17355 17507 17641 
+	}
+	manpower=1160000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

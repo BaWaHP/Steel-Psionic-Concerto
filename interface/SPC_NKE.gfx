@@ -1,0 +1,69 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_portrait_NKE_Viana_Weil"
+		texturefile = "gfx/leaders/NKE/NKE_Viana_Weil.png"
+	}
+
+	progressbartype = {
+		name = "GFX_NKE_citify_tso_naghara_category_progress"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/NKE/NKE_citify_tso_naghara_category_progress_1.dds"
+		textureFile2 = "gfx/interface/NKE/NKE_citify_tso_naghara_category_progress_0.dds"
+		size = { x = 180 y = 49 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	###顾问###
+	spriteType = {
+		name = "GFX_idea_NKE_Alpha_Mentur"
+		texturefile = "gfx/advisors/NKE/NKE_Alpha_Mentur.dds"
+	}
+
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_NKE_national_university"
+		texturefile = "gfx/interface/ideas/NKE_national_university.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_nation_of_vitality"
+		texturefile = "gfx/interface/ideas/NKE_nation_of_vitality.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_Peoria_cooperation_pact"
+		texturefile = "gfx/interface/ideas/NKE_Peoria_cooperation_pact.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_Peoria_cooperation_pact_refused"
+		texturefile = "gfx/interface/ideas/NKE_Peoria_cooperation_pact_refused.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_developing_extrade"
+		texturefile = "gfx/interface/ideas/NKE_developing_extrade.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_alam_tannery_pollution"
+		texturefile = "gfx/interface/ideas/NKE_alam_tannery_pollution.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_debt_bondage_impact"
+		texturefile = "gfx/interface/ideas/NKE_debt_bondage_impact.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_pearl_of_the_ocean"
+		texturefile = "gfx/interface/ideas/NKE_pearl_of_the_ocean.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_leveled_bureaucrat_idea"
+		texturefile = "gfx/interface/ideas/NKE_leveled_bureaucrat_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_determinated_production"
+		texturefile = "gfx/interface/ideas/NKE_determinated_production.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NKE_final_devotion"
+		texturefile = "gfx/interface/ideas/NKE_final_devotion.png"
+	}
+}

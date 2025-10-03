@@ -1,0 +1,33 @@
+
+state={
+	id=319
+	name="STATE_319"
+
+	resources = {
+		steel = 24
+		aluminium = 24
+		magic_crystal = 12
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+
+		}
+		victory_points = {
+			19929 1 
+		}
+
+	}
+
+	provinces={
+		4597 5443 6198 11666 12096 19929 20018 20028 20092 20098 
+	}
+	manpower=703690
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

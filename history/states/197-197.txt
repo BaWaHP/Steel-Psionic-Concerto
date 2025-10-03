@@ -1,0 +1,38 @@
+
+state={
+	id=197
+	name="STATE_197"
+
+	resources = {
+		steel = 18
+		tungsten = 28
+		chromium = 8
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			347 = { bunker = 1 }
+		}
+		victory_points = {
+			17519 15
+		}
+		victory_points = {
+			17686 3
+		}
+		victory_points = {
+			347 5
+		}
+	}
+
+	provinces={
+		347 1577 3933 6436 7091 7110 7549 8487 10574 12105 12192 17034 17331 17417 17474 17494 17519 17589 17686 17758 
+	}
+	manpower = 5090000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

@@ -1,0 +1,745 @@
+characters={
+
+	ARO_Authrinton_Glonia = {		#奥斯灵顿·格罗尼亚
+   		name = ARO_Authrinton_Glonia
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Authrinton_Glonia"
+   				small="GFX_idea_ARO_Authrinton_Glonia"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Authrinton_Glonia_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { king_of_virtue_n_peace fraternal_gentleman }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	ARO_Arthytton_Glonia = {		#阿斯顿·格罗尼亚
+   		name = ARO_Arthytton_Glonia
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Arthytton_Glonia"
+   				small="GFX_idea_ARO_Arthytton_Glonia"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Arthytton_Glonia_desc_long
+   			ideology = national_socialist_subtype
+   			traits = { treacherous_backstabber ideological_crusader }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			can_be_fired = no
+			slot = political_advisor
+			desc = ARO_Arthytton_Glonia_desc
+			idea_token = ARO_Arthytton_Glonia_political_advisor
+   			traits = { treacherous_backstabber national_socialist_supporter }
+   		}
+	}
+
+	ARO_Syawither_Glonia = {		#希雅薇瑟·格罗尼亚
+   		name = ARO_Syawither_Glonia
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Syawither_Glonia"
+   				small="GFX_idea_ARO_Syawither_Glonia"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Syawither_Glonia_desc
+   			ideology = militaristic_hegemonism
+   			traits = { lovethirst_empress }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	ARO_Fareblave_Leight = {		#菲尔布雷夫·莱特
+   		name = ARO_Fareblave_Leight
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Fareblave_Leight"
+   				small="GFX_idea_ARO_Fareblave_Leight"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Fareblave_Leight_desc
+   			ideology = democratic_republican
+   			traits = { war_industrialist }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Fareblave_Leight_desc
+			idea_token = ARO_Fareblave_Leight_political_advisor
+   			traits = { war_industrialist liberal_republican_supporter }
+   		}
+	}
+
+	ARO_Halifax_Kimmel = {		#哈利法克斯·基梅尔
+   		name = ARO_Halifax_Kimmel
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Halifax_Kimmel"
+   				small="GFX_idea_ARO_Halifax_Kimmel"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Halifax_Kimmel_desc
+			idea_token = ARO_Halifax_Kimmel_political_advisor
+   			traits = { famous_ones authoritarian_republican_supporter }
+   		}
+	}
+
+	ARO_Delius_Dover = {		#德利乌斯·多佛
+   		name = ARO_Delius_Dover
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Delius_Dover"
+   				small="GFX_idea_ARO_Delius_Dover"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Delius_Dover_desc
+			idea_token = ARO_Delius_Dover_political_advisor
+   			traits = { education_expert research_elite }
+   		}
+	}
+
+	ARO_Cheng_Yulu = {		#“校长”程宇陆
+   		name = ARO_Cheng_Yulu
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Cheng_Yulu"
+   				small="GFX_idea_ARO_Cheng_Yulu"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Cheng_Yulu_desc
+			idea_token = ARO_Cheng_Yulu_political_advisor
+   			traits = { economy_expert }
+   		}
+	}
+
+	ARO_Granerl_Suth = {		#格兰厄尔·苏斯
+   		name = ARO_Granerl_Suth
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Granerl_Suth"
+   				small="GFX_idea_ARO_Granerl_Suth"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Granerl_Suth_desc
+   			ideology = conservative_republican_subtype
+   			traits = { Andarc_octupus conservative_republican_supporter }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Granerl_Suth_desc
+			idea_token = ARO_Granerl_Suth_political_advisor
+   			traits = { Andarc_octupus conservative_republican_supporter }
+   		}
+	}
+
+	ARO_Cellyn_Tira = {		#西琳·缇拉
+   		name = ARO_Cellyn_Tira
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Cellyn_Tira"
+   				small="GFX_idea_ARO_Cellyn_Tira"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Cellyn_Tira_desc
+   			ideology = sacred_battles
+   			traits = { the_saint_of_Verjie }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Cellyn_Tira_desc
+			idea_token = ARO_Cellyn_Tira_political_advisor
+   			traits = { the_saint_of_Verjie }
+   		}
+	}
+
+	ARO_Mans_Dorn = {		#曼斯·多恩
+   		name = ARO_Mans_Dorn
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Mans_Dorn"
+   				small="GFX_idea_ARO_Mans_Dorn"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Mans_Dorn_desc
+   			ideology = religious_extremism_subtype
+   			traits = { ruthless_Aurora_bishop religious_extremism_supporter }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Mans_Dorn_desc
+			idea_token = ARO_Mans_Dorn_political_advisor
+   			traits = { ruthless_Aurora_bishop religious_extremism_supporter }
+   		}
+	}
+
+	ARO_Davin_Colnick = {		#“响尾蛇”戴文·柯尼克
+   		name = ARO_Davin_Colnick
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Davin_Colnick"
+   				small="GFX_idea_ARO_Davin_Colnick"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Davin_Colnick_desc
+			idea_token = ARO_Davin_Colnick_political_advisor
+   			traits = { ARO_masterful_puppeteer }
+   		}
+	}
+	
+	ARO_Xerxes = {		#“混乱导师”薛西斯
+   		name = ARO_Xerxes
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Xerxes"
+   				small="GFX_idea_ARO_Xerxes"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Xerxes_desc
+			idea_token = ARO_Xerxes_political_advisor
+   			traits = { ARO_mental_morpher }
+   		}
+	}
+	
+	ARO_Heist_Seor = {		#希斯特·塞欧
+   		name = ARO_Heist_Seor
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Heist_Seor"
+   				small="GFX_idea_ARO_Heist_Seor"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Heist_Seor_desc
+			idea_token = ARO_Heist_Seor_political_advisor
+   			traits = { captain_of_industry }
+   		}
+	}
+
+	ARO_Blant_King = {		#博兰特·金
+   		name = ARO_Blant_King
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Blant_King"
+   				small="GFX_idea_ARO_Blant_King"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Blant_King_desc
+			idea_token = ARO_Blant_King_political_advisor
+   			traits = { confused_workhorse famous_ones }
+   		}
+		scientist = {
+			traits = {  }
+			skills = {
+				specialization_land = 2
+			}
+
+			visible = {
+				owner = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	ARO_Halmed_Ranster = {		#哈梅德·兰斯特
+   		name = ARO_Halmed_Ranster
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Halmed_Ranster"
+   				small="GFX_idea_ARO_Halmed_Ranster"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Halmed_Ranster_desc
+			idea_token = ARO_Halmed_Ranster_political_advisor
+   			traits = { quartermaster_general reluctant_veteran }
+   		}
+	}
+
+	ARO_Duren_Meld = {		#杜伦·梅尔德
+   		name = ARO_Duren_Meld
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Duren_Meld"
+   				small="GFX_idea_ARO_Duren_Meld"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = ARO_Duren_Meld_desc
+			idea_token = ARO_Duren_Meld_political_advisor
+   			traits = { lion_tamer }
+   		}
+	}
+	
+	ARO_Adam_Mace = {		#“重锤”亚当·梅斯
+   		name = ARO_Adam_Mace
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Adam_Mace"
+   				small="GFX_idea_ARO_Adam_Mace"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			desc = ARO_Adam_Mace_desc
+			idea_token = ARO_Adam_Mace_theorist
+			available = {
+				OR = {
+					has_completed_focus = ARO_cruelty_is_virtue
+					has_country_flag = ARO_civil_war_broke_out
+				}
+			}
+   			traits = { ARO_Adam_Mace_theorist_trait }
+   		}
+		corps_commander = {
+			traits = { trait_reckless harsh_leader trickster ARO_compressed_steel_hammer ARO_all_limbs_amputated }
+			desc = ARO_Adam_Mace_desc
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	ARO_Herman_Heathrin = {		#“铁血少将”赫尔曼·希斯林
+   		name = ARO_Herman_Heathrin
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Herman_Heathrin"
+   				small="GFX_idea_ARO_Herman_Heathrin"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Herman_Heathrin_desc
+			idea_token = ARO_Herman_Heathrin_high_command
+			available = {
+			}
+   			traits = { army_commando_2 }
+   		}
+		corps_commander = {
+			traits = { war_hero career_officer infantry_officer winter_specialist Auroreyetian_honour }
+			desc = ARO_Herman_Heathrin_desc
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	
+	ARO_Marlith_Borwisch = {		#“魔女”玛莉斯·布尔维什
+   		name = ARO_Marlith_Borwisch
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Marlith_Borwisch"
+   				small="GFX_idea_ARO_Marlith_Borwisch"
+   			}
+   		}
+   		country_leader = {
+			desc = ARO_Marlith_Borwisch_desc
+   			ideology = magician_dictatorship
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			desc = ARO_Marlith_Borwisch_desc
+			idea_token = ARO_Marlith_Borwisch_theorist
+			available = {
+			}
+   			traits = { ARO_Marlith_Borwisch_theorist_trait }
+			research_bonus = {
+				caster_equipments = 0.15
+			}
+   		}
+		corps_commander = {
+			traits = { hill_fighter ranger ARO_ageless_witch }
+			desc = ARO_Marlith_Borwisch_desc
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		scientist = {
+			traits = { ARO_scientist_trait_magician }
+			skills = {
+				specialization_air = 3
+			}
+
+			visible = {
+				owner = {
+					OR = {
+						tag = LTH
+						NOT = { has_country_flag = ARO_civil_war_broke_out }
+					}
+				}
+			}
+		}
+	}
+	
+	ARO_Herez_Delint = {		#“猎巫人”赫雷兹·德林特
+   		name = ARO_Herez_Delint
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Herez_Delint"
+   				small="GFX_idea_ARO_Herez_Delint"
+   			}
+   		}
+		corps_commander = {
+			traits = { hill_fighter ranger ARO_endless_hunt }
+			desc = ARO_Herez_Delint_desc
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Berris_Hardegg = {		#贝里斯·哈德格
+   		name = ARO_Berris_Hardegg
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Berris_Hardegg"
+   				small="GFX_idea_ARO_Berris_Hardegg"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			desc = ARO_Berris_Hardegg_desc
+			idea_token = ARO_Berris_Hardegg_army_chief
+			available = {
+			}
+   			traits = { army_chief_maneuver_2 }
+   		}
+		field_marshal = {
+			traits = { brilliant_strategist career_officer panzer_leader combined_arms_expert substance_abuser aggressive_assaulter }
+			desc = ARO_Berris_Hardegg_desc
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Maltha_Lockhart = {		#马尔萨·洛哈特
+   		name = ARO_Maltha_Lockhart
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Maltha_Lockhart"
+   				small="GFX_idea_ARO_Maltha_Lockhart"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			desc = ARO_Maltha_Lockhart_desc
+			idea_token = ARO_Maltha_Lockhart_army_chief
+			available = {
+			}
+   			traits = { army_chief_planning_2 }
+   		}
+		field_marshal = {
+			traits = { career_officer infantry_leader ambusher organizer thorough_planner }
+			desc = ARO_Maltha_Lockhart_desc
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	
+	ARO_Damil_Exsart = {		#达米尔·艾克斯亚特
+   		name = ARO_Damil_Exsart
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Damil_Exsart"
+   				small="GFX_idea_ARO_Damil_Exsart"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Damil_Exsart_desc
+			idea_token = ARO_Damil_Exsart_high_command
+			available = {
+			}
+   			traits = { army_infantry_2 }
+   		}
+		corps_commander = {
+			traits = { career_officer infantry_leader infantry_officer }
+			desc = ARO_Damil_Exsart_desc
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Jack_Brenhildt = {		#杰克·布伦希特
+   		name = ARO_Jack_Brenhildt
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Jack_Brenhildt"
+   				small="GFX_idea_ARO_Jack_Brenhildt"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Jack_Brenhildt_desc
+			idea_token = ARO_Jack_Brenhildt_high_command
+			available = {
+			}
+   			traits = { army_regrouping_2 }
+   		}
+		corps_commander = {
+			traits = { infantry_officer }
+			desc = ARO_Jack_Brenhildt_desc
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Colse_Glonia = {		#子爵 柯尔斯·格罗尼亚
+   		name = ARO_Colse_Glonia
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Colse_Glonia"
+   				small="GFX_idea_ARO_Colse_Glonia"
+   			}
+   		}
+		corps_commander = {
+			traits = { politically_connected armor_officer }
+			desc = ARO_Colse_Glonia_desc
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Hanister_Bashral = {		#子爵 哈尼斯特·巴什拉
+   		name = ARO_Hanister_Bashral
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Hanister_Bashral"
+   				small="GFX_idea_ARO_Hanister_Bashral"
+   			}
+   		}
+		corps_commander = {
+			traits = { politically_connected }
+			desc = ARO_Hanister_Bashral_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	ARO_Glock_Andarc = {		#男爵 格洛克·昂达克
+   		name = ARO_Glock_Andarc
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Glock_Andarc"
+   				small="GFX_idea_ARO_Glock_Andarc"
+   			}
+   		}
+		corps_commander = {
+			traits = { politically_connected }
+			desc = ARO_Glock_Andarc_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	ARO_Walls_Buck = {		#沃尔斯·巴克
+   		name = ARO_Walls_Buck
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Walls_Buck"
+   				small="GFX_idea_ARO_Walls_Buck"
+   			}
+   		}
+		corps_commander = {
+			traits = { war_hero infantry_officer }
+			desc = ARO_Walls_Buck_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	ARO_Alex_Wilson = {		#亚历克斯·威尔逊
+   		name = ARO_Alex_Wilson
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Alex_Wilson"
+   				small="GFX_idea_ARO_Alex_Wilson"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Alex_Wilson_desc
+			idea_token = ARO_Alex_Wilson_high_command
+			available = {
+			}
+   			traits = { army_artillery_1 }
+   		}
+		corps_commander = {
+			traits = { inflexible_strategist }
+			desc = ARO_Alex_Wilson_desc
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	ARO_Lucas_Taylors = {		#卢卡斯·泰勒斯
+   		name = ARO_Lucas_Taylors
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Lucas_Taylors"
+   				small="GFX_idea_ARO_Lucas_Taylors"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Lucas_Taylors_desc
+			idea_token = ARO_Lucas_Taylors_high_command
+			available = {
+			}
+   			traits = { army_logistics_1 }
+   		}
+		corps_commander = {
+			traits = { harsh_leader }
+			desc = ARO_Lucas_Taylors_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	ARO_Valor_Bejean = {		#瓦洛尔·贝让
+   		name = ARO_Valor_Bejean
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Valor_Bejean"
+   				small="GFX_idea_ARO_Valor_Bejean"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			desc = ARO_Valor_Bejean_desc
+			idea_token = ARO_Valor_Bejean_high_command
+			available = {
+			}
+   			traits = { army_entrenchment_1 }
+   		}
+		corps_commander = {
+			traits = { war_hero infantry_officer }
+			desc = ARO_Valor_Bejean_desc
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	ARO_Bob_Jones = {		#鲍勃·琼斯
+   		name = ARO_Bob_Jones
+   		portraits = {
+   			civilian = {
+   				large="GFX_ARO_Bob_Jones"
+   				small="GFX_idea_ARO_Bob_Jones"
+   			}
+   		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			desc = ARO_Bob_Jones_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

@@ -1,0 +1,22 @@
+leader_traits = {
+
+	ASR_northernist = {		#北方派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ASR_fire_of_serath = {		#瑟拉斯的天火
+		random = no
+		
+		army_org_regain = 0.1
+		army_attack_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

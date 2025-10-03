@@ -1,0 +1,24 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_MSA_william_seastrand"
+		texturefile = "gfx/leaders/MSA/william_seastrand.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_MSA_william_personal_life"
+		texturefile = "gfx/interface/ideas/MSA_william_personal_life.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MSA_business_autonomy_territory"
+		texturefile = "gfx/interface/ideas/MSA_business_autonomy_territory.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MSA_united_volunteer_army"
+		texturefile = "gfx/interface/ideas/MSA_united_volunteer_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MSA_suppressed_racial_conflicts"
+		texturefile = "gfx/interface/ideas/MSA_suppressed_racial_conflicts.png"
+	}
+}

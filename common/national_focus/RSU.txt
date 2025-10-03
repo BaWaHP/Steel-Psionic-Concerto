@@ -1,0 +1,802 @@
+focus_tree = {
+	id = RSU_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RSU
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#天仪再始
+		id = RSU_fresh_new_year
+		icon = GFX_Generic_Bell_Tolls
+		x = 5
+		y = 0
+		cost = 2.15
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			NOT = { has_country_flag = RSU_focus_flag_1 }
+			#always = no
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+			country_event = RSU.1
+		}
+	}
+
+	focus = {	#联盟大会
+		id = RSU_alliance_conference
+		icon = GFX_Generic_Parliament_Box
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_fresh_new_year }
+		relative_position_id = RSU_fresh_new_year
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+			RSU_union_development_initilization = yes
+			add_dynamic_modifier = { modifier = RSU_union_conference }
+			unlock_decision_category_tooltip = RSU_full_union_development_plan
+		}
+	}
+
+	focus = {	#安抚东区
+		id = RSU_comfort_east_district
+		icon = GFX_goal_manage_industries
+		x = -3
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_alliance_conference }
+		relative_position_id = RSU_alliance_conference
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = RSU_comfort_east_district_tt
+		}
+	}
+
+	focus = {	#拓展西区
+		id = RSU_development_west_district
+		icon = GFX_Generic_Factory_Planning
+		x = -1
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_alliance_conference }
+		relative_position_id = RSU_alliance_conference
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = RSU_development_west_district_tt
+		}
+	}
+
+	focus = {	#发展南区
+		id = RSU_developing_the_southern_district
+		icon = GFX_Generic_Industry
+		x = 1
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_alliance_conference }
+		relative_position_id = RSU_alliance_conference
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = RSU_developing_the_southern_district_tt
+		}
+	}
+
+	focus = {	#开发北区
+		id = RSU_developing_the_northern_district
+		icon = GFX_medium_industry
+		x = 3
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_alliance_conference }
+		relative_position_id = RSU_alliance_conference
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = RSU_developing_the_northern_district_tt
+		}
+	}
+
+	focus = {	#而今现状
+		id = RSU_our_current_status
+		icon = GFX_Generic_Factionalism
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_comfort_east_district }
+		prerequisite = { focus = RSU_development_west_district }
+		prerequisite = { focus = RSU_developing_the_southern_district }
+		prerequisite = { focus = RSU_developing_the_northern_district }
+		relative_position_id = RSU_development_west_district
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.2
+			set_variable = { RSU_current_status_sf = -0.1 }
+			set_variable = { RSU_current_status_ppf = -0.15 }
+			set_variable = { RSU_current_status_cgf = 0.2 }
+			set_variable = { RSU_current_status_mlsdp = -4 }
+			add_dynamic_modifier = { modifier = RSU_current_status }
+		}
+	}
+
+	focus = {	#市场...市场啊！
+		id = RSU_market_for_god_sake
+		icon = GFX_goal_ideology_market_liberal
+		x = -1
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_our_current_status }
+		relative_position_id = RSU_our_current_status
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = RSU.3
+		}
+	}
+
+	focus = {	#东部困局
+		id = RSU_eastern_dilemma
+		icon = GFX_Generic_Militant_Socialism
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_market_for_god_sake }
+		relative_position_id = RSU_market_for_god_sake
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.4
+			add_stability = -0.05
+		}
+	}
+
+	focus = {	#藏者，矿也
+		id = RSU_finding_more_resources
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_eastern_dilemma }
+		relative_position_id = RSU_eastern_dilemma
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = RSU_finding_more_resources_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = RSU_industrial_concern_rusal_construct_corp }
+					swap_ideas = {
+						remove_idea = RSU_industrial_concern_rusal_construct_corp
+						add_idea = RSU_industrial_concern_rusal_construct_corp_bonus
+					}
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 318
+			}
+			add_resource = {
+				type = magic_crystal
+				amount = 2
+				state = 318
+			}
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 346
+			}
+			add_resource = {
+				type = magic_crystal
+				amount = 2
+				state = 346
+			}
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 320
+			}
+			add_tech_bonus = {
+				name = RSU_finding_more_resources
+				category = excavation_tech
+				bonus = 0.5
+				uses = 1
+			}
+			add_to_variable = { RSU_current_status_cgf = -0.05 }
+			custom_effect_tooltip = RSU_finding_more_resources_tt
+		}
+	}
+
+	focus = {	#七河投资
+		id = RSU_zhe_investment
+		icon = GFX_Generic_Loadsamoney
+		x = 1
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_our_current_status }
+		relative_position_id = RSU_our_current_status
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = RSU.5
+			add_to_variable = { RSU_current_status_sf = 0.05 }
+			custom_effect_tooltip = RSU_zhe_investment_tt
+		}
+	}
+
+	focus = {	#南部联系
+		id = RSU_south_connection
+		icon = GFX_goal_Generic_Train
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_zhe_investment }
+		relative_position_id = RSU_zhe_investment
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = RSB
+				modifier = RSU_reinforce_connection
+			}
+			RSB = {
+				add_opinion_modifier = {
+					target = RSU
+					modifier = RSU_reinforce_connection
+				}
+			}
+			add_political_power = 50
+			321 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_to_variable = { RSU_current_status_sf = 0.05 }
+			add_to_variable = { RSU_current_status_ppf = 0.1 }
+			custom_effect_tooltip = RSU_south_connection_tt
+		}
+	}
+
+	focus = {	#中巴分红的预支
+		id = RSU_prepaid_central_bastia_income
+		icon = GFX_goal_generic_seize_money
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_south_connection }
+		relative_position_id = RSU_south_connection
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_timed_idea = {
+				idea = RSU_prepaid_central_bastia_income_idea
+				days = 180
+			}
+			country_event = RSU.6
+		}
+	}
+
+	focus = {	#弥补裂痕
+		id = RSU_fixing_the_division
+		icon = GFX_Generic_State_Socialism
+		x = 1
+		y = 1
+		cost = 4.29
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_finding_more_resources }
+		prerequisite = { focus = RSU_prepaid_central_bastia_income }
+		relative_position_id = RSU_finding_more_resources
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_subsidies_policy_up = yes
+			SPC_living_standard_development_amount_up_3 = yes
+			country_event = RSU.7
+			swap_ideas = {
+				remove_idea = RSU_torn_society
+				add_idea = RSU_fixing_the_society
+			}
+			add_to_variable = { RSU_current_status_sf = 0.05 }
+			set_variable = { RSU_current_status_lrd = 0.05 }
+			custom_effect_tooltip = RSU_fixing_the_division_tt
+		}
+	}
+
+	focus = {	#大选将即
+		id = RSU_election_coming
+		icon = GFX_Generic_Elections
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_fixing_the_division }
+		relative_position_id = RSU_fixing_the_division
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = RSU.8
+		}
+	}
+
+	focus = {	#暗中的准备
+		id = RSU_preparation_in_shadow
+		icon = GFX_Focus_Spy_Infiltration
+		x = 0
+		y = 1
+		cost = 2.15
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RSU_election_coming }
+		relative_position_id = RSU_election_coming
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.9
+		}
+	}
+
+	focus = {	#持衡拥璇
+		id = RSU_triumphant_return
+		icon = GFX_Generic_Bell_Tolls
+		x = 5
+		y = 0
+		cost = 1.43
+		available_if_capitulated = yes
+
+		allow_branch = { has_country_flag = RSU_focus_flag_1 }
+		bypass = { hidden_trigger = { has_country_flag = RSU_focus_flag_2 } }
+
+		ai_will_do = { factor = 100 }
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+		
+		select_effect = {
+			country_event = RSU.12
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = RSU_triumphant_return_tt
+		}
+	}
+
+	focus = {	#始料未及的大危机
+		id = RSU_crisis
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 0
+		y = 1
+		cost = 1.43
+		available_if_capitulated = yes
+
+		allow_branch = { has_country_flag = RSU_focus_flag_2 }
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_triumphant_return }
+		relative_position_id = RSU_triumphant_return
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.13
+		}
+	}
+
+	focus = {	#妥协，妥协！
+		id = RSU_compromises
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 0
+		y = 1
+		cost = 1.43
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_crisis }
+		relative_position_id = RSU_crisis
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.02
+			}
+			custom_effect_tooltip = RSU_compromises_tt
+			add_to_variable = { RSU_cb_crisis_lrd = 0.05 }
+			add_to_variable = { RSU_cb_crisis_ppf = 0.05 }
+		}
+	}
+
+	focus = {	#处理矿难事故
+		id = RSU_mine_disaster
+		icon = GFX_focus_SWE_form_rfsu
+		x = -2
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_compromises }
+		relative_position_id = RSU_compromises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = RSU_mine_disaster_tt
+			add_to_variable = { RSU_gronissen_mining_disaster_wm = 50 }
+			add_to_variable = { RSU_gronissen_mining_disaster_sf = 0.05 }
+			country_event = RSU.15
+		}
+	}
+
+	focus = {	#承诺补偿
+		id = RSU_commitment_to_compensation
+		icon = GFX_Generic_Loadsamoney
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_mine_disaster }
+		relative_position_id = RSU_mine_disaster
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.16
+		}
+	}
+
+	focus = {	#与工革联的谈判
+		id = RSU_negotiations
+		icon = GFX_goal_Generic_Meeting
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_commitment_to_compensation }
+		relative_position_id = RSU_commitment_to_compensation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { has_country_flag = RSU_16_a_flag }
+				country_event = RSU.17
+			}
+			else_if = {
+				limit = { has_country_flag = RSU_16_b_flag }
+				country_event = RSU.18
+			}
+			else = {
+				custom_effect_tooltip = RSU_negotiations_tt
+			}
+		}
+	}
+
+	focus = {	#向南巴求助
+		id = RSU_ask_rsb_for_help
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_compromises }
+		relative_position_id = RSU_compromises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.19
+		}
+	}
+
+	focus = {	#向七河求助
+		id = RSU_ask_zhe_for_help
+		icon = GFX_focus_BRA_rio_protocol
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_ask_rsb_for_help }
+		relative_position_id = RSU_ask_rsb_for_help
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.20
+		}
+	}
+
+	focus = {	#向国内财团求助
+		id = RSU_recourse_to_domestic_consortiums
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_ask_zhe_for_help }
+		relative_position_id = RSU_ask_zhe_for_help
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.21
+		}
+	}
+
+	focus = {	#东窗事发的后果
+		id = RSU_consequences_of_exposure
+		icon = GFX_Generic_Checkmate
+		x = 2
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_compromises }
+		relative_position_id = RSU_compromises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_country_leader_trait = RSU_determined_patriot
+		}
+	}
+
+	focus = {	#党内的指责
+		id = RSU_accusations_from_within_the_party
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_consequences_of_exposure }
+		relative_position_id = RSU_consequences_of_exposure
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.22
+		}
+	}
+
+	focus = {	#议会的攻讧
+		id = RSU_parliamentary_infighting
+		icon = GFX_goal_government_centralised_icon
+		x = 0
+		y = 1
+		cost = 0.72
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_accusations_from_within_the_party }
+		relative_position_id = RSU_accusations_from_within_the_party
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.23
+		}
+	}
+
+	focus = {	#总统的演讲
+		id = RSU_president_speech
+		icon = GFX_Generic_Liberation
+		x = 0
+		y = 1
+		cost = 1.43
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = RSU_negotiations }
+		prerequisite = { focus = RSU_recourse_to_domestic_consortiums }
+		prerequisite = { focus = RSU_parliamentary_infighting }
+		relative_position_id = RSU_recourse_to_domestic_consortiums
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RSU.24
+		}
+	}
+
+}

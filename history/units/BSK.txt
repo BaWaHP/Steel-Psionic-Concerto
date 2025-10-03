@@ -1,0 +1,103 @@
+﻿###templates###
+
+division_template = {
+	name = "治安师"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+		police_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "辖区机动师"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "辖区战车师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "治安师1"
+		location = 18635
+		division_template = "治安师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "治安师2"
+		location = 10789
+		division_template = "治安师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "治安师3"
+		location = 6221
+		division_template = "治安师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "治安师4"
+		location = 18676
+		division_template = "治安师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "东部师"
+		location = 6221
+		division_template = "辖区机动师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部师"
+		location = 18676
+		division_template = "辖区机动师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "中部战车师"
+		location = 18635
+		division_template = "辖区战车师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}

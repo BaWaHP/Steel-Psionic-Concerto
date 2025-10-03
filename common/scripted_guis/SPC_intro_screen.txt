@@ -1,0 +1,168 @@
+scripted_gui = {
+	SPC_intro_screen_toggle = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "SPC_intro_screen_toggle"
+
+		visible = { always = yes }
+
+		effects = {
+			open_intro_screen_click = {
+				if = {
+					limit = {
+						check_variable = { SPC_intro_screen = 0 }
+					}
+					set_variable = { SPC_intro_screen = 1 }
+				}
+			}
+		}
+	}
+
+	SPC_intro_screen_container = {
+		context_type = player_context
+
+		window_name = "SPC_intro_screen_container"
+
+		visible = {
+			is_ai = no
+			NOT = { check_variable = { SPC_intro_screen = 0 } }
+		}
+
+		properties = {
+			national_flag_picture = {
+				image = "[ROOT.GetFlag]"
+			}
+		}
+
+		triggers = {
+			tab_1_header_visible = {
+				OR = {
+					check_variable = { SPC_intro_screen = 1 }
+					check_variable = { SPC_intro_screen = 5 }
+				}
+			}
+
+			tab_2_header_visible = {
+				check_variable = { SPC_intro_screen = 2 }
+			}
+
+			tab_3_header_visible = {
+				check_variable = { SPC_intro_screen = 3 }
+			}
+
+			tab_4_header_visible = {
+				check_variable = { SPC_intro_screen = 4 }
+			}
+
+			page_change_button_visible = {
+				OR = {
+					AND = {
+						check_variable = { SPC_intro_screen = 1 }
+						OR = {
+							tag = TST
+							tag = SFH
+							tag = SFR
+							tag = QTA
+							tag = TPG
+							tag = ROK
+							tag = RSU
+							tag = AST
+							tag = HGL
+							tag = MGC
+							tag = ROT
+							tag = MTV
+							tag = RLN
+							tag = ZHE
+						}
+					}
+					AND = {
+						check_variable = { SPC_intro_screen = 2 }
+						OR = {
+							tag = TST
+						}
+					}
+				}
+			}
+
+			back_change_button_visible = {
+				OR = {
+					AND = {
+						check_variable = { SPC_intro_screen = 5 }
+						OR = {
+							tag = TST
+							tag = SFH
+							tag = SFR
+							tag = QTA
+							tag = TPG
+							tag = ROK
+							tag = RSU
+							tag = AST
+							tag = HGL
+							tag = MGC
+							tag = ROT
+							tag = MTV
+							tag = RLN
+							tag = ZHE
+						}
+					}
+					AND = {
+						check_variable = { SPC_intro_screen = 6 }
+						OR = {
+							tag = TST
+						}
+					}
+				}
+			}
+		}
+
+		effects = {
+			close_button_click = {
+				set_variable = { SPC_intro_screen = 0 }
+			}
+
+			page_change_button_click = {
+				if = {
+					limit = { check_variable = { SPC_intro_screen = 1 } }
+					set_variable = { SPC_intro_screen = 5 }
+				}
+				if = {
+					limit = { check_variable = { SPC_intro_screen = 2 } }
+					set_variable = { SPC_intro_screen = 6 }
+				}
+			}
+
+			back_change_button_click = {
+				if = {
+					limit = { check_variable = { SPC_intro_screen = 5 } }
+					set_variable = { SPC_intro_screen = 1 }
+				}
+				if = {
+					limit = { check_variable = { SPC_intro_screen = 6 } }
+					set_variable = { SPC_intro_screen = 2 }
+				}
+			}
+
+			tab_1_click = {
+				set_variable = { SPC_intro_screen = 1 }
+			}
+
+			tab_2_click = {
+				set_variable = { SPC_intro_screen = 2 }
+			}
+
+			tab_3_click = {
+				set_variable = { SPC_intro_screen = 3 }
+			}
+
+			tab_4_click = {
+				set_variable = { SPC_intro_screen = 4 }
+			}
+		}
+
+		properties = {
+			national_flag_picture = {
+				image = "[Get_IS_Flag]"
+			}
+		}
+	}
+}

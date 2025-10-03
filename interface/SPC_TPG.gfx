@@ -1,0 +1,349 @@
+spriteTypes = {	
+    ###民族精神###
+	spriteType = {
+		name = "GFX_idea_TPG_intelligence_agency_logo"
+		texturefile = "gfx/interface/TPG/GFX_TPG_intelligence_agency.jpg"
+	}	
+	spriteType = {
+		name = "GFX_idea_TPG_vase_nobles"
+		texturefile = "gfx/interface/ideas/TPG_vase_nobles.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_preliminary_reforms"
+		texturefile = "gfx/interface/ideas/TPG_preliminary_reforms.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_army_crystal"
+		texturefile = "gfx/interface/ideas/TPG_army_crystal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_army_human"
+		texturefile = "gfx/interface/ideas/TPG_army_human.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_balanced_development_i"
+		texturefile = "gfx/interface/ideas/TPG_balanced_development_i.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_united_crystal_group"
+		texturefile = "gfx/interface/ideas/TPG_united_crystal_group.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_crystal_priority"
+		texturefile = "gfx/interface/ideas/TPG_crystal_priority.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_wom_research_team"
+		texturefile = "gfx/interface/ideas/TPG_wom_research_team.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_develope_heavy_industry"
+		texturefile = "gfx/interface/ideas/TPG_develope_heavy_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_hydropower_stations"
+		texturefile = "gfx/interface/ideas/TPG_hydropower_stations.png"
+	}
+	###大肖像###
+	spriteType = {
+		name = "GFX_TPG_Gilania_Alphonse_III"
+		texturefile = "gfx/leaders/TPG/Gilania_Alphonse_III.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_isabella_hastings"
+		texturefile = "gfx/leaders/TPG/isabella_hastings.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_arabella_wentworth"
+		texturefile = "gfx/leaders/TPG/arabella_wentworth.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_sebastian_worthington"
+		texturefile = "gfx/leaders/TPG/sebastian_worthington.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_charlotte_pembroke"
+		texturefile = "gfx/leaders/TPG/charlotte_pembroke.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_henry_deVries"
+		texturefile = "gfx/leaders/TPG/henry_deVries.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_victoria_harrington"
+		texturefile = "gfx/leaders/TPG/victoria_harrington.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_amelia_sterling"
+		texturefile = "gfx/leaders/TPG/amelia_sterling.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_olivier_davis"
+		texturefile = "gfx/leaders/TPG/olivier_davis.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_george_green"
+		texturefile = "gfx/leaders/TPG/george_green.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_danny_loyd"
+		texturefile = "gfx/leaders/TPG/danny_loyd.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_james_duke"
+		texturefile = "gfx/leaders/TPG/james_duke.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_william_anderson"
+		texturefile = "gfx/leaders/TPG/william_anderson.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_TPG_Gilania_Alphonse_III"
+		texturefile = "gfx/advisors/TPG/Gilania_Alphonse_III.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_isabella_hastings"
+		texturefile = "gfx/advisors/TPG/isabella_hastings.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_arabella_wentworth"
+		texturefile = "gfx/advisors/TPG/arabella_wentworth.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_sebastian_worthington"
+		texturefile = "gfx/advisors/TPG/sebastian_worthington.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_charlotte_pembroke"
+		texturefile = "gfx/advisors/TPG/charlotte_pembroke.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_henry_deVries"
+		texturefile = "gfx/advisors/TPG/henry_deVries.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_victoria_harrington"
+		texturefile = "gfx/advisors/TPG/victoria_harrington.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_amelia_sterling"
+		texturefile = "gfx/advisors/TPG/amelia_sterling.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_olivier_davis"
+		texturefile = "gfx/advisors/TPG/olivier_davis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_george_green"
+		texturefile = "gfx/advisors/TPG/george_green.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_danny_loyd"
+		texturefile = "gfx/advisors/TPG/danny_loyd.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_james_duke"
+		texturefile = "gfx/advisors/TPG/james_duke.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_william_anderson"
+		texturefile = "gfx/advisors/TPG/william_anderson.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_TPG_crystal"
+		texturefile = "gfx/interface/traits/TPG_crystal.png"
+	}
+	###决议图###
+	###GUI###
+	spriteType = {
+		name = "TPG_military_reform_icon"
+		texturefile = "gfx/interface/TPG/TPG_military_reform.jpg"
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_1"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_1.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_crystalize_progress_frame"
+		texturefile = "gfx/interface/country_gui/TPG/TPG_crystalize_progress_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_TPG_crystalize_progress"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/country_gui/TPG/TPG_crystalize_progress_1.dds"
+		textureFile2 = "gfx/interface/country_gui/TPG/TPG_crystalize_progress_0.dds"
+		size = { x = 420 y = 210 }
+		effectFile = "gfx/FX/progress_radial_upper_33pc.lua"
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_1"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_1.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_2"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_2.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_3"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_3.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_4"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_4.png"
+	}
+	SpriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_4_shine"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_4.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_4.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_4.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_5"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_5.png"
+	}
+	SpriteType = {
+		name = "GFX_TPG_domestic_ind_dev_icon_5_shine"
+		texturefile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_5.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_domestic_ind_dev_icon_5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_1"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_1.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_2"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_2.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_3"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_3.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_4"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_4.png"
+	}
+	SpriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_4_shine"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_4.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_4.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_4.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_5"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_5.png"
+	}
+	SpriteType = {
+		name = "GFX_TPG_wom_influence_level_icon_5_shine"
+		texturefile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_5.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/TPG/GFX_TPG_wom_influence_level_icon_5.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2
+			animationdelay = 0.75
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		transparencecheck = yes
+	}
+}

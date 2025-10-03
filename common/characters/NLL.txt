@@ -1,0 +1,23 @@
+characters={
+
+	NLL_christopher_hayes = {		#克里斯托弗·海耶斯
+   		name = NLL_christopher_hayes
+   		portraits = {
+   			civilian = {
+   				large="GFX_NLL_christopher_hayes"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_NLL_christopher_hayes"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = NLL_christopher_hayes_desc
+   			ideology = military_dictatorship
+   			traits = { NLL_dressed_up_animal }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

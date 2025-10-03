@@ -1,0 +1,36 @@
+﻿capital = 346
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = revolutionary_communism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 10
+	revolutionary_communism = 78
+	worldunion_socialist = 8
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 4
+	authoritarian_nationalism = 0
+	paternal_autocrat = 0
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+add_ideas = {
+	RRF_revolutionary_enthusiasm
+	RRF_workers_armed
+}
+
+recruit_character = RRF_edilvan_hegobogen

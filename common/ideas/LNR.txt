@@ -1,0 +1,616 @@
+ideas = {
+	country = {
+
+		SB_Tenian_civil_war = {		#特尼安半岛战争
+			picture = air_war_plans_division_focus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			cancel = { NOT = { has_global_flag = SB_tenian_civil_war_global } }
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+				terrain_penalty_reduction = 0.25
+				ai_focus_aggressive_factor = 0.5
+			}
+		}
+
+		LNR_clan_influence = {		#宗族势力
+			picture = LNR_clan_influence
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				conscription_factor = -0.2
+				global_building_slots_factor = -0.2
+			}
+		}
+
+		LNR_clan_influence_l_1 = {		#宗族势力
+			name = LNR_clan_influence
+			picture = LNR_clan_influence
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				conscription_factor = -0.15
+				global_building_slots_factor = -0.2
+			}
+		}
+
+		LNR_clan_influence_l_2 = {		#宗族势力
+			name = LNR_clan_influence
+			picture = LNR_clan_influence
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				conscription_factor = -0.15
+				global_building_slots_factor = -0.15
+			}
+		}
+
+		LNR_urban_rural_contradictione = {		#城乡区别
+			picture = LNR_urban_rural_contradictione
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		LNR_urban_rural_contradictione_r_1 = {		#城乡区别
+			name = LNR_urban_rural_contradictione
+			picture = LNR_urban_rural_contradictione
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		LNR_urban_rural_contradictione_l_1 = {		#城乡区别
+			name = LNR_urban_rural_contradictione
+			picture = LNR_urban_rural_contradictione
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		LNR_chaotic_political_situation = {		#政局混乱
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				disabled_ideas = 1
+				political_power_factor = -0.1
+			}
+		}
+
+		LNR_political_instability = {		#政治动荡
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.05
+			}
+		}
+
+		LNR_mining_pot_of_south_bastia = {		#南巴矿场
+			picture = generic_exploit_mines
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				min_export = 0.1
+				political_power_factor = -0.05
+				monthly_environment_development_process = -6
+				local_resources_factor = 0.1
+				weekly_manpower = -50
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		LNR_mining_pot_of_south_bastia_l_1 = {		#南巴矿场
+			name = LNR_mining_pot_of_south_bastia
+			picture = generic_exploit_mines
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				min_export = 0.1
+				political_power_factor = -0.05
+				monthly_environment_development_process = -6
+				local_resources_factor = 0.1
+				weekly_manpower = -10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		LNR_grey_support_1 = {		#灰色支持：心悦诚服
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription_factor = 0.1
+				political_power_factor = 0.15
+			}
+		}
+
+		LNR_grey_support_2 = {		#灰色支持：能帮则帮
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		LNR_grey_support_3 = {		#灰色支持：互利互惠
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		LNR_grey_support_4 = {		#灰色支持：讨价还价
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+		
+		LNR_grey_support_5 = {		#灰色支持：敷衍了事
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+
+		LNR_buy_for_food = {		#为粮食买单
+			picture = generic_goods_red_bonus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		LNR_coop_with_progress_league = {		#与进步联盟的合作
+			picture = HUN_treaty_of_triannon
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				army_org_regain = 0.05
+			}
+		}
+
+		LNR_clan_soldiers_1 = {		#宗族子弟兵
+			name = LNR_clan_soldiers
+			picture = generic_reserve_divisions
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.005
+				army_org_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_regain = -0.1
+			}
+		}
+
+		LNR_clan_soldiers_2 = {		#宗族子弟兵
+			name = LNR_clan_soldiers
+			picture = generic_reserve_divisions
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.005
+				army_org_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		LNR_clan_soldiers_3 = {		#宗族子弟兵
+			name = LNR_clan_soldiers
+			picture = generic_reserve_divisions
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				conscription = 0.005
+				army_org_factor = 0.1
+				army_defence_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+
+		LNR_whatever_it_takes = {		#不择手段
+			picture = generic_purge
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				max_planning_factor = -0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		LNR_commi_rat_everywhere = {		#赤匪到处都是！ 
+			picture = FRA_matignon_agreements
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				army_org_regain = -0.05
+			}
+		}
+
+		LNR_mountain_horror = {		#山中恶鬼
+			picture = LNR_mountain_horror
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			cancel = { has_war_with = RLN }
+			on_remove = { add_ideas = LNR_wind_of_pain_and_hate }
+			modifier = {
+				conscription_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		LNR_wind_of_pain_and_hate = {		#仇恨之风，痛苦之潮
+			picture = LNR_wind_of_pain_and_hate
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			cancel = { RLN = { exists = no } }
+			on_remove = { add_ideas = LNR_rocks_bleeding }
+			modifier = {
+				conscription_factor = -0.15
+				stability_factor = -0.15
+				army_org_regain = -0.1
+			}
+		}
+
+		LNR_rocks_bleeding = {		#山石泣血
+			picture = LNR_rocks_bleeding
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+				conscription_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		LNR_unrecognized_democracy = {		#不被认可的民主
+			picture = generic_democracy_banned
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		LNR_new_deal_for_adul = {		#阿杜勒新政
+			picture = generic_democratic_drift_bonus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.15
+			}
+		}
+
+		LNR_broken_rudder = {		#破碎的舵盘
+			picture = generic_neutrality_drift_bonus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+
+		LNR_rural_investment = {		#乡村投资
+			picture = NOR_printing_money
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.05
+			}
+		}
+
+		LNR_agrarian_reform = {		#农业改革
+			picture = generic_agrarian_reform
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				stability_factor = 0.1
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		LNR_brave_new_home = {		#崭新家园
+			picture = SWE_folkhemmet
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				worldunion_democrat_drift = 0.01
+				liberal_republican_drift = 0.01
+				revolutionary_communism_drift = -0.01
+			}
+		}
+
+		LNR_declining_power_of_clans = {		#日渐式微的宗族势力
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				global_building_slots_factor = -0.1
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		LNR_shaky_alliance = {		#摇摇欲坠的联盟
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = -0.25
+				liberal_republican_drift = -0.01
+				conservative_republican_drift = -0.05
+				army_attack_factor = 0.05
+				initiative_factor = 0.04
+			}
+		}
+
+		LNR_magnificent_fireworks = {		#绚丽烟火
+			picture = FRA_national_mobilization_focus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				army_core_defence_factor = 0.1
+				monthly_agricultural_development_process = 2
+				monthly_industrial_development_process = 2
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+		LNR_familiy_business_idea = {		#家族企业
+			picture = ARG_economic_reactivation
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				line_change_production_efficiency_factor = -0.1
+			}
+			research_bonus = {
+				secret_weapons = 0.15
+			}
+		}
+
+		LNR_familiy_business_idea_2 = {		#家族企业
+			name = LNR_familiy_business_idea
+			picture = ARG_economic_reactivation
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				line_change_production_efficiency_factor = -0.1
+				conservative_republican_drift = 0.01
+				liberal_republican_drift = 0.01
+			}
+			research_bonus = {
+				secret_weapons = 0.15
+			}
+		}
+
+		LNR_treasure_mout_of_south_bastia = {		#南巴的宝石山
+			picture = ARG_invest_in_railways
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.15
+				monthly_industrial_development_process = 2
+				monthly_environment_development_process = -4
+				weekly_manpower = -50
+			}
+		}
+
+		LNR_corrupt_and_confident_army = {		#腐朽而自满的军队
+			picture = SWE_neither_death_nor_dishonor
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+				land_doctrine_cost_factor = 0.5
+				command_power_gain_mult = -0.2
+			}
+		}
+
+		LNR_unbridled_paradise = {		#无羁乐园
+			picture = generic_economic_increase
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = -0.15
+				monthly_industrial_development_process = -4
+			}
+		}
+
+		LNR_unbridled_paradise_2 = {		#无羁乐园
+			name = LNR_unbridled_paradise
+			picture = generic_economic_increase
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = -0.15
+				research_speed_factor = -0.1
+				monthly_agricultural_development_process = 2
+				monthly_industrial_development_process = -4
+			}
+		}
+
+		LNR_unbridled_paradise_3 = {		#无羁乐园
+			name = LNR_unbridled_paradise
+			picture = generic_economic_increase
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.3
+				production_speed_arms_factory_factor = -0.15
+				research_speed_factor = -0.1
+				local_resources_factor = 0.2
+				monthly_agricultural_development_process = 2
+				monthly_industrial_development_process = -4
+			}
+		}
+
+		LNR_military_drugs_idea = {		#军用药剂
+			picture = SWE_en_svensk_tiger
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				out_of_supply_factor = 0.1
+				pocket_penalty = 0.3
+				experience_gain_army_factor = -0.2
+				monthly_military_development_process = -2
+			}
+		}
+
+		LNR_take_down_old_times_idea = {		#打倒旧时代
+			picture = FRA_army_of_aggression_focus
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			cancel = { KOA = { exists = no } }
+			modifier = {
+				weekly_manpower = 500
+			}
+			targeted_modifier = {
+				tag = KOA
+				attack_bonus_against = 0.15
+			}
+		}
+
+		LNR_causing_divisions = {		#挑拨离间
+			picture = SOV_scientist_defect
+			allowed = {  original_tag = LNR }
+			removal_cost = -1
+			cancel = { KOA = { exists = no } }
+			targeted_modifier = {
+				tag = KOA
+				defense_bonus_against = 0.15
+			}
+		}
+
+		LNR_military_reform_commission = {		#军事改革委员会
+			picture = ARG_military_government
+			allowed = { original_tag = LNR }
+			removal_cost = -1
+			cancel = { has_government = revolutionary_communism }
+
+			modifier = {
+				army_org_regain = -0.1
+				experience_gain_navy = 0.1
+				stability_factor = 0.15
+				traning_laws_cost_factor = 0.5
+			}
+		}
+
+	}
+
+	materiel_manufacturer = {				#军备制造商
+		LNR_honour_design_bureau = {		#荣誉设计局
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = { original_tag = LNR }
+			equipment_bonus = {
+				uniform_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				special_forces_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+				caster_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+			}
+			traits = { infantry_equipment_manufacturer }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+
+	industrial_concern = {					#工业企业
+		LNR_fertile_agriculture_group = {	#肥沃农业集团
+			picture = generic_industrial_concern_3
+			allowed = { original_tag = LNR }
+			available = { 
+				OR = {
+					has_idea = LNR_viru_or_veru_idea 
+					has_completed_focus = LNR_invest_countryside
+				}
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				monthly_industrial_development_process = 1
+				monthly_agricultural_development_process = 3
+				global_building_slots_factor = 0.1
+			}
+			traits = { capital_group }
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
+
+}

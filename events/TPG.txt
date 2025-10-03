@@ -1,0 +1,488 @@
+
+add_namespace = TPG
+
+country_event = {	#大公的演讲
+	id = TPG.1
+	title = TPG.1.t
+	desc = TPG.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.1.a
+		add_stability = -0.1
+		add_war_support = -0.1
+		country_event = TPG.2
+	}
+}
+
+country_event = {	#激战
+	id = TPG.2
+	title = TPG.2.t
+	desc = TPG.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.2.a
+		add_stability = 0.15
+		add_war_support = 0.15
+		
+			hidden_effect = {
+				news_event = {
+					days = 30
+					id = TPG.29
+				}
+
+			}
+	}
+}
+
+country_event = {	#战后
+	id = TPG.3
+	title = TPG.3.t
+	desc = TPG.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.3.a
+		add_country_leader_trait = TPG_internal_injury
+	}
+}
+
+country_event = {	#奥利维亚·泰勒的一日
+	id = TPG.4
+	title = TPG.4.t
+	desc = TPG.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.4.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#“团结”广播电台
+	id = TPG.5
+	title = TPG.5.t
+	desc = TPG.5.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.5.a
+		add_political_power = 25
+		add_timed_idea = {
+			idea = TPG_publicize_on_radio
+			days = 30
+		}
+	}
+}
+
+country_event = {	#皇家宴会
+	id = TPG.6
+	title = TPG.6.t
+	desc = TPG.6.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.6.a
+		add_political_power = 25
+		add_timed_idea = {
+			idea = TPG_reward_the_loyalists
+			days = 30
+		}
+	}
+}
+
+country_event = {	#“副手”
+	id = TPG.7
+	title = TPG.7.t
+	desc = TPG.7.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.7.a
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+country_event = {	#制宪会议
+	id = TPG.8
+	title = TPG.8.t
+	desc = TPG.8.d
+	picture = GFX_TPG_constitution
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.8.a
+	}
+}
+
+country_event = {	#相遇
+	id = TPG.9
+	title = TPG.9.t
+	desc = TPG.9.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.9.a
+	}
+}
+
+country_event = {	#贪官的一天
+	id = TPG.10
+	title = TPG.10.t
+	desc = TPG.10.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.10.a
+	}
+}
+
+country_event = {	#调查报告
+	id = TPG.11
+	title = TPG.11.t
+	desc = TPG.11.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.11.a
+	}
+}
+
+country_event = {	#调查日志
+	id = TPG.12
+	title = TPG.12.t
+	desc = TPG.12.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.12.a
+	}
+}
+
+country_event = {	#沃姆企业请求介入民用生产
+	id = TPG.13
+	title = TPG.13.t
+	desc = TPG.13.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = TPG.13.a
+		add_stability = -0.03
+		add_political_power = -25
+	}
+	
+	option = {
+		name = TPG.13.b
+		add_political_power = 25
+		random_owned_controlled_state = {
+			    limit = {
+					is_fully_controlled_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		custom_effect_tooltip = TPG_event_13_b_tt
+		set_country_flag = TPG_develope_civil_industry_flag
+	}
+}
+
+country_event = {	#沃姆企业请求介入军用生产
+	id = TPG.14
+	title = TPG.14.t
+	desc = TPG.14.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = TPG.14.a
+		add_stability = -0.03
+		add_political_power = -25
+	}
+	
+	option = {
+		name = TPG.14.b
+		add_political_power = 25
+		random_owned_controlled_state = {
+			    limit = {
+					is_fully_controlled_by = ROOT
+            		free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		custom_effect_tooltip = TPG_event_14_b_tt
+		set_country_flag = TPG_develope_military_industry_flag
+	}
+}
+
+country_event = {	#沃姆企业发现端倪
+	id = TPG.15
+	title = TPG.15.t
+	desc = TPG.15.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = TPG.15.a
+		random_owned_controlled_state = {
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+		}
+		random_owned_controlled_state = {
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+		}
+		random_owned_controlled_state = {
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+		}
+	}
+}
+
+country_event = {	#沃姆企业高层震怒
+	id = TPG.16
+	title = TPG.16.t
+	desc = TPG.16.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = TPG.16.a
+		add_stability = -0.03
+		add_political_power = -50
+		add_timed_idea = {
+			idea = TPG_worm_sanctions
+			days = 30
+		}
+	}
+}
+
+country_event = {	#成立联合科晶集团
+	id = TPG.17
+	title = TPG.17.t
+	desc = TPG.17.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = TPG.17.a
+		add_stability = 0.1
+		add_political_power = 100
+	}
+}
+
+country_event = {	#密谈
+	id = TPG.18
+	title = TPG.18.t
+	desc = TPG.18.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.18.a
+	}
+}
+
+country_event = {	#帷幕后的聚会
+	id = TPG.19
+	title = TPG.19.t
+	desc = TPG.19.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.19.a
+	}
+}
+
+country_event = {	#呐喊
+	id = TPG.20
+	title = TPG.20.t
+	desc = TPG.20.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.20.a
+	}
+}
+
+country_event = {	#沃姆企业企图购买铁路
+	id = TPG.21
+	title = TPG.21.t
+	desc = TPG.21.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.21.a
+	}
+}
+
+country_event = {	#争论
+	id = TPG.22
+	title = TPG.22.t
+	desc = TPG.22.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.22.a
+	}
+}
+
+country_event = {	#初次通讯
+	id = TPG.23
+	title = TPG.23.t
+	desc = TPG.23.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.23.a
+	}
+}
+
+country_event = {	#传承
+	id = TPG.24
+	title = TPG.24.t
+	desc = TPG.24.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.24.a
+	}
+}
+
+country_event = {	#人类抵抗组织的消亡
+	id = TPG.25
+	title = TPG.25.t
+	desc = TPG.25.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.25.a
+		remove_dynamic_modifier  = { modifier = TPG_HRP_dynamic_modifier }
+	}
+}
+
+country_event = {	#国家调查报告
+	id = TPG.26
+	title = TPG.26.t
+	desc = TPG.26.d
+	picture = GFX_TPG_national_investigation_report
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.26.a
+		add_stability = 0.1
+	}
+}
+country_event = {	#贵族势力瓦解
+	id = TPG.27
+	title = TPG.27.t
+	desc = TPG.27.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = TPG.27.a
+		add_ideas = TPG_powerful_central_government
+	}
+}
+
+
+
+country_event = { #降临节
+	id = TPG.28
+	title = TPG.28.t
+	desc = TPG.28.d
+	picture = GFX_TPG_landing_festival
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = { id = TPG.28 days = 365 }
+		}
+	}
+	option = {
+		name = TPG.28.a
+		add_stability = 0.01
+	}
+}
+
+news_event = {  #吉拉尼亚大公遇刺
+	id = TPG.29
+	title = TPG.29.t
+	desc = TPG.29.d
+	picture = GFX_TPG_assassination
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    major = no 
+
+	option = {
+		name = TPG.29.a
+	}
+}

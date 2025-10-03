@@ -1,0 +1,33 @@
+
+state={
+	id=356
+	name="STATE_356"
+	resources={
+		chromium=6.000
+	}
+
+	history={
+		owner = AST
+		add_core_of = AST
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+
+		}
+		victory_points = {
+			18893 3 
+		}
+		victory_points = {
+			1746 1 
+		}
+
+	}
+
+	provinces={
+		1746 5119 6334 10857 18860 18893 18920 18949 18974 19022 19038 19118 
+	}
+	manpower=823600
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

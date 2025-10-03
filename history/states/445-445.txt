@@ -1,0 +1,35 @@
+
+state={
+	id=445
+	name="STATE_445"
+	provinces={
+		2036 2155 2756 3076 5499 6484 9671 9889 9926 11518 12118 19551 19575 19620 19697 19744 19817 19866 19890 20016 
+	}
+	resources = {
+		magic_crystal = 45
+		steel = 24
+		tungsten = 12
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			19620 8
+		}
+		victory_points = {
+			3076 1
+		}
+		victory_points = {
+			9671 8
+		}
+	}
+	
+	manpower = 961300
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

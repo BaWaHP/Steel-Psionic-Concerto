@@ -1,0 +1,31 @@
+
+state={
+	id=101
+	name="STATE_101"
+	resources = {
+		steel = 12
+		magic_crystal = 36
+	}
+	provinces={
+		600 895 2228 2575 3276 5230 6356 9132 14884 15000 15050 15129 15183 15184 15197 15282 
+	}
+	history = {
+		owner = HLD
+		add_core_of = HLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			600 15
+		}
+		victory_points = {
+			15183 3
+		}
+	}
+	manpower = 1413812
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

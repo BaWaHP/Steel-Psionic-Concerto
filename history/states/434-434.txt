@@ -1,0 +1,32 @@
+
+state={
+	id=434
+	name="STATE_434"
+	provinces={
+		877 3867 4605 4640 5133 5951 6697 8339 19997 20079 20080 20127 20149 20273 20319 
+	}
+	resources = {
+		aluminium = 15
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			20079 15
+		}
+		victory_points = {
+			20127 2
+		}
+		victory_points = {
+			19997 2
+		}
+	}
+	manpower = 1900000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

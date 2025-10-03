@@ -1,0 +1,34 @@
+state={
+	id=228
+	name="STATE_228"
+	
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 2
+			21695 = {
+				bunker = 2
+			}
+			5988 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			21695 1
+		}
+		victory_points = {
+			5988 2
+		}
+	}
+	
+	provinces={
+		1781 5988 8601 9087 12200 21695 21790 
+	}
+	manpower=893000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

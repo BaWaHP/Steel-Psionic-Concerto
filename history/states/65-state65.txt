@@ -1,0 +1,34 @@
+
+state={
+	id=65
+	name="STATE_65"
+
+	resources = {
+		steel = 64
+		tungsten = 48
+		aluminium = 48
+	}
+
+	history={
+		owner = ARZ
+		add_core_of = ARZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			820 10
+		}
+		victory_points = {
+			16466 3
+		}
+	}
+
+	provinces={
+		820 1783 2668 5176 6216 7176 8556 8596 10827 15887 15922 15999 16011 16031 16102 16229 16312 16351 16373 16443 16466 16506 16563 
+	}
+	manpower = 655244
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+	local_supplies = 0.000
+}

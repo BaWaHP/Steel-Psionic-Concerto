@@ -1,0 +1,107 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#磅礴的霞光
+RSU_majestic_haze = {
+	enable = { always = yes }
+	icon = GFX_idea_RSU_majestic_haze
+
+	revolutionary_communism_drift = RSU_majestic_haze_rcd
+	weekly_manpower = RSU_majestic_haze_wm
+	production_speed_buildings_factor = RSU_majestic_haze_psbf
+	industrial_capacity_factory = RSU_majestic_haze_icf
+}
+
+#联盟大会
+RSU_union_conference = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_morale_bonus
+	
+	consumer_goods_factor = RSU_union_conference_cgf
+	industrial_capacity_factory = RSU_union_conference_icf
+	industrial_capacity_dockyard = RSU_union_conference_icd
+	production_speed_rail_way_factor = RSU_union_conference_psrwf
+	production_speed_buildings_factor = RSU_union_conference_psbf
+	production_factory_max_efficiency_factor = RSU_union_conference_pfmef
+	line_change_production_efficiency_factor = RSU_union_conference_lcpef
+	local_resources_factor = RSU_union_conference_lrf
+}
+
+#鲁萨尔现状
+RSU_current_status = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_disjointed_gov
+	
+	stability_factor = RSU_current_status_sf
+	political_power_factor = RSU_current_status_ppf
+	consumer_goods_factor = RSU_current_status_cgf
+	monthly_living_standard_development_process = RSU_current_status_mlsdp
+	liberal_republican_drift = RSU_current_status_lrd
+}
+
+#受工革联影响地区
+RSU_regions_affected_by_labor_union = {
+	enable = { always = yes }
+	icon = GFX_idea_RSU_regions_affected_by_labor_union
+
+	local_building_slots_factor = -0.2
+	local_manpower = -0.5
+	army_speed_factor_for_controller = -0.05
+	state_resources_factor = -0.1
+}
+
+RSU_regions_affected_by_labor_union_2 = {
+	enable = { always = yes }
+	icon = GFX_idea_RSU_regions_affected_by_labor_union
+
+	local_building_slots_factor = 0.25
+	local_manpower = 0.25
+	army_speed_factor_for_controller = 0.05
+}
+
+#格罗尼森大矿难
+RSU_gronissen_mining_disaster = {
+	enable = { always = yes }
+	icon = GFX_idea_chi_war_of_resistance3
+
+	consumer_goods_factor = RSU_gronissen_mining_disaster_cgf
+	local_resources_factor = RSU_gronissen_mining_disaster_lrf
+	weekly_manpower = RSU_gronissen_mining_disaster_wm
+	stability_factor = RSU_gronissen_mining_disaster_sf
+	revolutionary_communism_drift = RSU_gronissen_mining_disaster_rcd
+}
+
+#中巴危机
+RSU_cb_crisis = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_democratic_opposition
+
+	political_power_factor = RSU_cb_crisis_ppf
+	consumer_goods_factor = RSU_cb_crisis_cgf
+	production_factory_efficiency_gain_factor = RSU_cb_crisis_pfegf
+	production_factory_max_efficiency_factor = RSU_cb_crisis_pfmef
+	liberal_republican_drift = RSU_cb_crisis_lrd
+}

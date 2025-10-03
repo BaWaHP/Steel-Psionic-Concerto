@@ -1,0 +1,159 @@
+ideas = {
+	country = {
+
+		NCL_being_puppet = {		#国失凤翅，夺私控制
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				authoritarian_republican_drift = 0.01
+				weekly_manpower = 10
+			}
+			targeted_modifier = {
+				tag = ARO
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+			}
+		}
+
+		NCL_lack_nation_identity = {		#事已至此，自诩誓死
+			picture = chi_incompetent_officers
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.1
+				political_power_factor = -0.1
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		NCL_silt_double_beam_1 = {		#国淤双梁：南渡北离
+			picture = chi_wargaming_division
+			removal_cost = -1
+			
+			on_add = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = NCD
+					value = 999
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NCD
+					value = 999
+				}
+			}
+
+			on_remove = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = NCD
+					value = -999
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NCD
+					value = -999
+				}
+			}
+
+			modifier = {
+				authoritarian_nationalism_drift = 0.01
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				send_volunteer_size = 1
+				political_power_gain = -0.2
+				industrial_capacity_factory = 0.05
+			}
+
+			targeted_modifier = {
+				tag = NCD
+				cic_to_target_factor = 0.5
+			}
+		}
+
+		NCL_silt_double_beam_2 = {		#国淤双梁：南召北疑
+			picture = chi_wargaming_division
+			removal_cost = -1
+			
+			on_add = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = NCD
+					value = 50
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NCD
+					value = 100
+				}
+			}
+
+			on_remove = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = NCD
+					value = -50
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NCD
+					value = -100
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				industrial_capacity_factory = 0.02
+				political_power_gain = -0.1
+			}
+		}
+
+		NCL_silt_double_beam_3 = {		#国淤双梁：南顾北盼
+			picture = chi_wargaming_division
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		NCL_silt_double_beam_4 = {		#国淤双梁：南伫北心
+			picture = chi_wargaming_division
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				production_factory_max_efficiency_factor = 0.02
+				training_time_army_factor = -0.1
+			}
+		}
+
+		NCL_silt_double_beam_5 = {		#国淤双梁：南弃北归
+			picture = chi_wargaming_division
+			removal_cost = -1
+
+			modifier = {
+				authoritarian_republican_drift = 0.01
+				stability_factor = 0.15
+				war_support_factor = -0.15
+				production_factory_max_efficiency_factor = 0.075
+				training_time_army_factor = -0.1
+				political_power_gain = 0.1
+			}
+
+			targeted_modifier = {
+				tag = ARO
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+			}
+		}
+
+	}
+}

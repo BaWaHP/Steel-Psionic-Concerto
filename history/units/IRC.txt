@@ -1,0 +1,203 @@
+﻿###templates###
+division_template = {
+	name = "复兴军步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		artillery = { x = 0 y = 1 }  
+		engineer = { x = 0 y = 2 }  
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "国防军装甲师"
+
+	regiments = {
+		medium_titan = { x = 0 y = 0 }
+		medium_titan = { x = 0 y = 1 }
+		medium_titan = { x = 1 y = 0 }
+		medium_titan = { x = 1 y = 1 }
+		light_titan = { x = 2 y = 0 }
+		light_titan = { x = 2 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方起义军"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "复兴军步兵师"
+		location = 17236
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 9957
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 16648
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 16709
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国防军装甲师"
+		location = 2824
+		division_template = "国防军装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "地方起义军"
+		location = 17537
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 7371
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 16992
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 8931
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 4291
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 17236
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 9957
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 16648
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "复兴军步兵师"
+		location = 16709
+		division_template = "复兴军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国防军装甲师"
+		location = 2824
+		division_template = "国防军装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "地方起义军"
+		location = 17537
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 7371
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 16992
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 8931
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 4291
+		division_template = "地方起义军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+}

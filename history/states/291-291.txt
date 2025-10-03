@@ -1,0 +1,27 @@
+
+state={
+	id=291
+	name="STATE_291"
+	provinces={
+		1328 2348 7537 14260 14356 14410 14460 14546 14612 
+	}
+	history={
+		owner = FTC
+		add_core_of = FTC
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 1
+		}
+		victory_points = {
+			14356 20
+		}
+		victory_points = {
+			14546 5
+		}
+	}
+	manpower=1810000
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

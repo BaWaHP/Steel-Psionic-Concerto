@@ -1,0 +1,79 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_HLD_startup_effect = {
+	if = {
+		limit = { tag = HLD }
+		###政府法案###
+		add_ideas = disarmed_nation
+		add_ideas = basic_training
+		add_ideas = partial_economic_mobilisation
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = isolation_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = unorganized_army
+		add_ideas = extra_living
+		add_ideas = relatively_comfortable
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_government_target
+		add_ideas = RP_basic_funding
+		add_ideas = IP_basic_funds
+		add_ideas = WP_limited_laws
+		add_ideas = AP_better_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_advanced_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_no_secreat_police
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_modern_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_Sbridgens
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_religious_state
+		add_ideas = SXP_reactionary_policy
+		###控制省份对应普及度###
+		101 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 5 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		106 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+		105 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }		
+		}
+	}
+}

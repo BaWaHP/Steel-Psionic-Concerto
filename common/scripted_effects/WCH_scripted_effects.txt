@@ -1,0 +1,48 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+SPC_WCH_startup_effect = {
+	if = {
+		limit = { tag = WCH }
+		###控制省份对应普及度###
+		300 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		299 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		297 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		296 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+	}
+}

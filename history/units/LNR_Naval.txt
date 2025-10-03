@@ -1,0 +1,21 @@
+﻿units = {
+	fleet = {
+		name = "联合舰队"
+		naval_base = 20453
+		task_force = {
+			name = "第一特遣队"
+			location = 20453
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "驱逐舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = LNR version_name = "驱逐舰"} } }
+			ship = { name = "巡洋舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LNR version_name = "巡洋舰"} } }
+			ship = { name = "巡洋舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LNR version_name = "巡洋舰"} } }
+			ship = { name = "巡洋舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LNR version_name = "巡洋舰"} } }
+			ship = { name = "巡洋舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LNR version_name = "巡洋舰"} } }
+			ship = { name = "巡洋舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = LNR version_name = "巡洋舰"} } }
+		}
+	}
+}

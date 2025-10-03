@@ -1,0 +1,34 @@
+
+state={
+	id=4
+	name="STATE_4"
+	resources={
+		steel=2
+	}
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			19177 3 
+		}
+		victory_points = {
+			9624 5
+		}
+
+	}
+
+	provinces={
+		1973 7652 9624 18970 19024 19040 19177 
+	}
+	manpower=1050901
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

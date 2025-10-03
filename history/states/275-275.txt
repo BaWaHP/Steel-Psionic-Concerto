@@ -1,0 +1,26 @@
+
+state={
+	id=275
+	name="STATE_275"
+	provinces={
+		1762 3383 3542 4237 5153 5607 7511 16460 16491 16614 16645 16653 16782 16795 
+	}
+	resources = {
+		aluminium = 24
+		oil = 12
+	}
+	history={
+		owner = SOT
+		add_core_of = SOT
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			16614 3
+		}
+	}
+	manpower=230000
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

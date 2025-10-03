@@ -1,0 +1,28 @@
+
+state={
+	id=310
+	name="STATE_310"
+
+	history={
+		owner = LNR
+		add_core_of = LNR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			20453 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			20453 15
+		}
+	}
+
+	provinces={
+		3172 7283 7344 7605 7616 20275 20366 20406 20453 20482 
+	}
+	manpower=2100000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

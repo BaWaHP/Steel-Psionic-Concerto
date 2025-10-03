@@ -1,0 +1,96 @@
+﻿###templates###
+division_template = {
+	name = "起义军团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		artillery = { x = 0 y = 1 }  
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "地方起义军"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "起义军团"
+		location = 5426
+		division_template = "起义军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "起义军团"
+		location = 16735
+		division_template = "起义军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方起义军"
+		location = 16916
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方起义军"
+		location = 17052
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方起义军"
+		location = 2511
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方起义军"
+		location = 16623
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方起义军"
+		location = 2636
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方起义军"
+		location = 11368
+		division_template = "地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+}

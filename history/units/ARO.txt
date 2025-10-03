@@ -1,0 +1,337 @@
+﻿###templates###
+
+division_template = {
+	name = "野战步兵师"
+	priority = 1
+	division_names_group = ARO_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "边境戍卫旅"
+	priority = 0
+	division_names_group = ARO_LIF_01
+	template_counter = 7
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "泰坦突击师"
+	priority = 2
+
+	division_names_group = ARO_TIT_01
+	template_counter = 45
+	regiments = {
+		light_titan = { x = 0 y = 0 }
+		light_titan = { x = 0 y = 1 }
+		light_titan = { x = 0 y = 2 }
+		light_titan = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		logistics_company = { x = 1 y = 0 }
+		engineer = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "近卫军"
+	priority = 2
+
+	division_names_group = ARO_Guard_01
+	template_counter = 70
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		caster_support = { x = 0 y = 2 }
+		logistics_company = { x = 1 y = 0 }
+		engineer = { x = 1 y = 1 }
+	}
+}
+###units###
+
+units = {
+	division = {
+		name = "“马赛·德林特”第I野战步兵师"
+		location = 446
+		division_template = "野战步兵师"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“但特·格罗尼亚”第II野战步兵师"
+		location = 7614
+		division_template = "野战步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第III野战步兵师"
+		location = 4129
+		division_template = "野战步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第IV野战步兵师"
+		location = 18794
+		division_template = "野战步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "“马沃兰·肯特”第V野战步兵师"
+		location = 11404
+		division_template = "野战步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第VI野战步兵师"
+		location = 11068
+		division_template = "野战步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第VII野战步兵师"
+		location = 18186
+		division_template = "野战步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "“特卡纳·卡东”第VIII野战步兵师"
+		location = 18432
+		division_template = "野战步兵师"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "“铁”第I泰坦突击师"
+		location = 18677	
+		division_template = "泰坦突击师"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "“锌”第II泰坦突击师"
+		location = 5437	
+		division_template = "泰坦突击师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "“钛”第III泰坦突击师"
+		location = 18678	
+		division_template = "泰坦突击师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	
+	division = {
+		name = "“奥罗日亚”第I荣耀近卫军"
+		location = 1323	
+		division_template = "近卫军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“奥斯灵顿”第II荣耀近卫军"
+		location = 8976	
+		division_template = "近卫军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "“奥罗热耶斯”第III荣耀近卫军"
+		location = 5539	
+		division_template = "近卫军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "第I边境卫士"
+		location = 8838
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第II边境卫士"
+		location = 1237
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第III边境卫士"
+		location = 19297
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第IV边境卫士"
+		location = 19365
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第V边境卫士"
+		location = 19105
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第VI边境卫士"
+		location = 10900
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第VII边境卫士"
+		location = 9668
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第VIII边境卫士"
+		location = 8695
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第IX边境卫士"
+		location = 17619
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第X边境卫士"
+		location = 4646
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第XI边境卫士"
+		location = 11914
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第XII边境卫士"
+		location = 9756
+		division_template = "边境戍卫旅"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ARO"
+		}
+		requested_factories = 3
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = uniform_equipment_0
+			creator = "ARO"
+		}
+		requested_factories = 2
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ARO"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ARO" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ARO" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_titan_equipment_0
+			creator = "ARO" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+}

@@ -1,0 +1,156 @@
+﻿division_template = {
+	name = "工人阶级战斗队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+
+	division_names_group = CLD_GEN_02
+}
+division_template = {
+	name = "红军步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+	priority = 1
+
+	division_names_group = CLD_GEN_01
+}
+division_template = {
+	name = "地方民兵"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+
+	division_names_group = CLD_GEN_03
+}
+
+units = {
+	division = {
+		name = "工人阶级战斗队第1师"
+		location = 20541
+		division_template = "工人阶级战斗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工人阶级战斗队第2师"
+		location = 20239
+		division_template = "工人阶级战斗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工人阶级战斗队第3师"
+		location = 6973
+		division_template = "工人阶级战斗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "红军第1步兵师"
+		location = 2074
+		division_template = "红军步兵师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "红军第2步兵师"
+		location = 2074
+		division_template = "红军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "红军第3步兵师"
+		location = 2074
+		division_template = "红军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "地方民兵1队"
+		location = 20293
+		division_template = "地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方民兵2队"
+		location = 1194
+		division_template = "地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方民兵3队"
+		location = 20202
+		division_template = "地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方民兵4队"
+		location = 11578
+		division_template = "地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方民兵5队"
+		location = 20476
+		division_template = "地方民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CLD"
+		}
+		requested_factories = 4
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CLD"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "CLD" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+}

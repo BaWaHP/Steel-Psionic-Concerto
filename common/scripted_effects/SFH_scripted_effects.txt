@@ -1,0 +1,1519 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+#SFH_king_power_up_small
+#SFH_king_power_up_large
+#SFH_king_power_down_small
+#SFH_king_power_down_large
+#SFH_reformist_power_up_small
+#SFH_reformist_power_up_large
+#SFH_reformist_power_down_small
+#SFH_reformist_power_down_large
+#SFH_conservative_power_up_small
+#SFH_conservative_power_up_large
+#SFH_conservative_power_down_small
+#0SFH_conservative_power_down_large
+
+###开局政策添加###
+SPC_SFH_startup_effect = {
+	if = {
+		limit = {
+			tag = SFH
+		}
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = normal_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_basic_funding
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_LingRen
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_moralism
+		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		country_event = {
+			id = SFH.1
+			days = 1
+		}
+		country_event = {
+			id = SFH.2
+			days = 3
+		}
+		###人鱼###
+		set_variable = { SFH_mermaid_influence_modifier_st = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_pp = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_cg = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_psb = 0 }
+		###三项基础数值###
+		set_variable = { SFH_mermaid_satisfaction_variable = 50 }
+		set_variable = { SFH_mermaid_influence_variable = 0.75 }
+		set_variable = { SFH_people_satisfaction_variable = 30 }
+		###开局计算buff以及对应变量设置###
+		set_variable = { SFH_mermaid_influence_modifier_st_modifier = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_pp_modifier = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_cg_modifier = 0 }
+		set_variable = { SFH_mermaid_influence_modifier_psb_modifier = 0 }
+		SFH_mermaid_influence_modifier_update = yes
+		###腐败的军队###
+		add_dynamic_modifier = { modifier = SFH_corrupted_army_dynamic_modifier }
+		set_variable = { SFH_corrupted_army_dynamic_modifier_sf = -0.05 }
+		set_variable = { SFH_corrupted_army_dynamic_modifier_ppf = -0.1 }
+		set_variable = { SFH_corrupted_army_dynamic_modifier_cgev = 0.05 }
+		set_variable = { SFH_corrupted_army_dynamic_modifier_asf = -0.2 }
+		set_variable = { SFH_corrupted_army_dynamic_modifier_egaf = -0.5 }
+		set_variable = { SFH_preparation_bar_var = 0 }
+		set_variable = { SFH_Zhenghong_tendency_var = 0 }
+		country_event = {
+			id = SFH.900
+			days = 100
+		}
+		set_country_flag = SFH_farhome_kingdom_icon
+		add_ideas = SFH_farhome_kingdom_idea
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 1
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 0 }		
+			}
+			if = {
+				limit = {
+					state = 2
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 3
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 4
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 5
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 6
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 7
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 8
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 9
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}
+			if = {
+				limit = {
+					state = 10
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 11
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}
+			if = {
+				limit = {
+					state = 13
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 121
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 30
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}
+			if = {
+				limit = {
+					state = 170
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 171
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 172
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 173
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 174
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}	
+		}
+	}
+}
+
+
+
+SFH_mermaid_influence_modifier_update = {
+	clamp_variable = {
+		var = SFH_mermaid_satisfaction_variable
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFH_mermaid_influence_variable
+		min = 0
+		max = 1
+	}
+	clamp_variable = {
+		var = SFH_people_satisfaction_variable
+		min = 0
+		max = 100
+	}
+	#修正部分#
+	set_variable = {
+		SFH_mermaid_influence_modifier_st = SFH_mermaid_influence_modifier_st_modifier
+	}
+	set_variable = {
+		SFH_mermaid_influence_modifier_pp = SFH_mermaid_influence_modifier_pp_modifier
+	}
+	set_variable = {
+		SFH_mermaid_influence_modifier_cg = SFH_mermaid_influence_modifier_cg_modifier
+	}
+	set_variable = {
+		SFH_mermaid_influence_modifier_psb = SFH_mermaid_influence_modifier_psb_modifier
+	}
+	#人鱼满意度
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 79
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 101
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 59
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 80
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 39
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 60
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 19
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 40
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > -1
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 20
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = -0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.1
+		}
+	}
+	#人鱼影响力
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_influence_variable > 0.79
+				}
+				check_variable = {
+					SFH_mermaid_influence_variable < 1.01
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = -0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = -0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.2
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_psb = 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_influence_variable > 0.59
+				}
+				check_variable = {
+					SFH_mermaid_influence_variable < 0.8
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = -0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_psb = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_influence_variable > 0.39
+				}
+				check_variable = {
+					SFH_mermaid_influence_variable < 0.6
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_psb = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = 0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_influence_variable > 0.19
+				}
+				check_variable = {
+					SFH_mermaid_influence_variable < 0.4
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = 0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_psb = -0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_influence_variable > -1
+				}
+				check_variable = {
+					SFH_mermaid_influence_variable < 0.2
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = 0.2
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_psb = -0.2
+		}
+	}
+	#群众态度
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 79
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 101
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.2
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 59
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 80
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = 0.1
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 39
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 60
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 19
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 40
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = 0.05
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = -0.05
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > -1
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 20
+				}
+			}
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_cg = 0.1
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_st = -0.2
+		}
+		add_to_variable = {
+			SFH_mermaid_influence_modifier_pp = -0.1
+		}
+	}
+}
+
+SFH_pre_civil_war_setup = {
+	hidden_effect = {
+		NFH = {
+			leave_faction = yes
+			drop_cosmetic_tag = yes
+			set_country_flag = SFH_is_gone
+			clr_country_flag = SFH_farhome_kingdom_icon
+			remove_ideas = SFH_farhome_kingdom_idea
+		}
+		NWF = {
+			leave_faction = yes
+			drop_cosmetic_tag = yes
+			set_country_flag = SFH_is_gone
+			clr_country_flag = SFH_farhome_kingdom_icon
+			remove_ideas = SFH_farhome_kingdom_idea
+			add_ideas = NWF_complete_meltdown
+			country_lock_all_division_template = yes
+			country_event = { id = NWF.1000 days = 912 }
+		}
+		MSA = {
+			leave_faction = yes
+			drop_cosmetic_tag = yes
+			set_country_flag = SFH_is_gone
+			clr_country_flag = SFH_farhome_kingdom_icon
+			remove_ideas = SFH_farhome_kingdom_idea
+		}
+		SFH = {
+			leave_faction = yes
+			clr_country_flag = SFH_farhome_kingdom_icon
+			remove_ideas = SFH_farhome_kingdom_idea
+			end_puppet = NFH
+			end_puppet = NWF
+			set_country_flag = SFH_focus_2_flag
+			set_country_flag = SFH_pre_war_flag
+			mark_focus_tree_layout_dirty = yes
+			set_country_flag = SFH_national_reformation_flag
+			unlock_decision_category_tooltip = SFH_national_reformation
+			unlock_decision_category_tooltip = SFH_battle_over_territory
+			country_event = {
+				id = SFH.10
+				days = 1
+			}
+			set_variable = { SFH_king_power = 20 }
+			set_variable = { SFH_reformist_power = 40 }
+			set_variable = { SFH_conservative_power = 60 }
+			add_ideas = SFH_collapsing_social_system
+			swap_ideas = {
+				remove_idea = SFH_end_of_heros
+				add_idea = SFH_erupted_antiwar_emotions_1
+			}
+			swap_ideas = {
+				remove_idea = SFH_passing_glory
+				add_idea = SFH_deformed_economy
+			}
+			swap_ideas = {
+				remove_idea = SFH_angrier_aristocrats
+				add_idea = SFH_overproud_aristocrats
+			}
+			swap_ideas = {
+				remove_idea = SFH_terrible_heirs
+				add_idea = SFH_political_crisis
+			}
+			swap_ideas = {
+				remove_idea = SFH_failure_in_democracy
+				add_idea = SFH_arrogant_revolutionaries
+			}
+			country_event = {
+				id = SFH.602
+				days = 40
+			}
+			country_event = {
+				id = SFH.702
+				days = 400
+			}
+			every_owned_state = {
+				add_core_of = SFR
+				add_core_of = QTA
+			}
+			activate_mission = SFH_taking_actions
+			activate_mission = SFR_taking_actions
+			activate_mission = QTA_taking_actions
+			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			set_variable = { SFH_bot_decision_pointer_2 = 0 }
+			set_variable = { SFH_bot_decision_pointer_3 = 0 }
+		}
+		#远乡解
+		SFR = {
+			transfer_state = 11
+			SPC_SFR_startup_effect = yes
+		}
+		11 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		#青天军
+		QTA = {
+			transfer_state = 6
+			SPC_QTA_startup_effect = yes
+		}
+		6 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		#省份影响力具体设置
+		13 = {
+			set_variable = { SFH_state_influence_var = 50 }
+			set_variable = { SFR_state_influence_var = 50 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		121 = {
+			set_variable = { SFH_state_influence_var = 50 }
+			set_variable = { SFR_state_influence_var = 50 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		11 = {
+			set_variable = { SFH_state_influence_var = 0 }
+			set_variable = { SFR_state_influence_var = 100 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_lock
+		}
+		9 = {
+			set_variable = { SFH_state_influence_var = 20 }
+			set_variable = { SFR_state_influence_var = 40 }
+			set_variable = { QTA_state_influence_var = 40 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		10 = {
+			set_variable = { SFH_state_influence_var = 60 }
+			set_variable = { SFR_state_influence_var = 40 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		174 = {
+			set_variable = { SFH_state_influence_var = 60 }
+			set_variable = { SFR_state_influence_var = 40 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		170 = {
+			set_variable = { SFH_state_influence_var = 90 }
+			set_variable = { SFR_state_influence_var = 10 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		5 = {
+			set_variable = { SFH_state_influence_var = 100 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_lock
+			#set_state_flag = SFH_state_influence_under_control
+		}
+		7 = {
+			set_variable = { SFH_state_influence_var = 40 }
+			set_variable = { SFR_state_influence_var = 30 }
+			set_variable = { QTA_state_influence_var = 30 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		8 = {
+			set_variable = { SFH_state_influence_var = 40 }
+			set_variable = { SFR_state_influence_var = 20 }
+			set_variable = { QTA_state_influence_var = 40 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		173 = {
+			set_variable = { SFH_state_influence_var = 30 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 70 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		6 = {
+			set_variable = { SFH_state_influence_var = 0 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 100 }
+			set_state_flag = SFH_state_influence_lock
+		}
+		4 = {
+			set_variable = { SFH_state_influence_var = 80 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 20 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		171 = {
+			set_variable = { SFH_state_influence_var = 100 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		172 = {
+			set_variable = { SFH_state_influence_var = 80 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 20 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		3 = {
+			set_variable = { SFH_state_influence_var = 60 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 40 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		2 = {
+			set_variable = { SFH_state_influence_var = 100 }
+			set_variable = { SFR_state_influence_var = 0 }
+			set_variable = { QTA_state_influence_var = 0 }
+			set_state_flag = SFH_state_influence_under_control
+		}
+		#其它领土争夺战设置#
+		set_variable = { SFH_bot_state_pointer = 5 }	#初始选择平京
+		SFH_state_influence_update = yes
+	}
+}
+
+SFH_state_influence_update = {
+	var:SFH_bot_state_pointer = {
+		ROOT = {
+			set_variable = { SFH_bot_piechart_1_var = SFH_bot_state_pointer:SFH_state_influence_var }
+			set_variable = { SFH_bot_piechart_2_var = SFH_bot_state_pointer:QTA_state_influence_var }
+			set_variable = { SFH_bot_piechart_3_var = SFH_bot_state_pointer:SFR_state_influence_var } 
+			add_to_variable = { SFH_bot_piechart_2_var = SFH_bot_piechart_1_var }
+			add_to_variable = { SFH_bot_piechart_3_var = SFH_bot_piechart_2_var }
+		}
+	}
+}
+
+SFH_state_influence_update_alt = {
+	ROOT = {
+		set_variable = { SFH_bot_piechart_1_var = SFH_bot_state_pointer:SFH_state_influence_var }
+		set_variable = { SFH_bot_piechart_2_var = SFH_bot_state_pointer:QTA_state_influence_var }
+		set_variable = { SFH_bot_piechart_3_var = SFH_bot_state_pointer:SFR_state_influence_var } 
+		add_to_variable = { SFH_bot_piechart_2_var = SFH_bot_piechart_1_var }
+		add_to_variable = { SFH_bot_piechart_3_var = SFH_bot_piechart_2_var }
+	}
+}
+
+SFH_state_influence_clamp = {
+	clamp_variable = {
+		var = SFH_state_influence_var
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = { check_variable = { SFH_state_influence_var = 0 } }
+		clr_state_flag = SFH_state_influence_under_control
+		set_state_flag = SFH_state_influence_not_under_control
+	}
+}
+
+SFR_and_QTA_state_influence_clamp = {
+	clamp_variable = {
+		var = SFR_state_influence_var
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = QTA_state_influence_var
+		min = 0
+		max = 100
+	}
+}
+
+SFH_bot_special_handle = {
+	set_temp_variable = { SFH_bot_special_handle_var = SFH_state_influence_var }
+	add_to_temp_variable = { SFH_bot_special_handle_var = SFR_state_influence_var }
+	add_to_temp_variable = { SFH_bot_special_handle_var = QTA_state_influence_var }
+
+	if = {
+		limit = { check_variable = { SFH_bot_special_handle_var > 100 } }
+		subtract_from_temp_variable = { SFH_bot_special_handle_var = 100 }
+		if = {
+			limit = { check_variable = { SFH_state_influence_var > SFH_bot_special_handle_var } }
+			subtract_from_variable = { SFH_state_influence_var = SFH_bot_special_handle_var }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_state_influence_var > SFH_bot_special_handle_var } }
+			subtract_from_variable = { SFR_state_influence_var = SFH_bot_special_handle_var }
+		}
+		else_if = {
+			limit = { check_variable = { QTA_state_influence_var > SFH_bot_special_handle_var } }
+			subtract_from_variable = { QTA_state_influence_var = SFH_bot_special_handle_var }
+		}
+	}
+}
+
+SFH_bot_influence_update_aio = {
+	SFH_state_influence_update_alt = yes
+	SFH_state_influence_clamp = yes
+	SFR_and_QTA_state_influence_clamp = yes
+	#SFH_bot_special_handle = yes
+}
+
+SFR_taking_actions_effect = {
+	effect_tooltip = {
+		add_to_variable = { 
+			var = SFR_state_influence_var
+			value = 5
+			tooltip = SFR_state_influence_var_tt
+		}
+	}
+	hidden_effect = { set_variable = { SFR_state_influence_var_up_var = 5 } SFR_state_influence_var_up_effect = yes }
+	SFH_bot_influence_update_aio = yes
+}
+
+QTA_taking_actions_effect = {
+	effect_tooltip = {
+		add_to_variable = { 
+			var = QTA_state_influence_var
+			value = 5
+			tooltip = QTA_state_influence_var_tt
+		}
+	}
+	hidden_effect = { set_variable = { QTA_state_influence_var_up_var = 5 } QTA_state_influence_var_up_effect = yes }
+	SFH_bot_influence_update_aio = yes
+}
+
+SFH_state_influence_var_up_effect = {
+	for_loop_effect = {
+		value = 0
+		end = SFH_state_influence_var_up_var
+		SFH_state_influence_var_up_1_effect = yes
+	}
+	set_variable = { SFH_state_influence_var_up_var = 0 }
+}
+
+SFH_state_influence_var_down_effect = {
+	for_loop_effect = {
+		value = 0
+		end = SFH_state_influence_var_down_var
+		SFH_state_influence_var_down_1_effect = yes
+	}
+	set_variable = { SFH_state_influence_var_down_var = 0 }
+}
+
+SFH_state_influence_var_up_1_effect = {
+	if = {
+		limit = { check_variable = { SFH_state_influence_var < 100 } }
+		add_to_variable = { SFH_state_influence_var = 1 }
+		if = {
+			limit = { check_variable = { SFR_state_influence_var > QTA_state_influence_var } }
+			add_to_variable = { SFR_state_influence_var = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_state_influence_var < QTA_state_influence_var } }
+			add_to_variable = { QTA_state_influence_var = -1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFR_state_influence_var = -1 } }
+				50 = { add_to_variable = { QTA_state_influence_var = -1 } }
+			}	
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+SFH_state_influence_var_down_1_effect = {
+	if = {
+		limit = { check_variable = { SFH_state_influence_var > 0 } }
+		add_to_variable = { SFH_state_influence_var = -1 }
+		if = {
+			limit = { check_variable = { SFR_state_influence_var < QTA_state_influence_var } }
+			add_to_variable = { SFR_state_influence_var = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { QTA_state_influence_var < SFR_state_influence_var } }
+			add_to_variable = { QTA_state_influence_var = 1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFR_state_influence_var = 1 } }
+				50 = { add_to_variable = { QTA_state_influence_var = 1 } }
+			}	
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+SFR_state_influence_var_up_effect = {
+	for_loop_effect = {
+		value = 0
+		end = SFR_state_influence_var_up_var
+		SFR_state_influence_var_up_1_effect = yes
+	}
+	set_variable = { SFR_state_influence_var_up_var = 0 }
+}
+
+SFR_state_influence_var_down_effect = {
+	for_loop_effect = {
+		value = 0
+		end = SFR_state_influence_var_down_var
+		SFR_state_influence_var_down_1_effect = yes
+	}
+	set_variable = { SFR_state_influence_var_down_var = 0 }
+}
+
+SFR_state_influence_var_up_1_effect = {
+	if = {
+		limit = { check_variable = { SFR_state_influence_var < 100 } }
+		add_to_variable = { SFR_state_influence_var = 1 }
+		if = {
+			limit = { check_variable = { SFH_state_influence_var > QTA_state_influence_var } }
+			add_to_variable = { SFH_state_influence_var = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFH_state_influence_var < QTA_state_influence_var } }
+			add_to_variable = { QTA_state_influence_var = -1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFH_state_influence_var = -1 } }
+				50 = { add_to_variable = { QTA_state_influence_var = -1 } }
+			}	
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+SFR_state_influence_var_down_1_effect = {
+	if = {
+		limit = { check_variable = { SFR_state_influence_var > 0 } }
+		add_to_variable = { SFR_state_influence_var = -1 }
+		if = {
+			limit = { check_variable = { SFH_state_influence_var < QTA_state_influence_var } }
+			add_to_variable = { SFH_state_influence_var = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { QTA_state_influence_var < SFH_state_influence_var } }
+			add_to_variable = { QTA_state_influence_var = 1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFR_state_influence_var = 1 } }
+				50 = { add_to_variable = { QTA_state_influence_var = 1 } }
+			}	
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+QTA_state_influence_var_up_effect = {
+	for_loop_effect = {
+		value = 0
+		end = QTA_state_influence_var_up_var
+		QTA_state_influence_var_up_1_effect = yes
+	}
+	set_variable = { QTA_state_influence_var_up_var = 0 }
+}
+
+QTA_state_influence_var_down_effect = {
+	for_loop_effect = {
+		value = 0
+		end = QTA_state_influence_var_down_var
+		QTA_state_influence_var_down_1_effect = yes
+	}
+	set_variable = { QTA_state_influence_var_down_var = 0 }
+}
+
+QTA_state_influence_var_up_1_effect = {
+	if = {
+		limit = { check_variable = { QTA_state_influence_var < 100 } }
+		add_to_variable = { QTA_state_influence_var = 1 }
+		if = {
+			limit = { check_variable = { SFH_state_influence_var > SFR_state_influence_var } }
+			add_to_variable = { SFH_state_influence_var = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFH_state_influence_var < SFR_state_influence_var } }
+			add_to_variable = { SFR_state_influence_var = -1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFH_state_influence_var = -1 } }
+				50 = { add_to_variable = { SFR_state_influence_var = -1 } }
+			}
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+QTA_state_influence_var_down_1_effect = {
+	if = {
+		limit = { check_variable = { QTA_state_influence_var > 0 } }
+		add_to_variable = { QTA_state_influence_var = -1 }
+		if = {
+			limit = { check_variable = { SFH_state_influence_var < SFR_state_influence_var } }
+			add_to_variable = { SFH_state_influence_var = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { SFR_state_influence_var < SFH_state_influence_var } }
+			add_to_variable = { SFR_state_influence_var = 1 }
+		}
+		else = {
+			random_list = {
+				50 = { add_to_variable = { SFH_state_influence_var = 1 } }
+				50 = { add_to_variable = { SFR_state_influence_var = 1 } }
+			}	
+		}
+	}
+	SFH_bot_influence_update_aio = yes
+}
+
+SFH_weak_army_setup = {
+	set_variable = { SFH_weak_army_dynamic_modifier_aaf = -0.2 }
+	set_variable = { SFH_weak_army_dynamic_modifier_adf = -0.2 }
+	set_variable = { SFH_weak_army_dynamic_modifier_aof = -0.2 }
+	set_variable = { SFH_weak_army_dynamic_modifier_aor = -0.2 }
+	set_variable = { SFH_weak_army_dynamic_modifier_mxp = -0.4 }
+	set_variable = { SFH_weak_army_dynamic_modifier_mxf = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_tpr = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_lrr = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_scf = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_ttf = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_cgf = 0.05 }
+	set_variable = { SFH_weak_army_dynamic_modifier_rsf = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_cmw = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_csf = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_cgb = 0 }
+	set_variable = { SFH_weak_army_dynamic_modifier_cma = 0 }
+	add_dynamic_modifier = { modifier = SFH_weak_army_dynamic_modifier }
+}
+
+SFH_political_struggle_var_clamp = {
+	clamp_variable = {
+		var = SFH_king_power
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFH_conservative_power
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = SFH_reformist_power
+		min = 0
+		max = 100
+	}
+}
+
+SFH_king_power_up_small = {
+	add_to_variable = {
+		SFH_king_power = 5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_king_power_up_small_tt
+}
+
+SFH_king_power_up_large = {
+	add_to_variable = {
+		SFH_king_power = 10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_king_power_up_large_tt
+}
+
+SFH_king_power_down_small = {
+	add_to_variable = {
+		SFH_king_power = -5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_king_power_down_small_tt
+}
+
+SFH_king_power_down_large = {
+	add_to_variable = {
+		SFH_king_power = -10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_king_power_down_large_tt
+}
+
+SFH_reformist_power_up_small = {
+	add_to_variable = {
+		SFH_reformist_power = 5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformist_power_up_small_tt
+}
+
+SFH_reformist_power_up_large = {
+	add_to_variable = {
+		SFH_reformist_power = 10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformist_power_up_large_tt
+}
+
+SFH_reformist_power_down_small = {
+	add_to_variable = {
+		SFH_reformist_power = -5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformist_power_down_small_tt
+}
+
+SFH_reformist_power_down_large = {
+	add_to_variable = {
+		SFH_reformist_power = -10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformist_power_down_large_tt
+}
+
+SFH_conservative_power_up_small = {
+	add_to_variable = {
+		SFH_conservative_power = 5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_conservative_power_up_small_tt
+}
+
+SFH_conservative_power_up_large = {
+	add_to_variable = {
+		SFH_conservative_power = 10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_conservative_power_up_large_tt
+}
+
+SFH_conservative_power_down_small = {
+	add_to_variable = {
+		SFH_conservative_power = -5
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_conservative_power_down_small_tt
+}
+
+SFH_conservative_power_down_large = {
+	add_to_variable = {
+		SFH_conservative_power = -10
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_conservative_power_down_large_tt
+}
+
+SFH_reformation_wining_chance_up_small = {
+	add_to_variable = {
+		SFH_reformation_wining_chance = 1
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformation_wining_chance_up_small_tt
+}
+
+SFH_reformation_wining_chance_up_large = {
+	add_to_variable = {
+		SFH_reformation_wining_chance = 2
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformation_wining_chance_up_large_tt
+}
+
+SFH_reformation_wining_chance_down_small = {
+	add_to_variable = {
+		SFH_reformation_wining_chance = -1
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformation_wining_chance_down_small_tt
+}
+
+SFH_reformation_wining_chance_down_large = {
+	add_to_variable = {
+		SFH_reformation_wining_chance = -2
+	}
+	SFH_political_struggle_var_clamp = yes
+	custom_effect_tooltip = SFH_reformation_wining_chance_down_large_tt
+}
+
+SFH_deformed_economy_change = {
+	if = {
+		limit = {
+			has_idea = SFH_deformed_economy_1
+		}
+		swap_ideas = {
+			remove_idea = SFH_deformed_economy_1
+			add_idea = SFH_deformed_economy_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SFH_deformed_economy_2
+		}
+		swap_ideas = {
+			remove_idea = SFH_deformed_economy_2
+			add_idea = SFH_deformed_economy_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SFH_deformed_economy_3
+		}
+		swap_ideas = {
+			remove_idea = SFH_deformed_economy_3
+			add_idea = SFH_deformed_economy_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SFH_deformed_economy_4
+		}
+		remove_ideas = SFH_deformed_economy_4
+	}
+	else = {
+		swap_ideas = {
+			remove_idea = SFH_deformed_economy_1
+			add_idea = SFH_deformed_economy_2
+		}
+	}
+}
+
+SFH_civil_war_begin_setup = {
+	if = {
+		limit = {
+			has_completed_focus = SFH_modern_command_system
+		}
+		country_event = {
+			id = SFH.801
+			days = 2
+		}
+	}
+	else = {
+		country_event = {
+			id = SFH.802
+			days = 2
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = SFH_chase_for_hope
+		}
+		country_event = {
+			id = SFH.803
+			days = 2
+		}
+	}
+	else = {
+		country_event = {
+			id = SFH.804
+			days = 2
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = SFH_we_have_done_our_best
+		}
+		country_event = {
+			id = SFH.805
+			days = 2
+		}
+	}
+	else = {
+		country_event = {
+			id = SFH.806
+			days = 2
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = SFH_industrial_miracle_of_farhome
+		}
+		country_event = {
+			id = SFH.807
+			days = 2
+		}
+	}
+	else = {
+		country_event = {
+			id = SFH.808
+			days = 2
+		}
+	}
+}
+
+SFH_preparation_var_clamp = {
+	clamp_variable = {
+		var = SFH_preparation_bar_var
+		min = 0
+		max = 100
+	}
+}
+
+SFH_Zhenghong_get_soften_effect = {
+	add_to_variable = {
+		SFH_Zhenghong_tendency_var = 1
+	}
+	custom_effect_tooltip = SFH_Zhenghong_get_soften_effect_tt
+}
+
+SFH_Zhenghong_get_tough_effect = {
+	add_to_variable = {
+		SFH_Zhenghong_tendency_var = -1
+	}
+	custom_effect_tooltip = SFH_Zhenghong_get_tough_effect_tt
+}
+
+SFR_state_influence_reset = {
+	set_temp_variable = { state_inf_dif = 100 }
+	subtract_from_temp_variable = { state_inf_dif = SFR_state_influence_var }
+	set_variable = { QTA_state_influence_var = state_inf_dif }
+}
+
+QTA_state_influence_reset = {
+	set_temp_variable = { state_inf_dif = 100 }
+	subtract_from_temp_variable = { state_inf_dif = QTA_state_influence_var }
+	set_variable = { SFR_state_influence_var = state_inf_dif }
+}
+
+SFH_chaos_after_war_idea_change = {
+	if = {
+		limit = { has_idea = SFH_chaos_after_war_1 }
+		swap_ideas = {
+			remove_idea = SFH_chaos_after_war_1
+			add_idea = SFH_chaos_after_war_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFH_chaos_after_war_2 }
+		swap_ideas = {
+			remove_idea = SFH_chaos_after_war_2
+			add_idea = SFH_chaos_after_war_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFH_chaos_after_war_3 }
+		swap_ideas = {
+			remove_idea = SFH_chaos_after_war_3
+			add_idea = SFH_chaos_after_war_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SFH_chaos_after_war_4 }
+		remove_ideas = SFH_chaos_after_war_4
+	}
+}
+
+SFH_towards_the_future_var_initilization = {
+	set_variable = { SFH_towards_the_future_sf = -0.1 }
+	set_variable = { SFH_towards_the_future_wsf = 0 }
+	set_variable = { SFH_towards_the_future_ppf = 0.1 }
+	set_variable = { SFH_towards_the_future_psbf = 0 }
+	set_variable = { SFH_towards_the_future_pfegf = 0 }
+	set_variable = { SFH_towards_the_future_pfmef = 0 }
+	set_variable = { SFH_towards_the_future_cgf = 0.05 }
+	set_variable = { SFH_towards_the_future_rsf = 0 }
+	set_variable = { SFH_towards_the_future_cf = 0 }
+	set_variable = { SFH_towards_the_future_mlsdp = 0 }
+	set_variable = { SFH_towards_the_future_midp = 0 }
+	set_variable = { SFH_towards_the_future_madp = 0 }
+	set_variable = { SFH_towards_the_future_mrdp = 0 }
+}
+
+SFH_living_at_present_var_initilization = {
+	set_variable = { SFH_living_at_present_sf = 0.05 }
+	set_variable = { SFH_living_at_present_wsf = 0.05 }
+	set_variable = { SFH_living_at_present_ppf = -0.1 }
+	set_variable = { SFH_living_at_present_psbf = 0 }
+	set_variable = { SFH_living_at_present_pfegf = 0.1 }
+	set_variable = { SFH_living_at_present_pfmef = -0.05 }
+	set_variable = { SFH_living_at_present_lcpef = 0 }
+	set_variable = { SFH_living_at_present_cgf = 0 }
+	set_variable = { SFH_living_at_present_rsf = 0 }
+	set_variable = { SFH_living_at_present_mb = 0 }
+	set_variable = { SFH_living_at_present_cf = 0 }
+	set_variable = { SFH_living_at_present_acdf = 0 }
+	set_variable = { SFH_living_at_present_aof = 0 }
+	set_variable = { SFH_living_at_present_aor = 0 }
+	set_variable = { SFH_living_at_present_mp = 0 }
+	set_variable = { SFH_living_at_present_midp = 0 }
+	set_variable = { SFH_living_at_present_madp = 0 }
+	set_variable = { SFH_living_at_present_mrdp = 0 }
+	set_variable = { SFH_living_at_present_ssdm = 0 }
+}
+
+SFH_changing_the_past_var_initilization = {
+	set_variable = { SFH_changing_the_past_sf = -0.2 }
+	set_variable = { SFH_changing_the_past_wsf = 0.1 }
+	set_variable = { SFH_changing_the_past_sw = 0 }
+	set_variable = { SFH_changing_the_past_wsw = 0 }
+	set_variable = { SFH_changing_the_past_ppf = 0.1 }
+	set_variable = { SFH_changing_the_past_icf = 0 }
+	set_variable = { SFH_changing_the_past_psaff = 0 }
+	set_variable = { SFH_changing_the_past_psif = 0 }
+	set_variable = { SFH_changing_the_past_psrwf = 0 }
+	set_variable = { SFH_changing_the_past_cgf = 0 }
+	set_variable = { SFH_changing_the_past_ccctmf = 0 }
+	set_variable = { SFH_changing_the_past_scf = 0 }
+	set_variable = { SFH_changing_the_past_ttf = 0 }
+	set_variable = { SFH_changing_the_past_acaf = 0 }
+	set_variable = { SFH_changing_the_past_acdf = 0 }
+	set_variable = { SFH_changing_the_past_aof = 0 }
+	set_variable = { SFH_changing_the_past_c = 0 }
+	set_variable = { SFH_changing_the_past_midp = 0 }
+	set_variable = { SFH_changing_the_past_mmdp = 0 }
+}

@@ -1,0 +1,35 @@
+﻿CLD_GEN_01 = {
+	name = "红军步兵师"
+
+	for_countries = { CLD }
+
+	can_use = { always = yes }
+
+	#division_types = { "infantry" }
+
+	fallback_name = "红军第%d步兵师"
+}
+
+CLD_GEN_02 = {
+	name = "工人阶级战斗队"
+
+	for_countries = { CLD }
+
+	can_use = { always = yes }
+
+	#division_types = { "infantry" }
+
+	fallback_name = "工人阶级战斗队第%d师"
+}
+
+CLD_GEN_03 = {
+	name = "地方民兵"
+
+	for_countries = { CLD }
+
+	can_use = { always = yes }
+
+	#division_types = { "infantry" }
+
+	fallback_name = "地方民兵%d队"
+}

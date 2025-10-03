@@ -1,0 +1,33 @@
+SPC_war_exhaustion_inwar_decisions = {	#战时
+	icon = generic_propaganda
+	visible = {
+		OR = {
+			SPC_war_exhaustion_eligible = yes
+			#is_debug = yes
+		}
+		always = no
+	}
+}
+SPC_war_exhaustion_aftermath_decisions = {	#战后
+	icon = generic_propaganda
+	visible = {
+		OR = {
+			AND = {
+				SPC_war_exhaustion_eligible = no
+				check_variable = { war_exhaustion > 0 }
+			}
+			#is_debug = yes
+		}
+		always = no
+	}
+}
+SPC_war_exhaustion_promise_decisions = {	#承诺
+	icon = generic_propaganda
+	visible = {
+		OR = {
+			check_variable = { war_exhaustion > 0 }
+			#is_debug = yes
+		}
+		always = no
+	}
+}

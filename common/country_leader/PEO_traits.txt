@@ -1,0 +1,179 @@
+leader_traits = {
+
+	PEO_exhauasted_patriot = {		#心身俱疲的爱国者
+		random = no
+		
+		monthly_living_standard_development_process = 2
+		political_power_gain = -0.01
+		stability_factor = -0.05
+		consumer_goods_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	PEO_controversial_socialist = {		#饱受争议的社会主义者
+		random = no
+		
+		monthly_industrial_development_process = 2
+		political_power_gain = -0.1
+		stability_factor = -0.05
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_ideal_pragmatist = {		#理想的实用主义者
+		random = no
+		
+		stability_factor = -0.1
+		political_power_gain = 0.1
+		local_resources_factor = 0.05
+		drift_defence_factor = 0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_conservative_progressives = {		#保守的进步主义者
+		random = no
+		
+		stability_factor = 0.1
+		consumer_goods_factor = -0.05
+		research_speed_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_friends_of_workers = {		#工人的朋友
+		random = no
+		
+		monthly_living_standard_development_process = 2
+		industrial_capacity_factory = 0.05
+		production_factory_efficiency_gain_factor = -0.1
+		political_power_gain = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_friendly_invervention = {		#仁慈干涉
+		random = no
+		
+		opinion_gain_monthly_factor = 0.15
+		send_volunteers_tension = -0.1
+		send_volunteer_size = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_watcher = {		#守望者
+		random = no
+		
+		political_power_factor = 0.1
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_popular_communist = {		#受欢迎的共产党人
+		random = no
+		
+		stability_factor = 0.05
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.05
+		drift_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_multiple_talents = {		#能文能武
+		random = no
+		
+		monthly_military_development_process = 2
+		experience_gain_army_factor = 0.1
+		land_doctrine_cost_factor = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_modernized_agriculture_promoter = {		#农业现代化推动者
+		random = no
+		
+		monthly_industrial_development_process = 1
+		monthly_environment_development_process = 1
+		monthly_agricultural_development_process = 2
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_shield_of_republic = {		#共和国之盾
+		random = no
+		
+		army_artillery_attack_factor = 0.05
+		army_defence_factor = 0.05
+		max_dig_in_factor = 0.1
+		experience_gain_army = 0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_military_reform_implementers = {		#新军改执行者
+		random = no
+		
+		army_speed_factor = 0.05
+		army_attack_factor = 0.05
+		experience_gain_army_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_sharks_in_sea_of_lys = {		#列斯海的鲨鱼
+		random = no
+		
+		naval_speed_factor = 0.1
+		naval_damage_factor = 0.05
+		experience_gain_navy = 0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	PEO_wing_of_motherland = {		#祖国之翼
+		random = no
+		
+		air_attack_factor = 0.05
+		air_superiority_efficiency = 0.05
+		air_detection = 0.1
+		experience_gain_air = 0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

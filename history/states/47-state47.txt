@@ -1,0 +1,31 @@
+
+state={
+	id=47
+	name="STATE_47"
+	provinces={
+		235 7919 8135 8363 11871 20036 20058 20086 20131 20181 20191 20214 20215 20228 20247 20289 20308 
+	}
+	resources = {
+		steel = 20
+		aluminium = 10
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			20036 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			20036 3
+		}
+	}
+	manpower=1210000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

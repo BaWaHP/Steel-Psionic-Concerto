@@ -1,0 +1,15 @@
+leader_traits = {
+
+	FCR_corrupt_political_brokers = {		#腐败的政治掮客
+		random = no
+		
+		political_power_factor = -0.15
+		consumer_goods_factor = 0.15
+		political_advisor_cost_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

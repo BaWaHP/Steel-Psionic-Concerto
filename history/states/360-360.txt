@@ -1,0 +1,35 @@
+
+state={
+	id=360
+	name="STATE_360"
+	resources={
+		steel=14.000
+		aluminium=8.000
+	}
+
+	history={
+		owner = ROK
+		add_core_of = ROK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		victory_points = {
+			19587 15 
+		}
+		victory_points = {
+			19748 3 
+		}
+
+	}
+
+	provinces={
+		3322 5369 7255 8733 9252 10691 11288 19506 19587 19748 19781 19836 
+	}
+	manpower=856900
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

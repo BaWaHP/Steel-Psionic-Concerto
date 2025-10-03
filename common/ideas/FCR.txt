@@ -1,0 +1,85 @@
+ideas = {
+	country = {
+
+		FCR_three_heroes = {		#三个好汉一个帮
+			picture = generic_manpower_bonus
+			allowed = { tag = FCR }
+			removal_cost = -1
+			modifier = {
+				encryption_factor = -0.15
+				agency_upgrade_time = 1
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.15
+				custom_modifier_tooltip = FCR_three_heroes_tt
+			}
+		}
+		
+		FCR_new_cavalry = {		#新时代，新“骑兵”
+			picture = FRA_army_of_aggression_focus
+			allowed = { tag = FCR }
+			removal_cost = -1
+			modifier = {
+				org_loss_when_moving = -0.2
+				SUPPLY_NODE_RANGE = 0.15
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				motorized_attack_factor = 0.2
+				motorized_defence_factor = 0.2
+				army_armor_attack_factor = 0.2
+				army_armor_defence_factor = 0.2
+			}
+		}
+		
+		FCR_ravaged_land = {		#铁蹄蹂躏之地
+			picture = anti_soviet_pact
+			allowed = { tag = FCR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				conscription = -0.005
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
+				production_speed_buildings_factor = -0.2
+				research_speed_factor = -0.1
+				monthly_population = -0.15
+			}
+		}
+		
+		FCR_assistance_from_krayano = {		#克拉亚诺的援助
+			picture = generic_economic_increase
+			allowed = { tag = FCR }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.2
+			}
+		}
+		
+		FCR_bastard_peace = {		#混账和平
+			picture = generic_victors_of_ww1
+			allowed = { tag = FCR }
+			cancel = { GDD = { exists = no } }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.2
+				stability_factor = -0.1
+				political_power_factor = 0.15
+				custom_modifier_tooltip = FCR_bastard_peace_tt
+			}
+			on_add = {
+				set_country_flag = SPC_ban_trade_policy
+				set_country_flag = SPC_ban_econ_policy
+				set_country_flag = SPC_ban_foreign_policy
+				set_country_flag = SPC_ban_moblization_policy
+			}
+			on_remove = {
+				clr_country_flag = SPC_ban_trade_policy
+				clr_country_flag = SPC_ban_econ_policy
+				clr_country_flag = SPC_ban_foreign_policy
+				clr_country_flag = SPC_ban_moblization_policy
+			}
+		}
+
+	}
+}

@@ -1,0 +1,9 @@
+scripted_gui = {
+	SPC_party_alliance_gui = {
+		context_type = player_context
+		window_name = "SPC_party_alliance_window"
+		parent_window_name = "political_party_info_entry"
+		parent_window_token = politics_tab
+		visible = { always = no }
+	}
+}

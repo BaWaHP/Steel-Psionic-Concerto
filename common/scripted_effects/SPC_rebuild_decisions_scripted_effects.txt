@@ -1,0 +1,212 @@
+generic_territory_return_and_coring_effect = {
+	every_owned_state = {
+		if = {
+			limit = { OR = { is_core_of = ROOT is_claimed_by = ROOT }  }
+			transfer_state_to = ROOT
+		}
+		if = {
+			limit = { NOT = { is_core_of = PREV } }
+			add_core_of = PREV
+		}
+	}
+}
+
+generic_territory_add_popularty_effect = {
+	add_popularity = {
+		ideology = var:current_party_ideology_group
+		popularity = 0.8
+	}
+}
+
+generic_territory_puppet_effect = {
+	set_autonomy = {
+		target = event_target:released_puppet_country
+		autonomy_state = autonomy_puppet
+	}
+	event_target:released_puppet_country = {
+		#load_focus_tree = generic_focus
+		generic_territory_return_and_coring_effect = yes
+		generic_territory_add_popularty_effect = yes
+		set_country_flag = generic_territory_has_been_rebuilt
+	}
+}
+
+#吉拉尼亚释放
+generic_territory_101_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_3_4
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#大沃姆释放
+generic_territory_201_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_3
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#戈尔维亚释放
+generic_territory_220_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_3_2
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#小沃姆释放
+generic_territory_240_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_3_1
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#斯布里奇释放
+generic_territory_260_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_3_3
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#大联合王国释放
+generic_territory_301_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_2
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#奥罗日亚释放
+generic_territory_320_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_2_1
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#皮奥瑞亚释放
+generic_territory_340_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_2_3
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+#西莉迪亚释放
+generic_territory_360_a_effect = {
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_2_2
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}
+
+generic_territory_401_a_effect = {
+	###基础部分###
+	for_each_scope_loop = {
+		array = global.SPC_generic_region_states_1
+		if = {
+			limit = {
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = event_target:released_puppet_country
+		}
+	}
+	generic_territory_puppet_effect = yes
+	clear_global_event_target = released_puppet_country
+}

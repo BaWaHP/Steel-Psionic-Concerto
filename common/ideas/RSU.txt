@@ -1,0 +1,295 @@
+ideas = {
+	country = {
+
+		RSU_torn_society = {		#撕裂的社会
+			picture = RSU_torn_society
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_factor = -0.1
+				conscription_factor = -0.3
+				monthly_living_standard_development_process = -6
+			}
+		}
+
+		RSU_fixing_the_society = {		#弥补裂痕的社会
+			picture = RSU_torn_society
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.05
+				conscription_factor = -0.2
+				monthly_living_standard_development_process = -4
+			}
+		}
+
+		RSU_transport_key_of_south_bastia = {		#南巴的交通枢纽
+			picture = RSU_transport_key_of_south_bastia
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				supply_consumption_factor = -0.15
+			}
+		}
+
+		RSU_perfect_market_econ = {		#完美的市场经济
+			picture = RSU_perfect_market_econ
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		RSU_rusty_war_machine = {		#生锈的战争机器
+			picture = RSU_rusty_war_machine
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.2
+				experience_gain_army = -0.15
+				land_doctrine_cost_factor = 0.25
+				air_doctrine_cost_factor = 0.25
+				naval_doctrine_cost_factor = 0.25
+				conscription = -0.003
+				monthly_military_development_process = -2
+			}
+		}
+
+		RSU_prepaid_central_bastia_income_idea = {		#中巴的分红
+			picture = generic_economic_increase
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		RSU_compromise_product = {		#妥协产物
+			picture = generic_constitutional_guarantees
+			allowed = {  original_tag = RSU }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		
+		designer = yes	
+
+		RSU_tank_manufacturer_schmidt_armour = {	#施密特集团装甲部
+			picture = generic_tank_manufacturer_1
+			allowed = {
+				original_TAG = RSU				
+			}				
+			research_bonus = {
+				armor = 0.15
+			}			
+			traits = { fast_tank_manufacturer }			
+			equipment_bonus = {
+				armor = {
+					maximum_speed = 0.05 
+					reliability = -0.05
+				}
+			}
+		}
+		RSU_tank_manufacturer_blaine_tank = {	#布雷恩坦克制造厂
+			picture = generic_tank_manufacturer_2
+			allowed = {
+				original_TAG = RSU				
+			}
+			available = {
+				owns_state = 317
+			}									
+			research_bonus = {
+				armor = 0.15
+			}		
+			traits = { infantry_tank_manufacturer }					
+		}
+	}
+
+	naval_manufacturer = {	
+
+		designer = yes		
+
+		RSU_naval_manufacturer_uslaminden_shipyard = {	#乌斯拉明登船舶制造厂
+			picture = generic_naval_manufacturer_1
+			allowed = {
+				original_TAG = RSU
+			}
+			available = {
+				owns_state = 313
+			}				
+			research_bonus = {
+				naval_equipment = 0.15
+			}			
+			traits = { coastal_defence_naval_manufacturer }
+		}
+		RSU_naval_manufacturer_drenne_shipyard = {		#德伦尔讷船舶制造厂	
+			picture = generic_naval_manufacturer_2
+			allowed = {
+				original_TAG = RSU
+			}
+			available = {
+				owns_state = 322
+			}				
+			research_bonus = {
+				naval_equipment = 0.15
+			}			
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		RSU_aircraft_manufacturer_graf_aircraft = {	#格拉芙飞机制造厂	
+			picture = generic_air_manufacturer_1	
+			allowed = {
+				original_TAG = RSU
+			}		
+			research_bonus = {
+				air_equipment = 0.15
+			}			
+			traits = { light_aircraft_manufacturer }						
+		}
+		RSU_aircraft_manufacturer_schulte_corp = {	#舒尔特集团
+			picture = generic_air_manufacturer_2
+			allowed = {
+				original_TAG = RSU
+			}		
+			research_bonus = {
+				air_equipment = 0.15
+			}			
+			traits = { CAS_manufacturer }						
+		}						
+	}
+
+
+
+
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		RSU_materiel_manufacturer_varlhjem_arsenal = {	#瓦尔赫姆军工厂
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				original_TAG = RSU
+			}
+			available = {
+				owns_state = 318
+			}			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}			
+			traits = { infantry_equipment_manufacturer }
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+		}
+		RSU_materiel_manufacturer_herz_arsenal = {	#赫尔茨军工厂	
+			picture = generic_artillery_manufacturer_2
+			allowed = {
+				original_TAG = RSU
+			}
+			available = {
+				owns_state = 314
+			}			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}			
+			traits = { artillery_manufacturer }
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+		}		
+		RSU_materiel_manufacturer_haas_arms = {	#哈斯军火集团
+			picture = generic_motorized_equipment_manufacturer_2
+			allowed = {
+				original_TAG = RSU
+			}				
+			research_bonus = {
+				infantry_weapons = 0.15
+			}			
+			traits = { motorized_equipment_manufacturer }
+			equipment_bonus = {
+				motorized_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+		}			
+	}
+
+	industrial_concern = {	
+		RSU_industrial_concern_rusal_tech = {		#鲁萨尔新兴科技有限公司
+			picture = generic_electronics_concern_1
+			allowed = { original_TAG = RSU }
+			research_bonus = {
+				electronics = 0.15
+			}			
+			traits = { electronics_concern }						
+		}
+		RSU_industrial_concern_bote_industries = {		#博特工业
+			picture = generic_industrial_concern_1
+			allowed = { original_TAG = RSU }
+			research_bonus = {
+				industry = 0.15
+			}			
+			traits = { industrial_concern }	
+			modifier = {				
+				industrial_capacity_factory = 0.1
+			}						
+		}
+		RSU_industrial_concern_rusal_construct_corp = {		#鲁萨尔国有企业建筑集团
+			picture = generic_industrial_concern_2
+			allowed = { original_TAG = RSU }
+			available = {}
+			visible = { NOT = { has_completed_focus = RSU_finding_more_resources } }
+			research_bonus = {			
+				construction_tech = 0.1
+			}
+			traits = { construction_company }
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}						
+		}
+		RSU_industrial_concern_rusal_construct_corp_bonus = {		#鲁萨尔国有企业建筑集团
+			name = RSU_industrial_concern_rusal_construct_corp
+			picture = generic_industrial_concern_2
+			allowed = { original_TAG = RSU }
+			available = {}
+			visible = { has_completed_focus = RSU_finding_more_resources }
+			research_bonus = {			
+				construction_tech = 0.1
+			}
+			traits = { construction_company }
+			modifier = {
+				local_resources_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}						
+		}
+	}
+
+}

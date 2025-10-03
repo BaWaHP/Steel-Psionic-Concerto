@@ -1,0 +1,19 @@
+on_actions = {
+
+	on_daily_PEO = {
+		effect = {
+			if = {
+				limit = { has_variable = PEO_flourished_ocean_trade_var }
+				add_to_variable = { PEO_flourished_ocean_trade_var = modifier@PEO_flourished_ocean_trade_var_mod }
+				PEO_maritime_trade_administration_add_at_once = yes
+			}
+		}
+	}
+
+	on_monthly_PEO = {
+		effect = {
+			add_to_variable = { PEO_econ_reform_var = modifier@PEO_econ_reform_var_mod }
+			PEO_econ_var_clamp = yes
+		}
+	}
+}

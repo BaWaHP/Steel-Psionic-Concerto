@@ -1,0 +1,23 @@
+
+state={
+	id=50
+	name="STATE_50"
+	provinces={
+		4410 4680 7792 9621 10580 10610 11945 19793 19825 19932 20009 20082 
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			9621 3
+		}
+	}
+	manpower=513000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

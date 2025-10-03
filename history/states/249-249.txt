@@ -1,0 +1,35 @@
+
+state={
+	id=249
+	name="STATE_249"
+
+	resources = {
+		tungsten = 2
+	}
+
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			9601 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			9601 5
+		}
+		victory_points = {
+			18976 1
+		}
+	}
+
+	provinces={
+		2192 9601 18785 18805 18870 18912 18976 
+	}
+	manpower=82900
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

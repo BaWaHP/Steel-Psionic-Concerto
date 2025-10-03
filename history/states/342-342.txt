@@ -1,0 +1,31 @@
+
+state={
+	id=342
+	name="STATE_342"
+
+	resources = {
+		magic_crystal = 11
+		chromium = 7
+		rubber = 4
+	}
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			20000 3
+		}
+	}
+
+	provinces={
+		4939 5007 6471 10034 10068 20000 20019 20108 
+	}
+	manpower=510000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

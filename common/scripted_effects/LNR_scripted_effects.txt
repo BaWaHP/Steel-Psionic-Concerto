@@ -1,0 +1,245 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_LNR_startup_effect = {
+	if = {
+		limit = { tag = LNR }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = normal_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_tenians
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_recessing_policy
+		###开局设置###
+		set_variable = { LNR_economic_crisis_cgf = 0.15 }
+		set_variable = { LNR_economic_crisis_sf = -0.3 }
+		set_variable = { LNR_economic_crisis_pfmef = -0.1 }
+		set_variable = { LNR_economic_crisis_mlsdp = -10 }
+		set_variable = { LNR_economic_crisis_mp = -0.5 }
+		set_variable = { LNR_economic_crisis_sw = -0.005 }
+		add_dynamic_modifier = { modifier = LNR_economic_crisis }
+		force_update_dynamic_modifier = yes
+		###控制省份对应普及度###
+		309 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }		
+		}
+		310 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+		311 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }	
+			add_dynamic_modifier = { modifier = LNR_biohazard_giant_cacti }
+		}
+		312 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }		
+		}
+	}
+}
+
+LNR_grey_support_up = {
+	custom_effect_tooltip = LNR_grey_support_up_tt
+	if = {
+		limit = { has_idea = LNR_grey_support_5 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_5
+			add_idea = LNR_grey_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_4 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_4
+			add_idea = LNR_grey_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_3 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_3
+			add_idea = LNR_grey_support_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_2 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_2
+			add_idea = LNR_grey_support_1
+		}
+	}
+}
+
+LNR_grey_support_down = {
+	custom_effect_tooltip = LNR_grey_support_down_tt
+	if = {
+		limit = { has_idea = LNR_grey_support_1 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_1
+			add_idea = LNR_grey_support_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_2 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_2
+			add_idea = LNR_grey_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_3 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_3
+			add_idea = LNR_grey_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_4 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_4
+			add_idea = LNR_grey_support_5
+		}
+	}
+}
+
+LNR_grey_support_down_2 = {
+	custom_effect_tooltip = LNR_grey_support_down_2_tt
+	if = {
+		limit = { has_idea = LNR_grey_support_1 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_1
+			add_idea = LNR_grey_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_2 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_2
+			add_idea = LNR_grey_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_3 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_3
+			add_idea = LNR_grey_support_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = LNR_grey_support_4 }
+		swap_ideas = {
+			remove_idea = LNR_grey_support_4
+			add_idea = LNR_grey_support_5
+		}
+	}
+}
+
+LNR_late_land_reform_initialization = {
+	set_country_flag = LNR_late_land_reform_flag
+
+	set_variable = { LNR_late_land_reform_influence_1 = 45 }	#进步派
+	set_variable = { LNR_late_land_reform_influence_2 = 35 }	#保守派
+	set_variable = { LNR_late_land_reform_influence_3 = 20 }	#革命派
+
+	activate_mission = LNR_republic_in_the_great_wave
+}
+
+LNR_wtf = {
+	set_variable = { LNR_red_double_edged_sword_sf = 0 }
+	set_variable = { LNR_red_double_edged_sword_ppf = 0 }
+	set_variable = { LNR_red_double_edged_sword_aaf = 0 }
+	set_variable = { LNR_red_double_edged_sword_adf = 0 }
+	set_variable = { LNR_red_double_edged_sword_aor = 0 }
+	set_variable = { LNR_red_double_edged_sword_rcd = 0 }
+	set_variable = { LNR_red_double_edged_sword_wdd = 0 }
+	set_variable = { LNR_red_double_edged_sword_egaf = 0 }
+	if = {
+		limit = { check_variable = { LNR_late_land_reform_influence_3 < 11 } }
+		set_variable = { LNR_red_double_edged_sword_ppf = -0.05 }
+		set_variable = { LNR_red_double_edged_sword_adf = 0.1 }
+		custom_effect_tooltip = LNR_another_knife_tt1
+	}
+	else_if = {
+		limit = { check_variable = { LNR_late_land_reform_influence_3 > 10 } check_variable = { LNR_late_land_reform_influence_3 < 31 } }
+		set_variable = { LNR_red_double_edged_sword_ppf = -0.25 }
+		set_variable = { LNR_red_double_edged_sword_adf = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_aor = -0.2 }
+		set_variable = { LNR_red_double_edged_sword_sf = -0.15 }
+		custom_effect_tooltip = LNR_another_knife_tt2
+	}
+	else_if = {
+		limit = { check_variable = { LNR_late_land_reform_influence_3 > 30 } check_variable = { LNR_late_land_reform_influence_3 < 51 } }
+		set_variable = { LNR_red_double_edged_sword_ppf = -0.15 }
+		set_variable = { LNR_red_double_edged_sword_aaf = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_adf = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_rcd = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_wdd = 0.05 }
+		custom_effect_tooltip = LNR_another_knife_tt3
+	}
+	else_if = {
+		limit = { check_variable = { LNR_late_land_reform_influence_3 > 50 } }
+		set_variable = { LNR_red_double_edged_sword_ppf = -0.15 }
+		set_variable = { LNR_red_double_edged_sword_aaf = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_adf = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_rcd = 0.05 }
+		set_variable = { LNR_red_double_edged_sword_wdd = 0.1 }
+		set_variable = { LNR_red_double_edged_sword_egaf = 0.1 }
+		custom_effect_tooltip = LNR_another_knife_tt4
+	}
+}

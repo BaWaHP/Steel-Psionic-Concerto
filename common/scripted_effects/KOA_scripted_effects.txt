@@ -1,0 +1,214 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_KOA_startup_effect = {
+	if = {
+		limit = { tag = KOA }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = isolation_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_no_intervention
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_basic_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_tenians
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_reactionary_policy
+		###其它开局###
+		set_variable = { KOA_backward_economy_dynamic_modifiers_cgf = 0.2 }
+		set_variable = { KOA_backward_economy_dynamic_modifiers_psbf = -0.3 }
+		set_variable = { KOA_backward_economy_dynamic_modifiers_pfmef = -0.2 }
+		set_variable = { KOA_backward_economy_dynamic_modifiers_cf = -0.4 }
+		add_dynamic_modifier = { modifier = KOA_backward_economy_dynamic_modifiers }
+		country_event = {  
+			id = KOA.1
+			days = 2
+		}
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 307
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 308
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 404
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+				add_dynamic_modifier = {
+					modifier = KOA_agricultural_silos
+				}
+			}
+			if = {
+				limit = {
+					state = 405
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 1 }		
+			}
+		}
+	}
+}
+
+KOA_economic_difficulty_setup_effect = {
+	add_dynamic_modifier = { modifier = KOA_economic_difficulty	}
+	set_variable = { KOA_economic_difficulty_ppc = 0.5 }
+	set_variable = { KOA_economic_difficulty_psbf = -0.5 }
+	set_variable = { KOA_economic_difficulty_cf = -0.5 }
+	set_variable = { KOA_economic_difficulty_pfmef = -0.2 }
+	set_variable = { KOA_economic_difficulty_cgf = 0.8 }
+	set_variable = { KOA_economic_difficulty_mlsdp = -5 }
+}
+
+KOA_military_chaos_effect = {
+	add_dynamic_modifier = { modifier = KOA_military_chaos }
+	set_variable = { KOA_military_chaos_cpgm = -0.5 }
+	set_variable = { KOA_military_chaos_pcf = 0.5 }
+	set_variable = { KOA_military_chaos_adcf = 0.5 }
+	set_variable = { KOA_military_chaos_ldcf = 0.5 }
+	set_variable = { KOA_military_chaos_ndcf = 0.5 }
+	set_variable = { KOA_military_chaos_ps = -0.2 }
+	set_variable = { KOA_military_chaos_mpf = -0.1 }
+	set_variable = { KOA_military_chaos_lrr = -0.05 }
+}
+
+KOA_ecumenical_order_mod_setup_effect = {
+	add_dynamic_modifier = { modifier = KOA_ecumenical_order_mod }
+	set_variable = { KOA_ecumenical_order_mod_sf = 0.15 }
+	set_variable = { KOA_ecumenical_order_mod_wsf = 0.1 }
+	set_variable = { KOA_ecumenical_order_mod_cg = 0.02 }
+	set_variable = { KOA_ecumenical_order_mod_rsf = 0 }
+	set_variable = { KOA_ecumenical_order_mod_pfmef = 0 }
+	set_variable = { KOA_ecumenical_order_mod_ms = 0 }
+}
+
+KOA_resistance_movement_up_effect = {
+	if = {
+		limit = { has_idea = KOA_resistance_movement_5 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_5
+			add_idea = KOA_resistance_movement_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_4 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_4
+			add_idea = KOA_resistance_movement_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_3 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_3
+			add_idea = KOA_resistance_movement_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_2 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_2
+			add_idea = KOA_resistance_movement_1
+		}
+	}
+	else = {
+		add_stability = -0.05
+		add_political_power = -20
+	}
+}
+
+KOA_resistance_movement_down_effect = {
+	if = {
+		limit = { has_idea = KOA_resistance_movement_1 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_1
+			add_idea = KOA_resistance_movement_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_2 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_2
+			add_idea = KOA_resistance_movement_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_3 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_3
+			add_idea = KOA_resistance_movement_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = KOA_resistance_movement_4 }
+		swap_ideas = {
+			remove_idea = KOA_resistance_movement_4
+			add_idea = KOA_resistance_movement_5
+		}
+	}
+	else = {
+		add_stability = 0.05
+		add_political_power = 20
+	}
+}

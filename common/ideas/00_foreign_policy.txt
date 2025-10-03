@@ -1,0 +1,184 @@
+ideas = {
+
+	foreign_policy = {
+		law = yes
+		use_list_view = yes
+
+		isolation_tatic = {		#孤立姿态
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			level = 7
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			modifier = {
+				civilian_intel_to_others = -40.0
+				navy_intel_to_others = -40.0
+				defensive_war_stability_factor = 0.4
+				political_power_factor = 0.2
+				stability_factor = 0.2
+				war_support_factor = -0.4
+				stability_weekly = 0.002
+				ai_focus_defense_factor = 0.8
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		defensive_tatic = {		#防守姿态
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			level = 7
+
+			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			modifier = {
+				civilian_intel_to_others = -20.0
+				navy_intel_to_others = -20.0
+				defensive_war_stability_factor = 0.2
+				political_power_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = -0.1
+				ai_focus_defense_factor = 0.5
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		aggressive_tatic = {		#侵略性姿态
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			level = 7
+
+			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			modifier = {
+				civilian_intel_to_others = 20
+				navy_intel_to_others = 20
+				war_support_factor = 0.2
+				stability_factor = -0.1
+				justify_war_goal_time = -0.3
+				ai_focus_aggressive_factor = 0.5
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		friendly_tatic = {		#友善姿态
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			level = 7
+
+			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 40
+				navy_intel_to_others = 40
+				war_support_factor = -0.1
+				stability_factor = -0.1
+				justify_war_goal_time = 0.5
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		neutral_tatic = {		#中立姿态
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			level = 7
+
+			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
+			}
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_foreign_policy }
+			}
+
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				enemy_justify_war_goal_time = 0.3
+				justify_war_goal_time = 0.3
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+	}
+
+}

@@ -1,0 +1,163 @@
+defined_text = {     #公国工业发展度
+	name = GET_TPG_industrial_development_degree
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_industrial_development_degree = 1
+				}
+		}
+		localization_key = TPG_industrial_development_degree_txt_1
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_industrial_development_degree = 2
+				}
+		}
+		localization_key = TPG_industrial_development_degree_txt_2
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_industrial_development_degree = 3
+				}
+		}
+		localization_key = TPG_industrial_development_degree_txt_3
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_industrial_development_degree = 4
+				}
+		}
+		localization_key = TPG_industrial_development_degree_txt_4
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_industrial_development_degree = 5
+				}
+		}
+		localization_key = TPG_industrial_development_degree_txt_5
+	}
+}
+
+defined_text = {     #沃姆企业影响力
+	name = GET_TPG_corporate_influence
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_corporate_influence = 1
+				}
+		}
+		localization_key = TPG_corporate_influence_txt_1
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_corporate_influence = 2
+				}
+		}
+		localization_key = TPG_corporate_influence_txt_2
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_corporate_influence = 3
+				}
+		}
+		localization_key = TPG_corporate_influence_txt_3
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_corporate_influence = 4
+				}
+		}
+		localization_key = TPG_corporate_influence_txt_4
+	}
+	
+	text = {
+		trigger = {
+			check_variable = {
+					TPG_corporate_influence = 5
+				}
+		}
+		localization_key = TPG_corporate_influence_txt_5
+	}
+}
+
+defined_text = {
+	name = GET_TPG_domestic_ind_dev_icon
+	text = {
+		trigger = {
+			check_variable = { TPG_industrial_development_degree = 1 }
+		}
+		localization_key = GET_TPG_domestic_ind_dev_icon_1
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_industrial_development_degree = 2 }
+		}
+		localization_key = GET_TPG_domestic_ind_dev_icon_2
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_industrial_development_degree = 3 }
+		}
+		localization_key = GET_TPG_domestic_ind_dev_icon_3
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_industrial_development_degree = 4 }
+		}
+		localization_key = GET_TPG_domestic_ind_dev_icon_4
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_industrial_development_degree = 5 }
+		}
+		localization_key = GET_TPG_domestic_ind_dev_icon_5
+	}
+}
+
+defined_text = {
+	name = GET_TPG_wom_influence_level_icon
+	text = {
+		trigger = {
+			check_variable = { TPG_corporate_influence = 1 }
+		}
+		localization_key = GET_TPG_wom_influence_level_icon_1
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_corporate_influence = 2 }
+		}
+		localization_key = GET_TPG_wom_influence_level_icon_2
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_corporate_influence = 3 }
+		}
+		localization_key = GET_TPG_wom_influence_level_icon_3
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_corporate_influence = 4 }
+		}
+		localization_key = GET_TPG_wom_influence_level_icon_4
+	}
+	text = {
+		trigger = {
+			check_variable = { TPG_corporate_influence = 5 }
+		}
+		localization_key = GET_TPG_wom_influence_level_icon_5
+	}
+}

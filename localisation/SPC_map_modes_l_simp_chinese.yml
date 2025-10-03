@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+#SPC
+MAPMODE_SCIENCE_STATE_DEVELOPMENT_MAP_MODE:0 "将打开省份魔法普及度地图"
+MAPMODE_SCIENCE_STATE_DEVELOPMENT_MAP_MODE_NAME:0 "科学普及度"
+MAPMODE_SCIENCE_STATE_DEVELOPMENT_MAP_MODE_DESCRIPTION:0 "科学普及度是该地区对科技的认知程度和使用规模的抽象化表现。作为一个现代化（或者是即将步入现代化）的国家，无法让人民意识到科技的好处会在使得我国在多个方面无法施展拳脚。"
+science_state_development_map_mode_tooltip:0 "当地科学普及度：[FROM.GetLocalScienceLevel]"
+science_state_development_map_mode_tooltip_delayed:0 "当前的§Y科学普及度增长进度§!为[?FROM.state_science_progress|Y1]%\n\n当前我们的§Y科学普及度每月增长§!为[?FROM.state_science_monthly_basic|Y1]%\n\n我们现在的§Y科学普及度水平§!为[FROM.GetLocalScienceLevel]"
+MAPMODE_MAGIC_STATE_DEVELOPMENT_MAP_MODE:0 "将打开省份魔法普及度地图"
+MAPMODE_MAGIC_STATE_DEVELOPMENT_MAP_MODE_NAME:0 "魔法普及度"
+MAPMODE_MAGIC_STATE_DEVELOPMENT_MAP_MODE_DESCRIPTION:0 "魔法普及度是该地区居民对魔法的认知程度和使用规模的抽象化表现。虽然不使用魔法实际上不会严格动摇我国社会的根基，帮助人民认知魔法甚至是学习魔法会对我们的国家大有裨益，总体上也可以加快我国魔法研究事业的进度。"
+magic_state_development_map_mode_tooltip:0 "当地魔法普及度：[FROM.GetLocalMagicLevel]"
+magic_state_development_map_mode_tooltip_delayed:0 "当前的§Y魔法普及度增长进度§!为[?FROM.state_magic_progress|Y1]%\n\n当前我们的§Y魔法普及度每月增长§!为[?FROM.state_magic_monthly_basic|Y1]%\n\n我们现在的§Y魔法普及度水平§!为[FROM.GetLocalMagicLevel]"

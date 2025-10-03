@@ -1,0 +1,26 @@
+
+state={
+	id=301
+	name="STATE_301"
+	provinces={
+		2635 3715 4085 6414 11641 14582 14699 14718 14821 
+	}
+	history={
+		owner = OHL
+		add_core_of = OHL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			14699 5
+		}
+		victory_points = {
+			14718 3
+		}
+	}
+	manpower=610000
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

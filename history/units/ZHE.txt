@@ -1,0 +1,369 @@
+﻿###templates###
+division_template = {
+	name = "联邦国防军步兵部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "联邦国防军复员步兵旅"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "联邦国防军特别机动装甲部队"
+
+	regiments = {
+		light_titan = { x = 0 y = 0 }
+		light_titan = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "联邦国防军摩托化部队"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "地方保卫厅部队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+division_template = {
+	name = "地方保卫厅复员部队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+###units###
+
+units = {
+	division = {
+		name = "联邦国防军第一师步兵旅"
+		location = 14653
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第二师步兵旅"
+		location = 2270
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第三师步兵旅"
+		location = 15260
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第四师步兵旅"
+		location = 3568
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第五师步兵旅"
+		location = 15791
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第一师机动旅"
+		location = 15163
+		division_template = "联邦国防军特别机动装甲部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第二师机动旅"
+		location = 7622
+		division_template = "联邦国防军特别机动装甲部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第三师摩托旅"
+		location = 15260
+		division_template = "联邦国防军摩托化部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第四师摩托旅"
+		location = 6346
+		division_template = "联邦国防军摩托化部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方保卫厅部队第0001支队"
+		location = 10762
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方保卫厅部队第0002支队"
+		location = 14972
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方保卫厅部队第0003支队"
+		location = 15068
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方保卫厅部队第0004支队"
+		location = 6406
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方保卫厅部队第0005支队"
+		location = 7572
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军第五师摩托旅"
+		location = 14500
+		division_template = "联邦国防军摩托化部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第三师机动旅"
+		location = 10738
+		division_template = "联邦国防军特别机动装甲部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第四师机动旅"
+		location = 10738
+		division_template = "联邦国防军特别机动装甲部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军第五师机动旅"
+		location = 10738
+		division_template = "联邦国防军特别机动装甲部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 10924
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 2521
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 14611
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 14580
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 14653
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦国防军复员步兵旅"
+		location = 1054
+		division_template = "联邦国防军复员步兵旅"
+		start_experience_factor = 0.06
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 3317
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 10924
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 11783
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 16428
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 7823
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 1054
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 8183
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 16065
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 15963
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 7622
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 7878
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅复员部队"
+		location = 14501
+		division_template = "地方保卫厅复员部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+}

@@ -1,0 +1,152 @@
+scripted_gui = {
+	ROK_internal_external_conflict_ui = {
+		context_type = decision_category
+		window_name = "ROK_internal_external_conflict_window"
+	}
+	ROK_social_and_cultural_committee_ui = {
+		context_type = decision_category
+		window_name = "ROK_social_and_cultural_committee_window"
+
+		triggers = {
+			Left_btn_selected_visible = {
+				has_country_flag = ROK_social_and_cultural_committee_left_on
+			}
+			Right_btn_selected_visible = {
+				has_country_flag = ROK_social_and_cultural_committee_right_on
+			}
+		}
+
+		effects = {
+			Left_btn_click = {
+				if = {
+					limit = { has_country_flag = ROK_social_and_cultural_committee_right_on }
+					clr_country_flag = ROK_social_and_cultural_committee_right_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_social_and_cultural_committee_left_on }
+					clr_country_flag = ROK_social_and_cultural_committee_left_on
+				}
+				else = {
+					set_country_flag = ROK_social_and_cultural_committee_left_on
+				}
+			}
+			Right_btn_click = {
+				if = {
+					limit = { has_country_flag = ROK_social_and_cultural_committee_left_on }
+					clr_country_flag = ROK_social_and_cultural_committee_left_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_social_and_cultural_committee_right_on }
+					clr_country_flag = ROK_social_and_cultural_committee_right_on
+				}
+				else = {
+					set_country_flag = ROK_social_and_cultural_committee_right_on
+				}
+			}
+			faction_btn_1_click = {
+				if = {
+					limit = { has_country_flag = ROK_faction_2_on }
+					clr_country_flag = ROK_faction_2_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_3_on }
+					clr_country_flag = ROK_faction_3_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_4_on }
+					clr_country_flag = ROK_faction_4_on
+				}
+
+				if = {
+					limit = { NOT = { has_country_flag = ROK_faction_1_on } }
+					set_country_flag = ROK_faction_1_on
+				}
+				else = {
+					clr_country_flag = ROK_faction_1_on
+				}
+			}
+			faction_btn_2_click = {
+				if = {
+					limit = { has_country_flag = ROK_faction_1_on }
+					clr_country_flag = ROK_faction_1_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_3_on }
+					clr_country_flag = ROK_faction_3_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_4_on }
+					clr_country_flag = ROK_faction_4_on
+				}
+
+				if = {
+					limit = { NOT = { has_country_flag = ROK_faction_2_on } }
+					set_country_flag = ROK_faction_2_on
+				}
+				else = {
+					clr_country_flag = ROK_faction_2_on
+				}
+			}
+			faction_btn_3_click = {
+				if = {
+					limit = { has_country_flag = ROK_faction_1_on }
+					clr_country_flag = ROK_faction_1_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_2_on }
+					clr_country_flag = ROK_faction_2_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_4_on }
+					clr_country_flag = ROK_faction_4_on
+				}
+
+				if = {
+					limit = { NOT = { has_country_flag = ROK_faction_3_on } }
+					set_country_flag = ROK_faction_3_on
+				}
+				else = {
+					clr_country_flag = ROK_faction_3_on
+				}
+			}
+			faction_btn_4_click = {
+				if = {
+					limit = { has_country_flag = ROK_faction_1_on }
+					clr_country_flag = ROK_faction_1_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_2_on }
+					clr_country_flag = ROK_faction_2_on
+				}
+				if = {
+					limit = { has_country_flag = ROK_faction_3_on }
+					clr_country_flag = ROK_faction_3_on
+				}
+
+				if = {
+					limit = { NOT = { has_country_flag = ROK_faction_4_on } }
+					set_country_flag = ROK_faction_4_on
+				}
+				else = {
+					clr_country_flag = ROK_faction_4_on
+				}
+			}
+		}
+
+		properties = {
+			faction_alt_1 = {
+				image = "[ROK_faction_alt_1_gfx]"
+			}
+			faction_alt_2 = {
+				image = "[ROK_faction_alt_2_gfx]"
+			}
+			faction_alt_3 = {
+				image = "[ROK_faction_alt_3_gfx]"
+			}
+			faction_alt_4 = {
+				image = "[ROK_faction_alt_4_gfx]"
+			}
+		}
+	}
+}
+

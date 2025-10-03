@@ -1,0 +1,36 @@
+
+state={
+	id=355
+	name="STATE_355"
+	resources={
+		aluminium=6.000
+	}
+
+	history={
+		owner = AST
+		add_core_of = AST
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			19345 3 
+		}
+		victory_points = {
+			19434 3 
+		}
+		victory_points = {
+			4911 1 
+		}
+
+	}
+
+	provinces={
+		4712 4911 6169 8789 10024 19117 19280 19321 19340 19345 19434 
+	}
+	manpower=2320000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

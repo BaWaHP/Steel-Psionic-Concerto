@@ -1,0 +1,19 @@
+defined_text = {     #公国工业发展度
+	name = GET_TCW_resettlement_of_refugees_bar_tt
+	text = {
+		trigger = { check_variable = { TCW_refugee_settlement_count = 0 } }
+		localization_key = GET_TCW_resettlement_of_refugees_bar_tt1
+	}
+	text = {
+		trigger = { check_variable = { TCW_refugee_settlement_count = 1 } }
+		localization_key = GET_TCW_resettlement_of_refugees_bar_tt2
+	}
+	text = {
+		trigger = { check_variable = { TCW_refugee_settlement_count = 2 } }
+		localization_key = GET_TCW_resettlement_of_refugees_bar_tt3
+	}
+	text = {
+		trigger = { check_variable = { TCW_refugee_settlement_count = 3 } }
+		localization_key = GET_TCW_resettlement_of_refugees_bar_tt4
+	}
+}

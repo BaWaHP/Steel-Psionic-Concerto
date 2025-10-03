@@ -1,0 +1,22 @@
+characters={
+	NFH_ZhengYi = {		#郑义
+		name = NFH_ZhengYi
+		portraits = {
+			civilian = {
+				large="GFX_NFH_ZhengYi"
+				small="GFX_idea_NFH_ZhengYi"
+			}
+			army = {
+				large="GFX_NFH_ZhengYi"
+				small="GFX_idea_NFH_ZhengYi"
+			}
+		}
+		country_leader = {
+			desc = "NFH_ZhengYi_desc"
+			ideology = absolute_monarchy
+			traits = {  }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}

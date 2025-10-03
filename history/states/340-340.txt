@@ -1,0 +1,32 @@
+
+state={
+	id=340
+	name="STATE_340"
+	provinces={
+		4158 4161 4598 21006 
+	}
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 1
+			4158 = {
+				naval_base = 2
+				nuclear_facility = 1
+			}
+		}
+		victory_points = {
+			21006 2
+		}
+		victory_points = {
+			4158 3
+		}
+	}
+	manpower=19900
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

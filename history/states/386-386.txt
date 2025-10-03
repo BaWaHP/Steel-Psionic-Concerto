@@ -1,0 +1,30 @@
+
+state={
+	id=386
+	name="STATE_386"
+	resources={
+		magic_crystal=9.000
+		steel=15.000
+	}
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			20158 3
+		}
+
+	}
+
+	provinces={
+		1026 3415 7715 11577 11615 20158 20245 20316 
+	}
+	manpower=1330000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

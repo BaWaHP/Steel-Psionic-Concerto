@@ -1,0 +1,163 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_TCW_cervantes_domingo_cristian"
+		texturefile = "gfx/leaders/TCW/cervantes_domingo_cristian.png"
+	}
+	spriteType = {
+		name = "GFX_TCW_perk_de_la_ciel"
+		texturefile = "gfx/leaders/TCW/perk_de_la_ciel.png"
+	}
+	spriteType = {
+		name = "GFX_TCW_arcado_vincent"
+		texturefile = "gfx/leaders/TCW/arcado_vincent.png"
+	}
+	spriteType = {
+		name = "GFX_TCW_levitch_sorrell"
+		texturefile = "gfx/leaders/TCW/levitch_sorrell.png"
+	}
+	spriteType = {
+		name = "GFX_TCW_liane_alfonso"
+		texturefile = "gfx/leaders/TCW/liane_alfonso.png"
+	}
+	spriteType = {
+		name = "GFX_TCW_herman_khozha"
+		texturefile = "gfx/leaders/TCW/herman_khozha.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_TCW_perk_de_la_ciel"
+		texturefile = "gfx/advisors/TCW/perk_de_la_ciel.png"
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_TCW_fight_in_open_sky"
+		texturefile = "gfx/interface/goals/TCW_fight_in_open_sky.png"			
+	}
+	SpriteType = {
+		name = "GFX_TCW_fight_in_open_field"
+		texturefile = "gfx/interface/goals/TCW_fight_in_open_field.png"			
+	}
+	SpriteType = {
+		name = "GFX_TCW_ensure_supplies"
+		texturefile = "gfx/interface/goals/TCW_ensure_supplies.png"			
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_TCW_ethnicity_and_racism"
+		texturefile = "gfx/interface/ideas/TCW_ethnicity_and_racism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_civ_of_matters"
+		texturefile = "gfx/interface/ideas/TCW_civ_of_matters.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_a_society_in_its_own_right"
+		texturefile = "gfx/interface/ideas/TCW_a_society_in_its_own_right.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_mobilize_supplies_for_war"
+		texturefile = "gfx/interface/ideas/TCW_mobilize_supplies_for_war.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_focus_on_overall_production"
+		texturefile = "gfx/interface/ideas/TCW_focus_on_overall_production.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_init_ind_dem"
+		texturefile = "gfx/interface/ideas/TCW_init_ind_dem.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_earlier_econ_freelization"
+		texturefile = "gfx/interface/ideas/TCW_earlier_econ_freelization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_fight_open_sky"
+		texturefile = "gfx/interface/ideas/TCW_fight_open_sky.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_wide_human_rights"
+		texturefile = "gfx/interface/ideas/TCW_wide_human_rights.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_recover_traditional_families"
+		texturefile = "gfx/interface/ideas/TCW_recover_traditional_families.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_fight_open_field"
+		texturefile = "gfx/interface/ideas/TCW_fight_open_field.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_operation_snake_head_down"
+		texturefile = "gfx/interface/ideas/TCW_operation_snake_head_down.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_division_of_power"
+		texturefile = "gfx/interface/ideas/TCW_division_of_power.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_army_of_ambition"
+		texturefile = "gfx/interface/ideas/TCW_army_of_ambition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_autonomous_nations"
+		texturefile = "gfx/interface/ideas/TCW_autonomous_nations.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_autonomous_regions_1"
+		texturefile = "gfx/interface/ideas/TCW_autonomous_regions_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_autonomous_regions_2"
+		texturefile = "gfx/interface/ideas/TCW_autonomous_regions_2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_autonomous_regions_3"
+		texturefile = "gfx/interface/ideas/TCW_autonomous_regions_3.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TCW_political_haze"
+		texturefile = "gfx/interface/ideas/TCW_political_haze.png"
+	}
+	###动态修正###
+	spriteType = {
+		name = "GFX_idea_TCW_refugee_influx"
+		texturefile = "gfx/interface/ideas/TCW_refugee_influx.png"
+	}
+	###GUI###
+	spriteType = {
+		name = "GFX_TCW_resettlement_of_refugees_bar_bg"
+		textureFile = "gfx/interface/occupation/collaboration_bar_large_bg.dds"
+	}
+	progressbartype = {
+		name = "GFX_TCW_resettlement_of_refugees_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/occupation/collaboration_bar_large.dds"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 249 y = 21 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_TCW_crisis_hidden_in_shadows"
+		texturefile = "gfx/interface/goals/TCW_crisis_hidden_in_shadows.png"
+	}
+	SpriteType = {
+		name = "GFX_TCW_storm_before_election"
+		texturefile = "gfx/interface/goals/TCW_storm_before_election.png"
+	}
+	SpriteType = {
+		name = "GFX_TCW_marshal_s_last_wish"
+		texturefile = "gfx/interface/goals/TCW_marshal_s_last_wish.png"
+	}
+	SpriteType = {
+		name = "GFX_TCW_key_to_economic_development"
+		texturefile = "gfx/interface/goals/TCW_key_to_economic_development.png"
+	}
+	SpriteType = {
+		name = "GFX_TCW_turbulent_public_opinion"
+		texturefile = "gfx/interface/goals/TCW_turbulent_public_opinion.png"
+	}
+}

@@ -1,0 +1,453 @@
+defined_text = { #底图
+	name = Get_superevent_bg
+	text = {
+		trigger = { has_country_flag = SPC_SE_foundation_of_our_team_flag }
+		localization_key = "GFX_SE_foundation_of_our_team"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_zhetysu_collapsing_flag }
+		localization_key = "GFX_SE_zhetysu_collapsing"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_UK_reunification_CR_flag }
+		localization_key = "GFX_SE_UK_reunification_CR"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_central_bastia_civil_war_flag }
+		localization_key = "GFX_SE_central_bastia_civil_war"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_disaster_original_desire_flag }
+		localization_key = "GFX_SE_disaster_original_desire"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_second_east_bastia_war_flag }
+		localization_key = "GFX_SE_second_east_bastia_war"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh1_flag }
+		localization_key = "GFX_SE_farhome_reunification_sfh1"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh2_flag }
+		localization_key = "GFX_SE_farhome_reunification_sfh2"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh3_flag }
+		localization_key = "GFX_SE_farhome_reunification_sfh3"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = "GFX_SE_RSB_civil_war"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = "GFX_SE_reunification_ROT_1"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = "GFX_SE_reunification_ROT_2"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = "GFX_SE_reunification_IMC_1"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = "GFX_SE_reunification_SFR_1"
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = "GFX_SE_reunification_SFR_2"
+	}
+}
+
+defined_text = { #按钮
+	name = GET_superevent_btn_txt
+	text = {
+		trigger = { has_country_flag = SPC_SE_foundation_of_our_team_flag }
+		localization_key = SE_foundation_of_our_team_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_zhetysu_collapsing_flag }
+		localization_key = SE_zhetysu_collapsing_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_UK_reunification_CR_flag }
+		localization_key = SE_UK_reunification_CR_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_central_bastia_civil_war_flag }
+		localization_key = SE_central_bastia_civil_war_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_disaster_original_desire_flag }
+		localization_key = SE_disaster_original_desire_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_second_east_bastia_war_flag }
+		localization_key = SPC_SE_second_east_bastia_war_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh1_flag }
+		localization_key = SPC_SE_farhome_reunification_sfh1_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh2_flag }
+		localization_key = SPC_SE_farhome_reunification_sfh2_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh3_flag }
+		localization_key = SPC_SE_farhome_reunification_sfh3_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = SPC_SE_RSB_civil_war_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = SPC_SE_reunification_ROT_1_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = SPC_SE_reunification_ROT_2_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = SPC_SE_reunification_IMC_1_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = SPC_SE_reunification_SFR_1_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = SPC_SE_reunification_SFR_2_btn
+	}
+}
+
+defined_text = { #按钮tt
+	name = GET_superevent_btn_txt_tt
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_foundation_of_our_team_flag
+		}
+		localization_key = SE_foundation_of_our_team_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_zhetysu_collapsing_flag
+		}
+		localization_key = SE_zhetysu_collapsing_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_UK_reunification_CR_flag
+		}
+		localization_key = SE_UK_reunification_CR_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_central_bastia_civil_war_flag
+		}
+		localization_key = SE_central_bastia_civil_war_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_disaster_original_desire_flag
+		}
+		localization_key = SE_disaster_original_desire_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_second_east_bastia_war_flag
+		}
+		localization_key = SPC_SE_second_east_bastia_war_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh1_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh1_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh2_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh2_btn_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh3_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh3_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = SPC_SE_RSB_civil_war_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = SPC_SE_reunification_ROT_1_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = SPC_SE_reunification_ROT_2_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = SPC_SE_reunification_IMC_1_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = SPC_SE_reunification_SFR_1_btn_tt
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = SPC_SE_reunification_SFR_2_btn_tt
+	}
+}
+
+defined_text = { #标题
+	name = GET_superevent_title_txt
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_foundation_of_our_team_flag
+		}
+		localization_key = SE_foundation_of_our_team_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_zhetysu_collapsing_flag
+		}
+		localization_key = SE_zhetysu_collapsing_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_UK_reunification_CR_flag
+		}
+		localization_key = SE_UK_reunification_CR_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_central_bastia_civil_war_flag
+		}
+		localization_key = SE_central_bastia_civil_war_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_disaster_original_desire_flag
+		}
+		localization_key = SE_disaster_original_desire_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_second_east_bastia_war_flag
+		}
+		localization_key = SPC_SE_second_east_bastia_war_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh1_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh1_title
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh2_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh2_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_farhome_reunification_sfh3_flag }
+		localization_key = SPC_SE_farhome_reunification_sfh3_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = SPC_SE_RSB_civil_war_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = SPC_SE_reunification_ROT_1_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = SPC_SE_reunification_ROT_2_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = SPC_SE_reunification_IMC_1_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = SPC_SE_reunification_SFR_1_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = SPC_SE_reunification_SFR_2_title
+	}
+}
+
+defined_text = { #名言
+	name = GET_superevent_desc
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_foundation_of_our_team_flag
+		}
+		localization_key = SE_foundation_of_our_team_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_zhetysu_collapsing_flag
+		}
+		localization_key = SE_zhetysu_collapsing_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_UK_reunification_CR_flag
+		}
+		localization_key = SE_UK_reunification_CR_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_central_bastia_civil_war_flag
+		}
+		localization_key = SE_central_bastia_civil_war_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_disaster_original_desire_flag
+		}
+		localization_key = SE_disaster_original_desire_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_second_east_bastia_war_flag
+		}
+		localization_key = SPC_SE_second_east_bastia_war_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh1_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh1_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh2_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh2_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh3_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh3_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = SPC_SE_RSB_civil_war_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = SPC_SE_reunification_ROT_1_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = SPC_SE_reunification_ROT_2_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = SPC_SE_reunification_IMC_1_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = SPC_SE_reunification_SFR_1_desc
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = SPC_SE_reunification_SFR_2_desc
+	}
+}
+
+defined_text = { #名人
+	name = GET_superevent_famous_people
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_foundation_of_our_team_flag
+		}
+		localization_key = SE_foundation_of_our_team_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_zhetysu_collapsing_flag
+		}
+		localization_key = SE_zhetysu_collapsing_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_UK_reunification_CR_flag
+		}
+		localization_key = SE_UK_reunification_CR_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_central_bastia_civil_war_flag
+		}
+		localization_key = SE_central_bastia_civil_war_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_disaster_original_desire_flag
+		}
+		localization_key = SE_disaster_original_desire_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_second_east_bastia_war_flag
+		}
+		localization_key = SPC_SE_second_east_bastia_war_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh1_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh1_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh2_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh2_fm
+	}
+	text = {
+		trigger = {
+			has_country_flag = SPC_SE_farhome_reunification_sfh3_flag
+		}
+		localization_key = SPC_SE_farhome_reunification_sfh3_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		localization_key = SPC_SE_RSB_civil_war_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		localization_key = SPC_SE_reunification_ROT_1_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		localization_key = SPC_SE_reunification_ROT_2_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		localization_key = SPC_SE_reunification_IMC_1_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		localization_key = SPC_SE_reunification_SFR_1_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		localization_key = SPC_SE_reunification_SFR_2_fm
+	}
+}

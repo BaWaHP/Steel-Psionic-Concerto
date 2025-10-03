@@ -1,0 +1,1252 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_ARO_Authrinton_Glonia"
+		texturefile = "gfx/leaders/ARO/ARO_Authrinton_Glonia.dds"
+	}
+	spriteType = {
+		name = "GFX_ARO_Arthytton_Glonia"
+		texturefile = "gfx/leaders/ARO/ARO_Arthytton_Glonia.png"
+	}
+	spriteType = {
+		name = "GFX_ARO_Syawither_Glonia"
+		texturefile = "gfx/leaders/ARO/ARO_Syawither_Glonia.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Adam_Mace"
+		texturefile = "gfx/leaders/ARO/ARO_Adam_Mace.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Alex_Wilson"
+		texturefile = "gfx/leaders/ARO/ARO_Alex_Wilson.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Blant_King"
+		texturefile = "gfx/leaders/ARO/ARO_Blant_King.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Berris_Hardegg"
+		texturefile = "gfx/leaders/ARO/ARO_Berris_Hardegg.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Bob_Jones"
+		texturefile = "gfx/leaders/ARO/ARO_Bob_Jones.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Colse_Glonia"
+		texturefile = "gfx/leaders/ARO/ARO_Colse_Glonia.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Damil_Exsart"
+		texturefile = "gfx/leaders/ARO/ARO_Damil_Exsart.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Glock_Andarc"
+		texturefile = "gfx/leaders/ARO/ARO_Glock_Andarc.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Halifax_Kimmel"
+		texturefile = "gfx/leaders/ARO/ARO_Halifax_Kimmel.png.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Hanister_Bashral"
+		texturefile = "gfx/leaders/ARO/ARO_Hanister_Bashral.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Herez_Delint"
+		texturefile = "gfx/leaders/ARO/ARO_Herez_Delint.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Herman_Heathrin"
+		texturefile = "gfx/leaders/ARO/ARO_Herman_Heathrin.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Jack_Brenhildt"
+		texturefile = "gfx/leaders/ARO/ARO_Jack_Brenhildt.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Lucas_Taylors"
+		texturefile = "gfx/leaders/ARO/ARO_Lucas_Taylors.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Maltha_Lockhart"
+		texturefile = "gfx/leaders/ARO/ARO_Maltha_Lockhart.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Marlith_Borwisch"
+		texturefile = "gfx/leaders/ARO/ARO_Marlith_Borwisch.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Valor_Bejean"
+		texturefile = "gfx/leaders/ARO/ARO_Valor_Bejean.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Walls_Buck"
+		texturefile = "gfx/leaders/ARO/ARO_Walls_Buck.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Cellyn_Tira"
+		texturefile = "gfx/leaders/ARO/ARO_Cellyn_Tira.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Granerl_Suth"
+		texturefile = "gfx/leaders/ARO/ARO_Granerl_Suth.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Mans_Dorn"
+		texturefile = "gfx/leaders/ARO/ARO_Mans_Dorn.png"
+	}
+	###顾问###
+	SpriteType = {
+		name = "GFX_idea_ARO_Adam_Mace"
+		texturefile = "gfx/advisors/ARO/ARO_Adam_Mace.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Alex_Wilson"
+		texturefile = "gfx/advisors/ARO/ARO_Alex_Wilson.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Arthytton_Glonia"
+		texturefile = "gfx/advisors/ARO/ARO_Arthytton_Glonia.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Berris_Hardegg"
+		texturefile = "gfx/advisors/ARO/ARO_Berris_Hardegg.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Blant_King"
+		texturefile = "gfx/advisors/ARO/ARO_Blant_King.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Cellyn_Tira"
+		texturefile = "gfx/advisors/ARO/ARO_Cellyn_Tira.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Cheng_Yulu"
+		texturefile = "gfx/advisors/ARO/ARO_Cheng_Yulu.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Damil_Exsart"
+		texturefile = "gfx/advisors/ARO/ARO_Damil_Exsart.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Davin_Colnick"
+		texturefile = "gfx/advisors/ARO/ARO_Davin_Colnick.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Delius_Dover"
+		texturefile = "gfx/advisors/ARO/ARO_Delius_Dover.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Duren_Meld"
+		texturefile = "gfx/advisors/ARO/ARO_Duren_Meld.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Fareblave_Leight"
+		texturefile = "gfx/advisors/ARO/ARO_Fareblave_Leight.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Granerl_Suth"
+		texturefile = "gfx/advisors/ARO/ARO_Granerl_Suth.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Halifax_Kimmel"
+		texturefile = "gfx/advisors/ARO/ARO_Halifax_Kimmel.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Halmed_Ranster"
+		texturefile = "gfx/advisors/ARO/ARO_Halmed_Ranster.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Heist_Seor"
+		texturefile = "gfx/advisors/ARO/ARO_Heist_Seor.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Herez_Delint"
+		texturefile = "gfx/advisors/ARO/ARO_Herez_Delint.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Herman_Heathrin"
+		texturefile = "gfx/advisors/ARO/ARO_Herman_Heathrin.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Jack_Brenhildt"
+		texturefile = "gfx/advisors/ARO/ARO_Jack_Brenhildt.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Maltha_Lockhart"
+		texturefile = "gfx/advisors/ARO/ARO_Maltha_Lockhart.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Mans_Dorn"
+		texturefile = "gfx/advisors/ARO/ARO_Mans_Dorn.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Marlith_Borwisch"
+		texturefile = "gfx/advisors/ARO/ARO_Marlith_Borwisch.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Valor_Bejean"
+		texturefile = "gfx/advisors/ARO/ARO_Valor_Bejean.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Xerxes"
+		texturefile = "gfx/advisors/ARO/ARO_Xerxes.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Bob_Jones"
+		texturefile = "gfx/advisors/ARO/ARO_Bob_Jones.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Colse_Glonia"
+		texturefile = "gfx/advisors/ARO/ARO_Colse_Glonia.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Glock_Andarc"
+		texturefile = "gfx/advisors/ARO/ARO_Glock_Andarc.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Hanister_Bashral"
+		texturefile = "gfx/advisors/ARO/ARO_Hanister_Bashral.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Lucas_Taylors"
+		texturefile = "gfx/advisors/ARO/ARO_Lucas_Taylors.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARO_Walls_Buck"
+		texturefile = "gfx/advisors/ARO/ARO_Walls_Buck.png"
+	}
+
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_ARO_issue_of_Aurora_cultist_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/ARO_issue_of_Aurora_cultist_dynamic_modifier.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ARO_winner_of_a_failure"
+		texturefile = "gfx/interface/ideas/ARO_winner_of_a_failure.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ARO_a_charming_setting_sun"
+		texturefile = "gfx/interface/ideas/ARO_a_charming_setting_sun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ARO_issue_of_Glonian_warmonger_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/ARO_issue_of_Glonian_warmonger_dynamic_modifier.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ARO_issue_of_Lesnoden_republican_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/ARO_issue_of_Lesnoden_republican_dynamic_modifier.png"
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_ARO_blueprint_of_new_industry"
+		texturefile = "gfx/interface/goals/ARO_blueprint_of_new_industry.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_factory_construction_balanced"
+		texturefile = "gfx/interface/goals/ARO_factory_construction_balanced.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_factory_construction_Glonia_First"
+		texturefile = "gfx/interface/goals/ARO_factory_construction_Glonia_First.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_Lesnoden_industry"
+		texturefile = "gfx/interface/goals/ARO_maraud_Lesnoden_industry.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_new_era_of_our_industrialization"
+		texturefile = "gfx/interface/goals/ARO_new_era_of_our_industrialization.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_bend_to_factional_pressure"
+		texturefile = "gfx/interface/goals/ARO_bend_to_factional_pressure.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_fragile_balance"
+		texturefile = "gfx/interface/goals/ARO_the_fragile_balance.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_future_path_of_Auroretia"
+		texturefile = "gfx/interface/goals/ARO_the_future_path_of_Auroretia.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_justice"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_justice.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_piety"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_piety.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_tolerance"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_tolerance.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_Borwisch_legion"
+		texturefile = "gfx/interface/goals/ARO_Borwisch_legion.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_cruelty_is_virtue"
+		texturefile = "gfx/interface/goals/ARO_cruelty_is_virtue.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_in_research_of_myths"
+		texturefile = "gfx/interface/goals/ARO_in_research_of_myths.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_rather_lack_than_degeneration"
+		texturefile = "gfx/interface/goals/ARO_rather_lack_than_degeneration.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_warhammer_of_steel"
+		texturefile = "gfx/interface/goals/ARO_warhammer_of_steel.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_warrior_of_faith"
+		texturefile = "gfx/interface/goals/ARO_warrior_of_faith.png"
+	}
+	###国策SHINE
+	SpriteType = {
+		name = "GFX_ARO_blueprint_of_new_industry_shine"
+		texturefile = "gfx/interface/goals/ARO_blueprint_of_new_industry.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_blueprint_of_new_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_blueprint_of_new_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_factory_construction_balanced_shine"
+		texturefile = "gfx/interface/goals/ARO_factory_construction_balanced.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_factory_construction_balanced.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_factory_construction_balanced.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_factory_construction_Glonia_First_shine"
+		texturefile = "gfx/interface/goals/ARO_factory_construction_Glonia_First.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_factory_construction_Glonia_First.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_factory_construction_Glonia_First.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_Lesnoden_industry_shine"
+		texturefile = "gfx/interface/goals/ARO_maraud_Lesnoden_industry.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_maraud_Lesnoden_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_maraud_Lesnoden_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_new_era_of_our_industrialization_shine"
+		texturefile = "gfx/interface/goals/ARO_new_era_of_our_industrialization.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_new_era_of_our_industrialization.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_new_era_of_our_industrialization.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_bend_to_factional_pressure_shine"
+		texturefile = "gfx/interface/goals/ARO_bend_to_factional_pressure.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_bend_to_factional_pressure.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_bend_to_factional_pressure.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_fragile_balance_shine"
+		texturefile = "gfx/interface/goals/ARO_the_fragile_balance.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_fragile_balance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_fragile_balance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_future_path_of_Auroretia_shine"
+		texturefile = "gfx/interface/goals/ARO_the_future_path_of_Auroretia.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_future_path_of_Auroretia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_future_path_of_Auroretia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_justice_shine"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_justice.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_justice.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_justice.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_piety_shine"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_piety.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_piety.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_piety.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_the_path_of_tolerance_shine"
+		texturefile = "gfx/interface/goals/ARO_the_path_of_tolerance.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_tolerance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_the_path_of_tolerance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_Borwisch_legion_shine"
+		texturefile = "gfx/interface/goals/ARO_Borwisch_legion.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_Borwisch_legion.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_Borwisch_legion.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_cruelty_is_virtue_shine"
+		texturefile = "gfx/interface/goals/ARO_cruelty_is_virtue.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_cruelty_is_virtue.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_cruelty_is_virtue.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_in_research_of_myths_shine"
+		texturefile = "gfx/interface/goals/ARO_in_research_of_myths.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_in_research_of_myths.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_in_research_of_myths.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_rather_lack_than_degeneration_shine"
+		texturefile = "gfx/interface/goals/ARO_rather_lack_than_degeneration.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_rather_lack_than_degeneration.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_rather_lack_than_degeneration.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_warhammer_of_steel_shine"
+		texturefile = "gfx/interface/goals/ARO_warhammer_of_steel.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_warhammer_of_steel.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_warhammer_of_steel.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_ARO_warrior_of_faith_shine"
+		texturefile = "gfx/interface/goals/ARO_warrior_of_faith.png"		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_warrior_of_faith.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARO_warrior_of_faith.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no 
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	###GUI###
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_72_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_72_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_73_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_73_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_74_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_74_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_75_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_75_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_76_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_76_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_77_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_77_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_78_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_78_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_79_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_79_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_80_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_80_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_81_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_81_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_82_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_82_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_83_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_83_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_84_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_84_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_85_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_85_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_generic_gui_state_86_s"
+		texturefile = "gfx/interface/ARO/generic_gui/ARO_generic_gui_state_86_s.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_canvas"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_canvas.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_72_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_72_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_72_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_72_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_73_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_73_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_73_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_73_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_74_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_74_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_74_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_74_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_75_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_75_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_75_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_75_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_79_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_79_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_79_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_79_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_80_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_80_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_80_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_80_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_81_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_81_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_81_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_81_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_81_2"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_81_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_81_3"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_81_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_81_cd"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_81_cd.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_82_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_82_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_82_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_82_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_82_2"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_82_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_82_3"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_82_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_82_cd"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_82_cd.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_83_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_83_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_83_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_83_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_83_2"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_83_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_83_3"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_83_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_83_cd"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_83_cd.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_84_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_84_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_84_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_84_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_84_2"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_84_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_84_3"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_84_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_84_cd"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_84_cd.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_86_0"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_86_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_86_1"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_86_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_86_2"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_86_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_86_3"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_86_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_maraud_from_Lesnoden_state_86_cd"
+		texturefile = "gfx/interface/ARO/ARO_maraud_from_Lesnoden/ARO_maraud_from_Lesnoden_state_86_cd.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_72_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_72_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_72_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_72_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_72_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_72_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_72_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_72_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_73_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_73_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_73_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_73_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_73_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_73_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_73_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_73_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_74_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_74_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_74_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_74_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_74_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_74_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_74_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_74_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_75_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_75_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_75_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_75_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_75_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_75_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_75_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_75_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_1_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_1_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_2_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_2_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_2_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_2_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_3_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_3_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_3_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_3_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_76_3_3"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_76_3_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_1_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_1_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_2_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_2_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_2_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_2_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_3_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_3_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_3_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_3_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_77_3_3"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_77_3_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_1_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_1_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_2_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_2_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_2_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_2_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_3_1"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_3_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_3_2"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_3_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_78_3_3"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_78_3_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_79_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_79_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_79_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_79_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_79_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_79_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_79_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_79_3_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_80_0_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_80_0_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_80_1_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_80_1_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_80_2_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_80_2_0.png"
+	}
+	SpriteType = {
+		name = "GFX_ARO_dawn_church_state_80_3_0"
+		texturefile = "gfx/interface/ARO/ARO_dawn_church/ARO_dawn_church_state_80_3_0.png"
+	}
+}

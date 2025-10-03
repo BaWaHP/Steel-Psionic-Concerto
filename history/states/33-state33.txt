@@ -1,0 +1,27 @@
+
+state={
+	id=33
+	name="STATE_33"
+	provinces={
+		3993 4286 6489 6736 7286 12114 12142 17192 17227 17336 17337 17338 17450 17577 17709 17858 
+	}
+	resources = {
+		aluminium = 8
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		add_claim_by = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			6736 3
+		}
+	}
+	manpower = 1750000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

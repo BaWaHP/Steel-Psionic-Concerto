@@ -1,0 +1,100 @@
+characters={
+
+	AST_marianne_tee_rescorian = {		#玛丽安·蒂·雷斯科利恩
+   		name = AST_marianne_tee_rescorian
+   		portraits = {
+   			civilian = {
+   				large="GFX_AST_marianne_tee_rescorian"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_AST_marianne_tee_rescorian"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = AST_marianne_tee_rescorian_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	#菲茨·塔林
+	AST_fitz_talin = {
+   		name = AST_fitz_talin
+   		portraits = {
+   			civilian = {
+   				large="GFX_AST_fitz_talin"
+   				small="GFX_idea_AST_fitz_talin"
+   			}
+   			army = {
+				large="GFX_AST_fitz_talin"
+				small="GFX_idea_AST_fitz_talin"
+   			}
+   		}
+		field_marshal = {
+			desc = AST_fitz_talin_desc
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 5
+			traits = { war_hero inspirational_leader combined_arms_expert trait_cautious }
+		}
+	}
+
+	#凯尔斯·霍勒
+	AST_kels_holler = {
+		name = AST_kels_holler
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_AST_kels_holler"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_AST_kels_holler"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			desc = AST_kels_holler_desc
+			idea_token = AST_kels_holler_idea
+   			traits = { AST_royal_theorist }
+		}
+ 	}
+
+	#埃森·蒂·洛瑟
+	AST_essen_ti_loser = {
+		name = AST_essen_ti_loser
+		portraits = {
+			civilian = {
+				large="GFX_AST_essen_ti_loser"
+				small="GFX_idea_AST_essen_ti_loser"
+			}
+			army = {
+				large="GFX_AST_essen_ti_loser"
+				small="GFX_idea_AST_essen_ti_loser"
+			}
+		}
+		corps_commander = {
+			desc = AST_essen_ti_loser_desc
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			traits = { media_personality trait_mountaineer expert_delegator }
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			desc = AST_essen_ti_loser_desc
+			idea_token = AST_essen_ti_loser_idea
+   			traits = { army_regrouping_2 }
+		}
+ 	}
+}

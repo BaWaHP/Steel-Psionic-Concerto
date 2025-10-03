@@ -1,0 +1,23 @@
+
+state={
+	id=113
+	name="STATE_113"
+	provinces={
+		1194 2296 5052 5563 6245 6583 20202 20293 20336 20408 20444 
+	}
+	history = {
+		owner = CLD
+		add_core_of = CLD
+		add_core_of = NCD
+		buildings = {
+           	infrastructure = 1
+		}
+		victory_points = {
+			20293 3
+		}
+	}
+	manpower=421341 
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

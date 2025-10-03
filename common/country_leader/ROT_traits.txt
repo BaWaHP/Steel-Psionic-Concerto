@@ -1,0 +1,136 @@
+leader_traits = {
+
+	ROT_failed_pragmatist = {		#失败的实用主义者
+		random = no
+		
+		political_power_factor = -0.15
+		min_export = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_son_of_the_holy_land = {		#圣地之子
+		random = no
+		
+		war_support_factor = 0.1
+		army_org_factor = 0.1
+		monthly_research_development_process = -4
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_notorious_oligarchs = {		#臭名昭著的寡头
+		random = no
+		
+		trade_laws_cost_factor = 0.5
+		nationalization_policy_cost_factor = 0.5
+		industrial_concern_cost_factor = -0.5
+		research_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_patriotic_entrepreneur = {		#爱国企业家
+		random = no
+		
+		consumer_goods_factor = 0.01
+		production_speed_industrial_complex_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_lives_saving_doctor = {		#悬壶济世的医者
+		random = no
+		
+		monthly_population = 0.3
+		experience_loss_factor = -0.1
+		attrition = -0.1
+		worldunion_socialist_drift = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_the_veteran = {		#元老
+		random = no
+		
+		promote_cost_factor = -0.5
+		army_leader_cost_factor = -0.5
+		political_advisor_cost_factor = -0.2
+		national_socialist_drift = 0.01
+		party_popularity_stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_nationalist_militia_leader = {		#民族主义民兵领袖
+		random = no
+		
+		authoritarian_nationalism_drift = 0.1
+		resistance_growth = -0.15
+		conscription = 0.01
+		land_reinforce_rate = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_sacrifice_summoning_judgment = {		#祭祀，召唤，审判
+		random = no
+		
+		religious_extremism_drift = 0.01
+		party_popularity_stability_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_charming_leader = {		#魅力非凡的领袖
+		random = no
+		
+		political_power_gain = 0.3
+		army_org_regain = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_number_one = {		#“第一强”
+		random = no
+		
+		political_power_factor = 0.05
+		command_power_gain_mult = 0.05
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ROT_baleen_of_the_republic = {		#共和国的鲸须
+		random = no
+		
+		political_power_factor = 0.2
+		war_support_factor = -0.1
+		min_export = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

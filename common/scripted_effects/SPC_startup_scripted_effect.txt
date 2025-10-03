@@ -1,0 +1,154 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_startup_scripted_effect = {
+	SPC_SFH_startup_effect = yes
+	SPC_CLD_startup_effect = yes
+	SPC_NCD_startup_effect = yes
+	SPC_ZHE_startup_effect = yes
+	SPC_CBL_startup_effect = yes
+	SPC_NKM_startup_effect = yes
+	SPC_PEO_startup_effect = yes
+	SPC_NFH_startup_effect = yes
+	SPC_NWF_startup_effect = yes
+	SPC_TEG_startup_effect = yes
+	SPC_SIN_startup_effect = yes
+	SPC_SHA_startup_effect = yes
+	SPC_TCW_startup_effect = yes
+	SPC_ROK_startup_effect = yes
+	SPC_KEU_startup_effect = yes
+	SPC_TPG_startup_effect = yes
+	SPC_WUN_startup_effect = yes
+	SPC_ARO_startup_effect = yes
+	SPC_UPV_startup_effect = yes
+	SPC_AST_startup_effect = yes
+	SPC_HGL_startup_effect = yes
+	SPC_BSK_startup_effect = yes
+	SPC_RSU_startup_effect = yes
+	SPC_KOA_startup_effect = yes
+	SPC_RSB_startup_effect = yes
+	SPC_MSA_startup_effect = yes
+	SPC_WOM_startup_effect = yes
+	SPC_KOD_startup_effect = yes
+	SPC_ALR_startup_effect = yes
+	SPC_GLV_startup_effect = yes
+	SPC_ARZ_startup_effect = yes
+	SPC_RMN_startup_effect = yes
+	SPC_HCB_startup_effect = yes
+	SPC_SBG_startup_effect = yes
+	SPC_HLD_startup_effect = yes
+	SPC_LNR_startup_effect = yes
+	SPC_ZBC_startup_effect = yes
+	SPC_UAC_startup_effect = yes
+	SPC_GDD_startup_effect = yes
+	SPC_FCR_startup_effect = yes
+	SPC_ROT_startup_effect = yes
+	SPC_KDK_startup_effect = yes
+	SPC_MTV_startup_effect = yes
+	SPC_IMC_startup_effect = yes
+	SPC_VLF_startup_effect = yes
+	SPC_MGC_startup_effect = yes
+	SPC_IPK_startup_effect = yes
+	SPC_TCL_startup_effect = yes
+	SPC_BCC_startup_effect = yes
+	SPC_NLL_startup_effect = yes
+	SPC_UTM_startup_effect = yes
+	SPC_EOM_startup_effect = yes
+	SPC_SOT_startup_effect = yes
+	SPC_OAS_startup_effect = yes
+	SPC_NOH_startup_effect = yes
+	SPC_OLA_startup_effect = yes
+	SPC_OHL_startup_effect = yes
+	SPC_DIF_startup_effect = yes
+	SPC_ASR_startup_effect = yes
+	SPC_FTC_startup_effect = yes
+	SPC_FES_startup_effect = yes
+	SPC_GOS_startup_effect = yes
+	SPC_WCH_startup_effect = yes
+	#如果你看到这里，那记得代码逻辑已经改了，现在不需要在这里加政策了，去历史文件里和其它开局民族精神一起写就好
+	#还有，我加了一批默认政策，可以看开发中对比，这样就不用每次把全部都写一遍了
+	#另外，普及度还是要写在这里，祖宗之法。
+	SPC_development_update_effect = yes
+}
+
+SPC_startup_for_laters_scripted_effect = {
+	###介绍页面###
+	set_variable = { SPC_intro_screen = 1 }
+	###普及度修正部分###
+	set_variable = { magic_development_monthly_buff = 0 }
+	set_variable = { science_development_monthly_buff = 0 }
+	every_owned_state = {
+		set_variable = { state_magic_monthly_buff = 0 }
+		set_variable = { state_science_monthly_buff = 0 }
+	}
+	###发展度###
+	SPC_development_update_effect = yes
+}
+
+SPC_development_mod_var_set = {
+	if = {
+		limit = { NOT = { has_variable = industrial_development_mod } }
+		set_variable = { industrial_development_mod = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = agricultural_development_mod } }
+		set_variable = { agricultural_development_mod = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = military_development_mod } }
+		set_variable = { military_development_mod = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = living_standard_development_mod } }
+		set_variable = { living_standard_development_mod = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = environment_development_mod } }
+		set_variable = { environment_development_mod = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = research_development_mod } }
+		set_variable = { research_development_mod = 0 }
+	}
+}
+
+SPC_development_update_effect = {
+	set_variable = { industrial_development_process = 0 }
+	set_variable = { agricultural_development_process = 0 }
+	set_variable = { military_development_process = 0 }
+	set_variable = { living_standard_development_process = -2 }
+	set_variable = { environment_development_process = 0 }
+	set_variable = { research_development_process = 0 }
+	SPC_development_mod_var_set = yes
+
+	add_to_variable = { industrial_development_process = industrial_development_mod }
+	add_to_variable = { agricultural_development_process = agricultural_development_mod }
+	add_to_variable = { military_development_process = military_development_mod }
+	add_to_variable = { living_standard_development_process = living_standard_development_mod }
+	add_to_variable = { environment_development_process = environment_development_mod }
+	add_to_variable = { research_development_process = research_development_mod }
+
+	add_to_variable = { industrial_development_process = modifier@monthly_industrial_development_process }
+	add_to_variable = { agricultural_development_process = modifier@monthly_agricultural_development_process }
+	add_to_variable = { military_development_process = modifier@monthly_military_development_process }
+	add_to_variable = { living_standard_development_process = modifier@monthly_living_standard_development_process }
+	add_to_variable = { environment_development_process = modifier@monthly_environment_development_process }
+	add_to_variable = { research_development_process = modifier@monthly_research_development_process }
+	#set_variable = { race_mixing_status_process = 0 }
+}

@@ -1,0 +1,42 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+SPC_rulling_ideology_drift_mod = {
+	
+	pioneer_communism_drift = SPC_pioneer_communism_drift_var
+	revolutionary_communism_drift = SPC_revolutionary_communism_drift_var
+	worldunion_socialist_drift = SPC_worldunion_socialist_drift_var
+	worldunion_democrat_drift = SPC_worldunion_democrat_drift_var
+	liberal_republican_drift = SPC_liberal_republican_drift_var
+	conservative_republican_drift = SPC_conservative_republican_drift_var
+	authoritarian_republican_drift = SPC_authoritarian_republican_drift_var
+	national_socialist_drift = SPC_national_socialist_drift_var
+	authoritarian_nationalism_drift = SPC_authoritarian_nationalism_drift_var
+	paternal_autocrat_drift = SPC_paternal_autocrat_drift_var
+	wizard_rules_drift = SPC_wizard_rules_drift_var
+	religious_extremism_drift = SPC_religious_extremism_drift_var
+	anarchism_drift = SPC_anarchism_drift_var
+}

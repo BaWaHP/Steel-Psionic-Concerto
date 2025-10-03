@@ -1,0 +1,1901 @@
+focus_tree = {
+	id = LNR_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LNR
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+	
+	focus = {	#劳动，家庭，祖国
+		id = LNR_trouble_family_motherland
+		icon = GFX_Generic_Working_Class_Family
+		x = 10
+		y = 0
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		allow_branch = {
+			NOT = { has_completed_focus = LNR_1998_general_election }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = LNR.1
+		}
+	}
+
+	focus = {	#国家矿物贸易法案
+		id = LNR_national_mineral_trade_act
+		icon = GFX_Generic_Legislation
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_trouble_family_motherland }
+		relative_position_id = LNR_trouble_family_motherland
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 19
+				state = 310
+			}
+			SPC_industrial_development_amount_up_3 = yes
+			add_ideas = LNR_mining_pot_of_south_bastia
+		}
+	}
+
+	focus = {	#1998年大选
+		id = LNR_1998_general_election
+		icon = GFX_Generic_Democracy
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_national_mineral_trade_act }
+		relative_position_id = LNR_national_mineral_trade_act
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = LNR.4
+		}
+	}
+
+	focus = {	#白水将军之治
+		id = LNR_rule_of_mr_general
+		icon = GFX_LNR_rule_of_mr_general
+		x = 10
+		y = 0
+		cost = 1
+		
+		available = { has_government = worldunion_democrat }
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = LNR_1998_general_election
+			has_government = worldunion_democrat
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			remove_ideas = LNR_chaotic_political_situation
+			add_ideas = LNR_unrecognized_democracy
+			add_to_variable = { LNR_economic_crisis_sf = 0.1 }
+			add_to_variable = { LNR_economic_crisis_sw = 0.005 }
+			custom_effect_tooltip = LNR_rule_of_mr_general_tt
+			country_event = LNR.100
+		}
+	}
+
+	focus = {	#城市里的朋友
+		id = LNR_friends_from_cities
+		icon = GFX_Generic_State_Socialism
+		x = -2
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_rule_of_mr_general }
+		relative_position_id = LNR_rule_of_mr_general
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 150
+			country_event = LNR.101
+		}
+	}
+
+	focus = {	#农村里的对手
+		id = LNR_enemies_within_countryside
+		icon = GFX_goal_Generic_Political_Purge
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_rule_of_mr_general }
+		relative_position_id = LNR_rule_of_mr_general
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = -2000
+			310 = { add_manpower = -5000 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			swap_ideas = {
+				remove_idea = LNR_clan_influence
+				add_idea = LNR_clan_influence_l_1
+			}
+			country_event = LNR.102
+		}
+	}
+
+	focus = {	#打击黑恶势力
+		id = LNR_against_evil_forces
+		icon = GFX_Generic_Arrests
+		x = 2
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_rule_of_mr_general }
+		relative_position_id = LNR_rule_of_mr_general
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+			add_manpower = -100
+			309 = { add_manpower = -1000 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			swap_ideas = {
+				remove_idea = LNR_urban_rural_contradictione
+				add_idea = LNR_urban_rural_contradictione_l_1
+			}
+			add_to_variable = { LNR_economic_crisis_cgf = -0.05 }
+			add_to_variable = { LNR_economic_crisis_sf = 0.05 }
+			custom_effect_tooltip = LNR_against_evil_forces_tt
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+			}
+			country_event = LNR.103
+		}
+	}
+
+	focus = {	#募集资金
+		id = LNR_collect_the_fund
+		icon = GFX_goal_generic_seize_money
+		x = 0
+		y = 1
+		cost = 3
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_friends_from_cities }
+		prerequisite = { focus = LNR_enemies_within_countryside }
+		prerequisite = { focus = LNR_against_evil_forces }
+		relative_position_id = LNR_enemies_within_countryside
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LNR_mining_pot_of_south_bastia
+				add_idea = LNR_mining_pot_of_south_bastia_l_1
+			}
+			add_timed_idea = {
+				idea = LNR_new_deal_for_adul
+				days = 1000
+			}
+		}
+	}
+
+	focus = {	#进步与繁荣的诺言
+		id = LNR_promis_to_progress_and_flourishment
+		icon = GFX_Social_Liberalism
+		x = -2
+		y = 1
+		cost = 3
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_collect_the_fund }
+		relative_position_id = LNR_collect_the_fund
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_working_policy_up = yes
+			SPC_female_policy_up = yes
+			add_political_power = 100
+		}
+	}
+
+	focus = {	#重返被毁的村庄
+		id = LNR_back_to_ruined_villeges
+		icon = GFX_goal_Generic_farming_industry
+		x = 0
+		y = 1
+		cost = 3
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_collect_the_fund }
+		relative_position_id = LNR_collect_the_fund
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.1
+			310 = { add_manpower = -1000 }
+			remove_ideas = LNR_unrecognized_democracy
+			swap_ideas = {
+				remove_idea = LNR_clan_influence_l_1
+				add_idea = LNR_clan_influence_l_2
+			}
+		}
+	}
+
+	focus = {	#确保军队忠诚
+		id = LNR_ensure_army_loyalty
+		icon = GFX_Generic_Volunteer_Corps
+		x = 2
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_collect_the_fund }
+		relative_position_id = LNR_collect_the_fund
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_corps_commander_role = {
+				character = LNR_midler_hess_vilvano
+				traits = { career_officer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			deactivate_advisor = LNR_augustus_pitt_idea
+		}
+	}
+
+	focus = {	#势在必行的土地改革
+		id = LNR_land_reform_that_must_done
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_promis_to_progress_and_flourishment }
+		prerequisite = { focus = LNR_back_to_ruined_villeges }
+		prerequisite = { focus = LNR_ensure_army_loyalty }
+		relative_position_id = LNR_back_to_ruined_villeges
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = LNR.104
+		}
+	}
+
+	focus = {	#晚宴
+		id = LNR_the_dinner_party
+		icon = GFX_Focus_SOV_To_Get_Rich
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_land_reform_that_must_done }
+		relative_position_id = LNR_land_reform_that_must_done
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = LNR.107
+		}
+	}
+
+	focus = {	#宗族无害化
+		id = LNR_clan_harmlessness
+		icon = GFX_Authoritarian_Democracy2
+		x = -1
+		y = 1
+		cost = 5
+		
+		available = { has_country_flag = LNR_clan_harmlessness_flag }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_the_dinner_party }
+		relative_position_id = LNR_the_dinner_party
+		mutually_exclusive = { focus = LNR_burn_down_the_clan }
+
+		completion_reward = {
+			add_political_power = -200
+			add_war_support = -0.2
+			unlock_decision_tooltip = LNR_conservative_support
+		}
+	}
+
+	focus = {	#农村投资
+		id = LNR_invest_countryside
+		icon = GFX_goal_improvised_farming_machinery
+		x = 0
+		y = 1
+		cost = 6
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_clan_harmlessness }
+		relative_position_id = LNR_clan_harmlessness
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 8
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -3
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -5
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			custom_effect_tooltip = available_industrial_concern
+			custom_effect_tooltip = LNR_invest_countryside_tt
+			add_timed_idea = {
+				idea = LNR_agrarian_reform
+				days = 400
+			}
+		}
+	}
+
+	focus = {	#给宗族子弟指条新路
+		id = LNR_find_new_path_for_clans
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 6
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_invest_countryside }
+		relative_position_id = LNR_invest_countryside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.15
+			SPC_industrial_development_amount_up_2 = yes
+			SPC_research_development_amount_up_2 = yes
+			SPC_agricultural_development_amount_up_2 = yes
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = 5
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_3
+				value = -5
+				tooltip = LNR_late_land_reform_influence_3_tt
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {	#土地改革成功
+		id = LNR_succeed_land_reform
+		icon = GFX_goal_Generic_Land_Reform
+		x = 0
+		y = 1
+		cost = 2
+		
+		available = {
+			if = {
+				limit = { is_ai = no }
+				custom_trigger_tooltip = {
+					tooltip = LNR_succeed_land_reform_tr1
+					check_variable = {
+						LNR_late_land_reform_influence_2 < 6
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = LNR_succeed_land_reform_tr2
+					check_variable = {
+						LNR_late_land_reform_influence_3 < 6
+					}
+				}
+			}
+		}
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_find_new_path_for_clans }
+		relative_position_id = LNR_find_new_path_for_clans
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			remove_ideas = LNR_clan_influence_l_2
+			add_timed_idea = {
+				idea = LNR_declining_power_of_clans
+				days = 1000
+			}
+			remove_dynamic_modifier = {
+				modifier = LNR_economic_crisis
+			}
+			SPC_industrial_development_amount_up_3 = yes
+			add_ideas = LNR_brave_new_home
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			clr_country_flag = LNR_late_land_reform_flag
+		}
+	}
+
+	focus = {	#燃尽腐朽
+		id = LNR_burn_down_the_clan
+		icon = GFX_Generic_Dragon
+		x = 1
+		y = 1
+		cost = 2
+		
+		available = { has_country_flag = LNR_burn_down_the_clan_flag }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_the_dinner_party }
+		relative_position_id = LNR_the_dinner_party
+		mutually_exclusive = { focus = LNR_clan_harmlessness }
+
+		completion_reward = {
+			SPC_research_development_amount_down_3 = yes
+			add_war_support = 0.2
+			add_political_power = 150
+			unlock_decision_tooltip = LNR_legalize_agro_industrial_revolutionary_party
+			country_event = LNR.108
+		}
+	}
+
+	focus = {	#另一把刀
+		id = LNR_another_knife
+		icon = GFX_goal_Generic_Espionage
+		x = 0
+		y = 1
+		cost = 8
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_burn_down_the_clan }
+		relative_position_id = LNR_burn_down_the_clan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = LNR.109
+		}
+	}
+
+	focus = {	#农工革命党合法化
+		id = LNR_legalize_agro_industrial_revolutionary_party
+		icon = GFX_Generic_Liberatian_Socialism
+		x = 0
+		y = 1
+		cost = 8
+		
+		available = {
+			if = {
+				limit = { is_ai = no }
+				custom_trigger_tooltip = {
+					tooltip = LNR_legalize_agro_industrial_revolutionary_party_tr
+					check_variable = {
+						LNR_late_land_reform_influence_2 < 36
+					}
+				}
+			}
+		}
+		available_if_capitulated = yes
+		cancelable = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_another_knife }
+		relative_position_id = LNR_another_knife
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_military_development_amount_up_3 = yes
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_1
+				value = -5
+				tooltip = LNR_late_land_reform_influence_1_tt
+			}
+			add_to_variable = {
+				var = LNR_late_land_reform_influence_2
+				value = -5
+				tooltip = LNR_late_land_reform_influence_2_tt
+			}
+			set_party_name = {
+				ideology = pioneer_communism
+				long_name = LNR_pioneer_communism_party_1_long
+				name = LNR_pioneer_communism_party_1
+			}
+			set_party_name = {
+				ideology = revolutionary_communism
+				long_name = LNR_revolutionary_communism_party_1_long
+				name = LNR_revolutionary_communism_party_1
+			}
+			set_party_name = {
+				ideology = national_socialist
+				long_name = LNR_national_socialist_party_1_long
+				name = LNR_national_socialist_party_1
+			}
+			set_party_name = {
+				ideology = authoritarian_nationalism
+				long_name = LNR_authoritarian_nationalism_party_1_long
+				name = LNR_authoritarian_nationalism_party_1
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.1
+			}
+			add_ideas = LNR_shaky_alliance
+			remove_ideas = LNR_mountain_horror
+			hidden_effect = {
+				remove_ideas = LNR_wind_of_pain_and_hate
+				remove_ideas = LNR_rocks_bleeding	
+			}
+			if = {
+				limit = { NOT = { has_template = "特尼安赤军特种部队" } }
+				division_template = {
+					name = "特尼安赤军特种部队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						caster_infantry = { x = 2 y = 0 }
+					}
+					is_locked = yes
+				}
+			}
+			if = {
+				limit = { NOT = { has_template = "特尼安赤军" } }
+				division_template = {
+					name = "特尼安赤军"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+						caster_recon = { x = 0 y = 0 }
+					}
+					is_locked = yes
+				}
+			}
+			310 = {
+				create_unit = {
+					division = "name = \"野火纵队\" division_template = \"特尼安赤军特种部队\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = LNR
+					prioritize_location = 7616
+				}
+				create_unit = {
+					division = "name = \"特尼安赤军第一师\" division_template = \"特尼安赤军\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = LNR
+					prioritize_location = 7605
+				}
+				create_unit = {
+					division = "name = \"特尼安赤军第三师\" division_template = \"特尼安赤军\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = LNR
+					prioritize_location = 7605
+				}
+				create_unit = {
+					division = "name = \"特尼安赤军第四师\" division_template = \"特尼安赤军\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = LNR
+					prioritize_location = 7605
+				}
+			}
+		}
+	}
+
+	focus = {	#土地改革完成
+		id = LNR_complete_land_reform
+		icon = GFX_Land_Reform
+		x = 0
+		y = 1
+		cost = 1
+		
+		available = {
+			if = {
+				limit = { is_ai = no }
+				custom_trigger_tooltip = {
+					tooltip = LNR_complete_land_reform_tr
+					check_variable = {
+						LNR_late_land_reform_influence_2 < 6
+					}
+				}
+			}
+		}
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_legalize_agro_industrial_revolutionary_party }
+		relative_position_id = LNR_legalize_agro_industrial_revolutionary_party
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_living_standard_development_amount_up_3 = yes
+			add_ideas = LNR_magnificent_fireworks
+			remove_ideas = LNR_clan_influence_l_2
+			remove_dynamic_modifier = {
+				modifier = LNR_economic_crisis
+			}
+			clr_country_flag = LNR_late_land_reform_flag
+		}
+	}
+
+	focus = {	#息事宁人
+		id = LNR_keep_things_down
+		icon = GFX_LNR_keep_things_down
+		x = 10
+		y = 0
+		cost = 4.29
+
+		available = { has_government = conservative_republican }
+		
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = LNR_1998_general_election
+			has_government = conservative_republican
+			NOT = { has_completed_focus = LNR_victory_of_order_and_traditions }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = -170
+			swap_ideas = {
+				remove_idea = LNR_chaotic_political_situation
+				add_idea = LNR_political_instability
+			}
+		}
+	}
+
+	focus = {	#动用关系网
+		id = LNR_leverage_social_network
+		icon = GFX_goal_Generic_Meeting
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_keep_things_down }
+		relative_position_id = LNR_keep_things_down
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = LNR_grey_support_1
+			unlock_decision_category_tooltip = LNR_okkonens_connections
+		}
+	}
+
+	focus = {	#应对饥荒
+		id = LNR_deal_with_famine
+		icon = GFX_generic_Food_Import
+		x = -2
+		y = 1
+		cost = 4.29
+		
+		available = {
+			NOT = { has_idea = LNR_grey_support_5 }
+			NOT = { has_idea = LNR_grey_support_4 }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_leverage_social_network }
+		relative_position_id = LNR_leverage_social_network
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = LNR.50
+		}
+	}
+
+	focus = {	#开源节流
+		id = LNR_increase_income_and_cut_spending
+		icon = GFX_Focus_Import_Economy
+		x = -1
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_deal_with_famine }
+		relative_position_id = LNR_deal_with_famine
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = high_taxes
+			add_manpower = -2000
+			311 = {
+				add_manpower = -10000
+			}
+			custom_effect_tooltip = LNR_increase_income_and_cut_spending_tt
+		}
+	}
+
+	focus = {	#推卸责任
+		id = LNR_pushing_the_responsibility
+		icon = GFX_goal_Generic_Enough
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_deal_with_famine }
+		relative_position_id = LNR_deal_with_famine
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 25
+		}
+	}
+
+	focus = {	#确保政治稳定
+		id = LNR_sure_political_stability
+		icon = GFX_goal_Conservative
+		x = 2
+		y = 1
+		cost = 4.29
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_leverage_social_network }
+		relative_position_id = LNR_leverage_social_network
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			remove_ideas = LNR_political_instability
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#向进步联盟晓以利害
+		id = LNR_explain_to_progress_league
+		icon = GFX_focus_generic_annex_country_2
+		x = -1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_sure_political_stability }
+		relative_position_id = LNR_sure_political_stability
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = LNR_coop_with_progress_league
+			country_event = LNR.51
+		}
+	}
+
+	focus = {	#加强对军队的控制
+		id = LNR_reinforce_control_over_armies
+		icon = GFX_Generic_Colonial_Army
+		x = 1
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_sure_political_stability }
+		relative_position_id = LNR_sure_political_stability
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = LNR_clan_soldiers_1
+			LNR_grey_support_up = yes
+		}
+	}
+
+	focus = {	#做好每一桩生意
+		id = LNR_done_every_businesss_nicely
+		icon = GFX_Generic_Monopoly
+		x = 1
+		y = 1
+		cost = 4.29
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_increase_income_and_cut_spending }
+		prerequisite = { focus = LNR_pushing_the_responsibility }
+		prerequisite = { focus = LNR_explain_to_progress_league }
+		prerequisite = { focus = LNR_reinforce_control_over_armies }
+		relative_position_id = LNR_pushing_the_responsibility
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			311 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			LNR_grey_support_up = yes
+			country_event = LNR.52
+		}
+	}
+
+	focus = {	#重返混乱地区
+		id = LNR_return_to_hazard_zone
+		icon = GFX_Generic_German_Soldiers2
+		x = 0
+		y = 1
+		cost = 4.29
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_done_every_businesss_nicely }
+		relative_position_id = LNR_done_every_businesss_nicely
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.1
+			SPC_economy_up = yes
+			add_manpower = -1000
+			add_ideas = aggressive_tatic
+			swap_ideas = {
+				remove_idea = LNR_clan_soldiers_1
+				add_idea = LNR_clan_soldiers_2
+			}
+		}
+	}
+
+	focus = {	#奥克宁什么都知道！
+		id = LNR_oknin_knows_everything
+		icon = GFX_focus_generic_vatican_agents
+		x = -2
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_return_to_hazard_zone }
+		relative_position_id = LNR_return_to_hazard_zone
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 100
+			SPC_secret_police_policy_up = yes
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {	#动用一切武装力量
+		id = LNR_use_whatever_it_takes
+		icon = GFX_focus_generic_tank_air_support
+		x = 0
+		y = 1
+		cost = 4.29
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_return_to_hazard_zone }
+		relative_position_id = LNR_return_to_hazard_zone
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_mobilization_laws_up = yes
+			add_manpower = 3500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
+			swap_ideas = {
+				remove_idea = LNR_clan_soldiers_2
+				add_idea = LNR_clan_soldiers_3
+			}
+			add_to_variable = { LNR_economic_crisis_pfmef = 0.1 }
+			add_to_variable = { LNR_economic_crisis_mlsdp = 2 }
+			custom_effect_tooltip = LNR_use_whatever_it_takes_tt
+		}
+	}
+
+	focus = {	#允许劫掠
+		id = LNR_looting_allowed
+		icon = GFX_The_Old_KGB_Ding_Dong_Ditch
+		x = 2
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_return_to_hazard_zone }
+		relative_position_id = LNR_return_to_hazard_zone
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = LNR_whatever_it_takes
+		}
+	}
+
+	focus = {	#赤匪！滚出来！
+		id = LNR_fuck_off_commi_loser
+		icon = GFX_Generic_Purge_Social_Democracy
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_oknin_knows_everything }
+		prerequisite = { focus = LNR_use_whatever_it_takes }
+		prerequisite = { focus = LNR_looting_allowed }
+		relative_position_id = LNR_use_whatever_it_takes
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			leave_faction = yes
+			declare_war_on = {
+				target = RLN
+				type = civil_war
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {	#秩序与传统的胜利
+		id = LNR_victory_of_order_and_traditions
+		icon = GFX_Paternal_Autocrat
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			RLN = { exists = no }
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_fuck_off_commi_loser }
+		relative_position_id = LNR_fuck_off_commi_loser
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 200
+			310 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			LNR_grey_support_up = yes
+			country_event = LNR.53
+			add_to_variable = { LNR_economic_crisis_sw = 0.001 }
+			custom_effect_tooltip = LNR_victory_of_order_and_traditions_tt
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	###保守线二阶段###
+
+	focus = {	#爱国反赤运动
+		id = LNR_patriotic_anti_commi_campaign
+		icon = GFX_focus_PAR_neuter_the_guion_rojo
+		x = 10
+		y = 5
+		cost = 2
+
+		allow_branch = {
+			has_completed_focus = LNR_victory_of_order_and_traditions
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = -5000
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.05
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#为爱而战
+		id = LNR_battle_for_love
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_patriotic_anti_commi_campaign }
+		relative_position_id = LNR_patriotic_anti_commi_campaign
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			LNR_grey_support_up = yes
+			310 = { add_manpower = -2000 }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.05
+			}
+			SPC_research_development_amount_down_3 = yes
+			add_stability = 0.05
+		}
+	}
+
+	focus = {	#重建金融安全网
+		id = LNR_rebuild_financial_safety
+		icon = GFX_focus_DEN_heavy_regulations
+		x = -5
+		y = 1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_battle_for_love }
+		relative_position_id = LNR_battle_for_love
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_to_variable = { LNR_economic_crisis_sf = 0.15 }
+			add_to_variable = { LNR_economic_crisis_cgf = -0.05 }
+			add_to_variable = { LNR_economic_crisis_mp = 0.2 }
+			custom_effect_tooltip = LNR_rebuild_financial_safety_tt
+		}
+	}
+
+	focus = {	#家族企业
+		id = LNR_familiy_business
+		icon = GFX_focus_generic_industrialists
+		x = 0
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_rebuild_financial_safety }
+		relative_position_id = LNR_rebuild_financial_safety
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_industry_policy_up = yes
+			every_owned_state = {
+				limit = { state = 309 state = 310 state = 311 state = 312 }
+				add_extra_state_shared_building_slots = 1
+			}
+			309 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_industrial_development_amount_up_3 = yes
+			SPC_agricultural_development_amount_up_3 = yes
+			add_ideas = LNR_familiy_business_idea
+		}
+	}
+
+	focus = {	#重申经济主权...
+		id = LNR_restate_econ_indep
+		icon = GFX_goal_skull_treaty
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_familiy_business }
+		relative_position_id = LNR_familiy_business
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			312 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_resource = {
+					type = chromium
+					amount = 15
+				}
+			}
+			SPC_resource_policy_up = yes
+		}
+	}
+
+	focus = {	#...但还是欢迎外资
+		id = LNR_but_open_investment
+		icon = GFX_Focus_Import_Economy
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_restate_econ_indep }
+		relative_position_id = LNR_restate_econ_indep
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_trade_laws_down = yes
+			add_ideas = friendly_tatic
+			add_ideas = LNR_treasure_mout_of_south_bastia
+		}
+	}
+
+	focus = {	#保守的文化，自由的经济
+		id = LNR_conservative_culture_free_econ
+		icon = GFX_Generic_Conservatism
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_but_open_investment }
+		relative_position_id = LNR_but_open_investment
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			LNR_grey_support_up = yes
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = LNR_familiy_business_idea
+				add_idea = LNR_familiy_business_idea_2
+			}
+		}
+	}
+
+	focus = {	#整顿军队
+		id = LNR_reorganize_the_army
+		icon = GFX_Generic_Volunteer_Corps
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_battle_for_love }
+		relative_position_id = LNR_battle_for_love
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_training_laws_up = yes
+			add_manpower = -3000
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.05
+			}
+			add_ideas = LNR_corrupt_and_confident_army
+		}
+	}
+
+	focus = {	#扩大总统权力
+		id = LNR_expand_presidential_power
+		icon = GFX_goal_government_centralised_icon
+		x = -2
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_reorganize_the_army }
+		relative_position_id = LNR_reorganize_the_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			LNR_grey_support_down_2 = yes
+			hidden_effect = { LNR_heche_van_sko_oknin_1 = { add_trait = { trait = LNR_ldhill_of_tenian } } }
+			add_country_leader_trait = LNR_ldhill_of_tenian
+			if = {
+				limit = { LNR_heche_van_sko_oknin_1 = { is_hired_as_advisor = no } }
+				activate_advisor = LNR_heche_van_sko_oknin_idea
+			}
+		}
+	}
+
+	focus = {	#合作中止
+		id = LNR_end_coop
+		icon = GFX_focus_ARG_establish_the_free_association
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_reorganize_the_army }
+		relative_position_id = LNR_reorganize_the_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			LNR_grey_support_down = yes
+			remove_ideas = LNR_coop_with_progress_league
+			LNR_gava_adul = {
+				add_naval_commander_role = {
+					skill = 4
+					attack_skill = 4
+					defense_skill = 3
+					maneuvering_skill = 3
+					coordination_skill = 3
+				}
+			}
+		}
+	}
+
+	focus = {	#抗击生物灾害
+		id = LNR_against_bio_hazard
+		icon = GFX_Generic_Firebombing
+		x = 2
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_reorganize_the_army }
+		relative_position_id = LNR_reorganize_the_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -500
+			}
+			SPC_environment_policy_up = yes
+			311 = { 
+				remove_dynamic_modifier = { modifier = LNR_biohazard_giant_cacti } 
+				add_dynamic_modifier = { modifier = LNR_biohazard_giant_cacti days = 190 }
+			}
+		}
+	}
+
+	focus = {	#拥抱黑市
+		id = LNR_embrace_black_market
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_expand_presidential_power }
+		prerequisite = { focus = LNR_end_coop }
+		prerequisite = { focus = LNR_against_bio_hazard }
+		relative_position_id = LNR_end_coop
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_taxes_laws_down = yes
+			add_ideas = LNR_unbridled_paradise
+		}
+	}
+
+	focus = {	#扩大毒品种植
+		id = LNR_expand_drug_planting
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_embrace_black_market }
+		relative_position_id = LNR_embrace_black_market
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = LNR_expand_drug_planting
+				category = synth_resources
+				bonus = 1
+				uses = 2
+			}
+			309 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_agricultural_development_amount_up_3 = yes
+			swap_ideas = {
+				remove_idea = LNR_unbridled_paradise
+				add_idea = LNR_unbridled_paradise_2
+			}
+		}
+	}
+
+	focus = {	#军用药剂
+		id = LNR_military_drugs
+		icon = GFX_focus_ARG_fascist_researchers
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_embrace_black_market }
+		relative_position_id = LNR_embrace_black_market
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = LNR_military_drugs_idea
+		}
+	}
+
+	focus = {	#联络境外的朋友
+		id = LNR_contact_foreign_friends
+		icon = GFX_Generic_Monopoly
+		x = 2
+		y = 1
+		cost = 4.4
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_embrace_black_market }
+		relative_position_id = LNR_embrace_black_market
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_political_power = 100
+			LNR_grey_support_up = yes
+		}
+	}
+
+	focus = {	#国家交通法案
+		id = LNR_national_traffic_act
+		icon = GFX_Generic_Railroads
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			if = {
+				limit = { is_ai = no }
+				has_idea = LNR_grey_support_1
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_expand_drug_planting }
+		prerequisite = { focus = LNR_military_drugs }
+		prerequisite = { focus = LNR_contact_foreign_friends }
+		relative_position_id = LNR_military_drugs
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			every_core_state = {
+				limit = { is_owned_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+			}
+			LNR_grey_support_down = yes
+			swap_ideas = {
+				remove_idea = LNR_unbridled_paradise_2
+				add_idea = LNR_unbridled_paradise_3
+			}
+			remove_dynamic_modifier = { modifier = LNR_economic_crisis }
+			swap_ideas = {
+				remove_idea = LNR_urban_rural_contradictione
+				add_idea = LNR_urban_rural_contradictione_r_1
+			}
+		}
+	}
+
+	focus = {	#直面南方威胁
+		id = LNR_face_southern_threat
+		icon = GFX_Generic_Invasion
+		x = 5
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_battle_for_love }
+		relative_position_id = LNR_battle_for_love
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			KOA = { leave_faction = yes }
+			create_wargoal = {
+				target = KOA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {	#打倒旧时代
+		id = LNR_take_down_old_times
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -1
+		y = 1
+		cost = 3
+
+		available = { KOA = { has_government = paternal_autocrat } }
+
+		bypass = { KOA = { exists = no } }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_face_southern_threat }
+		relative_position_id = LNR_face_southern_threat
+		mutually_exclusive = { focus = LNR_dividing_reformists_in_south }
+
+		completion_reward = {
+			add_ideas = LNR_take_down_old_times_idea
+		}
+	}
+
+	focus = {	#分化南方的改革派
+		id = LNR_dividing_reformists_in_south
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available = { NOT = { KOA = { has_government = paternal_autocrat } } }
+
+		bypass = { KOA = { exists = no } }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_face_southern_threat }
+		relative_position_id = LNR_face_southern_threat
+		mutually_exclusive = { focus = LNR_take_down_old_times }
+
+		completion_reward = {
+			add_ideas = LNR_causing_divisions
+		}
+	}
+
+	focus = {	#向墨精灵发出最后通牒
+		id = LNR_last_chance_to_zbc
+		icon = GFX_Focus_Guy_Raising_Hand_Propaganda
+		x = 0
+		y = 2
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_take_down_old_times
+						 focus = LNR_dividing_reformists_in_south }
+		relative_position_id = LNR_face_southern_threat
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			ZBC = { country_event = LNR.200 }
+		}
+	}
+
+	focus = {	#不负先烈嘱托
+		id = LNR_they_shall_be_proud
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			KOA = { exists = no }
+			owns_state = 333
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_last_chance_to_zbc }
+		relative_position_id = LNR_last_chance_to_zbc
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = LNR_they_shall_be_proud_tt
+			hidden_effect = { set_cosmetic_tag = LNR_unification_cosmetic_tag }
+			add_political_power = 200
+			add_stability = 0.15
+			every_owned_state = {
+				limit = { 
+					OR = { state = 307 state = 308 state = 404 state = 405 state = 333 }
+				}
+				add_core_of = LNR
+			}
+			333 = { set_state_name = "金山角" }
+			set_province_name = { id = 7556 name = "花港" }
+			LNR_grey_support_up = yes
+			build_railway = {
+				path = { 5864 20597 20648 20670 20727 20756 }
+				level = 1
+			}
+		}
+	}
+
+	focus = {	#我们的改革
+		id = LNR_reform_of_ours
+		icon = GFX_focus_SWI_neutrality_on_the_move
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available = {
+			has_idea = LNR_grey_support_1
+			has_war = no
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_they_shall_be_proud }
+		relative_position_id = LNR_they_shall_be_proud
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = LNR_clan_influence
+			LNR_grey_support_down_2 = yes
+		}
+	}
+
+	focus = {	#不负共和之名
+		id = LNR_let_republic_be_proud
+		icon = GFX_Liberal_Conservatism
+		x = 0
+		y = 1
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = LNR_conservative_culture_free_econ }
+		prerequisite = { focus = LNR_national_traffic_act }
+		prerequisite = { focus = LNR_reform_of_ours }
+		relative_position_id = LNR_national_traffic_act
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = LNR_let_republic_be_proud_tt
+			add_research_slot = 1
+			LNR_grey_support_up = yes
+		}
+	}
+
+}

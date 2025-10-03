@@ -1,0 +1,40 @@
+spriteTypes = {	
+	###大肖像###
+	#spriteType = {
+	#	name = "GFX_FES_undine"
+	#	texturefile = "gfx/leaders/FES/undine.png"
+	#}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_KDK_HMML_reconstruction_committee"
+		texturefile = "gfx/interface/ideas/KDK_HMML_reconstruction_committee.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KDK_remember_years_of_bullets"
+		texturefile = "gfx/interface/ideas/KDK_remember_years_of_bullets.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KDK_under_the_sun"
+		texturefile = "gfx/interface/ideas/KDK_under_the_sun.png"
+	}
+	###地区修正###
+	spriteType = {
+		name = "GFX_idea_KDK_great_agropoli_theological_seminary"
+		texturefile = "gfx/interface/ideas/KDK_great_agropoli_theological_seminary.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KDK_magic_city_gnoa"
+		texturefile = "gfx/interface/ideas/KDK_magic_city_gnoa.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_KDK_royal_loyalist"
+		texturefile = "gfx/interface/traits/trait_expert_delegator.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_KDK_poplar_alliance_sympathizers"
+		texturefile = "gfx/interface/traits/trait_operative_double_agent.dds"
+		legacy_lazy_load = no
+	}
+}

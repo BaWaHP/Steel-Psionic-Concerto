@@ -1,0 +1,35 @@
+
+state={
+	id=327
+	name="STATE_327"
+
+	resources = {
+		oil = 4
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			dockyard = 4
+			air_base = 2
+			20875 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+		}
+		victory_points = {
+			20875 30
+		}
+	}
+
+	provinces={
+		3893 5485 5562 20875 20884 20920 
+	}
+	manpower = 10470000
+	buildings_max_level_factor=1.000
+	state_category = metropolis
+	local_supplies=1.000
+}

@@ -1,0 +1,89 @@
+ideas = {
+	country = {
+
+		ARO_winner_of_a_failure = {		#惨败的战胜者
+			picture = ARO_winner_of_a_failure
+			allowed = { 
+				original_tag = ARO
+			}
+			removal_cost = -1
+			modifier = {
+				national_socialist_drift = 0.05
+			}
+			targeted_modifier = {
+				tag = CLD
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = PEO
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = TPG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = WOM
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		ARO_a_charming_setting_sun = {		#温暖的夕阳
+			picture = ARO_a_charming_setting_sun
+			allowed = { 
+				original_tag = ARO
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				monthly_living_standard_development_process = 2
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		ARO_full_scale_political_panic = {		#人心惶惶
+			picture = ARO_
+			allowed = { 
+				original_tag = ARO
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.005
+				authoritarian_republican_drift = -0.2
+			}
+		}
+
+		ARO_constrainted_army = {		#受约束的军部
+			picture = ARO_
+			allowed = { 
+				original_tag = ARO
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				national_socialist_drift = -0.05
+				authoritarian_nationalism_drift = -0.05
+			}
+		}
+
+		ARO_a_priest_per_company = {		#教会支部建在连上
+			picture = ARO_
+			allowed = { 
+				original_tag = ARO
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				religious_extremism_drift = 0.1
+			}
+		}
+
+	}
+}

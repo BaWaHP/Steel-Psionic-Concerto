@@ -1,0 +1,33 @@
+
+state={
+	id=206
+	name="STATE_206"
+
+	resources = {
+		steel = 24
+	}
+
+	history={
+		owner = SOT
+		add_core_of = SOT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		victory_points = {
+			11572 8
+		}
+		victory_points = {
+			16545 5
+		}
+	}
+
+	provinces={
+		1757 8395 8805 10170 11572 11833 12085 16112 16138 16243 16418 16545 16689 
+	}
+	manpower=760000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

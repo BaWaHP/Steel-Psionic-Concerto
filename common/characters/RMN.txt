@@ -1,0 +1,23 @@
+characters={
+
+	RMN_yvonne_murphy = {		#尤文·墨菲
+   		name = RMN_yvonne_murphy
+   		portraits = {
+   			civilian = {
+   				large="GFX_RMN_yvonne_murphy"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_RMN_yvonne_murphy"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = RMN_yvonne_murphy_desc
+   			ideology = military_dictatorship
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

@@ -1,0 +1,96 @@
+﻿capital = 203
+
+oob = "CBL"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+
+set_politics = {
+	ruling_party = liberal_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 6
+	revolutionary_communism = 6
+	worldunion_socialist = 0
+	worldunion_democrat = 18
+	liberal_republican = 26
+	conservative_republican = 0
+	authoritarian_republican = 24
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 14
+	wizard_rules = 0
+	religious_extremism = 6
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_logistics_company = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	iw_small_airframe = 1
+	militia_tech = 1
+}
+recruit_character = CBL_karl_matuschka
+
+#顾问#
+recruit_character = CBL_reinhardt_caprivi
+recruit_character = CBL_rand_artus
+recruit_character = CBL_phil_larsens_otto
+recruit_character = CBL_derek_T_rescorrien
+recruit_character = CBL_krakow_wannh_oknen
+recruit_character = CBL_lufthansa_nader
+recruit_character = CBL_boleski_marek
+recruit_character = CBL_alovic_kozioniev
+recruit_character = CBL_alfred_george
+recruit_character = CBL_otto_freedman
+recruit_character = CBL_federal_military_advisory_group
+recruit_character = CBL_bart_schmidt
+recruit_character = CBL_johannes_spey
+recruit_character = CBL_maximilian_kohler
+recruit_character = CBL_barham_john_brown
+recruit_character = CBL_herman_ernst
+recruit_character = CBL_bach_thi_ost
+recruit_character = CBL_erich_keutber
+recruit_character = CBL_ludwig_T_reskoulien
+recruit_character = CBL_irving_green
+recruit_character = CBL_yaroslav_wawrzynski
+
+###开局顾问###
+activate_advisor = CBL_reinhardt_caprivi_idea
+
+###开局民族精神###
+add_ideas = {
+	CBL_railway_curse
+	CBL_generation_controversy
+	CBL_army_controversy
+	CBL_ghost_of_knights
+	CBL_clear_nomands
+	CBL_treature_bowl_of_rsb
+	CBL_political_chaos
+}

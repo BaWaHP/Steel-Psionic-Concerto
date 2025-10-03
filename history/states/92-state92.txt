@@ -1,0 +1,26 @@
+
+state={
+	id=92
+	name="STATE_92"
+	resources = {
+		magic_crystal = 8
+		steel = 4
+	}
+	provinces={
+		1555 5914 7227 9793 10402 10451 16275 16419 16432 16516 16534 16621 16690 16707 
+	}
+	history = {
+		owner = HCB
+		add_core_of = HCB
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			16432 3
+		}
+	}
+	manpower = 421331
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

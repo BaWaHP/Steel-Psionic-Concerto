@@ -1,0 +1,33 @@
+scripted_gui = {
+
+	RSB_federal_financial_budget_ui = {
+		context_type = decision_category
+		window_name = "RSB_federal_financial_budget_window"
+
+		triggers = {	#之后有对应flag再改#
+			RSB_financial_budget_bar_1_visible = {
+				always = yes
+            }
+			RSB_financial_budget_bar_2_visible = {
+				always = no
+            }
+			RSB_financial_budget_bar_3_visible = {
+				always = no
+            }
+			RSB_financial_budget_bar_4_visible = {
+				always = no
+            }
+        }
+		
+		properties = {
+			RSB_financial_budget_bar = {
+				frame = RSB_financial_budget_income
+			}
+			RSB_asset_bar = {
+				frame = RSB_financial_budget_asset
+			}
+		}
+
+	}
+	
+}

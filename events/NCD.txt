@@ -1,0 +1,339 @@
+﻿add_namespace = NCD
+
+country_event = {	#首都的鸟鸣
+	id = NCD.1
+	title = NCD.1.t
+	desc = NCD.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.1.a
+		add_manpower = -1
+		kill_country_leader = yes
+		set_politics = { ruling_party = authoritarian_nationalism }
+		set_cosmetic_tag = NCD_militarism_nation_tag
+		set_party_name = {
+			ideology = worldunion_socialist
+			name = NCD_worldunion_socialist_party_1
+			long_name = NCD_worldunion_socialist_party_1_long
+		}
+		set_party_name = {
+			ideology = worldunion_democrat
+			name = NCD_worldunion_democrat_party_1
+			long_name = NCD_worldunion_democrat_party_1_long
+		}
+		set_party_name = {
+			ideology = liberal_republican
+			name = NCD_liberal_republican_party_1
+			long_name = NCD_liberal_republican_party_1_long
+		}
+		set_party_name = {
+			ideology = conservative_republican
+			name = NCD_conservative_republican_party_1
+			long_name = NCD_conservative_republican_party_1_long
+		}
+		set_party_name = {
+			ideology = authoritarian_republican
+			name = NCD_authoritarian_republican_party_1
+			long_name = NCD_authoritarian_republican_party_1_long
+		}
+		set_party_name = {
+			ideology = national_socialist
+			name = NCD_national_socialist_party_1
+			long_name = NCD_national_socialist_party_1_long
+		}
+		set_party_name = {
+			ideology = authoritarian_nationalism
+			name = NCD_authoritarian_nationalism_party_1
+			long_name = NCD_authoritarian_nationalism_party_1_long
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = NCD_paternal_autocrat_party_1
+			long_name = NCD_paternal_autocrat_party_1_long
+		}
+
+		hidden_effect = {
+			remove_country_leader_role = {
+				character = NCD_nalle_westerle_1
+				ideology = democratic_republican
+			}
+			remove_country_leader_role = {
+				character = NCD_nalle_westerle_2
+				ideology = conservative_liberalism
+			}
+			NCD_nalle_westerle_2 = { remove_advisor_role = { slot = political_advisor } }
+			NCD_ottacite_redd = {
+				add_country_leader_role = { 
+					promote_leader = yes
+					country_leader = {
+						ideology = democratic_republican
+						expire = "3000.1.1.1"
+					}
+				}
+				add_country_leader_role = { 
+					promote_leader = yes
+					country_leader = {
+						ideology = conservative_liberalism
+						expire = "3000.1.1.1"
+					}
+				}
+			}
+
+			#NCD_interal_conflicts_init = yes
+		}
+	}
+}
+
+country_event = {	#午夜徘徊
+	id = NCD.2
+	title = NCD.2.t
+	desc = NCD.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.2.a
+		add_political_power = 30
+	}
+}
+
+country_event = {	#离别
+	id = NCD.3
+	title = NCD.3.t
+	desc = NCD.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.3.a
+		add_political_power = 30
+	}
+}
+
+country_event = {	#边境官兵的日记
+	id = NCD.50
+	title = NCD.50.t
+	desc = NCD.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.50.a
+		add_political_power = 30
+	}
+}
+
+country_event = {	#暗夜血光
+	id = NCD.51
+	title = NCD.51.t
+	desc = NCD.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.51.a
+		add_manpower = -2
+		add_stability = 0.01
+	}
+}
+
+country_event = {	#大元首的宣言
+	id = NCD.52
+	title = NCD.52.t
+	desc = NCD.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.52.a
+		add_manpower = 5000
+	}
+}
+
+country_event = {	#旧笔拎残血
+	id = NCD.100
+	title = NCD.100.t
+	desc = NCD.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.100.a
+		add_manpower = -50000
+		add_stability = -0.02
+		add_war_support = 0.02
+		division_template = {
+			name = "西莉迪亚护卫队"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+		}
+		118 = {
+			create_unit = {
+				division = "name = \"西莉迪亚护卫队\" division_template = \"西莉迪亚护卫队\" start_experience_factor = 0 start_equipment_factor = 0.5"  
+				owner = NCD
+				prioritize_location = 1576
+				count = 2
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NCD.101
+				days = 12
+			}
+		}
+	}
+
+	option = {
+		name = NCD.100.b
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+		}
+		add_manpower = -75000
+		add_offsite_building = {
+			type = arms_factory
+			level = -1
+		}
+		add_stability = 0.02
+		add_war_support = -0.02
+		hidden_effect = {
+			country_event = {
+				id = NCD.101
+				days = 12
+			}
+		}
+	}
+}
+
+country_event = {	#三省千殍经行处
+	id = NCD.101
+	title = NCD.101.t
+	desc = NCD.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.101.a
+		add_ideas = NCD_hunger_everywhere
+		CLD = { add_ideas = NCD_chaos_near_border }
+	}
+}
+
+country_event = {	#北部的骚乱
+	id = NCD.150
+	title = NCD.150.t
+	desc = NCD.150.d
+	#picture = 
+	
+	#fire_only_once = yes
+	
+	trigger = {
+		#has_completed_focus = NCD_bloody_peach_and_bodies
+		#check_variable = { NCD_interal_conflicts_var_2_1 > 30 }
+		tag = NCD
+		has_completed_focus = NCD_consolidate_central_power
+		NOT = { has_country_flag = NCL_triggered }
+		date > 1999.6.30
+	}
+	
+	option = {
+		name = NCD.150.a
+		set_country_flag = NCL_triggered
+		hidden_effect = { 
+			NCL = { SPC_NCL_startup_effect = yes }
+			NCL_silt_double_beam_effect = yes 
+		}
+	}
+}
+
+country_event = {	#铁浸血，麦易髓
+	id = NCD.151
+	title = NCD.151.t
+	desc = NCD.151.d
+	#picture = 
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_completed_focus = NCD_bloody_peach_and_bodies
+		check_variable = { NCD_interal_conflicts_var_2 = 50 }
+	}
+	
+	option = {
+		name = NCD.151.a
+		add_to_variable = { 
+			var = NCD_interal_conflicts_var_2
+			value = -15
+			tooltip = NCD_interal_conflicts_var_2_tt
+		}
+		NCD_interal_conflicts_var_clamp_effect = yes
+		CLD = {
+			division_template = {
+				name = "起义军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					light_infantry = { x = 0 y = 1 }
+					light_infantry = { x = 0 y = 2 }
+				}
+			}
+			116 = {
+				create_unit = {
+					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.6"  
+					owner = CLD
+					prioritize_location = 1793
+				}
+			}
+			477 = {
+				create_unit = {
+					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.6"  
+					owner = CLD
+					prioritize_location = 19495
+				}
+			}
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = NCDNews
+
+news_event = {
+	id = NCDNews.1
+	title = NCDNews.1.t
+	desc = NCDNews.1.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NCDNews.1.a
+		add_manpower = -1
+	}
+}

@@ -1,0 +1,670 @@
+characters={
+
+	UPV_phyllis_loehmann = {		#菲利斯·卢曼
+   		name = UPV_phyllis_loehmann
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = pioneer_communism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_john_jack = {		#约翰·杰克
+   		name = UPV_john_jack
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = revolutionary_communism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_roque_weidman = {		#罗克·韦德曼
+   		name = UPV_roque_weidman
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_socialist_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_mildred_fries = {		#米尔德·弗里斯
+   		name = UPV_mildred_fries
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = worldunion_democrat_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_will_phillip = {		#威尔·菲利普
+   		name = UPV_will_phillip
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = liberal_republican_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_dorsett_ferryman = {		#多赛特·费里曼
+   		name = UPV_dorsett_ferryman
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = conservative_republican_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_elizabeth_supim_1 = {		#伊丽莎白·苏平姆
+   		name = UPV_elizabeth_supim
+   		portraits = {
+   			civilian = {
+   				large="GFX_UPV_elizabeth_supim"
+   				small="GFX_idea_UPV_elizabeth_supim"
+   			}
+   			army = {
+				large="GFX_UPV_elizabeth_supim"
+				small="GFX_idea_UPV_elizabeth_supim"
+   			}
+   		}
+   		country_leader = {
+			desc = UPV_elizabeth_supim_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { bloodline_orthodoxy iron_fist_monarch }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_elizabeth_supim_2 = {		#伊丽莎白·苏平姆
+   		name = UPV_elizabeth_supim
+   		portraits = {
+   			civilian = {
+				large="GFX_UPV_elizabeth_supim"
+				small="GFX_idea_UPV_elizabeth_supim"
+   			}
+   			army = {
+				large="GFX_UPV_elizabeth_supim"
+				small="GFX_idea_UPV_elizabeth_supim"
+   			}
+   		}
+   		country_leader = {
+   			ideology = absolute_monarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_porter_friesland = {		#波尔特·弗里斯兰
+   		name = UPV_porter_friesland
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = national_socialist_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_herr_yanovsky = {		#赫尔·扬洛夫斯基
+   		name = UPV_herr_yanovsky
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = authoritarian_nationalism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_unknown_1 = {		#无
+   		name = UPV_unknown
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_unknown_2 = {		#无
+   		name = UPV_unknown
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = religious_extremism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_unknown_3 = {		#无
+   		name = UPV_unknown
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarchism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	UPV_michael_schaffnicht = {		#迈克尔·沙夫尼希特
+		name = UPV_michael_schaffnicht
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		field_marshal = {
+			traits = { defensive_doctrine organisational_leader infantry_leader }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	UPV_sautrov_nislavsky = {		#绍特洛夫·尼斯拉夫斯基
+		name = UPV_sautrov_nislavsky
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		field_marshal = {
+			traits = { old_guard trait_cautious organisational_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	UPV_grigory_kaczynski = {		#格里高利·卡钦斯基
+		name = UPV_grigory_kaczynski
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { politically_connected inflexible_strategist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UPV_kalensky_dolyonov = {		#卡伦斯基·多利诺夫
+		name = UPV_kalensky_dolyonov
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { brilliant_strategist career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UPV_kalensky_dolyonov = {		#卡伦斯基·多利诺夫
+		name = UPV_kalensky_dolyonov
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { brilliant_strategist career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UPV_kalensky_dolyonov = {		#卡伦斯基·多利诺夫
+		name = UPV_kalensky_dolyonov
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { brilliant_strategist career_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UPV_albert_froedersis = {		#艾伯特·弗洛德西斯
+		name = UPV_albert_froedersis
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_leader career_officer trait_engineer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	UPV_friedman_dietrich = {		#弗里德曼·迪特里希
+		name = UPV_friedman_dietrich
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { trait_reckless brilliant_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	UPV_karen_dorosky = {		#卡伦·多罗斯基
+		name = UPV_karen_dorosky
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+
+		corps_commander = {
+			traits = { old_guard harsh_leader }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	UPV_herbis_nepokav = {		#赫尔比斯·尼波卡夫
+   		name = UPV_herbis_nepokav
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_UPV_herbis_nepokav"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_UPV_herbis_nepokav"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_herbis_nepokav_idea
+			allowed = {	original_tag = UPV }
+			traits = { UPV_first_minister }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_urias_bartoszewicz = {		#乌里亚斯·巴托谢维奇
+   		name = UPV_urias_bartoszewicz
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_UPV_urias_bartoszewicz"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_UPV_urias_bartoszewicz"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_urias_bartoszewicz_idea
+			allowed = {	original_tag = UPV }
+			traits = { UPV_speaker_of_parliament UPV_cunning_politicians }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_pribor_kolupa = {		#普里德博尔·科卢帕
+   		name = UPV_pribor_kolupa
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_pribor_kolupa_idea
+			allowed = {	original_tag = UPV }
+			traits = { UPV_representatives_of_the_old_aristocracy }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_jessica_siczynski = {		#杰西卡·西钦斯基
+   		name = UPV_jessica_siczynski
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_jessica_siczynski_idea
+			allowed = {	original_tag = UPV }
+			available = { always = no }
+			traits = { UPV_witch_of_old terrible_tyrant }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_dvor_vandel = {		#德沃尔·范德尔
+   		name = UPV_dvor_vandel
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_dvor_vandel_idea
+			allowed = {	original_tag = UPV }
+			visible = { NOT = { has_completed_focus = UPV_clear_royalists } }
+			available = { always = no }
+			traits = { UPV_imperial_envoy }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_hawk_faulner = {		#霍克·福尔纳
+   		name = UPV_hawk_faulner
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_hawk_faulner_idea
+			allowed = {	original_tag = UPV }
+			visible = { NOT = { has_completed_focus = UPV_clear_royalists } }
+			traits = { captain_of_industry UPV_royal_supporter }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_gregor_gleckner = {		#格雷戈尔·格勒克纳
+   		name = UPV_gregor_gleckner
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_gregor_gleckner_idea
+			allowed = {	original_tag = UPV }
+			traits = { UPV_economic_reformer }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	UPV_brayan_zicic = {		#布拉扬·齐奇
+   		name = UPV_brayan_zicic
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = UPV_brayan_zicic_idea
+			allowed = {	original_tag = UPV }
+			traits = { silent_workhorse armaments_organizer }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+}

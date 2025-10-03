@@ -1,0 +1,2693 @@
+focus_tree = {
+	id = KOA_focus_1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOA						
+		}
+	}
+	default = no
+
+	continuous_focus_position = {
+		x = 0
+		y = 4000
+	}
+
+	focus = { 	#选王会议 
+		id = KOA_council_to_elect_a_king
+		icon = GFX_KOA_council_to_elect_a_king
+		cost = 17.2
+		x = 10
+		y = 0
+
+		ai_will_do = { factor = 100 }
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = FLAG_KOA_focus_2
+			}
+		}
+		cancelable = no
+
+		completion_reward = {	
+			if = {
+				limit = {
+					check_variable = { 
+						KOA_var_support_stanwaf > KOA_var_support_willian
+					}
+					check_variable = { 
+						KOA_var_support_stanwaf > KOA_var_support_yulian
+					}
+					NOT = {
+						has_country_flag = FLAG_KOA_stanwaf_exit
+					}
+				}
+				country_event = KOA.8
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						KOA_var_support_willian > KOA_var_support_stanwaf
+					}
+					check_variable = { 
+						KOA_var_support_willian > KOA_var_support_yulian
+					}
+				}
+				country_event = KOA.9
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						KOA_var_support_yulian > KOA_var_support_willian
+					}
+					check_variable = { 
+						KOA_var_support_yulian > KOA_var_support_stanwaf
+					}
+				}
+				country_event = KOA.10
+			
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = FLAG_KOA_stanwaf_exit
+					}
+				}
+				country_event = KOA.8
+			}
+			else = {
+				country_event = KOA.9
+			}
+		}
+	}
+
+
+	####威廉####
+	focus = {	#威廉的加冕典礼
+		id = KOA_william_cronation
+		icon = GFX_KOA_william_cronation
+		x = -5
+		y = 1
+		cost = 1
+
+		allow_branch = {
+			NOT = { has_country_flag = FLAG_KOA_stanwaf_win }
+			NOT = { has_country_flag = FLAG_KOA_yulian_win }
+		}
+		available = { has_country_flag = FLAG_KOA_willian_win }
+
+		offset = {
+			x = 5
+			trigger = {
+				has_country_flag = FLAG_KOA_willian_win
+			}
+		}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_council_to_elect_a_king }
+		relative_position_id = KOA_council_to_elect_a_king
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {	
+			add_political_power = 25
+			country_event = {
+				id = KOA.200
+				days = 4
+			}
+		}
+	}
+
+	focus = {	#海风吹来变革
+		id = KOA_winds_of_change
+		icon = GFX_KOA_winds_of_change
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_william_cronation }
+		relative_position_id = KOA_william_cronation
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {	
+			swap_ideas = {
+				remove_idea = KOA_political_chaos
+				add_idea = KOA_difficult_reformation
+			}
+		}
+	}
+
+	focus = {	#赫勒-托克曼法
+		id = KOA_helle_tockman_law
+		icon = GFX_KOA_helle_tockman_law
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_winds_of_change }
+		relative_position_id = KOA_winds_of_change
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {	
+			country_event = KOA.201
+		}
+	}
+
+	focus = {	#宪法修正案
+		id = KOA_constitutional_amendments
+		icon = GFX_KOA_constitutional_amendments
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_helle_tockman_law }
+		relative_position_id = KOA_helle_tockman_law
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {	
+			add_political_power = 50
+			country_event = KOA.204
+		}
+	}
+
+	focus = {	#政治开放
+		id = KOA_open_politics
+		icon = GFX_KOA_open_politics
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_winds_of_change }
+		relative_position_id = KOA_winds_of_change
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		select_effect = {
+			country_event = { id = KOA.202 days = 14 }
+		}
+
+		completion_reward = {	
+			add_timed_idea = {
+				idea = KOA_open_politics_idea
+				days = 240
+			}
+		}
+	}
+
+	focus = {	#整合民主派系
+		id = KOA_integration_of_democratic_factions
+		icon = GFX_KOA_integration_of_democratic_factions
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_open_politics }
+		relative_position_id = KOA_open_politics
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {	
+			add_political_power = -50
+			country_event = KOA.203
+			set_party_name = {
+				ideology = paternal_autocrat
+				name = KOA_paternal_autocrat_party_4
+				long_name = KOA_paternal_autocrat_party_long_4
+			}
+			set_party_name = {
+				ideology = authoritarian_republican
+				name = KOA_authoritarian_republican_party_2
+				long_name = KOA_authoritarian_republican_party_long_2
+			}
+			set_party_name = {
+				ideology = conservative_republican
+				name = KOA_conservative_republican_party_3
+				long_name = KOA_conservative_republican_party_long_3
+			}
+			set_party_name = {
+				ideology = liberal_republican
+				name = KOA_liberal_republican_party_4
+				long_name = KOA_liberal_republican_party_long_4
+			}
+			set_party_name = {
+				ideology = worldunion_democrat
+				name = KOA_worldunion_democrat_party_2
+				long_name = KOA_worldunion_democrat_party_long_2
+			}
+			set_party_name = {
+				ideology = worldunion_socialist
+				name = KOA_worldunion_socialist_party_2
+				long_name = KOA_worldunion_socialist_party_long_2
+			}
+		}
+	}
+
+	focus = {	#斯塔比翁之春
+		id = KOA_spring_of_stabevel
+		icon = GFX_Generic_Liberation
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_constitutional_amendments }
+		prerequisite = { focus = KOA_integration_of_democratic_factions }
+		relative_position_id = KOA_constitutional_amendments
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOA_difficult_reformation
+				add_idea = KOA_spring_of_stabevel_idea
+			}
+		}
+	}
+
+	focus = {	#两院制
+		id = KOA_bicameral
+		icon = GFX_KOA_bicameral
+		x = -1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_spring_of_stabevel }
+		relative_position_id = KOA_spring_of_stabevel
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {
+			add_ideas = KOA_bicameral_idea
+		}
+	}
+
+	focus = {	#地方选举规划
+		id = KOA_local_election_planning
+		icon = GFX_KOA_local_election_planning
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_spring_of_stabevel }
+		relative_position_id = KOA_spring_of_stabevel
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = KOA_local_reform
+				days = 365
+			}
+		}
+	}
+
+	focus = {	#由此再传回彼岸
+		id = KOA_here_goes_back_there
+		icon = GFX_KOA_here_goes_back_there
+		x = 1
+		y = 1
+		cost = 5
+
+		available = {}
+
+		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_bicameral }
+		prerequisite = { focus = KOA_local_election_planning }
+		relative_position_id = KOA_bicameral
+		#mutually_exclusive = { focus = }
+
+		bypass = { has_war = yes }
+
+		completion_reward = {
+			country_event = KOA.205
+		}
+	}	
+
+	####斯坦瓦夫####
+	focus = {	#斯坦瓦夫的加冕典礼
+		id = KOA_cronation
+		icon = GFX_KOA_cronation
+		cost = 2
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_council_to_elect_a_king }
+		relative_position_id = KOA_council_to_elect_a_king
+		cancelable = no
+
+		allow_branch = {
+			NOT = { has_country_flag = FLAG_KOA_willian_win }
+			NOT = { has_country_flag = FLAG_KOA_yulian_win }
+			NOT = { has_country_flag = FLAG_KOA_focus_2 }
+		}
+		available = { has_country_flag = FLAG_KOA_stanwaf_win }
+
+		select_effect = {
+			add_ideas = KOA_cronation
+			country_event = {  
+				id = KOA.11
+				days = 4
+			}
+		}
+		completion_reward = {	
+			custom_effect_tooltip = KOA_tooltip_cronation
+			hidden_effect = { remove_ideas = KOA_cronation }
+			add_political_power = 50
+		}
+	}
+	focus = {	#首都暴动
+		id = KOA_capital_riot
+		icon = GFX_KOA_capital_riot
+		cost = 8
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_cronation }
+		relative_position_id = KOA_cronation
+		cancelable = no
+
+		cancel = { has_government = liberal_republican }
+
+		select_effect = {
+			country_event = {  
+				id = KOA.12
+				days = 4
+			}
+		}
+	}
+
+	#控制海军
+	focus = {
+		id = KOA_control_the_navy
+		icon = GFX_focus_AFG_adopt_nufus
+		cost = 5
+		x = -1
+		y = 1
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_capital_riot }
+		relative_position_id = KOA_capital_riot
+
+		completion_reward = {
+			
+		}
+	}
+
+	#清洗反对派
+	focus = {
+		id = KOA_clean_up_opposition
+		icon = GFX_focus_AFG_anti_malaria 
+		cost = 5
+		x = 1
+		y = 1
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_capital_riot }
+		relative_position_id = KOA_capital_riot
+
+		completion_reward = {
+			
+		}
+	}
+	
+	###改革派###
+
+	focus = { 	#改革派政变 
+		id = KOA_reformist_coup
+		icon = GFX_focus_AFG_against_kabul
+		cost = 0.2
+		x = 10
+		y = 0
+
+		ai_will_do = { factor = 100 }
+
+		allow_branch = {
+			has_country_flag = FLAG_KOA_focus_2
+		}
+
+		completion_reward = {	
+			country_event = {  
+				id = KOA.16
+				days = 7
+			}
+		}
+	}
+	#国民会议
+	focus = {
+		id = KOA_national_congress
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = -5
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_reformist_coup }
+		relative_position_id = KOA_reformist_coup
+		mutually_exclusive = { focus = KOA_army_administration }
+		mutually_exclusive = { focus = KOA_flower_of_navy }
+
+		completion_reward = {
+
+		}
+	}
+	#第一届国民制宪会议
+	focus = {
+		id = KOA_first_national_constitutional_congress
+		icon = GFX_goal_Generic_Meeting
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_national_congress }
+		relative_position_id = KOA_national_congress
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	#大众政府
+	focus = {
+		id = KOA_mass_government
+		icon = GFX_focus_generic_social_democracy
+		x = -2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_first_national_constitutional_congress }
+		relative_position_id = KOA_first_national_constitutional_congress
+		mutually_exclusive = { focus = KOA_coalition_government }
+		mutually_exclusive = { focus = KOA_elite_government }
+
+		completion_reward = {
+
+		}
+	}
+	#联合政府
+	focus = {
+		id = KOA_coalition_government
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_first_national_constitutional_congress }
+		relative_position_id = KOA_first_national_constitutional_congress
+		mutually_exclusive = { focus = KOA_mass_government }
+		mutually_exclusive = { focus = KOA_elite_government }
+
+		completion_reward = {
+
+		}
+	}
+	#精英政府
+	focus = {
+		id = KOA_elite_government
+		icon = GFX_Liberal_Conservatism
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_first_national_constitutional_congress }
+		relative_position_id = KOA_first_national_constitutional_congress
+		mutually_exclusive = { focus = KOA_mass_government }
+		mutually_exclusive = { focus = KOA_coalition_government }
+
+		completion_reward = {
+
+		}
+	}
+	#社会正义
+	focus = {
+		id = KOA_social_justice
+		icon = GFX_goal_social_reforms
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_mass_government
+			focus = KOA_coalition_government
+			focus = KOA_elite_government
+		}
+		relative_position_id = KOA_coalition_government
+		mutually_exclusive = { focus = KOA_supremacy_of_law }
+
+		completion_reward = {
+
+		}
+	}
+	#法权至上
+	focus = {
+		id = KOA_supremacy_of_law
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_mass_government
+			focus = KOA_coalition_government
+			focus = KOA_elite_government
+		}
+		relative_position_id = KOA_coalition_government
+		mutually_exclusive = { focus = KOA_social_justice }
+
+		completion_reward = {
+
+		}
+	}
+	#男女平等
+	focus = {
+		id = KOA_gender_equity
+		icon = GFX_Generic_Female_Soldier03
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_social_justice focus = KOA_supremacy_of_law }
+		relative_position_id = KOA_social_justice
+		mutually_exclusive = { focus = KOA_slow_progress }
+
+		completion_reward = {
+
+		}
+	}
+	#缓慢进程
+	focus = {
+		id = KOA_slow_progress
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 2
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { focus = KOA_social_justice focus = KOA_supremacy_of_law }
+		relative_position_id = KOA_social_justice
+		mutually_exclusive = { focus = KOA_gender_equity }
+
+		completion_reward = {
+
+		}
+	}
+	#直选制
+	focus = {
+		id = KOA_direct_election
+		icon = GFX_focus_generic_election
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_gender_equity
+			focus = KOA_slow_progress
+		}
+		relative_position_id = KOA_gender_equity
+		mutually_exclusive = { focus = KOA_cabinet_appointment_system }
+		mutually_exclusive = { focus = KOA_delegate_system }
+
+		completion_reward = {
+
+		}
+	}
+	#内阁任命制
+	focus = {
+		id = KOA_cabinet_appointment_system
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_gender_equity
+			focus = KOA_slow_progress
+		}
+		relative_position_id = KOA_gender_equity
+		mutually_exclusive = { focus = KOA_direct_election }
+		mutually_exclusive = { focus = KOA_delegate_system }
+
+		completion_reward = {
+
+		}
+	}
+	#代议制
+	focus = {
+		id = KOA_delegate_system
+		icon = GFX_Generic_Elections
+		x = 3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_gender_equity
+			focus = KOA_slow_progress
+		}
+		relative_position_id = KOA_gender_equity
+		mutually_exclusive = { focus = KOA_direct_election }
+		mutually_exclusive = { focus = KOA_cabinet_appointment_system }
+
+		completion_reward = {
+
+		}
+	}
+	#新生共和国
+	focus = {
+		id = KOA_new_republic
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		available = {
+			always = no
+		}
+
+		prerequisite = { 
+			focus = KOA_direct_election
+			focus = KOA_cabinet_appointment_system
+			focus = KOA_delegate_system
+		}
+		relative_position_id = KOA_cabinet_appointment_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#军队训政
+		id = KOA_army_administration
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 2
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_reformist_coup }
+		relative_position_id = KOA_reformist_coup
+		mutually_exclusive = { focus = KOA_national_congress }
+		mutually_exclusive = { focus = KOA_flower_of_navy }
+
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#军民一心
+		id = KOA_army_civilian_unity
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x = 0
+		y = 2
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_army_administration
+		prerequisite = { focus = KOA_army_administration }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#联合农民
+		id = KOA_united_farmers
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_army_civilian_unity
+		prerequisite = { focus = KOA_army_civilian_unity }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#武装化民众
+		id = KOA_armed_civilians
+		icon = GFX_focus_CONGO_congo_army
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_united_farmers
+		prerequisite = { focus = KOA_united_farmers }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#拍卖贵族企业
+		id = KOA_auction_noble_enterprise
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_armed_civilians
+		prerequisite = { focus = KOA_armed_civilians }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#打击贵族
+		id = KOA_strike_nobles
+		icon = GFX_goal_Generic_Enough
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_army_civilian_unity
+		prerequisite = { focus = KOA_army_civilian_unity }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#转爵为官
+		id = KOA_turning_nobles_into_officials
+		icon = GFX_focus_RAJ_headhunt_army_personell
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_strike_nobles
+		prerequisite = { focus = KOA_strike_nobles }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#邀请温和派贵族议员
+		id = KOA_inviting_moderate_noble_parliamentarians
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_turning_nobles_into_officials
+		prerequisite = { focus = KOA_turning_nobles_into_officials }
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#新国家体制
+		id = KOA_new_national_system
+		icon = GFX_Paternal_Autocrat
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = {
+			focus = KOA_auction_noble_enterprise
+			focus = KOA_inviting_moderate_noble_parliamentarians
+		}
+		relative_position_id = KOA_auction_noble_enterprise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {	#国王的命运
+		id = KOA_king_s_fate
+		icon = GFX_focus_AFG_retire_the_uncles
+		x = 2
+		y = 2
+
+		cost = 1
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_army_administration
+		prerequisite = {
+			focus = KOA_first_national_constitutional_congress
+			focus = KOA_army_administration
+			focus = KOA_flower_of_navy
+		}
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = KOA.17
+				days = 1
+			}
+		}
+	}
+	focus = {	#海军之花
+		id = KOA_flower_of_navy
+		icon = GFX_focus_PER_the_peoples_navy
+		cost = 2
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_reformist_coup }
+		relative_position_id = KOA_reformist_coup
+		mutually_exclusive = { focus = KOA_national_congress }
+		mutually_exclusive = { focus = KOA_army_administration }
+
+		available = {
+			has_country_leader = { character = KOA_merk_hill }
+		}
+
+		completion_reward = {	
+			remove_ideas = KOA_political_chaos
+			add_ideas = KOA_old_school_opposition
+		}
+	}
+	focus = {	#枪杆子里出民主
+		id = KOA_democracy_emerges_from_gun
+		icon = GFX_focus_focus_fra_revolution_utmost
+		cost = 2
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_flower_of_navy }
+		relative_position_id = KOA_flower_of_navy
+
+		completion_reward = {	
+			add_political_power = 50
+		}
+	}
+	focus = {	#打土豪分田地
+		id = KOA_strike_landlords_allot_fields
+		icon = GFX_focus_FIN_socialist_welfare
+		cost = 3
+		x = 13
+		y = 4
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_democracy_emerges_from_gun }
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = KOA_backward_economy
+					add_idea = KOA_backward_economy_2			
+				}	
+			}
+			hidden_effect = {
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_cgf = -0.05 }
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_psbf = 0.1 }
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_cf = 0.2 }
+			}
+		}
+	}
+	focus = {	#农业制改革
+		id = KOA_household_contract_responsibility_system
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		cost = 4
+		x = 13
+		y = 5
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_strike_landlords_allot_fields }
+
+		completion_reward = {	
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = KOA_backward_economy_2
+					add_idea = KOA_backward_economy_3		
+				}	
+			}
+			add_ideas = KOA_Household_contract_responsibility_system
+			hidden_effect = {
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_cf = 0.2 }
+			}
+		}
+	}
+	focus = {	#国有化贵族企业
+		id = KOA_nationalized_noble_enterprise
+		icon = GFX_focus_generic_communist_industry
+		cost = 4
+		x = 15
+		y = 4
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_democracy_emerges_from_gun }
+
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = KOA_backward_economy_3
+					add_idea = KOA_backward_economy_4	
+				}	
+			}
+			add_timed_idea = {
+				idea = KOA_rebuilt_state_owned_enterprises
+				days = 360
+			}
+			hidden_effect = {
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_cgf = -0.1 }
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_psbf = 0.2 }
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_pfmef = 0.1 }
+			}
+		}
+	}
+	focus = {	#企业经营制度改革
+		id = KOA_open_enterprise_management
+		icon = GFX_focus_AFG_a_modern_economy
+		cost = 2
+		x = 15
+		y = 5
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_nationalized_noble_enterprise }
+
+		completion_reward = {	
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = KOA_backward_economy_4
+					add_idea = KOA_backward_economy_5
+				}	
+			}
+			SPC_nationalization_policy_down = yes
+			add_ideas = IP_nationalization
+			hidden_effect = {
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_cgf = -0.05 }
+				add_to_variable = { KOA_backward_economy_dynamic_modifiers_pfmef = 0.1 }
+			}
+		}
+	}
+	focus = {	#军队、共和、维新
+		id = KOA_army_republic_reform
+		icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+		cost = 3
+		x = 14
+		y = 6
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_household_contract_responsibility_system }
+		prerequisite = { focus = KOA_open_enterprise_management }
+
+		completion_reward = {	
+			remove_dynamic_modifier = {
+				modifier = KOA_backward_economy_dynamic_modifiers
+			}
+			add_ideas = KOA_Army_Republic_Restoration
+			remove_ideas = KOA_old_school_opposition
+			add_country_leader_trait = KOA_trait_chairman_revolutionary
+		}
+	}
+	focus = {	#抄没旧贵族不合法资产
+		id = KOA_confiscate_the_illegal_assets_of_the_old_nobles
+		icon = GFX_Generic_Arrests
+		cost = 3
+		x = 13
+		y = 7
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_army_republic_reform }
+
+		completion_reward = {	
+			add_timed_idea = {
+				idea = KOA_Seizure_of_illegal_assets
+				days = 360
+			}
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = WP_no_specific_laws
+				add_idea = WP_symbolic_laws	
+			}
+		}
+	}
+	focus = {	#发放战争债券
+		id = KOA_lssue_war_bonds
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 3
+		x = 15
+		y = 7
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_army_republic_reform }
+
+		completion_reward = {	
+			add_timed_idea = {
+				idea = KOA_war_bonds
+				days = 360
+			}
+		}
+	}
+	focus = {	#半岛梦想
+		id = KOA_ternian_s_dream
+		icon = GFX_focus_AFG_royal_guard
+		cost = 2
+		x = 0
+		y = 8
+
+		ai_will_do = { factor = 100 }
+
+		relative_position_id = KOA_reformist_coup
+		prerequisite = { 
+			focus = KOA_confiscate_the_illegal_assets_of_the_old_nobles
+			focus = KOA_new_republic
+			focus = KOA_new_national_system
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			if = {
+				limit = { LNR = { exists = yes } }
+				create_wargoal = { 
+					target = LNR
+					type = annex_everything
+				}
+				if = {
+					limit = { LNR = { is_in_faction = yes } }
+					LNR = { leave_faction = yes }
+				}
+			}
+			if = {
+				limit = { RLN = { exists = yes } }
+				create_wargoal = { 
+					target = RLN
+					type = annex_everything
+				}
+			}
+			add_state_claim = 309
+			add_state_claim = 310
+			add_state_claim = 311
+			add_state_claim = 312
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#半岛统一
+		id = KOA_peninsula_unification
+		icon = GFX_Generic_Liberation
+		cost = 1
+		x = 0
+		y = 1
+
+		available = {
+			SPC_generic_region_trigger_50_control = yes
+		}
+
+		allow_branch = {
+			has_completed_focus = KOA_ternian_s_dream
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_ternian_s_dream }
+		relative_position_id = KOA_ternian_s_dream
+
+		completion_reward = {
+			set_cosmetic_tag = KOA_republic_unif_nation_tag
+			country_event = {
+				id = KOA.18
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#新朋友
+		id = KOA_new_friends
+		icon = GFX_focus_RAJ_just_good_business
+		cost = 0.15
+		x = -3
+		y = 1
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_peninsula_unification }
+		relative_position_id = KOA_peninsula_unification
+		mutually_exclusive = { focus = KOA_old_enemy }
+
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = KOA_peaceful_founding
+		}
+	}
+
+	focus = {	#组织北方临时政府
+		id = KOA_organize_the_northern_interim_government
+		icon = GFX_focus_AFG_establish_darulaman
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_new_friends }
+		relative_position_id = KOA_new_friends
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#吸纳效忠派
+		id = KOA_absorb_loyalists
+		icon = GFX_goal_government_centralised_icon
+		cost = 2
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { 
+			focus = KOA_new_friends
+			focus = KOA_old_enemy
+		}
+		relative_position_id = KOA_new_friends
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.1
+			KOA_resistance_movement_down_effect = yes
+		}
+	}
+
+	focus = {	#老敌人
+		id = KOA_old_enemy
+		icon = GFX_goal_Generic_Soldiers_Defense
+		cost = 0.15
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_peninsula_unification }
+		relative_position_id = KOA_peninsula_unification
+		mutually_exclusive = { focus = KOA_new_friends }
+
+		completion_reward = {
+			add_ideas = KOA_resistance_movement_3
+			activate_mission = KOA_resistance_threat
+		}
+	}
+
+	focus = {	#建立“隔离带”
+		id = KOA_establish_a_quarantine_zone
+		icon = GFX_focus_SWE_hedgehog_defense
+		cost = 3
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_old_enemy }
+		relative_position_id = KOA_old_enemy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = -2761
+			KOA_resistance_movement_down_effect = yes
+		}
+	}
+
+	focus = {	#强征北方企业
+		id = KOA_conscript_northern_enterprises
+		icon = GFX_goal_manage_industries
+		cost = 6
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_establish_a_quarantine_zone }
+		relative_position_id = KOA_establish_a_quarantine_zone
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = KOA_north_enterprise_south_division
+				days = 365
+			}
+			KOA_resistance_movement_down_effect = yes
+		}
+	}
+
+	focus = {	#北方特许经贸局
+		id = KOA_northern_charter_economic_bureau
+		icon = GFX_Generic_Industrial_Complexes
+		cost = 3
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { 
+			focus = KOA_absorb_loyalists
+			focus = KOA_conscript_northern_enterprises
+		}
+		relative_position_id = KOA_conscript_northern_enterprises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = KOA_special_trade_bureau
+		}
+	}
+
+	focus = {	#南民北迁
+		id = KOA_southern_people_moved_north
+		icon = GFX_focus_generic_population_growth
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_conscript_northern_enterprises }
+		relative_position_id = KOA_conscript_northern_enterprises
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = KOA_new_conflict
+			KOA_resistance_movement_up_effect = yes
+		}
+	}
+
+	focus = {	#清查“斗争”电台
+		id = KOA_check_the_struggle_radio_station
+		icon = GFX_focus_NOR_broken_gun_policies
+		cost = 5
+		x = 3
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_old_enemy }
+		relative_position_id = KOA_old_enemy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOA_check_the_struggle_radio_station
+				category = electronics
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+
+	focus = {	#授权政治保卫室
+		id = KOA_authorize_the_political_security_office
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 5
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = {
+			focus = KOA_check_the_struggle_radio_station
+			focus = KOA_conscript_northern_enterprises
+		}
+		relative_position_id = KOA_check_the_struggle_radio_station
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#重建北方经济
+		id = KOA_rebuild_the_northern_economy
+		icon = GFX_Generic_Industry02
+		cost = 8
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = {
+			focus = KOA_northern_charter_economic_bureau
+			focus = KOA_southern_people_moved_north
+		}
+		relative_position_id = KOA_northern_charter_economic_bureau
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			310 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#国家主义教育
+		id = KOA_national_education
+		icon = GFX_generic_Bookstack
+		cost = 4
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = {
+			focus = KOA_northern_charter_economic_bureau
+			focus = KOA_southern_people_moved_north
+		}
+		relative_position_id = KOA_rebuild_the_northern_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			KOA_resistance_movement_down_effect = yes
+			add_political_power = 30
+		}
+	}
+
+	focus = {	#特尼安国务院
+		id = KOA_tennian_council_of_state
+		icon = GFX_Generic_Parliament_Box
+		cost = 5
+		x = -3
+		y = 1
+
+		available = {
+			NOT = {
+				has_idea = KOA_resistance_movement_1
+				has_idea = KOA_resistance_movement_2
+				has_idea = KOA_resistance_movement_3
+				has_idea = KOA_resistance_movement_4
+				has_idea = KOA_resistance_movement_5
+			}
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_rebuild_the_northern_economy }
+		relative_position_id = KOA_rebuild_the_northern_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 10
+			country_event = {
+				id = KOA.19
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#我们于联盟
+		id = KOA_we_are_in_the_alliance
+		icon = GFX_focus_PER_limit_foreign_influence
+		cost = 5
+		x = 0
+		y = 1
+
+		allow_branch = {
+			has_country_flag = FLAG_KOA_focus_2
+			has_completed_focus = KOA_ternian_s_dream
+		}
+
+		available = {
+			always = no
+		}
+
+		ai_will_do = { factor = 100 }
+
+		#prerequisite = { focus = }
+		relative_position_id = KOA_tennian_council_of_state
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#老大哥？
+		id = KOA_big_brother
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		x = -4
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_we_are_in_the_alliance }
+		relative_position_id = KOA_we_are_in_the_alliance
+		mutually_exclusive = { focus = KOA_better_than_dad }
+		mutually_exclusive = { focus = KOA_better_ourself }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#哈克莱恩协定
+		id = KOA_haklayn_agreement
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_big_brother }
+		relative_position_id = KOA_big_brother
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#T-R联合航空条例
+		id = KOA_joint_aviation_regulations
+		icon = GFX_focus_generic_air_partners
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_big_brother }
+		relative_position_id = KOA_big_brother
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#内海舰船协议
+		id = KOA_inland_sea_ship_agreement
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_haklayn_agreement }
+		prerequisite = { focus = KOA_joint_aviation_regulations }
+		relative_position_id = KOA_haklayn_agreement
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新内环线
+		id = KOA_new_inner_ring
+		icon = GFX_focus_generic_naval_discipline
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_inland_sea_ship_agreement }
+		relative_position_id = KOA_inland_sea_ship_agreement
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#共同防御
+		id = KOA_joint_defense
+		icon = GFX_focus_generic_naval_invasion
+		cost = 5
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_new_inner_ring }
+		relative_position_id = KOA_new_inner_ring
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#布雷恩-维尔瓦诺联合大学
+		id = KOA_brenn_vilvano_joint_university
+		icon = GFX_focus_research2
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_new_inner_ring }
+		relative_position_id = KOA_new_inner_ring
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新联邦
+		id = KOA_new_federation
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_joint_defense }
+		prerequisite = { focus = KOA_brenn_vilvano_joint_university }
+		relative_position_id = KOA_joint_defense
+		#utually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#赛亲爹？
+		id = KOA_better_than_dad
+		icon = GFX_Generic_Family
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_we_are_in_the_alliance }
+		relative_position_id = KOA_we_are_in_the_alliance
+		mutually_exclusive = { focus = KOA_big_brother }
+		mutually_exclusive = { focus = KOA_better_ourself }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#特尼安海医疗合作协定
+		id = KOA_tennian_med_coop_agreement
+		icon = GFX_Generic_Medicine02
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_better_than_dad }
+		relative_position_id = KOA_better_than_dad
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#雇佣南巴火炮工程师
+		id = KOA_hire_south_ba_cannon_engineers
+		icon = GFX_goal_Artillery_Tactics
+		cost = 5
+		x = -1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_tennian_med_coop_agreement }
+		relative_position_id = KOA_tennian_med_coop_agreement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#环海贸易联盟
+		id = KOA_circular_sea_trade_alliance
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_tennian_med_coop_agreement }
+		relative_position_id = KOA_tennian_med_coop_agreement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#共同海军协定
+		id = KOA_joint_navy_agreement
+		icon = GFX_goal_navy_decision
+		cost = 5
+		x = 1
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_hire_south_ba_cannon_engineers }
+		prerequisite = { focus = KOA_circular_sea_trade_alliance }
+		relative_position_id = KOA_hire_south_ba_cannon_engineers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#共和中央大学
+		id = KOA_republic_central_university
+		icon = GFX_focus_AUS_womens_education_initiative
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_joint_navy_agreement }
+		relative_position_id = KOA_joint_navy_agreement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#内海同盟
+		id = KOA_inland_sea_alliance
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_republic_central_university }
+		relative_position_id = KOA_republic_central_university
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#“我们的海”
+		id = KOA_our_sea
+		icon = GFX_Generic_Sea_Focus_Navy
+		cost = 5
+		x = 2
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_republic_central_university }
+		relative_position_id = KOA_republic_central_university
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#不如自个干！
+		id = KOA_better_ourself
+		icon = GFX_goal_Generic_Enough
+		cost = 5
+		x = 4
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_we_are_in_the_alliance }
+		relative_position_id = KOA_we_are_in_the_alliance
+		mutually_exclusive = { focus = KOA_big_brother }
+		mutually_exclusive = { focus = KOA_better_than_dad }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = { 	#接管陆军
+		id = KOA_take_over_armies
+		icon = GFX_goal_ideology_paternal_autocrat
+		cost = 2
+		x = 20
+		y = 1
+
+		available = {
+			OR = {
+				has_completed_focus = KOA_flower_of_navy
+				has_completed_focus = KOA_army_administration
+				has_completed_focus = KOA_national_congress
+			}
+		}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		allow_branch = { has_country_flag = FLAG_KOA_focus_2 }
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {	
+			add_political_power = 20
+			country_event = KOA.100
+		}
+	}
+	focus = { 	#政治挂帅
+		id = KOA_politics_in_command
+		icon = GFX_Generic_Command_Power
+		cost = 3
+		x = -1
+		y = 1
+
+		available = { has_country_flag = KOA_politics_in_command_flag }
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_take_over_armies }
+		relative_position_id = KOA_take_over_armies
+		mutually_exclusive = { focus = KOA_new_country_new_army }
+
+		completion_reward = {	
+			army_experience = 25
+			remove_ideas = KOA_sea_land_conflict
+			add_timed_idea = {
+				idea = KOA_politics_in_command_idea
+				days = 210
+			}
+			delete_unit_template_and_units = {
+				division_template = "卫戍部队"
+			}
+			delete_unit_template_and_units = {
+				division_template = "步战近卫军"
+			}
+			division_template = {
+				name = "共和军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			307 = {
+				create_unit = {
+					division = "name = \"东区2旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"港区8旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"卡尔什教堂区1旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+			}
+			division_template = {
+				name = "革命近卫军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 1 y = 0 }
+				}
+			}
+			307 = {
+				create_unit = {
+					division = "name = \"第114“前卫”突击近卫军\" division_template = \"革命近卫军\" start_experience_factor = 0.1 start_equipment_factor = 1"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"第68“无畏”近卫师\" division_template = \"革命近卫军\" start_experience_factor = 0.1 start_equipment_factor = 1"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"第104“真理”装甲禁卫军\" division_template = \"革命近卫军\" start_experience_factor = 0.1 start_equipment_factor = 1"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+			}
+		}
+	}
+
+	focus = { 	#召集海魂衫
+		id = KOA_summon_the_ocean_shirt
+		icon = GFX_Generic_Factionalism
+		cost = 2
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_politics_in_command
+						 focus = KOA_new_country_new_army }
+		relative_position_id = KOA_politics_in_command
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = KOA_ocean_shirt
+		}
+	}
+
+	focus = { 	#新国家，新军队
+		id = KOA_new_country_new_army
+		icon = GFX_Generic_Helmet_Knife
+		cost = 3
+		x = 1
+		y = 1
+
+		available = { has_country_flag = KOA_new_country_new_army_flag }
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_take_over_armies }
+		relative_position_id = KOA_take_over_armies
+		mutually_exclusive = { focus = KOA_politics_in_command }
+
+		completion_reward = {
+			remove_ideas = KOA_sea_land_conflict
+			add_timed_idea = {
+				idea = KOA_the_new_army
+				days = 210
+			}
+			delete_unit_template_and_units = {
+				division_template = "卫戍部队"
+			}
+			delete_unit_template_and_units = {
+				division_template = "步战近卫军"
+			}
+			division_template = {
+				name = "共和军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			307 = {
+				create_unit = {
+					division = "name = \"东区2旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"港区8旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"卡尔什教堂区1旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"“胜利”3旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"科伦特区9旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"洛菲考特区5旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+				create_unit = {
+					division = "name = \"“真理”16旅\" division_template = \"共和军\" start_experience_factor = 0.1 start_equipment_factor = 0.3"  
+					owner = KOA
+					prioritize_location = 9557
+				}
+			}
+		}
+	}
+
+	focus = { 	#革命保卫队
+		id = KOA_revolutionary_guards
+		icon = GFX_goal_Generic_Chinese_Soldiers
+		cost = 2
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_politics_in_command
+						 focus = KOA_new_country_new_army }
+		relative_position_id = KOA_new_country_new_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {	
+			add_manpower = 10000
+			add_ideas = KOA_revolutionary_guards_idea
+		}
+	}
+
+	focus = { 	#雄鸡之师
+		id = KOA_army_of_roosters
+		icon = GFX_Generic_Colonial_Army
+		cost = 3
+		x = 1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_summon_the_ocean_shirt 
+						 focus = KOA_revolutionary_guards }
+		relative_position_id = KOA_summon_the_ocean_shirt
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = KOA_army_of_roosters_tt
+			if = {
+				limit = { has_idea = KOA_ocean_shirt }
+				swap_ideas = {
+					remove_idea = KOA_ocean_shirt
+					add_idea = KOA_army_of_roosters_idea_1
+				}
+			}
+			else_if = {
+				limit = { has_idea = KOA_revolutionary_guards_idea }
+				swap_ideas = {
+					remove_idea = KOA_revolutionary_guards_idea
+					add_idea = KOA_army_of_roosters_idea_2
+				}
+			}
+		}
+	}
+
+	focus = { 	#高岭雄鹰在展望
+		id = KOA_highland_assault_team
+		icon = GFX_focus_AFG_mountain_training
+		cost = 5
+		x = -2
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_army_of_roosters }
+		relative_position_id = KOA_army_of_roosters
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOA_highland_assault_team
+				category = mountaineers_tech
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				name = KOA_highland_assault_team
+				category = artillery
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+
+	focus = { 	#格里夫军械厂
+		id = KOA_greeve_arsenal
+		icon = GFX_focus_RAJ_mountain_guns
+		cost = 5
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_army_of_roosters }
+		relative_position_id = KOA_army_of_roosters
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOA_greeve_arsenal
+				category = infantry_equipments
+				uses = 2
+				bonus = 0.5
+			}
+		}
+	}
+
+	focus = { 	#圣伊丽丝医疗团
+		id = KOA_saint_elizabeth_medical_corps
+		icon = GFX_focus_generic_field_hostpital
+		cost = 3
+		x = 2
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_army_of_roosters }
+		relative_position_id = KOA_army_of_roosters
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOA_saint_elizabeth_medical_corps
+				category = hospital_tech
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				name = KOA_saint_elizabeth_medical_corps
+				category = infantry_uniforms
+				uses = 1
+				bonus = 0.5
+			}
+			army_experience = 15
+		}
+	}
+
+	focus = { 	#准备干涉鲁萨尔
+		id = KOA_ready_intervene_rsu
+		icon = GFX_focus_generic_annex_country_2
+		cost = 2
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		bypass = {
+			has_global_flag = SPC_region_unified_global_6
+		}
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_highland_assault_team }
+		prerequisite = { focus = KOA_greeve_arsenal }
+		prerequisite = { focus = KOA_saint_elizabeth_medical_corps }
+		relative_position_id = KOA_greeve_arsenal
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = KOA_ready_intervene_rsu_decisions
+		}
+	}
+
+	####于连####
+	focus = {	#于连的加冕典礼
+		id = KOA_yulian_cronation
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 1
+		x = 5
+		y = 1
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_council_to_elect_a_king }
+		relative_position_id = KOA_council_to_elect_a_king
+		cancelable = no
+
+		allow_branch = {
+			NOT = { has_country_flag = FLAG_KOA_willian_win }
+			NOT = { has_country_flag = FLAG_KOA_stanwaf_win }
+			NOT = { has_country_flag = FLAG_KOA_focus_2 }
+		}
+		available = { has_country_flag = FLAG_KOA_yulian_win }
+
+		offset = {
+			x = -5
+			trigger = { has_country_flag = FLAG_KOA_yulian_win }
+		}
+
+		completion_reward = {	
+			country_event = KOA.300
+		}
+	}
+
+	focus = { 	#广撒耳目
+		id = KOA_spread_the_ears
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 2
+		x = -1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_yulian_cronation }
+		relative_position_id = KOA_yulian_cronation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = { id = KOA.301 days = 5 }
+			add_timed_idea = {
+				idea = KOA_dark_tide_surging
+				days = 70
+			}
+		}
+	}
+
+	focus = { 	#东城聚会
+		id = KOA_east_city_meet
+		icon = GFX_focus_BRA_rio_protocol
+		cost = 2
+		x = 1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_yulian_cronation }
+		relative_position_id = KOA_yulian_cronation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = { id = KOA.302 days = 5 }
+		}
+	}
+
+	focus = { 	#王城事变
+		id = KOA_capital_unforeseen_event
+		icon = GFX_focus_GER_monarchy_compromise
+		cost = 5
+		x = 1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_spread_the_ears }
+		prerequisite = { focus = KOA_east_city_meet }
+		relative_position_id = KOA_spread_the_ears
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = { 	#王党
+		id = KOA_monarchists_takes_over
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		cost = 4
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_capital_unforeseen_event }
+		relative_position_id = KOA_capital_unforeseen_event
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_political_power = 30
+			remove_ideas = KOA_political_chaos
+			add_ideas = KOA_local_infidelity
+			remove_dynamic_modifier = { modifier = KOA_backward_economy_dynamic_modifiers }
+			KOA_economic_difficulty_setup_effect = yes
+			remove_ideas = KOA_sea_land_conflict
+			KOA_military_chaos_effect = yes
+			country_lock_all_division_template = yes
+		}
+	}
+
+	focus = { 	#骑士主义
+		id = KOA_the_chivalry
+		icon = GFX_focus_generic_horse_studs
+		cost = 3
+		x = -2
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_monarchists_takes_over }
+		relative_position_id = KOA_monarchists_takes_over
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			KOA_yulian = {
+				swap_country_leader_traits = {
+					remove = KOA_trait_yulian
+					add = KOA_trait_yulian_plus
+				}
+			}
+		}
+	}
+
+	focus = { 	#教会救济原则
+		id = KOA_principle_of_ecclesiastical_relief
+		icon = GFX_focus_generic_welfare
+		cost = 3
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_monarchists_takes_over }
+		relative_position_id = KOA_monarchists_takes_over
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = KOA_principle_of_ecclesiastical_relief_tt
+			add_political_power = 25
+			add_to_variable = { KOA_economic_difficulty_ppc = 0.2 }
+			add_to_variable = { KOA_economic_difficulty_cgf = -0.15 }
+			add_to_variable = { KOA_economic_difficulty_psbf = 0.2 }
+			add_to_variable = { KOA_economic_difficulty_mlsdp = -2 }
+		}
+	}
+
+	focus = { 	#普世秩序
+		id = KOA_ecumenical_order
+		icon = GFX_focus_RAJ_protest_against_the_howell_monument
+		cost = 5
+		x = 1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_the_chivalry }
+		prerequisite = { focus = KOA_principle_of_ecclesiastical_relief }
+		relative_position_id = KOA_the_chivalry
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = KOA_ecumenical_order_tt
+			add_to_variable = { KOA_economic_difficulty_ppc = -0.25 }
+			add_to_variable = { KOA_economic_difficulty_cgf = -0.2 }
+			add_to_variable = { KOA_economic_difficulty_cf = 0.25 }
+			add_to_variable = { KOA_economic_difficulty_psbf = 0.1 }
+			add_to_variable = { KOA_economic_difficulty_mlsdp = 1 }
+			KOA_ecumenical_order_mod_setup_effect = yes
+		}
+	}
+
+	focus = { 	#征收不义税
+		id = KOA_levy_unjust_taxes
+		icon = GFX_focus_RAJ_war_taxes
+		cost = 3
+		x = 2
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_monarchists_takes_over }
+		relative_position_id = KOA_monarchists_takes_over
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = KOA_levy_unjust_taxes_tt
+			add_political_power = 20
+			add_to_variable = { KOA_economic_difficulty_ppc = -0.25 }
+			add_to_variable = { KOA_economic_difficulty_cgf = -0.15 }
+			add_to_variable = { KOA_economic_difficulty_mlsdp = 1 }
+		}
+	}
+
+	focus = { 	#重建协会制
+		id = KOA_rebuild_association_system
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		cost = 4
+		x = -1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_levy_unjust_taxes }
+		relative_position_id = KOA_levy_unjust_taxes
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = KOA_new_system_of_associations
+		}
+	}
+
+	focus = { 	#王教与共
+		id = KOA_the_theocracy
+		icon = GFX_focus_BEL_christian_corporatism
+		cost = 3
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_ecumenical_order }
+		prerequisite = { focus = KOA_rebuild_association_system }
+		relative_position_id = KOA_ecumenical_order
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = KOA_the_theocracy_tt
+			add_to_variable = { KOA_ecumenical_order_mod_rsf = -0.1 }
+			add_to_variable = { KOA_ecumenical_order_mod_pfmef = 0.1 }
+			add_to_variable = { KOA_ecumenical_order_mod_ms = 0.05 }
+		}
+	}
+
+	focus = { 	#圣保禄侍从团
+		id = KOA_squire_of_st_pauls
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		cost = 2
+		x = 0
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_ecumenical_order }
+		prerequisite = { focus = KOA_rebuild_association_system }
+		relative_position_id = KOA_rebuild_association_system
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = KOA_squire_of_st_pauls_idea
+			remove_dynamic_modifier = { modifier = KOA_military_chaos }
+			add_dynamic_modifier = { modifier = KOA_the_progressing_army }
+			add_to_variable = { KOA_military_chaos_ps = 0.1 }
+			add_to_variable = { KOA_military_chaos_cpgm = 0.2 }
+			add_to_variable = { KOA_military_chaos_pcf = -0.2 }
+			add_to_variable = { KOA_military_chaos_lrr = 0.02 }
+			country_lock_all_division_template = no
+		}
+	}
+
+	focus = { 	#新莱维体制
+		id = KOA_new_levy_system
+		icon = GFX_focus_AFG_parliamentary_democracy
+		cost = 5
+		x = 1
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_the_theocracy }
+		prerequisite = { focus = KOA_squire_of_st_pauls }
+		relative_position_id = KOA_the_theocracy
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = KOA_new_levy_system_idea
+		}
+	}
+
+	focus = { 	#护农官
+		id = KOA_farmer_protector
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cost = 2
+		x = 2
+		y = 1
+
+		available = {}
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = KOA_ecumenical_order }
+		prerequisite = { focus = KOA_rebuild_association_system }
+		relative_position_id = KOA_rebuild_association_system
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = KOA_farmer_protector_tt
+			add_to_variable = { KOA_ecumenical_order_mod_madp = 2 }
+			add_to_variable = { KOA_ecumenical_order_mod_cf = 0.5 }
+			add_to_variable = { KOA_ecumenical_order_mod_wsf = 0.5 }
+		}
+	}
+}

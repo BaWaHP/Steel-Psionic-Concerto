@@ -1,0 +1,27 @@
+
+state={
+	id=37
+	name="STATE_37"
+	provinces={
+		11992 18358 18443 18444 18500 18526 18548 18572 18618 18679 18688 22062
+	}
+	resources = {
+		oil = 8
+		tungsten = 32
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			18500 3
+		}
+	}
+	manpower=3220000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

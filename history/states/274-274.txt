@@ -1,0 +1,33 @@
+
+state={
+	id=274
+	name="STATE_274"
+
+	resources = {
+		magic_crystal = 12
+	}
+
+	history={
+		owner = SOT
+		add_core_of = SOT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			10633 5
+		}
+		victory_points = {
+			3774 3
+		}
+	}
+
+	provinces={
+		1266 3774 10059 10633 16543 16544 16688 16759 16879 16915 16929 
+	}
+	manpower=840000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

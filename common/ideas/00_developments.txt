@@ -1,0 +1,996 @@
+ideas = {
+
+	industrial_development = {
+		law = yes
+		use_list_view = yes
+
+		primitive_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				industry_repair_factor = -0.3
+				production_factory_max_efficiency_factor = -0.1
+				monthly_industrial_development_process = 4
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+		handcraft_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				conversion_cost_civ_to_mil_factor= 0.2
+				conversion_cost_mil_to_civ_factor = 0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				industry_repair_factor = -0.2
+				production_factory_max_efficiency_factor = -0.05
+				monthly_industrial_development_process = 2
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+		early_factory_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				conversion_cost_civ_to_mil_factor= 0.1
+				conversion_cost_mil_to_civ_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				industry_repair_factor = -0.1
+				production_factory_max_efficiency_factor = -0.025
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		factory_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				monthly_industrial_development_process = -2
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+		grouped_factory_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				production_speed_buildings_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				industry_repair_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				monthly_industrial_development_process = -4
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+		innovative_industry = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				industry_repair_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.2
+				monthly_industrial_development_process = -6
+				custom_modifier_tooltip = industrial_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+	
+	agricultural_development = {
+		law = yes
+		use_list_view = yes
+
+		primitive_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.3
+				global_building_slots_factor = -0.2
+				stability_factor = -0.3
+				war_stability_factor = 0.3
+				war_support_factor = -0.3
+				monthly_population = -0.3
+				monthly_agricultural_development_process = 4
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		self_efficient_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				global_building_slots_factor = -0.1
+				stability_factor = -0.2
+				war_stability_factor = 0.2
+				war_support_factor = -0.2
+				monthly_population = -0.2
+				monthly_agricultural_development_process = 2
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		weak_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				global_building_slots_factor = -0.05
+				stability_factor = -0.1
+				war_stability_factor = 0.1
+				war_support_factor = -0.1
+				monthly_population = -0.1
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		modern_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				monthly_agricultural_development_process = -2
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		half_auto_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				global_building_slots_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				monthly_population = 0.1
+				monthly_agricultural_development_process = -4
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		mechanized_agriculture = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				global_building_slots_factor = 0.1
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				monthly_population = 0.2
+				monthly_agricultural_development_process = -6
+				custom_modifier_tooltip = agricultural_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+	
+	military_development = {
+		law = yes
+		use_list_view = yes
+
+		primitive_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.3
+				max_planning = -0.3
+				planning_speed = -0.3
+				command_power_gain_mult = -0.3
+				max_command_power_mult = -0.3
+				military_leader_cost_factor = -0.3
+				special_forces_cap = -0.3
+				monthly_military_development_process = 4
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		unorganized_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.2
+				max_planning = -0.2
+				planning_speed = -0.2
+				command_power_gain_mult = -0.2
+				max_command_power_mult = -0.2
+				military_leader_cost_factor = -0.2
+				special_forces_cap = -0.2
+				monthly_military_development_process = 2
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		experienced_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+				max_planning = -0.1
+				planning_speed = -0.1
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.1
+				military_leader_cost_factor = -0.1
+				special_forces_cap = -0.1
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		very_experienced_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.05
+				experience_gain_army_unit_factor = 0.05
+				monthly_military_development_process = -2
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		advanced_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				max_planning = 0.1
+				planning_speed = 0.1
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				land_reinforce_rate = 0.01
+				military_leader_cost_factor = 0.1
+				special_forces_cap = 0.1
+				land_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
+				naval_doctrine_cost_factor = -0.05
+				army_leader_start_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+				navy_leader_start_level = 1
+				navy_leader_start_coordination_level = 1
+				navy_leader_start_maneuvering_level = 1
+				experience_gain_army = 0.01
+				experience_gain_air = 0.01
+				experience_gain_navy = 0.01
+				monthly_military_development_process = -4
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		innovative_army = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.2
+				experience_gain_army_unit_factor = 0.2
+				max_planning = 0.2
+				planning_speed = 0.2
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.2
+				land_reinforce_rate = 0.02
+				military_leader_cost_factor = 0.2
+				special_forces_cap = 0.2
+				land_doctrine_cost_factor = -0.1
+				air_doctrine_cost_factor = -0.1
+				naval_doctrine_cost_factor = -0.1
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 2
+				army_leader_start_planning_level = 2
+				navy_leader_start_level = 2
+				navy_leader_start_attack_level = 1
+				navy_leader_start_defense_level = 1
+				navy_leader_start_coordination_level = 2
+				navy_leader_start_maneuvering_level = 2
+				experience_gain_army = 0.05
+				experience_gain_air = 0.05
+				experience_gain_navy = 0.05
+				monthly_military_development_process = -6
+				custom_modifier_tooltip = military_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	living_standard_development = {
+		law = yes
+		use_list_view = yes
+
+		death_everywhere = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.3
+				monthly_population = -0.3
+				conscription_factor = 0.3
+				stability_factor = -0.3
+				compliance_growth_on_our_occupied_states = 0.3
+				resistance_target_on_our_occupied_states = -0.3
+				surrender_limit = -0.3
+				civilian_intel_to_others = 30
+				encryption_factor = -0.3
+				monthly_living_standard_development_process = 4
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		struggle_to_survive = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.2
+				monthly_population = -0.2
+				conscription_factor = 0.2
+				stability_factor = -0.2
+				war_support_factor = 0.2
+				compliance_growth_on_our_occupied_states = 0.2
+				resistance_target_on_our_occupied_states = -0.2
+				surrender_limit = -0.2
+				civilian_intel_to_others = 20
+				encryption_factor = -0.2
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		hard_to_survive = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				monthly_population = -0.1
+				conscription_factor = 0.1
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_target_on_our_occupied_states = -0.1
+				surrender_limit = -0.1
+				civilian_intel_to_others = 10
+				encryption_factor = -0.1
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		normally_living = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_living_standard_development_process = -4
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		extra_living = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.1
+				conscription_factor = -0.1
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				compliance_growth_on_our_occupied_states = -0.1
+				resistance_target_on_our_occupied_states = 0.1
+				surrender_limit = 0.1
+				civilian_intel_to_others = -10
+				encryption_factor = 0.1
+				monthly_living_standard_development_process = -6
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		best_living = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.2
+				monthly_population = 0.2
+				conscription_factor = -0.2
+				stability_factor = 0.2
+				war_support_factor = -0.2
+				compliance_growth_on_our_occupied_states = -0.2
+				resistance_target_on_our_occupied_states = 0.2
+				surrender_limit = 0.2
+				civilian_intel_to_others = -20
+				encryption_factor = 0.2
+				monthly_living_standard_development_process = -8
+				custom_modifier_tooltip = living_standard_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	environment_development = {
+		law = yes
+		use_list_view = yes
+
+		hazard_zone = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.3
+				local_resources_factor = -0.3
+				global_building_slots_factor = -0.2
+				production_speed_buildings_factor = -0.3
+				fuel_gain_factor = -0.3
+				attrition = 0.3
+				supply_consumption_factor = 0.3
+				supply_node_range = -0.3
+				occupation_cost = 0.3
+				monthly_environment_development_process = 6
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		unhabitable = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.2
+				local_resources_factor = -0.25
+				global_building_slots_factor = -0.15
+				production_speed_buildings_factor = -0.2
+				fuel_gain_factor = -0.25
+				attrition = 0.2
+				supply_consumption_factor = 0.25
+				supply_node_range = -0.25
+				occupation_cost = 0.2
+				monthly_environment_development_process = 4
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		uncomfortable = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.1
+				local_resources_factor = -0.2
+				global_building_slots_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				fuel_gain_factor = -0.2
+				attrition = 0.1
+				supply_consumption_factor = 0.2
+				supply_node_range = -0.2
+				occupation_cost = 0.1
+				monthly_environment_development_process = 2
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		controlled_pollution = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = -0.15
+				global_building_slots_factor = -0.05
+				fuel_gain_factor = -0.15
+				supply_consumption_factor = 0.15
+				supply_node_range = -0.15
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		relatively_comfortable = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				local_resources_factor = -0.05
+				fuel_gain_factor = -0.05
+				supply_consumption_factor = 0.05
+				supply_node_range = -0.05
+				monthly_environment_development_process = -2
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		real_natural_environment = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				monthly_population = 0.2
+				monthly_environment_development_process = -4
+				custom_modifier_tooltip = environment_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	research_development = {
+		law = yes
+		use_list_view = yes
+
+		fuck_the_science = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = -0.4
+				monthly_research_development_process = 4
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		nobody_cares = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = -0.3
+				monthly_research_development_process = 2
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		few_cares = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.2
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		fake_exists = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.1
+				monthly_research_development_process = -2
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		standard_research = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_research_development_process = -4
+				state_science_development_monthly = 0.01
+				state_magic_development_monthly = 0.01
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
+		willing_research = {
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				research_speed_factor = 0.1
+				monthly_research_development_process = -6
+				state_science_development_monthly = 0.02
+				state_magic_development_monthly = 0.02
+				custom_modifier_tooltip = research_development_generic_tt
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+}

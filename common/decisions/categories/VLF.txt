@@ -1,0 +1,9 @@
+VLF_regents_wish = {		#摄政王的野望
+	#picture = 
+	icon = GFX_decision_category_military_operation
+	allowed = { tag = VLF }
+	visible = { has_country_flag = VLF_regents_wish_on }
+	visible_when_empty = yes
+	priority = 10
+}
+

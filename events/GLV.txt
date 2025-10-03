@@ -1,0 +1,52 @@
+﻿###事件###
+
+add_namespace = GLV
+
+###新闻###
+
+add_namespace = GLVNews
+
+news_event = {
+	id = GLVNews.1		#向戈尔维亚进军
+	title = GLVNews.1.t
+	desc = GLVNews.1.d
+	picture = GFX_news_event_generic_41
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = GLVNews.1.a
+	}
+}
+
+news_event = {
+	id = GLVNews.2		#戈尔维亚反法西斯运动的胜利
+	title = GLVNews.2.t
+	desc = GLVNews.2.d
+	picture = GFX_news_event_generic_44
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = GLVNews.2.a
+	}
+}
+
+news_event = {
+	id = GLVNews.3		#戈尔维亚军队镇压骚乱！
+	title = GLVNews.3.t
+	desc = GLVNews.3.d
+	picture = GFX_news_event_generic_43
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = GLVNews.3.a
+	}
+}

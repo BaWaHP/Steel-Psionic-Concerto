@@ -1,0 +1,15 @@
+leader_traits = {
+
+	BCC_border_sentinel = {		#边疆哨兵
+		random = no
+		
+		army_core_attack_factor = -0.05
+		army_core_defence_factor = 0.1
+		army_org_regain = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

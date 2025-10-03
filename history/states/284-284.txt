@@ -1,0 +1,28 @@
+
+state={
+	id=284
+	name="STATE_284"
+	provinces={
+		3271 3756 6072 10285 14975 15095 15208 15275 15322 15440 15441 15498 
+	}
+	history={
+		owner = NOH
+		add_core_of = NOH
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 2
+		}
+		victory_points = {
+			3756 10
+		}
+		victory_points = {
+			3271 5
+		}
+	}
+	manpower = 1200000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

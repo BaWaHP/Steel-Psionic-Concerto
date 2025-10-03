@@ -1,0 +1,40 @@
+
+state={
+	id=455
+	name="STATE_455"
+	provinces={
+		2593 2737 6541 7618 8028 11887 18784 18849 18983 19053 19054 
+	}
+	resources = {
+		magic_crystal = 20
+		steel = 5
+		oil = 5
+	}
+	history = {
+		owner = VLF
+		add_core_of = VLF
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 4
+			arms_factory = 1
+			8028 = { naval_base = 3 }
+			6541 = { bunker = 1 }
+			8028 = { bunker = 1 }
+			11887 = { bunker = 1 }
+			18784 = { bunker = 1 }
+		}
+		victory_points = {
+			2593 10
+		}
+		victory_points = {
+			19054 8
+		}
+		victory_points = {
+			6541 3
+		}
+	}
+	manpower = 1500000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

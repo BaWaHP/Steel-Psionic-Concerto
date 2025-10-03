@@ -1,0 +1,28 @@
+state={
+	id=167
+	name="STATE_167"
+	provinces={
+		15067 
+	}
+	history = {
+		set_demilitarized_zone = yes
+		owner = ZBC
+		add_core_of = ZBC
+		victory_points = {
+			15067 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+			radar_station = 1
+			15067 = {
+				naval_base = 3
+			}
+		}
+	}
+	manpower = 610000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=95
+	name="STATE_95"
+	provinces={
+		1617 3633 5271 5629 8554 11656 15952 15989 16020 16056 16113 16212 16228 16364 16401 
+	}
+	resources = {
+		magic_crystal = 4
+	}
+	history = {
+		owner = SBG
+		add_core_of = SBG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		victory_points = {
+			5629 15
+		}
+		victory_points = {
+			16228 3
+		}
+	}
+	manpower = 2134543
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,132 @@
+﻿###templates###
+division_template = {
+	name = "不死军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+division_template = {
+	name = "海防军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+	}
+	
+	is_locked = yes
+
+	priority = 0
+}
+
+division_template = {
+	name = "哨戒队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+	
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "接生部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+	}
+	
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "禁卫队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+	
+	is_locked = yes
+
+	priority = 2
+}
+
+###units###
+
+units = {
+	division = {
+		name = "大喜不死军"
+		location = 20546
+		division_template = "不死军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "陆成海防军"
+		location = 10232
+		division_template = "海防军"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "蒙赐哨戒队"
+		location = 20398
+		division_template = "哨戒队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "大喜接生军"
+		location = 11394
+		division_template = "接生部队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "圣德布法殿禁卫队"
+		location = 20546
+		division_template = "禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

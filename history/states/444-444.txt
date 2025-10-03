@@ -1,0 +1,31 @@
+
+state={
+	id=444
+	name="STATE_444"
+	provinces={
+		3834 6049 9100 10058 11050 19611 19672 19690 19712 19743 19772 19790 19901 
+	}
+	resources = {
+		magic_crystal = 24
+		aluminium = 18
+		chromium = 19
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			11050 10
+		}
+		victory_points = {
+			10058 10
+		}
+	}
+	manpower = 996980
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

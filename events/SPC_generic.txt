@@ -1,0 +1,280 @@
+﻿###########################
+# generic Events #
+###########################
+
+add_namespace = generic_territory
+
+#0 - 999 东巴
+#100 - 吉拉尼亚
+#200 - 沃姆
+#300 - 联合王国
+#400 - 远乡
+
+#1000 - 2000 南巴
+
+country_event = {		#吉拉尼亚地区的未来
+	id = generic_territory.100
+	title = generic_territory.100.t
+	desc = generic_territory.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#是时候决定吉拉尼亚的未来了。
+		name = generic_territory.100.a
+		country_event = {
+			id = generic_territory.101
+			days = 1
+		}
+	}
+
+	option = {		#我们将稍后再处理这个问题
+		name = generic_territory.100.b
+	}
+}
+
+country_event = {		#吉拉尼亚的未来
+	id = generic_territory.101
+	title = generic_territory.101.t
+	desc = generic_territory.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#我们必须释放他们。
+		name = generic_territory.101.a
+		TPG = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_101_a_effect = yes }
+	}
+}
+
+country_event = {		#如何处理沃姆地区领土
+	id = generic_territory.200
+	title = generic_territory.200.t
+	desc = generic_territory.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#统一沃姆
+		name = generic_territory.200.a
+		country_event = {
+			id = generic_territory.201
+			days = 1
+		}
+	}
+
+	option = {		#最好分开讨论各地问题。
+		name = generic_territory.200.b
+		country_event = {
+			id = generic_territory.220
+			days = 1
+		}
+		country_event = {
+			id = generic_territory.240
+			days = 1
+		}
+		country_event = {
+			id = generic_territory.260
+			days = 1
+		}
+	}
+
+	option = {		#等会！最好不要太早下决定...
+		name = generic_territory.200.c
+	}
+}
+
+country_event = {		#沃姆的未来
+	id = generic_territory.201
+	title = generic_territory.201.t
+	desc = generic_territory.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#我们必须释放他们。
+		name = generic_territory.201.a
+		WOM = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_201_a_effect = yes }
+	}
+}
+
+country_event = {		#戈尔维亚地区的未来
+	id = generic_territory.220
+	title = generic_territory.220.t
+	desc = generic_territory.220.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#我们必须释放他们。
+		name = generic_territory.220.a
+		GLV = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_220_a_effect = yes }
+	}
+}
+
+country_event = {		#沃姆的未来
+	id = generic_territory.240
+	title = generic_territory.240.t
+	desc = generic_territory.240.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#我们必须释放他们。
+		name = generic_territory.240.a
+		WOM = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_240_a_effect = yes }
+	}
+}
+
+country_event = {		#斯布里奇地区的未来
+	id = generic_territory.260
+	title = generic_territory.260.t
+	desc = generic_territory.260.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#我们必须释放他们。
+		name = generic_territory.260.a
+		SBG = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_260_a_effect = yes }
+	}
+}
+
+country_event = {		#联合王国地区的未来
+	id = generic_territory.300
+	title = generic_territory.300.t
+	desc = generic_territory.300.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#拆分联合王国地区，不要让他们太过强势。
+		name = generic_territory.300.a
+		country_event = {
+			id = generic_territory.320
+			days = 1
+		}
+		country_event = {
+			id = generic_territory.340
+			days = 1
+		}
+		country_event = {
+			id = generic_territory.360
+			days = 1
+		}
+	}
+
+	option = {		#成立统一的联合王国！
+		name = generic_territory.300.b
+		country_event = {
+			id = generic_territory.301
+			days = 1
+		}
+	}
+
+	option = {		#等会！最好不要太早下决定...
+		name = generic_territory.300.c
+	}
+}
+
+country_event = {		#联合王国地区的未来
+	id = generic_territory.301
+	title = generic_territory.301.t
+	desc = generic_territory.301.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#成立新生的合作政府。
+		name = generic_territory.301.a
+		ARO = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_301_a_effect = yes }
+	}
+}
+
+country_event = {		#奥罗日亚的未来
+	id = generic_territory.320
+	title = generic_territory.320.t
+	desc = generic_territory.320.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#设立地方自治政府。
+		name = generic_territory.320.a
+		ARO = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_320_a_effect = yes }
+	}
+}
+
+country_event = {		#皮奥瑞亚的未来
+	id = generic_territory.340
+	title = generic_territory.340.t
+	desc = generic_territory.340.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#设立地方自治政府。
+		name = generic_territory.340.a
+		PEO = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_340_a_effect = yes }
+	}
+}
+
+country_event = {		#西莉迪亚的未来
+	id = generic_territory.360
+	title = generic_territory.360.t
+	desc = generic_territory.360.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#设立地方自治政府。
+		name = generic_territory.360.a
+		CLD = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_360_a_effect = yes }
+	}
+}
+
+country_event = {		#远乡地区的未来
+	id = generic_territory.400
+	title = generic_territory.400.t
+	desc = generic_territory.400.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {		#成立统一的远乡！
+		name = generic_territory.400.a
+		country_event = {
+			id = generic_territory.401
+			days = 1
+		}
+	}
+
+	option = {		#等会！最好不要太早下决定...
+		name = generic_territory.400.b
+	}
+}
+
+country_event = {		#新远乡的未来
+	id = generic_territory.401
+	title = generic_territory.401.t
+	desc = generic_territory.401.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {		#成立新生的合作政府。
+		name = generic_territory.401.a
+		SFH = { save_global_event_target_as = released_puppet_country }
+		hidden_effect = { generic_territory_401_a_effect = yes }
+	}
+}

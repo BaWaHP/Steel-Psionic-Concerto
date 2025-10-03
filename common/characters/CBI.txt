@@ -1,0 +1,23 @@
+characters={
+
+	#齐格弗里德·厄伯格
+	CBI_siegfried_ebers = {
+		name = CBI_siegfried_ebers
+		portraits = {
+			civilian = {
+				large="GFX_CBI_siegfried_ebers"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_CBI_siegfried_ebers"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = left_wing_nationalism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

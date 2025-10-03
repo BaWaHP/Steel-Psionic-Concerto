@@ -1,0 +1,30 @@
+
+state={
+	id=30
+	name="STATE_30"
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 1
+			2276 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			2276 1 
+		}
+
+	}
+
+	provinces={
+		2276 
+	}
+	manpower=59106
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

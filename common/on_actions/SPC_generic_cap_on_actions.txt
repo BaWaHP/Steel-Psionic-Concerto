@@ -1,0 +1,553 @@
+on_actions = {
+
+	on_war = {
+		effect = {
+			if = {
+				limit = { THIS = { is_in_faction = yes } }
+				if = {
+					limit = { THIS = { is_major = yes } }
+					THIS = {
+						set_country_flag = COUNTRY_PREWAR_MAJOR_FLAG
+					}
+				}
+				else = {
+					THIS = {
+						set_major = yes
+						set_country_flag = COUNTRY_PREWAR_NOT_MAJOR_FLAG
+					}
+				}
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			###FROM - 赢了###
+			###ROOT - 输了###
+
+			set_global_flag = show_peace_popup_alert
+
+			FROM = { save_global_event_target_as = winning_country }
+			ROOT = { save_global_event_target_as = losing_country }
+
+			if = {
+				limit = {
+					event_target:losing_country = {
+						any_allied_country = { has_war_together_with = event_target:losing_country }
+					}
+				}
+				set_global_flag = losing_country_multiple
+			}
+
+			if = {
+				limit = {
+					event_target:winning_country = {
+						any_allied_country = { has_war_together_with = event_target:winning_country }
+					}
+				}
+				set_global_flag = winning_country_multiple
+			}
+
+			if = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								if = {
+									limit = {
+										has_war_with = FROM
+										has_country_flag = COUNTRY_PREWAR_MAJOR_FLAG
+									}
+									has_capitulated = yes
+								}
+							}
+						}
+					}
+				}
+				set_global_flag = war_won
+
+				###需要跳过吞并的话在末尾加set_global_flag = skip_default_capitulation###
+
+				###############
+				###东巴斯蒂亚###
+				###############
+
+				###南远乡内战###
+				#中央赢了#
+				if = {
+					limit = {
+						FROM = { tag = SFH }
+						if = {
+							limit = { ROOT = { tag = SFR } }
+							QTA = { exists = no }
+						}
+						if = {
+							limit = { ROOT = { tag = QTA } }
+							SFR = { exists = no }
+						}
+					}
+					SFH = {	country_event = SFH.1000 }
+				}
+				#叛军赢了且双方均存在#
+				if = {
+					limit = {
+						FROM = { OR = { tag = SFR tag = QTA } }
+						ROOT = { tag = SFH }
+						SFR = { exists = yes }
+						QTA = { exists = yes }
+					}
+					QTA = {
+						transfer_state = 3
+						transfer_state = 4
+						transfer_state = 171
+						transfer_state = 172
+						transfer_state = 2
+						transfer_state = 173
+						transfer_state = 7
+						transfer_state = 8
+						transfer_state = 30
+					}
+					SFR = {
+						transfer_state = 13
+						transfer_state = 121
+						transfer_state = 9
+						transfer_state = 10
+						transfer_state = 174
+						transfer_state = 170
+						transfer_state = 5
+						country_event = SFR.152
+					}
+					news_event = SFHNews.4
+					set_global_flag = skip_default_capitulation
+				}
+				#叛军赢了且另一方亖了#
+				if = {
+					limit = {
+						FROM = { OR = { tag = SFR tag = QTA } }
+						ROOT = { tag = SFH }
+						OR = {
+							QTA = { exists = no }
+							SFR = { exists = no }
+						}
+					}
+					if = {
+						limit = { QTA = { exists = no } }
+						SFR = {
+							annex_country = { target = SFH }
+							annex_country = { target = QTA }
+							country_event = SFR.152
+						}
+						news_event = SFHNews.16
+					}
+					else_if = {
+						limit = { SFR = { exists = no } }
+						QTA = {
+							annex_country = { target = SFH }
+							annex_country = { target = SFR }
+							#TODO
+						}
+						news_event = SFHNews.17
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				###南远乡vs西北特别行政区###
+				if = {
+					limit = {
+						FROM = { tag = SFH }
+						ROOT = { tag = NWF }
+					}
+					news_event = SFHNews.14
+				}
+
+				###北远乡内战###
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { tag = NFH }
+								ROOT = { tag = FFH }
+								AFH = { exists = no }
+							}
+							AND = {
+								FROM = { tag = NFH }
+								ROOT = { tag = AFH }
+								FFH = { exists = no }
+							}
+						}
+					}
+					SFH = { set_country_flag = SFH_nfh_end_civil_war }
+				}
+
+				###沃姆内战###
+				if = {
+					limit = { 
+						FROM = { tag = WOM }
+						ROOT = { OR = { tag = IRC tag = PRF } }
+						if = {
+							limit = { ROOT = { tag = IRC } }
+							PRF = { exists = no }
+						}
+						else_if = {
+							limit = { ROOT = { tag = PRF } }
+							IRC = { exists = no }
+						}
+					}
+					set_global_flag = SPC_region_unified_global_12
+					WOM = {
+						country_event = {
+							id = WOM.10
+							days = 7
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						FROM = { tag = PRF }
+						ROOT = { OR = { tag = IRC tag = WOM } }
+						if = {
+							limit = { ROOT = { tag = IRC } }
+							WOM = { exists = no }
+						}
+						else_if = {
+							limit = { ROOT = { tag = WOM } }
+							IRC = { exists = no }
+						}
+					}
+					set_global_flag = SPC_region_unified_global_12
+					PRF = {
+						country_event = {
+							id = WOM.10
+							days = 7
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						FROM = { tag = IRC }
+						ROOT = { OR = { tag = PRF tag = WOM } }
+						if = {
+							limit = { ROOT = { tag = PRF } }
+							WOM = { exists = no }
+						}
+						else_if = {
+							limit = { ROOT = { tag = WOM } }
+							PRF = { exists = no }
+						}
+					}
+					set_global_flag = SPC_region_unified_global_12
+					IRC = {
+						country_event = {
+							id = WOM.10
+							days = 7
+						}
+					}
+				}
+
+				###############
+				###南巴斯蒂亚###
+				###############
+
+				###鲁萨尔内战###
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { tag = RSU }
+								ROOT = { tag = RRF }
+							}
+							AND = {
+								FROM = { tag = RRF }
+								ROOT = { tag = RSU }
+							}
+						}
+					}
+					set_global_flag = SPC_region_unified_global_6
+				}
+
+				###勒泰特尼安内战###
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { tag = RLN }
+								ROOT = { tag = LNR }
+							}
+							AND = {
+								FROM = { tag = LNR }
+								ROOT = { tag = RLN }
+							}
+						}
+					}
+					RLN = { country_event = RLN.6 }
+				}
+
+				###特尼安内战###
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								FROM = { tag = LNR }
+								ROOT = {
+									OR = { tag = RLN tag = KOA }
+									RLN = { exists = no }
+									KOA = { exists = no }
+								}
+							}
+							AND = {
+								FROM = { tag = RLN }
+								ROOT = {
+									OR = { tag = LNR tag = KOA }
+									LNR = { exists = no }
+									KOA = { exists = no }
+								}
+							}
+							AND = {
+								FROM = { tag = KOA }
+								ROOT = {
+									OR = {
+										tag = LNR tag = RLN
+									}
+									LNR = { exists = no }
+									RLN = { exists = no }
+								}
+							}
+						}
+					}
+					set_global_flag = SPC_region_unified_global_5
+					clr_global_flag = SB_tenian_civil_war_global
+				}
+				###特尼安特殊情况###
+				if = {
+					limit = { ROOT = { tag = KOA has_completed_focus = KOA_new_levy_system } }
+					FROM = { country_event = KOA.303 }
+				}
+
+				###托莱多内战###
+				#联邦赢了#
+				if = {
+					limit = {
+						FROM = { tag = TCW }
+						ROOT = { tag = KTL }
+					}
+					TCW = {
+						country_event = TCW.10
+						news_event = TCWNews.1
+						country_event = { id = TCW.18 days = 5 }
+					}
+				}
+				#王国赢了#
+				if = {
+					limit = {
+						FROM = { tag = KTL }
+						ROOT = { tag = TCW }
+					}
+					KTL = {
+						country_event = { id = TCW.11 days = 2 }
+						news_event = TCWNews.2
+					}
+				}
+
+				###############
+				###西巴斯蒂亚###
+				###############
+
+				###七河vs于摩###
+ 				if = {
+ 					limit = {
+ 						FROM = { OR = { tag = ZHE tag = BOT tag = CHE tag = SHA tag = SIN tag = TEG } }
+ 						ROOT = { tag = WUN }
+ 						WUN = { has_country_flag = WUN_first_war_flag }
+ 					}
+ 					WUN = { 
+ 						clr_country_flag = WUN_first_war_flag
+ 						load_focus_tree = generic_focus
+ 					}
+ 					ZHE = {
+ 						annex_country = {
+ 							target = WUN
+ 							transfer_troops = no
+ 						}
+						delete_unit_template_and_units = {
+							division_template = "联邦国防军复员步兵旅"
+						}
+						delete_unit_template_and_units = {
+							division_template = "地方保卫厅复员部队"
+						}
+ 						#country_event = ZHE.0
+ 					}
+ 					set_global_flag = skip_default_capitulation
+ 				}
+ 				if = {
+					limit = {
+						FROM = { tag = WUN }
+						ROOT = { tag = ZHE }
+						WUN = { has_country_flag = WUN_first_war_flag }
+					}
+					WUN = { 
+						clr_country_flag = WUN_first_war_flag
+						delete_unit_template_and_units = {
+							division_template = "于摩义兵"
+						}
+					}
+				}
+
+				###############
+				#####提特兰#####
+				###############
+
+				###蒙特内内内内内内内内战###
+				if = {
+					limit = {
+						FROM = { OR = { tag = MTV tag = WDR tag = MCS tag = LCM } }
+						ROOT = { OR = { tag = MTV tag = WDR tag = MCS tag = LCM } }
+					}
+					if = {
+						limit = { MTV = { exists = yes } }
+						MTV = {
+							add_days_mission_timeout = {
+								mission = MTV_civilwar_worsen_mission
+								days = 25
+							}
+						}
+					}
+					if = {
+						limit = { WDR = { exists = yes } }
+						WDR = {
+							add_days_mission_timeout = {
+								mission = MTV_civilwar_worsen_mission
+								days = 25
+							}
+						}
+					}
+					if = {
+						limit = { MCS = { exists = yes } }
+						MCS = {
+							add_days_mission_timeout = {
+								mission = MTV_civilwar_worsen_mission
+								days = 25
+							}
+						}
+					}
+					if = {
+						limit = { LCM = { exists = yes } }
+						LCM = {
+							add_days_mission_timeout = {
+								mission = MTV_civilwar_worsen_mission
+								days = 25
+							}
+						}
+					}
+				}
+
+				#夹击牛头人特供#
+				if = {
+					limit = { 
+						ROOT = {
+							tag = IMC
+							any_enemy_country = {
+								has_idea = ROT_common_struggle
+							}
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				###################
+				#####中巴斯蒂亚#####
+				###################
+
+				###中巴内战###
+				if = {
+					limit = {
+						FROM = { SPC_generic_region_trigger_200 = yes }
+						ROOT = { SPC_generic_region_trigger_200 = yes }
+					}
+					if = {
+						limit = {
+							NOT = {
+								any_country = {
+									SPC_generic_region_trigger_200 = yes
+									NOT = { tag = FROM }
+									NOT = { is_in_faction_with = FROM }
+									exists = yes
+								}
+							}
+						}
+						set_global_flag = SPC_region_unified_global_11
+					}
+				}
+
+				###默认情况下直接吞###
+				if = {
+					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+									is_subject_of = ROOT
+								}
+							}
+							if = {
+								limit = { has_country_flag = COUNTRY_PREWAR_MAJOR_FLAG }
+								clr_country_flag = COUNTRY_PREWAR_MAJOR_FLAG
+							}
+							if = {
+								limit = { has_country_flag = COUNTRY_PREWAR_NOT_MAJOR_FLAG }
+								set_major = no
+								clr_country_flag = COUNTRY_PREWAR_NOT_MAJOR_FLAG
+							}
+							FROM = {
+								#white_peace = PREV
+								annex_country = {
+									target = PREV
+									transfer_troops = no
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				set_global_flag = war_continuing
+
+				###紧急预备方案###
+				if = {
+					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					FROM = {
+						ROOT = {
+							if = {
+								limit = { has_country_flag = COUNTRY_PREWAR_MAJOR_FLAG }
+								clr_country_flag = COUNTRY_PREWAR_MAJOR_FLAG
+							}
+							if = {
+								limit = { has_country_flag = COUNTRY_PREWAR_NOT_MAJOR_FLAG }
+								set_major = no
+								clr_country_flag = COUNTRY_PREWAR_NOT_MAJOR_FLAG
+							}
+						}
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+					}
+				}
+			}
+			clr_global_flag = skip_default_capitulation
+		}
+	}
+
+	on_annex = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { has_country_flag = generic_territory_has_been_rebuilt }
+					clr_country_flag = generic_territory_has_been_rebuilt
+				}
+			}
+		}
+	}
+}

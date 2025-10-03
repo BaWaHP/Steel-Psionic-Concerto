@@ -1,0 +1,203 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_RSU_startup_effect = {
+	if = {
+		limit = {
+			tag = RSU
+		}
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_suderian
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###变量###
+		set_variable = { RSU_majestic_haze_rcd = 0.05 }
+		set_variable = { RSU_majestic_haze_wm = -50 }
+		set_variable = { RSU_majestic_haze_psbf = -0.05 }
+		set_variable = { RSU_majestic_haze_icf = -0.05 }
+		force_update_dynamic_modifier = yes
+		###其它内容###
+		320 = {
+			add_dynamic_modifier = {
+				modifier = RSU_regions_affected_by_labor_union
+			}
+		}
+		346 = {
+			add_dynamic_modifier = {
+				modifier = RSU_regions_affected_by_labor_union
+			}
+		}
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 313
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 314
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 315
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 316
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 317
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 318
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 319
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 320
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 321
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 346
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 322
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+		}
+	}
+}
+
+RSU_union_development_clear_var = {
+	set_variable = { RSU_union_development_north_icon = 0 }
+	set_variable = { RSU_union_development_east_icon = 0 }
+	set_variable = { RSU_union_development_south_icon = 0 }
+	set_variable = { RSU_union_development_west_icon = 0 }
+}
+
+RSU_union_development_initilization = {
+	###全联盟发展决议###
+	set_variable = { RSU_union_development_north_icon = 0 }
+	set_variable = { RSU_union_development_east_icon = 0 }
+	set_variable = { RSU_union_development_south_icon = 0 }
+	set_variable = { RSU_union_development_west_icon = 0 }
+	set_variable = { RSU_union_conference_cgf = 0 }
+	set_variable = { RSU_union_conference_psrwf = 0 }
+	set_variable = { RSU_union_conference_psbf = 0 }
+	set_variable = { RSU_union_conference_pfmef = 0 }
+	set_variable = { RSU_union_conference_lrf = 0 }
+	set_variable = { RSU_union_conference_lcpef = 0 }
+	force_update_dynamic_modifier = yes
+}

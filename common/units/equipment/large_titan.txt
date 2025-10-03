@@ -1,0 +1,243 @@
+# All infantry equipment
+
+equipments = {
+
+	heavy_titan_equipment = {
+		year = 1900
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = no
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 32
+		breakthrough = 12
+		hardness = 0.8
+		armor_value = 60
+
+		#Offensive Abilities
+		soft_attack = 21
+		hard_attack = 11
+		ap_attack = 21
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+		
+		build_cost_ic = 12
+		resources = {
+			steel = 4
+			magic_crystal = 2
+			chromium = 1
+		}
+
+		fuel_consumption = 4.8
+	}
+
+	heavy_titan_equipment_0 = {
+		year = 1998
+	
+		active = no
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+	}
+
+	scorch_titan_equipment_0 = {
+		year = 2002
+	
+		active = no
+		parent = heavy_titan_equipment_0
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 40
+		breakthrough = 16
+		hardness = 0.8
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 31
+		hard_attack = 16
+		ap_attack = 41
+		air_attack = 0
+
+		build_cost_ic = 15
+		fuel_consumption = 5.6
+		resources = {
+			steel = 5
+			magic_crystal = 2
+			chromium = 2
+		}
+	}
+
+	scorch_titan_equipment_1 = {
+		year = 2008
+	
+		active = no
+		parent = scorch_titan_equipment_0
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 48
+		breakthrough = 20
+		hardness = 0.85
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 41
+		hard_attack = 21
+		ap_attack = 61
+		air_attack = 0
+
+		build_cost_ic = 18
+		fuel_consumption = 6.4
+		resources = {
+			steel = 5
+			magic_crystal = 3
+			chromium = 2
+		}
+	}
+
+	scorch_titan_equipment_2 = {
+		year = 2012
+	
+		active = no
+		parent = scorch_titan_equipment_1
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 56
+		breakthrough = 24
+		hardness = 0.9
+		armor_value = 120
+
+		#Offensive Abilities
+		soft_attack = 51
+		hard_attack = 26
+		ap_attack = 81
+		air_attack = 0
+
+		build_cost_ic = 21
+		fuel_consumption = 7.2
+		resources = {
+			steel = 6
+			magic_crystal = 3
+			chromium = 3
+		}
+	}
+
+	legion_titan_equipment_0 = {
+		year = 2002
+	
+		active = no
+		parent = heavy_titan_equipment_0
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 40
+		breakthrough = 20
+		hardness = 0.8
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 16
+		hard_attack = 31
+		ap_attack = 41
+		air_attack = 0
+
+		build_cost_ic = 15
+		fuel_consumption = 5.6
+		resources = {
+			steel = 4
+			magic_crystal = 2
+			chromium = 2
+		}
+	}
+
+	legion_titan_equipment_1 = {
+		year = 2008
+	
+		active = no
+		parent = legion_titan_equipment_0
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 48
+		breakthrough = 24
+		hardness = 0.85
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 21
+		hard_attack = 41
+		ap_attack = 61
+		air_attack = 0
+
+		build_cost_ic = 18
+		fuel_consumption = 6.4
+		resources = {
+			steel = 5
+			magic_crystal = 3
+			chromium = 2
+		}
+	}
+
+	legion_titan_equipment_2 = {
+		year = 2012
+	
+		active = no
+		parent = legion_titan_equipment_1
+		archetype = heavy_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 56
+		breakthrough = 28
+		hardness = 0.9
+		armor_value = 120
+
+		#Offensive Abilities
+		soft_attack = 26
+		hard_attack = 51
+		ap_attack = 81
+		air_attack = 0
+
+		build_cost_ic = 21
+		fuel_consumption = 7.2
+		resources = {
+			steel = 6
+			magic_crystal = 3
+			chromium = 3
+		}
+	}
+
+}

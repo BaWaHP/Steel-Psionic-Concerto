@@ -1,0 +1,23 @@
+characters={
+
+	#弗朗茨·安东·舒尔茨
+	FWJ_franz_anton_schultz = {
+		name = FWJ_franz_anton_schultz
+		portraits = {
+			civilian = {
+				large="GFX_FWJ_franz_anton_schultz"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_FWJ_franz_anton_schultz"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

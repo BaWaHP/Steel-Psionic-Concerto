@@ -1,0 +1,733 @@
+﻿focus_tree = {
+	id = WUN_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WUN
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#于摩王的为君之道
+		id = WUN_way_of_the_king_focus
+		icon = GFX_WUN_way_of_the_king_focus
+		x = 10
+		y = 0
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = WUN.200
+			add_to_variable = { WUN_way_of_the_king_sf = 0.1 }
+			add_to_variable = { WUN_way_of_the_king_sw = -0.002 }
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = WUN_way_of_the_king }
+			}
+			custom_effect_tooltip = WUN_way_of_the_king_focus_tt
+		}
+	}
+
+	focus = {	#无酒不欢
+		id = WUN_wines_and_joys
+		icon = GFX_WUN_wines_and_joys
+		x = -2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_way_of_the_king_focus }
+		relative_position_id = WUN_way_of_the_king_focus
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "于摩义兵"
+					}
+				}
+				division_template = {
+					name = "于摩义兵"
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"于摩义兵\" division_template = \"于摩义兵\" start_experience_factor = 0 start_equipment_factor = 0.45"  
+					owner = WUN
+				}	
+			}
+			add_to_variable = { WUN_way_of_the_king_cgf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_mid = 0.1 }
+			add_to_variable = { WUN_way_of_the_king_ppsf = 0.1 }
+			custom_effect_tooltip = WUN_wines_and_joys_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#从我者生
+		id = WUN_followers_survive
+		icon = GFX_WUN_followers_survive
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_way_of_the_king_focus }
+		relative_position_id = WUN_way_of_the_king_focus
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = -2500
+			add_to_variable = { WUN_way_of_the_king_aiaf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_aidf = 0.05 }
+			custom_effect_tooltip = WUN_followers_survive_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#食色性也
+		id = WUN_food_for_sex
+		icon = GFX_WUN_food_for_sex
+		x = 2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_way_of_the_king_focus }
+		relative_position_id = WUN_way_of_the_king_focus
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "于摩义兵"
+					}
+				}
+				division_template = {
+					name = "于摩义兵"
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"于摩义兵\" division_template = \"于摩义兵\" start_experience_factor = 0 start_equipment_factor = 0.45"  
+					owner = WUN
+				}	
+			}
+			add_to_variable = { WUN_way_of_the_king_cgf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_ms = 0.1 }
+			add_to_variable = { WUN_way_of_the_king_cf = 0.1 }
+			custom_effect_tooltip = WUN_food_for_sex_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#王身后的王
+		id = WUN_king_behind_king
+		icon = GFX_WUN_king_behind_king
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_wines_and_joys }
+		prerequisite = { focus = WUN_followers_survive }
+		prerequisite = { focus = WUN_food_for_sex }
+		relative_position_id = WUN_followers_survive
+		#mutually_exclusive = { focus =  }
+
+		allow_branch = {
+			has_completed_focus = WUN_wines_and_joys
+			has_completed_focus = WUN_followers_survive
+			has_completed_focus = WUN_food_for_sex
+		}
+
+		completion_reward = {
+			add_to_variable = { ZHE_king_behind_king_if = 1 }
+			add_to_variable = { ZHE_king_behind_king_af = 1 }
+			hidden_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}	
+			}
+			custom_effect_tooltip = WUN_king_behind_king_tt
+		}
+	}
+
+	focus = {	#不发狂！就灭亡！
+		id = WUN_crazy_or_die
+		icon = GFX_WUN_crazy_or_die
+		x = -2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_king_behind_king }
+		relative_position_id = WUN_king_behind_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "于摩义兵"
+					}
+				}
+				division_template = {
+					name = "于摩义兵"
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"于摩义兵\" division_template = \"于摩义兵\" start_experience_factor = 0 start_equipment_factor = 0.35"  
+					owner = WUN
+				}	
+			}
+			add_to_variable = { WUN_way_of_the_king_cgf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_ncm = 0.1 }
+			add_to_variable = { WUN_way_of_the_king_ttaf = -0.1 }
+			custom_effect_tooltip = WUN_crazy_or_die_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#杀得好！重赏！
+		id = WUN_reward_killings
+		icon = GFX_WUN_reward_killings
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_king_behind_king }
+		relative_position_id = WUN_king_behind_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "于摩义兵"
+					}
+				}
+				division_template = {
+					name = "于摩义兵"
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"于摩义兵\" division_template = \"于摩义兵\" start_experience_factor = 0 start_equipment_factor = 0.35"  
+					owner = WUN
+				}	
+			}
+			add_to_variable = { WUN_way_of_the_king_aiaf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_aidf = 0.05 }
+			custom_effect_tooltip = WUN_reward_killings_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#我的！都是我的！
+		id = WUN_mine_all_mine
+		icon = GFX_WUN_mine_all_mine
+		x = 2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_king_behind_king }
+		relative_position_id = WUN_king_behind_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_template = "于摩义兵"
+					}
+				}
+				division_template = {
+					name = "于摩义兵"
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					priority = 0
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"于摩义兵\" division_template = \"于摩义兵\" start_experience_factor = 0 start_equipment_factor = 0.35"  
+					owner = WUN
+				}	
+			}
+			add_to_variable = { WUN_way_of_the_king_cgf = 0.05 }
+			add_to_variable = { WUN_way_of_the_king_scf = -0.1 }
+			add_to_variable = { WUN_way_of_the_king_nsg = 48 }
+			custom_effect_tooltip = WUN_mine_all_mine_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#至高至福的王
+		id = WUN_blessed_king
+		icon = GFX_WUN_blessed_king
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_crazy_or_die }
+		prerequisite = { focus = WUN_reward_killings }
+		prerequisite = { focus = WUN_mine_all_mine }
+		relative_position_id = WUN_reward_killings
+		#mutually_exclusive = { focus =  }
+
+		allow_branch = {
+			has_completed_focus = WUN_crazy_or_die
+			has_completed_focus = WUN_reward_killings
+			has_completed_focus = WUN_mine_all_mine
+		}
+
+		completion_reward = {
+			add_to_variable = { ZHE_king_behind_king_if = 1 }
+			add_to_variable = { ZHE_king_behind_king_af = 1 }
+			hidden_effect = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}	
+			}
+			custom_effect_tooltip = WUN_king_behind_king_tt
+		}
+	}
+
+	focus = {	#我即是天
+		id = WUN_im_the_sky
+		icon = GFX_WUN_im_the_sky
+		x = -2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_blessed_king }
+		relative_position_id = WUN_blessed_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_ideas = WUN_obey_to_king
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#逆我者死
+		id = WUN_against_means_die
+		icon = GFX_WUN_against_means_die
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_blessed_king }
+		relative_position_id = WUN_blessed_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_manpower = -5000
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = 0.2
+			}
+			add_political_power = 60
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#热刀凉血
+		id = WUN_hot_knife_cold_blood
+		icon = GFX_WUN_hot_knife_cold_blood
+		x = 2
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_blessed_king }
+		relative_position_id = WUN_blessed_king
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = WUN_hot_knife_with_cold_blood
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#肉山
+		id = WUN_roshan
+		icon = GFX_WUN_roshan
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			has_war = yes
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_im_the_sky }
+		prerequisite = { focus = WUN_against_means_die }
+		prerequisite = { focus = WUN_hot_knife_cold_blood }
+		relative_position_id = WUN_against_means_die
+		#mutually_exclusive = { focus =  }
+
+		allow_branch = {
+			has_completed_focus = WUN_im_the_sky
+			has_completed_focus = WUN_against_means_die
+			has_completed_focus = WUN_hot_knife_cold_blood
+		}
+
+		completion_reward = {
+			country_event = WUN.1
+			division_template = {
+				name = "肉山"
+
+				regiments = {
+					lust_mountain = { x = 0 y = 0 }
+				}
+
+				is_locked = yes 
+
+				priority = 2
+			}
+			hidden_effect = { set_technology = { slut_mountain_tech = 1 popup = no } }
+			capital_scope = {
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 1 start_equipment_factor = 1"  
+					owner = WUN
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = lust_mountain_equipment_0
+				amount = 1000
+				producer = WUN
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#时日曷丧
+		id = WUN_hate_a_lot
+		icon = GFX_WUN_hate_a_lot
+		x = 0
+		y = 1
+		cost = 17.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_roshan }
+		relative_position_id = WUN_roshan
+		#mutually_exclusive = { focus =  }
+
+		allow_branch = {
+			has_completed_focus = WUN_roshan
+		}
+
+		select_effect = {
+			add_manpower = -1000000
+			set_country_flag = ignorant_filth
+			add_ideas = WUN_original_desire_idea
+			capital_scope = {
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+				create_unit = {
+					division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+					owner = WUN
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = lust_mountain_equipment_0
+				amount = 2000
+				producer = WUN
+			}
+			add_equipment_to_stockpile = {
+				type = lust_chrysalides_0
+				amount = 50
+				producer = WUN
+			}
+			add_equipment_to_stockpile = {
+				type = meat_chrysalis_0
+				amount = 450
+			}
+			every_country = {
+				add_opinion_modifier = {
+					target = WUN
+					modifier = WUN_fucking_crazy
+				}
+				WUN = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = WUN_fucking_crazy
+					}
+				}
+			}
+			set_country_flag = WUN_hate_a_lot_flag_1
+			set_country_flag = WUN_hate_a_lot_flag_2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = WUN_hate_a_lot_tt
+			add_equipment_to_stockpile = {
+				type = lust_mountain_equipment_0
+				amount = 2000
+				producer = WUN
+			}
+			add_equipment_to_stockpile = {
+				type = lust_chrysalides_0
+				amount = 50
+				producer = WUN
+			}
+			add_equipment_to_stockpile = {
+				type = meat_chrysalis_0
+				amount = 450
+			}
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+					create_unit = {
+						division = "name = \"肉山\" division_template = \"肉山\" start_experience_factor = 0 start_equipment_factor = 1"  
+						owner = WUN
+					}
+				}
+				every_country = {
+					set_country_flag = superevent_show_flag
+					set_country_flag = SPC_SE_disaster_original_desire_flag
+					scoped_play_song = "SE_disaster_original_desire_sound"
+				}
+			}
+		}
+	}
+
+	focus = {	#被祝福的敕令
+		id = WUN_yarlig
+		icon = GFX_WUN_yarlig
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = WUN_hate_a_lot }
+		relative_position_id = WUN_hate_a_lot
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			every_unit_leader = {
+				add_attack = 1
+			}
+			unlock_decision_category_tooltip = WUN_yarlig_decision_category
+			set_variable = { WUN_yarlig_var = 0 }
+			set_variable = { WUN_buff_count = 0 }
+		}
+	}
+
+}

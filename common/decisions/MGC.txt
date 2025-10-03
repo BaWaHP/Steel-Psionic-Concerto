@@ -1,0 +1,328 @@
+SPC_generic_debug_decision_category = {
+	MGC_debug_load_focus_1 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = MGC }
+
+		fire_only_once = no
+
+		complete_effect = {
+			clr_country_flag = MGC_focus_1
+			clr_country_flag = MGC_focus_2
+
+			set_country_flag = MGC_focus_1
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	MGC_debug_load_focus_2 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = MGC }
+
+		fire_only_once = no
+
+		complete_effect = {
+			clr_country_flag = MGC_focus_1
+			clr_country_flag = MGC_focus_2
+
+			set_country_flag = MGC_focus_2
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+MGC_spring_conspiracy = {
+	MGC_spring_conspiracy_supporters = {
+        icon = GFX_decision_CHL_grant_full_rights_to_the_mapuche
+
+		allowed = { tag = MGC }
+		available = { always = no }
+
+        fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = MGC_spring_conspiracy_supporters_tt
+		}
+    }
+
+	MGC_contradiction_deepens = { 		#矛盾加深
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = MGC }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 20
+
+		timeout_effect = {  
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 20
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			MGC_spring_conspiracy_tension_update = yes
+			activate_mission = MGC_contradiction_deepens
+		}
+	}
+
+	MGC_contradiction_hiddens = { 		#矛盾隐去
+		icon = GFX_decision_generic_independence
+		allowed = { tag = MGC }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 20
+
+		timeout_effect = {  
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			MGC_spring_conspiracy_tension_update = yes
+			activate_mission = MGC_contradiction_hiddens
+		}
+	}
+	
+	MGC_force_people_calm = { 		#用硬实力安抚大众
+		icon = GFX_decision_generic_speech
+		allowed = { tag = MGC }
+
+		cost = 20
+		fire_only_once = no
+
+        complete_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -5
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			MGC_spring_conspiracy_tension_update = yes
+        }
+	}
+
+	MGC_winning_over_churches = { 		#拉拢瓦什女士与纳卡教会
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_winning_over_churches_flag }
+
+		cost = 10
+		days_remove = 15
+		fire_only_once = yes
+
+		remove_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 15
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			if = {
+				limit = { has_completed_focus = MGC_deni }
+				country_event = {
+					id = MGC.5
+					days = 1
+				}
+			}
+			if = {
+				limit = { has_completed_focus = MGC_or_dovuzdo }
+				country_event = {
+					id = MGC.8
+					days = 1
+				}
+			}
+		}
+	}
+
+	MGC_let_nenlekov_take_charge = { 		#让嫩勒科夫话事
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_let_nenlekov_take_charge_flag }
+
+		cost = 10
+		days_remove = 15
+		fire_only_once = yes
+
+		remove_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = 0.05
+		}
+	}
+
+	MGC_industrial_worship = { 		#工业崇拜
+		icon = GFX_decision_generic_factory
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_industrial_worship_flag }
+
+		cost = 200
+		days_remove = 30
+		days_re_enable = 100
+		fire_only_once = no
+
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_influence_2
+				value = 5
+				tooltip = MGC_spring_conspiracy_influence_2_tt
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+		}
+	}
+
+	MGC_maintain_our_style = { 		#保持我们的风格
+		icon = GFX_decision_generic_factory
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_maintain_our_style_flag }
+
+		cost = 200
+		days_remove = 30
+		days_re_enable = 100
+		fire_only_once = no
+
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_influence_3
+				value = 5
+				tooltip = MGC_spring_conspiracy_influence_3_tt
+			}
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+		}
+	}
+
+	MGC_black_trade_with_rot = { 		#与提特兰共和国的黑色贸易
+		icon = GFX_decision_generic_motorized
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_black_trade_with_rot_flag }
+
+		cost = 20
+		days_remove = 120
+		days_re_enable = 120
+		fire_only_once = no
+
+		remove_effect = {
+			add_political_power = 20
+			add_timed_idea = {
+				idea = MGC_black_trade
+				days = 120
+			}
+		}
+	}
+
+	MGC_counter_lugo = { 		#反制卢戈
+		icon = GFX_decision_generic_brainwash
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_counter_lugo_flag }
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 120
+		fire_only_once = no
+
+		remove_effect = {
+			add_timed_idea = {
+				idea = MGC_regaining_industries
+				days = 120
+			}
+		}
+	}
+
+	MGC_silent_red_gold_white = { 		#缄默红金白
+		icon = GFX_decision_generic_arrest
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_silent_red_gold_white_flag }
+
+		cost = 20
+		days_remove = 30
+		days_re_enable = 120
+		fire_only_once = no
+
+		remove_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -10
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = 0.05
+			add_political_power = -20
+		}
+	}
+
+	MGC_promoted_the_Nenlekov_corps = { 		#提拔嫩勒科夫军团的人
+		icon = GFX_decision_generic_army_support
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_promoted_the_Nenlekov_corps_flag }
+
+		cost = 50
+		days_remove = 5
+		days_re_enable = 5
+		fire_only_once = no
+
+		remove_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = 5
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = -0.05
+			custom_effect_tooltip = MGC_promoted_the_Nenlekov_corps_tt
+		}
+	}
+
+	MGC_unite_the_union = { 		#团结全军联盟
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MGC }
+
+		visible = { has_country_flag = MGC_unite_the_union_flag }
+
+		cost = 50
+		custom_cost_trigger = { command_power > 9 }
+		custom_cost_text = decision_cost_CP_10_pp_50
+
+		days_remove = 10
+		days_re_enable = 30
+		fire_only_once = no
+
+		remove_effect = {
+			add_to_variable = {
+				var = MGC_spring_conspiracy_tension
+				value = -20
+				tooltip = MGC_spring_conspiracy_tension_tt
+			}
+			add_stability = 0.1
+		}
+	}
+}

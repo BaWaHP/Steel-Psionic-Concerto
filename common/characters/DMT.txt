@@ -1,0 +1,23 @@
+characters={
+
+	#康拉德·贝克尔
+	DMT_konrad_beckel = {
+		name = DMT_konrad_beckel
+		portraits = {
+			civilian = {
+				large="GFX_DMT_konrad_beckel"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_DMT_konrad_beckel"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

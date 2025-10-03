@@ -1,0 +1,80 @@
+leader_traits = {
+
+	###通用随机###
+
+	artillery_general = {						#炮兵将领
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = {
+			always = no
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.05
+			army_artillery_defence_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	raider_expert = {							#奇袭专家
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = {
+			always = no
+		}
+
+		modifier = {
+			recon_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	defense_expert = {							#防御专家
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = {
+			always = no
+		}
+
+		field_marshal_modifier = {
+			max_dig_in_factor = 0.1
+			dig_in_speed_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	###特殊###
+	
+	blood_clan = {								#血族
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = {
+			always = no
+		}
+
+		modifier = {
+			wounded_chance_factor = -0.75
+			army_morale_factor = 0.15
+			org_loss_when_moving = -0.15
+		}
+
+		new_commander_weight = { factor = 0 }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

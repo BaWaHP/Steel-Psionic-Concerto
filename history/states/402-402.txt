@@ -1,0 +1,25 @@
+
+state={
+	id=402
+	name="STATE_402"
+	provinces={
+		1289 1651 4509 9513 10326 19362 19426 
+	}
+	history={
+		owner = ZBC
+		add_core_of = ZBC
+		buildings = {
+			infrastructure = 2
+			1651 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			1651 3
+		}
+	}
+	manpower = 22000
+	state_category = small_island
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

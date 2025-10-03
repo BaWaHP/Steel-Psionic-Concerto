@@ -1,0 +1,266 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_CLD_Arle_Scherrer"
+		texturefile = "gfx/leaders/CLD/Arle_Scherrer.png"
+	}
+	spriteType = {
+		name = "GFX_CLD_human_Velja_Childs"
+		texturefile = "gfx/leaders/CLD/Velja_Childs.png"
+	}
+	spriteType = {
+		name = "GFX_CLD_human_Lang_Weiwen"
+		texturefile = "gfx/leaders/CLD/Lang_Weiwen.png"
+	}
+	spriteType = {
+		name = "GFX_CLD_Blood_Opteil"
+		texturefile = "gfx/leaders/CLD/Opteil.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_CLD_human_Velja_Childs"
+		texturefile = "gfx/advisors/CLD/Velja_Childs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_human_Lorvin"
+		texturefile = "gfx/advisors/CLD/Lorvin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_human_Jacques_Toles"
+		texturefile = "gfx/advisors/CLD/Jacques_Toles.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_wings_Timparnov"
+		texturefile = "gfx/advisors/CLD/Timparnov.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_human_Siatovia"
+		texturefile = "gfx/advisors/CLD/Siatovia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_wings_Mazokav"
+		texturefile = "gfx/advisors/CLD/Mazokav.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_human_Rickelsang"
+		texturefile = "gfx/advisors/CLD/Rickelsang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_Blood_Opteil"
+		texturefile = "gfx/advisors/CLD/Opteil.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_CLD_revolutionary_industrialization"
+		texturefile = "gfx/interface/ideas/CLD_revolutionary_industrialization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_idea_progress_the_plains"
+		texturefile = "gfx/interface/ideas/CLD_idea_progress_the_plains.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_army_of_the_people"
+		texturefile = "gfx/interface/ideas/CLD_army_of_the_people.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_newly_borned_commue_ariforce"
+		texturefile = "gfx/interface/ideas/CLD_newly_borned_commue_ariforce.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_rebuilding_army"
+		texturefile = "gfx/interface/ideas/CLD_rebuilding_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_fully_supplied_army"
+		texturefile = "gfx/interface/ideas/CLD_fully_supplied_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_fully_prepared_army"
+		texturefile = "gfx/interface/ideas/CLD_fully_prepared_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_emergency_committe"
+		texturefile = "gfx/interface/ideas/CLD_emergency_committe.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_emergency_law"
+		texturefile = "gfx/interface/ideas/CLD_emergency_law.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_ongoing_massive_investiagtion"
+		texturefile = "gfx/interface/ideas/CLD_ongoing_massive_investiagtion.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_expanded_secret_police"
+		texturefile = "gfx/interface/ideas/CLD_expanded_secret_police.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_intel_bureau_of_people"
+		texturefile = "gfx/interface/ideas/CLD_intel_bureau_of_people.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_anger_towards_betrayal"
+		texturefile = "gfx/interface/ideas/CLD_anger_towards_betrayal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_tower_of_light_in_east_bastia"
+		texturefile = "gfx/interface/ideas/CLD_tower_of_light_in_east_bastia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_wound_of_betrayal"
+		texturefile = "gfx/interface/ideas/CLD_wound_of_betrayal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_uncomplete_managing_system"
+		texturefile = "gfx/interface/ideas/CLD_uncomplete_managing_system.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_trade_treaty_with_peo"
+		texturefile = "gfx/interface/ideas/CLD_trade_treaty_with_peo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_weak_army"
+		texturefile = "gfx/interface/ideas/CLD_weak_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_commue_in_conflicts"
+		texturefile = "gfx/interface/ideas/CLD_commue_in_conflicts.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_scientific_boundary"
+		texturefile = "gfx/interface/ideas/CLD_scientific_boundary.png"
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_goal_CLD_behind_enemy_lines"
+		texturefile = "gfx/interface/goals/Focus_CLD_behind_enemy_lines.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_code"
+		texturefile = "gfx/interface/goals/Focus_CLD_code.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_guaranteed_supplies"
+		texturefile = "gfx/interface/goals/Focus_CLD_guaranteed_supplies.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_new_beginning"
+		texturefile = "gfx/interface/goals/Focus_CLD_new_beginning.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_people_war"
+		texturefile = "gfx/interface/goals/Focus_CLD_people_war.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_post_war_trauma_recovery_center"
+		texturefile = "gfx/interface/goals/Focus_CLD_post_war_trauma_recovery_center.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_preferential_treatment_of_prisoners_of_war"
+		texturefile = "gfx/interface/goals/Focus_CLD_preferential_treatment_of_prisoners_of_war.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_project_lifeline"
+		texturefile = "gfx/interface/goals/Focus_CLD_project_lifeline.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_protection_of_civilians"
+		texturefile = "gfx/interface/goals/Focus_CLD_protection_of_civilians.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_railroad_guerrillas"
+		texturefile = "gfx/interface/goals/Focus_CLD_railroad_guerrillas.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_re_education_of_prisoners_of_war"
+		texturefile = "gfx/interface/goals/Focus_CLD_re_education_of_prisoners_of_war.png"			
+	}
+	SpriteType = {
+		name = "GFX_goal_CLD_victory"
+		texturefile = "gfx/interface/goals/Focus_CLD_victory.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_the_day_shall_come"
+		texturefile = "gfx/interface/goals/CLD_the_day_shall_come.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_ensure_the_right_to_command"
+		texturefile = "gfx/interface/goals/CLD_ensure_the_right_to_command.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_democracy_within_military"
+		texturefile = "gfx/interface/goals/CLD_democracy_within_military.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_forming_emergency_committe"
+		texturefile = "gfx/interface/goals/CLD_forming_emergency_committe.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_progress_the_plains"
+		texturefile = "gfx/interface/goals/CLD_progress_the_plains.png"			
+	}
+	SpriteType = {
+		name = "GFX_CLD_clean_the_army"
+		texturefile = "gfx/interface/goals/CLD_clean_the_army.png"			
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_CLD_organizer_workers_uprising"
+		texturefile = "gfx/interface/traits/trait_operative_demolition_expert.dds"
+		legacy_lazy_load = no
+	}
+	###texticons###
+	spriteType = {
+		name = "GFX_texticons_CLD_1"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_2"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_3"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_4"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_4.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_5"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_5.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_6"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_6.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_7"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_7.png"
+		legacy_lazy_load = no
+	}
+	###事件###
+	spriteType = {
+		name = "GFX_report_event_CLD_2"
+		texturefile = "gfx/event_pictures/report_event_CLD_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_CLD_3"
+		texturefile = "gfx/event_pictures/report_event_CLD_3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_CLD_26"
+		texturefile = "gfx/event_pictures/report_event_CLD_26.dds"
+	}
+	###GUI###
+	SpriteType = {
+		name = "GFX_CLD_enemy_sabotage_decisions_bg"
+		texturefile = "gfx/interface/CLD/CLD_enemy_sabotage_decisions_bg.png"
+	}
+}

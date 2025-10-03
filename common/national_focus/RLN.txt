@@ -1,0 +1,1488 @@
+focus_tree = {
+	id = RLN_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RLN
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#二十五年红旗不倒
+		id = RLN_the_lasting_red_flag
+		icon = GFX_RLN_the_lasting_red_flag
+		x = 10
+		y = 0
+		cost = 1
+
+		available = {}
+
+		allow_branch = { 
+			NOT = { has_completed_focus = RLN_the_victory } 
+			NOT = {
+				has_country_flag = RLN_focus_2_1_flag
+				has_country_flag = RLN_focus_2_2_flag
+				has_country_flag = RLN_focus_2_3_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 120
+			unlock_decision_category_tooltip = RLN_house_of_cards
+			RLN_house_of_cards_initialization = yes
+		}
+	}
+
+	focus = {	#对暴力的反思
+		id = RLN_review_the_use_of_violence
+		icon = GFX_RLN_review_the_use_of_violence
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_the_lasting_red_flag }
+		relative_position_id = RLN_the_lasting_red_flag
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RLN_revolution_terror
+				add_idea = RLN_violent_revolution
+			}
+			RLN_principlists_influence_down_1 = yes
+			country_event = RLN.1
+		}
+	}
+
+	focus = {	#打开库存
+		id = RLN_open_the_vault
+		icon = GFX_RLN_open_the_vault
+		x = -2
+		y = 1
+		cost = 1
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_review_the_use_of_violence }
+		relative_position_id = RLN_review_the_use_of_violence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = caster_equipment_0
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_0
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+			}
+			country_event = RLN.2
+		}
+	}
+
+	focus = {	#推广军事民主
+		id = RLN_promote_military_democracy
+		icon = GFX_RLN_promote_military_democracy
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_review_the_use_of_violence }
+		relative_position_id = RLN_review_the_use_of_violence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RLN_tenian_red_army
+				add_idea = RLN_tenian_red_army_2
+			}
+			RLN_militarists_influence_down_2 = yes
+			#country_event = RLN.4
+		}
+	}
+
+	focus = {	#安置难民
+		id = RLN_settle_refugees
+		icon = GFX_RLN_settle_refugees
+		x = 2
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_review_the_use_of_violence }
+		relative_position_id = RLN_review_the_use_of_violence
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 1000
+			swap_ideas = {
+				remove_idea = RLN_econ_in_shadow
+				add_idea = RLN_econ_in_shadow_2
+			}
+		}
+	}
+
+	focus = {	#与反动派决一死战
+		id = RLN_one_last_fight_with_enemies
+		icon = GFX_RLN_one_last_fight_with_enemies
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {}
+
+		bypass = {
+			has_war_with = LNR
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_open_the_vault }
+		prerequisite = { focus = RLN_promote_military_democracy }
+		prerequisite = { focus = RLN_settle_refugees }
+		relative_position_id = RLN_promote_military_democracy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			LNR = { leave_faction = yes }
+			declare_war_on = {
+				target = LNR
+				type = civil_war
+			}
+		}
+	}
+
+	focus = {	#优先救济人民
+		id = RLN_help_people_first
+		icon = GFX_RLN_help_people_first
+		x = -1
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_one_last_fight_with_enemies }
+		relative_position_id = RLN_one_last_fight_with_enemies
+		mutually_exclusive = { focus = RLN_support_army_first }
+
+		completion_reward = {
+			SPC_taxes_laws_down = yes
+			add_stability = 0.1
+			RLN_financists_influence_up_1 = yes
+		}
+	}
+
+	focus = {	#优先供给军队
+		id = RLN_support_army_first
+		icon = GFX_RLN_support_army_first
+		x = 1
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_one_last_fight_with_enemies }
+		relative_position_id = RLN_one_last_fight_with_enemies
+		mutually_exclusive = { focus = RLN_help_people_first }
+
+		completion_reward = {
+			SPC_training_laws_up = yes
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_0
+				amount = 500
+			}
+			RLN_militarists_influence_up_1 = yes
+			RLN_principlists_influence_up_1 = yes
+		}
+	}
+
+	focus = {	#敌后战场
+		id = RLN_battlefield_behind_enemies
+		icon = GFX_RLN_battlefield_behind_enemies
+		x = 1
+		y = 1
+		cost = 3
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_help_people_first
+						 focus = RLN_support_army_first }
+		relative_position_id = RLN_help_people_first
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			LNR = {
+				add_timed_idea = {
+					idea = LNR_commi_rat_everywhere
+					days = 90
+				}
+			}
+			country_event = RLN.7
+		}
+	}
+
+	focus = {	#为阶级复仇而战
+		id = RLN_battle_for_revenge
+		icon = GFX_RLN_battle_for_revenge
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_battlefield_behind_enemies }
+		relative_position_id = RLN_battlefield_behind_enemies
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -50
+			add_timed_idea = {
+				idea = RLN_revengence_war
+				days = 180
+			}
+		}
+	}
+
+	focus = {	#胜利了？
+		id = RLN_the_victory
+		icon = GFX_RLN_the_victory
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+			LNR = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_battle_for_revenge }
+		relative_position_id = RLN_battle_for_revenge
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RLN.5
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {	#接管全国
+		id = RLN_taking_over_the_nation
+		icon = GFX_RLN_taking_over_the_nation
+		x = 10
+		y = 0
+		cost = 4.4
+
+		allow_branch = { 
+			has_completed_focus = RLN_the_victory 
+			NOT = {
+				has_country_flag = RLN_focus_2_1_flag
+				has_country_flag = RLN_focus_2_2_flag
+				has_country_flag = RLN_focus_2_3_flag
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			remove_ideas = RLN_econ_in_shadow_2
+			310 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			add_timed_idea = {
+				idea = RLN_nationwide_bandit_suppresions
+				days = 210
+			}
+			country_event = RLN.50
+		}
+	}
+
+	focus = {	#公审反动派
+		id = RLN_public_trials
+		icon = GFX_RLN_public_trials
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_taking_over_the_nation }
+		relative_position_id = RLN_taking_over_the_nation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = -1500
+			}
+			RLN_solidaritists_influence_down_1 = yes
+			add_political_power = 100
+			add_war_support = 0.1
+			create_intelligence_agency = yes
+			remove_ideas = RLN_violent_revolution
+			add_ideas = RLN_no_grace_for_loss
+		}
+	}
+
+	focus = {	#党外民主人士
+		id = RLN_democrats_outside_the_party
+		icon = GFX_RLN_democrats_outside_the_party
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_taking_over_the_nation }
+		relative_position_id = RLN_taking_over_the_nation
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.1
+			}
+			RLN_financists_influence_up_2 = yes
+			RLN_solidaritists_influence_up_2 = yes
+			SPC_research_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#经济重建委员会
+		id = RLN_econ_reconstruct_committe
+		icon = GFX_RLN_econ_reconstruct_committe
+		x = 1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_public_trials }
+		prerequisite = { focus = RLN_democrats_outside_the_party }
+		relative_position_id = RLN_public_trials
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = RLN.55
+				days = 7
+			}
+			RLN_financists_influence_up_3 = yes
+			swap_ideas = {
+				remove_idea = RLN_devastation_everywhere
+				add_idea = RLN_devastation_everywhere_2
+			}
+			set_variable = { RLN_food_shortage_var = 100 }
+			set_variable = { RLN_reproduction_var = 0 }
+			set_variable = { RLN_expand_state_owned_fishing_fleet_count = 0 }
+			activate_mission = RLN_need_of_the_people
+			activate_mission = RLN_visions_of_utopia
+			unlock_decision_category_tooltip = RLN_rebuild_econs
+		}
+	}
+
+	focus = {	#派遣建设兵团
+		id = RLN_send_civilian_construct_corps
+		icon = GFX_RLN_send_civilian_construct_corps
+		x = -7
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_econ_reconstruct_committe }
+		relative_position_id = RLN_econ_reconstruct_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_manpower = -10000
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -100
+			}
+			swap_ideas = {
+				remove_idea = RLN_biohazard
+				add_idea = RLN_biohazard_2
+			}
+		}
+	}
+
+	focus = {	#发动当地群众
+		id = RLN_mobilize_the_locals
+		icon = GFX_RLN_mobilize_the_locals
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_send_civilian_construct_corps }
+		relative_position_id = RLN_send_civilian_construct_corps
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			311 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			SPC_environment_policy_up = yes
+		}
+	}
+
+	focus = {	#向世界求援
+		id = RLN_ask_for_help
+		icon = GFX_RLN_ask_for_help
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_mobilize_the_locals }
+		relative_position_id = RLN_mobilize_the_locals
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			311 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 20258
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = RLN_biohazard_2
+				add_idea = RLN_biohazard_3
+			}
+		}
+	}
+
+	focus = {	#研究巨网仙人掌
+		id = RLN_study_the_giant_cacti
+		icon = GFX_RLN_study_the_giant_cacti
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_ask_for_help }
+		relative_position_id = RLN_ask_for_help
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			SPC_research_development_amount_up_3 = yes
+			add_tech_bonus = {
+				name = RLN_study_the_giant_cacti
+				bonus = 1
+				uses = 1
+				category = secret_weapons
+			}
+		}
+	}
+
+	focus = {	#重回正轨
+		id = RLN_back_to_normal
+		icon = GFX_RLN_back_to_normal
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_study_the_giant_cacti }
+		relative_position_id = RLN_study_the_giant_cacti
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			311 = {
+				set_demilitarized_zone = no
+				remove_dynamic_modifier = {
+					modifier = LNR_biohazard_disaster_giant_cacti
+				}
+			}
+			remove_ideas = RLN_biohazard_3
+			add_political_power = 200
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_reproduction_var
+					value = 20
+					tooltip = RLN_reproduction_var_tt
+				}
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -10
+					tooltip = RLN_food_shortage_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 70
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 70
+				}
+			}
+		}
+	}
+
+	focus = {	#工厂重新开工
+		id = RLN_reopen_factories
+		icon = GFX_RLN_reopen_factories
+		x = -4
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_econ_reconstruct_committe }
+		relative_position_id = RLN_econ_reconstruct_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			312 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_reproduction_var
+					value = 20
+					tooltip = RLN_reproduction_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 70
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 70
+				}
+			}
+		}
+	}
+
+	focus = {	#粮食法令
+		id = RLN_food_act
+		icon = GFX_RLN_food_act
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_reopen_factories }
+		relative_position_id = RLN_reopen_factories
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -15
+					tooltip = RLN_food_shortage_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+		}
+	}
+
+	focus = {	#侧重制造业
+		id = RLN_focus_on_production
+		icon = GFX_RLN_focus_on_production
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_food_act }
+		relative_position_id = RLN_food_act
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_reproduction_var
+					value = 20
+					tooltip = RLN_reproduction_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			add_ideas = RLN_focus_on_production_idea
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 30
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 70
+				}
+			}
+		}
+	}
+
+	focus = {	#国防工业优先
+		id = RLN_military_first
+		icon = GFX_RLN_military_first
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_focus_on_production }
+		relative_position_id = RLN_focus_on_production
+		mutually_exclusive = { focus = RLN_civilian_first }
+
+		completion_reward = {
+			310 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			RLN_militarists_influence_up_2 = yes
+		}
+	}
+
+	focus = {	#民生优先
+		id = RLN_civilian_first
+		icon = GFX_RLN_civilian_first
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_focus_on_production }
+		relative_position_id = RLN_focus_on_production
+		mutually_exclusive = { focus = RLN_military_first }
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -10
+					tooltip = RLN_food_shortage_var_tt
+				}
+				add_to_variable = {
+					var = RLN_reproduction_var
+					value = 10
+					tooltip = RLN_reproduction_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 30
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 30
+				}
+			}
+			SPC_living_standard_development_amount_up_3 = yes
+			SPC_agricultural_development_amount_up_2 = yes
+			SPC_industrial_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#特尼安工业之春
+		id = RLN_tenian_econ_miracle
+		icon = GFX_RLN_tenian_econ_miracle
+		x = 0
+		y = 2
+		cost = 4.4
+
+		available = {
+			num_of_factories > 40
+			custom_trigger_tooltip = {
+				tooltip = RLN_tenian_econ_miracle_tr
+				AND = {
+					has_country_flag = RLN_need_of_the_people_over
+					has_country_flag = RLN_visions_of_utopia_over
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_military_first
+						 focus = RLN_civilian_first }
+		relative_position_id = RLN_focus_on_production
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = RLN_econ_miracle_of_revolution }
+				add_political_power = 200
+			}
+			else = {
+				add_political_power = 100
+			}
+			if = {
+				limit = { has_idea = RLN_great_famine }
+				remove_ideas = RLN_great_famine
+			}
+			remove_ideas = RLN_devastation_everywhere_2
+			clr_country_flag = RLN_need_of_the_people_over
+			clr_country_flag = RLN_visions_of_utopia_over
+		}
+	}
+
+	focus = {	#党和政府
+		id = RLN_party_and_gov
+		icon = GFX_RLN_party_and_gov
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_econ_reconstruct_committe }
+		relative_position_id = RLN_econ_reconstruct_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_reproduction_var
+					value = 10
+					tooltip = RLN_reproduction_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			country_event = RLN.51
+		}
+	}
+
+	focus = {	#社会主义教育
+		id = RLN_socialist_education
+		icon = GFX_RLN_socialist_education
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_party_and_gov }
+		relative_position_id = RLN_party_and_gov
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			RLN_principlists_influence_up_4 = yes
+			RLN_financists_influence_up_3 = yes
+			SPC_education_policy_up = yes
+			SPC_research_development_amount_up_2 = yes
+		}
+	}
+
+	focus = {	#移风易俗
+		id = RLN_reshape_cultures
+		icon = GFX_RLN_reshape_cultures
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_socialist_education }
+		relative_position_id = RLN_socialist_education
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			RLN_principlists_influence_up_4 = yes
+			add_ideas = FP_joining_the_poitics
+			country_event = RLN.52
+		}
+	}
+
+	focus = {	#下放部分民事权力
+		id = RLN_release_civil_powers
+		icon = GFX_RLN_release_civil_powers
+		x = -1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_reshape_cultures }
+		relative_position_id = RLN_reshape_cultures
+		mutually_exclusive = { focus = RLN_reinforce_central_authority }
+
+		completion_reward = {
+			RLN_principlists_influence_up_2 = yes
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			SPC_media_policy_down = yes
+			add_stability = 0.2
+		}
+	}
+
+	focus = {	#强化中央权威
+		id = RLN_reinforce_central_authority
+		icon = GFX_RLN_reinforce_central_authority
+		x = 1
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_reshape_cultures }
+		relative_position_id = RLN_reshape_cultures
+		mutually_exclusive = { focus = RLN_release_civil_powers }
+
+		completion_reward = {
+			SPC_secret_police_policy_up = yes
+			add_political_power = 75
+			RLN_militarists_influence_up_3 = yes
+			RLN_financists_influence_up_1 = yes
+		}
+	}
+
+	focus = {	#革命的不死鸟
+		id = RLN_immortals_of_revolution
+		icon = GFX_RLN_immortals_of_revolution
+		x = 0
+		y = 2
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_release_civil_powers
+						 focus = RLN_reinforce_central_authority }
+		relative_position_id = RLN_reshape_cultures
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = RLN_accustomed_to_death_fight
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 100
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 100
+				}
+			}
+		}
+	}
+
+	focus = {	#在战争中学习战争
+		id = RLN_learn_war_from_war
+		icon = GFX_RLN_learn_war_from_war
+		x = 4
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_econ_reconstruct_committe }
+		relative_position_id = RLN_econ_reconstruct_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			army_experience = 20
+			SPC_military_development_amount_up_3 = yes
+			swap_ideas = {
+				remove_idea = RLN_tenian_red_army_2
+				add_idea = RLN_tenian_red_army_3
+			}
+		}
+	}
+
+	focus = {	#魔法在军事上的应用
+		id = RLN_magic_in_military
+		icon = GFX_RLN_magic_in_military
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_learn_war_from_war }
+		relative_position_id = RLN_learn_war_from_war
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RLN_magic_in_military
+				bonus = 1
+				uses = 2
+				category = secret_weapons
+			}
+		}
+	}
+
+	focus = {	#统一行动，统一指挥
+		id = RLN_uniform_commands
+		icon = GFX_RLN_uniform_commands
+		x = 0
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_magic_in_military }
+		relative_position_id = RLN_magic_in_military
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "特尼安赤卫队"
+				is_locked = no
+			}
+			add_command_power = 30
+			add_stability = 0.1
+			add_manpower = 2000
+			swap_ideas = {
+				remove_idea = RLN_tenian_red_army_3
+				add_idea = RLN_tenian_red_army_4
+			}
+		}
+	}
+
+	focus = {	#党指挥枪
+		id = RLN_party_leads_the_gun
+		icon = GFX_RLN_party_leads_the_gun
+		x = -1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_uniform_commands }
+		relative_position_id = RLN_uniform_commands
+		mutually_exclusive = { focus = RLN_professional_army }
+
+		completion_reward = {
+			SPC_military_development_amount_up_3 = yes
+			RLN_militarists_influence_down_2 = yes
+			custom_effect_tooltip = RLN_party_leads_the_gun_tt
+		}
+	}
+
+	focus = {	#职业军队
+		id = RLN_professional_army
+		icon = GFX_RLN_professional_army
+		x = 1
+		y = 1
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_uniform_commands }
+		relative_position_id = RLN_uniform_commands
+		mutually_exclusive = { focus = RLN_party_leads_the_gun }
+
+		completion_reward = {
+			army_experience = 50
+			RLN_principlists_influence_down_2 = yes
+		}
+	}
+
+	focus = {	#神圣的革命暴力
+		id = RLN_holy_commi_violence
+		icon = GFX_RLN_holy_commi_violence
+		x = 0
+		y = 2
+		cost = 3
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_party_leads_the_gun
+						 focus = RLN_professional_army }
+		relative_position_id = RLN_uniform_commands
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = RLN_the_fire_rises
+		}
+	}
+
+	focus = {	#渗透南方
+		id = RLN_penetrate_the_south
+		icon = GFX_RLN_penetrate_the_south
+		x = 7
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_econ_reconstruct_committe }
+		relative_position_id = RLN_econ_reconstruct_committe
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = RLN.53
+		}
+	}
+
+	focus = {	#解放半岛
+		id = RLN_free_the_peninsular
+		icon = GFX_RLN_free_the_peninsular
+		x = 0
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_penetrate_the_south }
+		relative_position_id = RLN_penetrate_the_south
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			KOA = { leave_faction = yes }
+			declare_war_on = {
+				target = KOA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {	#收回条约港
+		id = RLN_retake_ports
+		icon = GFX_RLN_retake_ports
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+			KOA = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_free_the_peninsular }
+		relative_position_id = RLN_free_the_peninsular
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			ZBC = { country_event = RLN.54 }
+		}
+	}
+
+	focus = {	#我们是特尼安人
+		id = RLN_we_are_the_same
+		icon = GFX_RLN_we_are_the_same
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_retake_ports }
+		relative_position_id = RLN_retake_ports
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			every_owned_state = {
+				limit = { 
+					OR = {
+						state = 307
+						state = 308
+						state = 404
+						state = 405
+						state = 333
+					}
+				}
+				add_core_of = RLN	
+			}
+			333 = { set_state_name = "金山角" }
+			set_province_name = { id = 7556 name = "花港" }
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -35
+					tooltip = RLN_food_shortage_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			ZBC = { set_capital = { state = 403 } }
+			add_political_power = 200
+			if = {
+				limit = { has_active_mission = RLN_need_of_the_people }
+				add_days_mission_timeout  = {
+					mission = RLN_need_of_the_people
+					days = 100
+				}
+			}
+			if = {
+				limit = { has_active_mission = RLN_visions_of_utopia }
+				add_days_mission_timeout  = {
+					mission = RLN_visions_of_utopia
+					days = 100
+				}
+			}
+			RLN_principlists_influence_up_2 = yes
+			country_event = RLN.56
+		}
+	}
+
+	focus = {	#世界之窗，南巴之角
+		id = RLN_window_of_the_world
+		icon = GFX_RLN_window_of_the_world
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+			owns_state = 333
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_we_are_the_same }
+		relative_position_id = RLN_we_are_the_same
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			RLN_financists_influence_up_2 = yes
+			RLN_solidaritists_influence_up_2 = yes
+			custom_effect_tooltip = RLN_window_of_the_world_tt
+		}
+	}
+
+	focus = {	#特尼安浴火重生
+		id = RLN_relife_of_our_motherland
+		icon = GFX_RLN_relife_of_our_motherland
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_back_to_normal }
+		prerequisite = { focus = RLN_tenian_econ_miracle }
+		prerequisite = { focus = RLN_immortals_of_revolution }
+		prerequisite = { focus = RLN_holy_commi_violence }
+		prerequisite = { focus = RLN_window_of_the_world }
+		relative_position_id = RLN_immortals_of_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = RLN_relife_of_our_motherland_tt
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_research_slot = 1
+		}
+	}
+
+	focus = {	#制宪会议
+		id = RLN_first_nationwide_election
+		icon = GFX_RLN_first_nationwide_election
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = RLN_relife_of_our_motherland }
+		relative_position_id = RLN_relife_of_our_motherland
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = RLN.100
+		}
+
+		completion_reward = {
+			country_event = RLN.101
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+characters={
+
+	SOT_pavlich_ferguson = {		#帕夫利奇·弗格森
+   		name = SOT_pavlich_ferguson
+   		portraits = {
+   			civilian = {
+   				large="GFX_SOT_pavlich_fergusonn"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_SOT_pavlich_fergusonn"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = SOT_pavlich_ferguson_desc
+   			ideology = market_liberalism
+   			traits = { SOT_company_ceo }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

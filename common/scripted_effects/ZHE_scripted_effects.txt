@@ -1,0 +1,216 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ZHE_startup_effect = {
+	if = {
+		limit = { tag = ZHE }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = neutral_tatic
+		###发展度###
+		add_ideas = grouped_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_more_observation
+		add_ideas = RP_locating_resource
+		add_ideas = IP_funding_proj
+		add_ideas = WP_limited_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_advanced_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_basic_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_working_euqality
+		add_ideas = EP_modern_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_demons
+		add_ideas = SR_ink_elves
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它开局内容###
+		activate_advisor = ZHE_prontosil_idea
+		activate_mission = ZHE_chronic_inflammation
+		###控制省份对应普及度###
+		every_state = {
+			#本土
+			if = {
+				limit = {
+					state = 137
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 162
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 161
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 164
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 159
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 136
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 138
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 163
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 128
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			#少汗
+			if = {
+				limit = {
+					state = 124
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 126
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			#叱拔
+			if = {
+				limit = {
+					state = 125
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 127
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 129
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 130
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 2 }		
+			}
+		}
+	}
+}
+
+ZHE_Ill_fares_the_land_upgarde = {}
+
+ZHE_interest_group_opinion_down_1 = {}
+ZHE_interest_group_opinion_down_2 = {}
+ZHE_interest_group_opinion_down_3 = {}
+ZHE_interest_group_opinion_down_4 = {}
+ZHE_interest_group_opinion_up_5 = {}
+
+ZHE_coup_reduce_rulling_party_popularity = {}
+ZHE_coup_add_new_party_attitude = {}
+ZHE_group_atitude_generic_update = {}

@@ -1,0 +1,550 @@
+characters={
+
+	RSB_aeeton_raymond = {		#艾伊通·雷蒙
+   		name = RSB_aeeton_raymond
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = democratic_republican
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_pasti_caprivi = {		#帕斯提·卡普里维
+   		name = RSB_pasti_caprivi
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = conservative_liberalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_ortland_karasasin = {		#奥特兰·卡拉萨辛
+   		name = RSB_ortland_karasasin
+   		portraits = {
+   			civilian = {
+   				large="GFX_RSB_ortland_karasasin"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_RSB_ortland_karasasin"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = RSB_ortland_karasasin_desc
+   			ideology = social_democrat
+   			traits = { RSB_civil_right_supporter RSB_coop_with_democrats }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_frann_kendler = {		#弗朗恩·肯德勒
+   		name = RSB_frann_kendler
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = utopian_socialism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_auslander_makat = {		#奥斯兰德·马卡特
+   		name = RSB_auslander_makat
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = republic_of_nobility
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_nate_treacher_ost = {		#内特·特莱切·奥斯特
+   		name = RSB_nate_treacher_ost
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = popular_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_marianne_petit = {		#玛丽安·佩蒂特
+   		name = RSB_marianne_petit
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = social_corporatism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_esamund_kryavik = {		#艾萨蒙德·克里亚维克
+   		name = RSB_esamund_kryavik
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = human_hegemony
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_saval_milikro = {		#萨瓦尔·米利克洛
+   		name = RSB_saval_milikro
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { organizer panzer_leader }
+		}
+	}
+
+	RSB_satranti_kestland = {		#萨特兰提·克斯特兰
+   		name = RSB_satranti_kestland
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+			traits = { organizer infantry_leader infantry_expert inspirational_leader }
+		}
+	}
+
+	RSB_labor_union_subsector = {		#各工会总联络部
+   		name = RSB_labor_union_subsector
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_syndicalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	RSB_adrian_fell = {		#阿德里安·费尔
+   		name = RSB_adrian_fell
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	RSB_lacombe_carasasin = {		#拉孔尔·卡拉萨辛
+   		name = RSB_lacombe_carasasin
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_lacombe_carasasin"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_lacombe_carasasin"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_lacombe_carasasin_idea
+			allowed = { original_tag = RSB }
+			traits = { fraternal_gentleman education_expert }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_henry_ehrlichmon = {		#亨利·爱里希蒙
+   		name = RSB_henry_ehrlichmon
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_henry_ehrlichmon_idea
+			allowed = { original_tag = RSB }
+			traits = { backroom_backstabber propaganda_expert }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_shkrau_asriyas = {		#什克劳·阿斯里耶斯
+   		name = RSB_shkrau_asriyas
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_shkrau_asriyas_idea
+			allowed = { original_tag = RSB }
+			traits = { fortification_engineer_leader }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_yamit_kstrand = {		#亚米特·克斯特兰
+   		name = RSB_yamit_kstrand
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_yamit_kstrand"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_yamit_kstrand"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_yamit_kstrand_idea
+			allowed = { original_tag = RSB }
+			traits = { quartermaster_chairman }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_rochefort_raymond = {		#罗什福尔·雷蒙
+   		name = RSB_rochefort_raymond
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_rochefort_raymond_idea
+			allowed = { original_tag = RSB }
+			traits = { technocrat }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_waiyang_promotion_caprivi = {		#外伊昂促·卡普里维
+   		name = RSB_waiyang_promotion_caprivi
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_waiyang_promotion_caprivi_idea
+			allowed = { original_tag = RSB }
+			traits = { captain_of_industry famous_ones }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_drummenke_keoteber = {		#德吕蒙克·克奥特伯
+   		name = RSB_drummenke_keoteber
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RSB_drummenke_keoteber_idea
+			allowed = { original_tag = RSB }
+			traits = { defense_contractors armaments_organizer }
+   			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_val_spade = {		#沃尔·斯派特
+   		name = RSB_val_spade
+   		portraits = {
+   			civilian = {
+				large="GFX_RSB_val_spade"
+				small="GFX_idea_RSB_val_spade"
+   			}
+   			army = {
+				large="GFX_RSB_val_spade"
+				small="GFX_idea_RSB_val_spade"
+   			}
+   		}
+		navy_leader = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 3
+			traits = { bold superior_tactician battleship_adherent spotter naval_lineage }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = RSB_val_spade_idea
+			allowed = { original_tag = RSB }
+			traits = { navy_chief_decisive_battle_2 }
+   			cost = 500
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_YaoJiulin = {		#姚九龄
+   		name = RSB_YaoJiulin
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_YaoJiulin"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_RSB_YaoJiulin"
+   			}
+   		}
+		advisor = {
+			slot = air_chief
+			idea_token = RSB_YaoJiulin_idea
+			allowed = { original_tag = RSB }
+			traits = { air_chief_all_weather_3 }
+   			cost = 500
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	RSB_yatril_arturs = {		#亚特里尔·阿图斯
+   		name = RSB_yatril_arturs
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { infantry_leader ambusher urban_assault_specialist }
+		}
+	}
+
+	RSB_chilik_okrona = {		#奇利克·奥克洛纳
+   		name = RSB_chilik_okrona
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
+			traits = { infantry_leader infantry_expert }
+		}
+	}
+
+	RSB_mosava_caprivi = {		#莫萨瓦·卡普里维
+   		name = RSB_mosava_caprivi
+   		portraits = {
+   			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { skilled_staffer expert_delegator }
+		}
+	}
+
+	RSB_sugawaki = {		#菅草木
+   		name = RSB_sugawaki
+   		portraits = {
+   			civilian = {
+				large="GFX_RSB_sugawaki"
+				small="GFX_idea_RSB_sugawaki"
+   			}
+   			army = {
+				large="GFX_RSB_sugawaki"
+				small="GFX_idea_RSB_sugawaki"
+   			}
+   		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { brilliant_strategist panzer_leader }
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=453
+	name="STATE_453"
+	provinces={
+		3462 6804 9536 19036 19055 19056 19113 19153 19244 
+	}
+	resources = {
+		magic_crystal = 12
+		chromium = 24
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			19244 8
+		}
+		victory_points = {
+			3462 8
+		}
+	}
+	manpower = 312430
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

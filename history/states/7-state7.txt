@@ -1,0 +1,35 @@
+
+state={
+	id=7
+	name="STATE_7"
+	resources={
+		steel=48
+		aluminium=12
+		magic_crystal = 8
+	}
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+
+		}
+		victory_points = {
+			18657 1 
+		}
+		victory_points = {
+			18820 5 
+		}
+
+	}
+
+	provinces={
+		5483 6199 6957 8752 10090 11692 11978 18469 18534 18558 18657 18690 18749 18764 18820 18868 18942 
+	}
+	manpower=1479635
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

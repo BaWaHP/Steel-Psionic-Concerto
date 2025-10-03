@@ -1,0 +1,25 @@
+
+state={
+	id=17
+	name="STATE_17"
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+
+	}
+
+	provinces={
+		2600 4005 5803 11156 16773 16882 17137 17138 17268 
+	}
+	manpower=1180962
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

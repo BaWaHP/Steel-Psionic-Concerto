@@ -1,0 +1,21 @@
+leader_traits = {
+	RSU_left_wing_sympathisers = {		#左翼同情者 - 鲁萨尔
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+
+		allowed = {
+			FROM = {
+				tag = RSU
+			}
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

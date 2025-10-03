@@ -1,0 +1,52 @@
+#帝国残影 or 驱逐南巴遗毒
+ROT_kick_rsb_ass = {
+	#picture = 
+	scripted_gui = ROT_kick_rsb_ass_ui
+	icon = GFX_decision_category_spr_the_seeds_of_revolution
+	allowed = { tag = ROT }
+	visible = { has_country_flag = ROT_kick_rsb_ass_on }
+	visible_when_empty = no
+	priority = 10
+}
+
+ROT_kick_rsb_ass_bop = {}
+
+#阶级与民族
+ROT_class_and_nation = {
+	#picture = 
+	scripted_gui = ROT_class_and_nation_ui
+	icon = GFX_decision_category_NOR_fascist_preparation
+	allowed = { tag = ROT }
+	visible = { has_country_flag = ROT_class_and_nation_on }
+	visible_when_empty = yes
+	priority = 10
+}
+
+#复国战争的经济基础
+ROT_economic_basis_of_the_restoration_war = {
+	#picture = 
+	icon = GFX_decision_category_GER_war_planning
+	allowed = { tag = ROT }
+	visible = { has_country_flag = ROT_economic_basis_of_the_restoration_war_on }
+	visible_when_empty = yes
+	priority = 10
+}
+
+#整合领土
+ROT_integrate_territories = {
+	#picture = 
+	icon = GFX_decision_category_generic_political_actions
+	allowed = { tag = ROT }
+	visible = { has_country_flag = ROT_integrate_territories_on }
+	visible_when_empty = yes
+	priority = 10
+}
+
+#武装保卫南巴联邦
+ROT_armored_protect_rsb_fed = {
+	#picture = 
+	icon = GFX_decision_category_hol_war_on_pacifism
+	allowed = { tag = ROT }
+	visible = { has_country_flag = ROT_armored_protect_rsb_fed_on }
+	priority = 10
+}

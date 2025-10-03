@@ -1,0 +1,206 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_state_development_panel_button"
+		textureFile = "gfx/interface/stateview/GFX_state_development_panel_button.png"
+	}	
+	spriteType = {
+		name = "GFX_state_development_panel_bg"
+		texturefile = "gfx/interface/state_development/state_development_panel_bg.png"
+	}
+	spriteType = {
+		name = "GFX_development_panel_mag"
+		texturefile = "gfx/interface/state_development/development_panel_mag.png"
+	}
+	spriteType = {
+		name = "GFX_development_panel_sci"
+		texturefile = "gfx/interface/state_development/development_panel_sci.png"
+	}
+	spriteType = {
+		name = "GFX_mag_progress_bar_bg"
+		textureFile = "gfx/interface/state_development/mag_progress_bar_bg.png"
+	}
+	spriteType = {
+		name = "GFX_sci_progress_bar_bg"
+		textureFile = "gfx/interface/state_development/sci_progress_bar_bg.png"
+	}
+	progressbartype = {
+		name = "GFX_mag_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/state_development/mag_progress_bar.png"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 622 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_sci_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/state_development/sci_progress_bar.png"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 622 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_1"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_2"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_3"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_4"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_4.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_5"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_5.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_6"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_6.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_7"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_7.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_btn_8"
+		textureFile = "gfx/interface/state_development/state_development_special_op_btn_8.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_introduction"
+		textureFile = "gfx/interface/state_development/state_development_introduction.png"
+	}
+	spriteType = {
+		name = "GFX_development_panel_closebutton"
+		textureFile = "gfx/interface/state_development/development_panel_closebutton.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_modifier_1"
+		textureFile = "gfx/interface/state_development/special_op_modifier_1.png"
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_modifier_2"
+		textureFile = "gfx/interface/state_development/special_op_modifier_2.png"
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_modifier_3"
+		textureFile = "gfx/interface/state_development/special_op_modifier_3.png"
+	}
+	spriteType = {
+		name = "GFX_state_development_special_op_modifier_4"
+		textureFile = "gfx/interface/state_development/special_op_modifier_4.png"
+	}
+
+	spriteType = {
+		name = "GFX_country_development_panel_button"
+		textureFile = "gfx/interface/government_button.png"
+	}
+	spriteType = {
+		name = "GFX_SPC_country_development_btn_icon"
+		textureFile = "gfx/interface/country_development/icon_btn_small.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_bg"
+		textureFile = "gfx/interface/country_development/background.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_1"
+		textureFile = "gfx/interface/country_development/icon_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_2"
+		textureFile = "gfx/interface/country_development/icon_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_3"
+		textureFile = "gfx/interface/country_development/icon_3.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_4"
+		textureFile = "gfx/interface/country_development/icon_4.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_5"
+		textureFile = "gfx/interface/country_development/icon_5.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_icon_6"
+		textureFile = "gfx/interface/country_development/icon_6.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_1_1"
+		textureFile = "gfx/interface/country_development/level_1_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_1_2"
+		textureFile = "gfx/interface/country_development/level_1_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_2_1"
+		textureFile = "gfx/interface/country_development/level_2_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_2_2"
+		textureFile = "gfx/interface/country_development/level_2_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_3_1"
+		textureFile = "gfx/interface/country_development/level_3_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_3_2"
+		textureFile = "gfx/interface/country_development/level_3_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_4_1"
+		textureFile = "gfx/interface/country_development/level_4_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_4_2"
+		textureFile = "gfx/interface/country_development/level_4_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_5_1"
+		textureFile = "gfx/interface/country_development/level_5_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_5_2"
+		textureFile = "gfx/interface/country_development/level_5_2.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_6_1"
+		textureFile = "gfx/interface/country_development/level_6_1.png"
+	}
+	spriteType = {
+		name = "SPC_country_development_panel_level_6_2"
+		textureFile = "gfx/interface/country_development/level_6_2.png"
+	}
+	progressbartype = {
+		name = "SPC_country_development_panel_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/ProgressBars/SPC_generic_bar_green.png"
+		textureFile2 = "gfx/interface/ProgressBars/SPC_generic_bar_empty.png"
+		size = { x = 220 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

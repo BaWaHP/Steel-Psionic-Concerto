@@ -1,0 +1,1147 @@
+defined_text = {
+	name = GET_SFH_mermaid_satisfaction
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 79
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 101
+				}
+			}
+		}
+		localization_key = SFH_mermaid_satisfaction_txt_1
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 59
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 80
+				}
+			}
+		}
+		localization_key = SFH_mermaid_satisfaction_txt_2
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 39
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 60
+				}
+			}
+		}
+		localization_key = SFH_mermaid_satisfaction_txt_3
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > 19
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 40
+				}
+			}
+		}
+		localization_key = SFH_mermaid_satisfaction_txt_4
+	}
+	
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_mermaid_satisfaction_variable > -1
+				}
+				check_variable = {
+					SFH_mermaid_satisfaction_variable < 20
+				}
+			}
+		}
+		localization_key = SFH_mermaid_satisfaction_txt_5
+	}
+}
+
+defined_text = {
+	name = GET_SFH_people_satisfaction
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 79
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 101
+				}
+			}
+		}
+		localization_key = SFH_people_satisfaction_txt_1
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 59
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 80
+				}
+			}
+		}
+		localization_key = SFH_people_satisfaction_txt_2
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 39
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 60
+				}
+			}
+		}
+		localization_key = SFH_people_satisfaction_txt_3
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > 19
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 40
+				}
+			}
+		}
+		localization_key = SFH_people_satisfaction_txt_4
+	}
+	
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_people_satisfaction_variable > -1
+				}
+				check_variable = {
+					SFH_people_satisfaction_variable < 20
+				}
+			}
+		}
+		localization_key = SFH_people_satisfaction_txt_5
+	}
+}
+
+defined_text = {
+	name = GET_SFH_king_power
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_king_power > 79
+				}
+				check_variable = {
+					SFH_king_power < 101
+				}
+			}
+		}
+		localization_key = SFH_king_power_txt_1
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_king_power > 59
+				}
+				check_variable = {
+					SFH_king_power < 81
+				}
+			}
+		}
+		localization_key = SFH_king_power_txt_2
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_king_power > 39
+				}
+				check_variable = {
+					SFH_king_power < 61
+				}
+			}
+		}
+		localization_key = SFH_king_power_txt_3
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_king_power > 19
+				}
+				check_variable = {
+					SFH_king_power < 41
+				}
+			}
+		}
+		localization_key = SFH_king_power_txt_4
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_king_power > -1
+				}
+				check_variable = {
+					SFH_king_power < 21
+				}
+			}
+		}
+		localization_key = SFH_king_power_txt_5
+	}
+}
+
+defined_text = {
+	name = GET_SFH_reformist_power
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_reformist_power > 79
+				}
+				check_variable = {
+					SFH_reformist_power < 101
+				}
+			}
+		}
+		localization_key = SFH_reformist_power_txt_1
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_reformist_power > 59
+				}
+				check_variable = {
+					SFH_reformist_power < 81
+				}
+			}
+		}
+		localization_key = SFH_reformist_power_txt_2
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_reformist_power > 39
+				}
+				check_variable = {
+					SFH_reformist_power < 61
+				}
+			}
+		}
+		localization_key = SFH_reformist_power_txt_3
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_reformist_power > 19
+				}
+				check_variable = {
+					SFH_reformist_power < 41
+				}
+			}
+		}
+		localization_key = SFH_reformist_power_txt_4
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_reformist_power > -1
+				}
+				check_variable = {
+					SFH_reformist_power < 21
+				}
+			}
+		}
+		localization_key = SFH_reformist_power_txt_5
+	}
+}
+
+defined_text = {
+	name = GET_SFH_conservative_power
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_conservative_power > 79
+				}
+				check_variable = {
+					SFH_conservative_power < 101
+				}
+			}
+		}
+		localization_key = SFH_conservative_power_txt_1
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_conservative_power > 59
+				}
+				check_variable = {
+					SFH_conservative_power < 81
+				}
+			}
+		}
+		localization_key = SFH_conservative_power_txt_2
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_conservative_power > 39
+				}
+				check_variable = {
+					SFH_conservative_power < 61
+				}
+			}
+		}
+		localization_key = SFH_conservative_power_txt_3
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_conservative_power > 19
+				}
+				check_variable = {
+					SFH_conservative_power < 41
+				}
+			}
+		}
+		localization_key = SFH_conservative_power_txt_4
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					SFH_conservative_power > -1
+				}
+				check_variable = {
+					SFH_conservative_power < 21
+				}
+			}
+		}
+		localization_key = SFH_conservative_power_txt_5
+	}
+}
+
+defined_text = {
+	name = Get_Zhenghong_portraits
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+		}
+		localization_key = Get_future_Zhenghong_portraits_1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+		}
+		localization_key = Get_future_Zhenghong_portraits_2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+		}
+		localization_key = Get_future_Zhenghong_portraits_3
+	}
+	text = {
+		trigger = {
+			has_country_flag = Get_Zhenghong_portraits_stage_2
+		}
+		localization_key = Get_future_Zhenghong_portraits_4
+	}
+	text = {
+		localization_key = Get_future_Zhenghong_portraits_1
+	}
+}
+
+defined_text = {
+	name = Get_future_Zhenghong_portraits
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+		}
+		localization_key = Get_future_Zhenghong_portraits_1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+		}
+		localization_key = Get_future_Zhenghong_portraits_2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+		}
+		localization_key = Get_future_Zhenghong_portraits_3
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_middle_route
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		localization_key = Get_future_Zhenghong_portraits_1
+	}
+}
+
+defined_text = {
+	name = Get_future_Zhenghong_desc
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+		}
+		localization_key = Get_future_Zhenghong_desc_1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+		}
+		localization_key = Get_future_Zhenghong_desc_2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+		}
+		localization_key = Get_future_Zhenghong_desc_3
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_middle_route
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		localization_key = Get_future_Zhenghong_desc_1
+	}
+}
+
+defined_text = {
+	name = Get_future_nation_ideology
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_3
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_4
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_5
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_6
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_middle_route
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		localization_key = Get_future_nation_ideology_txt_7
+	}
+}
+
+defined_text = {
+	name = Get_future_nation_ideology_desc
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_1
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_2
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_3
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_middle_route
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_4
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+			check_variable = {
+				SFH_Zhenghong_tendency_var > -1
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_5
+	}
+	text = {
+		trigger = {
+			has_completed_focus = SFH_consolidate_traditions
+			check_variable = {
+				SFH_Zhenghong_tendency_var < 0
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_6
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_middle_route
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		localization_key = Get_future_nation_ideology_desc_txt_7
+	}
+}
+
+defined_text = {
+	name = Get_SFH_keep_familiy_tradition_title
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SFH_women_in_army_first }
+		}
+		localization_key = Get_SFH_keep_familiy_tradition_title_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = SFH_women_in_army_first
+		}
+		localization_key = Get_SFH_keep_familiy_tradition_title_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_keep_familiy_tradition_desc
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SFH_women_in_army_first }
+		}
+		localization_key = Get_SFH_keep_familiy_tradition_desc_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = SFH_women_in_army_first
+		}
+		localization_key = Get_SFH_keep_familiy_tradition_desc_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_women_in_army_title
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SFH_keep_familiy_tradition_first }
+		}
+		localization_key = Get_SFH_women_in_army_title_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = SFH_keep_familiy_tradition_first
+		}
+		localization_key = Get_SFH_women_in_army_title_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_women_in_army_desc
+	text = {
+		trigger = {
+			NOT = { has_country_flag = SFH_keep_familiy_tradition_first }
+		}
+		localization_key = Get_SFH_women_in_army_desc_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = SFH_keep_familiy_tradition_first
+		}
+		localization_key = Get_SFH_women_in_army_desc_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_13
+	text = {
+		trigger = {
+			13 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_13_1
+	}
+	text = {
+		trigger = {
+			13 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_13_2
+	}
+	text = {
+		trigger = {
+			13 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_13_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_121
+	text = {
+		trigger = {
+			121 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_121_1
+	}
+	text = {
+		trigger = {
+			121 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_121_2
+	}
+	text = {
+		trigger = {
+			121 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_121_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_11_tt
+	text = {
+		trigger = { NOT = { tag = SFR } }
+		localization_key = SFH_bot_state_11_tt_1
+	}
+	text = {
+		trigger = { tag = SFR }
+		localization_key = SFH_bot_state_11_tt_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_11
+	text = {
+		trigger = { NOT = { tag = SFR } }
+		localization_key = Get_SFH_bot_state_11_1
+	}
+	text = {
+		trigger = { tag = SFR }
+		localization_key = Get_SFH_bot_state_11_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_9
+	text = {
+		trigger = {
+			9 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_9_1
+	}
+	text = {
+		trigger = {
+			9 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_9_2
+	}
+	text = {
+		trigger = {
+			9 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_9_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_10
+	text = {
+		trigger = {
+			10 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_10_1
+	}
+	text = {
+		trigger = {
+			10 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_10_2
+	}
+	text = {
+		trigger = {
+			10 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_10_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_174
+	text = {
+		trigger = {
+			174 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_174_1
+	}
+	text = {
+		trigger = {
+			174 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_174_2
+	}
+	text = {
+		trigger = {
+			174 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_174_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_170
+	text = {
+		trigger = {
+			170 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_170_1
+	}
+	text = {
+		trigger = {
+			170 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_170_2
+	}
+	text = {
+		trigger = {
+			170 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_170_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_5_tt
+	text = {
+		trigger = { NOT = { tag = SFH } }
+		localization_key = SFH_bot_state_5_tt_1
+	}
+	text = {
+		trigger = { tag = SFH }
+		localization_key = SFH_bot_state_5_tt_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_5
+	text = {
+		trigger = { NOT = { tag = SFH } }
+		localization_key = Get_SFH_bot_state_5_1
+	}
+	text = {
+		trigger = { tag = SFH }
+		localization_key = Get_SFH_bot_state_5_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_7
+	text = {
+		trigger = {
+			7 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_7_1
+	}
+	text = {
+		trigger = {
+			7 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_7_2
+	}
+	text = {
+		trigger = {
+			7 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_7_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_8
+	text = {
+		trigger = {
+			8 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_8_1
+	}
+	text = {
+		trigger = {
+			8 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_8_2
+	}
+	text = {
+		trigger = {
+			8 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_8_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_173
+	text = {
+		trigger = {
+			173 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_173_1
+	}
+	text = {
+		trigger = {
+			173 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_173_2
+	}
+	text = {
+		trigger = {
+			173 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_173_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_6_tt
+	text = {
+		trigger = { NOT = { tag = QTA } }
+		localization_key = SFH_bot_state_6_tt_1
+	}
+	text = {
+		trigger = { tag = QTA }
+		localization_key = SFH_bot_state_6_tt_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_6
+	text = {
+		trigger = { NOT = { tag = QTA } }
+		localization_key = Get_SFH_bot_state_6_1
+	}
+	text = {
+		trigger = { tag = QTA }
+		localization_key = Get_SFH_bot_state_6_2
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_4
+	text = {
+		trigger = {
+			4 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_4_1
+	}
+	text = {
+		trigger = {
+			4 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_4_2
+	}
+	text = {
+		trigger = {
+			4 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_4_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_171
+	text = {
+		trigger = {
+			171 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_171_1
+	}
+	text = {
+		trigger = {
+			171 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_171_2
+	}
+	text = {
+		trigger = {
+			171 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_171_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_172
+	text = {
+		trigger = {
+			172 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_172_1
+	}
+	text = {
+		trigger = {
+			172 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_172_2
+	}
+	text = {
+		trigger = {
+			172 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_172_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_3
+	text = {
+		trigger = {
+			3 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_3_1
+	}
+	text = {
+		trigger = {
+			3 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_3_2
+	}
+	text = {
+		trigger = {
+			3 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_3_3
+	}
+}
+
+defined_text = {
+	name = Get_SFH_bot_state_2
+	text = {
+		trigger = {
+			2 = { check_variable = { SFH_state_influence_var > 0 } }
+		}
+		localization_key = Get_SFH_bot_state_2_1
+	}
+	text = {
+		trigger = {
+			2 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var > SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_2_2
+	}
+	text = {
+		trigger = {
+			2 = { 
+				check_variable = { SFH_state_influence_var = 0 } 
+				check_variable = { QTA_state_influence_var < SFR_state_influence_var } 
+			}
+		}
+		localization_key = Get_SFH_bot_state_2_3
+	}
+}
+
+defined_text = {
+	name = GET_SFH_bot_status_report
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 11 } NOT = { tag = SFR } }
+		localization_key = SFH_bot_state_11_tt_1
+	}
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 11 } tag = SFR }
+		localization_key = SFH_bot_state_11_tt_2
+	}
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 5 } NOT = { tag = SFH } }
+		localization_key = SFH_bot_state_5_tt_1
+	}
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 5 } tag = SFH }
+		localization_key = SFH_bot_state_5_tt_2
+	}
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 6 } NOT = { tag = QTA } }
+		localization_key = SFH_bot_state_6_tt_1
+	}
+	text = {
+		trigger = { check_variable = { SFH_bot_state_pointer = 6 } tag = QTA }
+		localization_key = SFH_bot_state_6_tt_2
+	}
+	text = {
+		trigger = { var:SFH_bot_state_pointer = { check_variable = { SFH_state_influence_var > 0 } } }
+		localization_key = SFH_bot_select_title_txt
+	}
+	text = {
+		trigger = { var:SFH_bot_state_pointer = { check_variable = { SFH_state_influence_var = 0 } } }
+		localization_key = GET_SFH_bot_status_report_txt
+	}
+}

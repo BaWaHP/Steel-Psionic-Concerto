@@ -1,0 +1,24 @@
+
+state={
+	id=114
+	name="STATE_114"
+	provinces={
+		617 3300 4093 7263 9142 11541 11562 19989 20007 20115 20159 
+	}
+	history = {
+		owner = CLD
+		add_core_of = CLD
+		add_core_of = NCD
+		buildings = {
+            infrastructure = 2
+			arms_factory = 2
+        }
+		victory_points = {
+			20159 2
+		}
+	}
+	manpower=1536349 
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

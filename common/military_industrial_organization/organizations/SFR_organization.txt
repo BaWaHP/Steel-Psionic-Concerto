@@ -1,0 +1,16 @@
+SFR_ShiMendong_military_factory = {		#石门洞兵工厂
+	name = SFR_ShiMendong_military_factory
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	allowed = { tag = SFR }
+
+	initial_trait = {
+		name = generic_infantry_equipment_organization
+		equipment_bonus = {
+			hard_attack = -0.05
+			breakthrough = 0.05
+			reliability = 0.02
+			build_cost_ic = -0.1
+		}
+	}
+}

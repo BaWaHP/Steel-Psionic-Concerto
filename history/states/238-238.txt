@@ -1,0 +1,34 @@
+
+state={
+	id=238
+	name="STATE_238"
+
+	resources = {
+		rubber = 24
+		oil = 8
+		chromium = 2
+	}
+
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+			20101 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			20101 8
+		}
+	}
+
+	provinces={
+		1773 2818 5557 7515 8911 10558 11006 11167 19913 19924 20022 20045 20101 20102 
+	}
+	manpower=401100
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

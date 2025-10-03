@@ -1,0 +1,29 @@
+
+state={
+	id=23
+	name="STATE_23"
+	resources={
+		steel = 4
+		chromium=8.000
+		tungsten=8.000
+	}
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			16352 1
+		}
+	}
+
+	provinces={
+		5909 6115 6230 6809 16164 16280 16299 16314 16352 16422 16445 16479 16595 16629 16655 16692 16751 
+	}
+	manpower=1614792
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,12 @@
+leader_traits = {
+
+	UDT_rsb_mil_leader = {		#南巴斯蒂亚驻提特兰军团司令
+		random = no
+		
+		planning_speed = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

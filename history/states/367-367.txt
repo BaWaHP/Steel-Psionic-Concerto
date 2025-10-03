@@ -1,0 +1,35 @@
+
+state={
+	id=367
+	name="STATE_367"
+	
+	resources = {
+		steel = 10
+		oil = 8
+	}
+
+	history={
+		owner = FCR
+		add_core_of = FCR
+		
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 3
+		}
+		
+		victory_points = {
+			10699 15
+		}
+
+	}
+
+	provinces={
+		1465 2377 2832 3482 5638 7780 9119 9428 10699 11607 18479 18511 18636 18793 18907 18996 19007 
+	}
+	manpower=1700000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,41 @@
+
+state={
+	id=2
+	name="STATE_2"
+	resources={
+		oil=16
+	}
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 4
+			19424 = {
+				naval_base = 5
+			}
+
+		}
+		victory_points = {
+			11525 3
+		}
+		victory_points = {
+			19424 8
+		}
+		victory_points = {
+			7915 20
+		}
+
+	}
+
+	provinces={
+		954 3800 4416 7031 7915 9618 11525 11727 19424 19497 19581 19582 19624 19701 19714 
+	}
+	manpower=2391520
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

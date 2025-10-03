@@ -1,0 +1,129 @@
+﻿capital = 453
+
+oob = "IMC"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = national_socialist
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 2
+	revolutionary_communism = 4
+	worldunion_socialist = 4
+	worldunion_democrat = 5
+	liberal_republican = 6
+	conservative_republican = 4
+	authoritarian_republican = 3
+	national_socialist = 3
+	authoritarian_nationalism = 1
+	paternal_autocrat = 60
+	wizard_rules = 2
+	religious_extremism = 4
+	anarchism = 2
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	caster_weapons_1 = 1
+	caster_attaker_weapons_1 = 1
+	caster_recon_weapons_1 = 1
+	caster_support_weapons_1 = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+add_ideas = {
+	IMC_the_second_ursuline_expedition
+	IMC_corpo_and_tyrant
+	IMC_island_game
+}
+
+recruit_character = IMC_telemachus_ischia_superbia
+recruit_character = IMC_runaway_slave
+recruit_character = IMC_remains_of_the_saint
+recruit_character = IMC_bastia_freecorp
+recruit_character = IMC_laertes_ischia_superbia
+recruit_character = IMC_odysseus_ischia_superbia
+recruit_character = IMC_republican_civilian_associations
+recruit_character = IMC_eastern_expeditionary_corps
+recruit_character = IMC_the_cult
+recruit_character = IMC_free_market_voice

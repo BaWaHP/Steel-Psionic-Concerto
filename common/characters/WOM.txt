@@ -1,0 +1,51 @@
+characters={
+
+	WOM_wome_IV = {		#沃姆四世
+   		name = WOM_wome_IV
+   		portraits = {
+   			civilian = {
+   				large="GFX_WOM_wome_IV"
+   				small="GFX_idea_WOM_wome_IV"
+   			}
+   			army = {
+				large="GFX_WOM_wome_IV"
+				small="GFX_idea_WOM_wome_IV"
+   			}
+   		}
+   		country_leader = {
+			desc = WOM_wome_IV_desc
+   			ideology = social_democrat
+   			traits = { commoner_emperor }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+   		country_leader = {
+			desc = WOM_wome_IV_desc
+   			ideology = market_liberalism
+   			traits = { commoner_emperor }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+   		country_leader = {
+			desc = WOM_wome_IV_desc
+   			ideology = paternal_conservatism
+   			traits = { commoner_emperor }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+   		country_leader = {
+			desc = WOM_wome_IV_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { commoner_emperor }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+   		country_leader = {
+			desc = WOM_wome_IV_desc
+   			ideology = absolute_monarchy
+   			traits = { new_faces commoner_emperor }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

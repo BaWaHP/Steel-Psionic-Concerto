@@ -1,0 +1,90 @@
+﻿###templates###
+division_template = {
+	name = "地方民团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "正规军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+
+	is_locked = yes
+}
+
+###units###
+
+units = {
+	division = {
+		name = "地方民团一师"
+		location = 4099
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方民团二师"
+		location = 16764
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方民团三师"
+		location = 10923
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方民团四师"
+		location = 16993
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方民团四师"
+		location = 16993
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "正规军一师"
+		location = 16764
+		division_template = "正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "正规军二师"
+		location = 4099
+		division_template = "正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+}

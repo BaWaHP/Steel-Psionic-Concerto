@@ -1,0 +1,39 @@
+ROT_two_army_stand_bop = {
+	initial_value = 1
+	left_side = ROT_two_army_stand_bop_left
+	right_side = ROT_two_army_stand_bop_right
+	decision_category = ROT_kick_rsb_ass_bop
+
+	side = {
+		id = ROT_two_army_stand_bop_left
+		icon = [Get_ROT_bop_icon_left]
+		range = {
+			id = ROT_two_army_stand_bop_left_2
+			min = -1
+			max = -0.5
+		}
+
+		range = {
+			id = ROT_two_army_stand_bop_left_1
+			min = -0.5
+			max = 0
+		}
+	}
+
+	side = {
+		id = ROT_two_army_stand_bop_right
+		icon = GFX_ROT_two_army_stand_bop_right
+
+		range = {
+			id = ROT_two_army_stand_bop_right_1
+			min = 0
+			max = 0.5
+		}
+
+		range = {
+			id = ROT_two_army_stand_bop_right_2
+			min = 0.5
+			max = 1
+		}
+	}
+} 

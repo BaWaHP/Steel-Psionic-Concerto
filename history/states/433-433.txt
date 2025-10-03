@@ -1,0 +1,36 @@
+
+state={
+	id=433
+	name="STATE_433"
+	provinces={
+		797 1786 4912 6069 9813 10123 11484 11494 20209 20210 20266 20274 20371 20419 
+	}
+	resources = {
+		aluminium = 8
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			20419 = { naval_base = 3 }
+		}
+		victory_points = {
+			20419 15
+		}
+		victory_points = {
+			797 5
+		}
+		victory_points = {
+			9813 2
+		}
+		victory_points = {
+			20266 2
+		}
+	}
+	manpower = 2600000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=369
+	name="STATE_369"
+
+	resources = {
+		magic_crystal = 40
+		steel = 30
+		tungsten = 25
+		aluminium = 10
+		oil = 5
+	}
+
+	history={
+		owner = GDD
+		add_core_of = GDD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			279 10
+		}
+	}
+
+	provinces={
+		279 713 6686 9118 10329 10965 18094 18253 18348 18399 18455 
+	}
+	manpower = 953250
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

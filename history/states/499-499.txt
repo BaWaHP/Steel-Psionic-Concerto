@@ -1,0 +1,26 @@
+state={
+	id=499
+	name="STATE_499"
+	resources = {
+		magic_crystal = 18
+	}
+	history = {
+		owner = KBH
+		add_core_of = KBH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			9929 2
+		}
+	}
+	provinces={
+		512 1970 2366 5003 5579 6105 9301 9929 11228 12063 13743 13825 13902 14039 
+	}
+	manpower=2640000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

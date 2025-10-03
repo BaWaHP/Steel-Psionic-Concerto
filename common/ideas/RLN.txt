@@ -1,0 +1,370 @@
+ideas = {
+	country = {
+
+		RLN_revolution_terror = {		#革命恐怖
+			picture = generic_purge
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.1
+				stability_factor = -0.2
+				weekly_manpower = -150
+				ai_focus_defense_factor = -0.5
+			}
+		}
+
+		RLN_kick_rich_get_lands = {		#打土豪，分田地
+			picture = generic_agrarian_society
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		RLN_econ_in_shadow = {		#阴影中的经济
+			picture = SOV_second_five_year_plan
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.2
+				custom_modifier_tooltip = RLN_econ_in_shadow_tt
+			}
+		}
+
+		RLN_econ_in_shadow_2 = {		#阴影中的经济
+			name = RLN_econ_in_shadow
+			picture = SOV_second_five_year_plan
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.2
+				custom_modifier_tooltip = RLN_econ_in_shadow_tt
+			}
+		}
+
+		RLN_tenian_red_army = {		#特尼安赤军
+			picture = RLN_tenian_red_army
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				army_org_regain = 0.1
+			}
+		}
+
+		RLN_tenian_red_army_2 = {		#特尼安赤军
+			name = RLN_tenian_red_army
+			picture = RLN_tenian_red_army
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				army_org_regain = 0.2
+				army_org_factor = 0.1
+			}
+		}
+
+		RLN_tenian_red_army_3 = {		#特尼安赤军
+			name = RLN_tenian_red_army
+			picture = RLN_tenian_red_army
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				army_org_regain = 0.2
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				monthly_military_development_process = 2
+			}
+		}
+
+		RLN_tenian_red_army_4 = {		#特尼安赤军
+			name = RLN_tenian_red_army
+			picture = RLN_tenian_red_army
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				army_org_regain = 0.2
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				max_command_power = 20
+				monthly_military_development_process = 2
+			}
+		}
+
+		RLN_violent_revolution = {		#暴力革命
+			picture = generic_communist_army
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+				weekly_manpower = -50
+				ai_focus_defense_factor = -0.5
+			}
+		}
+
+		RLN_support_of_people = {		#民众支持
+			picture = generic_communism_drift_bonus
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				surrender_limit = 0.1
+			}
+		}
+
+		RLN_revengence_war = {		#为阶级复仇而战
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+				command_power_gain_mult = -0.5
+			}
+		}
+
+		RLN_devastation_everywhere = {		#满目疮痍
+			picture = FRA_matignon_agreements
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.15
+				custom_modifier_tooltip = RLN_devastation_everywhere_tt
+			}
+			on_add = {
+				set_country_flag = SPC_ban_trade_policy
+				set_country_flag = SPC_ban_foreign_policy
+			}
+		}
+
+		RLN_devastation_everywhere_2 = {		#满目疮痍
+			name = RLN_devastation_everywhere
+			picture = FRA_matignon_agreements
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.2
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.15
+				custom_modifier_tooltip = RLN_devastation_everywhere_tt
+			}
+			on_remove = {
+				clr_country_flag = SPC_ban_trade_policy
+				clr_country_flag = SPC_ban_foreign_policy 
+			}
+		}
+
+		RLN_biohazard = {		#生物灾厄
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				conscription_factor = -0.1
+			}
+		}
+
+		RLN_biohazard_2 = {		#生物灾厄
+			name = RLN_biohazard
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.15
+				conscription_factor = -0.1
+			}
+		}
+
+		RLN_biohazard_3 = {		#生物灾厄
+			name = RLN_biohazard
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {  original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				conscription_factor = -0.1
+			}
+		}
+
+		RLN_nationwide_bandit_suppresions = {		#全国大剿匪
+			picture = anti_soviet_pact
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = 0.005
+				conscription_factor = -0.1
+			}
+		}
+
+		RLN_no_grace_for_loss = {		#不容失去
+			picture = generic_communist_army
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				equipment_capture_factor = 0.1
+				conscription = 0.01
+			}
+		}
+
+		RLN_great_famine = {		#大饥荒
+			picture = raj_risk_of_famine
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				line_change_production_efficiency_factor = -0.3
+				monthly_living_standard_development_process = -10
+				army_org_factor = -0.25
+				supply_factor = -0.1
+			}
+		}
+
+		RLN_econ_miracle_of_revolution = {		#革命的经济奇迹
+			picture = generic_economic_increase
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		RLN_focus_on_production_idea = {		#侧重制造业
+			picture = generic_production_bonus
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_speed_arms_factory_factor = 0.35
+				production_speed_industrial_complex_factor = 0.35
+				monthly_industrial_development_process = 4
+			}
+		}
+
+		RLN_accustomed_to_death_fight = {		#惯于死斗
+			picture = FRA_army_of_aggression_focus
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				war_support_weekly = 0.001
+				org_loss_at_low_org_factor = -0.2
+				pocket_penalty = -0.2
+			}
+		}
+
+		RLN_the_fire_rises = {		#赤潮澎湃，烈火高扬
+			picture = FRA_national_mobilization_focus
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				org_loss_when_moving = -0.15
+				army_attack_factor = 0.05
+				out_of_supply_factor = -0.1
+			}
+		}
+
+		RLN_easy_steady = {		#稳步推进
+			picture = generic_infantry_bonus
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			targeted_modifier = {
+				tag = KOA
+				defense_bonus_against = 0.1
+			}
+		}
+
+		RLN_fast_battles = {		#速战速决
+			picture = generic_infantry_bonus
+			allowed = { original_tag = RLN }
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = KOA
+				attack_bonus_against = 0.1
+			}
+		}
+
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		RLN_wallawa_port_design_bureau = {		#瓦拉瓦港设计局
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = { original_tag = RLN }
+			
+			research_bonus = {
+				caster_equipments = 0.05
+				infantry_weapons = 0.05
+				secret_weapons = 0.05
+			}
+
+			equipment_bonus = {
+				caster_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		RLN_national_industry_planning_department = {		#国家工业规划部
+			picture = generic_industrial_concern_1
+
+			allowed = { original_tag = RLN }
+			available = { LNR = { exists = no } }
+
+			cost = 200
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_rail_way_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+
+			traits = { industrial_concern }
+		}
+	}
+
+}

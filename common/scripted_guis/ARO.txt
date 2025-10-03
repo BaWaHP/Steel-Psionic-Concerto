@@ -1,0 +1,73 @@
+scripted_gui = {
+
+	ARO_maraud_from_Lesnoden_gui = {
+		context_type = decision_category
+		window_name = "ARO_maraud_from_Lesnoden_gui_window"
+		
+		triggers = {
+		}
+
+		effects = {
+			ARO_maraud_from_Lesnoden_state_72_click = { set_variable = { ARO_mfL_state_selected = 72 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 321 } set_variable = { ARO_mfL_state_selected_icon_y = 165 } }
+			ARO_maraud_from_Lesnoden_state_73_click = { set_variable = { ARO_mfL_state_selected = 73 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 298 } set_variable = { ARO_mfL_state_selected_icon_y = 127 } }
+			ARO_maraud_from_Lesnoden_state_74_click = { set_variable = { ARO_mfL_state_selected = 74 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 304 } set_variable = { ARO_mfL_state_selected_icon_y = 78 } }
+			ARO_maraud_from_Lesnoden_state_75_click = { set_variable = { ARO_mfL_state_selected = 75 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 274 } set_variable = { ARO_mfL_state_selected_icon_y = 182 } }
+			ARO_maraud_from_Lesnoden_state_79_click = { set_variable = { ARO_mfL_state_selected = 79 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 238 } set_variable = { ARO_mfL_state_selected_icon_y = 129 } }
+			ARO_maraud_from_Lesnoden_state_80_click = { set_variable = { ARO_mfL_state_selected = 80 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 237 } set_variable = { ARO_mfL_state_selected_icon_y = 73 } }
+			ARO_maraud_from_Lesnoden_state_81_click = { set_variable = { ARO_mfL_state_selected = 81 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 195 } set_variable = { ARO_mfL_state_selected_icon_y = 95 } }
+			ARO_maraud_from_Lesnoden_state_82_click = { set_variable = { ARO_mfL_state_selected = 82 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 118 } set_variable = { ARO_mfL_state_selected_icon_y = 132 } }
+			ARO_maraud_from_Lesnoden_state_83_click = { set_variable = { ARO_mfL_state_selected = 83 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 179 } set_variable = { ARO_mfL_state_selected_icon_y = 70 } }
+			ARO_maraud_from_Lesnoden_state_84_click = { set_variable = { ARO_mfL_state_selected = 84 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 96 } set_variable = { ARO_mfL_state_selected_icon_y = 70 } }
+			ARO_maraud_from_Lesnoden_state_86_click = { set_variable = { ARO_mfL_state_selected = 86 } ARO_mfL_status_update = yes set_variable = { ARO_mfL_state_selected_icon_x = 158 } set_variable = { ARO_mfL_state_selected_icon_y = 22 } }
+		}
+
+		properties = {
+			ARO_maraud_from_Lesnoden_state_s = { image = "[ARO_mfL_state_selected_icon_name]" x = ARO_mfL_state_selected_icon_x y = ARO_mfL_state_selected_icon_y }
+			ARO_maraud_from_Lesnoden_state_72 = { image = "[ARO_mfL_state_72_name]"}
+			ARO_maraud_from_Lesnoden_state_73 = { image = "[ARO_mfL_state_73_name]"}
+			ARO_maraud_from_Lesnoden_state_74 = { image = "[ARO_mfL_state_74_name]"}
+			ARO_maraud_from_Lesnoden_state_75 = { image = "[ARO_mfL_state_75_name]"}
+			ARO_maraud_from_Lesnoden_state_79 = { image = "[ARO_mfL_state_79_name]"}
+			ARO_maraud_from_Lesnoden_state_80 = { image = "[ARO_mfL_state_80_name]"}
+			ARO_maraud_from_Lesnoden_state_81 = { image = "[ARO_mfL_state_81_name]"}
+			ARO_maraud_from_Lesnoden_state_82 = { image = "[ARO_mfL_state_82_name]"}
+			ARO_maraud_from_Lesnoden_state_83 = { image = "[ARO_mfL_state_83_name]"}
+			ARO_maraud_from_Lesnoden_state_84 = { image = "[ARO_mfL_state_84_name]"}
+			ARO_maraud_from_Lesnoden_state_86 = { image = "[ARO_mfL_state_86_name]"}
+		}
+	}
+	
+	ARO_dawn_church_gui = {
+		context_type = decision_category
+		window_name = "ARO_dawn_church_gui_window"
+		
+		triggers = {
+		}
+
+		effects = {
+			ARO_dawn_church_state_72_click = { set_variable = { ARO_dc_state_selected = 72 } set_variable = { ARO_dc_state_selected_icon_x = 321 } set_variable = { ARO_dc_state_selected_icon_y = 165 } }
+			ARO_dawn_church_state_73_click = { set_variable = { ARO_dc_state_selected = 73 } set_variable = { ARO_dc_state_selected_icon_x = 298 } set_variable = { ARO_dc_state_selected_icon_y = 127 } }
+			ARO_dawn_church_state_74_click = { set_variable = { ARO_dc_state_selected = 74 } set_variable = { ARO_dc_state_selected_icon_x = 304 } set_variable = { ARO_dc_state_selected_icon_y = 78  } }
+			ARO_dawn_church_state_75_click = { set_variable = { ARO_dc_state_selected = 75 } set_variable = { ARO_dc_state_selected_icon_x = 274 } set_variable = { ARO_dc_state_selected_icon_y = 182 } }
+			ARO_dawn_church_state_76_click = { set_variable = { ARO_dc_state_selected = 76 } set_variable = { ARO_dc_state_selected_icon_x = 211 } set_variable = { ARO_dc_state_selected_icon_y = 215 } }
+			ARO_dawn_church_state_77_click = { set_variable = { ARO_dc_state_selected = 77 } set_variable = { ARO_dc_state_selected_icon_x = 183 } set_variable = { ARO_dc_state_selected_icon_y = 194 } }
+			ARO_dawn_church_state_78_click = { set_variable = { ARO_dc_state_selected = 78 } set_variable = { ARO_dc_state_selected_icon_x = 170 } set_variable = { ARO_dc_state_selected_icon_y = 156 } }
+			ARO_dawn_church_state_79_click = { set_variable = { ARO_dc_state_selected = 79 } set_variable = { ARO_dc_state_selected_icon_x = 238 } set_variable = { ARO_dc_state_selected_icon_y = 129 } }
+			ARO_dawn_church_state_80_click = { set_variable = { ARO_dc_state_selected = 80 } set_variable = { ARO_dc_state_selected_icon_x = 237 } set_variable = { ARO_dc_state_selected_icon_y = 73  } }
+		}
+
+		properties = {
+			ARO_dawn_church_state_s = { image = "[ARO_dc_state_selected_icon_name]" x = ARO_dc_state_selected_icon_x y = ARO_dc_state_selected_icon_y }
+			ARO_dawn_church_state_72 = { image = "[ARO_dc_state_72_name]"}
+			ARO_dawn_church_state_73 = { image = "[ARO_dc_state_73_name]"}
+			ARO_dawn_church_state_74 = { image = "[ARO_dc_state_74_name]"}
+			ARO_dawn_church_state_75 = { image = "[ARO_dc_state_75_name]"}
+			ARO_dawn_church_state_76 = { image = "[ARO_dc_state_76_name]"}
+			ARO_dawn_church_state_77 = { image = "[ARO_dc_state_77_name]"}
+			ARO_dawn_church_state_78 = { image = "[ARO_dc_state_78_name]"}
+			ARO_dawn_church_state_79 = { image = "[ARO_dc_state_79_name]"}
+			ARO_dawn_church_state_80 = { image = "[ARO_dc_state_80_name]"}
+		}
+	}
+}
+

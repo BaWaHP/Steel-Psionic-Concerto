@@ -1,0 +1,18 @@
+UPV_reform_by_the_Grand_Duchess = {		#女大公的改革
+	#picture = 
+	allowed = { tag = UPV }
+	visible = { }
+	visible_when_empty = no
+	priority = 10
+}
+
+UPV_industrialization_process = {		#工业化进程
+	#picture = 
+	allowed = { tag = UPV }
+	visible = { 
+		NOT = { has_idea = UPV_mature_industrial_system }
+		NOT = { has_completed_focus = UPV_stablize_crowds }
+	}
+	visible_when_empty = no
+	priority = 10
+}

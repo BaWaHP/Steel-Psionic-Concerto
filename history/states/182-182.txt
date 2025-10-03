@@ -1,0 +1,33 @@
+
+state={
+	id=182
+	name="STATE_182"
+
+	resources = {
+		chromium = 24
+	}
+
+	history={
+		owner = EOM
+		add_core_of = EOM
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			7680 8
+		}
+		victory_points = {
+			1550 5
+		}
+	}
+
+	provinces={
+		191 1910 2196 3056 3371 5308 5324 5784 6018 7680 9853 15376 15462 15499 15549 15550 15579 15678 15780 15838 15854 15885 16009 
+	}
+	manpower=680000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

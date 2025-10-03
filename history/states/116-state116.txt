@@ -1,0 +1,29 @@
+
+state={
+	id=116
+	name="STATE_116"
+	resources = {
+		oil = 5
+		magic_crystal = 1
+	}
+	provinces={
+		1793 2090 6648 10434 10854 19589 19612 19677 19783 19839 19896 19922 
+	}
+	history = {
+		owner = NCD
+		add_core_of = NCD
+		add_core_of = CLD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			19612 2
+		}
+	}
+	manpower=2467052
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

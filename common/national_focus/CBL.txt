@@ -1,0 +1,169 @@
+focus_tree = {
+	id = CBL_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CBL
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#酒后散心
+		id = CBL_drink_then_fun
+		icon = GFX_
+		x = 5
+		y = 0
+		cost = 1.43
+
+		available = {}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = CBL.1
+		}
+	}
+
+	focus = {	#群情激愤
+		id = CBL_getting_angry
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CBL_drink_then_fun }
+		relative_position_id = CBL_drink_then_fun
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = CBL.2
+				days = 10
+			}
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				country_event = CBL.2
+			}
+		}
+	}
+
+	focus = {	#局势升级
+		id = CBL_situation_worsen
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CBL_getting_angry }
+		relative_position_id = CBL_getting_angry
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = CBL.3
+				days = 10
+			}
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				country_event = CBL.3
+			}
+		}
+	}
+
+	focus = {	#总暴动
+		id = CBL_general_insurrection
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 4.29
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CBL_situation_worsen }
+		relative_position_id = CBL_situation_worsen
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = CBL.4
+				days = 10
+			}
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				country_event = CBL.4
+			}
+			country_event = CBL.100
+		}
+	}
+
+	focus = {	#游戏开始
+		id = CBL_game_starting
+		icon = GFX_
+		x = 0
+		y = 1
+		cost = 20
+
+		available = {}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CBL_general_insurrection }
+		relative_position_id = CBL_general_insurrection
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+}

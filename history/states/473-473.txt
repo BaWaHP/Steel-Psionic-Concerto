@@ -1,0 +1,29 @@
+
+state={
+	id=473
+	name="STATE_473"
+	provinces={
+		818 3701 4535 5590 17188 17277 17278 17353 17440 
+	}
+	resources = {
+		aluminium = 4
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			17278 10
+		}
+		victory_points = {
+			5590 8
+		}
+	}
+	manpower = 1700000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

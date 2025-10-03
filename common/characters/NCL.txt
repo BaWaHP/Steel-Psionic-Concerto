@@ -1,0 +1,194 @@
+characters = {
+
+	NCL_unkown = {	#暂无
+		name = NCL_unkown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_nationalism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = anarchism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_sperdak_chevinson = {	#斯佩尔达克·切文森
+		name = NCL_sperdak_chevinson
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = pioneer_team_communism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_vestigne_lille = {	#维斯特涅·里尔
+		name = NCL_vestigne_lille
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = popular_communism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	
+	NCL_cheriste_coville = {	#切利斯特·科维列
+		name = NCL_cheriste_coville
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = exporting_revolutionism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_tria_orsino = {	#特里亚·奥尔斯诺
+		name = NCL_tria_orsino
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_wilt_kerchak = {	#威尔特·柯察克
+		name = NCL_wilt_kerchak
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = democratic_republican
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_slendon_griffiths = {	#斯兰登·格里菲斯
+		name = NCL_slendon_griffiths
+		portraits = {
+			civilian = {
+				large="GFX_NCL_slendon_griffiths"
+				small="GFX_idea_NCL_slendon_griffiths"
+			}
+			army = {
+				large="GFX_NCL_slendon_griffiths"
+				small="GFX_idea_NCL_slendon_griffiths"
+			}
+		}
+		country_leader = {
+			ideology = dual_system_of_constitutional_monarchy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_almodi_neri = {	#阿尔摩迪·涅利
+		name = NCL_almodi_neri
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = social_corporatism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	NCL_kennet_celidia = {	#肯纳特·西莉迪亚
+		name = NCL_kennet_celidia
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

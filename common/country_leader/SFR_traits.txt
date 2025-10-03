@@ -1,0 +1,165 @@
+leader_traits = {
+
+	SFR_tired_mediator = {					#疲惫的调停者
+		random = no
+
+		stability_factor = 0.1
+		political_power_factor = -0.2
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SFR_seasoned_mediator = {					#老练的调停者
+		random = no
+
+		stability_factor = 0.05
+		SFR_unity_weekly = 2
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SFR_soul_of_the_21st_army = {					#二十一军之魂
+		random = no
+
+		war_support_factor = 0.05
+		army_attack_factor = 0.05
+		army_org_factor = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_revolution_hero = {					#革命英雄
+		random = no
+
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		army_org_factor = 0.05
+		army_org_regain = 0.05
+		land_reinforce_rate = 0.02
+		experience_gain_army = 0.4
+
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_front_protector = {					#阵线保卫者
+		random = no
+
+		custom_modifier_tooltip = SFR_LinYouzhi_chief_desc
+
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_invulnerable = {					#坚不可摧
+		random = no
+
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		drift_defence_factor = 0.2
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_friend_of_farmers = {					#农民之友
+		random = no
+
+		consumer_goods_factor = 0.05
+		stability_factor = 0.05
+		monthly_population = 0.1
+		global_building_slots_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_friendly_chap = {					#能说会道
+		random = no
+
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.25
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_not_welcomed = {					#不受欢迎
+		random = no
+
+		stability_factor = -0.05
+		political_power_factor = -0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_revolutionary_party_patriarch = {					#革命党元老
+		random = no
+
+		stability_factor = 0.1
+		political_power_factor = -0.1
+		political_advisor_cost_factor = -0.25
+		research_speed_factor = 0.05
+		SFR_unity_weekly = 5
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_underground_network_leader = {					#地下运输网负责人
+		random = no
+
+		stability_factor = 0.1
+		production_lack_of_resource_penalty_factor = -0.2
+		industrial_capacity_factory = 0.05
+		production_factory_efficiency_gain_factor = 0.1
+		supply_factor = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_mental_war_expert = {					#心理战专家
+		random = no
+
+		war_support_factor = 0.05
+		army_org_regain = 0.05
+		army_org_factor = 0.05
+		compliance_growth = 0.05
+		resistance_decay = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_law_expert = {					#法律专家
+		random = no
+
+		intelligence_agency_defense = 0.1
+		political_advisor_cost_factor = -0.25
+		drift_defence_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_principal_of_workers_school = {					#工农速成学校校长
+		random = no
+
+		stability_factor = -0.1
+		research_speed_factor = 0.05
+		conscription_factor = 0.1
+		state_science_development_monthly = 0.02
+		monthly_industrial_development_process = 1
+		monthly_agricultural_development_process = 1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	SFR_battle_field_med_expert = {					#战地医疗专家
+		random = no
+
+		attrition = -0.05
+		experience_loss_factor = -0.05
+		army_org_regain = 0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+}

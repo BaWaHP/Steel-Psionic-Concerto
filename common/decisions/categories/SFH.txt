@@ -1,0 +1,58 @@
+SFH_influence_from_mermaid_category = {
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { tag = SFH }
+	visible = { has_country_flag = SFH_influence_from_mermaid_flag }
+	visible_when_empty = yes
+	priority = 7
+}
+
+SFH_national_reformation = {
+	allowed = { tag = SFH }
+	visible = { has_country_flag = SFH_national_reformation_flag }
+	visible_when_empty = yes
+	priority = 9
+}
+
+SFH_military_connection = {
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = { tag = SFH }
+	visible = { has_dynamic_modifier = { modifier = SFH_corrupted_army_dynamic_modifier } }
+	visible_when_empty = yes
+	priority = 8
+}
+
+SFH_future_of_the_nation = {	#国家的未来
+	scripted_gui = SFH_future_of_the_nation_ui
+	allowed = { tag = SFH }
+	visible = { has_country_leader = SFH_ZhengJun }
+	visible_when_empty = yes
+	priority = 11
+}
+
+SFH_battle_over_territory = {	#领土争夺战
+	scripted_gui = SFH_battle_over_territory_ui
+	allowed = { OR = { tag = SFH tag = SFR tag = QTA } }
+	visible = { SFH = { has_country_flag = SFH_pre_war_flag exists = yes } has_war = no }
+	visible_when_empty = yes
+	priority = 20
+}
+
+SFH_land_integration_decisions = {
+	allowed = { tag = SFH }
+	visible = { has_completed_focus = SFH_crossroads_of_destiny }
+	priority = 30
+}
+
+SFH_expansion_decisions = {
+	allowed = { tag = SFH }
+	visible = { has_completed_focus = SFH_for_everything_we_lost }
+	visible_when_empty = yes
+	priority = 40
+}
+
+SFH_aftergame_decisions = {
+	allowed = { tag = SFH }
+	visible = { has_country_flag = SFH_game_over }
+	visible_when_empty = yes
+	priority = 50
+}

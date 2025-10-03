@@ -1,0 +1,14 @@
+leader_traits = {
+
+	TCL_the_exiler = {		#被流放者
+		random = no
+		
+		stability_factor = -0.05
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

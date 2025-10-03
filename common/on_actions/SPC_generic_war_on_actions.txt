@@ -1,0 +1,43 @@
+on_actions = {
+    on_declare_war = {
+		###FROM - 目标###
+		###ROOT - 攻击方###
+		###无框架搭建需求###
+
+		effect = {
+			###############
+			###东巴斯蒂亚###
+			###############
+
+			if = {		#东巴大战
+				limit = {
+					ROOT = {
+						OR = {
+							SPC_generic_region_trigger_1_unif = yes
+							SPC_generic_region_trigger_2_unif = yes
+							SPC_generic_region_trigger_3_unif = yes
+						}
+					}
+					FROM = {
+						OR = {
+							SPC_generic_region_trigger_1_unif = yes
+							SPC_generic_region_trigger_2_unif = yes
+							SPC_generic_region_trigger_3_unif = yes
+						}
+					}
+					NOT = { has_global_flag = SPC_SE_second_east_bastia_war_exists }
+				}
+				every_country = {
+					set_country_flag = superevent_show_flag
+					set_country_flag = SPC_SE_second_east_bastia_war_flag
+					set_global_flag = SPC_SE_second_east_bastia_war_exists
+					scoped_play_song = "SE_second_east_bastia_war_sound"
+				}
+			}
+
+			###############
+			###南巴斯蒂亚###
+			###############
+		}
+	}
+}

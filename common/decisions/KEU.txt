@@ -1,0 +1,497 @@
+KEU_Merciful_Overlord_death_decision_category = {
+
+	KEU_inevitable_death_mission_1 = { 		#魔力衰退
+		allowed = {	
+			tag = KEU
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_find_life_extension
+				always = no
+			}
+		}
+		activation = {
+			tag = KEU
+			check_variable = { KEU_merciful_overlord_life_energy = 5 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 69
+
+		timeout_effect = {  
+			add_to_variable = {
+				KEU_merciful_overlord_life_energy = -1
+			}
+			delete_unit_template_and_units = {
+				division_template = 不死军
+			}
+			deactivate_advisor = KEU_Quirathka_Butagn
+			add_stability = -0.2
+			activate_mission = KEU_inevitable_death_mission_2
+		}
+	}
+
+	KEU_inevitable_death_mission_2 = { 		#魔力衰退
+		allowed = { tag = KEU }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_find_life_extension
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 69
+
+		timeout_effect = {  
+			add_to_variable = {
+				KEU_merciful_overlord_life_energy = -1
+			}
+			delete_unit_template_and_units = {
+				division_template = 海防军
+			}
+			deactivate_advisor = KEU_Urru_Maluv
+			add_stability = -0.2
+			activate_mission = KEU_inevitable_death_mission_3
+		}
+	}
+
+	KEU_inevitable_death_mission_3 = { 		#魔力衰退
+		allowed = { tag = KEU }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_find_life_extension
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 69
+
+		timeout_effect = {  
+			add_to_variable = {
+				KEU_merciful_overlord_life_energy = -1
+			}
+			delete_unit_template_and_units = {
+				division_template = 哨戒队
+			}
+			deactivate_advisor = KEU_Dhjikha_Phalabr
+			add_stability = -0.2
+			activate_mission = KEU_inevitable_death_mission_4
+		}
+	}
+
+	KEU_inevitable_death_mission_4 = { 		#魔力衰退
+		allowed = { tag = KEU }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_find_life_extension
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 69
+
+		timeout_effect = {  
+			add_to_variable = {
+				KEU_merciful_overlord_life_energy = -1
+			}
+			delete_unit_template_and_units = {
+				division_template = 接生部队
+			}
+			deactivate_advisor = KEU_He_Hongmei
+			add_stability = -0.2
+			activate_mission = KEU_inevitable_death_mission_5
+		}
+	}
+
+	KEU_inevitable_death_mission_5 = { 		#魔力衰退
+		allowed = { tag = KEU }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_find_life_extension
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 69
+
+		timeout_effect = {  
+			add_to_variable = {
+				KEU_merciful_overlord_life_energy = -1
+			}
+			delete_unit_template_and_units = {
+				division_template = 禁卫队
+			}
+			country_event = KEU.2
+		}
+	}
+	
+	KEU_inevitable_death_now_debug = {	#好似
+		available = { tag = KEU }
+		visible = {
+			is_debug = yes
+		}
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		complete_effect = {
+			country_event = KEU.2
+		}
+	}
+
+	KEU_demand_more_offerings = {	#要求人祭
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 7
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			265 = {
+				add_manpower = -400
+			}
+			263 = {
+				add_manpower = -600
+			}
+			add_to_variable = {
+				KEU_offering_available = 1000
+			}
+			custom_effect_tooltip = KEU_demand_more_offerings_tt
+		}
+	}
+
+	KEU_demand_extra_offerings = {	#要求额外人祭
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_demand_extra_offerings_tr
+				check_variable = {
+					KEU_offering_available < 5000
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			265 = {
+				add_manpower = -1000
+			}
+			263 = {
+				add_manpower = -1500
+			}
+			add_to_variable = {
+				KEU_offering_available = 2500
+			}
+			custom_effect_tooltip = KEU_demand_extra_offerings_tt
+		}
+	}
+
+	KEU_demand_even_more_offerings = {	#我要更多人祭！更多！
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		visible = {
+			check_variable = {
+				KEU_merciful_overlord_life_energy = 1
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 7
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			265 = {
+				add_manpower = -5000
+			}
+			263 = {
+				add_manpower = -5000
+			}
+			add_to_variable = {
+				KEU_offering_available = 10000
+			}
+			custom_effect_tooltip = KEU_demand_even_more_offerings_tt
+		}
+	}
+
+	KEU_weekly_mp_restoration = {	#日常补充魔力
+
+		icon = generic_civil_support
+		allowed = { tag = KEU }
+
+		available = {
+			always = no
+		}
+		activation = {
+			tag = KEU
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 6
+
+		cost = 0
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		timeout_effect = {
+			hidden_effect = { activate_mission = KEU_weekly_mp_restoration }
+			if = {
+				limit = { check_variable = { KEU_offering_available > 499 } }
+				add_to_variable = { KEU_offering_available = -500 }
+				custom_effect_tooltip = KEU_weekly_mp_restoration_tt
+			}
+			else = {
+				265 = {
+					add_manpower = -250
+				}
+				263 = {
+					add_manpower = -250
+				}
+			}
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_offerings_assisted_research = {	#人祭辅助研究
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_offerings_assisted_research_tr
+				check_variable = {
+					KEU_offering_available > 2499
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		modifier = {
+			research_speed_factor = 0.2
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -2500
+			}
+			custom_effect_tooltip = KEU_offerings_assisted_research_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_host_PUBG_game = {	#举办巨型角斗
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_host_PUBG_game_tr
+				check_variable = {
+					KEU_offering_available > 999
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -1000
+			}
+			custom_effect_tooltip = KEU_host_PUBG_game_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_human_liver_drug = {	#炼制肝油大补丸
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_human_liver_drug_tr
+				check_variable = {
+					KEU_offering_available > 199
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 7
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -200
+			}
+			custom_effect_tooltip = KEU_human_liver_drug_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_human_brain_drug = {	#熬制脑髓大补丸
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_human_liver_drug_tr
+				check_variable = {
+					KEU_offering_available > 199
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 7
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -200
+			}
+			custom_effect_tooltip = KEU_human_liver_drug_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_virgin_bloodbath = {	#用处女血沐浴
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_virgin_bloodbath_tr
+				check_variable = {
+					KEU_offering_available > 1999
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 7
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -2000
+			}
+			custom_effect_tooltip = KEU_virgin_bloodbath_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+	KEU_torture_offerings = {	#折磨祭品取乐
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KEU_torture_offerings_tr
+				check_variable = {
+					KEU_offering_available > 999
+				}
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+		is_good = yes
+		days_re_enable = 14
+
+		ai_will_do = {
+			factor = 0.5
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				KEU_offering_available = -1000
+			}
+			custom_effect_tooltip = KEU_torture_offerings_tt
+			custom_effect_tooltip = KEU_this_might_work
+		}
+	}
+
+}

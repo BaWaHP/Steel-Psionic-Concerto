@@ -1,0 +1,355 @@
+spriteTypes = {
+	#先锋共
+	spriteType = {
+		name = "GFX_ideology_pioneer_communism_group"
+		texturefile = "gfx/interface/ideologies/pioneer_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pioneer_team_communism"
+		texturefile = "gfx/interface/ideologies/pioneer_team_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_rational_communism"
+		texturefile = "gfx/interface/ideologies/rational_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_interstellar_revolutionism"
+		texturefile = "gfx/interface/ideologies/interstellar_revolutionism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_military_government_communism"
+		texturefile = "gfx/interface/ideologies/military_government_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_national_communism"
+		texturefile = "gfx/interface/ideologies/national_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_directive_communism"
+		texturefile = "gfx/interface/ideologies/directive_communism.png"
+	}
+	#革命共
+	spriteType = {
+		name = "GFX_ideology_revolutionary_communism_group"
+		texturefile = "gfx/interface/ideologies/revolutionary_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_continuous_revolutionism"
+		texturefile = "gfx/interface/ideologies/continuous_revolutionism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_popular_communism"
+		texturefile = "gfx/interface/ideologies/popular_communism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_agrarian_socialism"
+		texturefile = "gfx/interface/ideologies/agrarian_socialism.png"
+	}
+	#spriteType = {
+	#	name = "GFX_ideology_utopian_communism"
+	#	texturefile = "gfx/interface/ideologies/utopian_communism.png"
+	#}
+	spriteType = {
+		name = "GFX_ideology_leftist_guerrilla_movement"
+		texturefile = "gfx/interface/ideologies/leftist_guerrilla_movement.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_market_socialism"
+		texturefile = "gfx/interface/ideologies/market_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_self_governing_communism"
+		texturefile = "gfx/interface/ideologies/self_governing_communism.png"
+	}
+	#社会世联
+	spriteType = {
+		name = "GFX_ideology_worldunion_socialist_group"
+		texturefile = "gfx/interface/ideologies/worldunion_socialist.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_exporting_revolutionism"
+		texturefile = "gfx/interface/ideologies/exporting_revolutionism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_humane_socialism"
+		texturefile = "gfx/interface/ideologies/humane_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_utopian_socialism"
+		texturefile = "gfx/interface/ideologies/utopian_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_religious_wordunion"
+		texturefile = "gfx/interface/ideologies/religious_wordunion.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_revolutionary_front"
+		texturefile = "gfx/interface/ideologies/revolutionary_front.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pan_north_bastian_thought"
+		texturefile = "gfx/interface/ideologies/pan_north_bastian_thought.png"
+	}
+	#民主世联
+	spriteType = {
+		name = "GFX_ideology_worldunion_democrat_group"
+		texturefile = "gfx/interface/ideologies/worldunion_democrat.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democrat"
+		texturefile = "gfx/interface/ideologies/social_democrat.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_democratic_socialism"
+		texturefile = "gfx/interface/ideologies/democratic_socialism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_people_worldunion"
+		texturefile = "gfx/interface/ideologies/people_worldunion.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberal_worldunion"
+		texturefile = "gfx/interface/ideologies/liberal_worldunion.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_religious_progressivism"
+		texturefile = "gfx/interface/ideologies/religious_progressivism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_left_wing_nationalism"
+		texturefile = "gfx/interface/ideologies/left_wing_nationalism.png"
+	}
+	#自由共和
+	spriteType = {
+		name = "GFX_ideology_liberal_republican_group"
+		texturefile = "gfx/interface/ideologies/liberal_republican.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_radical_republican"
+		texturefile = "gfx/interface/ideologies/radical_republican.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_market_liberalism"
+		texturefile = "gfx/interface/ideologies/market_liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_democratic_republican"
+		texturefile = "gfx/interface/ideologies/democratic_republican.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberal_racism"
+		texturefile = "gfx/interface/ideologies/liberal_racism.png"
+	}
+	#保守共和
+	spriteType = {
+		name = "GFX_ideology_conservative_republican_group"
+		texturefile = "gfx/interface/ideologies/conservative_republican.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_conservative_liberalism"
+		texturefile = "gfx/interface/ideologies/conservative_liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_democratic_traditionalism"
+		texturefile = "gfx/interface/ideologies/democratic_traditionalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_agrarian_popularism"
+		texturefile = "gfx/interface/ideologies/agrarian_popularism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_paternal_conservatism"
+		texturefile = "gfx/interface/ideologies/paternal_conservatism.png"
+	}
+	#威权共和
+	spriteType = {
+		name = "GFX_ideology_authoritarian_republican_group"
+		texturefile = "gfx/interface/ideologies/authoritarian_republican.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_republic_of_nobility"
+		texturefile = "gfx/interface/ideologies/republic_of_nobility.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_dual_system_of_constitutional_monarchy"
+		texturefile = "gfx/interface/ideologies/dual_system_of_constitutional_monarchy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_directed_democracy"
+		texturefile = "gfx/interface/ideologies/directed_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_oligarchy"
+		texturefile = "gfx/interface/ideologies/oligarchy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_authoritarian_developmentalism"
+		texturefile = "gfx/interface/ideologies/authoritarian_developmentalism.png"
+	}
+	#国社
+	spriteType = {
+		name = "GFX_ideology_national_socialist_group"
+		texturefile = "gfx/interface/ideologies/national_socialist.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_worldunion_militarism"
+		texturefile = "gfx/interface/ideologies/worldunion_militarism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_racism"
+		texturefile = "gfx/interface/ideologies/social_racism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_corporatism"
+		texturefile = "gfx/interface/ideologies/social_corporatism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_imperial_socialism"
+		texturefile = "gfx/interface/ideologies/imperial_socialism.png"
+	}
+	#威权民族
+	spriteType = {
+		name = "GFX_ideology_authoritarian_nationalism_group"
+		texturefile = "gfx/interface/ideologies/authoritarian_nationalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_militaristic_hegemonism"
+		texturefile = "gfx/interface/ideologies/militaristic_hegemonism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_racial_supremacy"
+		texturefile = "gfx/interface/ideologies/racial_supremacy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_racial_homonationalism"
+		texturefile = "gfx/interface/ideologies/racial_homonationalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_human_hegemony"
+		texturefile = "gfx/interface/ideologies/human_hegemony.png"
+	}
+	#家独
+	spriteType = {
+		name = "GFX_ideology_paternal_autocrat_group"
+		texturefile = "gfx/interface/ideologies/paternal_autocrat.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_absolute_monarchy"
+		texturefile = "gfx/interface/ideologies/absolute_monarchy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_military_dictatorship"
+		texturefile = "gfx/interface/ideologies/military_dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_reign_god_emperor"
+		texturefile = "gfx/interface/ideologies/reign_god_emperor.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_colonial_government"
+		texturefile = "gfx/interface/ideologies/colonial_government.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_civilian_dictatorship"
+		texturefile = "gfx/interface/ideologies/civilian_dictatorship.png"
+	}
+	#高魔
+	spriteType = {
+		name = "GFX_ideology_wizard_rules_group"
+		texturefile = "gfx/interface/ideologies/wizard_rules.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_magician_dictatorship"
+		texturefile = "gfx/interface/ideologies/magician_dictatorship.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_adventurers_league"
+		texturefile = "gfx/interface/ideologies/adventurers_league.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_phoenix_dynasty"
+		texturefile = "gfx/interface/ideologies/phoenix_dynasty.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_world_shunners"
+		texturefile = "gfx/interface/ideologies/world_shunners.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_secondary_creatures_utopia"
+		texturefile = "gfx/interface/ideologies/secondary_creatures_utopia.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_security_bureau_of_union"
+		texturefile = "gfx/interface/ideologies/security_bureau_of_union.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_crystal_court"
+		texturefile = "gfx/interface/ideologies/crystal_court.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_original_desire"
+		texturefile = "gfx/interface/ideologies/original_desire.png"
+	}
+	#极端宗教
+	spriteType = {
+		name = "GFX_ideology_religious_extremism_group"
+		texturefile = "gfx/interface/ideologies/religious_extremism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_sacred_battles"
+		texturefile = "gfx/interface/ideologies/sacred_battles.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_heresy_ruling"
+		texturefile = "gfx/interface/ideologies/heresy_ruling.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_morality_judgement"
+		texturefile = "gfx/interface/ideologies/morality_judgement.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_independent_world"
+		texturefile = "gfx/interface/ideologies/independent_world.png"
+	}
+	#安那其
+	spriteType = {
+		name = "GFX_ideology_anarchism_group"
+		texturefile = "gfx/interface/ideologies/anarchism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_pacifism"
+		texturefile = "gfx/interface/ideologies/anarcho_pacifism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_individualist_anarchism"
+		texturefile = "gfx/interface/ideologies/individualist_anarchism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchy_commusim"
+		texturefile = "gfx/interface/ideologies/anarchy_commusim.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_syndicalism"
+		texturefile = "gfx/interface/ideologies/anarcho_syndicalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_populism"
+		texturefile = "gfx/interface/ideologies/anarcho_populism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_capitalism"
+		texturefile = "gfx/interface/ideologies/anarcho_capitalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_eco_anarchism"
+		texturefile = "gfx/interface/ideologies/eco_anarchism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarcho_transhumanism"
+		texturefile = "gfx/interface/ideologies/anarcho_transhumanism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchy_state"
+		texturefile = "gfx/interface/ideologies/anarchy_state.png"
+	}
+}

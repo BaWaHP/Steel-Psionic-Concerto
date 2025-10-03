@@ -1,0 +1,69 @@
+ideas = {
+	country = {
+
+		ASR_hundred_year_history = {		#百年传承
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = { tag = ASR }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.1
+				army_org_regain = 0.1
+				conscription_factor = -0.2
+				land_doctrine_cost_factor = -0.2
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				secret_weapons = 0.1
+			}
+		}
+
+		ASR_special_administrative_region = {		#特别监管区
+			picture = SOV_third_five_year_plan
+			allowed = { tag = ASR }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.05
+				war_support_factor = -0.2
+				training_time_army_factor = 0.5
+				custom_modifier_tooltip = SPC_ban_foreign_policy
+			}
+			on_add = { set_country_flag = SPC_ban_foreign_policy }
+			on_remove = { clr_country_flag = SPC_ban_foreign_policy }
+		}
+
+		ASR_artillery_array_Apollo = {		#炮击阵列：阿波罗
+			picture = soviet_german_friendship
+			allowed = { tag = ASR }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				custom_modifier_tooltip = ASR_artillery_array_Apollo_tt
+			}
+		}
+
+		ASR_north_vs_south = {		#南北之争
+			picture = generic_disjointed_gov
+			allowed = { tag = ASR }
+			removal_cost = -1
+			modifier = {
+				political_advisor_cost_factor = 1
+				political_power_gain = -0.2
+				stability_factor = -0.1
+			}
+		}
+
+		ASR_magic_power_manic = {		#躁动的魔力
+			picture = tfv_can_conscription_crisis
+			allowed = { tag = ASR }
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = -0.1
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.2
+			}
+		}
+
+	}
+}

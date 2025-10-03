@@ -1,0 +1,33 @@
+
+state={
+	id=447
+	name="STATE_447"
+	provinces={
+		1442 5639 11496 11638 11990 12201 19079 19152 19274 19319 
+	}
+	resources = {
+		magic_crystal = 36
+		steel = 12
+		chromium = 24
+		oil = 4
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 1
+		}
+		victory_points = {
+			11990 10
+		}
+		victory_points = {
+			19319 10
+		}
+	}
+	manpower = 3100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

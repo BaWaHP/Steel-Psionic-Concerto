@@ -1,0 +1,126 @@
+﻿###templates###
+division_template = {
+	name = "工农革命军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "游击队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "骑兵大队"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+
+###units###
+
+units = {
+	division = {
+		name = "工农革命军一师"
+		location = 18075
+		division_template = "工农革命军"
+		start_experience_factor = 1
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "工农革命军二师"
+		location = 1880
+		division_template = "工农革命军"
+		start_experience_factor = 1
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "游击队一团"
+		location = 1902
+		division_template = "游击队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "游击队二团"
+		location = 10820
+		division_template = "游击队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "游击队三团"
+		location = 17998
+		division_template = "游击队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "游击队四团"
+		location = 9773
+		division_template = "游击队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+}
+units = {
+	division = {
+		name = "骑兵大队一团"
+		location = 17687
+		division_template = "骑兵大队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.6
+	}
+}
+units = {
+	division = {
+		name = "骑兵大队二团"
+		location = 1880
+		division_template = "骑兵大队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.6
+	}
+}

@@ -1,0 +1,12 @@
+
+SFH_generic_territory_trigger_1 = {
+	OR = { has_government = liberal_republican has_government = conservative_republican has_government = authoritarian_republican }
+}
+
+SFH_generic_territory_trigger_2 = {
+	OR = { has_government = liberal_republican has_government = conservative_republican has_government = authoritarian_republican has_government = paternal_autocrat }
+}
+
+SFH_generic_territory_trigger_3 = {
+	OR = { has_government = authoritarian_republican has_government = paternal_autocrat }
+}

@@ -1,0 +1,64 @@
+ideas = {
+	country = {
+
+		SBG_fallen_brother = {		#衰落的“皇兄”
+			picture = SBG_fallen_brother
+			allowed = {  original_tag = SBG }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				disabled_ideas = 1
+			}
+			targeted_modifier = {
+				tag = WOM
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.2
+			}
+		}
+
+		SBG_divided_motherland = {		#分裂的祖国
+			picture = SBG_divided_motherland
+			allowed = {  original_tag = SBG }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.2
+				army_org_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = HCB
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+		}
+
+		SBG_economy_on_the_brink_of_ruin = {		#濒临毁灭的经济
+			picture = SBG_economy_on_the_brink_of_ruin
+			allowed = {  original_tag = SBG }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.2
+				research_speed_factor = -0.2
+				industrial_capacity_factory = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.4
+			}
+		}
+
+		SBG_remains_of_republic_revolution = {		#共和革命的余波
+			picture = SBG_remains_of_republic_revolution
+			allowed = {  original_tag = SBG }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				conscription_factor = -0.3
+				liberal_republican_drift = 0.05
+				worldunion_democrat_drift = 0.05
+				worldunion_socialist_drift = 0.05
+				revolutionary_communism_drift = 0.02
+			}
+		}
+
+	}
+}

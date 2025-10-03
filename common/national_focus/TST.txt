@@ -1,0 +1,32 @@
+focus_tree = {
+	id = KMT_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TST
+		}
+
+	}
+	focus = {
+		id = TST_developing_mods	#mod绝赞开发中
+		icon = GFX_Generic_Pass_Legislation
+		x = 10
+		y = 2
+		cost = 16359.2
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = TST_developing_mods_tt
+		}
+	}
+}

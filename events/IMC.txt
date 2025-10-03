@@ -1,0 +1,24 @@
+﻿add_namespace = IMC
+
+add_namespace = IMCNews
+
+news_event = {
+	id = IMCNews.1
+	title = IMCNews.1.t
+	desc = IMCNews.1.d
+	picture = GFX_news_event_IMC_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = IMCNews.1.a
+		trigger = { tag = IMC }
+	}
+
+	option = {
+		name = IMCNews.1.b
+		trigger = { NOT = { tag = IMC } }
+	}
+}

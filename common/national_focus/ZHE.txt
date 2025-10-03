@@ -1,0 +1,17 @@
+focus_tree = {
+	id = ZHE_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ZHE
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	
+	continuous_focus_position = { x = 0 y = 0 }
+	
+}

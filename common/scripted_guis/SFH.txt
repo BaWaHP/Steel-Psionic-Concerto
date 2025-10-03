@@ -1,0 +1,93 @@
+scripted_gui = {
+
+	SFH_future_of_the_nation_ui = {
+		context_type = decision_category
+		window_name = "SFH_future_of_the_nation_window"
+		properties = {
+			SFH_preparation_bar = {
+				frame = SFH_preparation_bar_var
+			}
+			SFH_future_Zhenghong_portraits = {
+				image = "[Get_future_Zhenghong_portraits]"
+			}
+		}
+	}
+
+	SFH_battle_over_territory_ui = {
+		context_type = decision_category
+		window_name = "SFH_battle_over_territory_window"
+		
+		visible = {
+			SFH = { has_country_flag = SFH_pre_war_flag exists = yes } has_war = no
+		}
+
+		triggers = {
+			SFH_bot_piechart_1_visible = { check_variable = { SFH_bot_piechart_1_var > 0 } }
+			SFH_bot_piechart_2_visible = { check_variable = { SFH_bot_piechart_2_var > 0 } }
+			SFH_bot_piechart_3_visible = { check_variable = { SFH_bot_piechart_3_var > 0 } }
+
+			SFH_bot_state_13_selected_visible = { check_variable = { SFH_bot_state_pointer = 13 } }
+			SFH_bot_state_121_selected_visible = { check_variable = { SFH_bot_state_pointer = 121 } }
+			SFH_bot_state_11_selected_visible = { check_variable = { SFH_bot_state_pointer = 11 } }
+			SFH_bot_state_9_selected_visible = { check_variable = { SFH_bot_state_pointer = 9 } }
+			SFH_bot_state_10_selected_visible = { check_variable = { SFH_bot_state_pointer = 10 } }
+			SFH_bot_state_174_selected_visible = { check_variable = { SFH_bot_state_pointer = 174 } }
+			SFH_bot_state_170_selected_visible = { check_variable = { SFH_bot_state_pointer = 170 } }
+			SFH_bot_state_5_selected_visible = { check_variable = { SFH_bot_state_pointer = 5 } }
+			SFH_bot_state_7_selected_visible = { check_variable = { SFH_bot_state_pointer = 7 } }
+			SFH_bot_state_8_selected_visible = { check_variable = { SFH_bot_state_pointer = 8 } }
+			SFH_bot_state_173_selected_visible = { check_variable = { SFH_bot_state_pointer = 173 } }
+			SFH_bot_state_6_selected_visible = { check_variable = { SFH_bot_state_pointer = 6 } }
+			SFH_bot_state_4_selected_visible = { check_variable = { SFH_bot_state_pointer = 4 } }
+			SFH_bot_state_171_selected_visible = { check_variable = { SFH_bot_state_pointer = 171 } }
+			SFH_bot_state_172_selected_visible = { check_variable = { SFH_bot_state_pointer = 172 } }
+			SFH_bot_state_3_selected_visible = { check_variable = { SFH_bot_state_pointer = 3 } }
+			SFH_bot_state_2_selected_visible = { check_variable = { SFH_bot_state_pointer = 2 } }
+		}
+
+		effects = {
+			SFH_bot_state_13_click = { set_variable = { SFH_bot_state_pointer = 13 } SFH_state_influence_update = yes }
+			SFH_bot_state_121_click = { set_variable = { SFH_bot_state_pointer = 121 } SFH_state_influence_update = yes }
+			SFH_bot_state_11_click = { set_variable = { SFH_bot_state_pointer = 11 } SFH_state_influence_update = yes }
+			SFH_bot_state_9_click = { set_variable = { SFH_bot_state_pointer = 9 } SFH_state_influence_update = yes }
+			SFH_bot_state_10_click = { set_variable = { SFH_bot_state_pointer = 10 } SFH_state_influence_update = yes }
+			SFH_bot_state_174_click = { set_variable = { SFH_bot_state_pointer = 174 } SFH_state_influence_update = yes }
+			SFH_bot_state_170_click = { set_variable = { SFH_bot_state_pointer = 170 } SFH_state_influence_update = yes }
+			SFH_bot_state_5_click = { set_variable = { SFH_bot_state_pointer = 5 } SFH_state_influence_update = yes }
+			SFH_bot_state_7_click = { set_variable = { SFH_bot_state_pointer = 7 } SFH_state_influence_update = yes }
+			SFH_bot_state_8_click = { set_variable = { SFH_bot_state_pointer = 8 } SFH_state_influence_update = yes }
+			SFH_bot_state_173_click = { set_variable = { SFH_bot_state_pointer = 173 } SFH_state_influence_update = yes }
+			SFH_bot_state_6_click = { set_variable = { SFH_bot_state_pointer = 6 } SFH_state_influence_update = yes }
+			SFH_bot_state_4_click = { set_variable = { SFH_bot_state_pointer = 4 } SFH_state_influence_update = yes }
+			SFH_bot_state_171_click = { set_variable = { SFH_bot_state_pointer = 171 } SFH_state_influence_update = yes }
+			SFH_bot_state_172_click = { set_variable = { SFH_bot_state_pointer = 172 } SFH_state_influence_update = yes }
+			SFH_bot_state_3_click = { set_variable = { SFH_bot_state_pointer = 3 } SFH_state_influence_update = yes }
+			SFH_bot_state_2_click = { set_variable = { SFH_bot_state_pointer = 2 } SFH_state_influence_update = yes }
+		}
+
+		properties = {
+			SFH_bot_state_13 = { image = "[Get_SFH_bot_state_13]" }
+			SFH_bot_state_121 = { image = "[Get_SFH_bot_state_121]" }
+			SFH_bot_state_11 = { image = "[Get_SFH_bot_state_11]" }
+			SFH_bot_state_9 = { image = "[Get_SFH_bot_state_9]" }
+			SFH_bot_state_10 = { image = "[Get_SFH_bot_state_10]" }
+			SFH_bot_state_174 = { image = "[Get_SFH_bot_state_174]" }
+			SFH_bot_state_170 = { image = "[Get_SFH_bot_state_170]" }
+			SFH_bot_state_5 = { image = "[Get_SFH_bot_state_5]" }
+			SFH_bot_state_7 = { image = "[Get_SFH_bot_state_7]" }
+			SFH_bot_state_8 = { image = "[Get_SFH_bot_state_8]" }
+			SFH_bot_state_173 = { image = "[Get_SFH_bot_state_173]" }
+			SFH_bot_state_6 = { image = "[Get_SFH_bot_state_6]" }
+			SFH_bot_state_4 = { image = "[Get_SFH_bot_state_4]" }
+			SFH_bot_state_171 = { image = "[Get_SFH_bot_state_171]" }
+			SFH_bot_state_172 = { image = "[Get_SFH_bot_state_172]" }
+			SFH_bot_state_3 = { image = "[Get_SFH_bot_state_3]" }
+			SFH_bot_state_2 = { image = "[Get_SFH_bot_state_2]" }
+
+			SFH_bot_piechart_1 = { frame = SFH_bot_piechart_1_var }
+			SFH_bot_piechart_2 = { frame = SFH_bot_piechart_2_var }
+			SFH_bot_piechart_3 = { frame = SFH_bot_piechart_3_var }
+		}
+	}
+}
+

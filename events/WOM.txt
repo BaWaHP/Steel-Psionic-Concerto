@@ -1,0 +1,629 @@
+﻿add_namespace = WOM
+
+country_event = {	#新皇加冕
+	id = WOM.0
+	title = WOM.0.t
+	desc = WOM.0.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.0.a
+		news_event = WOMNews.1
+		set_politics = {
+			ruling_party = liberal_republican
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = WOM_paternal_autocrat_party_1_long
+			name = WOM_paternal_autocrat_party_1
+		}
+	}
+}
+
+country_event = {	#物价上涨？（中巴内战波及沃姆）
+	id = WOM.1
+	title = WOM.1.t
+	desc = WOM.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.1.a
+		swap_ideas = {
+			remove_idea = WOM_end_of_econ_miracle
+			add_idea = WOM_potential_inflation_crisis
+		}
+		country_event = {
+			id = WOM.2
+			days = 7
+		}
+	}
+}
+
+country_event = {	#军队不安
+	id = WOM.2
+	title = WOM.2.t
+	desc = WOM.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.2.a
+		swap_ideas = {
+			remove_idea = WOM_wome_national_army
+			add_idea = WOM_national_army_discontent
+		}
+	}
+}
+
+country_event = {	#黑霜危机
+	id = WOM.3
+	title = WOM.3.t
+	desc = WOM.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.3.a
+		news_event = WOMNews.2
+		swap_ideas = {
+			remove_idea = WOM_potential_inflation_crisis
+			add_idea = WOM_black_frost_crisis_1
+		}
+		country_event = {
+			id = WOM.4
+			days = 14
+		}
+		WOM_black_frost_crisis_effect = yes
+	}
+}
+
+country_event = {	#奴隶暴动
+	id = WOM.4
+	title = WOM.4.t
+	desc = WOM.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.4.a
+		news_event = WOMNews.3
+		swap_ideas = {
+			remove_idea = WOM_slavery_for_unhuman_races
+			add_idea = WOM_slave_revolt_1
+		}
+		country_event = {
+			id = WOM.5
+			days = 14
+		}
+	}
+}
+
+country_event = {	#首相遭刺杀
+	id = WOM.5
+	title = WOM.5.t
+	desc = WOM.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.5.a
+		news_event = WOMNews.4
+		country_event = {
+			id = WOM.6
+			days = 14
+		}
+	}
+}
+
+country_event = {	#政府垮台！
+	id = WOM.6
+	title = WOM.6.t
+	desc = WOM.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.6.a
+		news_event = WOMNews.5
+		remove_ideas = WOM_triumph_of_empire
+		country_event = {
+			id = WOM.7
+			days = 30
+		}
+	}
+}
+
+country_event = {	#临危受命
+	id = WOM.7
+	title = WOM.7.t
+	desc = WOM.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {		#社民党-进步人民党 联合政府
+		name = WOM.7.a
+		set_politics = {
+			ruling_party = worldunion_democrat
+		}
+	}
+
+	option = {		#国家自由党-保守党 联合政府
+		name = WOM.7.a
+	}
+
+	option = {		#中央党政府
+		name = WOM.7.a
+		set_politics = {
+			ruling_party = conservative_republican
+		}
+	}
+
+	option = {		#宣布戒严
+		name = WOM.7.d
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+	}
+}
+
+country_event = {	#内战开片
+	id = WOM.8
+	title = WOM.8.t
+	desc = WOM.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			WOM_civil_war_begin_effect = yes	
+		}
+	}
+	
+	option = {
+		name = WOM.8.a
+		#选择帮谁
+	}
+}
+
+country_event = {	#正式开打
+	id = WOM.9
+	title = WOM.9.t
+	desc = WOM.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.9.a
+		if = {
+			limit = { tag = WOM }
+			declare_war_on = {
+				target = IRC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = PRF
+				type = annex_everything
+			}
+			IRC = {
+				declare_war_on = {
+					target = PRF
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			effect_tooltip = {
+				WOM = {
+					declare_war_on = {
+						target = IRC
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PRF
+						type = annex_everything
+					}
+				}
+				IRC = {
+					declare_war_on = {
+						target = PRF
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#战后处理奴隶
+	id = WOM.10
+	title = WOM.10.t
+	desc = WOM.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM.10.a
+		if = {
+			limit = { tag = WOM }
+			if = {
+				limit = { has_government = worldunion_democrat }
+				random_list = {
+					50 = {
+						annex_country = {
+							target = SLR
+						}
+					}
+					50 = {
+						declare_war_on = {
+							target = SLR
+							type = annex_everything
+						}
+					}
+				}
+			}
+			else = {
+				declare_war_on = {
+					target = SLR
+					type = annex_everything
+				}
+			}
+		}
+		else_if = {
+			limit = { tag = PRF }
+			random_list = {
+				75 = {
+					annex_country = {
+						target = SLR
+					}
+				}
+				25 = {
+					declare_war_on = {
+						target = SLR
+						type = annex_everything
+					}
+				}
+			}
+		}
+		else = {
+			declare_war_on = {
+				target = SLR
+				type = annex_everything
+			}
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = WOMNews
+
+news_event = {
+	id = WOMNews.1		#沃姆新皇加冕
+	title = WOMNews.1.t
+	desc = WOMNews.1.d
+	picture = GFX_news_event_generic_7
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.1.a
+	}
+}
+
+news_event = {
+	id = WOMNews.2		#金融风暴席卷沃姆！
+	title = WOMNews.2.t
+	desc = WOMNews.2.d
+	picture = GFX_news_event_generic_35
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.2.a
+	}
+}
+
+news_event = {
+	id = WOMNews.3		#沃姆帝国奴隶暴动
+	title = WOMNews.3.t
+	desc = WOMNews.3.d
+	picture = GFX_news_event_generic_51
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.3.a
+	}
+}
+
+news_event = {
+	id = WOMNews.4		#沃姆首相遭刺杀！
+	title = WOMNews.4.t
+	desc = WOMNews.4.d
+	picture = GFX_news_event_generic_50
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.4.a
+	}
+}
+
+news_event = {
+	id = WOMNews.5		#沃姆政府垮台
+	title = WOMNews.5.t
+	desc = WOMNews.5.d
+	picture = GFX_news_event_generic_84
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.5.a
+	}
+}
+
+news_event = {
+	id = WOMNews.6		#沃姆内战
+	title = WOMNews.6.t
+	desc = WOMNews.6.d
+	picture = GFX_news_event_generic_52
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.6.a
+	}
+}
+
+news_event = {
+	id = WOMNews.7		#沃姆内战
+	title = WOMNews.7.t
+	desc = WOMNews.7.d
+	picture = GFX_news_event_generic_61
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WOMNews.7.a
+	}
+}
+
+add_namespace = WOM_skeleton
+
+country_event = {	#向戈尔维亚进军
+	id = WOM_skeleton.1
+	title = WOM_skeleton.1.t
+	desc = WOM_skeleton.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		WOM_influence_faction_icon_remove = yes
+	}
+	
+	option = {
+		name = WOM_skeleton.1.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.2
+		}
+		set_politics = { ruling_party = national_socialist }
+		news_event = GLVNews.1
+		country_event = {
+			id = WOM_skeleton.2
+			days = 120
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.1.b
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.1
+		}
+		set_politics = { ruling_party = worldunion_socialist }
+		news_event = GLVNews.2
+		country_event = {
+			id = WOM_skeleton.3
+			days = 120
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.1.c
+		set_politics = { ruling_party = paternal_autocrat }
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+		news_event = GLVNews.3
+		country_event = {
+			id = WOM_skeleton.4
+			days = 120
+		}
+	}
+}
+
+country_event = {	#戈尔维亚法西斯
+	id = WOM_skeleton.2
+	title = WOM_skeleton.2.t
+	desc = WOM_skeleton.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM_skeleton.2.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.2.b
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.3
+		}
+		set_politics = { ruling_party = authoritarian_nationalism }
+	}
+}
+
+country_event = {	#戈尔维亚法西斯
+	id = WOM_skeleton.2
+	title = WOM_skeleton.2.t
+	desc = WOM_skeleton.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM_skeleton.2.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.2.b
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.3
+		}
+		set_politics = { ruling_party = authoritarian_nationalism }
+	}
+}
+
+country_event = {	#戈尔维亚反法西斯
+	id = WOM_skeleton.3
+	title = WOM_skeleton.3.t
+	desc = WOM_skeleton.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM_skeleton.3.a
+		set_politics = { ruling_party = pioneer_communism }
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.3.b
+		set_politics = { ruling_party = revolutionary_communism }
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.3.c
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.3.dd
+		set_politics = { ruling_party = worldunion_democrat }
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.3
+		}
+	}
+}
+
+country_event = {	#戈尔维亚君主制
+	id = WOM_skeleton.4
+	title = WOM_skeleton.4.t
+	desc = WOM_skeleton.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WOM_skeleton.3.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.3
+		}
+	}
+
+	option = {
+		name = WOM_skeleton.3.b
+		random_list = {
+			30 = {
+				set_politics = { ruling_party = liberal_republican }
+				add_popularity = {
+					ideology = liberal_republican
+					popularity = 0.3
+				}
+			}
+			30 = {
+				set_politics = { ruling_party = conservative_republican }
+				add_popularity = {
+					ideology = conservative_republican
+					popularity = 0.3
+				}
+			}
+			40 = {
+				set_politics = { ruling_party = authoritarian_republican }
+				add_popularity = {
+					ideology = authoritarian_republican
+					popularity = 0.3
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=57
+	name="STATE_57"
+
+	resources = {
+		tungsten = 24
+		magic_crystal = 12
+	}
+
+	history={
+		owner = KOD
+		add_core_of = KOD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			5001 5
+		}
+	}
+
+	provinces={
+		2179 4106 5001 5383 10110 15593 15604 15615 15703 15720 15734 15745 15858 15938 15968 
+	}
+	manpower = 697000
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies = 0.000
+}

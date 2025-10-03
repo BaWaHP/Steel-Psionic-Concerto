@@ -1,0 +1,654 @@
+﻿add_namespace = RSB
+
+country_event = {	#1998财务预算最终方案
+	id = RSB.1
+	title = RSB.1.t
+	desc = RSB.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.1.a
+		add_to_variable = {
+			var = RSB_financial_budget_income_max
+			value = -20
+			tooltip = RSB_financial_budget_income_max_tt
+		}
+		RSB_assets_cal = yes
+	}
+}
+
+country_event = {	#会面
+	id = RSB.2
+	title = RSB.2.t
+	desc = RSB.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.2.a
+		add_to_variable = {
+			var = RSB_financial_budget_asset
+			value = 0.5
+			tooltip = RSB_financial_budget_asset_tt
+		}
+		RSB_assets_cal = yes
+		SPC_industrial_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#离席
+	id = RSB.3
+	title = RSB.3.t
+	desc = RSB.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.3.a
+		add_political_power = -30
+		add_stability = -0.02
+		add_to_variable = { RSB_financial_health_committe_ppf = -0.03 }
+		custom_effect_tooltip = RSB.3.tt
+	}
+}
+
+country_event = {	#选择
+	id = RSB.4
+	title = RSB.4.t
+	desc = RSB.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.4.a
+		custom_effect_tooltip = RSB.4.a.tt
+		add_political_power = -15
+		add_to_variable = { RSB_financial_health_committe_psbf = 0.05 }
+	}
+
+	option = {
+		name = RSB.4.b
+		custom_effect_tooltip = RSB.4.b.tt
+		add_political_power = -20
+		add_to_variable = { RSB_financial_health_committe_sf = 0.08 }
+	}
+
+	option = {
+		name = RSB.4.c
+		custom_effect_tooltip = RSB.4.c.tt
+		add_political_power = -25
+		add_to_variable = { RSB_financial_health_committe_rsf = 0.1 }
+		add_to_variable = { RSB_financial_health_committe_cgf = 0.08 }
+		add_to_variable = { RSB_gov_army_support = 1 }
+	}
+}
+
+country_event = {	#通话
+	id = RSB.5
+	title = RSB.5.t
+	desc = RSB.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.5.a
+		add_to_variable = {
+			var = RSB_financial_budget_asset
+			value = 3
+			tooltip = RSB_financial_budget_asset_tt
+		}
+		add_to_variable = {
+			var = RSB_financial_budget_income_max
+			value = 5
+			tooltip = RSB_financial_budget_income_max_tt
+		}
+		RSB_assets_cal = yes
+		SPC_military_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#谈判
+	id = RSB.6
+	title = RSB.6.t
+	desc = RSB.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.6.a
+		ZBC = {
+			set_country_flag = RSB_federal_war_arsenal_on
+			set_country_flag = RSB_gw_arsenal_lock_flag
+			set_country_flag = RSB_ww_arsenal_lock_flag
+			unlock_decision_category_tooltip = RSB_federal_war_arsenal
+			country_event = {
+				id = RSB.7
+				days = 1
+			}
+		}
+		UAC = {
+			set_country_flag = RSB_federal_war_arsenal_on
+			set_country_flag = RSB_gw_arsenal_lock_flag
+			set_country_flag = RSB_ww_arsenal_lock_flag
+			unlock_decision_category_tooltip = RSB_federal_war_arsenal
+		}
+	}
+}
+
+country_event = {	#对价
+	id = RSB.7
+	title = RSB.7.t
+	desc = RSB.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.7.a
+	}
+
+	option = {
+		name = RSB.7.b
+		RSB = { add_political_power = 20 }
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+	}
+
+	option = {
+		name = RSB.7.c
+		RSB = { add_political_power = 25 }
+		add_offsite_building = {
+			type = arms_factory
+			level = 3
+		}
+	}
+}
+
+country_event = {	#关门大吉
+	id = RSB.8
+	title = RSB.8.t
+	desc = RSB.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.8.a
+		add_to_variable = {
+			var = RSB_financial_budget_asset
+			value = 0.5
+			tooltip = RSB_financial_budget_asset_tt
+		}
+		RSB_assets_cal = yes
+		add_ideas = too_much_taxes
+	}
+}
+
+country_event = {	#最后的晚餐
+	id = RSB.9
+	title = RSB.9.t
+	desc = RSB.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.9.a
+		add_to_variable = { 
+			var = RSB_financial_budget_income
+			value = -2 
+			tooltip = RSB_financial_budget_income_tt
+		}
+		RSB_assets_cal = yes
+		custom_effect_tooltip = RSB.9.a.tt
+		add_to_variable = { RSB_financial_health_committe_ppf = 0.05 }
+		add_to_variable = { RSB_financial_health_committe_cgf = -0.05 }
+	}
+}
+
+country_event = {	#遣散费
+	id = RSB.10
+	title = RSB.10.t
+	desc = RSB.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.10.a
+		add_to_variable = { 
+			var = RSB_financial_budget_income
+			value = -2 
+			tooltip = RSB_financial_budget_income_tt
+		}
+		RSB_assets_cal = yes
+		if = {
+			limit = { has_idea = RSB_military_overspending_3_l }
+			swap_ideas = {
+				remove_idea = RSB_military_overspending_3_l
+				add_idea = RSB_military_overspending_4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = RSB_military_overspending_3
+				add_idea = RSB_military_overspending_3_r
+			}
+		}
+	}
+}
+
+country_event = {	#欲哭无泪
+	id = RSB.11
+	title = RSB.11.t
+	desc = RSB.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.11.a
+		add_to_variable = { 
+			var = RSB_financial_budget_income
+			value = -2 
+			tooltip = RSB_financial_budget_income_tt
+		}
+		RSB_assets_cal = yes
+		add_ideas = SP_basic_funds
+	}
+}
+
+country_event = {	#南巴斯蒂亚的援助
+	id = RSB.12
+	title = RSB.12.t
+	desc = RSB.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.12.a
+		custom_effect_tooltip = RSB.12.a.tt
+	}
+}
+
+country_event = {	#加急电报
+	id = RSB.50
+	title = RSB.50.t
+	desc = RSB.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.50.a
+		country_event = {
+			id = RSB.51
+			days = 1
+		}
+		if = {
+			limit = { 
+				check_variable = {
+					var = RSB_financial_budget_income
+					value = RSB_financial_budget_income_max
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = RSB_financial_budget_asset
+					value = RSB_financial_budget_income
+					compare = less_than_or_equals
+				}
+			}
+			add_to_variable = { RSB_gov_army_support = 1 }
+		}
+	}
+}
+
+country_event = {	#徒劳无功
+	id = RSB.51
+	title = RSB.51.t
+	desc = RSB.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.51.a
+		set_country_flag = RSB_focus_2
+		mark_focus_tree_layout_dirty = yes
+		country_event = {
+			id = RSB.100
+			days = 31
+		}
+	}
+}
+
+country_event = {	#剧变将临
+	id = RSB.100
+	title = RSB.100.t
+	desc = RSB.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.100.a
+		set_country_flag = RSB_focus_3
+		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { 
+				check_variable = {
+					var = RSB_financial_budget_income
+					value = RSB_financial_budget_income_max
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = RSB_financial_budget_asset
+					value = RSB_financial_budget_income
+					compare = less_than_or_equals
+				}
+			}
+			add_to_variable = { RSB_gov_army_support = 1 }
+		}
+	}
+}
+
+country_event = {	#政府士气危机
+	id = RSB.200
+	title = RSB.200.t
+	desc = RSB.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.200.a
+		add_political_power = -10
+	}
+
+	option = {
+		name = RSB.200.b
+		add_to_variable = {
+			var = RSB_politic_sit_unity
+			value = -10
+			tooltip = RSB_politic_sit_unity_tt
+		}
+		add_to_variable = {
+			var = RSB_politic_sit_local_party_trust
+			value = -5
+			tooltip = RSB_politic_sit_local_party_trust_tt
+		}
+	}
+}
+
+country_event = {	#民众投诉问题
+	id = RSB.201
+	title = RSB.201.t
+	desc = RSB.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.201.a
+		add_political_power = -15
+	}
+
+	option = {
+		name = RSB.201.b
+		add_to_variable = {
+			var = RSB_politic_sit_prestige
+			value = -10
+			tooltip = RSB_politic_sit_prestige_tt
+		}
+		add_to_variable = {
+			var = RSB_politic_sit_scandal
+			value = 1
+			tooltip = RSB_politic_sit_scandal_tt
+		}
+	}
+}
+
+###内战事件链###
+country_event = {	#总统意外去世
+	id = RSB.500
+	title = RSB.500.t
+	desc = RSB.500.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.500.a
+		remove_country_leader_role = {
+			character = RSB_ortland_karasasin
+			ideology = social_democrat
+		}
+		add_country_leader_role = {
+			character = RSB_lacombe_carasasin
+			promote_leader = yes
+			country_leader = {
+				ideology = social_democrat
+				#desc = 
+				traits = { RSB_fighter_for_reform }
+				expire = "3000.1.1.1"
+				id = -1
+			}
+		}
+		hidden_effect = { RSB_dismantle_union_effect = yes }
+
+		set_country_flag = RSB_focus_4
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	#复兴党组建国民联盟
+	id = RSB.501
+	title = RSB.501.t
+	desc = RSB.501.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.501.a
+		hidden_effect = { RNA = { SPC_RNA_startup_effect = yes } }
+		#activate_mission = RSB_suppress_right_rebellion
+	}
+
+	option = {
+		name = RSB.501.b
+		hidden_effect = { RNA = { SPC_RNA_startup_effect = yes } }
+		#activate_mission = RSB_suppress_right_rebellion
+		RNA = { change_tag_from = ROOT }
+	}
+}
+
+country_event = {	#代理总统下台，紧急状态委员会成立
+	id = RSB.502
+	title = RSB.502.t
+	desc = RSB.502.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.502.a
+		set_cosmetic_tag = RSB_emergency_committee_tag
+		set_politics = { ruling_party = paternal_autocrat }
+		remove_country_leader_role = {
+			character = RSB_satranti_kestland
+			ideology = military_dictatorship
+		}
+		add_country_leader_role = {
+			character = RSB_adrian_fell
+			promote_leader = yes
+			country_leader = {
+				desc = RSB_adrian_fell_desc
+				ideology = military_dictatorship
+				traits = { RSB_loyal_guard }
+				expire = "3000.1.1.1"
+				id = -1
+			}
+		}
+		swap_ideas = {
+			remove_idea = RSB_maligned_government
+			add_idea = RSB_burning_ground_outside_capital
+		}
+	}
+}
+
+country_event = {	#南卡普里区政府崩溃
+	id = RSB.503
+	title = RSB.503.t
+	desc = RSB.503.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.503.a
+		hidden_effect = { RSC = { SPC_RSC_startup_effect = yes } }
+	}
+
+	option = {
+		name = RSB.503.b
+		hidden_effect = { RSC = { SPC_RSC_startup_effect = yes } }
+		RSC = { change_tag_from = ROOT }
+	}
+}
+
+country_event = {	#弹劾
+	id = RSB.504
+	title = RSB.504.t
+	desc = RSB.504.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.504.a
+		add_stability = -0.1
+	}
+}
+
+country_event = {	#调动
+	id = RSB.505
+	title = RSB.505.t
+	desc = RSB.505.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.505.a
+	}
+}
+
+country_event = {	#摊牌
+	id = RSB.506
+	title = RSB.506.t
+	desc = RSB.506.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.506.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = RSB_federal_financial_budget_off_tt
+		country_event = RSB.507
+		clr_country_flag = RSB_federal_financial_budget_on
+		remove_dynamic_modifier = { modifier = RSB_financial_health_committe }
+	}
+
+	option = {
+		name = RSB.506.b
+		ai_chance = { base = 0 }
+		trigger = { check_variable = { RSB_gov_army_support > 1 } }
+		custom_effect_tooltip = RSB_federal_financial_budget_off_tt
+		custom_effect_tooltip = RSB.506.b.tt
+		clr_country_flag = RSB_federal_financial_budget_on
+		remove_dynamic_modifier = { modifier = RSB_financial_health_committe }
+	}
+}
+
+country_event = {	#种子
+	id = RSB.507
+	title = RSB.507.t
+	desc = RSB.507.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.507.a
+		add_war_support = 0.05
+		country_event = RSB.501
+	}
+}
+
+country_event = {	#异样宁静
+	id = RSB.508
+	title = RSB.508.t
+	desc = RSB.508.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSB.508.a
+		country_event = {
+			id = RSB.503
+			days = 10
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = RSBNews
+
+news_event = {		#南巴斯蒂亚陷入内战！
+	id = RSBNews.1
+	title = RSBNews.1.t
+	desc = RSBNews.1.d
+	picture = GFX_news_event_generic_16
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RSBNews.1.a
+		trigger = { 
+			OR = { tag = KOA tag = LNR tag = RSU tag = TCW tag = ROK tag = UPV tag = HGL tag = AST tag = BSK tag = FCR tag = GDD tag = CBL } 
+			NOT = { tag = RSB tag = RSC tag = RNA }
+		}
+	}
+
+	option = {
+		name = RSBNews.1.b
+		trigger = { 
+			NOT = { tag = KOA tag = LNR tag = RSU tag = TCW tag = ROK tag = UPV tag = HGL tag = AST tag = BSK tag = FCR tag = GDD tag = CBL } 
+			NOT = { tag = RSB tag = RSC tag = RNA } 
+		}
+	}
+
+	option = {
+		name = RSBNews.1.c
+		trigger = { 
+			NOT = { tag = KOA tag = LNR tag = RSU tag = TCW tag = ROK tag = UPV tag = HGL tag = AST tag = BSK tag = FCR tag = GDD tag = CBL } 
+			OR = { tag = RSB tag = RSC tag = RNA } 
+		}
+	}
+}

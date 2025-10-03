@@ -1,0 +1,29 @@
+
+state={
+	id=217
+	name="STATE_217"
+
+	resources = {
+		magic_crystal = 12
+		chromium = 4
+	}
+
+	history={
+		owner = NLL
+		add_core_of = NLL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			16139 5
+		}
+	}
+
+	provinces={
+		5321 6826 7210 9606 10977 16139 16225 
+	}
+	manpower=263000
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

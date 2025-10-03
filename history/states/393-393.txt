@@ -1,0 +1,37 @@
+
+state={
+	id=393
+	name="STATE_393"
+	resources = {
+		tungsten = 3
+		chromium = 3
+		rubber = 8
+	}
+	provinces={
+		1423 6021 6996 9281 10702 11689 19762 19845 19880 19940 20002 20037 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			19845 = {
+				naval_base = 3
+			}
+			20002 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			19845 10
+		}
+		victory_points = {
+			20002 3
+		}
+	}
+	manpower=801300
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

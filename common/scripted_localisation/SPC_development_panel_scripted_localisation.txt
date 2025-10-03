@@ -1,0 +1,1210 @@
+defined_text = {
+	name = Get_state_magic_progress
+	text = {
+		localization_key = "[?state_magic_progress|%2]"
+	}
+}
+
+defined_text = {
+	name = GetLocalMagicLevel
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 0 }
+		}
+		localization_key = GetLocalMagicLevel_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 1 }
+		}
+		localization_key = GetLocalMagicLevel_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 2 }
+		}
+		localization_key = GetLocalMagicLevel_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 3 }
+		}
+		localization_key = GetLocalMagicLevel_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 4 }
+		}
+		localization_key = GetLocalMagicLevel_4
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 5 }
+		}
+		localization_key = GetLocalMagicLevel_5
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 6 }
+		}
+		localization_key = GetLocalMagicLevel_6
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 7 }
+		}
+		localization_key = GetLocalMagicLevel_7
+	}
+	text = {
+		localization_key = state_development_panel_unfinished	
+	}
+}
+
+defined_text = {
+	name = GetLocalScienceLevel
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 0 }
+		}
+		localization_key = GetLocalScienceLevel_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 1 }
+		}
+		localization_key = GetLocalScienceLevel_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 2 }
+		}
+		localization_key = GetLocalScienceLevel_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 3 }
+		}
+		localization_key = GetLocalScienceLevel_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 4 }
+		}
+		localization_key = GetLocalScienceLevel_4
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 5 }
+		}
+		localization_key = GetLocalScienceLevel_5
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 6 }
+		}
+		localization_key = GetLocalScienceLevel_6
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 7 }
+		}
+		localization_key = GetLocalScienceLevel_7
+	}
+	text = {
+		localization_key = state_development_panel_unfinished	
+	}
+}
+
+defined_text = {
+	name = GetMagLevelDesc
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 0 }
+		}
+		localization_key = GetLocalMagicDesc_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 1 }
+		}
+		localization_key = GetLocalMagicDesc_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 2 }
+		}
+		localization_key = GetLocalMagicDesc_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 3 }
+		}
+		localization_key = GetLocalMagicDesc_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 4 }
+		}
+		localization_key = GetLocalMagicDesc_4
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 5 }
+		}
+		localization_key = GetLocalMagicDesc_5
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 6 }
+		}
+		localization_key = GetLocalMagicDesc_6
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_magic_level = 7 }
+		}
+		localization_key = GetLocalMagicDesc_7
+	}
+	text = {
+		localization_key = state_development_panel_unfinished	
+	}
+}
+
+defined_text = {
+	name = GetSciLevelDesc
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 0 }
+		}
+		localization_key = GetLocalScienceDesc_0
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 1 }
+		}
+		localization_key = GetLocalScienceDesc_1
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 2 }
+		}
+		localization_key = GetLocalScienceDesc_2
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 3 }
+		}
+		localization_key = GetLocalScienceDesc_3
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 4 }
+		}
+		localization_key = GetLocalScienceDesc_4
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 5 }
+		}
+		localization_key = GetLocalScienceDesc_5
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 6 }
+		}
+		localization_key = GetLocalScienceDesc_6
+	}
+	text = {
+		trigger = { 
+			check_variable = { state_science_level = 7 }
+		}
+		localization_key = GetLocalScienceDesc_7
+	}
+	text = {
+		localization_key = state_development_panel_unfinished	
+	}	
+}
+
+defined_text = {
+	name = GET_counrty_development_title_1
+	text = {
+		trigger = { has_idea = primitive_industry }
+		localization_key = primitive_industry
+	}
+	text = {
+		trigger = { has_idea = handcraft_industry }
+		localization_key = handcraft_industry
+	}
+	text = {
+		trigger = { has_idea = early_factory_industry }
+		localization_key = early_factory_industry
+	}
+	text = {
+		trigger = { has_idea = factory_industry }
+		localization_key = factory_industry
+	}
+	text = {
+		trigger = { has_idea = grouped_factory_industry }
+		localization_key = grouped_factory_industry
+	}
+	text = {
+		trigger = { has_idea = innovative_industry }
+		localization_key = innovative_industry
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_title_2
+	text = {
+		trigger = { has_idea = primitive_agriculture }
+		localization_key = primitive_agriculture
+	}
+	text = {
+		trigger = { has_idea = self_efficient_agriculture }
+		localization_key = self_efficient_agriculture
+	}
+	text = {
+		trigger = { has_idea = weak_agriculture }
+		localization_key = weak_agriculture
+	}
+	text = {
+		trigger = { has_idea = modern_agriculture }
+		localization_key = modern_agriculture
+	}
+	text = {
+		trigger = { has_idea = half_auto_agriculture }
+		localization_key = half_auto_agriculture
+	}
+	text = {
+		trigger = { has_idea = mechanized_agriculture }
+		localization_key = mechanized_agriculture
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_title_3
+	text = {
+		trigger = { has_idea = primitive_army }
+		localization_key = primitive_army
+	}
+	text = {
+		trigger = { has_idea = unorganized_army }
+		localization_key = unorganized_army
+	}
+	text = {
+		trigger = { has_idea = experienced_army }
+		localization_key = experienced_army
+	}
+	text = {
+		trigger = { has_idea = very_experienced_army }
+		localization_key = very_experienced_army
+	}
+	text = {
+		trigger = { has_idea = advanced_army }
+		localization_key = advanced_army
+	}
+	text = {
+		trigger = { has_idea = innovative_army }
+		localization_key = innovative_army
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_title_4
+	text = {
+		trigger = { has_idea = death_everywhere }
+		localization_key = death_everywhere
+	}
+	text = {
+		trigger = { has_idea = struggle_to_survive }
+		localization_key = struggle_to_survive
+	}
+	text = {
+		trigger = { has_idea = hard_to_survive }
+		localization_key = hard_to_survive
+	}
+	text = {
+		trigger = { has_idea = normally_living }
+		localization_key = normally_living
+	}
+	text = {
+		trigger = { has_idea = extra_living }
+		localization_key = extra_living
+	}
+	text = {
+		trigger = { has_idea = best_living }
+		localization_key = best_living
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_title_5
+	text = {
+		trigger = { has_idea = hazard_zone }
+		localization_key = hazard_zone
+	}
+	text = {
+		trigger = { has_idea = unhabitable }
+		localization_key = unhabitable
+	}
+	text = {
+		trigger = { has_idea = uncomfortable }
+		localization_key = uncomfortable
+	}
+	text = {
+		trigger = { has_idea = controlled_pollution }
+		localization_key = controlled_pollution
+	}
+	text = {
+		trigger = { has_idea = relatively_comfortable }
+		localization_key = relatively_comfortable
+	}
+	text = {
+		trigger = { has_idea = real_natural_environment }
+		localization_key = real_natural_environment
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_title_6
+	text = {
+		trigger = { has_idea = fuck_the_science }
+		localization_key = fuck_the_science
+	}
+	text = {
+		trigger = { has_idea = nobody_cares }
+		localization_key = nobody_cares
+	}
+	text = {
+		trigger = { has_idea = few_cares }
+		localization_key = few_cares
+	}
+	text = {
+		trigger = { has_idea = fake_exists }
+		localization_key = fake_exists
+	}
+	text = {
+		trigger = { has_idea = standard_research }
+		localization_key = standard_research
+	}
+	text = {
+		trigger = { has_idea = willing_research }
+		localization_key = willing_research
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_1
+	text = {
+		trigger = { has_idea = primitive_industry }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_2
+	text = {
+		trigger = { has_idea = handcraft_industry }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_3
+	text = {
+		trigger = { has_idea = early_factory_industry }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_4
+	text = {
+		trigger = { has_idea = factory_industry }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_5
+	text = {
+		trigger = { has_idea = grouped_factory_industry }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_1_6
+	text = {
+		trigger = { has_idea = innovative_industry }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_1
+	text = {
+		trigger = { has_idea = primitive_agriculture }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_2
+	text = {
+		trigger = { has_idea = self_efficient_agriculture }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_3
+	text = {
+		trigger = { has_idea = weak_agriculture }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_4
+	text = {
+		trigger = { has_idea = modern_agriculture }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_5
+	text = {
+		trigger = { has_idea = half_auto_agriculture }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_2_6
+	text = {
+		trigger = { has_idea = mechanized_agriculture }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_1
+	text = {
+		trigger = { has_idea = primitive_army }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_2
+	text = {
+		trigger = { has_idea = unorganized_army }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_3
+	text = {
+		trigger = { has_idea = experienced_army }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_4
+	text = {
+		trigger = { has_idea = very_experienced_army }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_5
+	text = {
+		trigger = { has_idea = advanced_army }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_3_6
+	text = {
+		trigger = { has_idea = innovative_army }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_1
+	text = {
+		trigger = { has_idea = death_everywhere }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_2
+	text = {
+		trigger = { has_idea = struggle_to_survive }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_3
+	text = {
+		trigger = { has_idea = hard_to_survive }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_4
+	text = {
+		trigger = { has_idea = normally_living }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_5
+	text = {
+		trigger = { has_idea = extra_living }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_4_6
+	text = {
+		trigger = { has_idea = best_living }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_1
+	text = {
+		trigger = { has_idea = hazard_zone }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_2
+	text = {
+		trigger = { has_idea = unhabitable }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_3
+	text = {
+		trigger = { has_idea = uncomfortable }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_4
+	text = {
+		trigger = { has_idea = controlled_pollution }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_5
+	text = {
+		trigger = { has_idea = relatively_comfortable }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_5_6
+	text = {
+		trigger = { has_idea = real_natural_environment }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_1
+	text = {
+		trigger = { has_idea = fuck_the_science }
+		localization_key = SPC_country_development_panel_level_1_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_1_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_2
+	text = {
+		trigger = { has_idea = nobody_cares }
+		localization_key = SPC_country_development_panel_level_2_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_2_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_3
+	text = {
+		trigger = { has_idea = few_cares }
+		localization_key = SPC_country_development_panel_level_3_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_3_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_4
+	text = {
+		trigger = { has_idea = fake_exists }
+		localization_key = SPC_country_development_panel_level_4_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_4_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_5
+	text = {
+		trigger = { has_idea = standard_research }
+		localization_key = SPC_country_development_panel_level_5_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_5_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_icon_6_6
+	text = {
+		trigger = { has_idea = willing_research }
+		localization_key = SPC_country_development_panel_level_6_2
+	}
+	text = {
+		localization_key = SPC_country_development_panel_level_6_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1
+	text = {
+		trigger = { has_idea = primitive_industry }
+		localization_key = "[GET_counrty_development_idea_1_1]"
+	}
+	text = {
+		trigger = { has_idea = handcraft_industry }
+		localization_key = "[GET_counrty_development_idea_1_2]"
+	}
+	text = {
+		trigger = { has_idea = early_factory_industry }
+		localization_key = "[GET_counrty_development_idea_1_3]"
+	}
+	text = {
+		trigger = { has_idea = factory_industry }
+		localization_key = "[GET_counrty_development_idea_1_4]"
+	}
+	text = {
+		trigger = { has_idea = grouped_factory_industry }
+		localization_key = "[GET_counrty_development_idea_1_5]"
+	}
+	text = {
+		trigger = { has_idea = innovative_industry }
+		localization_key = "[GET_counrty_development_idea_1_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_1
+	text = {
+		localization_key = tech_effect|industrial_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_2
+	text = {
+		localization_key = tech_effect|industrial_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_3
+	text = {
+		localization_key = tech_effect|industrial_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_4
+	text = {
+		localization_key = tech_effect|industrial_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_5
+	text = {
+		localization_key = tech_effect|industrial_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_1_6
+	text = {
+		localization_key = tech_effect|industrial_development_idea_6
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2
+	text = {
+		trigger = { has_idea = primitive_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_1]"
+	}
+	text = {
+		trigger = { has_idea = self_efficient_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_2]"
+	}
+	text = {
+		trigger = { has_idea = weak_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_3]"
+	}
+	text = {
+		trigger = { has_idea = modern_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_4]"
+	}
+	text = {
+		trigger = { has_idea = half_auto_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_5]"
+	}
+	text = {
+		trigger = { has_idea = mechanized_agriculture }
+		localization_key = "[GET_counrty_development_idea_2_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_1
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_2
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_3
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_4
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_5
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_2_6
+	text = {
+		localization_key = tech_effect|agricultural_development_idea_6
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3
+	text = {
+		trigger = { has_idea = primitive_army }
+		localization_key = "[GET_counrty_development_idea_3_1]"
+	}
+	text = {
+		trigger = { has_idea = unorganized_army }
+		localization_key = "[GET_counrty_development_idea_3_2]"
+	}
+	text = {
+		trigger = { has_idea = experienced_army }
+		localization_key = "[GET_counrty_development_idea_3_3]"
+	}
+	text = {
+		trigger = { has_idea = very_experienced_army }
+		localization_key = "[GET_counrty_development_idea_3_4]"
+	}
+	text = {
+		trigger = { has_idea = advanced_army }
+		localization_key = "[GET_counrty_development_idea_3_5]"
+	}
+	text = {
+		trigger = { has_idea = innovative_army }
+		localization_key = "[GET_counrty_development_idea_3_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_1
+	text = {
+		localization_key = tech_effect|military_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_2
+	text = {
+		localization_key = tech_effect|military_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_3
+	text = {
+		localization_key = tech_effect|military_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_4
+	text = {
+		localization_key = tech_effect|military_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_5
+	text = {
+		localization_key = tech_effect|military_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_3_6
+	text = {
+		localization_key = tech_effect|military_development_idea_6
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4
+	text = {
+		trigger = { has_idea = death_everywhere }
+		localization_key = "[GET_counrty_development_idea_4_1]"
+	}
+	text = {
+		trigger = { has_idea = struggle_to_survive }
+		localization_key = "[GET_counrty_development_idea_4_2]"
+	}
+	text = {
+		trigger = { has_idea = hard_to_survive }
+		localization_key = "[GET_counrty_development_idea_4_3]"
+	}
+	text = {
+		trigger = { has_idea = normally_living }
+		localization_key = "[GET_counrty_development_idea_4_4]"
+	}
+	text = {
+		trigger = { has_idea = extra_living }
+		localization_key = "[GET_counrty_development_idea_4_5]"
+	}
+	text = {
+		trigger = { has_idea = best_living }
+		localization_key = "[GET_counrty_development_idea_4_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_1
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_2
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_3
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_4
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_5
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_4_6
+	text = {
+		localization_key = tech_effect|living_standard_development_idea_6
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5
+	text = {
+		trigger = { has_idea = hazard_zone }
+		localization_key = "[GET_counrty_development_idea_5_1]"
+	}
+	text = {
+		trigger = { has_idea = unhabitable }
+		localization_key = "[GET_counrty_development_idea_5_2]"
+	}
+	text = {
+		trigger = { has_idea = uncomfortable }
+		localization_key = "[GET_counrty_development_idea_5_3]"
+	}
+	text = {
+		trigger = { has_idea = controlled_pollution }
+		localization_key = "[GET_counrty_development_idea_5_4]"
+	}
+	text = {
+		trigger = { has_idea = relatively_comfortable }
+		localization_key = "[GET_counrty_development_idea_5_5]"
+	}
+	text = {
+		trigger = { has_idea = real_natural_environment }
+		localization_key = "[GET_counrty_development_idea_5_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_1
+	text = {
+		localization_key = tech_effect|environment_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_2
+	text = {
+		localization_key = tech_effect|environment_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_3
+	text = {
+		localization_key = tech_effect|environment_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_4
+	text = {
+		localization_key = tech_effect|environment_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_5
+	text = {
+		localization_key = tech_effect|environment_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_5_6
+	text = {
+		localization_key = tech_effect|environment_development_idea_6
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6
+	text = {
+		trigger = { has_idea = fuck_the_science }
+		localization_key = "[GET_counrty_development_idea_6_1]"
+	}
+	text = {
+		trigger = { has_idea = nobody_cares }
+		localization_key = "[GET_counrty_development_idea_6_2]"
+	}
+	text = {
+		trigger = { has_idea = few_cares }
+		localization_key = "[GET_counrty_development_idea_6_3]"
+	}
+	text = {
+		trigger = { has_idea = fake_exists }
+		localization_key = "[GET_counrty_development_idea_6_4]"
+	}
+	text = {
+		trigger = { has_idea = standard_research }
+		localization_key = "[GET_counrty_development_idea_6_5]"
+	}
+	text = {
+		trigger = { has_idea = willing_research }
+		localization_key = "[GET_counrty_development_idea_6_6]"
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_1
+	text = {
+		localization_key = tech_effect|research_development_idea_1
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_2
+	text = {
+		localization_key = tech_effect|research_development_idea_2
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_3
+	text = {
+		localization_key = tech_effect|research_development_idea_3
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_4
+	text = {
+		localization_key = tech_effect|research_development_idea_4
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_5
+	text = {
+		localization_key = tech_effect|research_development_idea_5
+	}
+}
+
+defined_text = {
+	name = GET_counrty_development_idea_6_6
+	text = {
+		localization_key = tech_effect|research_development_idea_6
+	}
+}

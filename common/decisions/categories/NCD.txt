@@ -1,0 +1,17 @@
+NCD_skilled_worker_construction = {		#技术工人建设
+	#picture = 
+	icon = generic_arms_trade
+	allowed = { tag = NCD }
+	visible = { has_completed_focus = NCD_nationalize_skilled_labour }
+	visible_when_empty = no
+	priority = 10
+}
+
+NCD_interal_conflicts = {		#西莉迪亚内部斗争
+	#picture = 
+	icon = generic_crisis
+	allowed = { tag = NCD }
+	visible = { has_completed_focus = NCD_bloody_peach_and_bodies NOT = { has_country_flag = NCD_interal_conflicts_ban } }
+	visible_when_empty = no
+	priority = 10
+}

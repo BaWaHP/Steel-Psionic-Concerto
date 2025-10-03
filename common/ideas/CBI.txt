@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+
+		#死生荣辱
+		CBI_life_and_death = {
+			picture = FRA_national_mobilization_focus
+			allowed = { original_tag = CBI }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.2
+				surrender_limit = 0.15
+				political_power_factor = 0.1
+				army_org_factor = 0.05
+				experience_loss_factor = -0.2
+				army_org_regain = -0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+SFH_mermaid_influence_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_mermaid_influence_dynamic_modifier
+
+	stability_factor = SFH_mermaid_influence_modifier_st
+	political_power_factor = SFH_mermaid_influence_modifier_pp
+	consumer_goods_factor = SFH_mermaid_influence_modifier_cg
+	production_speed_buildings_factor = SFH_mermaid_influence_modifier_psb
+}
+
+SFH_corrupted_army_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_SFH_corrupted_army_dynamic_modifier
+
+	stability_factor = SFH_corrupted_army_dynamic_modifier_sf
+	political_power_factor = SFH_corrupted_army_dynamic_modifier_ppf
+	consumer_goods_expected_value = SFH_corrupted_army_dynamic_modifier_cgev
+	army_speed_factor = SFH_corrupted_army_dynamic_modifier_asf
+	experience_gain_army_factor = SFH_corrupted_army_dynamic_modifier_egaf
+}
+
+SFH_weak_army_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_army_corruption
+
+	army_attack_factor = SFH_weak_army_dynamic_modifier_aaf
+	army_defence_factor = SFH_weak_army_dynamic_modifier_adf
+	army_org_factor = SFH_weak_army_dynamic_modifier_aof
+	army_org_regain = SFH_weak_army_dynamic_modifier_aor
+	max_command_power_mult = SFH_weak_army_dynamic_modifier_mxp
+	max_planning_factor = SFH_weak_army_dynamic_modifier_mxf
+	terrain_penalty_reduction = SFH_weak_army_dynamic_modifier_tpr
+	land_reinforce_rate = SFH_weak_army_dynamic_modifier_lrr
+	supply_consumption_factor = SFH_weak_army_dynamic_modifier_scf
+	training_time_factor = SFH_weak_army_dynamic_modifier_ttf
+	consumer_goods_factor = SFH_weak_army_dynamic_modifier_cgf
+	research_speed_factor = SFH_weak_army_dynamic_modifier_rsf
+	cat_mobile_warfare_cost_factor = SFH_weak_army_dynamic_modifier_cmw
+	cat_superior_firepower_cost_factor = SFH_weak_army_dynamic_modifier_csf
+	cat_grand_battle_plan_cost_factor = SFH_weak_army_dynamic_modifier_cgb
+	cat_mass_assault_cost_factor = SFH_weak_army_dynamic_modifier_cma
+}
+
+SFH_modern_army_dynamic_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_army_corruption
+
+	army_attack_factor = SFH_weak_army_dynamic_modifier_aaf
+	army_defence_factor = SFH_weak_army_dynamic_modifier_adf
+	army_org_factor = SFH_weak_army_dynamic_modifier_aof
+	army_org_regain = SFH_weak_army_dynamic_modifier_aor
+	max_command_power_mult = SFH_weak_army_dynamic_modifier_mxp
+	max_planning_factor = SFH_weak_army_dynamic_modifier_mxf
+	terrain_penalty_reduction = SFH_weak_army_dynamic_modifier_tpr
+	land_reinforce_rate = SFH_weak_army_dynamic_modifier_lrr
+	supply_consumption_factor = SFH_weak_army_dynamic_modifier_scf
+	training_time_factor = SFH_weak_army_dynamic_modifier_ttf
+	consumer_goods_factor = SFH_weak_army_dynamic_modifier_cgf
+	research_speed_factor = SFH_weak_army_dynamic_modifier_rsf
+	monthly_military_development_process = 2
+	cat_mobile_warfare_cost_factor = SFH_weak_army_dynamic_modifier_cmw
+	cat_superior_firepower_cost_factor = SFH_weak_army_dynamic_modifier_csf
+	cat_grand_battle_plan_cost_factor = SFH_weak_army_dynamic_modifier_cgb
+	cat_mass_assault_cost_factor = SFH_weak_army_dynamic_modifier_cma
+}
+
+SFH_towards_the_future = {		#走向未来
+	enable = { always = yes }
+
+	icon = GFX_idea_FRA_national_mobilization_focus
+
+	stability_factor = SFH_towards_the_future_sf
+	war_support_factor = SFH_towards_the_future_wsf
+	political_power_factor = SFH_towards_the_future_ppf
+	production_speed_buildings_factor = SFH_towards_the_future_psbf
+	production_factory_efficiency_gain_factor = SFH_towards_the_future_pfegf
+	production_factory_max_efficiency_factor = SFH_towards_the_future_pfmef
+	consumer_goods_factor = SFH_towards_the_future_cgf
+	research_speed_factor = SFH_towards_the_future_rsf
+	conscription_factor = SFH_towards_the_future_cf
+	monthly_living_standard_development_process = SFH_towards_the_future_mlsdp
+	monthly_industrial_development_process = SFH_towards_the_future_midp
+	monthly_agricultural_development_process = SFH_towards_the_future_madp
+	monthly_research_development_process = SFH_towards_the_future_mrdp
+}
+
+SFH_living_at_present = {		#活在当下
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_pp_unity_bonus
+
+	stability_factor = SFH_living_at_present_sf
+	war_support_factor = SFH_living_at_present_wsf
+	political_power_factor = SFH_living_at_present_ppf
+	production_speed_buildings_factor = SFH_living_at_present_psbf
+	production_factory_efficiency_gain_factor = SFH_living_at_present_pfegf
+	production_factory_max_efficiency_factor = SFH_living_at_present_pfmef
+	line_change_production_efficiency_factor = SFH_living_at_present_lcpef
+	consumer_goods_factor = SFH_living_at_present_cgf
+	research_speed_factor = SFH_living_at_present_rsf
+	mobilization_speed = SFH_living_at_present_mb
+	conscription_factor = SFH_living_at_present_cf
+	army_core_defence_factor = SFH_living_at_present_acdf
+	army_org_factor = SFH_living_at_present_aof
+	army_org_regain = SFH_living_at_present_aor
+	monthly_population = SFH_living_at_present_mp
+	monthly_industrial_development_process = SFH_living_at_present_midp
+	monthly_agricultural_development_process = SFH_living_at_present_madp
+	monthly_research_development_process = SFH_living_at_present_mrdp
+	state_science_development_monthly = SFH_living_at_present_ssdm
+}
+
+SFH_changing_the_past = {		#改变过去
+	enable = { always = yes }
+
+	icon = GFX_idea_YUG_federal_defense_council
+
+	stability_factor = SFH_changing_the_past_sf
+	war_support_factor = SFH_changing_the_past_wsf
+	stability_weekly = SFH_changing_the_past_sw
+	war_support_weekly = SFH_changing_the_past_wsw
+	political_power_factor = SFH_changing_the_past_ppf
+	industrial_capacity_factory = SFH_changing_the_past_icf
+	production_speed_arms_factory_factor = SFH_changing_the_past_psaff
+	production_speed_infrastructure_factor = SFH_changing_the_past_psif
+	production_speed_rail_way_factor = SFH_changing_the_past_psrwf
+	consumer_goods_factor = SFH_changing_the_past_cgf
+	conversion_cost_civ_to_mil_factor = SFH_changing_the_past_ccctmf
+	supply_consumption_factor = SFH_changing_the_past_scf
+	training_time_factor = SFH_changing_the_past_ttf
+	army_core_attack_factor = SFH_changing_the_past_acaf
+	army_core_defence_factor = SFH_changing_the_past_acdf
+	army_org_factor = SFH_changing_the_past_aof
+	conscription = SFH_changing_the_past_c
+	monthly_industrial_development_process = SFH_changing_the_past_midp
+	monthly_military_development_process = SFH_changing_the_past_mmdp
+}

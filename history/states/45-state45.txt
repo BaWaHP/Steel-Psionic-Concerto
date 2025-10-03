@@ -1,0 +1,28 @@
+
+state={
+	id=45
+	name="STATE_45"
+	provinces={
+		178 4493 4617 11466 19069 19086 19139 19221 19249 19288 19298 19324 19437 19469 
+	}
+	resources = {
+		magic_crystal = 5
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 1
+			4493 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			4493 3
+		}
+	}
+	manpower=125000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

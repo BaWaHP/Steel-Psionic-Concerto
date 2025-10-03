@@ -1,0 +1,227 @@
+ideas = {
+
+	country = {		#民族精神
+		
+		NKE_national_university_0 = {		#维安娜·维尔大学
+			picture = NKE_national_university
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		NKE_national_university_1 = {		#维安娜·维尔大学
+			picture = NKE_national_university
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_research_development_process = 1
+				research_speed_factor = 0.05
+			}
+		}
+		
+		NKE_national_university_2 = {		#维安娜·维尔大学
+			picture = NKE_national_university
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_research_development_process = 2
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		NKE_national_university_3 = {		#维安娜·维尔大学
+			picture = NKE_national_university
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_research_development_process = 4
+				research_speed_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		
+		NKE_national_university_4 = {		#维安娜·维尔大学
+			picture = NKE_national_university
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_research_development_process = 6
+				research_speed_factor = 0.3
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		
+		NKE_nation_of_vitality = {		#活力四射的国度
+			picture = NKE_nation_of_vitality
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.2
+				conscription_factor = -0.2
+				monthly_living_standard_development_process = 2
+			}
+		}
+		
+		NKE_Peoria_cooperation_pact = {		#皮奥瑞亚-左汀原合作条约
+			picture = NKE_Peoria_cooperation_pact
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				min_export = 0.1
+				authoritarian_republican_drift = 0.05
+				liberal_republican_drift = 0.05
+				worldunion_democrat_drift = 0.05
+				consumer_goods_factor = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = PEO
+				trade_opinion_factor = 0.5
+			}
+		}
+		
+		NKE_Peoria_cooperation_pact_refused = {		#拒绝了皮奥瑞亚的合作条约
+			picture = NKE_Peoria_cooperation_pact_refused
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = PEO
+				trade_opinion_factor = -0.25
+			}
+		}
+		
+		NKE_developing_extrade = {		#稳中向好的外贸
+			picture = NKE_developing_extrade
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				civilian_factory_use = 1
+				political_power_gain = 0.1
+			}
+		}
+		
+		NKE_alam_tannery_pollution = {		#阿兰鞣革厂
+			picture = NKE_alam_tannery_pollution
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_environment_development_process = -4
+				monthly_agricultural_development_process = -2
+				monthly_population = -0.05
+			}
+		}
+		
+		NKE_debt_bondage_impact = {		#契约苦役
+			picture = NKE_debt_bondage_impact
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_living_standard_development_process = -4
+				monthly_population = -0.25
+				consumer_goods_factor = -0.2
+				stability_weekly = -0.004
+			}
+		}
+		
+		NKE_pearl_of_the_ocean = {		#海上明珠
+			picture = NKE_pearl_of_the_ocean
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				political_power_cost = 0.1
+			}
+		}
+		
+		NKE_leveled_bureaucrat_idea = {		#十三品官员选拔制
+			picture = NKE_leveled_bureaucrat_idea
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.002
+				authoritarian_republican_drift = 0.05
+				political_power_gain = -0.2
+				political_advisor_cost_factor = 1
+			}
+		}
+		
+		NKE_determinated_production = {		#决死生产
+			picture = NKE_determinated_production
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				monthly_living_standard_development_process = -5
+				monthly_environment_development_process = -5
+				monthly_industrial_development_process = 5
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.25
+				stability_weekly = -0.005
+			}
+		}
+		
+		NKE_final_devotion = {		#燃烧殆尽
+			picture = NKE_final_devotion
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.15		#对，我知道我在写什么
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				dig_in_speed_factor = 1
+				combat_width_factor = -0.5
+				surrender_limit = 1
+				war_exhaustion_gain_modifier = -2
+				monthly_living_standard_development_process = -20
+			}
+		}
+	}
+	
+	materiel_manufacturer = {
+
+		designer = yes
+
+		NKE_nguhara_war_industry = {		#宏原兵工厂
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				tag = NKE
+			}
+			
+			available = {
+				has_completed_focus = NKE_industry_military_1
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+}

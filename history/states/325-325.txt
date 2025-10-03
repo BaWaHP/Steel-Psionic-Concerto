@@ -1,0 +1,27 @@
+
+state={
+	id=325
+	name="STATE_325"
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		victory_points = {
+			4073 12
+		}
+	}
+
+	provinces={
+		3932 4073 7267 7394 7532 8066 20519 20614 20660 20665 20715 
+	}
+	manpower = 2540000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

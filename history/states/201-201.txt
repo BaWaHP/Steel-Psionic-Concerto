@@ -1,0 +1,45 @@
+
+state={
+	id=201
+	name="STATE_201"
+
+	resources = {
+		steel = 14
+		magic_crystal = 8
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 1
+			18079 = { bunker = 1 }
+			4966 = { bunker = 1 }
+			18172 = { bunker = 1 }
+			18269 = { bunker = 1 }
+		}
+		victory_points = {
+			18079 20
+		}
+		victory_points = {
+			4966 3
+		}
+		victory_points = {
+			18172 2
+		}
+		victory_points = {
+			18269 10
+		}
+	}
+
+	provinces={
+		4146 4679 4966 5731 6343 6770 10748 17838 17946 17993 17994 18079 18161 18172 18184 18269 18288 18368 
+	}
+	manpower=10020000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

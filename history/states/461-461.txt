@@ -1,0 +1,30 @@
+
+state={
+	id=461
+	name="STATE_461"
+	provinces={
+		255 523 4228 6549 7523 8729 8998 9083 10843 11131 18267 18318 18382 
+	}
+	history = {
+		owner = MTV
+		add_core_of = MTV
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		victory_points = {
+			18267 15
+		}
+		victory_points = {
+			4228 8
+		}
+		victory_points = {
+			11131 8
+		}
+		set_demilitarized_zone = yes
+	}
+	manpower = 2100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

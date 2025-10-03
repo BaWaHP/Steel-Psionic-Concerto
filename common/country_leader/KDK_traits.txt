@@ -1,0 +1,41 @@
+leader_traits = {
+
+	KDK_bloody_king = {		#血红之王
+		random = no
+		
+		political_power_factor = -0.3
+		stability_factor = -0.15
+		war_support_factor = -0.15
+		drift_defence_factor = -0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	KDK_puppet_two_party_system = {		#傀儡两党制
+		random = no
+		
+		stability_factor = -0.05
+		production_speed_buildings_factor = -0.05
+		political_power_gain = -0.15
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	KDK_loyal_dog_of_rsb = {		#南巴斯蒂亚的忠犬
+		random = no
+		
+		stability_factor = -0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+	KDK_titlan_culture_enjoyers = {		#提特兰文化享受者
+		random = no
+		
+		political_power_gain = -0.1
+		drift_defence_factor = -0.05
+		
+		ai_will_do = { factor = 1 }
+	}
+
+}

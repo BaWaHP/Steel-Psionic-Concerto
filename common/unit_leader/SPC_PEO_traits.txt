@@ -1,0 +1,41 @@
+leader_traits = {
+	PEO_shield_of_republic_unit = {		#共和国之盾
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+
+		allowed = {
+			FROM = { original_tag = PEO }
+		}
+
+		modifier = {
+			army_defence_factor = 0.05
+			army_org_factor = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PEO_military_reform_implementers_unit = {		#新军改执行者
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+
+		allowed = {
+			FROM = { original_tag = PEO }
+		}
+
+		modifier = {
+			army_speed_factor = 0.05
+			army_attack_factor = 0.05
+			experience_gain_army_factor = 0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=94
+	name="STATE_94"
+
+	resources = {
+		steel = 48
+		aluminium = 16
+	}
+
+	history={
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			16735 5
+		}
+	}
+
+	provinces={
+		5890 9587 16203 16246 16350 16365 16386 16464 16492 16577 16617 16622 16623 16735 16750 
+	}
+	manpower = 385921
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies = 0.000
+}

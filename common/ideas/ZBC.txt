@@ -1,0 +1,86 @@
+ideas = {
+	country = {
+
+		ZBC_amusing_to_death = {		#娱乐至死
+			allowed = {  original_tag = ZBC }
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 100
+				monthly_population = 1
+				war_support_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.75
+				trade_opinion_factor = 0.35
+				army_chief_cost_factor = 0.35
+			}
+		}
+
+		ZBC_reply_1997 = {		#请回答1997
+			allowed = {  original_tag = ZBC }
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				political_power_factor = -0.01
+				production_speed_buildings_factor = -0.01
+				industrial_capacity_factory = -0.01
+				industrial_capacity_dockyard = -0.01
+				production_factory_max_efficiency_factor = -0.01
+				production_factory_efficiency_gain_factor = -0.01
+				line_change_production_efficiency_factor = -0.01
+			}
+		}
+
+		ZBC_national_policy_company = {		#国策公司
+			allowed = {  original_tag = ZBC }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.1
+				min_export = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHE
+				extra_trade_to_target_factor = 0.25
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+
+		ZBC_zhetysu_wave = {		#七河风尚
+			allowed = {  original_tag = ZBC }
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.025
+				consumer_goods_factor = -0.025
+				opinion_gain_monthly_factor = 0.1
+				improve_relations_maintain_cost_factor = -0.1
+			}
+		}
+
+		ZBC_blue_UZD = {		#蓝色楚元
+			allowed = { original_tag = ZBC }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = -0.1
+				experience_gain_navy_factor = 0.1
+				training_time_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		ZBC_outsea_stations = {		#海外殖民事务与贸易站点
+			allowed = { original_tag = ZBC }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.075
+				consumer_goods_factor = -0.075
+			}
+		}
+
+	}
+}

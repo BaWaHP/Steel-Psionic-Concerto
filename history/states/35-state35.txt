@@ -1,0 +1,24 @@
+
+state={
+	id=35
+	name="STATE_35"
+	provinces={
+		272 3372 4378 4969 8447 8702 8889 9379 9604 10969 17620 17621 17744 17760 17761 17780 17872 18040 
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			17760 5
+		}
+	}
+	manpower=3680000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

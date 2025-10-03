@@ -1,0 +1,79 @@
+﻿division_template = {
+	name = "圣骑士"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+		melee_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方民团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "圣骑士一队"
+		location = 600
+		division_template = "圣骑士"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "圣骑士二队"
+		location = 15183
+		division_template = "圣骑士"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团一团"
+		location = 8049
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团二团"
+		location = 14673
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团三团"
+		location = 14884
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "地方民团四团"
+		location = 1756
+		division_template = "地方民团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+}

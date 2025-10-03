@@ -1,0 +1,601 @@
+focus_tree = {
+	id = QTA_focus_1
+	
+	country = {
+		factor = 0
+		#modifier = {
+		#	add = 10
+		#	tag = QTA
+		#}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#我们的青天
+		id = QTA_our_clear_sky
+		icon = GFX_Social_Liberal
+		x = 5
+		y = 0
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#必须冲破封锁！
+		id = QTA_must_break_embargo
+		icon = GFX_Generic_Partisan
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_our_clear_sky }
+		relative_position_id = QTA_our_clear_sky
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#联盟之声
+		id = QTA_voice_of_union
+		icon = GFX_Generic_Liberation
+		x = -3
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_must_break_embargo }
+		relative_position_id = QTA_must_break_embargo
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#信任武盟
+		id = QTA_trust_fight_union
+		icon = GFX_Generic_Mutual_Cooperation
+		x = -2
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_voice_of_union }
+		relative_position_id = QTA_voice_of_union
+		mutually_exclusive = { focus = QTA_turn_taoist_movement }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#雄狮会的力量
+		id = QTA_power_of_the_lions
+		icon = GFX_focus_generic_conspiracy
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_trust_fight_union }
+		relative_position_id = QTA_trust_fight_union
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#天下会的人脉
+		id = QTA_contacts_of_the_TianxiaHui
+		icon = GFX_Generic_Legislation
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_power_of_the_lions }
+		relative_position_id = QTA_power_of_the_lions
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#吸引群众支持
+		id = QTA_attract_people_support
+		icon = GFX_Focus_Cake_and_Coffee
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_trust_fight_union
+						 focus = QTA_turn_taoist_movement }
+		relative_position_id = QTA_trust_fight_union
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩大联盟权限
+		id = QTA_expand_union_jurisdiction
+		icon = GFX_Generic_Pass_Legislation
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_attract_people_support }
+		relative_position_id = QTA_attract_people_support
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#转向道盟
+		id = QTA_turn_taoist_movement 
+		icon = GFX_Generic_Industry02
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_voice_of_union }
+		relative_position_id = QTA_voice_of_union
+		mutually_exclusive = { focus = QTA_trust_fight_union }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#三个老头一台戏
+		id = QTA_three_old_man_drama
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_turn_taoist_movement }
+		relative_position_id = QTA_turn_taoist_movement
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#道术的奇妙之处
+		id = QTA_wonders_of_Taoism
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_three_old_man_drama }
+		relative_position_id = QTA_three_old_man_drama
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {	#追溯青天的脚步
+		id = QTA_follow_the_steps_of_ours
+		icon = GFX_Paternal_Autocrat
+		x = 5
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_must_break_embargo }
+		relative_position_id = QTA_must_break_embargo
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#军委会入场
+		id = QTA_military_committe_come_in
+		icon = GFX_focus_generic_military_dictatorship
+		x = -4
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_follow_the_steps_of_ours }
+		relative_position_id = QTA_follow_the_steps_of_ours
+		mutually_exclusive = { focus = QTA_our_own_plan }
+		mutually_exclusive = { focus = QTA_recover_party_has_to_say }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#征收各地物资
+		id = QTA_collect_goods
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_military_committe_come_in }
+		relative_position_id = QTA_military_committe_come_in
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#武装劫掠
+		id = QTA_armed_robbery
+		icon = GFX_Generic_Invasion
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_collect_goods }
+		relative_position_id = QTA_collect_goods
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#确保各地稳定
+		id = QTA_ensure_regional_stability
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_military_committe_come_in
+						 focus = QTA_our_own_plan }
+		relative_position_id = QTA_military_committe_come_in
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#经济军事化
+		id = QTA_economic_militarization
+		icon = GFX_Generic_Rearmament
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_ensure_regional_stability }
+		relative_position_id = QTA_ensure_regional_stability
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#我们自己的方针
+		id = QTA_our_own_plan
+		icon = GFX_goal_Generic_Enough
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_follow_the_steps_of_ours }
+		relative_position_id = QTA_follow_the_steps_of_ours
+		mutually_exclusive = { focus = QTA_military_committe_come_in }
+		mutually_exclusive = { focus = QTA_recover_party_has_to_say }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#清点各地物资
+		id = QTA_check_our_goods
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_our_own_plan }
+		relative_position_id = QTA_our_own_plan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#协调各地生产
+		id = QTA_coordinate_local_production
+		icon = GFX_medium_industry
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_check_our_goods }
+		relative_position_id = QTA_check_our_goods
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#鼓吹个人崇拜
+		id = QTA_encourage_cult_of_personality
+		icon = GFX_Generic_Cult_of_Washington
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_our_own_plan
+						 focus = QTA_recover_party_has_to_say }
+		relative_position_id = QTA_our_own_plan
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#青天特务局
+		id = QTA_clear_sky_intelligence_bureau
+		icon = GFX_Generic_Espionage04
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_encourage_cult_of_personality }
+		relative_position_id = QTA_encourage_cult_of_personality
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#复兴党有话说...
+		id = QTA_recover_party_has_to_say
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 4
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_follow_the_steps_of_ours }
+		relative_position_id = QTA_follow_the_steps_of_ours
+		mutually_exclusive = { focus = QTA_military_committe_come_in }
+		mutually_exclusive = { focus = QTA_our_own_plan }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#计划配给系统
+		id = QTA_plan_ration_system
+		icon = GFX_Focus_Rationing
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_recover_party_has_to_say }
+		relative_position_id = QTA_recover_party_has_to_say
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#煽动暴力情绪
+		id = QTA_incitement_to_violence
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = { factor = 100 }
+
+		prerequisite = { focus = QTA_plan_ration_system }
+		relative_position_id = QTA_plan_ration_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+}

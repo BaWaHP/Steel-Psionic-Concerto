@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+
+		IMC_the_second_ursuline_expedition = {		#第二次厄利斯林东征
+			allowed = { tag = IMC }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.05
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+		IMC_corpo_and_tyrant = {		#寰企与僭主之暴政
+			allowed = { tag = IMC }
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.02
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				political_power_factor = 0.05
+				stability_factor = -0.05
+				drift_defence_factor = 0.1
+			}
+		}
+
+		IMC_island_game = {		#群岛博弈
+			allowed = { tag = IMC }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+			}
+		}
+
+	}
+}

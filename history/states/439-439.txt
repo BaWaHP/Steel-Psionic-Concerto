@@ -1,0 +1,35 @@
+
+state={
+	id=439
+	name="STATE_439"
+	provinces={
+		520 5302 20218 20219 20354 20385 20396 
+	}
+	resources = {
+		magic_crystal = 15
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 2
+			dockyard = 2
+			arms_factory = 1
+			industrial_complex = 1
+			20385 = { naval_base = 3 }
+		}
+		victory_points = {
+			520 15
+		}
+		victory_points = {
+			20396 5
+		}
+		victory_points = {
+			20354 1
+		}
+	}
+	manpower = 1200000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

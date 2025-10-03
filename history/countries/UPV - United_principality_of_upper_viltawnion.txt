@@ -1,0 +1,100 @@
+﻿capital = 374
+
+oob = "UPV"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 5
+	conservative_republican = 15
+	authoritarian_republican = 45
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 35
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+}
+
+#领导人#
+recruit_character = UPV_phyllis_loehmann
+recruit_character = UPV_john_jack
+recruit_character = UPV_roque_weidman
+recruit_character = UPV_mildred_fries
+recruit_character = UPV_will_phillip
+recruit_character = UPV_dorsett_ferryman
+recruit_character = UPV_elizabeth_supim_1
+recruit_character = UPV_elizabeth_supim_2
+recruit_character = UPV_porter_friesland
+recruit_character = UPV_herr_yanovsky
+recruit_character = UPV_unknown_1
+recruit_character = UPV_unknown_2
+recruit_character = UPV_unknown_3
+#将领#
+recruit_character = UPV_michael_schaffnicht
+recruit_character = UPV_sautrov_nislavsky
+recruit_character = UPV_grigory_kaczynski
+recruit_character = UPV_kalensky_dolyonov
+recruit_character = UPV_albert_froedersis
+recruit_character = UPV_friedman_dietrich
+recruit_character = UPV_karen_dorosky
+#内阁#
+recruit_character = UPV_herbis_nepokav
+recruit_character = UPV_urias_bartoszewicz
+recruit_character = UPV_pribor_kolupa
+recruit_character = UPV_jessica_siczynski
+recruit_character = UPV_dvor_vandel
+recruit_character = UPV_hawk_faulner
+recruit_character = UPV_gregor_gleckner
+recruit_character = UPV_brayan_zicic
+
+add_ideas = {
+	#民族精神#
+	UPV_corruption_everywhere
+	UPV_safe_harbor_for_conservatives
+	UPV_loose_military
+	UPV_treaty_with_tcw
+	UPV_deeply_rooted_aristocracy
+	#内阁#
+	UPV_herbis_nepokav_idea
+	UPV_urias_bartoszewicz_idea
+	UPV_pribor_kolupa_idea
+}

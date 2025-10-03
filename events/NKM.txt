@@ -1,0 +1,34 @@
+﻿add_namespace = NKM
+
+country_event = {	#一地鸡毛
+	id = NKM.1
+	title = NKM.1.t
+	desc = NKM.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NKM.1.a
+	}
+}
+
+###新闻###
+
+add_namespace = NKMNews
+
+news_event = {
+	id = NKMNews.1		#
+	title = NKMNews.1.t
+	desc = NKMNews.1.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NKMNews.1.a
+	}
+}
+

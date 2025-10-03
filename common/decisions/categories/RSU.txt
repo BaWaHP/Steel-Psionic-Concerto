@@ -1,0 +1,11 @@
+RSU_full_union_development_plan = {		#全联盟发展规划
+	#picture = 
+	scripted_gui = RSU_full_union_development_plan_ui
+	allowed = { tag = RSU }
+	visible = { 
+		has_completed_focus = RSU_alliance_conference
+		NOT = { has_country_flag = RSU_full_union_development_plan_ban }
+	}
+	visible_when_empty = yes
+	priority = 10
+}

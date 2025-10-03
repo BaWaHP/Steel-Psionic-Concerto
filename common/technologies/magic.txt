@@ -1,0 +1,1474 @@
+technologies = {
+
+	#近战武器附魔
+	melee_weapons_enchantment = {
+
+		melee_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.2
+			ap_attack = 0.2
+		}
+
+		dependencies = {
+			improved_melee_weapons = 1
+		}
+
+		path = {
+			leads_to_tech = stabalization_enchantment
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = pulse_enchantment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1900
+
+		folder = {
+			name = magic_folder
+			position = { x = 3 y = 4 }
+		}
+		
+		categories = {
+			infantry_weapons
+			melee_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#稳固型魔力回路
+	stabalization_enchantment = {
+
+		melee_infantry = {
+			defense = 0.05
+			max_strength = 0.1
+			reliability = 0.05
+		}
+
+		XOR = {
+			pulse_enchantment
+		}
+
+		path = {
+			leads_to_tech = melee_battle_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1998
+
+		folder = {
+			name = magic_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		categories = {
+			infantry_weapons
+			melee_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#冲击型魔力回路
+	pulse_enchantment = {
+
+		melee_infantry = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		XOR = {
+			stabalization_enchantment
+		}
+
+		path = {
+			leads_to_tech = melee_battle_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1998
+
+		folder = {
+			name = magic_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			infantry_weapons
+			melee_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#近战护盾
+	melee_battle_shield = {
+
+		melee_infantry = {
+			defense = 0.1
+			armor_value = 0.2
+			hardness = 0.5
+		}
+
+		path = {
+			leads_to_tech = weakness_location
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2000
+
+		folder = {
+			name = magic_folder
+			position = { x = 3 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+			melee_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#要害定位
+	weakness_location = {
+
+		melee_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+
+		research_cost = 1
+		start_year = 2002
+
+		folder = {
+			name = magic_folder
+			position = { x = 3 y = 10 }
+		}
+		
+		categories = {
+			infantry_weapons
+			melee_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#附魔型子弹
+	enchanted_bullets = {
+
+		infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		bicycle_battalion = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		cavalry = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}		
+		mountaineers = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		paratrooper = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		marine = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		motorized = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		mechanized = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			ap_attack = 0.2
+		}
+
+		dependencies = {
+			early_infantry_weapons = 1
+		}
+
+		path = {
+			leads_to_tech = ap_enchantment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = harming_enchantment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1900
+
+		folder = {
+			name = magic_folder
+			position = { x = 7 y = 4 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#破甲型魔力回路
+	ap_enchantment = {
+
+		infantry = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		bicycle_battalion = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		cavalry = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}		
+		mountaineers = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		paratrooper = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		marine = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		motorized = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		mechanized = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		amphibious_mechanized = {
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		XOR = {
+			harming_enchantment
+		}
+		
+		path = {
+			leads_to_tech = aiming_asistance
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1998
+
+		folder = {
+			name = magic_folder
+			position = { x = 6 y = 6 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#杀伤型魔力回路
+	harming_enchantment = {
+
+		infantry = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		bicycle_battalion = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		cavalry = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}		
+		mountaineers = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		paratrooper = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		marine = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		motorized = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		mechanized = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		XOR = {
+			ap_enchantment
+		}
+
+		path = {
+			leads_to_tech = aiming_asistance
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1998
+
+		folder = {
+			name = magic_folder
+			position = { x = 8 y = 6 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#辅助瞄准系统
+	aiming_asistance = {
+
+		land_night_attack = 0.05
+
+		infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		bicycle_battalion = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		cavalry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}		
+		mountaineers = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		paratrooper = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		marine = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		motorized = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		mechanized = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = explosive_enchantment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = recon_enchantment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2000
+
+		folder = {
+			name = magic_folder
+			position = { x = 7 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#爆破型魔力回路
+	explosive_enchantment = {
+
+		infantry = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		bicycle_battalion = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		cavalry = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}		
+		mountaineers = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		paratrooper = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		marine = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		motorized = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		mechanized = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.15
+			breakthrough = 0.1
+		}
+
+		XOR = {
+			recon_enchantment
+		}
+
+		path = {
+			leads_to_tech = automatic_enchantment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2002
+
+		folder = {
+			name = magic_folder
+			position = { x = 6 y = 10 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#侦查型魔力回路
+	recon_enchantment = {
+
+		infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		bicycle_battalion = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		cavalry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}		
+		mountaineers = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		paratrooper = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		marine = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		motorized = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		mechanized = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+		amphibious_mechanized = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+			recon = 2
+		}
+
+		XOR = {
+			explosive_enchantment
+		}
+
+		path = {
+			leads_to_tech = automatic_enchantment
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2002
+
+		folder = {
+			name = magic_folder
+			position = { x = 8 y = 10 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#自适应式魔力回路
+	automatic_enchantment = {
+
+		category_all_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.5
+		}
+
+		dependencies = {
+			weakness_location = 1
+		}
+
+		path = {
+			leads_to_tech = harm_first
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = break_first
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 2004
+
+		folder = {
+			name = magic_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#伤害优先
+	harm_first = {
+
+		category_all_infantry = {
+			soft_attack = 0.05
+		}
+
+		XOR = {
+			break_first
+		}
+
+		path = {
+			leads_to_tech = body_system_destroy
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = automatic_enchantment_reinforcement_I
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = magic_folder
+			position = { x = 4 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#机体结构破坏
+	body_system_destroy = {
+
+		category_all_infantry = {
+			soft_attack = 0.15
+			ap_attack = -0.05
+			ap_attack = -0.1
+		}
+
+		path = {
+			leads_to_tech = targeting_enchantment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = completely_collapse
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 2008
+
+		folder = {
+			name = magic_folder
+			position = { x = 3 y = 16 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#针对性回路
+	targeting_enchantment = {
+
+		category_all_infantry = {
+			soft_attack = 0.1
+			ap_attack = -0.05
+			ap_attack = -0.1
+		}
+
+		XOR  ={
+			completely_collapse
+		}
+
+		path = {
+			leads_to_tech = no_survivors
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = magic_folder
+			position = { x = 2 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#全面瓦解
+	completely_collapse = {
+
+		category_all_infantry = {
+			soft_attack = -0.05
+			ap_attack = 0.05
+			ap_attack = 0.1
+		}
+
+		XOR = {
+			targeting_enchantment
+		}
+
+		path = {
+			leads_to_tech = no_survivors
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = magic_folder
+			position = { x = 4 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#无人生还
+	no_survivors = {
+
+		category_all_infantry = {
+			soft_attack = 0.2
+			breakthrough = -0.1
+			defense = -0.05
+			max_strength = -0.05
+		}
+
+		research_cost = 1
+		start_year = 2012
+
+		folder = {
+			name = magic_folder
+			position = { x = 3 y = 20 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#学习能力强化I
+	automatic_enchantment_reinforcement_I = {
+
+		category_all_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		path = {
+			leads_to_tech = automatic_enchantment_reinforcement_II
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2008
+
+		folder = {
+			name = magic_folder
+			position = { x = 6 y = 16 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#学习能力强化II
+	automatic_enchantment_reinforcement_II = {
+
+		category_all_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = magic_folder
+			position = { x = 6 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#破甲优先
+	break_first = {
+
+		category_all_infantry = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
+
+		XOR = {
+			harm_first
+		}
+
+		path = {
+			leads_to_tech = enchantment_short_out
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = automatic_enchantment_reinforcement_I
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 2006
+
+		folder = {
+			name = magic_folder
+			position = { x = 8 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#短期回路屏障
+	enchantment_short_out = {
+
+		category_all_infantry = {
+			hard_attack = 0.15
+			ap_attack = 0.2
+			soft_attack = -0.05
+			breakthrough = -0.05
+		}
+
+		path = {
+			leads_to_tech = backfire_enchantment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = shortout_reinforcement
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 2008
+
+		folder = {
+			name = magic_folder
+			position = { x = 9 y = 16 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#反噬魔法
+	backfire_enchantment = {
+
+		category_all_infantry = {
+			hard_attack = -0.05
+			ap_attack = -0.1
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = enchantment_destroy
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			shortout_reinforcement
+		}
+		
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = magic_folder
+			position = { x = 8 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#短路效果强化
+	shortout_reinforcement = {
+
+		category_all_infantry = {
+			hard_attack = 0.1
+			ap_attack = 0.2
+			soft_attack = -0.05
+			breakthrough = -0.05
+		}
+
+		path = {
+			leads_to_tech = enchantment_destroy
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			backfire_enchantment
+		}
+		
+		research_cost = 1
+		start_year = 2010
+
+		folder = {
+			name = magic_folder
+			position = { x = 10 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#回路破坏
+	enchantment_destroy = {
+
+		category_all_infantry = {
+			hard_attack = 0.2
+			ap_attack = 0.4
+			breakthrough = -0.1
+			defense = -0.05
+			max_strength = -0.05
+		}
+		
+		research_cost = 1
+		start_year = 2012
+
+		folder = {
+			name = magic_folder
+			position = { x = 9 y = 20 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_equipments
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#轻型魔力护盾
+	light_magic_shield = {
+
+		category_all_infantry = {
+			defense = 0.05
+			armor_value = 0.1
+		}
+
+		path = {
+			leads_to_tech = light_magic_shield_enchantment
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = heavy_magic_shield_enchantment
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			modernized_infantry_uniforms = 1
+		}
+
+		research_cost = 1
+		start_year = 1998
+		folder = {
+			name = magic_folder
+			position = { x = 14 y = 6 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#轻量型魔法回路
+	light_magic_shield_enchantment = {
+
+		category_all_infantry = {
+			armor_value = 0.05
+			breakthrough = 0.1
+		}
+
+		path = {
+			leads_to_tech = portable_magic_vessel
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			heavy_magic_shield_enchantment
+		}
+
+		research_cost = 1
+		start_year = 2000
+		folder = {
+			name = magic_folder
+			position = { x = 13 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#重装型魔法回路
+	heavy_magic_shield_enchantment = {
+
+		category_all_infantry = {
+			armor_value = 0.1
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = portable_magic_vessel
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			light_magic_shield_enchantment
+		}
+
+		research_cost = 1
+		start_year = 2000
+		folder = {
+			name = magic_folder
+			position = { x = 15 y = 8 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#便携式魔力容器
+	portable_magic_vessel = {
+
+		category_all_infantry = {
+			armor_value = 0.05
+			breakthrough = 0.05
+			defense = 0.05
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = magic_refinement_improvement
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2002
+		folder = {
+			name = magic_folder
+			position = { x = 14 y = 10 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#魔力精炼技术改良
+	magic_refinement_improvement = {
+
+		category_all_infantry = {
+			hardness = 0.1
+			breakthrough = 0.05
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = magic_refinement_improvement_plus
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = quality_first
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2004
+		folder = {
+			name = magic_folder
+			position = { x = 14 y = 12 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#量大管饱
+	magic_refinement_improvement_plus = {
+
+		category_all_infantry = {
+			breakthrough = 0.05
+			defense = 0.05
+		}
+
+		XOR = {
+			quality_first
+		}
+
+		path = {
+			leads_to_tech = compound_magic_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+		folder = {
+			name = magic_folder
+			position = { x = 13 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#质量优先
+	quality_first = {
+
+		category_all_infantry = {
+			armor_value = 0.1
+		}
+
+		XOR = {
+			magic_refinement_improvement_plus
+		}
+
+		path = {
+			leads_to_tech = compound_magic_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2006
+		folder = {
+			name = magic_folder
+			position = { x = 15 y = 14 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#复合型魔法护盾
+	compound_magic_shield = {
+
+		category_all_infantry = {
+			hardness = 0.2
+			armor_value = 0.2
+		}
+
+		path = {
+			leads_to_tech = defensive_reinforcement_again
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = backfire_enchantment_on_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2008
+		folder = {
+			name = magic_folder
+			position = { x = 14 y = 16 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#防御能力再强化
+	defensive_reinforcement_again = {
+
+		category_all_infantry = {
+			defense = 0.1
+		}
+
+		XOR = {
+			backfire_enchantment_on_shield
+		}
+
+		path = {
+			leads_to_tech = advanced_magic_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+		folder = {
+			name = magic_folder
+			position = { x = 13 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#棘刺魔法
+	backfire_enchantment_on_shield = {
+
+		category_all_infantry = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		XOR = {
+			defensive_reinforcement_again
+		}
+
+		path = {
+			leads_to_tech = advanced_magic_shield
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 2010
+		folder = {
+			name = magic_folder
+			position = { x = 15 y = 18 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#高级魔法护盾
+	advanced_magic_shield = {
+
+		category_all_infantry = {
+			armor_value = 0.2
+			hardness = 0.2
+		}
+
+		research_cost = 1
+		start_year = 2012
+		folder = {
+			name = magic_folder
+			position = { x = 14 y = 20 }
+		}
+		
+		categories = {
+			infantry_weapons
+			infantry_uniforms
+			enchantment_magic
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

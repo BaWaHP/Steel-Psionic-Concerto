@@ -1,0 +1,12 @@
+leader_traits = {
+
+	RSU_determined_patriot = {		#决绝的爱国者
+		random = no
+		
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		
+		ai_will_do = { factor = 1 }
+	}
+
+}

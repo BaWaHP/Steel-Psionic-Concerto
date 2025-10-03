@@ -1,0 +1,30 @@
+
+state={
+	id=69
+	name="STATE_69"
+
+	history={
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			arms_factory = 3
+			air_base = 8
+		}
+		victory_points = {
+			8519 40
+		}
+		victory_points = {
+			17576 10
+		}
+	}
+
+	provinces={
+		3898 4594 6295 6972 8519 9422 17002 17105 17252 17267 17334 17335 17432 17509 17576 
+	}
+	manpower = 5836427
+	buildings_max_level_factor = 1.000
+	state_category = megalopolis
+	local_supplies = 1.000
+}

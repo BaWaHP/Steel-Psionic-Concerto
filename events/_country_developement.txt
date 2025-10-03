@@ -1,0 +1,185 @@
+﻿###########################
+# CD Events #
+###########################
+
+add_namespace = CD
+
+#工业
+
+country_event = {
+	id = CD.1
+	title = CD.1.t
+	desc = CD.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.1.a
+		SPC_country_development_ideas_change_industry_up = yes
+	}
+}
+
+country_event = {
+	id = CD.2
+	title = CD.2.t
+	desc = CD.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.2.a
+		SPC_country_development_ideas_change_industry_down = yes
+	}
+}
+
+#农业
+
+country_event = {
+	id = CD.3
+	title = CD.3.t
+	desc = CD.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.3.a
+		SPC_country_development_ideas_change_agriculture_up = yes
+	}
+}
+
+country_event = {
+	id = CD.4
+	title = CD.4.t
+	desc = CD.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.4.a
+		SPC_country_development_ideas_change_agriculture_down = yes
+	}
+}
+
+#军事
+
+country_event = {
+	id = CD.5
+	title = CD.5.t
+	desc = CD.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.5.a
+		SPC_country_development_ideas_change_military_up = yes
+	}
+}
+
+country_event = {
+	id = CD.6
+	title = CD.6.t
+	desc = CD.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.6.a
+		SPC_country_development_ideas_change_military_down = yes
+	}
+}
+
+#温饱
+
+country_event = {
+	id = CD.7
+	title = CD.7.t
+	desc = CD.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.7.a
+		SPC_country_development_ideas_change_living_up = yes
+	}
+}
+
+country_event = {
+	id = CD.8
+	title = CD.8.t
+	desc = CD.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.8.a
+		SPC_country_development_ideas_change_living_down = yes
+	}
+}
+
+#污染
+
+country_event = {
+	id = CD.9
+	title = CD.9.t
+	desc = CD.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.9.a
+		SPC_country_development_ideas_change_environment_up = yes
+	}
+}
+
+country_event = {
+	id = CD.10
+	title = CD.10.t
+	desc = CD.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.10.a
+		SPC_country_development_ideas_change_environment_down = yes
+	}
+}
+
+#科研
+
+country_event = {
+	id = CD.11
+	title = CD.11.t
+	desc = CD.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.11.a
+		SPC_country_development_ideas_change_research_up = yes
+	}
+}
+
+country_event = {
+	id = CD.12
+	title = CD.12.t
+	desc = CD.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CD.12.a
+		SPC_country_development_ideas_change_research_down = yes
+	}
+}

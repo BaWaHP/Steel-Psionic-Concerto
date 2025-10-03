@@ -1,0 +1,32 @@
+
+state={
+	id=391
+	name="STATE_391"
+	resources = {
+		rubber = 32
+		chromium = 4
+	}
+	provinces={
+		1683 4888 8483 8664 8823 9638 19660 19702 19785 19798 19861 19911 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			4888 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			4888 5
+		}
+		victory_points = {
+			8664 2
+		}
+	}
+	manpower=423200
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

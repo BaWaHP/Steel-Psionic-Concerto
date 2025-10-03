@@ -1,0 +1,31 @@
+
+state={
+	id=272
+	name="STATE_272"
+	provinces={
+		356 4981 10226 10311 11082 11194 11748 15378 15388 15531 15581 15625 15701 
+	}
+	resources = {
+		steel = 12
+		magic_crystal = 12
+	}
+	history={
+		owner = TCL
+		add_core_of = TCL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			15531 8
+		}
+		victory_points = {
+			11082 5
+		}
+	}
+	manpower = 1260000 
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=126
+	name="STATE_126"
+	resources={
+		aluminium = 12
+		steel = 8
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = BOT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 3
+		}
+		victory_points = {
+			14908 5
+		}
+		victory_points = {
+			11987 3
+		}
+	}
+
+	provinces={
+		1466 4163 4356 5152 7427 7892 8239 9603 11987 14536 14669 14734 14908 
+	}
+	manpower=1890000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

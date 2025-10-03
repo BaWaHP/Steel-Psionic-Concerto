@@ -1,0 +1,28 @@
+
+state={
+	id=448
+	name="STATE_448"
+	provinces={
+		2420 8207 9248 9751 10316 11497 19266 19337 19420 
+	}
+	resources = {
+		magic_crystal = 36
+		steel = 6
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			19337 10
+		}
+	}
+	manpower = 1200000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

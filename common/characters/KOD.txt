@@ -1,0 +1,23 @@
+characters={
+
+	KOD_empty_leader = {		#空悬的团长之位
+   		name = KOD_empty_leader
+   		portraits = {
+			civilian = {
+				large="GFX_KOD_empty_leader"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_KOD_empty_leader"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = KOD_empty_leader_desc
+   			ideology = military_dictatorship
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

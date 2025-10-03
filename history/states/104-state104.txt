@@ -1,0 +1,30 @@
+
+state={
+	id=104
+	name="STATE_104"
+	resources = {
+		chromium = 48
+	}
+	provinces={
+		364 1135 1353 2726 4439 4593 4861 7183 7607 10409 11273 14589 14708 14764 14842 14940 14978 14989 15051 
+	}
+	history = {
+		owner = RMN
+		add_core_of = RMN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			364 8
+		}
+		victory_points = {
+			11273 3
+		}
+	}
+	manpower = 608749
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

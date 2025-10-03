@@ -1,0 +1,210 @@
+ideas = {
+
+	country = {		#民族精神
+
+        CBL_railway_curse = {		#大铁路的诅咒
+			picture = generic_railroads
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.15
+				production_speed_infrastructure_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = RSB
+				trade_cost_for_target_factor = -0.35
+			}
+			targeted_modifier = {
+				tag = RSU
+				trade_cost_for_target_factor = -0.35
+			}
+		}
+
+        CBL_generation_controversy = {		#新旧之争
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.25
+				war_support_factor = -0.1
+			}
+		}
+
+        CBL_army_controversy = {		#军队之争
+			picture = officers_purged
+			removal_cost = -1
+			modifier = {
+				planning_speed = -0.1
+				military_leader_cost_factor = 0.5
+				mobilization_speed = -0.2
+				army_org_regain = -0.2
+				command_power_gain_mult = -0.5
+				war_support_factor = -0.2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+        CBL_ghost_of_knights = {		#骑士团幽魂
+			picture = FIN_lone_wolf
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				religious_extremism_drift = 0.02
+			}
+		}
+
+        CBL_clear_nomands = {		#坚壁清野
+			picture = SPR_international_brigades
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.2
+				global_building_slots_factor = -0.1
+				conscription_factor = -0.2
+			}
+		}
+
+        CBL_treature_bowl_of_rsb = {		#南巴的“聚宝盆”
+			picture = SPR_relocate_the_gold_reserves
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.25
+				stability_factor = -0.15
+				pioneer_communism_drift = 0.02
+				revolutionary_communism_drift = 0.02
+			}
+			targeted_modifier = {
+				tag = RSB
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = RSU
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = ROK
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = TCW
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = UPV
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = AST
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GDD
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = LNR
+				cic_to_target_factor = 0.05
+			}
+		}
+
+        CBL_political_chaos = {		#政治乱局
+			picture = chi_war_of_resistance3
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				liberal_republican_drift = 0.02
+				authoritarian_republican_drift = 0.02
+				worldunion_democrat_drift = 0.02
+			}
+		}
+		
+	}
+
+	industrial_concern = {
+		CBL_rsu_national_construction_corp = {		#鲁萨尔国有企业建筑集团
+			picture = generic_build_infrastructure
+			allowed = { original_tag = CBL }
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_rail_way_factor = 0.05
+			}
+			
+			research_bonus = {
+				construction_tech = 0.1
+			}
+			
+			traits = { construction_company }
+		}
+
+		CBL_fertile_agriculture_group = {		#肥沃农业集团
+			picture = generic_industrial_concern_3
+			allowed = { original_tag = CBL }
+
+			modifier = {
+				global_building_slots_factor = 0.1
+				monthly_industrial_development_process = 1
+				monthly_agricultural_development_process = 1
+				production_speed_industrial_complex_factor = 0.05
+			}
+			
+			traits = { capital_group }
+		}
+
+		CBL_federal_mine_corp = {		#联邦矿业
+			picture = generic_electronics_concern_3
+			allowed = { original_tag = CBL }
+
+			modifier = {
+				monthly_industrial_development_process = 1
+				min_export = 0.1
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+
+			research_bonus = {
+				construction_tech = 0.1
+			}
+			
+			traits = { refinery_concern }
+		}
+
+		CBL_boz_industries_group = {		#波兹工业集团
+			picture = generic_industrial_concern_1
+			allowed = { original_tag = CBL }
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+			}
+
+			research_bonus = {
+				industry = 0.2
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		CBL_vic_city_construction_corp = {		#胜利城建筑集团
+			picture = generic_industrial_concern_2
+			allowed = { original_tag = CBL }
+
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				conversion_cost_civ_to_mil_factor = 0.1
+				industry_air_damage_factor = -0.1
+				repair_speed_factor = 0.05
+				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+			}
+			
+			traits = { construction_company }
+		}
+
+	}
+
+}

@@ -1,0 +1,277 @@
+﻿division_template = {
+	name = "于摩王家禁卫"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		centaur = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "于摩王家步兵"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		centaur = { x = 0 y = 3 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "于摩王家猎兵"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "于摩义兵"
+
+	regiments = {
+		centaur_militia = { x = 0 y = 0 }
+		centaur_militia = { x = 0 y = 1 }
+		centaur_militia = { x = 1 y = 0 }
+		centaur_militia = { x = 1 y = 1 }
+		centaur_militia = { x = 2 y = 0 }
+		centaur_militia = { x = 2 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "于摩王家禁卫-前锋"
+		location = 15118 
+		division_template = "于摩王家禁卫"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "于摩王家禁卫-边锋"
+		location = 14999 
+		division_template = "于摩王家禁卫"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "于摩王家禁卫-中卫"
+		location = 15866 
+		division_template = "于摩王家禁卫"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "于摩王家禁卫-后卫"
+		location = 16064 
+		division_template = "于摩王家禁卫"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "于摩王家步兵第一师"
+		location = 6373 
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家步兵第二师"
+		location = 8245 
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家步兵第三师"
+		location = 3679 
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家步兵第四师"
+		location = 1867 
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家步兵第五师"
+		location = 15230 
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家步兵第六师"
+		location = 8903
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家猎兵右队"
+		location = 15230
+		division_template = "于摩王家猎兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "于摩王家猎兵左队"
+		location = 15118
+		division_template = "于摩王家猎兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "于摩义兵一队"
+		location = 11307
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵二队"
+		location = 4816
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵三队"
+		location = 11750
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵四队"
+		location = 14557
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵五队"
+		location = 5966
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵六队"
+		location = 14813
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵七队"
+		location = 11451
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵八队"
+		location = 16083
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵九队"
+		location = 16051
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵十队"
+		location = 16111
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵十一队"
+		location = 5291
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵十二队"
+		location = 16169
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵十三队"
+		location = 8837
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩义兵十四队"
+		location = 15778
+		division_template = "于摩义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "于摩王家猎兵先遣队"
+		location = 9041
+		division_template = "于摩王家猎兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "于摩王家猎兵侦察队"
+		location = 8434
+		division_template = "于摩王家猎兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "于摩王家步兵-乌骓兵团"
+		location = 359
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "于摩王家步兵-乌骓兵团"
+		location = 11342
+		division_template = "于摩王家步兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}

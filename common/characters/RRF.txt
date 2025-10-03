@@ -1,0 +1,22 @@
+characters={
+
+	RRF_edilvan_hegobogen = {		#爱迪尔梵·黑戈博根
+   		name = RRF_edilvan_hegobogen
+   		portraits = {
+			civilian = {
+				large="GFX_RSU_edilvan_hegobogen"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_RSU_edilvan_hegobogen"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = revolutionary_communism_subtype
+   			traits = { RRF_the_incorruptible }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

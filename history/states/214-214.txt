@@ -1,0 +1,32 @@
+
+state={
+	id=214
+	name="STATE_214"
+
+	resources = {
+		magic_crystal = 54
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			10441 3
+		}
+		victory_points = {
+			9068 1
+		}
+	}
+
+	provinces={
+		578 3455 4591 5359 5669 5772 7160 8129 9040 9068 9972 10441 11581 11747 16930 17102 17103 17117 17161 17210 17235 17387 17403 17404 
+	}
+	manpower=32100
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

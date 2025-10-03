@@ -1,0 +1,28 @@
+
+state={
+	id=451
+	name="STATE_451"
+	provinces={
+		3745 4572 6053 6309 8272 10140 19329 19452 19466 19503 19617 
+	}
+	resources = {
+		magic_crystal = 12
+		chromium = 4
+		steel = 30
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			3745 1
+		}
+	}
+	manpower = 21300
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

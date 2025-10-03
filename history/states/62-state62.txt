@@ -1,0 +1,30 @@
+
+state={
+	id=62
+	name="STATE_62"
+
+	history={
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 8
+		}
+		victory_points = {
+			17236 30
+		}
+		victory_points = {
+			9957 15
+		}
+	}
+
+	provinces={
+		5782 6421 7371 9212 9957 16992 17094 17226 17236 17253 17304 17390 17433 17461 17495 17537 
+	}
+	manpower = 4821001
+	buildings_max_level_factor=1.000
+	state_category = metropolis
+	local_supplies = 0.000
+}

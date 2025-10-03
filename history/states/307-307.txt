@@ -1,0 +1,42 @@
+
+state={
+	id=307
+	name="STATE_307"
+
+	resources = {
+		oil = 14
+		steel = 12
+	}
+
+	history={
+		owner = KOA
+		add_core_of = KOA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 3
+			9557 = {
+				naval_base = 6
+				naval_facility = 1
+			}
+			6676 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			9557 15
+		}
+		victory_points = {
+			6676 2
+		}
+	}
+
+	provinces={
+		2409 6676 9557 20874 20891 20914 20932 20941 20957 20981 21046 
+	}
+	manpower = 2870000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=1.000
+}

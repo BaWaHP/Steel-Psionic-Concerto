@@ -1,0 +1,174 @@
+﻿capital = 421
+
+oob = "ROT"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = conservative_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 1
+	worldunion_democrat = 1
+	liberal_republican = 32
+	conservative_republican = 41
+	authoritarian_republican = 15
+	national_socialist = 5
+	authoritarian_nationalism = 2
+	paternal_autocrat = 3
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	caster_recon_weapons_1 = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+add_ideas = {
+	ROT_lifeline_of_the_republic
+	ROT_military_advisors_from_rsb
+	ROT_republic_of_discord
+	ROT_gold_chains_of_the_federation
+}
+
+add_timed_idea = {
+	idea = ROT_norlandia_civic_games
+	days = 15
+}
+
+recruit_character = ROT_unkown
+recruit_character = ROT_coraci_afton
+recruit_character = ROT_basta_ivan_ankorin
+recruit_character = ROT_pauval_taronno
+recruit_character = ROT_javier_blanch
+
+recruit_character = ROT_giancarlo_fernandez
+recruit_character = ROT_ruwani_marino
+recruit_character = ROT_alberto_de_jimenez
+recruit_character = ROT_henry_pelos
+recruit_character = ROT_dimoy_raine
+recruit_character = ROT_morhardt_marrino
+recruit_character = ROT_gustizia_muller
+recruit_character = ROT_miguel_dubois
+recruit_character = ROT_javier_blanch
+recruit_character = ROT_enrique_rhodes
+recruit_character = ROT_rogdika_katim
+recruit_character = ROT_maillard_belloc
+recruit_character = ROT_bilash_tricker
+recruit_character = ROT_decius_glaion
+recruit_character = ROT_theocratic_council
+
+recruit_character = ROT_magnimo_iromoz
+recruit_character = ROT_kolot_rudile
+recruit_character = ROT_fidela_grino
+recruit_character = ROT_enota_monk
+recruit_character = ROT_sanzer_wolgner
+recruit_character = ROT_grieco_moro
+recruit_character = ROT_edward_williams
+recruit_character = ROT_nadio_nchate
+recruit_character = ROT_davide_enchart
+
+recruit_character = ROT_lugo_igor_zoltan
+
+recruit_character = ROT_davo_kane
+
+recruit_character = ROT_bavin_andrew
+recruit_character = ROT_braylo_kane
+recruit_character = ROT_ed_korenbo
+
+recruit_character = ROT_gary_kane
+recruit_character = ROT_kane_boynu
+
+recruit_character = ROT_ilodi_sleim
+recruit_character = ROT_dawu_poke
+recruit_character = ROT_alonik_shamless
+recruit_character = ROT_anton_rich
+recruit_character = ROT_granny_pank
+recruit_character = ROT_lucius_stran
+recruit_character = ROT_basta_ankorin
+recruit_character = ROT_muller_shawen
+recruit_character = ROT_kai_shawen

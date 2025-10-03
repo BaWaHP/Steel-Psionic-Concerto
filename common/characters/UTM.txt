@@ -1,0 +1,23 @@
+characters={
+
+	UTM_ultimo_phantom = {		#“银痕”奥提摩·幽光
+   		name = UTM_ultimo_phantom
+   		portraits = {
+   			civilian = {
+   				large="GFX_UTM_ultimo_phantom"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_UTM_ultimo_phantom"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = UTM_ultimo_phantom_desc
+   			ideology = military_dictatorship
+   			traits = { UTM_ghost_of_the_empire }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

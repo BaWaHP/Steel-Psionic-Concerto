@@ -1,0 +1,29 @@
+﻿###templates###
+division_template = {
+	name = "首都防卫旅"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+
+	is_locked = no
+
+	priority = 0
+}
+
+###units###
+
+units = {
+	division = {
+		name = "左汀原卫队第一城卫旅"
+		location = 20398
+		division_template = "首都防卫旅"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+}

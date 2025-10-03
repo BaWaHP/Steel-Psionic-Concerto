@@ -1,0 +1,79 @@
+﻿###templates###
+division_template = {
+	name = "联邦国防军步兵部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方自治模范师"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		centaur = { x = 0 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方保卫厅部队"
+
+	regiments = {
+		centaur_militia = { x = 0 y = 0 }
+		centaur_militia = { x = 0 y = 1 }
+		centaur_militia = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "联邦国防军南方师第一步兵旅"
+		location = 7878
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方自治模范师第一步兵旅"
+		location = 7622
+		division_template = "地方自治模范师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方保卫厅部队第0101支队"
+		location = 10924
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "地方保卫厅部队第0102支队"
+		location = 16428
+		division_template = "地方保卫厅部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.3
+	}
+}

@@ -1,0 +1,23 @@
+characters={
+
+	#卡斯帕·布劳恩
+	CLA_kaspar_braun = {
+		name = CLA_kaspar_braun
+		portraits = {
+			civilian = {
+				large="GFX_CLA_kaspar_braun"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_CLA_kaspar_braun"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = revolutionary_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

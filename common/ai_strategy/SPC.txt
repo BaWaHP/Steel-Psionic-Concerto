@@ -1,0 +1,12 @@
+SPC_stop_messing_with_empty_countries = {
+	allowed = { always = yes }
+	enable = { NOT = { tag = SPC } }
+	abort = { always = no }
+
+	ai_strategy = {
+        type = ignore
+		id = SPC
+        value = 99999
+    }
+}
+

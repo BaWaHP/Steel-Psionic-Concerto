@@ -1,0 +1,31 @@
+
+state={
+	id=399
+	name="STATE_399"
+	resources = {
+		oil = 32
+		rubber = 72
+	}
+	provinces={
+		2899 4685 4948 6823 9297 10176 11454 11775 12098 19972 20010 20046 20083 20093 20145 20204 20222 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			dockyard = 1
+			20222 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			20222 15
+		}
+	}
+	manpower=2100000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

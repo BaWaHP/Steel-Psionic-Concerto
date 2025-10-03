@@ -1,0 +1,184 @@
+﻿l_simp_chinese:
+
+###buff自定义###
+state_magic_development_monthly:0 "全国省份魔法普及度每月增长"
+local_magic_development_monthly:0 "省份魔法普及度每月增长"
+state_science_development_monthly:0 "全国省份科学普及度每月增长"
+local_science_development_monthly:0 "省份科学普及度每月增长"
+
+###省份###
+state_development_panel_button_text:0 "省份发展度"
+
+magic_progress_text:0 "[?state_magic_progress|1]%"
+magic_progress_tt:0 "当前的§Y魔法普及度增长进度§!为[?state_magic_progress|Y1]%\n\n当前我们的§Y魔法普及度每月增长§!为[?state_magic_monthly_basic|Y1]%\n\n我们现在的§Y魔法普及度水平§!为[GetLocalMagicLevel]"
+
+science_progress_text:0 "[?state_science_progress|1]%"
+science_progres_tt:0 "当前的§Y科学普及度增长进度§!为[?state_science_progress|Y1]%\n\n当前我们的§Y科学普及度每月增长§!为[?state_science_monthly_basic|Y1]%\n\n我们现在的§Y科学普及度水平§!为[GetLocalScienceLevel]"
+
+###省份页面###
+
+state_development_panel_title:0 "地区科学/魔法普及度观测系统"
+
+state_development_panel_magic_title:0 "当地魔法普及度"
+magic_title_tt:0 "魔法普及度是该地区居民对魔法的认知程度和使用规模的抽象化表现。虽然不使用魔法实际上不会严格动摇我国社会的根基，帮助人民认知魔法甚至是学习魔法会对我们的国家大有裨益，总体上也可以加快我国魔法研究事业的进度。"
+state_development_panel_magic_level:0 "[GetLocalMagicLevel]"
+
+GetLocalMagicLevel_0:0 "§R仅限于都市传说§!"
+GetLocalMagicLevel_1:0 "§R少数魔法结社§!"
+GetLocalMagicLevel_2:0 "§O民间魔法师团体涌现§!"
+GetLocalMagicLevel_3:0 "§O政府部门义务宣传§!"
+GetLocalMagicLevel_4:0 "§Y大众化魔法教育§!"
+GetLocalMagicLevel_5:0 "§Y进阶魔法普遍化§!"
+GetLocalMagicLevel_6:0 "§C社会化魔力网络§!"
+GetLocalMagicLevel_7:0 "§C发达的现代化魔法§!"
+
+state_magic_level_modifier_0:0 "魔法普及度：§R仅限于都市传说§!"
+state_magic_level_modifier_1:0 "魔法普及度：§R少数魔法结社§!"
+state_magic_level_modifier_2:0 "魔法普及度：§O民间魔法师团体涌现§!"
+state_magic_level_modifier_3:0 "魔法普及度：§O政府部门义务宣传§!"
+state_magic_level_modifier_4:0 "魔法普及度：§Y大众化魔法教育§!"
+state_magic_level_modifier_5:0 "魔法普及度：§Y进阶魔法普遍化§!"
+state_magic_level_modifier_6:0 "魔法普及度：§C社会化魔力网络§!"
+state_magic_level_modifier_7:0 "魔法普及度：§C发达的现代化魔法§!"
+
+mag_progress_bar_tt:0 "当前的§Y魔法普及度增长进度§!为[?state_magic_progress|Y1]%\n\n当前我们的§Y魔法普及度每月增长§!为[?state_magic_monthly_basic|Y1]%\n\n我们现在的§Y魔法普及度水平§!为[GetLocalMagicLevel]"
+
+mag_level_desc:0 "[GetMagLevelDesc]\n\n该地区居民对魔法的接受度和使用程度的抽象化表现，魔法普及度能为当地的军事调动保驾护航。"
+GetLocalMagicDesc_0:0 "仅限于都市传说"
+GetLocalMagicDesc_1:0 "少数魔法结社"
+GetLocalMagicDesc_2:0 "民间魔法师团体涌现"
+GetLocalMagicDesc_3:0 "政府部门义务宣传"
+GetLocalMagicDesc_4:0 "大众化魔法教育"
+GetLocalMagicDesc_5:0 "进阶魔法普遍化"
+GetLocalMagicDesc_6:0 "社会化魔力网络"
+GetLocalMagicDesc_7:0 "发达的现代化魔法"
+
+state_development_panel_science_title:0 "当地科学普及度"
+science_title_tt:0 "科学普及度是该地区对科技的认知程度和使用规模的抽象化表现。作为一个现代化（或者是即将步入现代化）的国家，无法让人民意识到科技的好处会在使得我国在多个方面无法施展拳脚。"
+state_development_panel_science_level:0 "[GetLocalScienceLevel]"
+
+GetLocalScienceLevel_0:0 "§R原始社会§!"
+GetLocalScienceLevel_1:0 "§R制度化迷信§!"
+GetLocalScienceLevel_2:0 "§O科技产品遭普遍抵制§!"
+GetLocalScienceLevel_3:0 "§O民间学者团体涌现§!"
+GetLocalScienceLevel_4:0 "§Y制度化基础教育§!"
+GetLocalScienceLevel_5:0 "§Y赞助义务教育§!"
+GetLocalScienceLevel_6:0 "§C高等教育普遍化§!"
+GetLocalScienceLevel_7:0 "§C成熟的现代社会§!"
+
+state_science_level_modifier_0:0 "科学普及度：§R原始社会§!"
+state_science_level_modifier_1:0 "科学普及度：§R制度化迷信§!"
+state_science_level_modifier_2:0 "科学普及度：§O科技产品遭普遍抵制§!"
+state_science_level_modifier_3:0 "科学普及度：§O民间学者团体涌现§!"
+state_science_level_modifier_4:0 "科学普及度：§Y制度化基础教育§!"
+state_science_level_modifier_5:0 "科学普及度：§Y赞助义务教育§!"
+state_science_level_modifier_6:0 "科学普及度：§C高等教育普遍化§!"
+state_science_level_modifier_7:0 "科学普及度：§C成熟的现代社会§!"
+
+sci_progress_bar_tt:0 "当前的§Y科学普及度增长进度§!为[?state_science_progress|Y1]%\n\n当前我们的§Y科学普及度每月增长§!为[?state_science_monthly_basic|Y1]%\n\n我们现在的§Y科学普及度水平§!为[GetLocalScienceLevel]"
+
+sci_level_desc:0 "[GetSciLevelDesc]\n\n该地区居民对科学的接受度和使用程度的抽象化表现，科学普及度能为当地的工业发展添砖加瓦。"
+GetLocalScienceDesc_0:0 "原始社会"
+GetLocalScienceDesc_1:0 "制度化迷信"
+GetLocalScienceDesc_2:0 "科技产品遭普遍抵制"
+GetLocalScienceDesc_3:0 "民间学者团体涌现"
+GetLocalScienceDesc_4:0 "制度化基础教育"
+GetLocalScienceDesc_5:0 "赞助义务教育"
+GetLocalScienceDesc_6:0 "高等教育普遍化"
+GetLocalScienceDesc_7:0 "成熟的现代社会"
+
+state_development_panel_special_operation_title:0 "特殊行动"
+special_op_title_tt:0 "指望人民的观念随着时间改变并非不可能，可时间尚且是我们所不可承受的奢侈品。我们可以专门采取一些措施以加快魔法或者科学普及度的发展。"
+
+state_development_panel_special_operation_mag_title:0 "§O魔法侧§!"
+state_magic_dev_tt:0 "省份魔法普及度：$RIGHT|+=$"
+
+special_op_mag_1_text:0 "围剿秘密结社"
+special_op_mag_2_text:0 "扩大魔法使用规模"
+special_op_mag_3_text:0 "侧重魔法普及教育"
+special_op_mag_4_text:0 "向地方让步"
+special_op_mag_1_tt:0 "§Y围剿秘密结社§!\n\n将花费30点政治点数\n§Y魔法普及度§!将§C增加§!§Y5%§!\n\n§R在修正结束前无法再次使用§!"
+special_op_mag_2_tt:0 "§Y扩大魔法使用规模§!\n\n将花费30点政治点数\n§Y魔法普及度§!将§C增加§!§Y5%§!\n\n§R在修正结束前无法再次使用§!"
+special_op_mag_3_tt:0 "§Y侧重魔法普及教育§!\n\n将花费100点政治点数\n§Y魔法普及度§!将§C增加§!§Y10%§!\n§Y科学普及度§!将§R减少§!§Y5%§!"
+special_op_mag_4_tt:0 "§Y向地方让步§!\n\n§Y魔法普及度§!将§R减少§!§Y5%§!\n我们会获得§Y20点政治点数§!"
+
+state_development_special_op_modifier_1:0 "围剿秘密结社"
+state_development_special_op_modifier_2:0 "扩大魔法使用规模"
+
+state_development_panel_special_operation_sci_title:0 "§C科学侧§!"
+state_science_dev_tt:0 "省份科学普及度：$RIGHT|+=$"
+
+special_op_sci_1_text:0 "引入外地学者"
+special_op_sci_2_text:0 "发展地方工业"
+special_op_sci_3_text:0 "侧重科学普及教育"
+special_op_sci_4_text:0 "向地方让步"
+special_op_sci_1_tt:0 "§Y引入外地学者§!\n\n将花费100点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!"
+special_op_sci_2_tt:0 "§Y发展地方工业§!\n\n将花费200点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!\n将在当地获得一座民用工厂"
+special_op_sci_3_tt:0 "§Y侧重科学普及教育§!\n\n将花费100点政治点数\n§Y科学普及度§!将§C增加§!§Y10%§!\n§Y魔法普及度§!将§R减少§!§Y5%§!"
+special_op_sci_4_tt:0 "§Y向地方让步§!\n\n§Y科学普及度§!将§R减少§!§Y5%§!\n我们会获得§Y20点政治点数§!"
+
+state_development_special_op_modifier_3:0 "引入外地学者"
+state_development_special_op_modifier_4:0 "发展地方工业"
+
+state_development_introduction_tt:0 "使用须知：\n\n本产品是一款高精度、高效率的仪器，被广泛应用于民政领域。本操作说明书旨在帮助用户正确操作本产品，确保其正常运行，提高行政工作效率。使用产品前，请仔细阅读本使用说明书，并在阅读之后妥善保管，以便随时查阅。本产品仅限一般场所使用，操作人员应按照操作规程进行操作，遵守相关安全操作规定，确保自身和他人的安全。本产品图片和实物略有不同时，请以实物为准。本产品版权为【七河生命】所有。\n\n操作准备：\n\n本产品接通电源后，打开电源开关，等待自检完成，然后根据需求选择合适的测量模式，设置相关参数并进行校准，数据范围越精准，模拟结果准确率越高。\n\n系统将根据当前提供的数据推算当前地区普及度水平进行量化直观表现，并将当前等级初始数值设置为0。在达到当前等级满值即可进入下一等级，普及度每月结算一次。通常以下情况将会影响当地普及度发展——\n\n自然增长：\n较高水平普及度的地区将影响周边较低水平地区的普及度，较低水平普及度的地区无法提高周边较高水平地区的普及度。\n\n特殊行动：\n针对当地开展特殊行动以提高该地区的魔法/科学普及度。\n\n保修服务：\n详情请咨询当地销售及维修点以获取准确信息。"
+
+state_development_panel_unfinished:0 "暂未完工"
+
+###国家###
+country_development_panel_button_text:0 "国家发展度"
+country_development_panel_button_tt:0 "§Y使用“ESC”或“Q”关闭此页面§!"
+
+country_development_title_1_txt:0 "[GET_counrty_development_title_1]"
+country_development_title_2_txt:0 "[GET_counrty_development_title_2]"
+country_development_title_3_txt:0 "[GET_counrty_development_title_3]"
+country_development_title_4_txt:0 "[GET_counrty_development_title_4]"
+country_development_title_5_txt:0 "[GET_counrty_development_title_5]"
+country_development_title_6_txt:0 "[GET_counrty_development_title_6]"
+
+industrial_development_generic_tt_idea:0 "[GET_counrty_development_idea_1]"
+GET_counrty_development_idea_1_1_txt:0 "[GET_counrty_development_idea_1_1]"
+GET_counrty_development_idea_1_2_txt:0 "[GET_counrty_development_idea_1_2]"
+GET_counrty_development_idea_1_3_txt:0 "[GET_counrty_development_idea_1_3]"
+GET_counrty_development_idea_1_4_txt:0 "[GET_counrty_development_idea_1_4]"
+GET_counrty_development_idea_1_5_txt:0 "[GET_counrty_development_idea_1_5]"
+GET_counrty_development_idea_1_6_txt:0 "[GET_counrty_development_idea_1_6]"
+
+agricultural_development_generic_tt_idea:0 "[GET_counrty_development_idea_2]"
+GET_counrty_development_idea_2_1_txt:0 "[GET_counrty_development_idea_2_1]"
+GET_counrty_development_idea_2_2_txt:0 "[GET_counrty_development_idea_2_2]"
+GET_counrty_development_idea_2_3_txt:0 "[GET_counrty_development_idea_2_3]"
+GET_counrty_development_idea_2_4_txt:0 "[GET_counrty_development_idea_2_4]"
+GET_counrty_development_idea_2_5_txt:0 "[GET_counrty_development_idea_2_5]"
+GET_counrty_development_idea_2_6_txt:0 "[GET_counrty_development_idea_2_6]"
+
+military_development_generic_tt_idea:0 "[GET_counrty_development_idea_3]"
+GET_counrty_development_idea_3_1_txt:0 "[GET_counrty_development_idea_3_1]"
+GET_counrty_development_idea_3_2_txt:0 "[GET_counrty_development_idea_3_2]"
+GET_counrty_development_idea_3_3_txt:0 "[GET_counrty_development_idea_3_3]"
+GET_counrty_development_idea_3_4_txt:0 "[GET_counrty_development_idea_3_4]"
+GET_counrty_development_idea_3_5_txt:0 "[GET_counrty_development_idea_3_5]"
+GET_counrty_development_idea_3_6_txt:0 "[GET_counrty_development_idea_3_6]"
+
+living_standard_development_generic_tt_idea:0 "[GET_counrty_development_idea_4]"
+GET_counrty_development_idea_4_1_txt:0 "[GET_counrty_development_idea_4_1]"
+GET_counrty_development_idea_4_2_txt:0 "[GET_counrty_development_idea_4_2]"
+GET_counrty_development_idea_4_3_txt:0 "[GET_counrty_development_idea_4_3]"
+GET_counrty_development_idea_4_4_txt:0 "[GET_counrty_development_idea_4_4]"
+GET_counrty_development_idea_4_5_txt:0 "[GET_counrty_development_idea_4_5]"
+GET_counrty_development_idea_4_6_txt:0 "[GET_counrty_development_idea_4_6]"
+
+environment_development_generic_tt_idea:0 "[GET_counrty_development_idea_5]"
+GET_counrty_development_idea_5_1_txt:0 "[GET_counrty_development_idea_5_1]"
+GET_counrty_development_idea_5_2_txt:0 "[GET_counrty_development_idea_5_2]"
+GET_counrty_development_idea_5_3_txt:0 "[GET_counrty_development_idea_5_3]"
+GET_counrty_development_idea_5_4_txt:0 "[GET_counrty_development_idea_5_4]"
+GET_counrty_development_idea_5_5_txt:0 "[GET_counrty_development_idea_5_5]"
+GET_counrty_development_idea_5_6_txt:0 "[GET_counrty_development_idea_5_6]"
+
+research_development_generic_tt_idea:0 "[GET_counrty_development_idea_6]"
+GET_counrty_development_idea_6_1_txt:0 "[GET_counrty_development_idea_6_1]"
+GET_counrty_development_idea_6_2_txt:0 "[GET_counrty_development_idea_6_2]"
+GET_counrty_development_idea_6_3_txt:0 "[GET_counrty_development_idea_6_3]"
+GET_counrty_development_idea_6_4_txt:0 "[GET_counrty_development_idea_6_4]"
+GET_counrty_development_idea_6_5_txt:0 "[GET_counrty_development_idea_6_5]"
+GET_counrty_development_idea_6_6_txt:0 "[GET_counrty_development_idea_6_6]"

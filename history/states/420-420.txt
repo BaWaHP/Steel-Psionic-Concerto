@@ -1,0 +1,26 @@
+
+state={
+	id=420
+	name="STATE_420"
+	provinces={
+		1230 2689 4822 4886 6247 8432 9099 10759 18792 18850 18882 18883 18947 18968 18985 19058 19066 19067 19115 19195 
+	}
+	resources = {
+		steel = 12
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			19115 15
+		}
+	}
+	manpower = 1050000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

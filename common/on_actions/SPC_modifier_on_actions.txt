@@ -1,0 +1,20 @@
+on_actions = {
+  
+	on_daily = {
+		effect = {
+			###模组自定义修正###
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SPC_rulling_ideology_drift_mod } } }
+				add_dynamic_modifier = { modifier = SPC_rulling_ideology_drift_mod }
+			}
+			SPC_rulling_ideology_drift_var_check = yes
+
+			###核心化占领###
+			if = {
+				limit = { check_variable = { occupied_countries^num > 0 } }
+				core_all_occupied_through_compliance = yes
+			}
+		}
+	}
+
+}

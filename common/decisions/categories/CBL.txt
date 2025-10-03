@@ -1,0 +1,8 @@
+CBL_putting_down_rebellion_decision_category = {	#平乱
+	allowed = { OR = { tag = CBL tag = RCC } }
+	visible = { 
+		OR = { tag = CBL tag = RCC } 
+		OR = { has_completed_focus = CBL_general_insurrection tag = RCC }
+	}
+	priority = 10
+}

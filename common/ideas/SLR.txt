@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+
+		#自由或死亡！
+		SLR_freedom_or_death = {
+			picture = hol_liberation
+			allowed = { original_tag = SLR }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.2
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.3
+			}
+		}
+	}
+}

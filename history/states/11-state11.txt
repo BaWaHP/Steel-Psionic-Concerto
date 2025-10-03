@@ -1,0 +1,31 @@
+
+state={
+	id=11
+	name="STATE_11"
+
+	resources = {
+		steel = 24
+	}
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			18043 8
+		}
+
+	}
+
+	provinces={
+		1880 1902 3562 9773 10820 17687 17912 17998 18043 18075 
+	}
+	manpower=319784
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

@@ -1,0 +1,463 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_ROK_moser_heludon"
+		texturefile = "gfx/leaders/ROK/moser_heludon.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_corriman_wickrena"
+		texturefile = "gfx/leaders/ROK/corriman_wickrena.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_katarzyna_werner"
+		texturefile = "gfx/leaders/ROK/katarzyna_werner.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_osinski_heidemann"
+		texturefile = "gfx/leaders/ROK/osinski_heidemann.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_emmy_puskia"
+		texturefile = "gfx/leaders/ROK/emmy_puskia.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_stahl_wickes"
+		texturefile = "gfx/leaders/ROK/stahl_wickes.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_henrik_lofsky"
+		texturefile = "gfx/leaders/ROK/henrik_lofsky.png"
+	}
+	###将领###
+	spriteType = {
+		name = "GFX_ROK_shadyrov_rikovskyn"
+		texturefile = "gfx/leaders/ROK/shadyrov_rikovskyn.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_alejandro_vednovsky"
+		texturefile = "gfx/leaders/ROK/alejandro_vednovsky.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_alexandra_vysokov"
+		texturefile = "gfx/leaders/ROK/alexandra_vysokov.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_blanka_velimavsky"
+		texturefile = "gfx/leaders/ROK/blanka_velimavsky.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_karen_swifliard"
+		texturefile = "gfx/leaders/ROK/karen_swifliard.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_breshin_podovsky"
+		texturefile = "gfx/leaders/ROK/breshin_podovsky.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_damian_sverloff"
+		texturefile = "gfx/leaders/ROK/damian_sverloff.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_jerzy_kosintsovsky"
+		texturefile = "gfx/leaders/ROK/jerzy_kosintsovsky.png"
+	}
+	spriteType = {
+		name = "GFX_ROK_carolina_cliff"
+		texturefile = "gfx/leaders/ROK/carolina_cliff.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_ROK_stabiliy_based_on_one"
+		texturefile = "gfx/interface/ideas/ROK_stabiliy_based_on_one.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_about_to_die"
+		texturefile = "gfx/interface/ideas/ROK_about_to_die.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_legacy_of_industrialization"
+		texturefile = "gfx/interface/ideas/ROK_legacy_of_industrialization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_army_of_ambition"
+		texturefile = "gfx/interface/ideas/ROK_army_of_ambition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_old_eagle"
+		texturefile = "gfx/interface/ideas/ROK_old_eagle.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_memory_of_donvodsk"
+		texturefile = "gfx/interface/ideas/ROK_memory_of_donvodsk.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_continous_promoted_democracy"
+		texturefile = "gfx/interface/ideas/ROK_continous_promoted_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ROK_influence_from_new_revolution_party"
+		texturefile = "gfx/interface/ideas/ROK_influence_from_new_revolution_party.png"
+	}
+	###GUI###
+	SpriteType = {
+		name = "GFX_Leader_bg"
+		texturefile = "gfx/interface/ROK/Leader_bg.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_SCC_bg"
+		texturefile = "gfx/interface/ROK/ROK_SCC_bg.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_SCC_Left_btn"
+		texturefile = "gfx/interface/ROK/ROK_SCC_Left_btn.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_SCC_Left_btn_slected"
+		texturefile = "gfx/interface/ROK/ROK_SCC_Left_btn_slected.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_SCC_Right_btn"
+		texturefile = "gfx/interface/ROK/ROK_SCC_Right_btn.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_SCC_Right_btn_slected"
+		texturefile = "gfx/interface/ROK/ROK_SCC_Right_btn_slected.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_faction_btn_1"
+		texturefile = "gfx/interface/ROK/ROK_faction_btn_1.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_faction_btn_2"
+		texturefile = "gfx/interface/ROK/ROK_faction_btn_2.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_faction_btn_3"
+		texturefile = "gfx/interface/ROK/ROK_faction_btn_3.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_faction_btn_4"
+		texturefile = "gfx/interface/ROK/ROK_faction_btn_4.png"
+	}
+	SpriteType = {
+		name = "GFX_faction_alt_gfx_0"
+		texturefile = "gfx/interface/ROK/ROK_faction_alt_gfx_0.png"
+	}
+	SpriteType = {
+		name = "GFX_faction_alt_gfx_1"
+		texturefile = "gfx/interface/ROK/ROK_faction_alt_gfx_1.png"
+	}
+	SpriteType = {
+		name = "GFX_faction_alt_gfx_2"
+		texturefile = "gfx/interface/ROK/ROK_faction_alt_gfx_2.png"
+	}
+	SpriteType = {
+		name = "GFX_faction_alt_gfx_3"
+		texturefile = "gfx/interface/ROK/ROK_faction_alt_gfx_3.png"
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_ROK_he_has_passed_away"
+		texturefile = "gfx/interface/goals/ROK_he_has_passed_away.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_and_here_is_free"
+		texturefile = "gfx/interface/goals/ROK_and_here_is_free.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_emergency_election"
+		texturefile = "gfx/interface/goals/ROK_emergency_election.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_fire_and_rose"
+		texturefile = "gfx/interface/goals/ROK_fire_and_rose.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_new_revolution"
+		texturefile = "gfx/interface/goals/ROK_new_revolution.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_redistribute_the_money"
+		texturefile = "gfx/interface/goals/ROK_redistribute_the_money.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_control_the_means_of_production"
+		texturefile = "gfx/interface/goals/ROK_control_the_means_of_production.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_break_down_social_class"
+		texturefile = "gfx/interface/goals/ROK_break_down_social_class.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_purge_the_opposition"
+		texturefile = "gfx/interface/goals/ROK_purge_the_opposition.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_new_workers_union"
+		texturefile = "gfx/interface/goals/ROK_new_workers_union.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_purge_careerists_in_the_army"
+		texturefile = "gfx/interface/goals/ROK_purge_careerists_in_the_army.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_ensure_the_economy"
+		texturefile = "gfx/interface/goals/ROK_ensure_the_economy.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_revolution_win"
+		texturefile = "gfx/interface/goals/ROK_revolution_win.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_toward_victory"
+		texturefile = "gfx/interface/goals/ROK_toward_victory.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_chairman_amy"
+		texturefile = "gfx/interface/goals/ROK_chairman_amy.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_people_have_spoken"
+		texturefile = "gfx/interface/goals/ROK_people_have_spoken.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_fight_for_yourself"
+		texturefile = "gfx/interface/goals/ROK_fight_for_yourself.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_form_committee"
+		texturefile = "gfx/interface/goals/ROK_form_committee.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_rev_move_forward"
+		texturefile = "gfx/interface/goals/ROK_rev_move_forward.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_opposition_opponent"
+		texturefile = "gfx/interface/goals/ROK_opposition_opponent.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_new_cul_exp"
+		texturefile = "gfx/interface/goals/ROK_new_cul_exp.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_flute_sounded_from_everywhere"
+		texturefile = "gfx/interface/goals/ROK_flute_sounded_from_everywhere.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_dismantle_front"
+		texturefile = "gfx/interface/goals/ROK_dismantle_front.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_cure_people"
+		texturefile = "gfx/interface/goals/ROK_cure_people.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_harmony_parties"
+		texturefile = "gfx/interface/goals/ROK_harmony_parties.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_time_move_forward"
+		texturefile = "gfx/interface/goals/ROK_time_move_forward.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_art_and_socialism"
+		texturefile = "gfx/interface/goals/ROK_art_and_socialism.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_soul_revolution"
+		texturefile = "gfx/interface/goals/ROK_soul_revolution.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_end_old_era"
+		texturefile = "gfx/interface/goals/ROK_end_old_era.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_modern_revolution"
+		texturefile = "gfx/interface/goals/ROK_modern_revolution.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_complete_perfection"
+		texturefile = "gfx/interface/goals/ROK_complete_perfection.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_wonder_of_human"
+		texturefile = "gfx/interface/goals/ROK_wonder_of_human.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_future_alchemist"
+		texturefile = "gfx/interface/goals/ROK_future_alchemist.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_rev_from_bodies"
+		texturefile = "gfx/interface/goals/ROK_rev_from_bodies.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_to_mind_revs"
+		texturefile = "gfx/interface/goals/ROK_to_mind_revs.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_for_you_proletarians"
+		texturefile = "gfx/interface/goals/ROK_for_you_proletarians.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_accept_pioneer_art"
+		texturefile = "gfx/interface/goals/ROK_accept_pioneer_art.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_no_more_good_or_bad"
+		texturefile = "gfx/interface/goals/ROK_no_more_good_or_bad.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_soc_new_citizen"
+		texturefile = "gfx/interface/goals/ROK_soc_new_citizen.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_dawn_of_art_god"
+		texturefile = "gfx/interface/goals/ROK_dawn_of_art_god.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_building_in_poet"
+		texturefile = "gfx/interface/goals/ROK_building_in_poet.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_dimensional_attack_future"
+		texturefile = "gfx/interface/goals/ROK_dimensional_attack_future.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_this_is_where_world_built"
+		texturefile = "gfx/interface/goals/ROK_this_is_where_world_built.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_composition_supreme"
+		texturefile = "gfx/interface/goals/ROK_composition_supreme.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_towards_future_utopia"
+		texturefile = "gfx/interface/goals/ROK_towards_future_utopia.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_red_flag_arise"
+		texturefile = "gfx/interface/goals/ROK_red_flag_arise.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_watch_inside"
+		texturefile = "gfx/interface/goals/ROK_watch_inside.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_vanguard_voice"
+		texturefile = "gfx/interface/goals/ROK_vanguard_voice.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_as_people_demand"
+		texturefile = "gfx/interface/goals/ROK_as_people_demand.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_back_one_step_move_forward"
+		texturefile = "gfx/interface/goals/ROK_back_one_step_move_forward.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_split_from_inside"
+		texturefile = "gfx/interface/goals/ROK_split_from_inside.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_watch_nowadays"
+		texturefile = "gfx/interface/goals/ROK_watch_nowadays.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_sweep_old_guards"
+		texturefile = "gfx/interface/goals/ROK_sweep_old_guards.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_plan_arg_dev"
+		texturefile = "gfx/interface/goals/ROK_plan_arg_dev.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_consolidate_union"
+		texturefile = "gfx/interface/goals/ROK_consolidate_union.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_all_settle_down"
+		texturefile = "gfx/interface/goals/ROK_all_settle_down.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_rev_new_system"
+		texturefile = "gfx/interface/goals/ROK_rev_new_system.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_set_local_representatives"
+		texturefile = "gfx/interface/goals/ROK_set_local_representatives.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_support_autonomous_organizations"
+		texturefile = "gfx/interface/goals/ROK_support_autonomous_organizations.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_all_rights_to_people"
+		texturefile = "gfx/interface/goals/ROK_all_rights_to_people.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_our_proletarian_dem"
+		texturefile = "gfx/interface/goals/ROK_our_proletarian_dem.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_form_pol_teens"
+		texturefile = "gfx/interface/goals/ROK_form_pol_teens.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_relax_commi_party_standard"
+		texturefile = "gfx/interface/goals/ROK_relax_commi_party_standard.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_promote_direct_democracy"
+		texturefile = "gfx/interface/goals/ROK_promote_direct_democracy.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_for_whom_liberate"
+		texturefile = "gfx/interface/goals/ROK_for_whom_liberate.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_end_bureaucratic_snake"
+		texturefile = "gfx/interface/goals/ROK_end_bureaucratic_snake.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_until_worker_rights_ensured"
+		texturefile = "gfx/interface/goals/ROK_until_worker_rights_ensured.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_free_producers"
+		texturefile = "gfx/interface/goals/ROK_free_producers.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_rural_commune_program"
+		texturefile = "gfx/interface/goals/ROK_rural_commune_program.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_adapting_to_local_conditions"
+		texturefile = "gfx/interface/goals/ROK_adapting_to_local_conditions.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_for_workers_and_peasants"
+		texturefile = "gfx/interface/goals/ROK_for_workers_and_peasants.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_let_red_flag_arise"
+		texturefile = "gfx/interface/goals/ROK_let_red_flag_arise.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_old_days_gone"
+		texturefile = "gfx/interface/goals/ROK_old_days_gone.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_let_people_liberate_themselves"
+		texturefile = "gfx/interface/goals/ROK_let_people_liberate_themselves.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_march_for_free_kingdom"
+		texturefile = "gfx/interface/goals/ROK_march_for_free_kingdom.png"
+	}
+	SpriteType = {
+		name = "GFX_ROK_declare_martial_law"
+		texturefile = "gfx/interface/goals/ROK_declare_martial_law.png"
+	}
+}

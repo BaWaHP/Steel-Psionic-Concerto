@@ -1,0 +1,32 @@
+
+state={
+	id=159
+	name="STATE_159"
+	resources={
+		steel = 20
+		chromium = 10
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = ZHE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			8498 5
+		}
+		victory_points = {
+			15163 1
+		}
+	}
+
+	provinces={
+		6252 8498 10745 10762 14972 15068 15163 15260 15353 
+	}
+	manpower=1440000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

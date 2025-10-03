@@ -1,0 +1,179 @@
+﻿###templates###
+division_template = {
+	name = "农民起义军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "革命游击队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 1
+
+	is_locked = yes
+}
+
+division_template = {
+	name = "魔导兵团"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 0 y = 2 }
+		caster_infantry = { x = 0 y = 3 }
+		caster_infantry = { x = 0 y = 4 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		caster_recon = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+###units###
+
+units = {
+	division = {
+		name = "自由远乡联军魔法师团“麒麟”"
+		location = 16469
+		division_template = "魔导兵团"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "农民起义第一师"
+		location = 16367
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第二师"
+		location = 16597
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第三师"
+		location = 16692
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第四师"
+		location = 16629
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第五师"
+		location = 16713
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第六师"
+		location = 16352
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第七师"
+		location = 6009
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "农民起义第八师"
+		location = 9896
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第一大队"
+		location = 16618
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第二大队"
+		location = 16655
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第三大队"
+		location = 16751
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第四大队"
+		location = 6412
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第五大队"
+		location = 7845
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第六大队"
+		location = 16315
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第七大队"
+		location = 15979
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "游击第八大队"
+		location = 6127
+		division_template = "革命游击队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+}

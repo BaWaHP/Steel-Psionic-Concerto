@@ -1,0 +1,366 @@
+RSU_full_union_development_plan = {
+	RSU_finding_mines = {		#勘探矿源
+		icon = steel
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_north_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_northern_district
+		}
+
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 314
+			}
+		}
+	}
+	RSU_import_advanced_machines = {		#进口先进机械
+		icon = generic_construction
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_north_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_northern_district
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_to_variable = { RSU_union_conference_cgf = 0.02 }
+			add_to_variable = { RSU_union_conference_pfmef = 0.05 }
+			add_to_variable = { RSU_union_conference_lrf = 0.1 }
+			custom_effect_tooltip = RSU_import_advanced_machines_tt
+		}
+	}
+	RSU_ensure_resources_transportation = {		#保证矿物运输
+		icon = generic_trucks
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_north_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_northern_district
+		}
+
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_to_variable = { RSU_union_conference_psrwf = 0.15 }
+			custom_effect_tooltip = RSU_ensure_resources_transportation_tt
+		}
+	}
+	RSU_suppress_commi_march = {		#镇压工革联游行
+		icon = generic_arrest
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_east_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_comfort_east_district
+		}
+
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = -0.05
+			}
+			add_manpower = -250
+			add_stability = 0.05
+		}
+	}
+	RSU_buy_the_union = {		#收买工会
+		icon = generic_fundraising
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_east_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_comfort_east_district
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_stability = 0.05
+			add_to_variable = { RSU_union_conference_psbf = 0.05 }
+			add_to_variable = { RSU_union_conference_lcpef = 0.1 }
+			custom_effect_tooltip = RSU_buy_the_union_tt
+		}
+	}
+	RSU_invest_heavy_industry = {		#投资重工
+		icon = generic_merge_plant_materiel
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_east_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_comfort_east_district
+		}
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			346 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	RSU_expand_company_susidies = {		#加大企业投资
+		icon = gre_investment_decisions
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_south_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_southern_district
+		}
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 30
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			316 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = { RSU_union_conference_cgf = 0.05 }
+			add_to_variable = { RSU_union_conference_psbf = 0.1 }
+			custom_effect_tooltip = RSU_expand_company_susidies_tt
+		}
+	}
+	RSU_replanning_old_city_zones = {		#重新规划陈旧城区
+		icon = hol_draw_up_staff_plans
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_south_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_southern_district
+		}
+
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			321 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			317 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_to_variable = { RSU_union_conference_psbf = 0.05 }
+			custom_effect_tooltip = RSU_replanning_old_city_zones_tt
+		}
+	}
+	RSU_reinforce_south_zone_education = {		#加大南区教育投资
+		icon = eng_trade_unions_support
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_south_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_developing_the_southern_district
+		}
+
+		cost = 25
+		fire_only_once = yes
+		days_remove = 10
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			321 = {
+				add_to_variable = {
+					var = state_magic_progress
+					value = 30
+					tooltip = state_magic_dev_tt
+				}
+			}
+			316 = {
+				add_to_variable = {
+					var = state_science_progress
+					value = 30
+					tooltip = state_science_dev_tt
+				}
+			}
+		}
+	}
+	RSU_zhetysu_investment = {		#七河投资
+		icon = hol_exchange_intelligence_data
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_west_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_development_west_district
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 10
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_opinion_modifier = {
+				target = ZHE
+				modifier = RSU_reinforce_connection
+			}
+			ZHE = {
+				add_opinion_modifier = {
+					target = RSU
+					modifier = RSU_reinforce_connection
+				}
+			}
+			313 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+	RSU_expand_business_harbor = {		#扩大商业港
+		icon = generic_merge_plant_ship
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_west_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_development_west_district
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 20
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			322 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			add_to_variable = { RSU_union_conference_icd = 0.05 }
+			custom_effect_tooltip = RSU_expand_business_harbor_tt
+		}
+	}
+	RSU_build_tax_free_zones = {		#建设免税区
+		icon = generic_wreckers
+
+		available = { NOT = { has_country_flag = RSU_union_dev_ongoing_flag } }
+		visible = { 
+			OR = { check_variable = { RSU_union_development_west_icon = 1 } is_ai = yes }
+			has_completed_focus = RSU_development_west_district
+		}
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 15
+
+		ai_will_do = { factor = 1 }
+		
+		complete_effect = {
+			set_country_flag = RSU_union_dev_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = RSU_union_dev_ongoing_flag
+			add_to_variable = { RSU_union_conference_icf = 0.05 }
+			add_to_variable = { RSU_union_conference_cgf = -0.05 }
+			custom_effect_tooltip = RSU_build_tax_free_zones_tt
+		}
+	}
+}

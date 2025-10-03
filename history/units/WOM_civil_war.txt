@@ -1,0 +1,110 @@
+﻿###templates###
+division_template = {
+	name = "国防军步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "地方部队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "国防军步兵师"
+		location = 8519
+		division_template = "国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国防军步兵师"
+		location = 8512
+		division_template = "国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "国防军步兵师"
+		location = 17576
+		division_template = "国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "地方部队"
+		location = 17267
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 3898
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 17871
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 17524
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 9349
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 1425
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方部队"
+		location = 17432
+		division_template = "地方部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+}

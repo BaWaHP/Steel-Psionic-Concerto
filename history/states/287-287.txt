@@ -1,0 +1,27 @@
+
+state={
+	id=287
+	name="STATE_287"
+	provinces={
+		749 1156 2515 3559 4206 6955 8166 14671 14744 
+	}
+	resources = {
+		oil = 4
+		steel = 12
+	}
+	history={
+		owner = DIF
+		add_core_of = DIF
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			14744 5
+		}
+	}
+	manpower=520000
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

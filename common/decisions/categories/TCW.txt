@@ -1,0 +1,41 @@
+TCW_resettlement_of_refugees_decision_category = {	#安置难民
+	#picture = 
+	allowed = { tag = TCW }
+	visible = {
+		tag = TCW
+		has_completed_focus = TCW_enable_hr
+		NOT = {
+			has_country_flag = TCW_resettlement_of_refugees_decision_over
+		}
+	}
+	scripted_gui = TCW_resettlement_of_refugees_ui
+	visible_when_empty = yes
+	priority = 10
+}
+
+TCW_president_awaking_decision_category = {	#总统苏醒
+	#picture = 
+	allowed = { tag = TCW }
+	visible = {
+		tag = TCW
+		has_completed_focus = TCW_unconcious_president
+		NOT = { has_country_flag = TCW_president_awake_flag }
+	}
+	visible_when_empty = no
+	priority = 10
+}
+
+TCW_soutern_problems = {	#南面楚歌
+	#picture = 
+	allowed = { tag = TCW }
+	visible = { is_ai = yes has_country_flag = TCW_2_b_flag }
+	priority = 10
+}
+
+TCW_national_parliament = {	#托莱多国民议会决议
+	scripted_gui = TCW_national_parliament_ui
+	allowed = { tag = TCW }
+	visible = { has_country_flag = TCW_national_parliament_on }
+	visible_when_empty = yes
+	priority = 11
+}

@@ -1,0 +1,109 @@
+ideas = {
+
+	country = {
+		KDK_HMML_reconstruction_committee = {		#国王陛下最忠诚的重建委员会
+			allowed = { original_tag = KDK }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		KDK_remember_years_of_bullets = {		#铅弹年华，牢记于心
+			allowed = { original_tag = KDK }
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.05
+				political_power_cost = 0.15
+				conscription_factor = -0.3
+			}
+		}
+		KDK_under_the_sun = {		#烈日之下……
+			allowed = { original_tag = KDK }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_factory_efficiency_gain_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				army_org_regain = -0.1
+				training_time_army_factor = 0.2
+				war_support_factor = -0.1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+		designer = yes
+
+		KDK_gnoa_tower = {		#格诺亚高塔
+			picture = GFX_idea_generic_infantry_equipment_manufacturer_1
+			allowed = { original_tag = KDK }
+			cost = 200
+			
+			research_bonus = {
+				caster_equipments = 0.1
+				infantry_equipments = 0.05
+			}
+			equipment_bonus = {
+				caster_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				caster_recon_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				caster_attaker_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				caster_support_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			traits = { caster_equip_manufacturer }
+		}
+
+		KDK_agropoli_flames = {		#阿格罗波里烈焰
+			picture = GFX_idea_generic_artillery_manufacturer_2
+			allowed = { original_tag = KDK }
+			cost = 120
+			
+			research_bonus = {
+				artillery = -0.05
+			}
+			equipment_bonus = {
+				caster_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			traits = { artillery_manufacturer }
+		}
+
+	}
+
+	industrial_concern = {
+		KDK_royal_commission_on_industry = {		#皇家工业调配局
+			picture = generic_industrial_concern_2
+			allowed = { original_tag = KDK }
+			cost = 210
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_rail_way_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+	}
+}

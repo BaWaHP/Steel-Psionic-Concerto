@@ -1,0 +1,36 @@
+
+state={
+	id=189
+	name="STATE_189"
+
+	resources = {
+		tungsten = 16
+	}
+
+	history={
+		owner = IPK
+		add_core_of = IPK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			7101 = {
+				bunker = 2
+			}
+		}
+		victory_points = {
+			16296 12
+		}
+		victory_points = {
+			7101 3
+		}
+	}
+
+	provinces={
+		145 4642 5898 7101 8545 12097 16171 16296 16361 16462 16463 
+	}
+	manpower = 1260000 
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

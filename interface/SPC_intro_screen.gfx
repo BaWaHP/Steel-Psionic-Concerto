@@ -1,0 +1,24 @@
+spriteTypes = {
+	###GUI###
+	spriteType = {
+		name = "GFX_open_intro_screen_btn"
+		texturefile = "gfx/game_rules/production_licenses.dds"
+	}
+	spriteType = {
+		name = "GFX_SPC_intro_screen_bg"
+		textureFile = "gfx/interface/intro_screen/is_bg.png"
+	}
+	spriteType = {
+		name = "GFX_SPC_intro_screen_btn"
+		textureFile = "gfx/interface/intro_screen/is_btn.png"
+	}
+	spriteType = {
+		name = "GFX_SPC_IS_close_button"
+		textureFile = "gfx/interface/intro_screen/is_close.png"
+	}
+	###国旗###
+	spriteType = {
+		name = "GFX_Get_IS_Flag_TST"
+		textureFile = "gfx/flags/TST.tga"
+	}
+}

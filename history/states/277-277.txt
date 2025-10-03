@@ -1,0 +1,27 @@
+
+state={
+	id=277
+	name="STATE_277"
+	provinces={
+		726 1254 7959 8204 8908 10798 15779 15950 16019 16120 16198 
+	}
+	resources = {
+		oil = 4
+		magic_crystal = 12
+	}
+	history={
+		owner = OAS
+		add_core_of = OAS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			8908 8
+		}
+	}
+	manpower = 420000
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

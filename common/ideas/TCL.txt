@@ -1,0 +1,77 @@
+ideas = {
+	country = {
+
+		CB_dangerous_borders = {		#危险的边疆
+			picture = SPC_region_idea_13
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = 0.05
+				conscription_factor = 0.2
+				army_attack_factor = 0.05
+				army_org_regain = 0.1
+				supply_consumption_factor = 0.2
+			}
+		}
+
+		CB_central_bastia_defense_agreement = {		#中巴防御协定
+			picture = generic_volunteer_expedition_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				research_speed_factor = 0.01
+				custom_modifier_tooltip = CB_central_bastia_defense_agreement_tt
+			}
+		}
+
+		TCL_abandoned_colonies = {		#被抛弃的殖民地
+			picture = EST_exploit_the_banks
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.2
+				consumer_goods_expected_value = 0.1
+				research_speed_factor = -0.4
+				monthly_population = -0.2
+				political_advisor_cost_factor = 0.5
+			}
+		}
+
+		TCL_merchenary_militia_system = {		#雇佣兵-民兵体系
+			picture = NORDIC_army_democratic
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = 0.1
+				army_attack_factor = -0.1
+				army_core_defence_factor = 0.2
+				army_org_factor = -0.1
+				conscription_factor = -0.5
+				experience_gain_army_factor = -0.2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		TCL_conflict_with_aboriginal_people = {		#与原住民的冲突
+			picture = chi_war_of_resistance
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.1
+			}
+		}
+
+		TCL_colony_in_decay = {		#破败的开拓领
+			picture = POL_disjointed_industry
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				supply_factor = -0.25
+			}
+		}
+
+	}
+}

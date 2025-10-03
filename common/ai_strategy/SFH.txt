@@ -1,0 +1,24 @@
+SFH_pre_civilwar_prepare = {
+	allowed = { tag = SFH }
+	enable = { has_country_flag = SFH_national_reformation_flag }
+
+	abort = { NOT = { has_country_flag = SFH_national_reformation_flag } }
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 100
+    }
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 100
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 100
+	}
+}
+

@@ -1,0 +1,42 @@
+state={
+	id=221
+	name="STATE_221"
+	
+	resources = {
+		steel = 6
+	}
+
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 2
+			3934 = {
+				naval_base = 6
+			}
+			21484 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			3934 5
+		}
+		victory_points = {
+			21484 3
+		}
+		victory_points = {
+			11939 10
+		}
+	}
+	
+	provinces={
+		480 1069 3934 5749 6446 11440 11939 21484 21518 21605 21625 
+	}
+	manpower=2620000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

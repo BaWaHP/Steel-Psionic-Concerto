@@ -1,0 +1,28 @@
+
+state={
+	id=66
+	name="STATE_66"
+	resources = {
+		steel = 12
+		chromium = 24
+	}
+	provinces={
+		4871 5154 8512 9349 10210 10968 11414 17448 17510 17524 17644 17645 17768 
+	}
+	history = {
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			8512 8
+		}
+	}
+	manpower = 2365781
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

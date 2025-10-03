@@ -1,0 +1,25 @@
+SPC_generic_sekeleton_decision_category = {
+	KDK_generic_war_decision = {		#kdk打牛爷爷
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = KDK }
+
+		available = {
+			date > 2002.1.1
+			ROT = { exists = no }
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			IMC = { add_to_ROOT_potential_cores = yes }
+			declare_war_on = {
+				target = IMC
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}

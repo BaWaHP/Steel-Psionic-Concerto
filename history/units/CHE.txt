@@ -1,0 +1,86 @@
+﻿###templates###
+division_template = {
+	name = "拔阿都尔宿卫"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 1 y = 0 }
+		centaur = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "叱拔义兵"
+
+	regiments = {
+		centaur_militia = { x = 0 y = 0 }
+		centaur_militia = { x = 0 y = 1 }
+		centaur_militia = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "联邦国防军步兵部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "拔阿都尔宿卫-秃鲁花"
+		location = 14248
+		division_template = "拔阿都尔宿卫"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "拔阿都尔宿卫-客卜帖兀勒"
+		location = 14348
+		division_template = "拔阿都尔宿卫"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "叱拔义兵第一支队"
+		location = 14501
+		division_template = "叱拔义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "叱拔义兵第二支队"
+		location = 7823
+		division_template = "叱拔义兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "联邦国防军北方师第一步兵旅"
+		location = 14653
+		division_template = "联邦国防军步兵部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+}

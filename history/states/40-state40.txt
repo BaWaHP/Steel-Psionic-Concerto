@@ -1,0 +1,37 @@
+
+state={
+	id=40
+	name="STATE_40"
+	provinces={
+		533 3986 6137 6788 8522 8613 9305 9410 10959 11746 19160 19187 19222 19270 19306 19349 19386 19438 19470 19521 
+	}
+	resources = {
+		tungsten = 15
+		magic_crystal = 20
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 2
+			19270 = {
+				naval_base = 5
+				air_facility = 1
+			}
+		}
+		victory_points = {
+			10959 10
+		}
+		victory_points = {
+			19270 9
+		}
+	}
+	manpower=2190000
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

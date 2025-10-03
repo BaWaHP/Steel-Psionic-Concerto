@@ -1,0 +1,37 @@
+
+state={
+	id=20
+	name="STATE_20"
+
+	resources = {
+		steel = 36
+		aluminium = 12
+	}
+	
+	history={
+		owner = MSA
+		add_core_of = MSA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 2
+			16115 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			16115 8
+		}
+		victory_points = {
+			7923 3
+		}
+	}
+
+	provinces={
+		4333 7323 7923 9446 9801 15873 16104 16115 16183 16213 16290 16330 
+	}
+	manpower=893171
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

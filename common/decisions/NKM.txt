@@ -1,0 +1,32 @@
+SPC_generic_debug_decision_category = {
+	NKM_debug_load_focus_0 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = SFR }
+
+		fire_only_once = no
+
+		complete_effect = {
+
+		}
+	}
+}
+
+#总崩溃
+NKM_total_collapse = {
+	#总崩溃
+	NKM_total_collapse_mission = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = NKM }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+
+		}
+	}
+}
+

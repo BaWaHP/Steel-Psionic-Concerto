@@ -1,0 +1,263 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_MGC_startup_effect = {
+	if = {
+		limit = { tag = MGC }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = handcraft_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = relatively_comfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_government_target
+		add_ideas = RP_locating_resource
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_freedom_speech
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_naga_racism
+		add_ideas = SR_confused_national_construction
+		add_ideas = RAP_suppression
+		add_ideas = RLP_religious_state
+		add_ideas = SXP_recessing_policy
+		###其它开局内容###
+		set_country_flag = MGC_focus_1
+		mark_focus_tree_layout_dirty = yes
+		###控制省份对应普及度###
+		466 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		467 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		468 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MGC_balaton_river_defense_line_west }
+		}
+		469 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MGC_balaton_river_defense_line_mid_north }
+		}
+		470 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+			add_dynamic_modifier = { modifier = MGC_emerging_capitals_pudrasia }
+		}
+		471 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		473 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		475 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		474 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 5 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = MGC_past_capitals_navia }
+		}
+		476 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+			add_dynamic_modifier = { modifier = MGC_dream_of_conquest_dijin }
+		}
+	}
+}
+
+MGC_spring_conspiracy_setup = {
+	set_variable = { MGC_spring_conspiracy_influence_1 = 0 }	#保皇派
+	set_variable = { MGC_spring_conspiracy_influence_2 = 0 }	#独裁派
+	set_variable = { MGC_spring_conspiracy_influence_3 = 0 }	#共和派
+	set_variable = { MGC_spring_conspiracy_tension = 5 }	#社会紧张度
+
+	#1 独裁 2 保皇 3 共和 4 民族 5 中立
+	
+	MGC_nenleko_dora = { #嫩勒科夫·多饶
+		set_variable = { MGC_spring_conspiracy_supporter = 2 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_dovuzdo_de_zhemfia = { #多夫兹多·德·哲姆菲亚
+		set_variable = { MGC_spring_conspiracy_supporter = 2 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_denis_golden_iron_kossuth = { #德尼·科苏特
+		set_variable = { MGC_spring_conspiracy_supporter = 1 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_thorni_fire_madariske = { #索尔尼·马达瑞斯克
+		set_variable = { MGC_spring_conspiracy_supporter = 1 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_corfu_de_venetia = { #科尔夫·德·文尼蒂亚
+		set_variable = { MGC_spring_conspiracy_supporter = 3 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+
+	MGC_boris_janos_servio = { #鲍里斯·亚诺什·赛维欧
+		set_variable = { MGC_spring_conspiracy_supporter = 1 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_salahi_vasha_fero = { #萨拉希·瓦夏·费若
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_stojai_walter_drusser = { #萨拉希·瓦夏·费若
+		set_variable = { MGC_spring_conspiracy_supporter = 3 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_orbinas_orban_woker = { #奥宾纳斯·欧尔班·沃克
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_lugo_igor_zoltan = { #卢戈·伊戈尔·佐尔坦
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_kodais_zidan_laszlo = { #柯达伊斯·日丹·拉斯洛
+		set_variable = { MGC_spring_conspiracy_supporter = 3 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_vash_natasha_east = { #瓦什·娜塔莎·伊斯特
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_harius_petrov_husni = { #哈里乌斯·彼得罗夫·胡斯尼
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_weisenmayer_valeri_tagino = { #维森迈耶·瓦列里·塔吉诺
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+
+	MGC_all_farmer_associations = { #全国各省农会
+		set_variable = { MGC_spring_conspiracy_supporter = 1 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_all_worker_associations = { #全国各地工人团体
+		set_variable = { MGC_spring_conspiracy_supporter = 3 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_all_religious_associations = { #全国各省纳卡教会
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_national_police_associations = { #祖国秩序警察
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_union_protect_bureau = { #全军联盟保卫局
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_all_legal_parties = { #各合法党派
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+	MGC_industrial_dep = { #工业部门
+		set_variable = { MGC_spring_conspiracy_supporter = 5 }
+		add_to_array = { MGC.MGC_spring_conspiracy_supporter_array = THIS.id }
+	}
+
+	MGC_spring_conspiracy_influence_update = yes
+
+	activate_mission = MGC_contradiction_deepens
+	activate_mission = MGC_contradiction_hiddens
+}
+
+MGC_spring_conspiracy_influence_update = {
+	every_character = {
+		limit = { has_variable = MGC_spring_conspiracy_supporter }
+		if = {
+			limit = { check_variable = { MGC_spring_conspiracy_supporter = 1 } }
+			add_to_variable = { MGC.MGC_spring_conspiracy_influence_2 = 5 }
+		}
+		else_if = {
+			limit = { check_variable = { MGC_spring_conspiracy_supporter = 2 } }
+			add_to_variable = { MGC.MGC_spring_conspiracy_influence_1 = 5 }
+		}
+		else_if = {
+			limit = { check_variable = { MGC_spring_conspiracy_supporter = 3 } }
+			add_to_variable = { MGC.MGC_spring_conspiracy_influence_3 = 5 }
+		}
+	}
+}
+
+MGC_spring_conspiracy_tension_update = {
+	clamp_variable = {
+		var = MGC_spring_conspiracy_tension
+		min = 0
+		max = 100
+	}
+	if = {
+		limit = { check_variable = { MGC_spring_conspiracy_tension = 100 } }
+		country_event = {
+			id = MGC.0
+			days = 1
+		}
+	}
+}

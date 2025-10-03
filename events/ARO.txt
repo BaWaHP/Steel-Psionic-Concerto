@@ -1,0 +1,1052 @@
+﻿add_namespace = ARO
+
+###王室阴谋###
+
+country_event = {	#
+	id = ARO.0001
+	title = ARO.0001.t
+	desc = ARO.0001.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0002
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0001.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0002
+	title = ARO.0002.t
+	desc = ARO.0002.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0003
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0002.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0003
+	title = ARO.0003.t
+	desc = ARO.0003.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0004
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0003.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0004
+	title = ARO.0004.t
+	desc = ARO.0004.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0005
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0004.a
+		add_manpower = -5
+		add_stability = -0.01
+	}
+}
+
+country_event = {	#
+	id = ARO.0005
+	title = ARO.0005.t
+	desc = ARO.0005.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0006
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0005.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0006
+	title = ARO.0006.t
+	desc = ARO.0006.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0007
+				days = 42
+			}
+			country_event = {
+				id = ARO.0101
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0006.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#
+	id = ARO.0007
+	title = ARO.0007.t
+	desc = ARO.0007.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0008
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0007.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#
+	id = ARO.0008
+	title = ARO.0008.t
+	desc = ARO.0008.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0009
+				days = 49
+			}
+			country_event = {
+				id = ARO.0111
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0008.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#
+	id = ARO.0009
+	title = ARO.0009.t
+	desc = ARO.0009.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0010
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0009.a
+		add_political_power = 5
+	}
+}
+
+country_event = {	#
+	id = ARO.0010
+	title = ARO.0010.t
+	desc = ARO.0010.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0011
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0010.a
+		army_experience = 5
+	}
+}
+
+country_event = {	#
+	id = ARO.0011
+	title = ARO.0011.t
+	desc = ARO.0011.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0012
+				days = 28
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0011.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0012
+	title = ARO.0012.t
+	desc = ARO.0012.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0014
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0012.a
+		add_stability = -0.1
+		add_ideas = ARO_full_scale_political_panic
+		set_country_flag = ARO_factional_conflict_broke_out
+		country_event = ARO.0013
+		custom_effect_tooltip = ARO_internal_tense_level_up
+		add_to_variable = { ARO_internal_tense = 0.05 }
+	}
+}
+
+country_event = {	#
+	id = ARO.0013
+	title = ARO.0013.t
+	desc = ARO.0013.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0013.a
+		set_country_flag = ARO_chose_the_path_of_justice
+	}
+	
+	option = {
+		name = ARO.0013.b
+		set_country_flag = ARO_chose_the_path_of_tolerance
+	}
+	
+	option = {
+		name = ARO.0013.c
+		set_country_flag = ARO_chose_the_path_of_piety
+	}
+}
+
+country_event = {	#
+	id = ARO.0014
+	title = ARO.0014.t
+	desc = ARO.0014.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0121
+				days = 49
+			}
+			country_event = {
+				id = ARO.0131
+				days = 112
+			}
+			country_event = {
+				id = ARO.0151
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0014.a
+	}
+}
+
+###程宇陆入狱记###
+
+country_event = {	#
+	id = ARO.0101
+	title = ARO.0101.t
+	desc = ARO.0101.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0102
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0101.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0102
+	title = ARO.0102.t
+	desc = ARO.0102.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0103
+				days = 28
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0102.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0103
+	title = ARO.0103.t
+	desc = ARO.0103.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0104
+				days = 133
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0103.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0104
+	title = ARO.0104.t
+	desc = ARO.0104.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0105
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0104.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0105
+	title = ARO.0105.t
+	desc = ARO.0105.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0106
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0105.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0106
+	title = ARO.0106.t
+	desc = ARO.0106.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { ARO_popularity_republicans < 35 } }
+				country_event = {
+					id = ARO.0107
+					days = 42
+				}
+			}
+			else = {
+				set_country_flag = {
+					flag = ARO_Cheng_Yulu_Salvation
+					days = 15
+					value = 1
+				}
+				country_event = {
+					id = ARO.0108
+					days = 42
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0106.a
+		trigger = { NOT = { has_country_flag = ARO_Cheng_Yulu_Salvation } }
+		retire_character = ARO_Cheng_Yulu
+	}
+	
+	option = {
+		name = ARO.0106.b
+		trigger = { has_country_flag = ARO_Cheng_Yulu_Salvation }
+	}
+}
+
+country_event = {	#
+	id = ARO.0107
+	title = ARO.0107.t
+	desc = ARO.0107.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0107.a
+		add_manpower = -35
+	}
+}
+
+country_event = {	#
+	id = ARO.0108
+	title = ARO.0108.t
+	desc = ARO.0108.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0108.a
+		custom_effect_tooltip = ARO_satisfaction_down_minor_w
+		add_to_variable = { ARO_satisfaction_warmongers = -10 }
+	}
+}
+
+country_event = {	#
+	id = ARO.0111
+	title = ARO.0111.t
+	desc = ARO.0111.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0112
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0111.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0112
+	title = ARO.0112.t
+	desc = ARO.0112.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0113
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0112.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0113
+	title = ARO.0113.t
+	desc = ARO.0113.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0114
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0113.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0114
+	title = ARO.0114.t
+	desc = ARO.0114.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0115
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0114.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0115
+	title = ARO.0115.t
+	desc = ARO.0115.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0115.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0121
+	title = ARO.0121.t
+	desc = ARO.0121.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0122
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0121.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0122
+	title = ARO.0122.t
+	desc = ARO.0122.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0123
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0122.a
+		custom_effect_tooltip = ARO.0122.tt
+		add_popularity = {
+			ideology = religious_extremism
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {	#
+	id = ARO.0122
+	title = ARO.0122.t
+	desc = ARO.0122.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0123
+				days = 21
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0122.a
+		custom_effect_tooltip = ARO.0122.tt
+		add_popularity = {
+			ideology = religious_extremism
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {	#
+	id = ARO.0123
+	title = ARO.0123.t
+	desc = ARO.0123.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0125
+				days = 14
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0123.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0125
+	title = ARO.0125.t
+	desc = ARO.0125.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0125.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0131
+	title = ARO.0131.t
+	desc = ARO.0131.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0132
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0131.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0132
+	title = ARO.0132.t
+	desc = ARO.0132.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0133
+				days = 28
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0132.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0133
+	title = ARO.0133.t
+	desc = ARO.0133.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0134
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0133.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0134
+	title = ARO.0134.t
+	desc = ARO.0134.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0135
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0134.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0135
+	title = ARO.0135.t
+	desc = ARO.0135.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0136
+				days = 28
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0135.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0136
+	title = ARO.0136.t
+	desc = ARO.0136.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0137
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0136.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0137
+	title = ARO.0137.t
+	desc = ARO.0137.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0138
+				days = 28
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0137.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0138
+	title = ARO.0138.t
+	desc = ARO.0138.d
+	#picture = 
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ARO.0139
+				days = 35
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0138.a
+	}
+}
+
+country_event = {	#
+	id = ARO.0139
+	title = ARO.0139.t
+	desc = ARO.0139.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.0139.a
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+country_event = {	#就地枪决
+	id = ARO.1001
+	title = ARO.1001.t
+	desc = ARO.1001.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.1001.a
+		add_manpower = -1
+		custom_effect_tooltip = ARO_satisfaction_down_major_r
+		custom_effect_tooltip = ARO_purge_moderate_military_enterpreneurs_tt
+		add_to_variable = { ARO_satisfaction_republicans = -50 }
+		hidden_effect = {
+			retire_character = ARO_Fareblave_Leight
+		}
+	}
+}
+
+country_event = {
+	id = ARO.1002
+	title = ARO.1002.t
+	desc = ARO.1002.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.1002.a
+		custom_effect_tooltip = ARO_satisfaction_down_major_r
+		add_to_variable = { ARO_satisfaction_republicans = -50 }
+		add_political_power = 50
+		custom_effect_tooltip = ARO_threat_neutral_military_enterpreneurs_tt
+		set_country_flag = {
+			flag = ARO_threat_neutral_military_enterpreneurs_flag
+			days = 30
+			value = 1
+		}
+	}
+}
+
+
+country_event = {
+	id = ARO.1101
+	title = ARO.1101.t
+	desc = ARO.1101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.1101.a
+	}
+}
+
+country_event = {
+	id = ARO.1102
+	title = ARO.1102.t
+	desc = ARO.1102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.1102.a
+		country_event = ARO.1103
+	}
+}
+
+country_event = {
+	id = ARO.1103
+	title = ARO.1103.t
+	desc = ARO.1103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ARO.1103.a
+		add_manpower = -10
+		custom_effect_tooltip = ARO_satisfaction_down_major_w
+		add_to_variable = { ARO_satisfaction_warmongers = -50 }
+		custom_effect_tooltip = ARO_neutralize_warmonger_activists_tt
+		hidden_effect = { retire_character = ARO_Halifax_Kimmel }
+	}
+}
+
+###新闻###
+
+add_namespace = ARONews
+
+news_event = {
+	id = ARONews.1
+	title = ARONews.1.t
+	desc = ARONews.1.d
+	picture = GFX_news_event_generic
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ARONews.1.a
+	}
+}

@@ -1,0 +1,151 @@
+leader_traits = {
+
+	CBL_lucky_dude_with_great_ancestors = {		#伟大开拓者的后裔，中巴斯蒂亚各族人民的好朋友，其功绩与日月同辉的中巴斯蒂亚保卫者
+		random = no
+		
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_railway_family = {		#铁路世家
+		random = no
+		
+		production_speed_rail_way_factor = 0.15
+		production_speed_supply_node_factor = 0.05
+		political_power_gain = -0.2
+		min_export = 0.05
+
+		equipment_bonus = {
+			train_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_agriculture_oligarch = {		#农业寡头
+		random = no
+		
+		production_speed_industrial_complex_factor = -0.2
+		production_speed_arms_factory_factor = -0.2
+		consumer_goods_factor = -0.15
+		monthly_agricultural_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_rsu_mine_corp_ceo = {		#鲁萨尔矿业公司“总裁”
+		random = no
+		
+		consumer_goods_factor = 0.02
+		local_resources_factor = 0.1
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_wiesel_chariot = {		#维瑟尔战车
+		random = no
+		
+		production_speed_arms_factory_factor = 0.15
+		consumer_goods_factor = 0.05
+
+		equipment_bonus = {
+			light_tank_chassis = {
+				build_cost_ic = 0.05
+				soft_attack = 0.05
+				reliability_factor = 0.05
+				instant = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_hardworking_technocrat = {		#任劳任怨的技术官僚
+		random = no
+		
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.05
+		local_resources_factor = 0.1
+
+		research_bonus = {
+			excavation_tech = 0.05	
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_federal_human_rights_commissioner = {		#联邦人权委员会专员
+		random = no
+		
+		stability_factor = 0.05
+		conversion_cost_mil_to_civ_factor = -0.25
+		non_core_manpower = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_bureaucracy_informant = {		#官场“线人”
+		random = no
+		
+		stability_factor = -0.05
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_authoritarian_opposition = {		#威权反对派
+		random = no
+		
+		authoritarian_republican_drift = 0.03
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_son_of_hero = {		#英雄之子
+		random = no
+		
+		stability_factor = 0.05
+		army_org_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CBL_goldenhill_representatives = {		#金山群众代表
+		random = no
+		
+		stability_factor = 0.1
+		political_power_gain = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

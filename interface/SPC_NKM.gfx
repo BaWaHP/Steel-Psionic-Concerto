@@ -1,0 +1,18 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_NKM_yoshisuke_togo"
+		texturefile = "gfx/leaders/NKM/yoshisuke_togo.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_NKM_leader_of_uprising"
+		texturefile = "gfx/interface/traits/personal/trait_bold.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trait_NKM_leader_of_uprising"
+		texturefile = "gfx/interface/traits/personal/trait_cuts_corners.dds"
+		legacy_lazy_load = no
+	}
+}

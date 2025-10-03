@@ -1,0 +1,1454 @@
+characters={
+	SFR_YeWenshi = {		#叶文石
+		name = SFR_YeWenshi
+		portraits = {
+			civilian = {
+				large="GFX_SFR_YeWenshi"
+				small="GFX_idea_SFR_YeWenshi"
+			}
+			army = {
+				large="GFX_SFR_YeWenshi"
+				small="GFX_idea_SFR_YeWenshi"
+			}
+		}
+		country_leader = {
+			desc = "SFR_YeWenshi_desc"
+			ideology = revolutionary_front
+			traits = { SFR_tired_mediator }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { old_guard unyielding_defender }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	SFR_LinYouzhi = {		#林有志
+		name = SFR_LinYouzhi
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LinYouzhi"
+				small="GFX_idea_SFR_LinYouzhi"
+			}
+			army = {
+				large="GFX_SFR_LinYouzhi"
+				small="GFX_idea_SFR_LinYouzhi"
+			}
+		}
+		#country_leader = {
+		#	desc = "SFR_LinYouzhi_desc"
+		#	ideology = leftist_guerrilla_movement
+		#	traits = { SFR_soul_of_the_21st_army }
+		#	expire = "3000.1.1.1"
+		#	id = -1
+		#}
+		corps_commander = {
+			traits = { brilliant_strategist war_hero trait_reckless infantry_officer trait_mountaineer adaptable }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			desc = SFR_LinYouzhi_desc
+			slot = army_chief
+			idea_token = SFR_LinYouzhi_idea
+			traits = { SFR_revolution_hero SFR_front_protector }
+			cost = 200
+			can_be_fired = no
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ChenJian = {		#陈坚
+		name = SFR_ChenJian
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ChenJian"
+				small="GFX_idea_SFR_ChenJian"
+			}
+			army = {
+				large="GFX_SFR_ChenJian"
+				small="GFX_idea_SFR_ChenJian"
+			}
+		}
+		country_leader = {
+			desc = "SFR_ChenJian_desc"
+			ideology = pioneer_team_communism
+			traits = { SFR_invulnerable }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			traits = { harsh_leader infantry_officer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	SFR_ZhaoYongjun = {		#赵永军
+		name = SFR_ZhaoYongjun
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhaoYongjun"
+				small="GFX_idea_SFR_ZhaoYongjun"
+			}
+			army = {
+				large="GFX_SFR_ZhaoYongjun"
+				small="GFX_idea_SFR_ZhaoYongjun"
+			}
+		}
+		country_leader = {
+			desc = "SFR_ZhaoYongjun_desc"
+			ideology = agrarian_socialism
+			traits = { SFR_friend_of_farmers }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { brilliant_strategist infantry_officer commando trait_mountaineer }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+
+	SFR_LinQinlan = {		#刘青兰
+		name = SFR_LinQinlan
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LinQinlan"
+				small="GFX_idea_SFR_LinQinlan"
+			}
+			army = {
+				large="GFX_SFR_LinQinlan"
+				small="GFX_idea_SFR_LinQinlan"
+			}
+		}
+		country_leader = {
+			desc = "SFR_LinQinlan_desc"
+			ideology = democratic_socialism
+			traits = { SFR_friendly_chap }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "SFR_LinQinlan_desc"
+			ideology = humane_socialism
+			traits = { SFR_friendly_chap }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	SFR_ZhangYixin = {		#张一心
+		name = SFR_ZhangYixin
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhangYixin"
+				small="GFX_idea_SFR_ZhangYixin"
+			}
+			army = {
+				large="GFX_SFR_ZhangYixin"
+				small="GFX_idea_SFR_ZhangYixin"
+			}
+		}
+		country_leader = {
+			desc = "SFR_ZhangYixin_desc_2"
+			ideology = radical_republican
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			desc = "SFR_ZhangYixin_desc_1"
+			ideology = military_dictatorship
+			traits = { SFR_not_welcomed }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	SFR_XuHongbo = {		#徐洪波
+		name = SFR_XuHongbo
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_XuHongbo"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_XuHongbo"
+			}
+		}
+	}
+
+	SFR_LinHongyun = {		#林洪云
+		name = SFR_LinHongyun
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LinHongyun"
+				small="GFX_idea_SFR_LinHongyun"
+			}
+			army = {
+				large="GFX_SFR_LinHongyun"
+				small="GFX_idea_SFR_LinHongyun"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			traits = {
+				infantry_officer
+				commando
+				trait_mountaineer
+				ranger
+			}
+		}
+		advisor = {	
+			slot = high_command
+			idea_token = SFR_LinHongyun_idea
+			ledger = army
+			traits = { army_commando_2 }
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SFR_ZhaoTieshan = {		#赵铁山
+		name = SFR_ZhaoTieshan
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhaoTieshan"
+				small="GFX_idea_SFR_ZhaoTieshan"
+			}
+			army = {
+				large="GFX_SFR_ZhaoTieshan"
+				small="GFX_idea_SFR_ZhaoTieshan"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				cavalry_officer
+				inflexible_strategist
+				organizer
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SFR_ZhaoTieshan_idea
+			traits = { army_chief_defensive_2 }
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SFR_SuBaihe = {		#苏白河
+		name = SFR_SuBaihe
+		portraits = {
+			civilian = {
+				large="GFX_SFR_SuBaihe"
+				small="GFX_idea_SFR_SuBaihe"
+			}
+			army = {
+				large="GFX_SFR_SuBaihe"
+				small="GFX_idea_SFR_SuBaihe"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				career_officer
+				trait_cautious
+				infantry_officer
+				swamp_fox
+			}
+		}
+	}
+
+	SFR_ChenQimin = {		#陈启明
+		name = SFR_ChenQimin
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ChenQimin"
+				small="GFX_idea_SFR_ChenQimin"
+			}
+			army = {
+				large="GFX_SFR_ChenQimin"
+				small="GFX_idea_SFR_ChenQimin"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				war_hero
+				brilliant_strategist
+				trickster
+				urban_assault_specialist
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SFR_ChenQimin_idea
+			traits = { army_chief_organizational_3 }
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SFR_WuQiuyue = {		#吴秋月
+		name = SFR_WuQiuyue
+		portraits = {
+			civilian = {
+				large="GFX_SFR_WuQiuyue"
+				small="GFX_idea_SFR_WuQiuyue"
+			}
+			army = {
+				large="GFX_SFR_WuQiuyue"
+				small="GFX_idea_SFR_WuQiuyue"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {
+				old_guard
+				harsh_leader
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SFR_WuQiuyue_idea
+			traits = { army_chief_planning_2 }
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SFR_ZhangBeidou = {		#张北斗
+		name = SFR_ZhangBeidou
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhangBeidou"
+				small="GFX_idea_SFR_ZhangBeidou"
+			}
+			army = {
+				large="GFX_SFR_ZhangBeidou"
+				small="GFX_idea_SFR_ZhangBeidou"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				career_officer
+				infantry_officer
+				engineer_officer
+				organizer
+				skilled_staffer
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = SFR_ZhaoTieshan_idea
+			traits = { army_chief_reform_3 }
+			cost = 100
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+
+	SFR_TangHongyin = {		#唐红缨
+		name = SFR_TangHongyin
+		portraits = {
+			civilian = {
+				large="GFX_SFR_TangHongyin"
+				small="GFX_idea_SFR_TangHongyin"
+			}
+			army = {
+				large="GFX_SFR_TangHongyin"
+				small="GFX_idea_SFR_TangHongyin"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				infantry_officer
+				irregulars_officer
+			}
+		}
+	}
+
+	SFR_ZhouTiegui = {		#周铁轨
+		name = SFR_ZhouTiegui
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhouTiegui"
+				small="GFX_idea_SFR_ZhouTiegui"
+			}
+			army = {
+				large="GFX_SFR_ZhouTiegui"
+				small="GFX_idea_SFR_ZhouTiegui"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+			traits = {
+				trait_cautious
+				engineer_officer
+			}
+		}
+	}
+
+	SFR_FangQingnang = {		#方青囊
+		name = SFR_FangQingnang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_FangQingnang"
+				small="GFX_idea_SFR_FangQingnang"
+			}
+			army = {
+				large="GFX_SFR_FangQingnang"
+				small="GFX_idea_SFR_FangQingnang"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { organizer }
+		}
+	}
+
+	SFR_LuJinglei = {		#陆惊雷
+		name = SFR_LuJinglei
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LuJinglei"
+				small="GFX_idea_SFR_LuJinglei"
+			}
+			army = {
+				large="GFX_SFR_LuJinglei"
+				small="GFX_idea_SFR_LuJinglei"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { commando }
+		}
+	}
+
+	SFR_QiHongshan = {		#齐红杉
+		name = SFR_QiHongshan
+		portraits = {
+			civilian = {
+				large="GFX_SFR_QiHongshan"
+				small="GFX_idea_SFR_QiHongshan"
+			}
+			army = {
+				large="GFX_SFR_QiHongshan"
+				small="GFX_idea_SFR_QiHongshan"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { ranger }
+		}
+	}
+
+	SFR_WeiHanjiang = {		#魏寒江
+		name = SFR_WeiHanjiang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_WeiHanjiang"
+				small="GFX_idea_SFR_WeiHanjiang"
+			}
+			army = {
+				large="GFX_SFR_WeiHanjiang"
+				small="GFX_idea_SFR_WeiHanjiang"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { winter_specialist }
+		}
+	}
+
+	SFR_ShiKaijia = {		#石开甲
+		name = SFR_ShiKaijia
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ShiKaijia"
+				small="GFX_idea_SFR_ShiKaijia"
+			}
+			army = {
+				large="GFX_SFR_ShiKaijia"
+				small="GFX_idea_SFR_ShiKaijia"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { bearer_of_artillery }
+		}
+	}
+
+	SFR_NieChixiao = {		#聂赤霄
+		name = SFR_NieChixiao
+		portraits = {
+			civilian = {
+				large="GFX_SFR_NieChixiao"
+				small="GFX_idea_SFR_NieChixiao"
+			}
+			army = {
+				large="GFX_SFR_NieChixiao"
+				small="GFX_idea_SFR_NieChixiao"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {}
+		}
+	}
+
+	SFR_ChenJianfeng = {		#陈剑锋
+		name = SFR_ChenJianfeng
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ChenJianfeng"
+				small="GFX_idea_SFR_ChenJianfeng"
+			}
+			army = {
+				large="GFX_SFR_ChenJianfeng"
+				small="GFX_idea_SFR_ChenJianfeng"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_ChenJianfeng_idea
+			traits = { army_CombinedArms_1 }
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_FangMingyuan = {		#方明远
+		name = SFR_FangMingyuan
+		portraits = {
+			civilian = {
+				large="GFX_SFR_FangMingyuan"
+				small="GFX_idea_SFR_FangMingyuan"
+			}
+			army = {
+				large="GFX_SFR_FangMingyuan"
+				small="GFX_idea_SFR_FangMingyuan"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_FangMingyuan_idea
+			traits = { army_regrouping_3 }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ZhouHailan = {		#周海澜
+		name = SFR_ZhouHailan
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhouHailan"
+				small="GFX_idea_SFR_ZhouHailan"
+			}
+			army = {
+				large="GFX_SFR_ZhouHailan"
+				small="GFX_idea_SFR_ZhouHailan"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_ZhouHailan_idea
+			traits = { army_concealment_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ZhengTiechui = {		#郑铁锤
+		name = SFR_ZhengTiechui
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhengTiechui"
+				small="GFX_idea_SFR_ZhengTiechui"
+			}
+			army = {
+				large="GFX_SFR_ZhengTiechui"
+				small="GFX_idea_SFR_ZhengTiechui"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_ZhengTiechui_idea
+			traits = { army_logistics_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	SFR_Baihua = {		#白桦
+		name = SFR_Baihua
+		portraits = {
+			civilian = {
+				large="GFX_SFR_Baihua"
+				small="GFX_idea_SFR_Baihua"
+			}
+			army = {
+				large="GFX_SFR_Baihua"
+				small="GFX_idea_SFR_Baihua"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_Baihua_idea
+			traits = { army_cavalry_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_CaiJuemin = {		#蔡觉民
+		name = SFR_CaiJuemin
+		portraits = {
+			civilian = {
+				large="GFX_SFR_CaiJuemin"
+				small="GFX_idea_SFR_CaiJuemin"
+			}
+			army = {
+				large="GFX_SFR_CaiJuemin"
+				small="GFX_idea_SFR_CaiJuemin"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_CaiJuemin_idea
+			traits = { army_artillery_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_HeJingtao = {		#贺惊涛
+		name = SFR_HeJingtao
+		portraits = {
+			civilian = {
+				large="GFX_SFR_HeJingtao"
+				small="GFX_idea_SFR_HeJingtao"
+			}
+			army = {
+				large="GFX_SFR_HeJingtao"
+				small="GFX_idea_SFR_HeJingtao"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_HeJingtao_idea
+			traits = { army_infantry_3 }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ZhouTianYi = {		#周天翼
+		name = SFR_ZhouTianYi
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhouTianYi"
+				small="GFX_idea_SFR_ZhouTianYi"
+			}
+			army = {
+				large="GFX_SFR_ZhouTianYi"
+				small="GFX_idea_SFR_ZhouTianYi"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SFR_ZhouTianYi_idea
+			traits = { air_chief_reform_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_LinMoyun = {		#林沐
+		name = SFR_LinMoyun
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LinMoyun"
+				small="GFX_idea_SFR_LinMoyun"
+			}
+			army = {
+				large="GFX_SFR_LinMoyun"
+				small="GFX_idea_SFR_LinMoyun"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SFR_ZhouTianYi_idea
+			traits = { air_chief_safety_2 }
+			cost = 150
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_WuZhenxiao = {		#吴震霄
+		name = SFR_WuZhenxiao
+		portraits = {
+			civilian = {
+				large="GFX_SFR_WuZhenxiao"
+				small="GFX_idea_SFR_WuZhenxiao"
+			}
+			army = {
+				large="GFX_SFR_WuZhenxiao"
+				small="GFX_idea_SFR_WuZhenxiao"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SFR_ZhouTianYi_idea
+			traits = { air_chief_all_weather_3 }
+			cost = 200
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ShenYanhui = {		#沈雁回
+		name = SFR_ShenYanhui
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ShenYanhui"
+				small="GFX_idea_SFR_ShenYanhui"
+			}
+			army = {
+				large="GFX_SFR_ShenYanhui"
+				small="GFX_idea_SFR_ShenYanhui"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = SFR_ZhouTianYi_idea
+			traits = { air_chief_ground_support_2 }
+			cost = 150
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_QingYuanfeng = {		#秦远峰
+		name = SFR_QingYuanfeng
+		portraits = {
+			civilian = {
+				large="GFX_SFR_QingYuanfeng"
+				small="GFX_idea_SFR_QingYuanfeng"
+			}
+			army = {
+				large="GFX_SFR_QingYuanfeng"
+				small="GFX_idea_SFR_QingYuanfeng"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_QingYuanfeng_idea
+			traits = { air_close_air_support_2 }
+			cost = 150
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_HeShaoyang = {		#何昭阳
+		name = SFR_HeShaoyang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_HeShaoyang"
+				small="GFX_idea_SFR_HeShaoyang"
+			}
+			army = {
+				large="GFX_SFR_HeShaoyang"
+				small="GFX_idea_SFR_HeShaoyang"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_HeShaoyang_idea
+			traits = { air_airborne_1 }
+			cost = 50
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_XieChangkong = {		#谢长空
+		name = SFR_XieChangkong
+		portraits = {
+			civilian = {
+				large="GFX_SFR_XieChangkong"
+				small="GFX_idea_SFR_XieChangkong"
+			}
+			army = {
+				large="GFX_SFR_XieChangkong"
+				small="GFX_idea_SFR_XieChangkong"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_XieChangkong_idea
+			traits = { air_air_superiority_3 }
+			cost = 200
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_XuYuanyang = {		#徐远洋
+		name = SFR_XuYuanyang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_XuYuanyang"
+				small="GFX_idea_SFR_XuYuanyang"
+			}
+			army = {
+				large="GFX_SFR_XuYuanyang"
+				small="GFX_idea_SFR_XuYuanyang"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			traits = { bold aviation_enthusiast }
+			visible = { always = no }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SFR_XuYuanyang_idea
+			traits = { navy_chief_naval_aviation_2 }
+			cost = 150
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_FangZhenhai = {		#刘无疆
+		name = SFR_FangZhenhai
+		portraits = {
+			civilian = {
+				large="GFX_SFR_FangZhenhai"
+				small="GFX_idea_SFR_FangZhenhai"
+			}
+			army = {
+				large="GFX_SFR_FangZhenhai"
+				small="GFX_idea_SFR_FangZhenhai"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = { gentlemanly seawolf }
+			visible = { always = no }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SFR_XuYuanyang_idea
+			traits = { navy_chief_commerce_raiding_2 }
+			cost = 150
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_LuHongzhou = {		#陆红舟
+		name = SFR_LuHongzhou
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LuHongzhou"
+				small="GFX_idea_SFR_LuHongzhou"
+			}
+			army = {
+				large="GFX_SFR_LuHongzhou"
+				small="GFX_idea_SFR_LuHongzhou"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SFR_LuHongzhou_idea
+			traits = { navy_chief_reform_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_ChengWanli = {		#程万里
+		name = SFR_ChengWanli
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 2
+			traits = { career_officer }
+			visible = { always = no }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SFR_ChengWanli_idea
+			traits = { navy_chief_maneuver_2 }
+			cost = 100
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_QiuHangfeng = {		#邱海锋
+		name = SFR_QiuHangfeng
+		portraits = {
+			civilian = {
+				large="GFX_SFR_QiuHangfeng"
+				small="GFX_idea_SFR_QiuHangfeng"
+			}
+			army = {
+				large="GFX_SFR_QiuHangfeng"
+				small="GFX_idea_SFR_QiuHangfeng"
+			}
+		}
+		navy_leader = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			traits = { battleship_adherent }
+			visible = { always = no }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = SFR_ChengWanli_idea
+			traits = { navy_chief_decisive_battle_1 }
+			cost = 50
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_GaoLinbo = {		#高临波
+		name = SFR_GaoLinbo
+		portraits = {
+			civilian = {
+				large="GFX_SFR_GaoLinbo"
+				small="GFX_idea_SFR_GaoLinbo"
+			}
+			army = {
+				large="GFX_SFR_GaoLinbo"
+				small="GFX_idea_SFR_GaoLinbo"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+			visible = { always = no }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_ChengWanli_idea
+			traits = { navy_fleet_logistics_1 }
+			cost = 50
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SFR_YeXiangtao = {		#叶向涛
+		name = SFR_YeXiangtao
+		portraits = {
+			civilian = {
+				large="GFX_SFR_YeXiangtao"
+				small="GFX_idea_SFR_YeXiangtao"
+			}
+			army = {
+				large="GFX_SFR_YeXiangtao"
+				small="GFX_idea_SFR_YeXiangtao"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+			visible = { always = no }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_YeXiangtao_idea
+			traits = { navy_amphibious_assault_1 }
+			cost = 50
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SFR_HanDinyang = {		#韩定洋
+		name = SFR_HanDinyang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_HanDinyang"
+				small="GFX_idea_SFR_HanDinyang"
+			}
+			army = {
+				large="GFX_SFR_HanDinyang"
+				small="GFX_idea_SFR_HanDinyang"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+			visible = { always = no }
+		}
+	}
+	SFR_SongLifeng = {		#宋立锋
+		name = SFR_SongLifeng
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SFR_SongLifeng_idea
+			traits = { navy_submarine_2 }
+			cost = 100
+			visible = { always = no }
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SFR_LiaoChilang = {		#廖赤浪
+		name = SFR_LiaoChilang
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LiaoChilang"
+				small="GFX_idea_SFR_LiaoChilang"
+			}
+			army = {
+				large="GFX_SFR_LiaoChilang"
+				small="GFX_idea_SFR_LiaoChilang"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SFR_LiaoChilang_idea
+			ledger = army
+			traits = { military_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SFR_ChengZhenhai = {		#程镇海
+		name = SFR_ChengZhenhai
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ChengZhenhai"
+				small="GFX_idea_SFR_ChengZhenhai"
+			}
+			army = {
+				large="GFX_SFR_ChengZhenhai"
+				small="GFX_idea_SFR_ChengZhenhai"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SFR_ChengZhenhai_idea
+			ledger = navy
+			traits = { naval_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SFR_LinQiulu = {		#林穹庐
+		name = SFR_LinQiulu
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LinQiulu"
+				small="GFX_idea_SFR_LinQiulu"
+			}
+			army = {
+				large="GFX_SFR_LinQiulu"
+				small="GFX_idea_SFR_LinQiulu"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SFR_LinQiulu_idea
+			ledger = air
+			traits = { air_warfare_theorist }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SFR_JiangMingzhe = {		#江明哲
+		name = SFR_JiangMingzhe
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_JiangMingzhe"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_JiangMingzhe"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_JiangMingzhe_idea
+   			traits = { ideological_crusader silent_workhorse }
+   		}
+	}
+	SFR_LuWenyin = {		#陆文茵
+		name = SFR_LuWenyin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_LuWenyin"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_LuWenyin"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = political_advisor
+			idea_token = SFR_LuWenyin_idea
+   			traits = { red_suffragette education_expert }
+   		}
+	}
+	SFR_FangJimin = {		#方济民
+		name = SFR_FangJimin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_FangJimin"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_FangJimin"
+			}
+		}
+		advisor = {
+			cost = 250
+			slot = political_advisor
+			idea_token = SFR_FangJimin_idea
+   			traits = { economy_expert captain_of_industry }
+   		}
+	}
+	SFR_ZhouHongmei = {		#周红梅
+		name = SFR_ZhouHongmei
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ZhouHongmei"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ZhouHongmei"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_ZhouHongmei_idea
+   			traits = { SFR_underground_network_leader }
+   		}
+	}
+	SFR_ChenJuexin = {		#陈觉新
+		name = SFR_ChenJuexin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ChenJuexin"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ChenJuexin"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_ChenJuexin_idea
+   			traits = { propaganda_master smooth_talking_dude }
+   		}
+	}
+	SFR_ShenSheng = {		#沈声
+		name = SFR_ShenSheng
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ShenSheng"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ShenSheng"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_ShenSheng_idea
+   			traits = { backroom_backstabber SFR_mental_war_expert }
+   		}
+	}
+	SFR_WuZhenggang = {		#吴正纲
+		name = SFR_WuZhenggang
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_WuZhenggang"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_WuZhenggang"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_WuZhenggang_idea
+   			traits = { ICE_judge_and_editor SFR_law_expert }
+   		}
+	}
+	SFR_LinShaobai = {		#林少白
+		name = SFR_LinShaobai
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_LinShaobai"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_LinShaobai"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_LinShaobai_idea
+   			traits = { mature_technocrat magic_expert }
+   		}
+	}
+	SFR_SuJinqiu = {		#苏静秋
+		name = SFR_SuJinqiu
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_SuJinqiu"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_SuJinqiu"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_SuJinqiu_idea
+   			traits = { SFR_principal_of_workers_school }
+   		}
+	}
+	SFR_ZhaoGeng = {		#赵耕
+		name = SFR_ZhaoGeng
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ZhaoGeng"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_ZhaoGeng"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_ZhaoGeng_idea
+   			traits = { agriculture_and_geology_speicalist }
+   		}
+	}
+	SFR_HeHong = {		#何红
+		name = SFR_HeHong
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_HeHong"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_SFR_HeHong"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SFR_HeHong_idea
+   			traits = { gallant_doctor SFR_battle_field_med_expert }
+   		}
+	}
+}

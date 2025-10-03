@@ -1,0 +1,24 @@
+
+state={
+	id=170
+	name="STATE_170"
+	provinces={
+		11344 18290 18386 18420 18467 18512 18573 
+	}
+	history = {
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			11344 20
+		}
+	}
+	manpower = 4206744
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=146
+	name="STATE_146"
+	resources = {
+		magic_crystal = 24
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			16746 1
+		}
+		victory_points = {
+			16441 1
+		}
+		victory_points = {
+			16346 1
+		}
+
+	}
+
+	provinces={
+		1692 6774 7929 16224 16325 16346 16360 16429 16441 16476 16542 16575 16620 16746 16823 
+	}
+	manpower=2180000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

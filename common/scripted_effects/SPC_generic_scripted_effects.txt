@@ -1,0 +1,172 @@
+add_to_ROOT_potential_cores = {
+	custom_effect_tooltip = add_to_ROOT_potential_cores_TT
+	hidden_effect = {
+		add_to_array = {
+			ROOT.potential_cores = var:original_tag
+		}
+		ROOT = {
+			force_potential_core_resistance_on_all_states = yes
+		}
+	}
+}
+
+add_to_ROOT_unpotential_cores = {
+	add_to_array = {
+		ROOT.unpotential_cores = THIS.id
+	}
+}
+
+add_to_ROOT_potential_decision_cores = {
+	add_to_array = {
+		ROOT.potential_decision_cores = THIS.id
+	}
+}
+
+core_all_occupied_through_compliance = {
+	every_owned_state = {
+		limit = {
+			NOT = { compliance < 40 }
+			can_core_nation_through_compliance_state_ROOT = yes
+			cannot_core_state_through_compliance_state_ROOT = yes
+		}
+		add_core_of = ROOT
+	}
+}
+
+force_potential_core_resistance_on_all_states = {
+	every_controlled_state = {
+		force_potential_core_resistance_on_state = yes
+	}
+}
+
+force_potential_core_resistance_on_state = {
+	if = {
+		limit = { has_resistance = yes }
+
+		clear_variable = potential_core
+		clear_variable = potential_core_already_occupying
+		for_each_loop = {
+			array = core_countries
+			set_variable = { potential_core = v }
+			if = {
+				limit = {
+					occupied_country_tag = v
+				}
+				set_variable = { potential_core_already_occupying = 1 }
+			}
+			set_temp_variable = { break = 1 }
+		} 
+		if = {
+			limit = {
+				NOT = { has_variable = potential_core_already_occupying }
+				has_variable = potential_core
+			}
+			set_variable = { target_occupied_country = potential_core }
+			set_variable = { compliance_old = compliance }
+			set_variable = { resistance_old = resistance }
+
+			start_resistance = yes
+			clear_variable = target_occupied_country
+			set_compliance = var:compliance_old
+			set_resistance = var:resistance_old
+
+			if = {
+				limit = { has_resistance = no }
+				start_resistance = yes
+				set_compliance = var:compliance_old
+				set_resistance = var:resistance_old
+			}
+
+			clear_variable = compliance_old
+			clear_variable = resistance_old
+		}
+		clear_variable = potential_core
+		clear_variable = potential_core_already_occupying
+	}
+}
+
+SPC_state_category_up_effect = {
+	if = {
+		limit = { has_state_category = wasteland }
+		set_state_category = pastoral
+	}
+	if = {
+		limit = { has_state_category = enclave }
+		set_state_category = pastoral
+	}
+	if = {
+		limit = { has_state_category = tiny_island }
+		set_state_category = small_island
+	}
+	if = {
+		limit = { has_state_category = pastoral }
+		set_state_category = rural
+	}
+	if = {
+		limit = { has_state_category = small_island }
+		set_state_category = rural
+	}
+	if = {
+		limit = { has_state_category = rural }
+		set_state_category = town
+	}
+	if = {
+		limit = { has_state_category = town }
+		set_state_category = large_town
+	}
+	if = {
+		limit = { has_state_category = large_town }
+		set_state_category = city
+	}
+	if = {
+		limit = { has_state_category = city }
+		set_state_category = large_city
+	}
+	if = {
+		limit = { has_state_category = large_city }
+		set_state_category = metropolis
+	}
+	if = {
+		limit = { has_state_category = metropolis }
+		set_state_category = megalopolis
+	}
+	if = {
+		limit = { has_state_category = megalopolis }
+		add_extra_state_shared_building_slots = 1
+	}
+}
+
+SPC_state_category_down_effect = {
+	if = {
+		limit = { has_state_category = megalopolis }
+		set_state_category = metropolis
+	}
+	if = {
+		limit = { has_state_category = metropolis }
+		set_state_category = large_city
+	}
+	if = {
+		limit = { has_state_category = large_city }
+		set_state_category = city
+	}
+	if = {
+		limit = { has_state_category = city }
+		set_state_category = large_town
+	}
+	if = {
+		limit = { has_state_category = large_town }
+		set_state_category = town
+	}
+	if = {
+		limit = { has_state_category = town }
+		set_state_category = rural
+	}
+	if = {
+		limit = { has_state_category = rural }
+		set_state_category = pastoral
+	}
+	if = {
+		limit = { has_state_category = pastoral }
+		set_state_category = wasteland
+	}
+}

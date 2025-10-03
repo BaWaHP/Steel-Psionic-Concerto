@@ -1,0 +1,32 @@
+
+state={
+	id=324
+	name="STATE_324"
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			arms_factory = 2
+			dockyard = 2
+			air_base = 4
+			4349 = {
+				naval_base = 6
+				coastal_bunker = 3
+			}
+		}
+		victory_points = {
+			20704 40
+		}
+	}
+
+	provinces={
+		1229 1826 2603 3782 4349 9538 9736 20704 20735 20785 20814 
+	}
+	manpower = 20300000
+	buildings_max_level_factor=1.000
+	state_category = megalopolis
+	local_supplies=1.000
+}

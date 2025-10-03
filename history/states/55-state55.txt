@@ -1,0 +1,24 @@
+
+state={
+	id=55
+	name="STATE_55"
+	provinces={
+		173 2790 2835 4862 7976 16626 16710 16856 16881 16895 17037 17191 
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		add_claim_by = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			4862 3
+		}
+	}
+	manpower=990000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,23 @@
+characters={
+	
+	#迪特里希·蒂·林茨
+	FEJ_dietrich_t_linz = {
+		name = FEJ_dietrich_t_linz
+		portraits = {
+			civilian = {
+				large="GFX_FEJ_dietrich_t_linz"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_FEJ_dietrich_t_linz"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = paternal_conservatism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

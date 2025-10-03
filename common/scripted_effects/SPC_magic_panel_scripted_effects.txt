@@ -1,0 +1,212 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+SPC_magic_panel_startup = {
+	set_variable = { magic_research_point = 0 }
+	set_variable = { basic_magic_research_point_monthly = 100 }
+	set_variable = { state_development_bonus_on_mp_points = 0 }
+	set_variable = { other_mp_points_modifier = 0 }
+	set_variable = { other_mp_points_count_change = 0 }
+	set_variable = { final_magic_research_point_monthly = 0 }
+	SPC_magic_panel_variable_update = yes
+	SPC_magic_panel_state_development_calculate = yes
+}
+
+#20, 15, 10, 5, 0, -2, -4, -6
+
+SPC_magic_panel_state_development_calculate = {
+	set_variable = { state_development_bonus_on_mp_points = 0 }
+	set_variable = { state_development_level_percent_count = 0 }
+	set_variable = { state_development_level_capital_count = 0 }
+	capital_scope = {
+		if = {
+			limit = {
+				check_variable = { state_magic_level = 0 }
+			}
+			add_to_variable = { PREV.state_development_level_capital_count = 0 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 1 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 0 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 2 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 0 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 3 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 0 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 4 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 1 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 5 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 2 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 6 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 3 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 7 }
+			}	
+			add_to_variable = { PREV.state_development_level_capital_count = 4 }	
+		}			
+	}
+	every_owned_state = {
+		if = {
+			limit = {
+				check_variable = { state_magic_level = 0 }
+			}
+			add_to_variable = { PREV.state_development_level_percent_count = -0.6 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 1 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = -0.4 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 2 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = -0.2 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 3 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = 0 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 4 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = 0.5 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 5 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = 1 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 6 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = 1.5 }	
+		}
+		else_if = {
+			limit = {
+				check_variable = { state_magic_level = 7 }
+			}	
+			add_to_variable = { PREV.state_development_level_percent_count = 2 }	
+		}	
+	}
+	add_to_variable = { state_development_bonus_on_mp_points = state_development_level_percent_count }
+	add_to_variable = { state_development_bonus_on_mp_points = state_development_level_capital_count }
+}
+
+SPC_magic_panel_variable_update = {
+	set_variable = { amount_of_data_added_to_mp_points = basic_magic_research_point_monthly }
+	###普及度所带来的修正###
+	SPC_magic_panel_state_development_calculate = yes
+	#set_variable = { state_development_bonus_on_mp_points_temp = basic_magic_research_point_monthly }
+	#multiply_variable = { state_development_bonus_on_mp_points_temp = state_development_bonus_on_mp_points }
+	#multiply_variable = { state_development_bonus_on_mp_points = 100 }
+	add_to_variable = { amount_of_data_added_to_mp_points = state_development_bonus_on_mp_points }
+	###直接数值修正###
+	add_to_variable = { amount_of_data_added_to_mp_points = other_mp_points_count_change }
+	###结果###
+	set_variable = { final_magic_research_point_monthly = amount_of_data_added_to_mp_points }
+	set_variable = {
+		state_development_bonus_on_mp_points_for_show = state_development_bonus_on_mp_points
+	}
+}
+
+SPC_magic_panel_data_update = {
+	add_to_variable = { magic_research_point = final_magic_research_point_monthly }
+}
+
+SPC_MP_research_startup = {
+	set_variable = { MP_research_level_1_1 = 0 }
+	set_variable = { MP_research_level_1_1_fixed = 0 }
+	set_variable = { MP_research_level_1_2 = 0 }
+	set_variable = { MP_research_level_1_2_fixed = 0 }
+	set_variable = { MP_research_level_1_3 = 0 }
+	set_variable = { MP_research_level_1_3_fixed = 0 }
+	set_variable = { MP_research_level_1_4 = 0 }
+	set_variable = { MP_research_level_1_4_fixed = 0 }
+	set_variable = { MP_research_level_1_5 = 0 }
+	set_variable = { MP_research_level_1_5_fixed = 0 }
+	set_variable = { MP_research_level_2_1 = 0 }
+	set_variable = { MP_research_level_2_1_fixed = 0 }
+	set_variable = { MP_research_level_2_2 = 0 }
+	set_variable = { MP_research_level_2_2_fixed = 0 }
+	set_variable = { MP_research_level_2_3 = 0 }
+	set_variable = { MP_research_level_2_3_fixed = 0 }
+	set_variable = { MP_research_level_2_4 = 0 }
+	set_variable = { MP_research_level_2_4_fixed = 0 }
+	set_variable = { MP_research_level_2_5 = 0 }
+	set_variable = { MP_research_level_2_5_fixed = 0 }
+	set_variable = { MP_research_level_3_1 = 0 }
+	set_variable = { MP_research_level_3_1_fixed = 0 }
+	set_variable = { MP_research_level_3_2 = 0 }
+	set_variable = { MP_research_level_3_2_fixed = 0 }
+	set_variable = { MP_research_level_3_3 = 0 }
+	set_variable = { MP_research_level_3_3_fixed = 0 }
+	set_variable = { MP_research_level_3_4 = 0 }
+	set_variable = { MP_research_level_3_4_fixed = 0 }
+	set_variable = { MP_research_level_3_5 = 0 }
+	set_variable = { MP_research_level_3_5_fixed = 0 }
+	set_variable = { MP_research_level_4_1 = 0 }
+	set_variable = { MP_research_level_4_1_fixed = 0 }
+	set_variable = { MP_research_level_4_2 = 0 }
+	set_variable = { MP_research_level_4_2_fixed = 0 }
+	set_variable = { MP_research_level_4_3 = 0 }
+	set_variable = { MP_research_level_4_3_fixed = 0 }
+	set_variable = { MP_research_level_4_4 = 0 }
+	set_variable = { MP_research_level_4_4_fixed = 0 }
+	set_variable = { MP_research_level_4_5 = 0 }
+	set_variable = { MP_research_level_4_5_fixed = 0 }
+	set_variable = { MP_research_level_5_1 = 0 }
+	set_variable = { MP_research_level_5_1_fixed = 0 }
+	set_variable = { MP_research_level_5_2 = 0 }
+	set_variable = { MP_research_level_5_2_fixed = 0 }
+	set_variable = { MP_research_level_5_3 = 0 }
+	set_variable = { MP_research_level_5_3_fixed = 0 }
+	set_variable = { MP_research_level_5_4 = 0 }
+	set_variable = { MP_research_level_5_4_fixed = 0 }
+	set_variable = { MP_research_level_5_5 = 0 }
+	set_variable = { MP_research_level_5_5_fixed = 0 }
+}

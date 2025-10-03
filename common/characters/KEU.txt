@@ -1,0 +1,165 @@
+characters={
+
+   	KEU_Merciful_Overlord = {		#慈悲大王
+   		name = KEU_Merciful_Overlord
+   		portraits = {
+   			civilian = {
+   				large="GFX_KEU_Merciful_Overlord"
+   				small="GFX_idea_KEU_Merciful_Overlord"
+   			}
+   			army = {
+				large="GFX_KEU_Merciful_Overlord"
+				small="GFX_idea_KEU_Merciful_Overlord"
+   			}
+   		}
+   		country_leader = {
+   			ideology = magician_dictatorship
+   			traits = {
+				great_necromancer
+   			}
+			desc = KEU_Merciful_Overlord_desc
+   			expire = "1998.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	KEU_Quirathka_Butagn = {		#奇拉卡-布旦
+		name = KEU_Quirathka_Butagn
+		portraits = {
+   			civilian = {
+   				large="GFX_KEU_Quirathka_Butagn"
+   				small="GFX_idea_KEU_Quirathka_Butagn"
+   			}
+   			army = {
+				large="GFX_KEU_Quirathka_Butagn"
+				small="GFX_idea_KEU_Quirathka_Butagn"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+			allowed = {
+				original_tag = KEU
+			}
+			traits = {
+			}
+			removal_cost = 1000
+			idea_token = KEU_Quirathka_Butagn_idea
+			desc = KEU_Quirathka_Butagn_desc
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KEU_Urru_Maluv = {		#乌鲁·马鲁
+		name = KEU_Urru_Maluv
+		portraits = {
+   			civilian = {
+   				large="GFX_KEU_Urru_Maluv"
+   				small="GFX_idea_KEU_Urru_Maluv"
+   			}
+   			army = {
+				large="GFX_KEU_Urru_Maluv"
+				small="GFX_idea_KEU_Urru_Maluv"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+
+			allowed = {
+				original_tag = KEU
+			}
+			traits = {
+			}
+			removal_cost = 1000
+			idea_token = KEU_Urru_Maluv_idea
+			desc = KEU_Urru_Maluv_desc
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KEU_Dhjikha_Phalabr = {		#德日喀-法拉巴
+		name = KEU_Dhjikha_Phalabr
+		portraits = {
+   			civilian = {
+   				large="GFX_KEU_Dhjikha_Phalabr"
+   				small="GFX_idea_KEU_Dhjikha_Phalabr"
+   			}
+   			army = {
+				large="GFX_KEU_Dhjikha_Phalabr"
+				small="GFX_idea_KEU_Dhjikha_Phalabr"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+
+			allowed = {
+				original_tag = KEU
+			}
+			traits = {
+			}
+			removal_cost = 1000
+			idea_token = KEU_Dhjikha_Phalabr_idea
+			desc = KEU_Dhjikha_Phalabr_desc
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	KEU_He_Hongmei = {		#贺红梅
+		name = KEU_He_Hongmei
+		portraits = {
+   			civilian = {
+   				large="GFX_KEU_He_Hongmei"
+   				small="GFX_idea_KEU_He_Hongmei"
+   			}
+   			army = {
+				large="GFX_KEU_He_Hongmei"
+				small="GFX_idea_KEU_He_Hongmei"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+			allowed = {
+				original_tag = KEU
+			}
+			traits = {
+			}
+			removal_cost = 1000
+			idea_token = KEU_He_Hongmei_idea
+			desc = KEU_He_Hongmei_desc
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	KEU_Viana_Weil = {		#维安娜·维尔
+		name = KEU_Viana_Weil
+		portraits = {
+   			civilian = {
+   				large="GFX_KEU_Viana_Weil"
+   				small="GFX_idea_KEU_Viana_Weil"
+   			}
+   			army = {
+				large="GFX_KEU_Viana_Weil"
+				small="GFX_idea_KEU_Viana_Weil"
+   			}
+   		}
+   		country_leader = {
+			ideology = wizard_rules_subtype
+			traits = {
+			}
+			expire = "1998.1.1.1"
+			id = -1
+		}
+	}
+	
+}

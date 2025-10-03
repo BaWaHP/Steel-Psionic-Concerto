@@ -1,0 +1,39 @@
+
+state={
+	id=411
+	name="STATE_411"
+	resources = {
+		rubber = 64
+		oil = 24
+		steel = 4
+		magic_crystal = 2
+	}
+	provinces={
+		7126 10816 11097 19090 19141 19190 19206 19230 19261 19290 19317 19326 19335 19372 19373 19395 19396 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			19326 = {
+				naval_base = 1
+			}
+			7126 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			7126 25
+		}
+		victory_points = {
+			19326 5
+		}
+	}
+	manpower=433500
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

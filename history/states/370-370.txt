@@ -1,0 +1,35 @@
+
+state={
+	id=370
+	name="STATE_370"
+	
+	resources = {
+		magic_crystal = 17
+		tungsten = 9
+		chromium = 9
+	}
+
+	history={
+		owner = FCR
+		add_core_of = FCR
+		
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			synthetic_refinery = 1
+		}
+		
+		victory_points = {
+			18478 10
+		}
+
+	}
+
+	provinces={
+		2926 5478 8790 9043 10265 11047 18007 18074 18143 18199 18271 18320 18383 18408 18478 18591 
+	}
+	manpower=1300000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

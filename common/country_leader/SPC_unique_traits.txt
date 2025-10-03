@@ -1,0 +1,1114 @@
+leader_traits = {
+
+	#意识形态支持者
+
+	pioneer_communism_supporter = {
+		random = no
+		sprite = 13
+
+		pioneer_communism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	revolutionary_communism_supporter = {
+		random = no
+		sprite = 13
+
+		revolutionary_communism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	worldunion_socialist_supporter = {
+		random = no
+		sprite = 13
+
+		worldunion_socialist_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	worldunion_democrat_supporter = {
+		random = no
+		sprite = 13
+
+		worldunion_democrat_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	liberal_republican_supporter = {
+		random = no
+		sprite = 13
+
+		liberal_republican_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	conservative_republican_supporter = {
+		random = no
+		sprite = 13
+
+		conservative_republican_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	authoritarian_republican_supporter = {
+		random = no
+		sprite = 13
+
+		authoritarian_republican_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	national_socialist_supporter = {
+		random = no
+		sprite = 13
+
+		national_socialist_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	authoritarian_nationalism_supporter = {
+		random = no
+		sprite = 13
+
+		authoritarian_nationalism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	paternal_autocrat_supporter = {
+		random = no
+		sprite = 13
+
+		paternal_autocrat_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wizard_rules_supporter = {
+		random = no
+		sprite = 13
+
+		wizard_rules_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	religious_extremism_supporter = {
+		random = no
+		sprite = 13
+
+		religious_extremism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	anarchism_supporter = {
+		random = no
+		sprite = 13
+
+		anarchism_drift = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#其它特质
+
+	union_manager = {						#工会管理者
+		random = no
+		political_power_factor = 0.15
+		line_change_production_efficiency_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	union_leader = {						#工会领导者
+		random = no
+		industrial_capacity_factory = 0.1
+		production_speed_buildings_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	worker_picket_organizer = {				#工人纠察队组织者
+		random = no
+		army_core_defence_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	magic_consultant = {					#魔法顾问
+		random = no
+		state_magic_development_monthly = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	worker_representative = {				#工人代表
+		random = no
+		industrial_capacity_factory = 0.1
+		local_resources_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	military_civilian_representative = {	#军队文官代表
+		random = no
+		conscription_factor = 0.1
+		training_time_army_factor = -0.15
+		war_support_weekly = 0.004
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	red_shield = {							#“红色盾牌“
+		random = no
+		stability_factor = 0.1
+		civilian_intel_to_others = -20
+		enemy_operative_capture_chance_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	correspondents = {						#“通讯员”
+		random = no
+		land_reinforce_rate = 0.02
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	armed_neutrality = {					#武装中立
+		random = no
+		
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		enemy_justify_war_goal_time = 0.1	
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	Diplomatic_neutrality = {							#外交中立
+		random = no	
+
+		join_faction_tension = 1.00
+		send_volunteers_tension = 0.20
+		guarantee_tension = 1.0
+		ai_badass_factor = 0.01 
+		ai_get_ally_desire_factor = -100
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	immature_ruler = {					#不成熟的领导人
+		random = no
+
+		political_power_factor = -0.15
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hardly_wounded_leader = {		#负伤的领导人
+		random = no
+		
+		army_attack_factor = -0.2
+		army_defence_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	puppet_president = {		#傀儡总统
+		random = no
+		
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	radical_industrialize_supporter = {		#激进工业化支持者
+		random = no
+		
+		monthly_industrial_development_process = 6
+		monthly_agricultural_development_process = -2
+		consumer_goods_factor = -0.05
+		stability_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ice_breaker = {		#破冰者
+		random = no
+		
+		worldunion_socialist_acceptance = 20
+		worldunion_democrat_acceptance = 20
+		conservative_republican_acceptance = 20
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	torch_of_revolution = {		#革命的火炬
+		random = no
+		
+		monthly_military_development_process = 4
+		land_reinforce_rate = 0.05
+		breakthrough_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_dictator = {		#大独裁者
+		random = no
+		
+		political_power_factor = 0.15
+		max_planning_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	disciplined_war_leader = {		#老练的战争领袖
+		random = no
+		
+		army_org_factor = 0.1
+		training_time_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	proletarian_poet = {		#无产阶级诗人
+		random = no
+		
+		revolutionary_communism_drift = 0.05
+		drift_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	futurist = {		#未来主义者
+		random = no
+		
+		research_speed_factor = 0.05
+		monthly_research_development_process = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	firefly_candle_trait = {		#萤烛之火
+		random = no
+		
+		stability_weekly = 0.001
+		subjects_autonomy_gain = 0.1
+		authoritarian_republican_drift = 0.1
+		political_power_gain = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_compromiser = {		#伟大的妥协者
+		random = no
+		
+		stability_factor = 0.15
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	
+	the_savior_of_nation = {		#救国英雄
+		random = no
+		
+		political_power_factor = 0.3
+		stability_weekly = 0.005
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	the_holy_savior = {		#圣雄
+		random = no
+		
+		political_power_factor = 0.4
+		stability_weekly = 0.008
+		war_support_weekly = 0.002
+		authoritarian_republican_drift = 0.1 
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	the_corruption_group = {		#贪官集团
+		random = no
+		
+		political_power_factor = -0.5
+		stability_weekly = -0.005
+		stability_factor = -0.25
+		authoritarian_republican_drift = -0.05
+		consumer_goods_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	majestic_bishop = {		#和蔼威严的主教
+		random = no
+		
+		stability_factor = 0.15
+		war_support_factor = 0.05
+		trade_opinion_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	old_geologists = {		#年迈的外籍地质专家
+		random = no
+		
+		local_resources_factor = 0.15
+		production_speed_buildings_factor = 0.05
+		political_power_factor = -0.1
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	industrial_oligarchs = {		#工业寡头
+		random = no
+		
+		production_speed_buildings_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hardworking_health_minister = {		#勤快的卫生部长
+		random = no
+		
+		monthly_industrial_development_process = -1
+		monthly_agricultural_development_process = 1
+		monthly_living_standard_development_process = 2
+		monthly_environment_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	racist_security_minister = {		#种族主义治安部长
+		random = no
+		
+		weekly_manpower = -500
+		stability_weekly = -0.005
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	heir_to_the_ideal = {		#理想的继承者
+		random = no
+		
+		stability_factor = 0.05
+		worldunion_democrat_drift = 0.05
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	firm_heir = {		#坚定的继承人
+		random = no
+		
+		stability_factor = 0.15
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hypocritical_revivalist = {		#伪善的复兴者
+		random = no
+		
+		political_power_factor = -0.05
+		industrial_capacity_factory = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	colonel_of_revolution = {		#革命上校
+		random = no
+		
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	colonel_of_revolution = {		#革命上校
+		random = no
+		
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	valkyrie = {		#女武神
+		random = no
+		
+		army_org_factor = 0.08
+		army_attack_factor = 0.06
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shadow_of_calamity = {		#灾厄之影
+		random = no
+		
+		stability_factor = -0.3
+		research_speed_factor = -0.1
+		consumer_goods_factor = 0.05
+		monthly_population = -6.66
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	noble_heads = {		#贵族首脑
+		random = no
+		
+		consumer_goods_factor = 0.05
+		political_power_factor = -0.1
+		stability_factor = 0.1
+		political_advisor_cost_factor = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	severely_injured_and_coma = {		#重伤昏迷
+		random = no
+		
+		political_power_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gov_in_struggle = {		#难以支撑的政府
+		random = no
+		
+		political_power_factor = -0.4
+		war_support_factor = -0.4
+		surrender_limit = -0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lust_mountain_trait = {		#肉山
+		random = no
+		
+		stability_factor = 1
+		war_support_factor = 1
+		army_org_regain = 0.1
+		army_speed_factor = -0.35
+		out_of_supply_factor = 0.1
+		org_loss_when_moving = 0.1
+		attrition = 0.1
+		supply_consumption_factor = 0.1
+		supply_node_range = 0.5
+		ai_focus_aggressive_factor = 0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brutal = {		#暴虐
+		random = no
+		
+		monthly_population = -0.95
+		conscription_factor = -0.95
+		non_core_manpower = -0.95
+		monthly_industrial_development_process = -10
+		monthly_agricultural_development_process = -10
+		monthly_military_development_process = -10
+		monthly_living_standard_development_process = -10
+		monthly_environment_development_process = -10
+		monthly_research_development_process = -10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	weak_in_politics = {		#软弱无能
+		random = no
+		
+		disabled_ideas = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	peaceful_king = {		#贤安王
+		random = no
+		
+		stability_weekly = 0.001
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	experienced_revolutionary_leader = {		#老练的革命领袖
+		random = no
+		
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		liberal_republican_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_quality_officer = {		#首席质量官
+		random = no
+		
+		line_change_production_efficiency_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = -0.05
+		industrial_capacity_factory = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_tech_officer = {		#首席技术官
+		random = no
+		
+		political_power_factor = -0.1
+		research_speed_factor = 0.1
+		drift_defence_factor = 0.1
+		min_export = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_finance_officer = {		#首席财政官
+		random = no
+		
+		trade_opinion_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_hr_officer = {		#首席人事官
+		random = no
+		
+		conscription = 0.01
+		mobilization_speed = 0.1
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_manage_officer = {		#首席营运官
+		random = no
+		
+		consumer_goods_factor = -0.05
+		subversive_activites_upkeep = -0.15
+		war_support_factor = 0.05
+		production_speed_synthetic_refinery_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	honest_journalist = {		#诚实的记者
+		random = no
+		political_power_factor = 0.1
+		stability_weekly = 0.001
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	godson_in_passionate_love = {		#热恋中的神子
+		random = no
+		political_power_gain = -0.2
+		consumer_goods_factor = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	godson_in_trail = {		#试炼中的神子
+		random = no
+		political_power_gain = -0.2
+		training_time_factor = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_general = {		#将才
+		random = no
+		land_doctrine_cost_factor = -0.1
+		air_doctrine_cost_factor = -0.1
+		naval_doctrine_cost_factor = -0.1
+		experience_gain_army_unit_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_general_2 = {		#将才
+		random = no
+		land_doctrine_cost_factor = -0.1
+		air_doctrine_cost_factor = -0.1
+		naval_doctrine_cost_factor = -0.1
+		experience_gain_army_unit_factor = 0.05
+		justify_war_goal_time = -0.1
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_general_3 = {		#将才
+		random = no
+		land_doctrine_cost_factor = -0.1
+		air_doctrine_cost_factor = -0.1
+		naval_doctrine_cost_factor = -0.1
+		experience_gain_army_unit_factor = 0.05
+		justify_war_goal_time = -0.1
+		conscription_factor = 0.1
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_official = {		#相才
+		random = no
+		production_speed_buildings_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_official_2 = {		#相才
+		random = no
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.05
+		consumer_goods_factor = -0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	talented_official_3 = {		#相才
+		random = no
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.05
+		consumer_goods_factor = -0.02
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TPG_military_production_expert_infantry = {		#步兵装备生产专家
+		random = no
+
+		equipment_bonus = {
+			infantry_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	TPG_military_production_expert_artillery = {		#炮兵装备生产专家
+		random = no
+
+		equipment_bonus = {
+			artillery_equipment = {
+				instant = yes
+				build_cost_ic = -0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	TPG_useless_eater = {		#酒囊饭袋
+		random = no
+		stability_factor = -0.05
+		consumer_goods_factor = 0.03
+		political_power_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bushido_inheritors = {		#武士道传承者
+		random = no
+		army_org_factor = 0.05
+		breakthrough_factor = 0.05
+		army_attack_factor = 0.05
+		army_defence_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	new_faces = {		#新面孔
+		random = no
+		disabled_ideas = 1
+		political_power_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	commoner_emperor = {		#平民皇帝
+		random = no
+		stability_factor = 0.05
+		conscription_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bloodline_orthodoxy = {		#血脉正统
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	iron_fist_monarch = {		#铁腕君主
+		random = no
+		political_power_factor = 0.1
+		stability_weekly = 0.002
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	royal_bloodline = {		#王族正统血脉
+		random = no
+		political_power_factor = 0.1
+		ai_focus_aggressive_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Levant_VII = {		#连凡特七世
+		random = no
+		political_power_factor = 0.1
+		army_attack_factor = 0.05
+		ai_focus_aggressive_factor = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	leftwing_intellectuals = {		#左翼知识分子
+		random = no
+		political_power_factor = 0.05
+		research_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chairman_of_people = {		#人民的主席
+		random = no
+		stability_factor = 0.05
+		revolutionary_communism_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tired_compromiser = {		#精疲力尽的维系者
+		random = no
+		stability_factor = 0.05
+		political_advisor_cost_factor = 0.15
+		party_popularity_stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	vacant_throne = {		#王位空虚
+		random = no
+		stability_factor = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	appetite = {		#食欲
+		random = no
+		war_support_factor = 1
+		weekly_manpower = -1000
+		ai_focus_aggressive_factor = 0.5
+		supply_node_range = 0.75
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lust_for_love = {		#爱欲
+		random = no
+		conscription = 0.1
+		non_core_manpower = 0.75
+		monthly_population = 0.75
+		conscription_factor = 0.75
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	desire_to_know = {		#知欲
+		random = no
+		stability_factor = 1
+		research_speed_factor = 0.5
+		land_doctrine_cost_factor = -0.75
+		cat_mass_assault_cost_factor = -0.75
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	new_opinions = {		#新思想
+		random = no
+		political_power_factor = 0.1
+		conservative_republican_drift = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chief_compliance_officer = {		#首席监察官
+		random = no
+		stability_factor = -0.05
+		intel_network_gain_factor = 0.1
+		enemy_operative_detection_chance_factor = 0.1
+		enemy_operative_capture_chance_factor = 0.15
+		civilian_intel_to_others = -10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	###军事特质###
+
+	sword_of_poeple = {		#人民之剑
+		random = no
+		army_defence_factor = 0.05
+		army_speed_factor = 0.05
+		casualty_trickleback = 0.02
+		experience_loss_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	###制造商###
+
+	titan_manufacturer = {		#泰坦制造商
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	magic_equip_manufacturer = {		#非常规装备制造商
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	caster_equip_manufacturer = {		#魔导装备制造商
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	balkhash_naval_manufacturer = {	#遗播海舰艇制造商
+		random = no
+		equipment_bonus = {
+			capital_ship = {
+				naval_range = -0.25 naval_speed = 0.1
+			}
+			screen_ship = {
+				naval_range = -0.25 naval_speed = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

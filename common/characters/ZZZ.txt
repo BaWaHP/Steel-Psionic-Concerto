@@ -1,0 +1,82 @@
+characters = {
+
+	generic_unkown = {	#暂无
+		name = generic_unkown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = pioneer_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = revolutionary_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = worldunion_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = worldunion_democrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = liberal_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = national_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_nationalism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = anarchism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

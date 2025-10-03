@@ -1,0 +1,40 @@
+
+state={
+	id=431
+	name="STATE_431"
+	provinces={
+		85 785 2961 4831 5584 10017 19935 19956 19975 20035 20050 20056 20071 20114 20122 20177 20186 
+	}
+	resources = {
+		steel = 14
+		magic_crystal = 20
+		tungsten = 25
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 5
+		}
+		victory_points = {
+			19956 5
+		}
+		victory_points = {
+			20122 2
+		}
+		victory_points = {
+			785 2
+		}
+		victory_points = {
+			20056 2
+		}
+		victory_points = {
+			20186 5
+		}
+	}
+	manpower = 4600000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

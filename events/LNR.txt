@@ -1,0 +1,705 @@
+﻿###########################
+# LNR Events #
+###########################
+
+add_namespace = LNR
+
+country_event = {
+	id = LNR.1		#莫里斯的苦恼
+	title = LNR.1.t
+	desc = LNR.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.1.a
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.02
+		}
+		country_event = {
+			id = LNR.2
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = LNR.2		#莫里斯的礼物
+	title = LNR.2.t
+	desc = LNR.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.2.a
+		add_political_power = 25
+		country_event = {
+			id = LNR.3
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = LNR.3		#火红的婚礼
+	title = LNR.3.t
+	desc = LNR.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.3.a
+	}
+}
+
+country_event = {
+	id = LNR.4		#丹特的骚动
+	title = LNR.4.t
+	desc = LNR.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.4.a
+		hidden_effect = {
+			country_event = {
+				id = LNR.5
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = LNR.4.b
+		hidden_effect = {
+			country_event = {
+				id = LNR.6
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = LNR.5		#军人的合法干政
+	title = LNR.5.t
+	desc = LNR.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.5.a
+		custom_effect_tooltip = LNR.5.tt
+		set_politics = { ruling_party = worldunion_democrat }
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.1
+		}
+		add_ideas = LNR_augustus_pitt_idea
+		news_event = LNRNews.1
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = LNR.6		#千钧一弹
+	title = LNR.6.t
+	desc = LNR.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.6.a
+		add_manpower = -766
+		add_war_support = -0.1
+		add_political_power = -25
+		custom_effect_tooltip = LNR.6.tt
+		remove_country_leader_role = {
+			character = LNR_maurice_moller
+			ideology = democratic_traditionalism
+		}
+		add_country_leader_role = { 
+			character = LNR_heche_van_sko_oknin_2 
+			promote_leader = yes 
+			country_leader = {
+				desc = LNR_heche_van_sko_oknin_desc
+				ideology = democratic_traditionalism
+				#desc = 
+				traits = { LNR_black_hand_at_helm }
+				expire = "3000.1.1.1"
+				id = -1
+			}
+		}
+		news_event = LNRNews.2
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = LNR.50		#消灭饥饿
+	title = LNR.50.t
+	desc = LNR.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.50.a
+		LNR_grey_support_down_2 = yes
+		add_political_power = -200
+		add_timed_idea = {
+			idea = LNR_buy_for_food
+			days = 180
+		}
+		add_to_variable = { LNR_economic_crisis_sw = 0.004 }
+		add_to_variable = { LNR_economic_crisis_mlsdp = 7 }
+		add_to_variable = { LNR_economic_crisis_sf = 0.05 }
+		custom_effect_tooltip = LNR.50.a.tt
+	}
+
+	option = {
+		name = LNR.50.b
+		LNR_grey_support_down = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -500
+		}
+		add_manpower = -1500
+		add_command_power = -25
+		add_to_variable = { LNR_economic_crisis_sw = 0.002 }
+		add_to_variable = { LNR_economic_crisis_mlsdp = 3 }
+		custom_effect_tooltip = LNR.50.b.tt
+		311 = {
+			add_manpower = -10000
+		}
+		312 = {
+			add_manpower = -5000
+		}
+	}
+}
+
+country_event = {
+	id = LNR.51		#各退一步
+	title = LNR.51.t
+	desc = LNR.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.51.a
+	}
+}
+
+country_event = {
+	id = LNR.52		#痛苦之日
+	title = LNR.52.t
+	desc = LNR.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.52.a
+		remove_ideas = LNR_mining_pot_of_south_bastia
+		add_manpower = -6000
+		add_stability = -0.1
+		add_political_power = -150
+		310 = { add_core_of = RLN }
+		309 = { add_core_of = RLN }
+		312 = { add_core_of = RLN }
+		311 = { add_core_of = RLN }
+		RLN = {
+			set_state_controller = 310
+			set_state_owner = 310
+			hidden_effect = { SPC_RLN_startup_effect = yes }
+		}	
+		RLN = {
+			change_tag_from = LNR
+		}
+	}
+
+	option = {
+		name = LNR.52.b
+		remove_ideas = LNR_mining_pot_of_south_bastia
+		add_manpower = -6000
+		add_stability = -0.1
+		add_political_power = -150
+		310 = { add_core_of = RLN }
+		309 = { add_core_of = RLN }
+		312 = { add_core_of = RLN }
+		311 = { add_core_of = RLN }
+		RLN = {
+			set_state_controller = 310
+			set_state_owner = 310
+			hidden_effect = {
+				SPC_RLN_startup_effect = yes	
+			}
+		}	
+	}
+}
+
+country_event = {
+	id = LNR.53		#风停火熄
+	title = LNR.53.t
+	desc = LNR.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.53.a
+		310 = {
+			set_state_category = rural
+			add_manpower = -136710
+		}
+		LNR_gava_adul = {
+			remove_unit_leader_role = yes
+		}
+	}
+}
+
+country_event = {
+	id = LNR.100		#海斯特里墓前
+	title = LNR.100.t
+	desc = LNR.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.100.a
+	}
+}
+
+country_event = {
+	id = LNR.101		#来自左翼的盟友
+	title = LNR.101.t
+	desc = LNR.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.101.a
+	}
+}
+
+country_event = {
+	id = LNR.102		#魔鬼之死
+	title = LNR.102.t
+	desc = LNR.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.102.a
+	}
+}
+
+country_event = {
+	id = LNR.103		#一场抗议
+	title = LNR.103.t
+	desc = LNR.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.103.a
+	}
+}
+
+country_event = {
+	id = LNR.104		#糟糕的开端
+	title = LNR.104.t
+	desc = LNR.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.104.a
+		unlock_decision_category_tooltip = LNR_late_land_reform
+		LNR_late_land_reform_initialization = yes
+	}
+}
+
+country_event = {
+	id = LNR.105		#放下方向舵
+	title = LNR.105.t
+	desc = LNR.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.105.a
+		retire_country_leader = yes
+		add_ideas = LNR_broken_rudder
+		country_event = {
+			id = LNR.106
+			days = 30
+		}
+	}
+}
+
+country_event = {
+	id = LNR.106		#血色巨浪
+	title = LNR.106.t
+	desc = LNR.106.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.106.a
+		custom_effect_tooltip = LNR.106.tt
+		add_war_support = -0.2
+		set_politics = { ruling_party = revolutionary_communism }
+		load_focus_tree = generic_focus
+	}
+}
+
+country_event = {
+	id = LNR.107		#晚宴
+	title = LNR.107.t
+	desc = LNR.107.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.107.a
+		set_country_flag = LNR_clan_harmlessness_flag
+	}
+
+	option = {
+		name = LNR.107.b
+		add_political_power = -25
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_1
+			value = -5
+			tooltip = LNR_late_land_reform_influence_1_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_2
+			value = 5
+			tooltip = LNR_late_land_reform_influence_2_tt
+		}
+		set_country_flag = LNR_burn_down_the_clan_flag
+	}
+}
+
+country_event = {
+	id = LNR.108		#温和社会主义者
+	title = LNR.108.t
+	desc = LNR.108.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.108.a
+	}
+}
+
+country_event = {
+	id = LNR.109		#与赤军谈判（一）
+	title = LNR.109.t
+	desc = LNR.109.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.109.a
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_1
+			value = 4
+			tooltip = LNR_late_land_reform_influence_1_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_2
+			value = -5
+			tooltip = LNR_late_land_reform_influence_2_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_3
+			value = 1
+			tooltip = LNR_late_land_reform_influence_3_tt
+		}
+		add_manpower = 2000
+		country_event = LNR.110
+	}
+
+	option = {
+		name = LNR.109.b
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_1
+			value = 2
+			tooltip = LNR_late_land_reform_influence_1_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_3
+			value = -2
+			tooltip = LNR_late_land_reform_influence_3_tt
+		}
+		country_event = LNR.110
+	}
+}
+
+country_event = {
+	id = LNR.110		#与赤军谈判（二）当地行政机构
+	title = LNR.110.t
+	desc = LNR.110.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.110.a
+		add_war_support = 0.05
+		add_political_power = 100
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_1
+			value = 1
+			tooltip = LNR_late_land_reform_influence_1_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_2
+			value = -5
+			tooltip = LNR_late_land_reform_influence_2_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_3
+			value = 4
+			tooltip = LNR_late_land_reform_influence_3_tt
+		}
+		country_event = LNR.111
+	}
+
+	option = {
+		name = LNR.110.b
+		country_event = LNR.111
+	}
+}
+
+country_event = {
+	id = LNR.111		#与赤军谈判（三）一些历史问题
+	title = LNR.111.t
+	desc = LNR.111.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.111.a
+		country_event = LNR.112
+	}
+
+	option = {
+		name = LNR.111.b
+		add_political_power = 50
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_1
+			value = 4
+			tooltip = LNR_late_land_reform_influence_1_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_2
+			value = -5
+			tooltip = LNR_late_land_reform_influence_2_tt
+		}
+		add_to_variable = {
+			var = LNR_late_land_reform_influence_3
+			value = 1
+			tooltip = LNR_late_land_reform_influence_3_tt
+		}
+		country_event = LNR.112
+	}
+}
+
+country_event = {
+	id = LNR.112		#谈判结束
+	title = LNR.112.t
+	desc = LNR.112.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.112.a
+	}
+}
+
+country_event = {
+	id = LNR.200		#爱国
+	title = LNR.200.t
+	desc = LNR.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = LNR.200.a
+		LNR = { 
+			transfer_state = 333 
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			SPC_research_development_amount_up_2 = yes
+			give_market_access = ZBC
+		}
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = LNR
+		}
+		army_experience = 50
+		give_market_access = LNR
+	}
+}
+
+add_namespace = LNRNews
+
+news_event = {
+	id = LNRNews.1		#进步联盟赢得大选
+	title = LNRNews.1.t
+	desc = LNRNews.1.d
+	picture = GFX_news_event_generic_55
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.1.a
+	}
+}
+
+news_event = {
+	id = LNRNews.2		#赢得大选的总统莫里斯遇刺
+	title = LNRNews.2.t
+	desc = LNRNews.2.d
+	picture = GFX_news_event_generic_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.2.a
+	}
+}
+
+news_event = {
+	id = LNRNews.3	#第二次特尼安半岛战争
+	title = LNRNews.3.t
+	desc = LNRNews.3.d
+	picture = GFX_news_event_generic_28
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.3.a
+		trigger = { tag = LNR }
+	}
+
+	option = {
+		name = LNRNews.3.b
+		trigger = { tag = KOA }
+	}
+
+	option = {
+		name = LNRNews.3.c
+		trigger = { NOT = { tag = LNR tag = KOA } }
+	}
+}
+
+news_event = {
+	id = LNRNews.4	#第二次特尼安半岛战争
+	title = LNRNews.4.t
+	desc = LNRNews.4.d
+	picture = GFX_news_event_generic_28
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.4.a
+		trigger = { tag = LNR }
+	}
+
+	option = {
+		name = LNRNews.4.b
+		trigger = { tag = KOA }
+	}
+
+	option = {
+		name = LNRNews.4.c
+		trigger = { NOT = { tag = LNR tag = KOA } }
+	}
+}
+
+news_event = {
+	id = LNRNews.5	#特尼安半岛混战
+	title = LNRNews.5.t
+	desc = LNRNews.5.d
+	picture = GFX_news_event_generic_8
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.5.a
+		trigger = { tag = LNR }
+	}
+
+	option = {
+		name = LNRNews.5.b
+		trigger = { tag = KOA }
+	}
+
+	option = {
+		name = LNRNews.5.c
+		trigger = { tag = RLN }
+	}
+
+	option = {
+		name = LNRNews.5.dd
+		trigger = { NOT = { tag = LNR tag = KOA tag = RLN } }
+	}
+}
+
+news_event = {
+	id = LNRNews.6	#特尼安南北和解
+	title = LNRNews.6.t
+	desc = LNRNews.6.d
+	picture = GFX_news_event_generic_21
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = LNRNews.6.a
+	}
+}

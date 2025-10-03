@@ -1,0 +1,28 @@
+spriteTypes = {	
+	corneredTileSpriteType = {
+		name = "GFX_spirit_scrollbar_vertical_bg"
+		size= { x=8 y=156 }
+		textureFile = "gfx//interface//spirit_scrollbar_vertical_bg.dds"
+		borderSize = { x=0 y=52 }
+		tilingCenter = yes
+	}
+	spriteType = {
+		name = "GFX_spirit_croll_drager"
+		texturefile = "gfx/interface/spirit_scroll_drager.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_spirit_scroll_track"
+		size= {x = 6 y = 6 }
+		texturefile = "gfx/interface/spirit_scroll_track.dds"
+		borderSize = { x = 4 y = 4 }
+	}
+	spriteType = {
+		name = "GFX_spirit_scroll_up"
+		texturefile = "gfx/interface/spirit_scroll_up.dds"
+	}
+	spriteType = {
+		name = "GFX_spirit_scroll_down"
+		texturefile = "gfx/interface/spirit_scroll_down.dds"
+	}
+}

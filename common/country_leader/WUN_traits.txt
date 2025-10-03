@@ -1,0 +1,67 @@
+leader_traits = {
+
+	the_king_of_ci_dshal = {		#七城之王
+		random = no
+		
+		war_support_factor = 0.3
+		weekly_casualties_war_support = 0.001
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sweep_over = {		#横征
+		random = no
+		
+		industrial_capacity_factory = 0.1
+		production_factory_max_efficiency_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tyranny = {		#暴凌
+		random = no
+		
+		ai_focus_aggressive_factor = 0.5
+		monthly_industrial_development_process = -2
+		monthly_agricultural_development_process = -2
+		monthly_military_development_process = -2
+		monthly_living_standard_development_process = -2
+		monthly_environment_development_process = -2
+		monthly_research_development_process = -2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	WUN_hakim_bek = {		#阿奇木伯克
+		random = no
+		
+		political_power_factor = 0.1
+		command_power_gain_mult = 0.1
+		stability_factor = 0.1
+		consumer_goods_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	WUN_ishan_bek = { 		#伊什罕伯克
+		random = no
+		
+		weekly_manpower = -50
+		production_factory_max_efficiency_factor = -0.05
+		industrial_capacity_factory = 0.075
+		production_speed_buildings_factor = 0.075
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,293 @@
+﻿###templates###
+division_template = {
+	name = "步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "骑兵师"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		engineer = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "装甲师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "卫戍师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "民兵"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+###units###
+
+units = {
+	division = {
+		name = "BHS中巴西1师"
+		location = 12188
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴西3师"
+		location = 4711
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴西6师"
+		location = 5305
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴西9师"
+		location = 10012
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴西2师"
+		location = 406
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴中1师"
+		location = 18407
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴中3师"
+		location = 9933
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴东1师"
+		location = 10298
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴东3师"
+		location = 816
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BHS中巴东2师"
+		location = 18171
+		division_template = "卫戍师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA陆军39师 捕快"
+		location = 9636
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军41师 米德人"
+		location = 3396
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军79师 至上胜利之军"
+		location = 18079
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA陆军65师 海兰德"
+		location = 17235
+		division_template = "步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA陆军71师 金山"
+		location = 11318
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军62师 比尔克森师"
+		location = 18078
+		division_template = "步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA骑兵6师 联盟之翼"
+		location = 18269
+		division_template = "骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA骑兵9师 猎魔之剑"
+		location = 17519
+		division_template = "骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA2021装甲加强旅"
+		location = 17519
+		division_template = "装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA2025装甲加强旅"
+		location = 4751
+		division_template = "装甲师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA2027装甲加强旅"
+		location = 10473
+		division_template = "装甲师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA2022装甲加强旅"
+		location = 17036
+		division_template = "装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA2023装甲加强旅"
+		location = 4773
+		division_template = "装甲师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "MCA黄金城师"
+		location = 17519
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "MCA埃森菲尔德师"
+		location = 9418
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "MCA瑞海姆师"
+		location = 7489
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "MCA新黄金城师"
+		location = 17870
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "MCA安托拉师"
+		location = 17971
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "MCA比格兰师"
+		location = 4773
+		division_template = "民兵"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+}

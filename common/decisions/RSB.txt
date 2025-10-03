@@ -1,0 +1,1835 @@
+RSB_federal_war_arsenal = {
+	RSB_unlock_gw_arsenal_decisions = {		#显示伟大战争军火库相关决议
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { has_country_flag = RSB_gw_arsenal_lock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			clr_country_flag = RSB_gw_arsenal_lock_flag
+			set_country_flag = RSB_gw_arsenal_unlock_flag
+		}
+	}
+	RSB_lock_gw_arsenal_decisions = {		#隐藏伟大战争军火库相关决议
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			clr_country_flag = RSB_gw_arsenal_unlock_flag
+			set_country_flag = RSB_gw_arsenal_lock_flag
+		}
+	}
+	RSB_gw_arsenal_infantry_equipment_declining = { 		#步兵装备衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_infantry_equipment_declining_tr
+				check_variable = { RSB_gw_arsenal_infantry_equipment < 50 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_gw_arsenal_infantry_equipment > 49 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_gw_arsenal_infantry_equipment_declining
+			custom_effect_tooltip = RSB_gw_arsenal_infantry_equipment_declining_tt
+			add_to_variable = { RSB_gw_arsenal_infantry_equipment = -50 }
+		}
+	}
+	RSB_gw_arsenal_uniform_equipment_declining = { 		#步兵装具衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_uniform_equipment_declining_tr
+				check_variable = { RSB_gw_arsenal_uniform_equipment < 50 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_gw_arsenal_uniform_equipment > 49 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_gw_arsenal_uniform_equipment_declining
+			custom_effect_tooltip = RSB_gw_arsenal_uniform_equipment_declining_tt
+			add_to_variable = { RSB_gw_arsenal_uniform_equipment = -50 }
+		}
+	}
+	RSB_gw_arsenal_artillery_declining = { 		#火炮衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_artillery_declining_tr
+				check_variable = { RSB_gw_arsenal_artillery_equipment < 50 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_gw_arsenal_artillery_equipment > 49 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_gw_arsenal_artillery_declining
+			custom_effect_tooltip = RSB_gw_arsenal_artillery_declining_tt
+			add_to_variable = { RSB_gw_arsenal_artillery_equipment = -50 }
+		}
+	}
+	RSB_gw_arsenal_titan_equipment_declining = { 		#泰坦衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_titan_equipment_declining_tr
+				check_variable = { RSB_gw_arsenal_titan_equipment < 10 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_gw_arsenal_titan_equipment > 9 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_gw_arsenal_titan_equipment_declining
+			custom_effect_tooltip = RSB_gw_arsenal_titan_equipment_declining_tt
+			add_to_variable = { RSB_gw_arsenal_titan_equipment = -10 }
+		}
+	}
+	RSB_gw_arsenal_take_infantry_equipment = {		#提取步兵装备
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_gw_arsenal_infantry_idea_5 } 
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_take_infantry_equipment_tr
+				check_variable = { RSB.RSB_gw_arsenal_infantry_equipment > 4999 }
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_infantry_up = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_infantry_equipment = -5000 }
+			custom_effect_tooltip = RSB_gw_arsenal_take_infantry_equipment_tt
+		}
+	}
+	RSB_gw_arsenal_remove_infantry_equipment = {		#撤换步兵装备
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_gw_arsenal_infantry_idea_1
+				has_idea = RSB_gw_arsenal_infantry_idea_2
+				has_idea = RSB_gw_arsenal_infantry_idea_3
+				has_idea = RSB_gw_arsenal_infantry_idea_4
+				has_idea = RSB_gw_arsenal_infantry_idea_5
+			}
+			has_equipment = {
+				infantry_equipment > 3999
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_infantry_down = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -4000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_infantry_equipment = 4000 }
+			custom_effect_tooltip = RSB_gw_arsenal_remove_infantry_equipment_tt
+		}
+	}
+	RSB_gw_arsenal_take_uniform_equipment = {		#提取步兵装具
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_gw_arsenal_infantry_idea_5 } 
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_take_uniform_equipment_tr
+				check_variable = { RSB.RSB_gw_arsenal_uniform_equipment > 4999 }
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_infantry_up = yes
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 5000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_uniform_equipment = -5000 }
+			custom_effect_tooltip = RSB_gw_arsenal_take_uniform_equipment_tt
+		}
+	}
+	RSB_gw_arsenal_remove_uniform_equipment = {		#撤换步兵装具
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_gw_arsenal_infantry_idea_1
+				has_idea = RSB_gw_arsenal_infantry_idea_2
+				has_idea = RSB_gw_arsenal_infantry_idea_3
+				has_idea = RSB_gw_arsenal_infantry_idea_4
+				has_idea = RSB_gw_arsenal_infantry_idea_5
+			}
+			has_equipment = {
+				uniform_equipment > 3999
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_infantry_down = yes
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = -4000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_uniform_equipment = 4000 }
+			custom_effect_tooltip = RSB_gw_arsenal_remove_uniform_equipment_tt
+		}
+	}
+	RSB_gw_arsenal_take_artillery = {		#提取火炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_gw_arsenal_artillery_idea_5 } 
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_take_artillery_tr
+				check_variable = { RSB.RSB_gw_arsenal_artillery_equipment > 499 }
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_artillery_up = yes
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_artillery_equipment = -500 }
+			custom_effect_tooltip = RSB_gw_arsenal_take_artillery_tt
+		}
+	}
+	RSB_gw_arsenal_remove_artillery = {		#撤换火炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_gw_arsenal_artillery_idea_1
+				has_idea = RSB_gw_arsenal_artillery_idea_2
+				has_idea = RSB_gw_arsenal_artillery_idea_3
+				has_idea = RSB_gw_arsenal_artillery_idea_4
+				has_idea = RSB_gw_arsenal_artillery_idea_5
+			}
+			has_equipment = {
+				artillery_equipment > 299
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_artillery_down = yes
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -300
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_artillery_equipment = 300 }
+			custom_effect_tooltip = RSB_gw_arsenal_remove_artillery_tt
+		}
+	}
+	RSB_gw_arsenal_take_titan = {		#提取游侠级泰坦
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_gw_arsenal_titan_idea_5 } 
+			custom_trigger_tooltip = {
+				tooltip = RSB_gw_arsenal_take_titan_tr
+				check_variable = { RSB.RSB_gw_arsenal_titan_equipment > 49 }
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_titan_up = yes
+			add_equipment_to_stockpile = {
+				type = light_titan_equipment
+				amount = 500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_titan_equipment = -50 }
+			custom_effect_tooltip = RSB_gw_arsenal_take_titan_tt
+		}
+	}
+	RSB_gw_arsenal_remove_titan = {		#撤换游侠级泰坦
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_gw_arsenal_titan_idea_1
+				has_idea = RSB_gw_arsenal_titan_idea_2
+				has_idea = RSB_gw_arsenal_titan_idea_3
+				has_idea = RSB_gw_arsenal_titan_idea_4
+				has_idea = RSB_gw_arsenal_titan_idea_5
+			}
+			has_equipment = {
+				light_titan_equipment > 29
+			}
+		}
+		visible = { has_country_flag = RSB_gw_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_gw_arsenal_titan_down = yes
+			add_equipment_to_stockpile = {
+				type = light_titan_equipment
+				amount = -30
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_titan_equipment = 30 }
+			custom_effect_tooltip = RSB_gw_arsenal_remove_titan_tt
+		}
+	}
+	RSB_unlock_ww_arsenal_decisions = {		#启用世界大战军火库
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { has_country_flag = RSB_ww_arsenal_lock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			clr_country_flag = RSB_ww_arsenal_lock_flag
+			set_country_flag = RSB_ww_arsenal_unlock_flag
+		}
+	}
+	RSB_lock_ww_arsenal_decisions = {		#禁用世界大战军火库
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			clr_country_flag = RSB_ww_arsenal_unlock_flag
+			set_country_flag = RSB_ww_arsenal_lock_flag
+		}
+	}
+	RSB_ww_arsenal_infantry_equipment_declining = { 		#步兵装备衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_infantry_equipment_declining_tr
+				check_variable = { RSB_ww_arsenal_infantry_equipment < 15 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_infantry_equipment > 14 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_infantry_equipment_declining
+			custom_effect_tooltip = RSB_ww_arsenal_infantry_equipment_declining_tt
+			add_to_variable = { RSB_ww_arsenal_infantry_equipment = -15 }
+		}
+	}
+	RSB_ww_arsenal_uniform_equipment_declining = { 		#步兵装具衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_uniform_equipment_declining_tr
+				check_variable = { RSB_ww_arsenal_uniform_equipment < 15 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_uniform_equipment > 14 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_uniform_equipment_declining
+			custom_effect_tooltip = RSB_ww_arsenal_uniform_equipment_declining_tt
+			add_to_variable = { RSB_ww_arsenal_uniform_equipment = -15 }
+		}
+	}
+	RSB_ww_arsenal_artillery_declining = { 		#火炮衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_artillery_declining_tr
+				check_variable = { RSB_ww_arsenal_artillery < 10 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_artillery > 9 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_artillery_declining
+			custom_effect_tooltip = RSB_ww_arsenal_artillery_declining_tt
+			add_to_variable = { RSB_ww_arsenal_artillery = -10 }
+		}
+	}
+	RSB_ww_arsenal_anti_tank_declining = { 		#反坦克炮衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_anti_tank_declining_tr
+				check_variable = { RSB_ww_arsenal_anti_tank < 5 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_anti_tank > 4 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_anti_tank_declining
+			custom_effect_tooltip = RSB_ww_arsenal_anti_tank_declining_tt
+			add_to_variable = { RSB_ww_arsenal_anti_tank = -5 }
+		}
+	}
+	RSB_ww_arsenal_light_tank_declining = { 		#轻型坦克衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_light_tank_declining_tr
+				check_variable = { RSB_ww_arsenal_light_tank < 5 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_light_tank > 4 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_light_tank_declining
+			custom_effect_tooltip = RSB_ww_arsenal_light_tank_declining_tt
+			add_to_variable = { RSB_ww_arsenal_light_tank = -5 }
+		}
+	}
+	RSB_ww_arsenal_medium_tank_declining = { 		#中型坦克衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_medium_tank_declining_tr
+				check_variable = { RSB_ww_arsenal_medium_tank < 5 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_medium_tank > 4 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_medium_tank_declining
+			custom_effect_tooltip = RSB_ww_arsenal_medium_tank_declining_tt
+			add_to_variable = { RSB_ww_arsenal_medium_tank = -5 }
+		}
+	}
+	RSB_ww_arsenal_light_fighter_declining = { 		#小型战斗机衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_light_fighter_declining_tr
+				check_variable = { RSB_ww_arsenal_light_fighter < 5 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_light_fighter > 4 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_light_fighter_declining
+			custom_effect_tooltip = RSB_ww_arsenal_light_fighter_declining_tt
+			add_to_variable = { RSB_ww_arsenal_light_fighter = -5 }
+		}
+	}
+	RSB_ww_arsenal_medium_titan_declining = { 		#天图级泰坦衰减
+		icon = ger_military_buildup
+		allowed = { tag = RSB }
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_medium_titan_declining_tr
+				check_variable = { RSB_ww_arsenal_medium_titan < 5 }
+			}
+		}
+		activation = {
+			tag = RSB
+			check_variable = { RSB_ww_arsenal_medium_titan > 4 }
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {
+			activate_mission = RSB_ww_arsenal_medium_titan_declining
+			custom_effect_tooltip = RSB_ww_arsenal_medium_titan_declining_tt
+			add_to_variable = { RSB_ww_arsenal_medium_titan = -5 }
+		}
+	}
+	RSB_ww_arsenal_take_infantry_equipment = {		#提取步兵装备
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_infantry_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_infantry_equipment_tr
+				check_variable = { RSB.RSB_ww_arsenal_infantry_equipment > 4999 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_infantry_up = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_infantry_equipment = -5000 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_infantry_equipment_tt
+		}
+	}
+	RSB_ww_arsenal_remove_infantry_equipment = {		#撤换步兵装备
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_infantry_idea_1
+				has_idea = RSB_ww_arsenal_infantry_idea_2
+				has_idea = RSB_ww_arsenal_infantry_idea_3
+				has_idea = RSB_ww_arsenal_infantry_idea_4
+				has_idea = RSB_ww_arsenal_infantry_idea_5
+			}
+			has_equipment = {
+				infantry_equipment > 3499
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_infantry_down = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -3500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_gw_arsenal_infantry_equipment = 3500 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_infantry_equipment_tt
+		}
+	}
+	RSB_ww_arsenal_take_uniform_equipment = {		#提取步兵装具
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_infantry_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_uniform_equipment_tr
+				check_variable = { RSB.RSB_ww_arsenal_uniform_equipment > 4999 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_infantry_up = yes
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 5000
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_uniform_equipment = -5000 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_uniform_equipment_tt
+		}
+	}
+	RSB_ww_arsenal_remove_uniform_equipment = {		#撤换步兵装具
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_infantry_idea_1
+				has_idea = RSB_ww_arsenal_infantry_idea_2
+				has_idea = RSB_ww_arsenal_infantry_idea_3
+				has_idea = RSB_ww_arsenal_infantry_idea_4
+				has_idea = RSB_ww_arsenal_infantry_idea_5
+			}
+			has_equipment = {
+				uniform_equipment > 3499
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_infantry_down = yes
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = -3500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_uniform_equipment = 3500 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_uniform_equipment_tt
+		}
+	}
+	RSB_ww_arsenal_take_artillery = {		#提取火炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_artillery_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_artillery_tr
+				check_variable = { RSB.RSB_ww_arsenal_artillery > 499 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_artillery_up = yes
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_artillery = -500 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_artillery_tt
+		}
+	}
+	RSB_ww_arsenal_remove_artillery = {		#撤换火炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_artillery_idea_1
+				has_idea = RSB_ww_arsenal_artillery_idea_2
+				has_idea = RSB_ww_arsenal_artillery_idea_3
+				has_idea = RSB_ww_arsenal_artillery_idea_4
+				has_idea = RSB_ww_arsenal_artillery_idea_5
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_artillery_down = yes
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_artillery = 200 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_artillery_tt
+		}
+	}
+	RSB_ww_arsenal_take_anti_tank = {		#提取反坦克炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_artillery_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_anti_tank_tr
+				check_variable = { RSB.RSB_ww_arsenal_anti_tank > 499 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_artillery_up = yes
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 500
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_anti_tank = -500 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_anti_tank_tt
+		}
+	}
+	RSB_ww_arsenal_remove_anti_tank = {		#撤换反坦克炮
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_artillery_idea_1
+				has_idea = RSB_ww_arsenal_artillery_idea_2
+				has_idea = RSB_ww_arsenal_artillery_idea_3
+				has_idea = RSB_ww_arsenal_artillery_idea_4
+				has_idea = RSB_ww_arsenal_artillery_idea_5
+			}
+			has_equipment = {
+				anti_tank_equipment > 199
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_artillery_down = yes
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = -200
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_anti_tank = 200 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_anti_tank_tt
+		}
+	}
+	RSB_ww_arsenal_take_light_tank = {		#提取轻型坦克
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_armor_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_light_tank_tr
+				check_variable = { RSB.RSB_ww_arsenal_light_tank > 49 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_up = yes
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = 50
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_light_tank = -50 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_light_tank_tt
+		}
+	}
+	RSB_ww_arsenal_remove_light_tank = {		#撤换轻型坦克
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_armor_idea_1
+				has_idea = RSB_ww_arsenal_armor_idea_2
+				has_idea = RSB_ww_arsenal_armor_idea_3
+				has_idea = RSB_ww_arsenal_armor_idea_4
+				has_idea = RSB_ww_arsenal_armor_idea_5
+			}
+			has_equipment = {
+				light_tank_chassis > 14
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_down = yes
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis
+				amount = -15
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_light_tank = 15 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_light_tank_tt
+		}
+	}
+	RSB_ww_arsenal_take_medium_tank = {		#提取中型坦克
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_armor_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_medium_tank_tr
+				check_variable = { RSB.RSB_ww_arsenal_medium_tank > 49 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_up = yes
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis
+				amount = 50
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_medium_tank = -50 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_medium_tank_tt
+		}
+	}
+	RSB_ww_arsenal_remove_medium_tank = {		#撤换中型坦克
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_armor_idea_1
+				has_idea = RSB_ww_arsenal_armor_idea_2
+				has_idea = RSB_ww_arsenal_armor_idea_3
+				has_idea = RSB_ww_arsenal_armor_idea_4
+				has_idea = RSB_ww_arsenal_armor_idea_5
+			}
+			has_equipment = {
+				medium_tank_chassis > 14
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_down = yes
+			add_equipment_to_stockpile = {
+				type = medium_tank_chassis
+				amount = -15
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_medium_tank = 15 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_medium_tank_tt
+		}
+	}
+	RSB_ww_arsenal_take_light_fighter = {		#提取小型战机
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_armor_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_light_fighter_tr
+				check_variable = { RSB.RSB_ww_arsenal_light_fighter > 49 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_up = yes
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 50
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_light_fighter = -50 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_light_fighter_tt
+		}
+	}
+	RSB_ww_arsenal_remove_light_fighter = {		#撤换小型战机
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_armor_idea_1
+				has_idea = RSB_ww_arsenal_armor_idea_2
+				has_idea = RSB_ww_arsenal_armor_idea_3
+				has_idea = RSB_ww_arsenal_armor_idea_4
+				has_idea = RSB_ww_arsenal_armor_idea_5
+			}
+			has_equipment = {
+				small_plane_airframe > 19
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_down = yes
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = -20
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_light_fighter = 20 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_light_fighter_tt
+		}
+	}
+	RSB_ww_arsenal_take_medium_titan = {		#提取天图级泰坦
+		icon = generic_prepare_civil_war
+
+		available = { 
+			NOT = { has_idea = RSB_ww_arsenal_armor_idea_5 }
+			custom_trigger_tooltip = {
+				tooltip = RSB_ww_arsenal_take_medium_titan_tr
+				check_variable = { RSB.RSB_ww_arsenal_medium_titan > 49 }
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_up = yes
+			add_equipment_to_stockpile = {
+				type = medium_titan_equipment
+				amount = 50
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_medium_titan = -50 }
+			custom_effect_tooltip = RSB_ww_arsenal_take_medium_titan_tt
+		}
+	}
+	RSB_ww_arsenal_remove_medium_titan = {		#撤换天图级泰坦
+		icon = generic_prepare_civil_war
+
+		available = { 
+			OR = {
+				has_idea = RSB_ww_arsenal_armor_idea_1
+				has_idea = RSB_ww_arsenal_armor_idea_2
+				has_idea = RSB_ww_arsenal_armor_idea_3
+				has_idea = RSB_ww_arsenal_armor_idea_4
+				has_idea = RSB_ww_arsenal_armor_idea_5
+			}
+			has_equipment = {
+				medium_titan_equipment > 29
+			}
+		}
+		visible = { has_country_flag = RSB_ww_arsenal_unlock_flag }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 5
+
+		ai_will_do = { factor = 1 }
+
+		remove_effect = {
+			RSB_ww_arsenal_armor_down = yes
+			add_equipment_to_stockpile = {
+				type = medium_titan_equipment
+				amount = -30
+				producer = RSB
+			}
+			add_to_variable = { RSB.RSB_ww_arsenal_medium_titan = 30 }
+			custom_effect_tooltip = RSB_ww_arsenal_remove_medium_titan_tt
+		}
+	}
+}
+
+RSB_federal_financial_budget = {
+	RSB_assets_growth_monthly = {		#实用资金增长
+		icon = generic_fundraising
+		allowed = { tag = RSB }
+		available = { NOT = { has_country_flag = RSB_federal_financial_budget_on } }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			RSB_assets_cal = yes
+			add_to_variable = { RSB_financial_budget_asset = RSB_financial_budget_asset_growth }
+			custom_effect_tooltip = RSB_assets_growth_monthly_tt
+			activate_mission = RSB_assets_growth_monthly
+		}
+	}
+	RSB_call_gov_employees_to_reserve = {		#号召政府雇员节约公共财产
+		icon = generic_speech
+
+		available = {}
+		visible = { has_completed_focus = RSB_1998_financial_budget_adjust }
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 21
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -2 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_2_tt
+			RSB_assets_cal = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { RSB_financial_budget_income = 2 }
+			custom_effect_tooltip = RSB_financial_budget_income_up_2_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_cut_gov_elec_usage = {		#减少政府电力设备使用时间
+		icon = generic_decision
+
+		available = {}
+		visible = { has_completed_focus = RSB_1998_financial_budget_adjust }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_cut_gov_water_usage = {		#减少政府用水
+		icon = SWI_no_elected_president
+
+		available = {}
+		visible = { has_completed_focus = RSB_1998_financial_budget_adjust }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_simplify_gov_procedure = {		#简化办公流程
+		icon = SWI_support_humanitarian_efforts
+
+		available = {}
+		visible = { has_completed_focus = RSB_get_to_work }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_cut_gov_purchase = {		#削减政府采购
+		icon = generic_political_discourse
+
+		available = {}
+		visible = { has_completed_focus = RSB_get_to_work }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_cut_unncessary_purchase = {		#减少不必要开支
+		icon = generic_operation
+
+		available = {}
+		visible = { has_completed_focus = RSB_get_to_work }
+
+		cost = 20
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 21
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -2 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_2_tt
+			RSB_assets_cal = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { RSB_financial_budget_income = 2 }
+			custom_effect_tooltip = RSB_financial_budget_income_up_2_tt
+			RSB_assets_cal = yes
+		}			
+	}
+	RSB_save_mid_bastia_assets = {		#挽救中巴财产
+		icon = hol_draw_up_staff_plans
+
+		available = {}
+		visible = { has_completed_focus = RSB_what_are_you_doing }
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income_max = 5 }
+			custom_effect_tooltip = RSB_financial_budget_max_up_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_protect_the_great_railway = {		#紧急保护大铁路
+		icon = generic_operation
+
+		available = {}
+		visible = { has_completed_focus = RSB_what_are_you_doing }
+
+		cost = 0
+		custom_cost_trigger = { command_power > 24 }
+		custom_cost_text = decision_cost_CP_25
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+			if = {
+				limit = { has_completed_focus = RSB_what_are_you_doing }
+				add_to_variable = {
+					var = RSB_financial_budget_income_max
+					value = 2.5
+					tooltip = RSB_financial_budget_income_max_tt
+				}
+				RSB_assets_cal = yes
+			}
+			else = {
+				add_to_variable = { RSB_financial_budget_income_max = 5 }
+				custom_effect_tooltip = RSB_financial_budget_max_up_5_tt
+				RSB_assets_cal = yes	
+			}
+		}
+	}
+	RSB_maintain_export = {		#维持出口
+		icon = eng_trade_unions_support
+
+		available = {}
+		visible = { has_completed_focus = RSB_what_are_you_doing }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			if = {
+				limit = { has_completed_focus = RSB_what_are_you_doing }
+				add_to_variable = {
+					var = RSB_financial_budget_income_max
+					value = 2.5
+					tooltip = RSB_financial_budget_income_max_tt
+				}
+				RSB_assets_cal = yes
+			}
+			else = {
+				add_to_variable = { RSB_financial_budget_income_max = 5 }
+				custom_effect_tooltip = RSB_financial_budget_max_up_5_tt
+				RSB_assets_cal = yes	
+			}
+		}
+	}
+	RSB_emergently_lower_taxes = {		#紧急降息
+		icon = gre_investment_decisions
+
+		available = {}
+		visible = { has_completed_focus = RSB_what_are_you_doing }
+
+		cost = 20
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_industrial_transformation = {		#工业转型
+		icon = generic_wreckers
+
+		available = {}
+		visible = { has_completed_focus = RSB_end_of_world }
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_forced_consumption = {		#强制消费
+		icon = generic_speech
+
+		available = {}
+		visible = { has_completed_focus = RSB_end_of_world }
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income_max = 10 }
+			custom_effect_tooltip = RSB_financial_budget_max_up_10_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_massive_tax_adding = {		#大规模加息
+		icon = gre_paying_ifc_debt
+
+		available = {}
+		visible = { has_completed_focus = RSB_end_of_world }
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -10 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_10_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_buy_leftovers_from_market = {		#政府赎买部分市场堆积产品
+		icon = generic_fundraising
+
+		available = {}
+		visible = { has_completed_focus = RSB_end_of_world }
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_asset = 5 }
+			custom_effect_tooltip = RSB_assets_up_5_tt
+			add_to_variable = { RSB_financial_budget_income = -5 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_5_tt
+			RSB_assets_cal = yes
+		}
+	}
+	RSB_cut_all_welfares = {		#削减所有福利政策
+		icon = generic_decision
+
+		available = {}
+		visible = { has_completed_focus = RSB_end_of_world }
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = { RSB_financial_budget_income = -10 }
+			custom_effect_tooltip = RSB_financial_budget_income_down_10_tt
+			RSB_assets_cal = yes
+		}
+	}
+}
+
+RSB_politic_sit = {		#政治状况
+	RSB_unlock_politic_sit_desc = {		#显示政治状况描述
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { check_variable = { RSB_politic_sit_desc = 0 } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			set_variable = { RSB_politic_sit_desc = 1 }
+		}
+	}
+	RSB_lock_politic_sit_desc = {		#隐藏政治状况描述
+		icon = generic_prepare_civil_war
+
+		available = {}
+		visible = { check_variable = { RSB_politic_sit_desc = 1 } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			set_variable = { RSB_politic_sit_desc = 0 }
+		}
+	}
+	RSB_government_polls = { 		#政府民意调查
+		icon = generic_brainwash
+		allowed = { tag = RSB }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 90
+
+		timeout_effect = {
+			activate_mission = RSB_government_polls
+			if = {
+				limit = { check_variable = { RSB_politic_sit_prestige < 50 } }
+				country_event = RSB.200
+			}
+		}
+	}
+	RSB_inspection_of_government_work = { 		#政府工作检查
+		icon = generic_decision
+		allowed = { tag = RSB }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 90
+
+		timeout_effect = {
+			activate_mission = RSB_inspection_of_government_work
+			if = {
+				limit = { check_variable = { RSB_politic_sit_unity < 50 } }
+				country_event = RSB.201
+			}
+		}
+	}
+	RSB_attack_from_opposition = { 		#反对派的攻击
+		icon = generic_decision
+		allowed = { tag = RSB }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RSB_attack_from_opposition_tr
+				check_variable = { RSB_politic_sit_scandal > 4 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 15
+
+		timeout_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_prestige
+				value = RSB_politic_sit_scandal_min
+				tooltip = RSB_politic_sit_prestige_tt
+			}
+			activate_mission = RSB_attack_from_opposition
+		}
+	}
+	RSB_commitment_to_improve_conditions = {		#承诺改善条件
+		icon = generic_speech
+
+		available = {
+			NOT = {
+				OR = {
+					has_government = national_socialist
+					has_government = authoritarian_nationalism
+					has_government = paternal_autocrat
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = RSB_commitment_to_improve_conditions_tr
+				check_variable = {
+					RSB_politic_sit_prestige > 50
+				}
+			}
+		}
+		visible = {}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_prestige
+				value = 5
+				tooltip = RSB_politic_sit_prestige_tt
+			}
+		}
+	}
+	RSB_bring_in_the_centrists = {		#拉拢中间派
+		icon = generic_fundraising
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RSB_commitment_to_improve_conditions_tr
+				check_variable = {
+					RSB_politic_sit_scandal < 15
+				}
+			}
+		}
+		visible = {}
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 60
+		days_re_enable = 60
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			political_power_factor = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_prestige
+				value = 10
+				tooltip = RSB_politic_sit_prestige_tt
+			}
+		}
+	}
+	RSB_make_compromisions = {		#让渡一部分利益
+		icon = generic_operation
+
+		available = {
+			NOT = {
+				OR = {
+					has_government = national_socialist
+					has_government = authoritarian_nationalism
+				}
+			}
+		}
+		visible = {}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_unity
+				value = 10
+				tooltip = RSB_politic_sit_unity_tt
+			}
+		}
+	}
+	RSB_countering_dissent_in_government = {		#打击政府内的异己
+		icon = GFX_decision_oppression
+
+		available = {}
+		visible = {}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 15
+
+		fixed_random_seed = no
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			random_list = {
+				60 = {
+					add_to_variable = {
+						var = RSB_politic_sit_unity
+						value = 10
+						tooltip = RSB_politic_sit_unity_tt
+					}
+				}
+				40 = {}
+			}
+		}
+	}
+	RSB_invest_industrial_areas = {		#“投资”老工业区
+		icon = generic_factory
+
+		available = {}
+		visible = {}
+
+		cost = 20
+		fire_only_once = no
+		days_re_enable = 90
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_local_party_trust
+				value = 5
+				tooltip = RSB_politic_sit_local_party_trust_tt
+			}
+			every_owned_state = {
+				limit = { OR = { state = 324 state = 327 state = 325 state = 326 state = 329 } }
+				add_dynamic_modifier = {
+					modifier = RSB_central_gov_investment
+					days = 60
+				}
+			}
+		}
+	}
+	RSB_extra_subsidy_for_local_gov = {		#给予地方政府额外补贴
+		icon = generic_welfare
+
+		available = {}
+		visible = {}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_local_party_trust
+				value = 10
+				tooltip = RSB_politic_sit_local_party_trust_tt
+			}
+		}
+	}
+	RSB_battle_with_opposition = {		#与反对派论战
+		icon = generic_political_address
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RSB_battle_with_opposition_tr
+				check_variable = {
+					RSB_politic_sit_prestige > 50
+				}
+			}
+		}
+		visible = {}
+
+		cost = 5
+		fire_only_once = no
+		days_re_enable = 10
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			random_list = {
+				16 = {}
+				16 = {
+					add_to_variable = {
+						var = RSB_politic_sit_scandal
+						value = -1
+						tooltip = RSB_politic_sit_scandal_tt
+					}
+				}
+				16 = {
+					add_to_variable = {
+						var = RSB_politic_sit_scandal
+						value = -2
+						tooltip = RSB_politic_sit_scandal_tt
+					}
+				}
+				16 = {
+					add_to_variable = {
+						var = RSB_politic_sit_scandal
+						value = -3
+						tooltip = RSB_politic_sit_scandal_tt
+					}
+				}
+				16 = {
+					add_to_variable = {
+						var = RSB_politic_sit_scandal
+						value = -4
+						tooltip = RSB_politic_sit_scandal_tt
+					}
+				}
+				16 = {
+					add_to_variable = {
+						var = RSB_politic_sit_scandal
+						value = -5
+						tooltip = RSB_politic_sit_scandal_tt
+					}
+				}
+			}
+		}
+	}
+	RSB_authorize_national_security_agency = {		#授权国家安全局
+		icon = GFX_decision_eng_trade_unions_support
+
+		available = {}
+		visible = {}
+
+		cost = 40
+		fire_only_once = no
+		days_remove = 90
+		days_re_enable = 90
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			stability_factor = 0.1
+			political_power_factor = 0.05
+			industrial_capacity_factory = 0.05
+			production_speed_buildings_factor = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = RSB_politic_sit_scandal
+				value = -5
+				tooltip = RSB_politic_sit_scandal_tt
+			}
+			add_to_variable = {
+				var = RSB_politic_sit_prestige
+				value = -10
+				tooltip = RSB_politic_sit_prestige_tt
+			}
+			add_to_variable = {
+				var = RSB_politic_sit_local_party_trust
+				value = -5
+				tooltip = RSB_politic_sit_local_party_trust_tt
+			}
+		}
+	}
+}
+
+RSB_suppress_rebellion = {
+	RSB_suppress_right_rebellion = {	#镇压复兴党叛乱
+		icon = generic_civil_support
+		allowed = { tag = RSB }
+
+		available = { RNA = { exists = no } }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 25
+
+		cost = 0
+		fire_only_once = no
+
+		ai_will_do = { factor = 0.5 }
+
+		timeout_effect = {
+			country_event = RSB.502
+		}
+	}
+}

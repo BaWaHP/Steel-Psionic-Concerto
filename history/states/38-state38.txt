@@ -1,0 +1,23 @@
+
+state={
+	id=38
+	name="STATE_38"
+	provinces={
+		5242 6229 6757 8982 10550 11574 12053 17911 18120 18146 18147 18236 18237 18327 
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			10550 3
+		}
+	}
+	manpower=3120000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

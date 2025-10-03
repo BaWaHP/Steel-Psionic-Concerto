@@ -1,0 +1,253 @@
+﻿add_namespace = NFH
+
+country_event = {	#北远乡剧情1·镇压匪患是否成功
+	id = NFH.1
+	title = NFH.1.t
+	desc = NFH.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH.1.a	#成功
+		ai_chance = {
+			base = 50
+		}
+		SFH = {
+			country_event = NFH_To_SFH.1
+		}
+		news_event = NFHNews.1
+		random_list = {
+			75 = {
+				#nothing
+			}
+			25 = {
+				country_event = { id = NFH.2 days = 150 }
+			}
+		}
+	}
+
+	option = {
+		name = NFH.1.b	#失败，农民大起义
+		ai_chance = {
+			base = 50
+		}
+		hidden_effect = {
+			SPC_NFH_civil_war_setup_1 = yes	
+		}
+		SFH = {
+			country_event = NFH_To_SFH.2
+		}
+		news_event = NFHNews.2
+	}
+}
+
+country_event = {	#北远乡剧情2·贵族政变
+	id = NFH.2
+	title = NFH.2.t
+	desc = NFH.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH.1.a
+		SPC_NFH_civil_war_setup_2 = yes
+		SFH = {
+			country_event = NFH_To_SFH.3
+		}
+		news_event = NFHNews.3
+	}
+}
+
+country_event = {	#北远乡剧情3 开打
+	id = NFH.3
+	title = NFH.3.t
+	desc = NFH.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH.3.a
+		declare_war_on = {
+			target = AFH
+			type = annex_everything
+		}
+		if = {
+			limit = { FFH = { exists = yes } }
+			declare_war_on = {
+				target = FFH
+				type = annex_everything
+			}
+		}
+	}
+}
+
+add_namespace = NFH_To_SFH
+
+country_event = {	#郑义平定北方匪患
+	id = NFH_To_SFH.1
+	title = NFH_To_SFH.1.t
+	desc = NFH_To_SFH.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH_To_SFH.1.a
+		add_war_support = 0.02
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+	}
+
+	option = {
+		name = NFH_To_SFH.1.b
+		add_stability = 0.02
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#北方陷入混乱！
+	id = NFH_To_SFH.2
+	title = NFH_To_SFH.2.t
+	desc = NFH_To_SFH.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH_To_SFH.2.a
+		set_country_flag = SFH_nfh_at_civil_war
+		add_stability = -0.02
+	}
+}
+
+country_event = {	#北方贵族政变
+	id = NFH_To_SFH.3
+	title = NFH_To_SFH.3.t
+	desc = NFH_To_SFH.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NFH_To_SFH.3.a
+		set_country_flag = SFH_nfh_at_civil_war
+		add_political_power = -20
+		add_stability = -0.02
+		SFH_conservative_power_up_small = yes
+	}
+}
+
+###新闻###
+
+add_namespace = NFHNews
+
+news_event = {
+	id = NFHNews.1	#北远乡地区的铁血君主
+	title = NFHNews.1.t
+	desc = NFHNews.1.d
+	picture = GFX_news_event_generic_7
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NFHNews.1.a
+		trigger = {
+			NOT = { tag = SFH }
+			NOT = { tag = NFH }
+		}
+	}
+
+	option = {
+		name = NFHNews.1.b
+		trigger = {
+			tag = SFH
+		}
+	}
+
+	option = {
+		name = NFHNews.1.b
+		trigger = {
+			tag = NFH
+		}
+	}
+}
+
+news_event = {
+	id = NFHNews.2	#北远乡地区陷入战火！
+	title = NFHNews.2.t
+	desc = NFHNews.2.d
+	picture = GFX_news_event_generic_64
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NFHNews.2.a
+		trigger = {
+			NOT = { tag = SFH }
+			NOT = { tag = NFH }
+		}
+	}
+
+	option = {
+		name = NFHNews.2.b
+		trigger = {
+			tag = SFH
+		}
+	}
+
+	option = {
+		name = NFHNews.2.c
+		trigger = {
+			tag = NFH
+		}
+	}
+}
+
+news_event = {
+	id = NFHNews.3	#北远乡地区陷入战火！
+	title = NFHNews.3.t
+	desc = NFHNews.3.d
+	picture = GFX_news_event_generic_64
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NFHNews.3.a
+		trigger = {
+			NOT = { tag = SFH }
+			NOT = { tag = NFH }
+		}
+	}
+
+	option = {
+		name = NFHNews.3.b
+		trigger = {
+			tag = SFH
+		}
+	}
+
+	option = {
+		name = NFHNews.3.c
+		trigger = {
+			tag = NFH
+		}
+	}
+}

@@ -1,0 +1,94 @@
+defined_text = {
+	name = GetIndDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = industrial_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_industrial_development_process }
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+
+defined_text = {
+	name = GetArgDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = agricultural_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_agricultural_development_process }
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+
+defined_text = {
+	name = GetMilDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = military_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_military_development_process }
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+
+defined_text = {
+	name = GetLivDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = living_standard_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_living_standard_development_process }
+			if = {
+				limit = { has_war = yes }
+				add_to_temp_variable = { temp_dev = -4 }
+			}
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+
+defined_text = {
+	name = GetEnvDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = environment_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_environment_development_process }
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+
+defined_text = {
+	name = GetResDev
+	text = {
+		trigger = { 
+			set_temp_variable = { temp_dev = 0 }
+			add_to_temp_variable = { temp_dev = research_development_mod }
+            add_to_temp_variable = { temp_dev = modifier@monthly_research_development_process }
+		}
+		localization_key = "[?temp_dev]"
+	}
+	text = {
+		localization_key = "0"	
+	}	
+}
+

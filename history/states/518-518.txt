@@ -1,0 +1,26 @@
+state={
+	id=518
+	name="STATE_518"
+	history = {
+		owner = UIS
+		add_core_of = UIS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			6237 = { bunker = 2 }
+		}
+		victory_points = {
+			13768 1
+		}
+		victory_points = {
+			6237 2
+		}
+	}
+	provinces={
+		2220 2490 3578 4860 6237 10396 11650 13616 13768 
+	}
+	manpower=882000
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

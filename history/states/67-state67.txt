@@ -1,0 +1,31 @@
+
+state={
+	id=67
+	name="STATE_67"
+	provinces={
+		4345 5024 7250 7888 8828 9521 11284 17724 17743 17871 17985 18008 18009 18145 
+	}
+	resources = {
+		steel = 12
+		chromium = 24
+	}
+	history = {
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			9521 5
+		}
+		victory_points = {
+			11284 3
+		}
+	}
+	manpower = 1642367
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

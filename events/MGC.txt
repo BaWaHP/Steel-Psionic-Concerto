@@ -1,0 +1,1057 @@
+﻿add_namespace = MGC
+
+country_event = {	#落幕重开
+	id = MGC.0
+	title = MGC.0.t
+	desc = MGC.0.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.0.a
+		custom_effect_tooltip = MGC.0.a.tt
+		set_country_flag = MGC_day_and_night_on
+		unlock_decision_category_tooltip = MGC_day_and_night
+		retire_character = MGC_nenleko_dora
+	}
+
+	option = {
+		name = MGC.0.b
+		custom_effect_tooltip = MGC.0.b.tt
+		set_country_flag = MGC_day_and_night_on
+		unlock_decision_category_tooltip = MGC_day_and_night
+		retire_character = MGC_nenleko_dora
+	}
+}
+
+country_event = {	#我曾在此
+	id = MGC.1
+	title = MGC.1.t
+	desc = MGC.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.1.a
+		custom_effect_tooltip = MGC.1.a.tt
+	}
+}
+
+country_event = {	#春之祭
+	id = MGC.2
+	title = MGC.2.t
+	desc = MGC.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.2.a
+		add_stability = 0.02
+		every_character = { set_character_flag = MGC_character_advisor_role_locked }
+		custom_effect_tooltip = MGC.2.a.tt
+	}
+}
+
+country_event = {	#金铁与不可腐蚀者
+	id = MGC.3
+	title = MGC.3.t
+	desc = MGC.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.3.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_2
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_2_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_doctrine_cost_reduction = {
+			name = MGC.3
+			cost_reduction = 0.25
+			uses = 1
+			category = cat_superior_firepower
+		}
+		set_country_flag = MGC_deni_unlock_flag
+	}
+
+	option = {
+		name = MGC.3.b
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_1
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_1_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_doctrine_cost_reduction = {
+			name = MGC.3
+			cost_reduction = 0.25
+			uses = 1
+			category = cat_superior_firepower
+		}
+		add_doctrine_cost_reduction = {
+			name = MGC.3
+			cost_reduction = 0.25
+			uses = 1
+			category = cat_mass_assault
+		}
+		set_country_flag = MGC_or_dovuzdo_unlock_flag
+	}
+}
+
+country_event = {	#长斧将军向前进
+	id = MGC.4
+	title = MGC.4.t
+	desc = MGC.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.4.a
+
+		MGC_denis_golden_iron_kossuth = { clr_character_flag = MGC_character_advisor_role_locked }
+		activate_advisor = MGC_denis_golden_iron_kossuth_idea_hc
+
+		set_country_flag = MGC_winning_over_churches_flag
+		unlock_decision_tooltip = MGC_winning_over_churches
+	}
+}
+
+country_event = {	#长斧与圣像
+	id = MGC.5
+	title = MGC.5.t
+	desc = MGC.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.5.a
+		custom_effect_tooltip = MGC.5.a.tt
+		
+		MGC_vash_natasha_east = { 
+			clr_character_flag = MGC_character_advisor_role_locked
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 1 
+				tooltip = MGC_spring_conspiracy_supporter_tt_1
+			}
+		}
+
+		MGC_all_religious_associations = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 1 
+				tooltip = MGC_spring_conspiracy_supporter_tt_1
+			}
+		}
+
+		activate_advisor = MGC_vash_natasha_east_idea
+	}
+}
+
+country_event = {	#禁止事宜
+	id = MGC.6
+	title = MGC.6.t
+	desc = MGC.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.6.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = -10
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {	#德·哲姆菲亚之道
+	id = MGC.7
+	title = MGC.7.t
+	desc = MGC.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.7.a
+		MGC_dovuzdo_de_zhemfia = { clr_character_flag = MGC_character_advisor_role_locked }
+		activate_advisor = MGC_dovuzdo_de_zhemfia_idea_hc
+
+		set_country_flag = MGC_winning_over_churches_flag
+		unlock_decision_tooltip = MGC_winning_over_churches
+	}
+}
+
+country_event = {	#圣徒之会
+	id = MGC.8
+	title = MGC.8.t
+	desc = MGC.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.8.a
+		custom_effect_tooltip = MGC.8.a.tt
+
+		MGC_vash_natasha_east = { 
+			clr_character_flag = MGC_character_advisor_role_locked
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 2
+				tooltip = MGC_spring_conspiracy_supporter_tt_2
+			}
+		}
+
+		MGC_all_religious_associations = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 2 
+				tooltip = MGC_spring_conspiracy_supporter_tt_2
+			}
+		}
+
+		activate_advisor = MGC_vash_natasha_east_idea
+	}
+}
+
+country_event = {	#令行禁止
+	id = MGC.9
+	title = MGC.9.t
+	desc = MGC.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.9.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = -10
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {	#大拉萨尔之心
+	id = MGC.10
+	title = MGC.10.t
+	desc = MGC.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.10.a
+	}
+}
+
+country_event = {	#均衡战术
+	id = MGC.11
+	title = MGC.11.t
+	desc = MGC.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.11.a
+		MGC_nenleko_dora = { clr_character_flag = MGC_character_advisor_role_locked }
+		activate_advisor = MGC_nenleko_dora_idea_hc
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = -5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		set_country_flag = MGC_let_nenlekov_take_charge_flag
+		unlock_decision_tooltip = MGC_let_nenlekov_take_charge
+	}
+}
+
+country_event = {	#太阳之下无新事
+	id = MGC.12
+	title = MGC.12.t
+	desc = MGC.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.12.a
+	}
+}
+
+country_event = {	#愧疚
+	id = MGC.13
+	title = MGC.13.t
+	desc = MGC.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.13.a
+		country_event = {
+			id = MGC.14
+			days = 1
+		}
+	}
+}
+
+country_event = {	#梦魇
+	id = MGC.14
+	title = MGC.14.t
+	desc = MGC.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.14.a
+		country_event = {
+			id = MGC.15
+			days = 1
+		}
+	}
+}
+
+country_event = {	#心死
+	id = MGC.15
+	title = MGC.15.t
+	desc = MGC.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.15.a
+	}
+}
+
+country_event = {	#第一根，最后一根
+	id = MGC.16
+	title = MGC.16.t
+	desc = MGC.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.16.a
+	}
+}
+
+country_event = {	#艰难选择
+	id = MGC.17
+	title = MGC.17.t
+	desc = MGC.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.17.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_stability = -0.05
+		set_country_flag = MGC_industrial_worship_flag
+		unlock_decision_tooltip = MGC_industrial_worship
+
+		set_country_flag = MGC_solny_unlock_flag
+	}
+
+	option = {
+		name = MGC.17.b
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 10
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_stability = -0.1
+		set_country_flag = MGC_maintain_our_style_flag
+		unlock_decision_tooltip = MGC_maintain_our_style
+
+		set_country_flag = MGC_or_korf_unlock_flag
+	}
+}
+
+country_event = {	#无神论或死亡
+	id = MGC.18
+	title = MGC.18.t
+	desc = MGC.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.18.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 15
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_2
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_2_tt
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {	#齿轮咬合
+	id = MGC.19
+	title = MGC.19.t
+	desc = MGC.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.19.a
+		custom_effect_tooltip = MGC.19.a.tt
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		MGC_industrial_dep = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 1
+				tooltip = MGC_spring_conspiracy_supporter_tt_1
+			}
+		}
+		MGC_lugo_igor_zoltan = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 3
+				tooltip = MGC_spring_conspiracy_supporter_tt_3
+			}
+		}
+		unlock_decision_tooltip = MGC_black_trade_with_rot
+		set_country_flag = MGC_black_trade_with_rot_flag
+	}
+
+	option = {
+		name = MGC.19.b
+		custom_effect_tooltip = MGC.19.b.tt
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 10
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		MGC_industrial_dep = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 1
+				tooltip = MGC_spring_conspiracy_supporter_tt_1
+			}
+		}
+		MGC_lugo_igor_zoltan = { 
+			set_variable = { 
+				MGC_spring_conspiracy_supporter = 3
+				tooltip = MGC_spring_conspiracy_supporter_tt_3
+			}
+		}
+		unlock_decision_tooltip = MGC_counter_lugo
+		set_country_flag = MGC_counter_lugo_flag
+	}
+}
+
+country_event = {	#最后的共和之父
+	id = MGC.20
+	title = MGC.20.t
+	desc = MGC.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.20.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 15
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_3
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_3_tt
+		}
+		add_stability = 0.1
+	}
+}
+
+country_event = {	#落幕之后
+	id = MGC.21
+	title = MGC.21.t
+	desc = MGC.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.21.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_3
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_3_tt
+		}
+		add_stability = -0.05
+		country_event = {
+			id = MGC.22
+			days = 1
+		}
+	}
+}
+
+country_event = {	#北人之怒
+	id = MGC.22
+	title = MGC.22.t
+	desc = MGC.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.22.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_to_variable = {
+			var = MGC_spring_conspiracy_influence_3
+			value = 5
+			tooltip = MGC_spring_conspiracy_influence_3_tt
+		}
+		add_stability = -0.05
+		unlock_decision_tooltip = MGC_silent_red_gold_white
+		set_country_flag = MGC_silent_red_gold_white_flag
+	}
+}
+
+country_event = {	#环形监狱
+	id = MGC.23
+	title = MGC.23.t
+	desc = MGC.23.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.23.a
+		country_event = {
+			id = MGC.24
+			days = 1
+		}
+	}
+}
+
+country_event = {	#无人的空房
+	id = MGC.24
+	title = MGC.24.t
+	desc = MGC.24.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.24.a
+		country_event = {
+			id = MGC.25
+			days = 1
+		}
+	}
+}
+
+country_event = {	#谢幕
+	id = MGC.25
+	title = MGC.25.t
+	desc = MGC.25.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.25.a
+		custom_effect_tooltip = MGC.25.a.tt
+		retire_character = MGC_semyon_zabrovsky
+		news_event = MGCNews.1
+
+		clr_country_flag = MGC_focus_1
+		set_country_flag = MGC_focus_2
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {	#漩涡中心
+	id = MGC.50
+	title = MGC.50.t
+	desc = MGC.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.50.a
+		MGC_nenleko_dora = { promote_leader = yes }
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 15
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		hidden_effect = {
+			MGC_supreme_tetrarchan_allied_forces_char = {
+				remove_country_leader_role = {
+					ideology = military_dictatorship
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						desc = MGC_supreme_tetrarchan_allied_forces_char_desc_2
+						ideology = military_dictatorship
+						traits = { MGC_piety_motherland_nation_2 }
+						expire = "3000.1.1.1"
+					}
+				}
+			}	
+		}
+	}
+}
+
+country_event = {	#沙上之塔
+	id = MGC.51
+	title = MGC.51.t
+	desc = MGC.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.51.a
+		unlock_decision_tooltip = MGC_promoted_the_Nenlekov_corps
+		set_country_flag = MGC_promoted_the_Nenlekov_corps_flag
+	}
+}
+
+country_event = {	#浮生一日
+	id = MGC.52
+	title = MGC.52.t
+	desc = MGC.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.52.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 10
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		swap_ideas = {
+			remove_idea = MGC_settle_the_controversy
+			add_idea = MGC_ineffective_compromise
+		}
+	}
+}
+
+country_event = {	#跗骨之蛆
+	id = MGC.53
+	title = MGC.53.t
+	desc = MGC.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.53.a
+		custom_effect_tooltip = MGC.53.a.tt
+		retire_character = MGC_lugo_igor_zoltan
+		remove_ideas = MGC_supreme_industria_ministry
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		set_country_flag = MGC_lugo_escaped
+		swap_ideas = {
+			remove_idea = MGC_whitewash_the_situation
+			add_idea = MGC_chaotic_economy
+		}
+	}
+}
+
+country_event = {	#跗骨之蛆
+	id = MGC.54
+	title = MGC.54.t
+	desc = MGC.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.54.a
+		custom_effect_tooltip = MGC.54.a.tt
+	}
+}
+
+country_event = {	#清场
+	id = MGC.55
+	title = MGC.55.t
+	desc = MGC.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.55.a
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 5
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#“住声！不要说下去”
+	id = MGC.56
+	title = MGC.56.t
+	desc = MGC.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.56.a
+		custom_effect_tooltip = MGC.56.a.tt
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#我相信你们的忠心
+	id = MGC.57
+	title = MGC.57.t
+	desc = MGC.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.57.a
+		trigger = { has_country_flag = MGC_deni_unlock_flag }
+		custom_effect_tooltip = MGC.57.a.tt
+		add_stability = -0.05
+	}
+
+	option = {
+		name = MGC.57.b
+		trigger = { has_country_flag = MGC_or_dovuzdo_unlock_flag }
+		custom_effect_tooltip = MGC.57.b.tt
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#白昼
+	id = MGC.58
+	title = MGC.58.t
+	desc = MGC.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.58.a
+		custom_effect_tooltip = MGC.58.a.tt
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#红幕
+	id = MGC.59
+	title = MGC.59.t
+	desc = MGC.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.59.a
+		custom_effect_tooltip = MGC.59.a.tt
+		add_stability = -0.05
+	}
+}
+
+country_event = {	#开幕
+	id = MGC.60
+	title = MGC.60.t
+	desc = MGC.60.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.60.a
+		custom_effect_tooltip = MGC.60.a.tt
+		add_stability = -0.05
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = -50
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		country_event = MGC.61
+	}
+}
+
+country_event = {	#颠倒混乱的时代
+	id = MGC.61
+	title = MGC.61.t
+	desc = MGC.61.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.61.a
+		trigger = { has_country_flag = MGC_deni_unlock_flag }
+		custom_effect_tooltip = MGC.61.a.tt
+		add_stability = -0.15
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 15
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		retire_character = MGC_denis_golden_iron_kossuth
+		country_event = MGC.62
+	}
+
+	option = {
+		name = MGC.61.b
+		trigger = { has_country_flag = MGC_or_dovuzdo_unlock_flag }
+		custom_effect_tooltip = MGC.61.b.tt
+		add_stability = -0.15
+		add_to_variable = {
+			var = MGC_spring_conspiracy_tension
+			value = 15
+			tooltip = MGC_spring_conspiracy_tension_tt
+		}
+		retire_character = MGC_dovuzdo_de_zhemfia
+		country_event = MGC.62
+	}
+}
+
+country_event = {	#另一边……
+	id = MGC.62
+	title = MGC.62.t
+	desc = MGC.62.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.62.a
+		custom_effect_tooltip = MGC.62.a.tt
+		country_event = MGC.63
+	}
+}
+
+country_event = {	#啊，骄傲的死神！
+	id = MGC.63
+	title = MGC.63.t
+	desc = MGC.63.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.63.a
+		clr_country_flag = MGC_spring_conspiracy_on
+		custom_effect_tooltip = MGC.63.a.tt
+		country_event = MGC.0
+	}
+}
+
+country_event = {	#嫩勒科夫元帅万岁！
+	id = MGC.64
+	title = MGC.64.t
+	desc = MGC.64.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = MGC.64.a
+		country_event = MGC.63
+	}
+}
+
+###新闻###
+
+add_namespace = MGCNews
+
+news_event = {
+	id = MGCNews.1		#谢姆延·扎布罗夫斯之死
+	title = MGCNews.1.t
+	desc = MGCNews.1.d
+	picture = GFX_news_event_MGC_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = MGCNews.1.a
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				tag = ZHE
+				tag = RSB
+				tag = MGC
+				tag = ROT
+				tag = KDK
+				tag = VLF
+				tag = IMC
+			}
+		}
+	}
+
+	option = {
+		name = MGCNews.1.b
+		trigger = { tag = ZHE }
+	}
+
+	option = {
+		name = MGCNews.1.c
+		trigger = { tag = RSB }
+	}
+
+	option = {
+		name = MGCNews.1.dd
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = MGCNews.1.e
+		trigger = { tag = MGC }
+	}
+
+	option = {
+		name = MGCNews.1.f
+		trigger = { tag = MGC }
+	}
+
+	option = {
+		name = MGCNews.1.g
+		trigger = { tag = ROT }
+	}
+
+	option = {
+		name = MGCNews.1.h
+		trigger = { tag = KDK }
+	}
+
+	option = {
+		name = MGCNews.1.i
+		trigger = { tag = VLF }
+	}
+
+	option = {
+		name = MGCNews.1.j
+		trigger = { tag = IMC }
+	}
+}
+
+news_event = {
+	id = MGCNews.2		#北提特兰第二次共和革命？
+	title = MGCNews.2.t
+	desc = MGCNews.2.d
+	picture = GFX_news_event_generic_27
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = MGCNews.2.a
+		trigger = {
+			tag = VLF
+		}
+	}
+
+	option = {
+		name = MGCNews.2.b
+		trigger = {
+			tag = ROT
+		}
+	}
+
+	option = {
+		name = MGCNews.2.c
+		trigger = {
+			OR = {
+				tag = ZHE
+				is_in_faction_with = ZHE
+			}
+		}
+	}
+
+	option = {
+		name = MGCNews.2.dd
+		trigger = {
+			OR = {
+				tag = RSB
+				is_in_faction_with = RSB
+				NOT = { tag = ROT }
+			}
+		}
+	}
+
+	option = {
+		name = MGCNews.2.e
+		trigger = {
+			NOT = {
+				tag = VLF
+				tag = ROT
+
+				tag = ZHE
+				is_in_faction_with = ZHE
+
+				tag = RSB
+				is_in_faction_with = RSB
+			}
+		}
+	}
+}

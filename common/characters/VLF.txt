@@ -1,0 +1,279 @@
+characters={
+
+	VLF_ugrevik_seat_committee = {		#“乌格列维克座”委员会
+   		name = VLF_ugrevik_seat_committee
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = interstellar_revolutionism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_djimon_obrenova = {		#基蒙·奥布雷诺瓦
+   		name = VLF_djimon_obrenova
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = leftist_guerrilla_movement
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_the_atheist_jury = {		#“无神论”裁判团
+   		name = VLF_the_atheist_jury
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = exporting_revolutionism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_yanez_ribal = {		#雅奈兹·里巴尔
+   		name = VLF_yanez_ribal
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = left_wing_nationalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_protic_davidovic = {		#普罗蒂奇·达维多维奇
+   		name = VLF_protic_davidovic
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = liberal_racism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_draca_milosevic = {		#德拉查·米洛舍维奇
+   		name = VLF_draca_milosevic
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = agrarian_popularism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_ivan_obrenovic = {		#伊万·奥布雷诺维奇
+   		name = VLF_ivan_obrenovic
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = oligarchy
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_gnaeus_merciar = {		#格奈乌斯·默西亚尔
+   		name = VLF_gnaeus_merciar
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = social_corporatism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_velicko_simovic = {		#维里奇科·西莫维奇
+   		name = VLF_velicko_simovic
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = racial_supremacy
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_alexande_urosh = {		#亚历山大·乌罗什
+   		name = VLF_alexande_urosh
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = VLF_alexande_urosh_desc
+   			ideology = absolute_monarchy
+			traits = { VLF_supreme_regent }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_vallefiorita_church = {		#瓦莱菲奥丽塔教会
+   		name = VLF_vallefiorita_church
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = heresy_ruling
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_the_cult = {		#“教团”
+   		name = VLF_the_cult
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_nikolai_vozd_yeniseev = {		#尼古拉·“沃兹德”·叶尼塞夫
+   		name = VLF_nikolai_vozd_yeniseev
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_populism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	VLF_ivan_obrenovich = {		#伊万·奥布雷偌维奇
+   		name = VLF_ivan_obrenovich
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+	}
+
+	VLF_rinaldav_obrenovich = {		#瑞纳达夫·奥布雷偌维奇
+   		name = VLF_rinaldav_obrenovich
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+	}
+}

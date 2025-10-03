@@ -1,0 +1,30 @@
+leader_traits = {
+	NKM_leader_of_uprising = {				#起义军领袖
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+
+		modifier = {
+			army_org_factor = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	NKM_failed_leader_of_uprising = {	#失败的起义军领袖
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+
+		modifier = {
+			army_org_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

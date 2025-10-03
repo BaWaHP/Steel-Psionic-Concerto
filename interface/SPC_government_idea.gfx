@@ -1,0 +1,667 @@
+spriteTypes = {	
+	###训练###
+	spriteType = {
+		name = "GFX_idea_no_standard_at_all"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_no_standard_at_all.png"
+	}
+	spriteType = {
+		name = "GFX_idea_basic_training"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_basic_training.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advanced_training"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_advanced_training.png"
+	}
+	spriteType = {
+		name = "GFX_idea_reinforced_training"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_reinforced_training.png"
+	}
+	spriteType = {
+		name = "GFX_idea_elite_only"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_elite_only.png"
+	}
+	spriteType = {
+		name = "GFX_idea_best_of_the_best"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_best_of_the_best.png"
+	}
+	###税收###
+	spriteType = {
+		name = "GFX_idea_barely_no_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_barely_no_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_low_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_low_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_normal_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_normal_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_high_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_high_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_too_much_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_too_much_taxes.png"
+	}
+	###外交姿态###
+	spriteType = {
+		name = "GFX_idea_isolation_tatic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_isolation_tatic.png"
+	}
+	spriteType = {
+		name = "GFX_idea_defensive_tatic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_defensive_tatic.png"
+	}
+	spriteType = {
+		name = "GFX_idea_aggressive_tatic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_aggressive_tatic.png"
+	}
+	spriteType = {
+		name = "GFX_idea_friendly_tatic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_friendly_tatic.png"
+	}
+	spriteType = {
+		name = "GFX_idea_neutral_tatic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_neutral_tatic.png"
+	}
+	###国有化政策###
+	spriteType = {
+		name = "GFX_idea_NP_totally_free_market"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_NP_totally_free_market.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NP_light_nationalization"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_NP_light_nationalization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NP_medium_nationalization"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_NP_medium_nationalization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NP_high_nationalization"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_NP_high_nationalization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NP_total_nationalization"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_NP_total_nationalization.png"
+	}
+	###工业发展度###
+	spriteType = {
+		name = "GFX_idea_primitive_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_primitive_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_handcraft_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_handcraft_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_early_factory_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_early_factory_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_factory_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_factory_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_grouped_factory_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_grouped_factory_industry.png"
+	}
+	spriteType = {
+		name = "GFX_idea_innovative_industry"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_innovative_industry.png"
+	}
+	###农业发展度###
+	spriteType = {
+		name = "GFX_idea_primitive_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_primitive_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_idea_self_efficient_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_self_efficient_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_idea_weak_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_weak_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_idea_modern_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_modern_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_idea_half_auto_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_half_auto_agriculture.png"
+	}
+	spriteType = {
+		name = "GFX_idea_mechanized_agriculture"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_mechanized_agriculture.png"
+	}
+	###军事职业度###
+	spriteType = {
+		name = "GFX_idea_primitive_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_primitive_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_unorganized_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_unorganized_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_experienced_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_experienced_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_very_experienced_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_very_experienced_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_advanced_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_advanced_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_innovative_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_innovative_army.png"
+	}
+	###民生发展度###
+	spriteType = {
+		name = "GFX_idea_death_everywhere"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_death_everywhere.png"
+	}
+	spriteType = {
+		name = "GFX_idea_struggle_to_survive"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_struggle_to_survive.png"
+	}
+	spriteType = {
+		name = "GFX_idea_hard_to_survive"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_hard_to_survive.png"
+	}
+	spriteType = {
+		name = "GFX_idea_normally_living"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_normally_living.png"
+	}
+	spriteType = {
+		name = "GFX_idea_extra_living"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_extra_living.png"
+	}
+	spriteType = {
+		name = "GFX_idea_best_living"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_best_living.png"
+	}
+	###民生发展度###
+	spriteType = {
+		name = "GFX_idea_hazard_zone"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_hazard_zone.png"
+	}
+	spriteType = {
+		name = "GFX_idea_unhabitable"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_unhabitable.png"
+	}
+	spriteType = {
+		name = "GFX_idea_uncomfortable"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_uncomfortable.png"
+	}
+	spriteType = {
+		name = "GFX_idea_controlled_pollution"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_controlled_pollution.png"
+	}
+	spriteType = {
+		name = "GFX_idea_relatively_comfortable"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_relatively_comfortable.png"
+	}
+	spriteType = {
+		name = "GFX_idea_real_natural_environment"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_real_natural_environment.png"
+	}
+	###科研发展度###
+	spriteType = {
+		name = "GFX_idea_fuck_the_science"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_fuck_the_science.png"
+	}
+	spriteType = {
+		name = "GFX_idea_nobody_cares"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_nobody_cares.png"
+	}
+	spriteType = {
+		name = "GFX_idea_few_cares"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_few_cares.png"
+	}
+	spriteType = {
+		name = "GFX_idea_fake_exists"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_fake_exists.png"
+	}
+	spriteType = {
+		name = "GFX_idea_standard_research"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_standard_research.png"
+	}
+	spriteType = {
+		name = "GFX_idea_willing_research"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_willing_research.png"
+	}
+	###环境政策###
+	spriteType = {
+		name = "GFX_idea_EP_barely_nothing"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_barely_nothing.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_minimum_control"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_minimum_control.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_more_observation"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_more_observation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_government_target"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_government_target.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_more_limitations"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_more_limitations.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_maximum_punishment"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_maximum_punishment.png"
+	}
+	###开采政策###
+	spriteType = {
+		name = "GFX_idea_RP_decide_themselves"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_decide_themselves.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_basic_funding"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_basic_funding.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_asisting_research"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_asisting_research.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_locating_resource"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_locating_resource.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_extensive_mining"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_extensive_mining.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_total_funding"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_total_funding.png"
+	}
+	###企业政策###
+	spriteType = {
+		name = "GFX_idea_IP_nationalization"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_nationalization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_no_intervention"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_no_intervention.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_basic_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_basic_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_creating_business"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_creating_business.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_funding_proj"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_funding_proj.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_cutting_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_cutting_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IP_more_business"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_IP_more_business.png"
+	}
+	###劳工政策###
+	spriteType = {
+		name = "GFX_idea_WP_no_specific_laws"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_no_specific_laws.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WP_symbolic_laws"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_symbolic_laws.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WP_basic_laws"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_basic_laws.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WP_limited_laws"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_limited_laws.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WP_better_laws"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_better_laws.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WP_worker_council"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_WP_worker_council.png"
+	}
+	###农业政策###
+	spriteType = {
+		name = "GFX_idea_AP_no_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_no_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AP_basic_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_basic_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AP_advanced_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_advanced_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AP_better_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_better_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AP_cutting_taxes"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_cutting_taxes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AP_endless_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_AP_endless_funds.png"
+	}
+	###科研政策###
+	spriteType = {
+		name = "GFX_idea_RP_no_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_no_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_basic_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_basic_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_limited_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_limited_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_advanced_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_advanced_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_even_more_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_even_more_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RP_full_power_in_science"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RP_full_power_in_science.png"
+	}
+	###媒体政策###
+	spriteType = {
+		name = "GFX_idea_MP_freedom_speech"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_freedom_speech.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_mixed_media"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_mixed_media.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_funding_media"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_funding_media.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_only_our_voice"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_only_our_voice.png"
+	}
+	###福利政策###
+	spriteType = {
+		name = "GFX_idea_SP_no_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_no_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SP_sybolized_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_sybolized_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SP_basic_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_basic_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SP_advanced_funds"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_advanced_funds.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SP_no_worries_for_food"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_no_worries_for_food.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SP_full_scale_help"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SP_full_scale_help.png"
+	}
+	###魔法###
+	spriteType = {
+		name = "GFX_idea_MP_fuck_off_the_magician"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_fuck_off_the_magician.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_research_only"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_research_only.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_strict_control"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_strict_control.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_open_for_application"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_open_for_application.png"
+	}
+	spriteType = {
+		name = "GFX_idea_MP_no_restriction"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_MP_no_restriction.png"
+	}
+	###情报机关###
+	spriteType = {
+		name = "GFX_idea_SPP_no_secreat_police"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_no_secreat_police.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPP_police_special_unit"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_police_special_unit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPP_limited_national_dep"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_limited_national_dep.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPP_unlimited_national_dep"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_unlimited_national_dep.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPP_cia_everywhere"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_cia_everywhere.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPP_we_are_watching_you"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SPP_we_are_watching_you.png"
+	}
+	###女权政策###
+	spriteType = {
+		name = "GFX_idea_FP_traditional_place"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_FP_traditional_place.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FP_calling_for_equality"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_FP_calling_for_equality.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FP_working_euqality"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_FP_working_euqality.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FP_joining_the_army"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_FP_joining_the_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FP_joining_the_poitics"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_FP_joining_the_poitics.png"
+	}
+	###教育###
+	spriteType = {
+		name = "GFX_idea_EP_minimum_spending"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_minimum_spending.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_wooden_schools"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_wooden_schools.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_sharing_textbooks"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_sharing_textbooks.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_modern_textbooks"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_modern_textbooks.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_helping_the_countryside"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_helping_the_countryside.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EP_university_cities"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_EP_university_cities.png"
+	}
+	###种族与文化###
+	###特殊魔法###
+	spriteType = {
+		name = "GFX_idea_SM_no_special_magic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SM_no_special_magic.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SM_crystal_secret_code"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SM_crystal_secret_code.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SM_adpative_magic"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SM_adpative_magic.png"
+	}
+	###种族###
+	spriteType = {
+		name = "GFX_idea_LR_humans"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_humans.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_Subhuman"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_Subhuman.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_carnivorous_orcs"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_carnivorous_orcs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_herbivorous_orcs"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_herbivorous_orcs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_omnivorous_orcs"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_omnivorous_orcs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_demons"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_demons.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_monsters"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_monsters.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_advanced_magician"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_advanced_magician.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_intellectual_android"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_intellectual_android.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LR_race_equity"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_LR_race_equity.png"
+	}
+	###具体人种###
+	spriteType = {
+		name = "GFX_idea_SR_crystals"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SR_crystals.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SR_suderian"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SR_suderian.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SR_unharmonized_multi_ethnic_states"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SR_unharmonized_multi_ethnic_states.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SR_teotland_people"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SR_teotland_people.png"
+	}
+	###种族政策###
+	spriteType = {
+		name = "GFX_idea_RAP_suppression"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RAP_suppression.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RAP_lower_suppression"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RAP_lower_suppression.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RAP_discrimination"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RAP_discrimination.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RAP_legally_equality"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RAP_legally_equality.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RAP_active_promotion"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RAP_active_promotion.png"
+	}
+	###宗教政策###
+	spriteType = {
+		name = "GFX_idea_RLP_religious_state"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_religious_state.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLP_unreligious_state"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_unreligious_state.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLP_national_religion"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_national_religion.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLP_moralism"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_moralism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLP_pluralismm"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_pluralismm.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLP_secularism"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_RLP_secularism.png"
+	}
+	###性别法律###
+	spriteType = {
+		name = "GFX_idea_SXP_recessing_policy"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SXP_recessing_policy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXP_reactionary_policy"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SXP_reactionary_policy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXP_traditional_policy"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SXP_traditional_policy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXP_legally_equal"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SXP_legally_equal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXP_active_role"
+		texturefile = "gfx/interface/ideas/government/GFX_idea_SXP_active_role.png"
+	}
+}

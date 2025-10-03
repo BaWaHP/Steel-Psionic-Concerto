@@ -1,0 +1,140 @@
+﻿###templates###
+division_template = {
+	name = "武装红卫军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		caster_infantry = { x = 1 y = 0 }
+		caster_infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		maintenance_company = { x = 1 y = 0 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "赤卫队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		maintenance_company = { x = 1 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "武装红卫军"
+		location = 18407
+		division_template = "武装红卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "武装红卫军"
+		location = 18407
+		division_template = "武装红卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "武装红卫军"
+		location = 18407
+		division_template = "武装红卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "赤卫队"
+		location = 18407
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "赤卫队"
+		location = 18407
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "赤卫队"
+		location = 18407
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "武装红卫军"
+		location = 9444
+		division_template = "武装红卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "赤卫队"
+		location = 9444
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "赤卫队"
+		location = 9444
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "武装红卫军"
+		location = 3396
+		division_template = "武装红卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "赤卫队"
+		location = 3396
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "赤卫队"
+		location = 11634
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "赤卫队"
+		location = 11634
+		division_template = "赤卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

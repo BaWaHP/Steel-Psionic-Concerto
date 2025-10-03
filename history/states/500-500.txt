@@ -1,0 +1,22 @@
+state={
+	id=500
+	name="STATE_500"
+	history = {
+		owner = KBH
+		add_core_of = KBH
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+		}
+		victory_points = {
+			7635 1
+		}
+	}
+	provinces={
+		901 6522 7635 8635 8761 14539 14605 14672 14691 
+	}
+	manpower=171000
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

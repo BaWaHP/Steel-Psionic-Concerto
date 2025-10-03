@@ -1,0 +1,33 @@
+
+state={
+	id=363
+	name="STATE_363"
+
+	resources = {
+		aluminium = 4
+	}
+
+	history={
+		owner = GDD
+		add_core_of = GDD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		victory_points = {
+			12124 10
+		}
+		victory_points = {
+			195 5
+		}
+	}
+
+	provinces={
+		195 2912 2966 5994 6840 8255 8989 9284 11297 12124 19136 19145 19212 19268 19287 19312 19346 19378 19435 
+	}
+	manpower = 3920000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

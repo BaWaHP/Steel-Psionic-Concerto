@@ -1,0 +1,77 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+TCW_autonomous_nations = {		#自治国行政区
+	enable = { always = yes }
+
+	icon = GFX_idea_TCW_autonomous_nations
+
+	local_building_slots_factor = -0.15
+	recruitable_population_factor = -0.2
+	state_production_speed_buildings_factor = -0.15
+}
+
+TCW_autonomous_regions_1 = {		#自治行政区	#阿内托
+	enable = { always = yes }
+
+	icon = GFX_idea_TCW_autonomous_regions_1
+
+	local_building_slots_factor = -0.1
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = -0.1
+}
+
+TCW_autonomous_regions_2 = {		#自治行政区	#德孔波
+	enable = { always = yes }
+
+	icon = GFX_idea_TCW_autonomous_regions_2
+
+	local_building_slots_factor = -0.1
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = -0.1
+}
+
+TCW_autonomous_regions_3 = {		#自治行政区
+	enable = { always = yes }
+
+	icon = GFX_idea_TCW_autonomous_regions_3
+
+	local_building_slots_factor = -0.1
+	recruitable_population_factor = -0.1
+	state_production_speed_buildings_factor = -0.1
+}
+
+TCW_refugee_influx = {		#难民潮
+	enable = { always = yes }
+
+	icon = GFX_idea_TCW_refugee_influx
+
+	stability_factor = TCW_refugee_influx_sf
+	research_speed_factor = TCW_refugee_influx_rsf
+	industrial_capacity_factory = TCW_refugee_influx_icf
+	monthly_population = TCW_refugee_influx_mp
+	local_resources_factor = TCW_refugee_influx_lrf
+}

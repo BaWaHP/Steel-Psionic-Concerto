@@ -1,0 +1,29 @@
+
+state={
+	id=292
+	name="STATE_292"
+
+	history={
+		owner = FTC
+		add_core_of = FTC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			7686 10
+		}
+		victory_points = {
+			14434 5
+		}
+	}
+
+	provinces={
+		2087 2711 7686 9380 14182 14305 14403 14434 
+	}
+	manpower=1100000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

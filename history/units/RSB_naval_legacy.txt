@@ -1,0 +1,41 @@
+units = {
+	fleet = {
+		name = "巴斯蒂亚战争舰队"
+		naval_base = 4349
+		task_force = {
+			name = "特尼安舰队"
+			location = 4349
+			ship = { name = "Great war" pride_of_the_fleet = yes definition = battleship equipment = { battleship_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Krayano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Toledo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Russar" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Akutornian" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Donvodsk" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Austlenia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "度弗道夫" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "斯图纲特" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "麦恩茨" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "曼海宁" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "摩尼什" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "里斯巴腾" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "德勒斯" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+		}
+		task_force = {
+			name = "大洋舰队"
+			location = 20875
+			ship = { name = "Hungelia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Letternian" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "Viltawnion" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "北普莱尔茨" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "南普莱尔茨" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "帕尔腾" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "下奥斯特艾特" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "桑泰克珀尔根" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "林茨" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "英斯博克" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "盖茨" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "克拉肯弗特" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+			ship = { name = "埃斯塔克" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSB } } }
+		}
+	}
+}

@@ -1,0 +1,78 @@
+ideas = {
+	country = {
+
+		BSK_clouds_of_total_riot = {		#总暴动的阴云
+			picture = SPR_political_violence
+			allowed = { 
+				original_tag = BSK
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				industrial_capacity_factory = -0.1
+			}
+			on_remove = {
+				country_event = BSK.1
+			}
+		}
+		
+		BSK_civil_military_opposition = {		#文武对立
+			picture = chi_war_of_resistance3
+			allowed = { 
+				original_tag = BSK
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.1
+				political_power_cost = 0.1
+			}
+		}
+		
+		BSK_castle_nightmare = {		#高堡梦魇
+			picture = SWE_neither_death_nor_dishonor
+			allowed = { 
+				original_tag = BSK
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+		
+		BSK_political_extremism = {		#政治极端
+			picture = generic_disjointed_gov
+			allowed = { 
+				original_tag = BSK
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+			}
+		}
+		
+		BSK_economic_control = {		#经济控制
+			picture = ger_mefo_bills_payment
+			allowed = { 
+				original_tag = BSK
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = AST
+				cic_to_target_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = HGL
+				cic_to_target_factor = 0.2
+			}
+		}
+
+	}
+}

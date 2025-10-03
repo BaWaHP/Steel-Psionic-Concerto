@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup ={
+        effect = {
+            every_country = {
+				set_variable = { SPC_intro_screen = 1 }
+			}
+        }
+    }
+}

@@ -1,0 +1,41 @@
+
+state={
+	id=41
+	name="STATE_41"
+	provinces={
+		1728 2751 5150 5655 6769 8004 9333 10293 11224 11352 19460 19511 19527 19539 19592 19606 19607 19648 19669 19713 19737 19784 19860 
+	}
+	resources = {
+		steel = 10
+		magic_crystal = 5
+		oil = 5
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 3
+			anti_air_building = 1
+			radar_station = 2
+			5655 = {
+				bunker = 4
+				naval_base = 6
+				land_facility = 1
+			}
+		}
+		victory_points = {
+			5655 30
+		}
+		victory_points = {
+			8004 8
+		}
+	}
+	manpower=5780000
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

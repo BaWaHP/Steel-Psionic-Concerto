@@ -1,0 +1,33 @@
+
+state={
+	id=213
+	name="STATE_213"
+
+	resources = {
+		steel = 8
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			11381 12
+		}
+		victory_points = {
+			17922 3
+		}
+	}
+
+	provinces={
+		495 5981 6255 6275 7241 10566 11381 11646 12007 12166 17855 17922 18072 18160 18183 18198 18286 18398 18464 
+	}
+	manpower=2270000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

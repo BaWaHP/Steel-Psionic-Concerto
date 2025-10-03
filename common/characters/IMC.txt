@@ -1,0 +1,210 @@
+characters = {
+
+	IMC_telemachus_ischia_superbia = {		#特勒马科斯·伊斯恰·苏佩尔比亚
+   		name = IMC_telemachus_ischia_superbia
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = national_communism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_runaway_slave = {		#“逃奴”
+   		name = IMC_runaway_slave
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = leftist_guerrilla_movement
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_remains_of_the_saint = {		#“圣徒遗骸”
+   		name = IMC_remains_of_the_saint
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = religious_wordunion
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_bastia_freecorp = {		#巴斯蒂亚自由军团
+   		name = IMC_bastia_freecorp
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = liberal_worldunion
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		   country_leader = {
+			ideology = liberal_racism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternal_conservatism
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = human_hegemony
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	IMC_laertes_ischia_superbia = {		#拉埃尔特斯·伊斯恰·苏佩尔比亚
+   		name = IMC_laertes_ischia_superbia
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = oligarchy
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_odysseus_ischia_superbia = {		#奥德修斯·伊斯恰·苏佩尔比亚
+   		name = IMC_odysseus_ischia_superbia
+   		portraits = {
+   			civilian = {
+   				large="GFX_IMC_odysseus_ischia_superbia"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_IMC_odysseus_ischia_superbia"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = IMC_odysseus_ischia_superbia_desc
+   			ideology = worldunion_militarism
+			traits = { IMC_odysseus_ischia_superbia_title IMC_heros_blood }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_republican_civilian_associations = {		#共和派文官结社
+   		name = IMC_republican_civilian_associations
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = civilian_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_eastern_expeditionary_corps = {		#“东征军团”
+   		name = IMC_eastern_expeditionary_corps
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = sacred_battles
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_the_cult = {		#“教团”
+   		name = IMC_the_cult
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	IMC_free_market_voice = {		#自由市场之音
+   		name = IMC_free_market_voice
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = anarcho_capitalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+}

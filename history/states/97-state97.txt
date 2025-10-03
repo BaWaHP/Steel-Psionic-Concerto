@@ -1,0 +1,27 @@
+
+state={
+	id=97
+	name="STATE_97"
+	resources = {
+		aluminium = 8
+		steel = 20
+	}
+	provinces={
+		831 2202 3892 4249 4387 8373 9275 9456 10494 10707 12189 15217 15233 15333 15412 15413 15648 15661 15732 15743 15842 
+	}
+	history = {
+		owner = SBG
+		add_core_of = SBG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4249 8
+		}
+	}
+	manpower = 931939
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

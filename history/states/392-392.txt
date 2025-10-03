@@ -1,0 +1,29 @@
+
+state={
+	id=392
+	name="STATE_392"
+	resources = {
+		magic_crystal = 4
+		oil = 16
+	}
+	provinces={
+		4236 4250 5334 8342 9259 11286 20053 20059 20111 20118 20193 20232 20276 20300 20310 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			8342 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			8342 3
+		}
+	}
+	manpower=601200
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=403
+	name="STATE_403"
+	provinces={
+		6900 7584 11618 11629 19427 19439 19498 19513 21675 21752 
+	}
+	resources = {
+		oil = 52
+		rubber = 32
+		aluminium = 4
+		steel = 4
+		magic_crystal = 6
+	}
+	history={
+		owner = ZBC
+		add_core_of = ZBC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 3
+			radar_station = 1
+			7584 = {
+				naval_base = 6
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			7584 15
+		}
+	}
+	manpower = 5140000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

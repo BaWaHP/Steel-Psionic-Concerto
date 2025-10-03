@@ -1,0 +1,106 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#农业孤岛
+KOA_agricultural_silos = {
+	enable = { always = yes }
+	icon = GFX_idea_KOA_agricultural_silos
+
+	recruitable_population_factor = -0.5
+	state_production_speed_buildings_factor = -0.25
+	local_building_slots_factor = -0.05
+}
+
+#落后的经济
+KOA_backward_economy_dynamic_modifiers = {
+	enable = { always = yes }
+	icon = GFX_idea_great_depression
+
+	consumer_goods_factor = KOA_backward_economy_dynamic_modifiers_cgf
+	production_speed_buildings_factor = KOA_backward_economy_dynamic_modifiers_psbf
+	production_factory_max_efficiency_factor = KOA_backward_economy_dynamic_modifiers_pfmef
+	conscription_factor = KOA_backward_economy_dynamic_modifiers_cf
+}
+
+#经济困难
+KOA_economic_difficulty = {
+	enable = { always = yes }
+	icon = GFX_idea_great_depression
+
+	political_power_cost = KOA_economic_difficulty_ppc
+	production_speed_buildings_factor = KOA_economic_difficulty_psbf
+	conscription_factor = KOA_economic_difficulty_cf
+	production_factory_max_efficiency_factor = KOA_economic_difficulty_pfmef
+	consumer_goods_factor = KOA_economic_difficulty_cgf
+	monthly_living_standard_development_process = KOA_economic_difficulty_mlsdp
+}
+
+#军队混乱
+KOA_military_chaos = {
+	enable = { always = yes }
+	icon = GFX_idea_jap_interservice_rivalry_navy_strengthened
+
+	command_power_gain_mult = KOA_military_chaos_cpgm
+	promote_cost_factor = KOA_military_chaos_pcf
+	air_doctrine_cost_factor = KOA_military_chaos_adcf
+	land_doctrine_cost_factor = KOA_military_chaos_ldcf
+	naval_doctrine_cost_factor = KOA_military_chaos_ndcf
+	planning_speed = KOA_military_chaos_ps
+	max_planning_factor = KOA_military_chaos_mpf
+	land_reinforce_rate = KOA_military_chaos_lrr
+	
+	custom_modifier_tooltip = lock_all_troops_tt
+}
+
+#改善中的军队
+KOA_the_progressing_army = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_army_war_college
+
+	command_power_gain_mult = KOA_military_chaos_cpgm
+	promote_cost_factor = KOA_military_chaos_pcf
+	air_doctrine_cost_factor = KOA_military_chaos_adcf
+	land_doctrine_cost_factor = KOA_military_chaos_ldcf
+	naval_doctrine_cost_factor = KOA_military_chaos_ndcf
+	planning_speed = KOA_military_chaos_ps
+	max_planning_factor = KOA_military_chaos_mpf
+	land_reinforce_rate = KOA_military_chaos_lrr
+}
+
+KOA_ecumenical_order_mod = {		#普世秩序
+	enable = { always = yes }
+	icon = GFX_idea_jap_interservice_rivalry_navy_strengthened
+
+	stability_factor = KOA_ecumenical_order_mod_sf
+	war_support_factor = KOA_ecumenical_order_mod_wsf
+	compliance_gain = KOA_ecumenical_order_mod_cg
+	research_speed_factor = KOA_ecumenical_order_mod_rsf
+	production_factory_max_efficiency_factor = KOA_ecumenical_order_mod_pfmef
+	mobilization_speed = KOA_ecumenical_order_mod_ms
+	monthly_agricultural_development_process = KOA_ecumenical_order_mod_madp
+	conscription_factor = KOA_ecumenical_order_mod_cf
+}
+

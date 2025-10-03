@@ -1,0 +1,53 @@
+ideas = {
+	country = {
+
+		ARZ_wom_large_mine = {		#沃姆的大矿场
+			picture = ARZ_wom_large_mine
+			allowed = {  original_tag = ARZ }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.2
+				local_resources_factor = 0.2
+				research_speed_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = WOM
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+			}
+		}
+
+		ARZ_wom_troops = {		#沃姆驻军
+			picture = ARZ_wom_troops
+			allowed = {  original_tag = ARZ }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				army_org_regain = 0.1
+				industrial_capacity_factory = -0.5
+				experience_gain_army_factor = -0.5
+				training_time_army_factor = 1
+				conscription_factor = -0.3
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		ARZ_gathering_storm = {		#酝酿的不满情绪
+			picture = ARZ_gathering_storm
+			allowed = {  original_tag = ARZ }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+	}
+}

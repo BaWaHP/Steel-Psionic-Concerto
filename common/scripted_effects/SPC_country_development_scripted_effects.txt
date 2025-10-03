@@ -1,0 +1,829 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+SPC_country_development_upgrade = {
+	add_to_variable = { industrial_development_amount = industrial_development_process }
+	add_to_variable = { agricultural_development_amount = agricultural_development_process }
+	add_to_variable = { military_development_amount = military_development_process }
+	add_to_variable = { living_standard_development_amount = living_standard_development_process }
+	if = {
+		limit = { has_war = yes }
+		add_to_variable = { living_standard_development_amount = -4 }
+	}
+	add_to_variable = { environment_development_amount = environment_development_process }
+	add_to_variable = { research_development_amount = research_development_process }
+	#add_to_variable = { race_mixing_status_amount = race_mixing_status_process }
+	###工业###
+	if = {
+		limit = { check_variable = { industrial_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = innovative_industry } } country_event = CD.1 }
+		set_variable = { industrial_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { industrial_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = primitive_industry } } country_event = CD.2 }
+		set_variable = { industrial_development_amount = 199 }
+	}
+	#农业
+	if = {
+		limit = { check_variable = { agricultural_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = mechanized_agriculture } } country_event = CD.3 }
+		set_variable = { agricultural_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { agricultural_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = primitive_agriculture } } country_event = CD.4 }
+		set_variable = { agricultural_development_amount = 199 }
+	}
+	#军事
+	if = {
+		limit = { check_variable = { military_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = innovative_army } } country_event = CD.5 }
+		set_variable = { military_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { military_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = primitive_army } } country_event = CD.6 }
+		set_variable = { military_development_amount = 199 }
+	}
+	#生活水平
+	if = {
+		limit = { check_variable = { living_standard_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = best_living } } country_event = CD.7 }
+		set_variable = { living_standard_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { living_standard_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = death_everywhere } } country_event = CD.8 }
+		set_variable = { living_standard_development_amount = 199 }
+	}
+	#环境程度
+	if = {
+		limit = { check_variable = { environment_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = real_natural_environment } } country_event = CD.9 }
+		set_variable = { environment_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { environment_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = hazard_zone } } country_event = CD.10 }
+		set_variable = { environment_development_amount = 199 }
+	}
+	#学术氛围
+	if = {
+		limit = { check_variable = { research_development_amount > 199 } }
+		if = { limit = { NOT = { has_idea = willing_research } } country_event = CD.11 }
+		set_variable = { research_development_amount = 0 }
+	}
+	if = {
+		limit = { check_variable = { research_development_amount < -99 } }
+		if = { limit = { NOT = { has_idea = fuck_the_science } } country_event = CD.12 }
+		set_variable = { research_development_amount = 199 }
+	}
+}
+
+SPC_country_development_ideas_change_industry_up = {
+	if = {
+		limit = {
+			has_idea = primitive_industry
+		}
+		swap_ideas = {
+			remove_idea = primitive_industry
+			add_idea = handcraft_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = handcraft_industry
+		}
+		swap_ideas = {
+			remove_idea = handcraft_industry
+			add_idea = early_factory_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = early_factory_industry
+		}
+		swap_ideas = {
+			remove_idea = early_factory_industry
+			add_idea = factory_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = factory_industry
+		}
+		swap_ideas = {
+			remove_idea = factory_industry
+			add_idea = grouped_factory_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = grouped_factory_industry
+		}
+		swap_ideas = {
+			remove_idea = grouped_factory_industry
+			add_idea = innovative_industry
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { industrial_development_mod > 1 }
+				check_variable = { industrial_development_mod < -1 }
+			}
+		}
+		divide_variable = { industrial_development_mod = 2 }
+		round_variable = industrial_development_mod
+	}
+	else = {
+		set_variable = { industrial_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_industry_down = {
+	if = {
+		limit = {
+			has_idea = handcraft_industry
+		}
+		swap_ideas = {
+			remove_idea = handcraft_industry
+			add_idea = primitive_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = early_factory_industry
+		}
+		swap_ideas = {
+			remove_idea = early_factory_industry
+			add_idea = handcraft_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = factory_industry
+		}
+		swap_ideas = {
+			remove_idea = factory_industry
+			add_idea = early_factory_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = grouped_factory_industry
+		}
+		swap_ideas = {
+			remove_idea = grouped_factory_industry
+			add_idea = factory_industry
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = innovative_industry
+		}
+		swap_ideas = {
+			remove_idea = innovative_industry
+			add_idea = grouped_factory_industry
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { industrial_development_mod > 1 }
+				check_variable = { industrial_development_mod < -1 }
+			}
+		}
+		divide_variable = { industrial_development_mod = 2 }
+		round_variable = industrial_development_mod
+	}
+	else = {
+		set_variable = { industrial_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_agriculture_up = {
+	if = {
+		limit = {
+			has_idea = primitive_agriculture
+		}
+		swap_ideas = {
+			remove_idea = primitive_agriculture
+			add_idea = self_efficient_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = self_efficient_agriculture
+		}
+		swap_ideas = {
+			remove_idea = self_efficient_agriculture
+			add_idea = weak_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = weak_agriculture
+		}
+		swap_ideas = {
+			remove_idea = weak_agriculture
+			add_idea = modern_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = modern_agriculture
+		}
+		swap_ideas = {
+			remove_idea = modern_agriculture
+			add_idea = half_auto_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = half_auto_agriculture
+		}
+		swap_ideas = {
+			remove_idea = half_auto_agriculture
+			add_idea = mechanized_agriculture
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { agricultural_development_mod > 1 }
+				check_variable = { agricultural_development_mod < -1 }
+			}
+		}
+		divide_variable = { agricultural_development_mod = 2 }
+		round_variable = agricultural_development_mod
+	}
+	else = {
+		set_variable = { agricultural_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_agriculture_down = {
+	if = {
+		limit = {
+			has_idea = self_efficient_agriculture
+		}
+		swap_ideas = {
+			remove_idea = self_efficient_agriculture
+			add_idea = primitive_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = weak_agriculture
+		}
+		swap_ideas = {
+			remove_idea = weak_agriculture
+			add_idea = self_efficient_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = modern_agriculture
+		}
+		swap_ideas = {
+			remove_idea = modern_agriculture
+			add_idea = weak_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = half_auto_agriculture
+		}
+		swap_ideas = {
+			remove_idea = half_auto_agriculture
+			add_idea = modern_agriculture
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = mechanized_agriculture
+		}
+		swap_ideas = {
+			remove_idea = mechanized_agriculture
+			add_idea = half_auto_agriculture
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { agricultural_development_mod > 1 }
+				check_variable = { agricultural_development_mod < -1 }
+			}
+		}
+		divide_variable = { agricultural_development_mod = 2 }
+		round_variable = agricultural_development_mod
+	}
+	else = {
+		set_variable = { agricultural_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_military_up = {
+	if = {
+		limit = {
+			has_idea = primitive_army
+		}
+		swap_ideas = {
+			remove_idea = primitive_army
+			add_idea = unorganized_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = unorganized_army
+		}
+		swap_ideas = {
+			remove_idea = unorganized_army
+			add_idea = experienced_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = experienced_army
+		}
+		swap_ideas = {
+			remove_idea = experienced_army
+			add_idea = very_experienced_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = very_experienced_army
+		}
+		swap_ideas = {
+			remove_idea = very_experienced_army
+			add_idea = advanced_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = advanced_army
+		}
+		swap_ideas = {
+			remove_idea = advanced_army
+			add_idea = innovative_army
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { military_development_mod > 1 }
+				check_variable = { military_development_mod < -1 }
+			}
+		}
+		divide_variable = { military_development_mod = 2 }
+		round_variable = military_development_mod
+	}
+	else = {
+		set_variable = { military_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_military_down = {
+	if = {
+		limit = {
+			has_idea = unorganized_army
+		}
+		swap_ideas = {
+			remove_idea = unorganized_army
+			add_idea = primitive_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = experienced_army
+		}
+		swap_ideas = {
+			remove_idea = experienced_army
+			add_idea = unorganized_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = very_experienced_army
+		}
+		swap_ideas = {
+			remove_idea = very_experienced_army
+			add_idea = experienced_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = advanced_army
+		}
+		swap_ideas = {
+			remove_idea = advanced_army
+			add_idea = very_experienced_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = innovative_army
+		}
+		swap_ideas = {
+			remove_idea = innovative_army
+			add_idea = advanced_army
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { military_development_mod > 1 }
+				check_variable = { military_development_mod < -1 }
+			}
+		}
+		divide_variable = { military_development_mod = 2 }
+		round_variable = military_development_mod
+	}
+	else = {
+		set_variable = { military_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_living_up = {
+	if = {
+		limit = {
+			has_idea = death_everywhere
+		}
+		swap_ideas = {
+			remove_idea = death_everywhere
+			add_idea = struggle_to_survive
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = struggle_to_survive
+		}
+		swap_ideas = {
+			remove_idea = struggle_to_survive
+			add_idea = hard_to_survive
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = hard_to_survive
+		}
+		swap_ideas = {
+			remove_idea = hard_to_survive
+			add_idea = normally_living
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = normally_living
+		}
+		swap_ideas = {
+			remove_idea = normally_living
+			add_idea = extra_living
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = extra_living
+		}
+		swap_ideas = {
+			remove_idea = extra_living
+			add_idea = best_living
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { living_standard_development_mod > 1 }
+				check_variable = { living_standard_development_mod < -1 }
+			}
+		}
+		divide_variable = { living_standard_development_mod = 2 }
+		round_variable = living_standard_development_mod
+	}
+	else = {
+		set_variable = { living_standard_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_living_down = {
+	if = {
+		limit = {
+			has_idea = struggle_to_survive
+		}
+		swap_ideas = {
+			remove_idea = struggle_to_survive
+			add_idea = death_everywhere
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = hard_to_survive
+		}
+		swap_ideas = {
+			remove_idea = hard_to_survive
+			add_idea = struggle_to_survive
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = normally_living
+		}
+		swap_ideas = {
+			remove_idea = normally_living
+			add_idea = hard_to_survive
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = extra_living
+		}
+		swap_ideas = {
+			remove_idea = extra_living
+			add_idea = normally_living
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = best_living
+		}
+		swap_ideas = {
+			remove_idea = best_living
+			add_idea = extra_living
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { living_standard_development_mod > 1 }
+				check_variable = { living_standard_development_mod < -1 }
+			}
+		}
+		divide_variable = { living_standard_development_mod = 2 }
+		round_variable = living_standard_development_mod
+	}
+	else = {
+		set_variable = { living_standard_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_environment_up = {
+	if = {
+		limit = {
+			has_idea = hazard_zone
+		}
+		swap_ideas = {
+			remove_idea = hazard_zone
+			add_idea = unhabitable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = unhabitable
+		}
+		swap_ideas = {
+			remove_idea = unhabitable
+			add_idea = uncomfortable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = uncomfortable
+		}
+		swap_ideas = {
+			remove_idea = uncomfortable
+			add_idea = controlled_pollution
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = controlled_pollution
+		}
+		swap_ideas = {
+			remove_idea = controlled_pollution
+			add_idea = relatively_comfortable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = relatively_comfortable
+		}
+		swap_ideas = {
+			remove_idea = relatively_comfortable
+			add_idea = real_natural_environment
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { environment_development_mod > 1 }
+				check_variable = { environment_development_mod < -1 }
+			}
+		}
+		divide_variable = { environment_development_mod = 2 }
+		round_variable = environment_development_mod
+	}
+	else = {
+		set_variable = { environment_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_environment_down = {
+	if = {
+		limit = {
+			has_idea = unhabitable
+		}
+		swap_ideas = {
+			remove_idea = unhabitable
+			add_idea = hazard_zone
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = uncomfortable
+		}
+		swap_ideas = {
+			remove_idea = uncomfortable
+			add_idea = unhabitable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = controlled_pollution
+		}
+		swap_ideas = {
+			remove_idea = controlled_pollution
+			add_idea = uncomfortable
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = relatively_comfortable
+		}
+		swap_ideas = {
+			remove_idea = relatively_comfortable
+			add_idea = controlled_pollution
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = real_natural_environment
+		}
+		swap_ideas = {
+			remove_idea = real_natural_environment
+			add_idea = relatively_comfortable
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { environment_development_mod > 1 }
+				check_variable = { environment_development_mod < -1 }
+			}
+		}
+		divide_variable = { environment_development_mod = 2 }
+		round_variable = environment_development_mod
+	}
+	else = {
+		set_variable = { environment_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_research_up = {
+	if = {
+		limit = {
+			has_idea = fuck_the_science
+		}
+		swap_ideas = {
+			remove_idea = fuck_the_science
+			add_idea = nobody_cares
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = nobody_cares
+		}
+		swap_ideas = {
+			remove_idea = nobody_cares
+			add_idea = few_cares
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = few_cares
+		}
+		swap_ideas = {
+			remove_idea = few_cares
+			add_idea = fake_exists
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = fake_exists
+		}
+		swap_ideas = {
+			remove_idea = fake_exists
+			add_idea = standard_research
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = standard_research
+		}
+		swap_ideas = {
+			remove_idea = standard_research
+			add_idea = willing_research
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { research_development_mod > 1 }
+				check_variable = { research_development_mod < -1 }
+			}
+		}
+		divide_variable = { research_development_mod = 2 }
+		round_variable = research_development_mod
+	}
+	else = {
+		set_variable = { research_development_mod = 0 }
+	}
+}
+
+SPC_country_development_ideas_change_research_down = {
+	if = {
+		limit = {
+			has_idea = nobody_cares
+		}
+		swap_ideas = {
+			remove_idea = nobody_cares
+			add_idea = fuck_the_science
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = few_cares
+		}
+		swap_ideas = {
+			remove_idea = few_cares
+			add_idea = nobody_cares
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = fake_exists
+		}
+		swap_ideas = {
+			remove_idea = fake_exists
+			add_idea = few_cares
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = standard_research
+		}
+		swap_ideas = {
+			remove_idea = standard_research
+			add_idea = fake_exists
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = willing_research
+		}
+		swap_ideas = {
+			remove_idea = willing_research
+			add_idea = standard_research
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { research_development_mod > 1 }
+				check_variable = { research_development_mod < -1 }
+			}
+		}
+		divide_variable = { research_development_mod = 2 }
+		round_variable = research_development_mod
+	}
+	else = {
+		set_variable = { research_development_mod = 0 }
+	}
+}

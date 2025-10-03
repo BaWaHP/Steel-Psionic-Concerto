@@ -1,0 +1,181 @@
+﻿###templates###
+
+division_template = {
+	name = "大公亲卫"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_titan = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "王家军队步兵师"
+
+	regiments = {
+		centaur = { x = 0 y = 0 }
+		centaur = { x = 0 y = 1 }
+		centaur = { x = 0 y = 2 }
+		centaur = { x = 1 y = 0 }
+		centaur = { x = 1 y = 1 }
+		centaur = { x = 1 y = 2 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "王家军队摩托化师"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		mot_artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "王家军队实验性装甲师"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_titan = { x = 2 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "人类辅助军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 2 y = 0 }
+		light_infantry = { x = 2 y = 1 }
+		light_infantry = { x = 2 y = 2 }
+	}
+
+	priority = 0
+}
+
+###units###
+
+units = {
+	division = {
+		name = "顿伏茨克大公荣誉卫队"
+		location = 4028
+		division_template = "大公亲卫"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第一步兵师"
+		location = 18816
+		division_template = "王家军队步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第二步兵师"
+		location = 19435
+		division_template = "王家军队步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第三步兵师"
+		location = 10834
+		division_template = "王家军队步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第四步兵师"
+		location = 18995
+		division_template = "王家军队步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第五步兵师"
+		location = 8989
+		division_template = "王家军队步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+	division = {
+		name = "第一摩托化师“轻蹄”"
+		location = 10834
+		division_template = "王家军队摩托化师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第二摩托化师“疾速”"
+		location = 195
+		division_template = "王家军队摩托化师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "实验性装甲部队“铁鬃”"
+		location = 4028
+		division_template = "王家军队实验性装甲师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第一人类辅助师"
+		location = 18348
+		division_template = "人类辅助军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第二人类辅助师"
+		location = 18895
+		division_template = "人类辅助军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "第三人类辅助师"
+		location = 12124
+		division_template = "人类辅助军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.5
+	}
+}

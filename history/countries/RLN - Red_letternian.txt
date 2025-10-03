@@ -1,0 +1,168 @@
+﻿capital = 311
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = revolutionary_communism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 24
+	revolutionary_communism = 35
+	worldunion_socialist = 0
+	worldunion_democrat = 21
+	liberal_republican = 5
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 15
+	authoritarian_nationalism = 0
+	paternal_autocrat = 0
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	light_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	caster_recon_weapons_1 = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+}
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+recruit_character = RLN_none_1
+recruit_character = RLN_none_2
+recruit_character = RLN_none_3
+recruit_character = RLN_none_4
+recruit_character = RLN_none_5
+recruit_character = RLN_none_6
+recruit_character = RLN_none_7
+recruit_character = RLN_none_8
+recruit_character = RLN_ginsberg_depp
+recruit_character = RLN_sorrell_capone
+recruit_character = RLN_pajay_puro
+recruit_character = RLN_karianne_berlin
+recruit_character = RLN_spicer_seck
+recruit_character = RLN_ben_singler
+recruit_character = RLN_grano_ervin
+recruit_character = RLN_moraco_miller
+recruit_character = RLN_stiller_dieppe
+recruit_character = RLN_nicola_capricci
+recruit_character = RLN_enver_mihok
+recruit_character = RLN_prentice_henry
+recruit_character = RLN_salvador_milo
+recruit_character = RLN_boris_walker
+recruit_character = RLN_manuel_cardenas
+recruit_character = RLN_hanks_walzer
+recruit_character = RLN_andrew_thomas
+recruit_character = RLN_haifipov_mova
+recruit_character = RLN_joseph_sauza
+recruit_character = RLN_trisco_carpe
+recruit_character = RLN_inmajik_fraser
+recruit_character = RLN_al_plant
+recruit_character = RLN_sissel_hedi
+recruit_character = RLN_diffin_londe
+recruit_character = RLN_jose_paxi_oknin
+recruit_character = RLN_clark_adams
+recruit_character = RLN_belloc_dent
+
+add_ideas = {
+	RLN_revolution_terror
+	RLN_kick_rich_get_lands
+	RLN_econ_in_shadow
+	RLN_tenian_red_army
+}
+
+add_equipment_to_stockpile = {
+	type = caster_recon_equipment_1
+	amount = 200
+	producer = RLN
+}

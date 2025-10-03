@@ -1,0 +1,69 @@
+ideas = {
+	country = {
+
+		IPK_rule_of_gof = {		#四巨头之治
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+			}
+		}
+
+		IPK_union_integrity_4 = {		#联盟团结度：摇摇欲坠
+			picture = generic_deal_with_the_devil
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.01
+				political_power_factor = -0.05
+			}
+		}
+
+		IPK_project_Hephaestus = {		#赫菲斯托斯计划
+			picture = jap_supremacy_of_technology
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				consumer_goods_expected_value = 0.1
+			}
+		}
+
+		IPK_divided_regions = {		#分裂的地区
+			picture = generic_central_management
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				global_building_slots_factor = -0.2
+			}
+		}
+
+		IPK_1997_military_act = {		#《1997联盟军事法案》
+			picture = generic_reserve_divisions
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.1
+				army_core_defence_factor = 0.2
+				experience_gain_army_factor = -0.5
+				land_doctrine_cost_factor = 0.75
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		IPK_neustregendorf_bombing = {		#新施特雷根多夫爆炸案
+			picture = anti_soviet_pact
+			allowed = {  original_tag = IPK }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+				war_support_factor = 0.05
+			}
+		}
+
+	}
+}

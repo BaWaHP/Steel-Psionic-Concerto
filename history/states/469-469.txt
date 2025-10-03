@@ -1,0 +1,32 @@
+
+state={
+	id=469
+	name="STATE_469"
+	provinces={
+		2269 3676 5602 6447 7013 10694 11211 17737 17835 18107 18125 18217 
+	}
+	resources = {
+		aluminium = 12
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			3676 = { bunker = 2 }
+			18217 = { bunker = 2 }
+			11211 = { bunker = 2 }
+		}
+		victory_points = {
+			18107 8
+		}
+		victory_points = {
+			17835 8
+		}
+	}
+	manpower = 2000000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

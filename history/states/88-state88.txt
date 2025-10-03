@@ -1,0 +1,30 @@
+
+state={
+	id=88
+	name="STATE_88"
+	provinces={
+		1171 1753 2712 6941 8119 8148 11458 11739 12103 17086 17177 17211 17225 17251 17333 17358 17447 17476 17523 
+	}
+	resources = {
+		aluminium = 6
+		tungsten = 12
+	}
+	history = {
+		owner = WOM
+		add_core_of = WOM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			2712 8
+		}
+		victory_points = {
+			12103 3
+		}
+	}
+	manpower = 1764321
+	state_category = large_town
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+}

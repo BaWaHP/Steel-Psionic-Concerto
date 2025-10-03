@@ -1,0 +1,15 @@
+leader_traits = {
+
+	SOT_company_ceo = {		#白鸽国际CEO
+		random = no
+		
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = -0.1
+		monthly_population = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

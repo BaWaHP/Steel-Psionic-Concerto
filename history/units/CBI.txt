@@ -1,0 +1,174 @@
+﻿###templates###
+division_template = {
+	name = "同盟正规军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 1 y = 0 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "同盟民兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "地方卫戍部队"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "同盟正规军"
+		location = 18078
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟正规军"
+		location = 18078
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟民兵师"
+		location = 18078
+		division_template = "同盟民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟民兵师"
+		location = 18078
+		division_template = "同盟民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 551
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 551
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 10473
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 18172
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 18269
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "地方卫戍部队"
+		location = 4966
+		division_template = "地方卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "同盟正规军"
+		location = 18079
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟正规军"
+		location = 18079
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟正规军"
+		location = 18079
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "同盟正规军"
+		location = 7489
+		division_template = "同盟正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "同盟民兵师"
+		location = 7489
+		division_template = "同盟民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "同盟民兵师"
+		location = 17870
+		division_template = "同盟民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=293
+	name="STATE_293"
+
+	history={
+		owner = FES
+		add_core_of = FES
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			13930 10
+		}
+		victory_points = {
+			11512 5
+		}
+	}
+
+	provinces={
+		687 3963 9627 11512 13930 14029 
+	}
+	manpower=600000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

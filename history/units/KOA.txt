@@ -1,0 +1,332 @@
+﻿focus = {
+	current = "KOA_council_to_elect_a_king"
+	progress = 0
+}
+
+division_template = {
+	name = "海军陆战队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "卫戍部队"
+
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+division_template = {
+	name = "步战近卫军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "南巴骑兵师"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴装甲师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴海军陆战队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴山地师"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "狂鲨番队"
+		location = 9557
+		division_template = "海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灯塔守望番队"
+		location = 9557
+		division_template = "海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "大角星礁番队"
+		location = 6676
+		division_template = "海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "漂流者番队"
+		location = 6676
+		division_template = "海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "王都军警功能混合大队"
+		location = 9557
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "王都城防警戒师"
+		location = 9557
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "札勒克堡警备师"
+		location = 6676
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "札勒克堡贵族团练旅"
+		location = 6676
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "珊戴奥堡警备师"
+		location = 20756
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "珊戴奥堡山地巡防旅"
+		location = 20756
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "戈登埃伦联合总编队"
+		location = 20756
+		division_template = "卫戍部队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第47国王直属近卫师"
+		location = 9557
+		division_template = "步战近卫军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第68“无畏”近卫师"
+		location = 6676
+		division_template = "步战近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第103“战车”装甲禁卫军"
+		location = 20756
+		division_template = "步战近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第104“地狱”装甲禁卫军"
+		location = 20756
+		division_template = "步战近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第114“前卫”突击近卫军"
+		location = 11722
+		division_template = "步战近卫军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA2010装甲加强旅"
+		location = 20756
+		division_template = "南巴装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA陆军190师“斗鸡”"
+		location = 20756
+		division_template = "南巴步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BCA陆军109师“壁立”"
+		location = 20756
+		division_template = "南巴步兵师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA陆军136师“医生”"
+		location = 9557
+		division_template = "南巴步兵师"
+		start_experience_factor = 0
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "BCA0207海军陆战旅"
+		location = 9557
+		division_template = "南巴海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA0208海军陆战旅"
+		location = 20756
+		division_template = "南巴海军陆战队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "BCA0102山地猎兵旅"
+		location = 9557
+		division_template = "南巴山地师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+}

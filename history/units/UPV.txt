@@ -1,0 +1,229 @@
+﻿###templates###
+division_template = {
+	name = "上维尔陶常备军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		caster_recon = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "国民警卫队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴骑兵师"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴装甲师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴海军陆战队"
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "南巴山地师"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "上维尔陶“荣冠”第一师"
+		location = 19659
+		division_template = "上维尔陶常备军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "上维尔陶215师“常胜”"
+		location = 8397
+		division_template = "上维尔陶常备军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "上维尔陶01054国民警卫队"
+		location = 5312
+		division_template = "国民警卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "上维尔陶01057国民警卫队"
+		location = 10354
+		division_template = "国民警卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "上维尔陶01053国民警卫队"
+		location = 10354
+		division_template = "国民警卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "BCA骑兵五师“皇家骑兵”"
+		location = 8397
+		division_template = "南巴骑兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA2007装甲加强旅"
+		location = 369
+		division_template = "南巴装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "BCA2008装甲加强旅"
+		location = 19659
+		division_template = "南巴装甲师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BCA陆军8师“帝国师”"
+		location = 8397
+		division_template = "南巴步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "BCA陆军19师“苏平姆卫队”"
+		location = 19659
+		division_template = "南巴步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "BCA陆军33师“卢瓦尔老兵团”"
+		location = 10354
+		division_template = "南巴步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+}

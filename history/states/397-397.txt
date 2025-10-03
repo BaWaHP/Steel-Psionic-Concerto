@@ -1,0 +1,36 @@
+
+state={
+	id=397
+	name="STATE_397"
+	resources = {
+		rubber = 32
+		oil = 16
+	}
+	provinces={
+		315 1966 3065 4989 5086 9829 9845 19382 19412 19445 19461 19462 19540 19568 19569 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			5086 = {
+				naval_base = 1
+			}
+			19462 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			5086 5
+		}
+		victory_points = {
+			19462 2
+		}
+	}
+	manpower=876500
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

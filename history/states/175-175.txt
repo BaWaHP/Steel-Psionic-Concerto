@@ -1,0 +1,33 @@
+
+state={
+	id=175
+	name="STATE_175"
+
+	resources = {
+		aluminium = 6
+		magic_crystal = 6
+	}
+
+	history={
+		owner = TCL
+		add_core_of = TCL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			15182 5
+		}
+		victory_points = {
+			7788 3
+		}
+	}
+
+	provinces={
+		1310 1816 3468 7788 8639 9304 9682 10532 10683 10785 11642 14909 14960 14961 15049 15128 15182 15250 
+	}
+	manpower = 380000 
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

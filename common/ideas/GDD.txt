@@ -1,0 +1,133 @@
+ideas = {
+	country = {
+		GDD_unfitting_nation = {	#最不南巴的南巴国家
+			allowed = { tag = GDD }
+			picture = anti_soviet_pact
+			
+			modifier = {
+				surrender_limit = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.2
+				political_power_gain = -0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_shadow_within_tents = {	#帐中阴影
+			allowed = { tag = GDD }
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				stability_factor = -0.3
+				political_power_factor = -0.2
+				#disabled_ideas = 1
+				liberal_republican_drift = 0.05
+				conservative_republican_drift = 0.05
+				authoritarian_republican_drift = 0.05
+				paternal_autocrat_drift = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_the_unreliable = {	#不可信者
+			allowed = { tag = GDD }
+			picture = FRA_matignon_agreements
+			
+			modifier = {
+				war_support_factor = -0.1
+				mobilization_speed = -0.1
+				conscription_factor = -0.1
+				industrial_capacity_factory = -0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_experienced_soldiers = {	#久经沙场
+			allowed = { tag = GDD }
+			picture = MEX_politicised_army
+			
+			modifier = {
+				army_attack_factor = 0.1
+				supply_consumption_factor = -0.05
+				army_org_factor = -0.05
+				army_speed_factor = 0.1
+				training_time_army_factor = 0.1
+				experience_gain_army_factor = -0.75
+				command_power_gain_mult = -0.25
+				monthly_military_development_process = 2
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_great_donvodsk_dream = {	#大顿伏茨克之梦
+			allowed = { tag = GDD }
+			picture = air_support_focus
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				political_power_factor = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_maybe_stable_church = {	#稳定的教会？
+			allowed = { tag = GDD }
+			picture = SOV_new_old_church
+			
+			modifier = {
+				stability_factor = 0.01
+				political_power_factor = -0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_rich_moutains = {	#富饶的群山
+			allowed = { tag = GDD }
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.05
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		GDD_foreign_econ_influence = {	#南巴斯蒂亚的经济影响力
+			allowed = { tag = GDD }
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				min_export = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+			
+			targeted_modifier = {
+				tag = RSB
+				cic_to_target_factor = 0.05
+				extra_trade_to_target_factor = 0.15
+				trade_cost_for_target_factor = -0.15
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

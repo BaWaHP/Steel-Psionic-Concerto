@@ -1,0 +1,27 @@
+
+state={
+	id=416
+	name="STATE_416"
+	provinces={
+		2905 4707 6625 7452 8703 9626 10941 11817 12034 19286 19294 19421 19479 19596 19636 19647 19674 
+	}
+	resources = {
+		tungsten = 12
+		aluminium = 21
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4707 5
+		}
+	}
+	manpower = 2050000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

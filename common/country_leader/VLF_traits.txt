@@ -1,0 +1,52 @@
+leader_traits = {
+
+	VLF_supreme_regent = {		#至高摄政王
+		random = no
+		
+		political_power_factor = 0.05
+		consumer_goods_factor = 0.1
+		custom_modifier_tooltip = VLF_supreme_regent_tt
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	VLF_spiritual_mobilization = {		#精神动员
+		random = no
+		
+		monthly_industrial_development_process = -2
+		stability_factor = -0.025
+		production_speed_buildings_factor = 0.1
+		army_org_factor = 0.05
+		training_time_army_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	VLF_opposition_assistance = {		#反对派的协助
+		random = no
+		
+		political_power_factor = 0.05
+		authoritarian_republican_drift = 0.02
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	VLF_regent = {		#摄政王
+		random = no
+		
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

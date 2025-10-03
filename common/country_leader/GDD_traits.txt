@@ -1,0 +1,92 @@
+leader_traits = {
+
+	weak_archduke = {		#软弱的大公
+		random = no
+		political_advisor_cost_factor = 0.25
+		political_power_gain = -0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_one_who_shouldnt_be_king = {		#不应成王之人
+		random = no
+		political_advisor_cost_factor = 0.25
+		political_power_gain = -0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_weak_reformer = {		#羸弱的改革者
+		random = no
+		worldunion_democrat_drift = 0.01
+		liberal_republican_drift = 0.01
+		conservative_republican_drift = 0.01
+		authoritarian_republican_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_privy_council_president = {		#枢密院议长
+		random = no
+		stability_factor = 0.05
+		paternal_autocrat_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_patriarch_of_donvoltsk = {		#顿伏茨克牧首
+		random = no
+		war_support_factor = 0.05
+		religious_extremism_drift = 0.01
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_heir_to_throne = {		#王位继承人
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_centauri_culturalist = {		#半人马文化学家
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GDD_idealistic_diplomat = {		#理想主义外交官
+		random = no
+		political_power_gain = 0.08
+		stability_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.1
+		liberal_republican_drift = 0.05
+		worldunion_democrat_acceptance = 35
+		liberal_republican_acceptance = 35
+		conservative_republican_acceptance = 35
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

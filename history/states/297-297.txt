@@ -1,0 +1,31 @@
+
+state={
+	id=297
+	name="STATE_297"
+	provinces={
+		4001 5486 5815 9411 9667 11514 12203 14581 
+	}
+	resources = {
+		steel = 6
+		oil = 24
+	}
+	history={
+		owner = WCH
+		add_core_of = WCH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			5815 10
+		}
+		victory_points = {
+			5486 3
+		}
+	}
+	manpower=970000
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

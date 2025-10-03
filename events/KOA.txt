@@ -1,0 +1,573 @@
+﻿add_namespace = KOA
+add_namespace = KOANews
+
+country_event = {	#候选人的到来
+	id = KOA.1
+	title =KOA.1.t
+	desc = KOA.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.1.a
+		add_to_variable = { KOA_var_support_stanwaf = 2 }
+		custom_effect_tooltip = KOA_tooltip_var_support_stanwaf_add_2
+		add_to_variable = { KOA_var_support_willian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_willian_add_1
+		add_to_variable = { KOA_var_support_yulian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_yulian_add_1
+		country_event = {  
+			id = KOA.2
+			days = 10
+		}
+	}
+}
+country_event = {	#公园闲步
+	id = KOA.2
+	title = KOA.2.t
+	desc = KOA.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.2.a
+		add_to_variable = { KOA_var_support_willian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_willian_add_1
+		country_event = {  
+			id = KOA.3
+			days = 10
+		}
+	}
+
+	option = {
+		name = KOA.2.b
+		country_event = {  
+			id = KOA.3
+			days = 10
+		}
+	}
+}
+country_event = {	#明天依旧
+	id = KOA.3
+	title = KOA.3.t
+	desc = KOA.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.3.a
+		add_to_variable = { KOA_var_support_yulian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_yulian_add_1
+		country_event = {  
+			id = KOA.4
+			days = 10
+		}
+	}
+
+	option = {
+		name = KOA.3.b
+		add_to_variable = { KOA_var_support_stanwaf = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_stanwaf_add_1
+		country_event = {  
+			id = KOA.4
+			days = 10
+		}
+	}
+}
+country_event = {	#老好人，人人爱
+	id = KOA.4
+	title = KOA.4.t
+	desc = KOA.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.4.a
+		add_to_variable = { KOA_var_support_stanwaf = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_stanwaf_add_1
+		country_event = {  
+			id = KOA.5
+			days = 10
+		}
+	}
+
+	option = {
+		name = KOA.4.b
+		country_event = {  
+			id = KOA.5
+			days = 10
+		}
+	}
+}
+country_event = {	#战舰会谈
+	id = KOA.5
+	title = KOA.5.t
+	desc = KOA.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.5.a
+		add_to_variable = { KOA_var_support_willian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_willian_add_1
+		country_event = {  
+			id = KOA.6
+			days = 10
+		}
+	}
+}
+country_event = {	#侠客行
+	id = KOA.6
+	title = KOA.6.t
+	desc = KOA.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.6.a
+		add_to_variable = { KOA_var_support_yulian = 1 }
+		custom_effect_tooltip = KOA_tooltip_var_support_yulian_add_1
+		country_event = {  
+			id = KOA.7
+			days = 10
+		}
+	}
+
+	option = {
+		name = KOA.6.b
+		country_event = {  
+			id = KOA.7
+			days = 10
+		}
+	}
+}
+country_event = {	#这就是梦
+	id = KOA.7
+	title = KOA.7.t
+	desc = KOA.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.7.a
+		set_country_flag = FLAG_KOA_stanwaf_exit
+		custom_effect_tooltip = KOA_tooltip_stanwaf_exit
+	}
+
+	option = {
+		name = KOA.7.b
+	}
+}
+country_event = {	#斯坦瓦夫的胜出
+	id = KOA.8
+	title = KOA.8.t
+	desc = KOA.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.8.a
+		promote_character = KOA_stanwaf
+		set_country_flag = FLAG_KOA_stanwaf_win
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {	#威廉的胜出
+	id = KOA.9
+	title = KOA.9.t
+	desc = KOA.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.9.a
+		promote_character = KOA_willian
+		set_country_flag = FLAG_KOA_willian_win
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {	#于连的胜出
+	id = KOA.10
+	title = KOA.10.t
+	desc = KOA.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.10.a
+		promote_character = KOA_yulian
+		set_country_flag = FLAG_KOA_yulian_win
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {	#加冕仪式开始
+	id = KOA.11
+	title = KOA.11.t
+	desc = KOA.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.11.a
+		add_ideas = KOA_empty_assets
+		remove_ideas = KOA_scarlet_crown
+	}
+}
+country_event = {	#镇压暴乱
+	id = KOA.12
+	title = KOA.12.t
+	desc = KOA.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.12.a
+		country_event = {  
+			id = KOA.13
+			days = 10
+		}
+	}
+	option = {
+		name = KOA.12.b
+		country_event = {  
+			id = KOA.15
+			days = 10
+		}
+	}
+}
+country_event = {	#街垒上的烟花
+	id = KOA.13
+	title = KOA.13.t
+	desc = KOA.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.13.a
+		country_event = {  
+			id = KOA.14
+			days = 10
+		}
+	}
+}
+country_event = {	#正义号一声炮响...
+	id = KOA.14
+	title = KOA.14.t
+	desc = KOA.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.14.a
+		add_stability = -0.1
+		add_political_power = -10
+		add_manpower = -211
+		set_cosmetic_tag = KOA_republic_nation_tag
+		set_politics = {
+			ruling_party = liberal_republican
+			long_name = KOA_liberal_republican_party_long_2
+			name = KOA_liberal_republican_party_2
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = KOA_paternal_autocrat_party_long_2
+			name = KOA_paternal_autocrat_party_2
+		}
+		set_party_name = {
+			ideology = conservative_republican
+			long_name = KOA_conservative_republican_party_long_2	
+			name = KOA_conservative_republican_party_2
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+		set_country_flag = FLAG_KOA_focus_2
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = KOA_reformist_coup
+	}
+}
+country_event = {	#全城静默
+	id = KOA.15
+	title = KOA.15.t
+	desc = KOA.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.15.a
+	}
+}
+country_event = {	#我们的共和
+	id = KOA.16
+	title = KOA.16.t
+	desc = KOA.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.16.a
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.1
+		}
+		add_ideas = KOA_revolutionary_enthusiasm
+		custom_effect_tooltip = KOA_tooltip_event16
+	}
+
+	option = {
+		name = KOA.16.b
+		set_politics = {
+			ruling_party = conservative_republican
+		}
+		add_ideas = KOA_directed_democracy
+		set_party_name = {
+			ideology = liberal_republican
+			long_name = KOA_liberal_republican_party_long_3
+			name = KOA_liberal_republican_party_3
+		}
+	}
+
+	option = {
+		name = KOA.16.c
+		set_politics = {
+			ruling_party = paternal_autocrat
+			long_name = KOA_paternal_autocrat_party_long_3
+			name = KOA_paternal_autocrat_party_3
+		}
+		set_party_name = {
+			ideology = liberal_republican
+			long_name = KOA_liberal_republican_party_long_3
+			name = KOA_liberal_republican_party_3
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#国王的命运
+	id = KOA.17
+	title = KOA.17.t
+	desc = KOA.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.17.a
+	}
+}
+
+country_event = {	#特尼安再统一！
+	id = KOA.18
+	title = KOA.18.t
+	desc = KOA.18.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.18.a
+	}
+}
+
+country_event = {	#旧联盟？
+	id = KOA.19
+	title = KOA.19.t
+	desc = KOA.19.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.19.a
+	}
+}
+
+country_event = {	#旧陆军保留问题
+	id = KOA.100
+	title = KOA.100.t
+	desc = KOA.100.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOA.100.a
+		ai_chance = { base = 50 }
+		add_political_power = -50
+		army_experience = 20
+		set_country_flag = KOA_politics_in_command_flag
+	}
+
+	option = {
+		name = KOA.100.b
+		ai_chance = { base = 50 }
+		add_political_power = -100
+		army_experience = 30
+		add_command_power = 20
+		set_country_flag = KOA_new_country_new_army_flag
+	}
+}
+
+country_event = {	#威廉的加冕仪式
+	id = KOA.200
+	title = KOA.200.t
+	desc = KOA.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.200.a
+	}
+}
+
+country_event = {	#重审王后案
+	id = KOA.201
+	title = KOA.201.t
+	desc = KOA.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.201.a
+	}
+}
+
+country_event = {	#大学社团
+	id = KOA.202
+	title = KOA.202.t
+	desc = KOA.202.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.202.a
+	}
+}
+
+country_event = {	#民主党派内部会议
+	id = KOA.203
+	title = KOA.203.t
+	desc = KOA.203.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.203.a
+	}
+}
+
+country_event = {	#筹备选举
+	id = KOA.204
+	title = KOA.204.t
+	desc = KOA.204.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.204.a
+	}
+}
+
+country_event = {	#1998年大选
+	id = KOA.205
+	title = KOA.205.t
+	desc = KOA.205.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.205.a
+	}
+}
+
+country_event = {	#加冕仪式开始
+	id = KOA.300
+	title = KOA.300.t
+	desc = KOA.300.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.300.a
+	}
+}
+
+country_event = {	#王党的壮大
+	id = KOA.301
+	title = KOA.301.t
+	desc = KOA.301.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.301.a
+	}
+}
+
+country_event = {	#东城密谈
+	id = KOA.302
+	title = KOA.302.t
+	desc = KOA.302.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.302.a
+	}
+}
+
+country_event = {	#新体制的威胁
+	id = KOA.303
+	title = KOA.303.t
+	desc = KOA.303.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = KOA.303.a
+	}
+}

@@ -1,0 +1,112 @@
+ideas = {
+	country = {
+
+		###SPC特供###
+		SPC_forbidden_advisors = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				disabled_ideas = 1
+			}
+		}
+
+		SPC_temp_consumption_1 = {
+			name = SPC_temp_consumption
+			allowed = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		SPC_temp_consumption_2 = {
+			name = SPC_temp_consumption
+			allowed = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		SPC_temp_consumption_3 = {
+			name = SPC_temp_consumption
+			allowed = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		SPC_temp_consumption_4 = {
+			name = SPC_temp_consumption
+			allowed = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+
+		###地区idea###
+
+		SPC_region_idea_1 = {		#瑟拉斯风暴
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				army_speed_factor = 0.2
+				conscription_factor = 0.1
+				supply_factor = -0.1
+				global_building_slots_factor = -0.1
+			}
+		}
+
+		SPC_region_idea_2 = {		#扎兰多亚之劫
+			removal_cost = -1
+		}
+
+		SPC_region_idea_3 = {		#霜林的低语
+			removal_cost = -1
+		}
+
+		SPC_region_idea_4 = {		#莱沃斯卡尔的烈火
+			removal_cost = -1
+		}
+
+		SPC_region_idea_5 = {		#森瓦西尔之寒
+			removal_cost = -1
+		}
+
+		SPC_region_idea_6 = {		#巨龙陨落之地
+			removal_cost = -1
+		}
+
+		SPC_region_idea_7 = {		#沼光下的点点星火
+			removal_cost = -1
+		}
+
+		SPC_region_idea_8 = {		#焚毁的斯瓦塔尔夫
+			removal_cost = -1
+		}
+
+		SPC_region_idea_9 = {		#马族与外人之地
+			removal_cost = -1
+		}
+
+		SPC_region_idea_10 = {		#蛮族的故乡
+			removal_cost = -1
+		}
+
+		SPC_region_idea_11 = {		#塔兰急行军
+			removal_cost = -1
+		}
+
+		SPC_region_idea_12 = {		#破碎的帝国之心
+			removal_cost = -1
+		}
+
+	}
+}

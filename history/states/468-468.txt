@@ -1,0 +1,31 @@
+
+state={
+	id=468
+	name="STATE_468"
+	provinces={
+		1628 4389 5212 6987 10223 18050 18232 18344 
+	}
+	resources = {
+		steel = 20
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			18334 = { bunker = 2 }
+			1628 = { bunker = 2 }
+		}
+		victory_points = {
+			10223 8
+		}
+		victory_points = {
+			18344 10
+		}
+	}
+	manpower = 2100000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

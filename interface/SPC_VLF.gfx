@@ -1,0 +1,25 @@
+spriteTypes = {	
+	###大肖像###
+	#spriteType = {
+	#	name = "GFX_FES_undine"
+	#	texturefile = "gfx/leaders/FES/undine.png"
+	#}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_VLF_young_dictator"
+		texturefile = "gfx/interface/ideas/VLF_young_dictator.png"
+	}
+	spriteType = {
+		name = "GFX_idea_VLF_harassment_from_mtv"
+		texturefile = "gfx/interface/ideas/VLF_harassment_from_mtv.png"
+	}
+	spriteType = {
+		name = "GFX_idea_VLF_ideological_testing_ground"
+		texturefile = "gfx/interface/ideas/VLF_ideological_testing_ground.png"
+	}
+	###地区修正###
+	spriteType = {
+		name = "GFX_idea_VLF_land_of_bunkers"
+		texturefile = "gfx/interface/ideas/VLF_land_of_bunkers.png"
+	}
+}

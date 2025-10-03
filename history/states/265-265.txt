@@ -1,0 +1,32 @@
+state={
+	id=265
+	name="STATE_265"
+	
+	history={
+		owner = KEU
+		add_core_of = KEU
+		victory_points = {
+			11394 1
+		}
+		victory_points = {
+			20398 1
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			20398 = {
+				naval_base = 1
+			}
+		}
+		
+	}
+	
+	provinces={
+		4006 4418 6065 7488 8458 8112 10552 11394 12173 20270 20338 20356 20398 20402 20458 20503 20550 20552 
+	}
+	manpower=916884
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

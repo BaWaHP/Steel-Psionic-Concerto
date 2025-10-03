@@ -1,0 +1,8 @@
+MTV_civilwar_worsen = {		#内战恶化
+	#picture = 
+	icon = GFX_decision_category_eng_organize_the_blackshirts
+	allowed = { tag = MTV }
+	visible = { has_country_flag = MTV_civilwar_worsen_on }
+	visible_when_empty = no
+	priority = 10
+}

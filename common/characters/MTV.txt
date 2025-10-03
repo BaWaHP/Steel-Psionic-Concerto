@@ -1,0 +1,238 @@
+characters={
+
+	MTV_none = {	#暂无
+		name = MTV_none
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = pioneer_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = revolutionary_communism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = worldunion_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = worldunion_democrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = national_socialist_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_nationalism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = wizard_rules_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = religious_extremism_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MTV_government_of_saleovi = {		#萨莱欧维政府
+   		name = MTV_government_of_saleovi
+   		portraits = {
+   			civilian = {
+   				large="GFX_MTV_government_of_saleovi"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_MTV_government_of_saleovi"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = MTV_government_of_saleovi_desc
+   			ideology = anarchy_state
+   			traits = { MTV_out_of_contact }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = MTV_government_of_saleovi_desc_advisor
+			idea_token = MTV_government_of_saleovi_idea
+			allowed = { original_tag = MTV }
+			traits = { MTV_shelter_government }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	MTV_luzhzhi_wattsba = {		#卢日支·瓦茨巴
+   		name = MTV_luzhzhi_wattsba
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = liberal_republican_subtype
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = authoritarian_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	MTV_unity_stadium = {		#“团结”体育场
+   		name = MTV_unity_stadium
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = MTV_unity_stadium_desc
+			idea_token = MTV_unity_stadium_idea
+			allowed = { original_tag = MTV }
+			traits = { MTV_mass_grave }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	MTV_central_water_supply = {		#瓦尔特中央供水
+   		name = MTV_central_water_supply
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = MTV_central_water_supply_desc
+			idea_token = MTV_central_water_supply_idea
+			allowed = { original_tag = MTV }
+			traits = { MTV_poison_water }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	MTV_holy_shells_and_bullets = {		#炮弹与子弹由穆勒斯指引
+   		name = MTV_holy_shells_and_bullets
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = MTV_holy_shells_and_bullets_desc
+			idea_token = MTV_holy_shells_and_bullets_idea
+			allowed = { original_tag = MTV }
+			traits = { MTV_wartime_schedule }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	MTV_dream_of_fullness = {		#饱腹之梦
+   		name = MTV_dream_of_fullness
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = MTV_dream_of_fullness_desc
+			idea_token = MTV_dream_of_fullness_idea
+			allowed = { original_tag = MTV }
+			traits = { MTV_manmade_famine }
+			can_be_fired = no
+			cost = 150
+			ai_will_do = { factor = 1.000 }
+		}
+	}
+
+	MTV_broz_caligula_walter = {		#布罗兹·“卡里古拉”·瓦尔特
+   		name = MTV_broz_caligula_walter
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		#country_leader = {
+		#	desc = MTV_broz_caligula_walter_desc
+   		#	ideology = magician_dictatorship
+   		#	traits = { MTV_red_god }
+   		#	expire = "3000.1.1.1"
+   		#	id = -1
+   		#}
+	}
+}

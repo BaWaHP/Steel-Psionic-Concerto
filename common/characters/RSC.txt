@@ -1,0 +1,23 @@
+characters={
+
+	RSC_calhoun_bell = {		#卡尔霍恩·贝尔
+   		name = RSC_calhoun_bell
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = RSC_calhoun_bell_desc
+   			ideology = utopian_socialism
+   			traits = { RSC_hasty_insurrectionists }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

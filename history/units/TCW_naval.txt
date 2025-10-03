@@ -1,0 +1,19 @@
+﻿units = {
+	fleet = {
+		name = "托莱多舰队"
+		naval_base = 3765
+		task_force = {
+			name = "托莱多舰队"
+			location = 3765
+			ship = { name = "克里斯蒂安号" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = TCW version_name = "元帅级"} } }
+			ship = { name = "国防巡洋驱逐舰I" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TCW version_name = "浒狼级"} } }
+			ship = { name = "国防巡洋驱逐舰II" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TCW version_name = "浒狼级"} } }
+			ship = { name = "国防巡洋驱逐舰III" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TCW version_name = "浒狼级"} } }
+			ship = { name = "国防巡洋驱逐舰IV" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TCW version_name = "浒狼级"} } }
+			ship = { name = "国防巡洋驱逐舰V" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TCW version_name = "浒狼级"} } }
+			ship = { name = "国防巡洋潜艇I" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TCW version_name = "雏犬级"} } }
+			ship = { name = "国防巡洋潜艇II" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TCW version_name = "雏犬级"} } }
+			ship = { name = "国防巡洋潜艇III" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TCW version_name = "雏犬级"} } }
+		}
+	}
+}

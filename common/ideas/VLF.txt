@@ -1,0 +1,101 @@
+ideas = {
+	country = {
+
+		VLF_young_dictator = {		#年幼的专制公
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		VLF_harassment_from_mtv  = {		#来自蒙联的骚扰
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		VLF_ideological_testing_ground  = {		#意识形态的大试验场
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		VLF_rise_of_pan_centaur_nationalism  = {		#泛半人马民族主义兴起
+			picture = FRA_army_of_aggression_focus
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				liberal_republican_drift = 0.02
+			}
+		}
+
+		VLF_national_dev_council  = {		#国家发展委员会
+			picture = FRA_market_dynamism
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				min_export = 0.15
+				consumer_goods_factor = 0.1
+				liberal_republican_drift = 0.02
+			}
+			targeted_modifier = {
+				tag = ZHE
+				trade_opinion_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+
+		VLF_joint_ventures  = {		#合资公司
+			picture = CHL_comptroller_general_of_chile
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			targeted_modifier = {
+				tag = ZHE
+				cic_to_target_factor = 0.5
+			}
+		}
+
+		VLF_cracked_crown = {		#破裂的王冠
+			picture = generic_monarchist_uprising
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				paternal_autocrat_drift = -0.02
+			}
+		}
+
+		VLF_cracked_crown_2 = {		#破裂的王冠
+			name = VLF_cracked_crown
+			picture = generic_monarchist_uprising
+			allowed = { original_tag = VLF }
+			removal_cost = -1
+
+			modifier = {
+				paternal_autocrat_drift = -0.02
+			}
+		}
+
+	}
+}

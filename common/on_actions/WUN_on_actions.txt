@@ -1,0 +1,14 @@
+on_actions = {
+
+	on_daily_WUN = {
+		effect = {
+			every_owned_state = {
+				if = {
+					limit = { has_state_flag = WUN_state_prefering }
+					add_to_variable = { state_science_progress = -0.02 }
+				}
+			}
+		}
+	}
+
+}

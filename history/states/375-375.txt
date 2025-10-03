@@ -1,0 +1,39 @@
+
+state={
+	id=375
+	name="STATE_375"
+	resources={
+		oil=8.000
+		magic_crystal=11.000
+		tungsten=10.000
+	}
+
+	history={
+		owner = ROK
+		add_core_of = ROK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			anti_air_building = 2
+
+		}
+		victory_points = {
+			19892 8 
+		}
+		victory_points = {
+			19773 3
+		}
+		victory_points = {
+			7617 20
+		}
+
+	}
+
+	provinces={
+		1892 3368 4465 7617 8845 10417 12169 19691 19736 19773 19811 19820 19886 19891 19892 19979 
+	}
+	manpower=3350000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

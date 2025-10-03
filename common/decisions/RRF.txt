@@ -1,0 +1,202 @@
+RRF_light_the_torch = {
+	RRF_organizing_the_red_guards_in_the_east = {		#在东区组织赤卫军
+		icon = generic_civil_support
+
+		available = { 
+			controls_state = 346 
+			has_completed_focus = RRF_workers_mobilization_order
+		}
+		visible = { RSU = { exists = yes } }
+
+		cost = 15
+		days_remove = 15
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			346 = {
+				create_unit = {
+					division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1 start_equipment_factor = 0.65"  
+					owner = RRF
+					prioritize_location = 19977
+					count = 3
+				}
+			}
+		}
+	}
+	RRF_organizing_production_in_the_east = {		#在东区组织生产
+		icon = generic_civil_support
+
+		available = { controls_state = 346 }
+		visible = { RSU = { exists = yes } }
+
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+		}
+
+		remove_effect = {
+			346 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	RRF_dead_fight = {		#殊死搏斗
+		icon = SWE_set_army_budget
+
+		available = {
+			surrender_progress > 0.25
+			controls_state = 346
+			controls_state = 320
+		}
+		visible = { RSU = { exists = yes } }
+
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		modifier = {
+			army_core_defence_factor = 0.05
+		}
+
+		remove_effect = {
+			346 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 19977
+				}
+			}
+			320 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9443
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 20178
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6702
+				}
+			}
+		}
+	}
+	RRF_organizing_the_red_guards_in_the_south = {		#在南区组织赤卫军
+		icon = generic_civil_support
+
+		available = {
+			controls_state = 317
+			controls_province = 1177
+			has_completed_focus = RRF_workers_mobilization_order
+		}
+		visible = { RSU = { exists = yes } }
+
+		cost = 30
+		days_remove = 15
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			317 = {
+				create_unit = {
+					division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1 start_equipment_factor = 0.65"  
+					owner = RRF
+					prioritize_location = 20085
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1 start_equipment_factor = 0.65"  
+					owner = RRF
+					prioritize_location = 1177
+				}
+			}
+		}
+	}
+	RRF_confiscating_illegal_assets = {		#在鲁萨尔没收非法资产
+		icon = generic_wreckers
+
+		available = {
+			controls_state = 317
+		}
+		visible = { RSU = { exists = yes } }
+
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			add_stability = -0.05
+			317 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.5
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	RRF_organizing_production_in_the_north = {		#在北区组织生产
+		icon = generic_industry
+
+		available = {
+			controls_province = 6080
+			controls_province = 10089
+		}
+		visible = { RSU = { exists = yes } }
+
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		remove_effect = {
+			add_war_support = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+			}
+		}
+	}
+}

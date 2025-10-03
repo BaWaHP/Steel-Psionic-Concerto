@@ -1,0 +1,206 @@
+defined_text = {
+	name = GET_peace_popup_intro_txt
+	text = {
+		trigger = {
+			has_global_flag = war_won
+		}
+		localization_key = GET_peace_popup_intro_txt_1
+	}
+	text = {
+		trigger = {
+			has_global_flag = war_continuing
+		}
+		localization_key = GET_peace_popup_intro_txt_2
+	}
+	text = {
+		localization_key = GET_peace_popup_intro_txt_3
+	}
+}
+
+defined_text = {
+	name = GET_War_Conclusion_Loc
+	text = {
+		localization_key = "GET_War_Conclusion_Loc_generic"
+	}
+}
+
+defined_text = {
+	name = GET_War_Continuation_Loc
+	text = {
+		localization_key = "GET_War_Continuation_Loc_generic"
+	}
+}
+
+defined_text = {
+	name = GET_peace_popup_speech_txt
+
+	###############
+	###东巴斯蒂亚###
+	###############
+
+	###远乡###
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = SFH }
+		}
+		localization_key = "GET_peace_popup_speech_txt_SFH"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = SFR }
+		}
+		localization_key = "GET_peace_popup_speech_txt_SFR"
+	}
+	
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = QTA }
+		}
+		localization_key = "GET_peace_popup_speech_txt_QTA"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = NFH }
+		}
+		localization_key = "GET_peace_popup_speech_txt_NFH"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = FFH }
+		}
+		localization_key = "GET_peace_popup_speech_txt_FFH"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = AFH }
+		}
+		localization_key = "GET_peace_popup_speech_txt_AFH"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = MSA }
+		}
+		localization_key = "GET_peace_popup_speech_txt_MSA"
+	}
+
+	###沃姆###
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = WOM }
+		}
+		localization_key = "GET_peace_popup_speech_txt_WOM"
+	}
+
+	###############
+	###南巴斯蒂亚###
+	###############
+
+	#############
+	##勒泰特尼安##
+	#############
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = LNR }
+		}
+		localization_key = "GET_peace_popup_speech_txt_LNR"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = RLN }
+		}
+		localization_key = "GET_peace_popup_speech_txt_RLN"
+	}
+
+	############
+	###提特兰###
+	############
+
+	###############
+	##坎达德尔王国##
+	###############
+	
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = KDK }
+		}
+		localization_key = "GET_peace_popup_speech_txt_KDK"
+	}
+
+	###############
+	##马加尔斯邦联##
+	###############
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = MGC }
+		}
+		localization_key = "GET_peace_popup_speech_txt_MGC"
+	}
+
+	###############
+	##提特兰共和国##
+	###############
+
+	text = {
+		trigger = { 
+			event_target:losing_country = { 
+				original_tag = ROT has_government =  national_socialist
+			} 
+		}
+		localization_key = "GET_peace_popup_speech_txt_ROT_1"
+	}
+
+	text = {
+		trigger = { 
+			event_target:losing_country = { 
+				original_tag = ROT has_government =  religious_extremism
+			} 
+		}
+		localization_key = "GET_peace_popup_speech_txt_ROT_2"
+	}
+
+	text = {
+		trigger = { 
+			event_target:losing_country = { 
+				original_tag = ROT has_government =  liberal_republican
+			} 
+		}
+		localization_key = "GET_peace_popup_speech_txt_ROT_3"
+	}
+
+	###############
+	###蒙特转转看###
+	###############
+
+	text = {
+		trigger = { 
+			event_target:losing_country = { original_tag = WDR } 
+		}
+		localization_key = "GET_peace_popup_speech_txt_WDR"
+	}
+
+	text = {
+		localization_key = "SPC_peace_popup_speech_txt_generic"
+	}
+}
+
+defined_text = {
+	name = GET_peace_popup_close_txt
+	text = {
+		localization_key = "GET_peace_popup_close_txt_generic"
+	}
+}
+
+defined_text = {
+	name = GET_peace_popup_btn_tt
+	text = {
+		localization_key = "GET_peace_popup_btn_tt_generic"
+	}
+}

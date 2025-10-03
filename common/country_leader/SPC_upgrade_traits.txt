@@ -1,0 +1,723 @@
+leader_traits = {
+
+	education_scholar = {					#教育学者
+		random = no
+		political_power_factor = -0.05
+		research_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	education_expert = {					#教育专家
+		random = yes
+		research_speed_factor = 0.05
+		monthly_research_development_process = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	secretary_education = {					#教育局局长
+		random = no
+		research_speed_factor = 0.05
+		monthly_research_development_process = 4
+		state_science_development_monthly = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	promising_promise_maker_1 = {		#承诺家（专家）
+		random = no
+		
+		promise_resume_chance = 0.45
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	promising_promise_maker_2 = {		#承诺家（大师）
+		random = no
+		
+		promise_resume_chance = 0.6
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	promising_promise_maker_3 = {		#承诺家（奇才）
+		random = no
+		
+		promise_resume_chance = 0.75
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	economy_learner = {					#经济学者
+		random = no
+
+		consumer_goods_factor = -0.05
+		stability_factor = 0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	financial_expert = {					#经济学专家
+		random = no
+
+		consumer_goods_factor = -0.1
+		monthly_living_standard_development_process = 2
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	economy_expert = {					#经济学泰斗
+		random = no
+
+		consumer_goods_factor = -0.15
+		stability_factor = 0.05
+		monthly_living_standard_development_process = 2
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	undead_warlock = {		#亡灵术士
+		random = no
+		
+		stability_factor = -0.05
+		max_undead_army_size = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	necromancer_Genius = {		#死灵法师
+		random = no
+		
+		consumer_goods_factor = -0.025
+		stability_factor = -0.05
+		monthly_research_development_process = 2
+		max_undead_army_size = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_necromancer = {		#大死灵法师
+		random = no
+		
+		consumer_goods_factor = -0.05
+		stability_factor = -0.05
+		monthly_research_development_process = 4
+		max_undead_army_size = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	armament_enthusiasts = {		#军备爱好者
+		random = no
+		
+		conversion_cost_civ_to_mil_factor = -0.1
+		production_speed_supply_node_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	armaments_organizer = {		#军备组织者
+		sprite = 10
+		random = yes
+		conversion_cost_civ_to_mil_factor = -0.2
+		production_speed_supply_node_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	armaments_leader = {		#军备组织领袖
+		sprite = 10
+		random = no
+		conversion_cost_civ_to_mil_factor = -0.2
+		production_speed_supply_node_factor = 0.1
+		war_support_factor = 0.05
+		monthly_military_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hidden_backstabber = {	#不形于色的暗害者
+		sprite = 13
+		subversive_activites_upkeep = -0.15
+		drift_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	backroom_backstabber = {	#密谋的暗害者
+		sprite = 13
+		subversive_activites_upkeep = -0.25
+		drift_defence_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	treacherous_backstabber = {	#诡谲的暗害者
+		sprite = 13
+		subversive_activites_upkeep = -0.3
+		drift_defence_factor = 0.3
+		resistance_growth = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	asistant_of_industry = {		#工业助理
+		sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.05
+		production_speed_infrastructure_factor = 0.05
+		production_speed_rail_way_factor = 0.05
+		production_speed_synthetic_refinery_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	captain_of_industry = {		#工业领袖
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pioneer_of_industry = {		#工业先驱
+		sprite = 10
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+		monthly_industrial_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	war_profiteer = {		#战争牟利者
+		sprite = 10
+		random = no
+		production_speed_arms_factory_factor = 0.05
+		production_speed_dockyard_factor = 0.05
+		production_speed_fuel_silo_factor = 0.05
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	war_industrialist = {		#战争实业家
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1		
+		production_speed_fuel_silo_factor = 0.1
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	defense_contractors = {		#国防承包商
+		sprite = 10
+		random = no
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+		production_speed_fuel_silo_factor = 0.1
+		monthly_industrial_development_process = 2
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	technocrat_asistant = {		#助理技官
+		sprite = 13
+	
+		production_speed_industrial_complex_factor = 0.025
+		research_speed_factor = 0.025
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	technocrat = {		#技术官僚
+		sprite = 13
+	
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mature_technocrat = {		#老成的技官
+		sprite = 13
+	
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.05
+		political_power_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	quartermaster_intern = {		#实习军需官
+		sprite = 10
+		random = no
+		production_speed_air_base_factor = 0.1
+		production_speed_naval_base_factor = 0.1
+		production_speed_rocket_site_factor = 0.1
+		production_speed_radar_station_factor = 0.1
+		production_speed_nuclear_reactor_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	quartermaster_general = {		#军需将军
+		sprite = 10
+		random = yes
+		production_speed_air_base_factor = 0.15
+		production_speed_naval_base_factor = 0.15
+		production_speed_rocket_site_factor = 0.15
+		production_speed_radar_station_factor = 0.15
+		production_speed_nuclear_reactor_factor = 0.15
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	quartermaster_chairman = {		#军需委员会主席
+		sprite = 10
+		random = no
+		production_speed_air_base_factor = 0.15
+		production_speed_naval_base_factor = 0.15
+		production_speed_rocket_site_factor = 0.15
+		production_speed_radar_station_factor = 0.15
+		production_speed_nuclear_reactor_factor = 0.15
+		monthly_military_development_process = 2
+
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	immature_fortification_engineer = {		#纸上谈兵的筑垒将军
+		sprite = 10
+		random = no
+		production_speed_bunker_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.1
+		production_speed_anti_air_building_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fortification_engineer = {		#筑垒工程师
+		sprite = 10
+		random = yes
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fortification_engineer_leader = {		#国防工程总设计师
+		sprite = 10
+		random = no
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
+		monthly_military_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	famous_ones = {		#当红人物
+		sprite = 13
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	popular_figurehead = {		#受欢迎的名誉领袖
+		sprite = 13
+		stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	national_idol = {		#国民偶像
+		sprite = 13
+		stability_factor = 0.15
+		stability_weekly = 0.002
+		mobilization_speed = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	propaganda_idiot = {		#宣传白痴
+		war_support_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	propaganda_expert = {		#宣传专家
+		war_support_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	propaganda_master = {		#宣传喉舌
+		war_support_factor = 0.15
+		war_support_weekly = 0.002
+		mobilization_speed = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	oppressive_official = {		#恐怖的酷吏
+		sprite = 13
+		resistance_damage_to_garrison = -0.15
+		foreign_subversive_activites = -0.15
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	prince_of_terror = {		#恐怖的巨头
+		sprite = 13
+		resistance_damage_to_garrison = -0.25 
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.025
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	terrible_tyrant = {		#恐怖的暴君
+		sprite = 13
+		resistance_damage_to_garrison = -0.3
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.05
+		compliance_growth = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kind_gentleman = {		#仁慈的绅士
+		random = no
+		sprite = 13
+		opinion_gain_monthly_factor = 0.1
+		resistance_damage_to_garrison = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	compassionate_gentleman = {		#慈悲的绅士
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_factor = 0.15
+		resistance_damage_to_garrison = -0.15
+		industry_free_repair_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fraternal_gentleman = {		#博爱的绅士
+		random = no
+		sprite = 13
+		opinion_gain_monthly_factor = 0.15
+		resistance_damage_to_garrison = -0.15
+		industry_free_repair_factor = 0.1
+		compliance_growth = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ideological_fan = {	#意识形态追星族
+		random = no
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 0.5
+		party_popularity_stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	ideological_crusader = {	#意识形态的十字军
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 1
+		party_popularity_stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	ideological_crusader_king = {	#意识形态十字军之王
+		random = no
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 1
+		party_popularity_stability_factor = 0.15
+		drift_defence_factor = 0.1
+		decryption_factor = 0.1
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	smooth_talking_dude = {		#巧言的普通人
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	smooth_talking_charmer = {		#巧言的魔术师
+		random = yes
+		sprite = 13
+		trade_opinion_factor = 0.10
+		improve_relations_maintain_cost_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	smooth_talking_swindler = {		#巧言的大诈欺师
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.10
+		improve_relations_maintain_cost_factor = -0.75
+		civilian_intel_factor = 0.1
+		army_intel_factor = 0.1
+		navy_intel_factor = 0.1
+		airforce_intel_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	confused_workhorse = {	#迷茫的实干家
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	silent_workhorse = {	#沉默的实干家
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	determined_workhorse = {	#坚定的实干家
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		party_popularity_stability_factor = 0.1
+		rulling_ideology_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	magic_researcher = {	#魔法学者
+		random = no
+
+		political_power_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	magic_expert = {	#魔法专家
+		random = no
+
+		state_magic_development_monthly = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	magic_master = {	#魔法大师
+		random = no
+
+		monthly_research_development_process = 2
+		state_magic_development_monthly = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	writer = {	#写手
+		random = no
+
+		political_power_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	small_editor = {	#编辑
+		random = no
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	main_editor = {	#主编
+		random = no
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	little_secretary_general = {		#小小秘书长
+		random = no
+
+		political_power_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	golden_secretary_general = {		#金牌秘书长
+		random = no
+
+		political_power_factor = 0.1
+		party_popularity_stability_factor = 0.05
+		rulling_ideology_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	perfect_secretary_general = {		#完美潇洒的秘书长
+		random = no
+
+		political_power_factor = 0.15
+		party_popularity_stability_factor = 0.05
+		rulling_ideology_drift = 0.1
+		production_factory_max_efficiency_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

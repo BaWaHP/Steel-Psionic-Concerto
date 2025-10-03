@@ -1,0 +1,31 @@
+
+state={
+	id=81
+	name="STATE_81"
+	resources={
+		steel=25
+		oil=10
+	}
+
+	history={
+		owner = ARO
+		add_core_of = LTH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			11404 3 
+		}
+
+	}
+
+	provinces={
+		2830 3967 6592 7021 11404 18466 18571 18667 18818 
+	}
+	manpower=2790000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

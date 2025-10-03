@@ -1,0 +1,97 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_UTM_startup_effect = {
+	if = {
+		limit = { tag = UTM }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = partial_economic_mobilisation
+		add_ideas = closed_economy
+		add_ideas = high_taxes
+		add_ideas = NP_medium_nationalization
+		add_ideas = aggressive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = struggle_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_no_intervention
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_strict_control
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_omnivorous_orcs
+		add_ideas = SR_empire_five
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_moralism
+		add_ideas = SXP_traditional_policy
+		###控制省份对应普及度###
+		184 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 5 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		179 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 4 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		178 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		290 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 2 }
+		}
+		269 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		216 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+	}
+}

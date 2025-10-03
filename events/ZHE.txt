@@ -1,0 +1,144 @@
+﻿###########################
+# ZHE Events #
+###########################
+
+add_namespace = ZHE
+
+country_event = {
+	id = ZHE.0		#于摩的命运
+	title = ZHE.0.t
+	desc = ZHE.0.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ZHE.0.a
+		set_autonomy = {
+			target = WUN
+			autonomy_state = autonomy_dominion
+		}
+		WUN = {
+			remove_ideas = WUN_spread_of_racist_sentiment
+			remove_ideas = WUN_spread_of_nationalism_sentiment
+			remove_dynamic_modifier = { modifier = WUN_way_of_the_king }
+			remove_ideas = WUN_obey_to_king
+			remove_ideas = WUN_hot_knife_with_cold_blood
+			remove_ideas = WUN_original_desire_idea
+			remove_ideas = WUN_break_down
+			remove_ideas = ZHE_king_behind_king
+			if = {
+				limit = { NOT = { has_idea = WUN_Ill_fares_the_land } }
+				add_ideas = WUN_Ill_fares_the_land
+			}
+			deactivate_advisor = WUN_yaqub_huda_bek_idea
+			deactivate_advisor = WUN_yaqub_haighura_bek_idea
+			deactivate_advisor = WUN_yaqub_ginsham_bek_idea
+			add_ideas = WUN_untamed
+			add_ideas = WUN_detention_policy
+			add_ideas = WUN_regional_security
+			set_cosmetic_tag = ZHE_cosmetic
+		}
+		CHE = {
+			transfer_state = 129
+			transfer_state = 130
+		}
+		SHA = {
+			transfer_state = 140
+		}
+		WUN = {
+			transfer_state = 135
+			transfer_state = 139
+			transfer_state = 158
+			transfer_state = 157
+		}
+	}
+}
+
+country_event = {
+	id = ZHE.1		#于摩的命运
+	title = ZHE.1.t
+	desc = ZHE.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ZHE.1.a
+		add_political_power = -1000
+		custom_effect_tooltip = ZHE.1.a.tt
+	}
+
+	option = {
+		name = ZHE.1.b
+		trigger = { WUN = { exists = yes } }
+		custom_effect_tooltip = ZHE.1.b.tt
+		WUN = { change_tag_from = ZHE }
+		WUN = { annex_country = { target = ZHE } }
+	}
+}
+
+###新闻###
+
+add_namespace = ZHENews
+
+news_event = {
+	id = ZHENews.1		#联邦解体
+	title = ZHENews.1.t
+	desc = ZHENews.1.d
+	picture = GFX_news_event_generic_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ZHENews.1.a
+	}
+}
+
+news_event = {
+	id = ZHENews.2		#七河集团延期披露财报
+	title = ZHENews.2.t
+	desc = ZHENews.2.d
+	picture = GFX_news_event_generic_84
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ZHENews.1.a
+		if = {
+			limit = { tag = ZHE }
+			add_stability = -0.05
+		}
+	}
+}
+
+news_event = {
+	id = ZHENews.3		#讣告：七河集团前董事长普萘洛尔离世
+	title = ZHENews.3.t
+	desc = ZHENews.3.d
+	picture = GFX_news_event_generic_76
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ZHENews.3.a
+		trigger = { tag = ZHE }
+		add_stability = -0.05
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = -0.05
+		}
+		add_manpower = -1
+	}
+
+	option = {
+		name = ZHENews.3.b
+		trigger = { NOT = { tag = ZHE } }
+	}
+}

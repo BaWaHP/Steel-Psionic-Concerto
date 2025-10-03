@@ -1,0 +1,5 @@
+RRF_light_the_torch = {	#点燃火炬
+	allowed = { tag = RRF }
+	visible = { tag = RRF RSU = { exists = yes } }
+	priority = 10
+}

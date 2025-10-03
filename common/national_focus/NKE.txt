@@ -1,0 +1,2493 @@
+focus_tree = {
+	id = NKE_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NKE
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	
+	focus = {	#百废待兴
+		id = NKE_rise_up_from_ruins
+		icon = GFX_goal_Generic_Memories_of_the_War
+		x = 9
+		y = 0
+		cost = 1.43
+		available = {
+			has_war = no
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Alpha_Mentur
+		}
+	}
+	
+	focus = {	#衬衫、洋火、面包篮
+		id = NKE_shirt_match_n_bread
+		icon = GFX_Generic_Bread_and_Peace
+		x = 0
+		y = 1
+		cost = 1.43
+		#available = {}
+		
+		bypass = {
+			has_living_standard_development_more_than_3 = yes
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NKE_rise_up_from_ruins }
+		relative_position_id = NKE_rise_up_from_ruins
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 50
+			SPC_living_standard_development_amount_up_3 = yes
+		}
+	}
+	
+	focus = {	#朝气蓬勃
+		id = NKE_vital_state
+		icon = GFX_Generic_Family
+		x = -4
+		y = 1
+		cost = 4.3
+		#available = {}
+		
+		#bypass = {		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NKE_shirt_match_n_bread }
+		relative_position_id = NKE_shirt_match_n_bread
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Sapu_Randu
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Teru_Tiri
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Maruph_Peri
+		}
+	}
+	
+	focus = {	#维安娜·维尔大学
+		id = NKE_national_university
+		icon = GFX_generic_Bookstack
+		x = -2
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Sapu_Randu
+			NOT = { has_idea = EP_minimum_spending }
+		}
+		
+		#bypass = {		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_vital_state }
+		relative_position_id = NKE_vital_state
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_research_development_amount_up_3 = yes
+			unlock_decision_category_tooltip = NKE_national_university_decisions_category
+		}
+	}
+	
+	focus = {	#增设魔法学院
+		id = NKE_append_magic_college
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Sapu_Randu
+			NOT = { has_idea = EP_minimum_spending }
+			has_country_flag = NKE_national_university_built
+		}
+		
+		bypass = {
+			has_idea = MP_fuck_off_the_magician
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_national_university }
+		relative_position_id = NKE_national_university
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = { state_magic_progress = 20 }
+			custom_effect_tooltip = NKE_append_magic_college_tt
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = industry
+				category = electronics
+				category = secret_weapons
+			}
+		}
+	}
+	
+	focus = {	#左汀原博物馆
+		id = NKE_Tso_Naghara_museum
+		icon = GFX_goal_government_icon
+		x = 0
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Teru_Tiri
+			has_war = no
+		}
+		
+		#bypass = {		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_vital_state }
+		relative_position_id = NKE_vital_state
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			SPC_living_standard_development_amount_up_3 = yes
+		}
+	}
+	
+	focus = {	#编写国歌
+		id = NKE_compose_national_anthem
+		icon = GFX_Generic_Pass_Legislation
+		x = 0
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Teru_Tiri
+		}
+		
+		#bypass = {		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Tso_Naghara_museum }
+		relative_position_id = NKE_Tso_Naghara_museum
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			effect_tooltip  = {
+				add_stability = 0.05
+				add_political_power = 50
+			}
+			country_event = NKE.3101
+		}
+	}
+	
+	focus = {	#洪风角外贸市场
+		id = NKE_Kaze_Cape_extrade_market
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 2
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Maruph_Peri
+			has_war = no
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		
+		#bypass = {		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_vital_state }
+		relative_position_id = NKE_vital_state
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = NKE_developing_extrade
+				days = 90
+			}
+		}
+	}
+	
+	focus = {	#扩大洪风港
+		id = NKE_Kaze_Cape_port_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 1
+		cost = 2.86
+		available = {
+			has_idea = NKE_Maruph_Peri
+		}
+		
+		bypass = {
+			265 = {
+				any_province_building_level = {
+					building = naval_base
+					level > 4
+				}
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Kaze_Cape_extrade_market }
+		relative_position_id = NKE_Kaze_Cape_extrade_market
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			add_victory_points = {
+				province = 11394
+				value = 1
+			}
+			set_building_level = {
+				type = naval_base
+				level = 5
+				province = {
+					id = 11394
+				}
+			}
+		}
+	}
+	
+	focus = {	#焕发活力
+		id = NKE_shining_vitality
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1.5
+		cost = 4.3
+		available = {
+			has_country_flag = NKE_national_university_built
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_append_magic_college }
+		prerequisite = { focus = NKE_compose_national_anthem }
+		prerequisite = { focus = NKE_Kaze_Cape_port_expansion }
+		relative_position_id = NKE_compose_national_anthem
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KEU_nation_of_youth
+				add_idea = NKE_nation_of_vitality
+			}
+		}
+	}
+	
+	focus = {	#汀海纺纱厂
+		id = NKE_industry_civilian_1
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 1
+		cost = 2.15
+		available = {
+			controls_state = 265
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_shirt_match_n_bread }
+		relative_position_id = NKE_shirt_match_n_bread
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	#石板路进乡村
+		id = NKE_infrastructure_1
+		icon = GFX_Transsaharian_Railroad
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+		}
+		
+		bypass = {
+			265 = { infrastructure > 2 }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_industry_civilian_1 }
+		relative_position_id = NKE_industry_civilian_1
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	#门托炼钢厂
+		id = NKE_resource_1
+		icon = GFX_focus_generic_steel
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_infrastructure_1 }
+		relative_position_id = NKE_infrastructure_1
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+			}
+		}
+	}
+	
+	focus = {	#麦克斯制衣厂
+		id = NKE_industry_civilian_2
+		icon = GFX_Generic_Cotton_Farming
+		x = -1
+		y = 1
+		cost = 4.3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NKE_Peoria_handles_tt
+				always = no
+			}
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact
+			hidden_trigger = {
+				PEO = {
+					exists = yes
+					has_capitulated = no
+					is_puppet = no
+				}
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_resource_1 }
+		relative_position_id = NKE_resource_1
+		mutually_exclusive = { focus = NKE_independent_industrialization }
+		
+		completion_reward = {
+			effect_tooltip = {
+				265 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				SPC_living_standard_development_amount_up_2 = yes
+				PEO = {
+					add_offsite_building = { type = industrial_complex level = 2 }
+					add_political_power = -25
+				}
+			}
+			PEO = { country_event = NKE.4101 }
+		}
+	}
+	
+	focus = {	#阿兰鞣革厂
+		id = NKE_alam_tannery
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NKE_Peoria_handles_tt
+				always = no
+			}
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact
+			hidden_trigger = {
+				PEO = {
+					exists = yes
+					has_capitulated = no
+					is_puppet = no
+				}
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_industry_civilian_2 }
+		relative_position_id = NKE_industry_civilian_2
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			effect_tooltip = {
+				265 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_ideas = NKE_alam_tannery_pollution
+				PEO = {
+					add_offsite_building = { type = industrial_complex level = 2 }
+					add_political_power = -25
+				}
+			}
+			PEO = { country_event = NKE.4102 }
+		}
+	}
+	
+	focus = {	#包身工
+		id = NKE_debt_bondage
+		icon = GFX_goal_workers_rights
+		x = 0
+		y = 1
+		cost = 6.43
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NKE_Peoria_handles_tt
+				always = no
+			}
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact
+			hidden_trigger = {
+				PEO = {
+					exists = yes
+					has_capitulated = no
+					is_puppet = no
+				}
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_alam_tannery }
+		relative_position_id = NKE_alam_tannery
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			effect_tooltip = {
+				265 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_ideas = NKE_debt_bondage_impact
+				PEO = {
+					add_offsite_building = { type = industrial_complex level = 4 }
+					add_political_power = -25
+				}
+			}
+			PEO = { country_event = NKE.4103 }
+		}
+	}
+	
+	focus = {	#左汀原自主工业化
+		id = NKE_independent_industrialization
+		icon = GFX_goal_workers_for_business
+		x = 2
+		y = 1
+		cost = 6.43
+		available = {
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			has_political_power > 49
+			NOT = { has_idea = PEO_peo_permanent_econ_representative }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_resource_1 }
+		relative_position_id = NKE_resource_1
+		mutually_exclusive = { focus = NKE_industry_civilian_2 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			SPC_industrial_development_amount_up_3 = yes
+			add_political_power = -50
+		}
+	}
+	
+	focus = {	#左汀原公路系统
+		id = NKE_infrastructure_2
+		icon = GFX_Generic_Railroads
+		x = -1
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			265 = { infrastructure > 2 }
+		}
+		
+		bypass = { 
+			265 = { infrastructure > 4 }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_independent_industrialization }
+		relative_position_id = NKE_independent_industrialization
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {	#筹集工业补助金
+		id = NKE_industry_fund
+		icon = GFX_Generic_Loadsamoney
+		x = 1
+		y = 1
+		cost = 2.15
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			has_living_standard_development_more_than_1 = yes
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_independent_industrialization }
+		relative_position_id = NKE_independent_industrialization
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			add_political_power = 150
+			SPC_industrial_development_amount_up_2 = yes
+			SPC_living_standard_development_amount_down_2 = yes
+		}
+	}
+	
+	focus = {	#瑶海明珠
+		id = NKE_industrial_final_upgrade
+		icon = GFX_Generic_Major_City
+		x = 0
+		y = 3
+		cost = 8.6
+		available = {
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			has_industrial_development_more_than_3 = yes
+			has_war = no
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_infrastructure_2 }
+		prerequisite = { focus = NKE_industry_fund }
+		relative_position_id = NKE_independent_industrialization
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			unlock_decision_category_tooltip = NKE_citify_tso_naghara_category
+			set_variable = { NKE_citify_progress = 0 }
+		}
+	}
+	
+	focus = {	#宏原兵工厂
+		id = NKE_industry_military_1
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_infrastructure_1 }
+		relative_position_id = NKE_infrastructure_1
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			custom_effect_tooltip = NKE_industry_military_1_tt
+			265 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	#扩大汀原造步枪生产线
+		id = NKE_industry_military_2
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 0
+		y = 1
+		cost = 2.15
+		available = {
+			controls_state = 265
+			has_tech = infantry_weapons
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_industry_military_1 }
+		relative_position_id = NKE_industry_military_1
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	#“胜利女神”兵工厂
+		id = NKE_industry_military_3
+		icon = GFX_Paternal_Autocrat
+		x = 0
+		y = 2
+		cost = 6.43
+		available = {
+			controls_state = 265
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		prerequisite = { focus = NKE_industry_military_2 }
+		relative_position_id = NKE_industry_military_2
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			265 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			SPC_industrial_development_amount_up_4 = yes
+		}
+	}
+	
+	focus = {	#改造旧田地
+		id = NKE_reform_old_farms
+		icon = GFX_goal_Generic_Land_Reform
+		x = 3
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_shirt_match_n_bread }
+		relative_position_id = NKE_shirt_match_n_bread
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			SPC_agricultural_development_amount_up_3 = yes
+			SPC_living_standard_development_amount_up_2 = yes
+		}
+	}
+	
+	focus = {	#有目的种植
+		id = NKE_planned_farming
+		icon = GFX_goal_improvised_farming_machinery
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			has_agricultural_development_more_than_2 = yes
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_reform_old_farms }
+		relative_position_id = NKE_reform_old_farms
+		#mutually_exclusive = { focus =  }
+		completion_reward = {
+			unlock_decision_category_tooltip = NKE_planned_farming_decisions_category
+		}
+	}
+	
+	focus = {	#环顾四周
+		id = NKE_looking_around
+		icon = GFX_Generic_Chess_Move
+		x = 18
+		y = 0
+		cost = 1.45
+		bypass = {
+			OR = {
+				has_idea = NKE_Peoria_cooperation_pact
+				has_idea = NKE_Peoria_cooperation_pact_refused
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {	#邀请皮奥瑞亚大使来访
+		id = NKE_Peoria_cooperation_pact_nf
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		cost = 4.3
+		bypass = {
+			OR = {
+				has_idea = NKE_Peoria_cooperation_pact
+				has_idea = NKE_Peoria_cooperation_pact_refused
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_looking_around }
+		relative_position_id = NKE_looking_around
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NKE.1001
+		}
+	}
+	
+	focus = {	#接受皮奥瑞亚的经济投资
+		id = NKE_Peoria_economic_invest
+		icon = GFX_focus_mex_privatisation
+		x = -2
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Peoria_cooperation_pact_nf }
+		relative_position_id = NKE_Peoria_cooperation_pact_nf
+		mutually_exclusive = { focus = NKE_breakdown_before_buildup }
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	
+	focus = {	#矿物代理开采
+		id = NKE_Peoria_steel_agent
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 3
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Peoria_economic_invest }
+		prerequisite = { focus = NKE_resource_1 }
+		relative_position_id = NKE_Peoria_economic_invest
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			give_resource_rights = { receiver = PEO state = 265 }
+		}
+	}
+	
+	focus = {	#皮奥瑞亚人政府雇员
+		id = NKE_Peoria_politic_agent
+		icon = GFX_focus_generic_improve_the_administration
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Peoria_steel_agent }
+		relative_position_id = NKE_Peoria_steel_agent
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.1
+			PEO = { country_event = NKE.4201 }
+		}
+	}
+	
+	focus = {	#全域军事保护
+		id = NKE_Peoria_military_agent
+		icon = GFX_Generic_American_Soldier
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+			controls_state = 263
+			has_idea = NKE_Peoria_cooperation_pact
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Peoria_politic_agent }
+		relative_position_id = NKE_Peoria_politic_agent
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			263 = { add_compliance = 25 }
+		}
+	}
+	
+	focus = {	#不破不立
+		id = NKE_breakdown_before_buildup
+		icon = GFX_goal_Generic_Enough
+		x = 2
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Peoria_cooperation_pact_nf }
+		relative_position_id = NKE_Peoria_cooperation_pact_nf
+		mutually_exclusive = { focus = NKE_Peoria_economic_invest }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_political_power = 150
+		}
+	}
+	
+	focus = {	#引擎过载！
+		id = NKE_engine_overload
+		icon = GFX_Focus_Rationing
+		x = -2
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			NOT = {
+				AND = {
+					controls_state = 265
+					controls_state = 263
+				}
+				has_war = yes
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_breakdown_before_buildup }
+		relative_position_id = NKE_breakdown_before_buildup
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = NKE_determinated_production
+				days = 365
+			}
+		}
+	}
+	
+	focus = {	#我们流下的血
+		id = NKE_the_blood_we_bleed
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = 2
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			NOT = {
+				AND = {
+					controls_state = 265
+					controls_state = 263
+				}
+				has_war = yes
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_breakdown_before_buildup }
+		relative_position_id = NKE_breakdown_before_buildup
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+	
+	focus = {	#与皮奥瑞亚的军事联盟
+		id = NKE_alliance_with_Peoria
+		icon = GFX_goal_generic_dangerous_deal
+		x = -1
+		y = 3
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			controls_state = 265
+			controls_state = 263
+			has_war = no
+			PEO = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			is_in_faction = no
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_breakdown_before_buildup }
+		relative_position_id = NKE_breakdown_before_buildup
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			PEO = {
+				if = {
+					limit = { is_in_faction = no }
+					country_event = NKE.4301
+				}
+				else = {
+					country_event = NKE.4302
+				}
+			}
+		}
+	}
+	
+	focus = {	#与依纳枝兰的军事联盟
+		id = NKE_alliance_with_Inajran
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 3
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+			controls_state = 265
+			controls_state = 263
+			has_war = no
+			NKM = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			is_in_faction = no
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_breakdown_before_buildup }
+		relative_position_id = NKE_breakdown_before_buildup
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			NKM = {
+				if = {
+					limit = { is_in_faction = no }
+					country_event = NKE.4351
+				}
+				else = {
+					country_event = NKE.4352
+				}
+			}
+		}
+	}
+	
+	focus = {	#理性谈判
+		id = NKE_negotiate_with_Zunyama_1
+		icon = GFX_goal_Generic_Meeting
+		x = 6
+		y = 1
+		cost = 1.43
+		available = {
+			SKE  = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			NOT = { has_war_with = SKE }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_looking_around }
+		relative_position_id = NKE_looking_around
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = SKE_lower_madness_ond_war_tt
+			SKE = {
+				add_to_variable = { SKE_madness_on_war = -5 }
+				country_event = NKE.4401
+			}
+		}
+	}
+	
+	focus = {	#陈词利弊
+		id = NKE_negotiate_with_Zunyama_2
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		cost = 2.86
+		available = {
+			SKE  = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			NOT = { has_war_with = SKE }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_negotiate_with_Zunyama_1 }
+		relative_position_id = NKE_negotiate_with_Zunyama_1
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = SKE_lower_madness_ond_war_tt
+			SKE = {
+				add_to_variable = { SKE_madness_on_war = -5 }
+				country_event = NKE.4402
+			}
+		}
+	}
+	
+	focus = {	#卑微恳求
+		id = NKE_negotiate_with_Zunyama_3
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			SKE  = {
+				exists = yes
+				has_capitulated = no
+				is_puppet = no
+			}
+			NOT = { has_war_with = SKE }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_negotiate_with_Zunyama_2 }
+		relative_position_id = NKE_negotiate_with_Zunyama_2
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = SKE_lower_madness_ond_war_tt
+			SKE = {
+				add_to_variable = { SKE_madness_on_war = -5 }
+				country_event = NKE.4403
+			}
+		}
+	}
+	
+	focus = {	#国土防御
+		id = NKE_domestic_defense
+		icon = GFX_goal_Generic_Soldiers_Defense
+		x = 30
+		y = 0
+		cost = 1.43
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 25
+			division_template = {
+				name = "国土防卫旅"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				priority = 1
+			}
+			265 = {
+				create_unit = {
+					division = "name = \"左汀原卫队第一步兵旅\" division_template = \"国土防卫旅\" start_experience_factor = 0.25 start_equipment_factor = 0.1"
+					prioritize_location = 20398
+					owner = NKE
+				}
+				create_unit = {
+					division = "name = \"左汀原卫队第二步兵旅\" division_template = \"国土防卫旅\" start_experience_factor = 0.25 start_equipment_factor = 0.1"
+					prioritize_location = 20398
+					owner = NKE
+				}
+			}
+		}
+	}
+	
+	focus = {	#培训指挥人员
+		id = NKE_commander_training
+		icon = GFX_focus_generic_military_academy
+		x = -2
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		select_effect = {
+			add_political_power = -50
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_domestic_defense }
+		relative_position_id = NKE_domestic_defense
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = { id = NKE.2001 }
+		}
+	}
+	
+	focus = {	#更多的指挥人员
+		id = NKE_train_more_commanders
+		icon = GFX_Generic_Command_Power
+		x = -1
+		y = 1
+		cost = 2.15
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_commander_training }
+		relative_position_id = NKE_commander_training
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_command_power = 100
+		}
+	}
+	
+	focus = {	#特训指挥人员
+		id = NKE_train_Lihi_Suvha
+		icon = GFX_focus_chi_army_reform
+		x = 1
+		y = 1
+		cost = 2.15
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_commander_training }
+		relative_position_id = NKE_commander_training
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = { id = NKE.2002 }
+		}
+	}
+	
+	focus = {	#国防工程
+		id = NKE_fortificate_project
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_domestic_defense }
+		relative_position_id = NKE_domestic_defense
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Prutos_Grey
+		}
+	}
+	
+	focus = {	#紧急动员
+		id = NKE_emergency_mobilisation
+		icon = GFX_focus_SOV_mobilization_plan
+		x = 2
+		y = 1
+		cost = 0.72
+		available = {
+			has_war_with = SKE
+		}
+		
+		bypass = {
+			OR = {
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_domestic_defense }
+		relative_position_id = NKE_domestic_defense
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = service_by_requirement
+		}
+	}
+	
+	focus = {	#最后的挣扎
+		id = NKE_the_final_struggle
+		icon = GFX_Focus_Communist_Spy02
+		x = -1
+		y = 1
+		cost = 0.72
+		available = {
+			has_war_with = SKE
+			surrender_progress > 0.25
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_emergency_mobilisation }
+		relative_position_id = NKE_emergency_mobilisation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = scraping_the_barrel
+		}
+	}
+	
+	focus = {	#燃烧殆尽
+		id = NKE_the_final_devotion
+		icon = GFX_goal_purge_opposition
+		x = 0
+		y = 2
+		cost = 0.72
+		available = {
+			has_war_with = SKE
+			surrender_progress > 0.25
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_emergency_mobilisation }
+		relative_position_id = NKE_emergency_mobilisation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = NKE_final_devotion
+					days = 90
+				}
+				set_variable = { war_exhaustion = 0 }
+				custom_effect_tooltip = NKE_the_final_devotion_tt
+				add_manpower = 50000
+			}
+			country_event = NKE.2101
+		}
+	}
+	
+	focus = {	#防御理论
+		id = NKE_land_defense_theory
+		icon = GFX_Generic_German_Soldiers
+		x = 0
+		y = 2
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_fortificate_project }
+		relative_position_id = NKE_fortificate_project
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 60
+		}
+	}
+	
+	focus = {	#左汀原要塞化
+		id = NKE_country_scale_fortification
+		icon = GFX_goal_nested_fortifications
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 265
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_land_defense_theory }
+		relative_position_id = NKE_land_defense_theory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_building_construction = {
+				type = bunker
+				level = 4
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	#汀原造八九式步枪
+		id = NKE_Naghara_rifle_89
+		icon = GFX_focus_focus_fra_maquis
+		x = 33
+		y = 4
+		cost = 1.43
+		available = {
+		}
+		
+		bypass = {
+			has_tech = infantry_weapons
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			set_technology = { infantry_weapons = 1 }
+		}
+	}
+	
+	focus = {	#进口七河武器
+		id = NKE_import_Zhetysu_weapons
+		icon = GFX_focus_SOV_the_road_of_life
+		x = 2
+		y = 0
+		cost = 1.43
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		relative_position_id = NKE_Naghara_rifle_89
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	#汀原造玲珑冲锋枪
+		id = NKE_Naghara_smg_00
+		icon = GFX_goal_generic_small_arms
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+			OR = {
+				has_tech = light_infantry_weapons
+				has_tech = heavy_infantry_weapons
+			}
+			date > 2000.1.1
+		}
+		
+		bypass = {
+			has_tech = infantry_weapons_II
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Naghara_rifle_89 }
+		prerequisite = { focus = NKE_import_Zhetysu_weapons }
+		relative_position_id = NKE_Naghara_rifle_89
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			set_technology = { infantry_weapons_II = 1 }
+		}
+	}
+	
+	focus = {	#汀原造十一式火炮
+		id = NKE_Naghara_artillery_11
+		icon = GFX_goal_generic_army_artillery2
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		bypass = {
+			has_tech = gw_artillery
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Naghara_smg_00 }
+		relative_position_id = NKE_Naghara_smg_00
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			set_technology = { gw_artillery = 1 }
+		}
+	}
+	
+	focus = {	#胜利？
+		id = NKE_a_fake_victory
+		icon = GFX_Generic_Party_Bottle
+		x = 30
+		y = 5
+		cost = 0.15
+		available = {
+			always = no
+		}
+		
+		bypass = {
+			controls_state = 265
+			controls_state = 263
+			has_idea = NKE_Peoria_cooperation_pact
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		mutually_exclusive = { focus = NKE_a_red_dawn }
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	#血色黎明
+		id = NKE_a_red_dawn
+		icon = GFX_goal_Generic_Socialist_Revolution
+		x = 32
+		y = 5
+		cost = 0.15
+		available = {
+			always = no
+		}
+		
+		bypass = {
+			controls_state = 265
+			controls_state = 263
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		mutually_exclusive = { focus = NKE_a_fake_victory }
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {	#桑山再教育营
+		id = NKE_Zunyama_reeducate_camp
+		icon = GFX_focus_SOV_penal_battalions
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+			controls_state = 263
+			has_political_power > 49
+		}
+		
+		bypass = {
+			263 = {
+				compliance > 80
+			}
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_a_red_dawn
+						 focus = NKE_a_fake_victory }
+		relative_position_id = NKE_a_fake_victory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -50
+			263 = {
+				add_to_variable = { state_science_progress = 25 }
+				add_to_variable = { state_magic_progress = 25 }
+				custom_effect_tooltip = NKE_Zunyama_reeducate_camp_tt
+				add_state_modifier = { modifier = { compliance_growth = 0.5 } }
+			}
+		}
+	}
+	
+	focus = {	#整合汀海岛
+		id = NKE_reunite_Nagakai
+		icon = GFX_focus_generic_annex_country
+		x = 0
+		y = 1
+		cost = 8.6
+		available = {
+			263 = {
+				compliance > 80
+			}
+		}
+		
+		bypass = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_Zunyama_reeducate_camp }
+		relative_position_id = NKE_Zunyama_reeducate_camp
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			263 = {
+				add_core_of = NKE
+			}
+			add_political_power = 100
+			set_cosmetic_tag = Nagakai
+			swap_ideas = {
+				remove_idea = SR_rabbitman
+				add_idea = SR_rabbitman_n_tsubitman
+			}
+		}
+	}
+	
+	focus = {	#强军强国
+		id = NKE_stronger_army_n_nation
+		icon = GFX_Generic_Colonial_Army
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_a_red_dawn }
+		relative_position_id = NKE_a_red_dawn
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			SPC_military_development_amount_up_4 = yes
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {	#炮兵部队
+		id = NKE_artillery_troop
+		icon = GFX_goal_Artillery_Tactics
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = NKE_stronger_army_n_nation }
+		prerequisite = { focus = NKE_Naghara_artillery_11 }
+		relative_position_id = NKE_stronger_army_n_nation
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			division_template = {
+				name = "炮兵引导旅"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					artillery_brigade = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					artillery_brigade = { x = 1 y = 1 }
+				}
+				priority = 2
+			}
+			265 = {
+				create_unit = {
+					division = "name = \"左汀原卫队第一炮兵旅\" division_template = \"炮兵引导旅\" start_experience_factor = 0.25 start_equipment_factor = 0.1"
+					prioritize_location = 20398
+					owner = NKE
+				}
+				create_unit = {
+					division = "name = \"左汀原卫队第二炮兵旅\" division_template = \"炮兵引导旅\" start_experience_factor = 0.25 start_equipment_factor = 0.1"
+					prioritize_location = 20398
+					owner = NKE
+				}
+			}
+		}
+	}
+	
+	focus = {	#去向何方
+		id = NKE_wheres_the_path
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 18
+		y = 8
+		cost = 1.43
+		available = {
+			hidden_trigger = {
+				has_country_flag = NKE_Viana_Weil_corrupt
+			}
+		}
+		
+		allow_branch = {
+			has_country_flag = NKE_Viana_Weil_corrupt
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	focus = {	#追随维安娜·维尔总统！
+		id = NKE_oligarchy_path
+		icon = GFX_Liberal_Conservatism
+		x = -2
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_wheres_the_path }
+		relative_position_id = NKE_wheres_the_path
+		mutually_exclusive = { focus = NKE_oppose_Viana_Weil }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {	#规范化官僚体系
+		id = NKE_standard_bureaucracy
+		icon = GFX_goal_government_centralised_icon
+		x = -1
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_oligarchy_path }
+		relative_position_id = NKE_oligarchy_path
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	
+	focus = {	#十三品官员选拔制
+		id = NKE_leveled_bureaucrat
+		icon = GFX_goal_new_treaty
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			authoritarian_republican > 0.5
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_standard_bureaucracy }
+		relative_position_id = NKE_standard_bureaucracy
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = NKE_leveled_bureaucrat_idea
+		}
+	}
+	
+	focus = {	#媒体管制
+		id = NKE_control_the_media
+		icon = GFX_goal_generic_media_controls
+		x = 1
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		bypass = {
+			NOT = { has_idea = MP_freedom_speech }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_oligarchy_path }
+		relative_position_id = NKE_oligarchy_path
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = MP_mixed_media
+		}
+	}
+	
+	focus = {	#严格管理舆论！
+		id = NKE_shut_the_fuck_up
+		icon = GFX_goal_Generic_Political_Purge
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		bypass = {
+			NOT = { has_idea = MP_freedom_speech }
+			NOT = { has_idea = MP_mixed_media }
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_control_the_media }
+		relative_position_id = NKE_control_the_media
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_ideas = MP_funding_media
+		}
+	}
+	
+	focus = {	#圣雄维安娜·维尔
+		id = NKE_glorify_Viana_Weil
+		icon = GFX_focus_generic_monarchy_2
+		x = -1
+		y = 1
+		cost = 8.6
+		available = {
+			has_political_power > 149
+			authoritarian_republican > 0.8
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_leveled_bureaucrat }
+		prerequisite = { focus = NKE_shut_the_fuck_up }
+		relative_position_id = NKE_shut_the_fuck_up
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_political_power = -150
+			swap_ruler_traits = {
+				remove = the_savior_of_nation
+				add = the_holy_savior
+			}
+		}
+	}
+	
+	focus = {	#反对维安娜·维尔！
+		id = NKE_oppose_Viana_Weil
+		icon = GFX_Generic_Ripping_Papers
+		x = 3
+		y = 1
+		cost = 4.3
+		available = {
+			has_idea = NKE_Peoria_cooperation_pact_refused
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_wheres_the_path }
+		relative_position_id = NKE_wheres_the_path
+		mutually_exclusive = { focus = NKE_oligarchy_path }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = -0.2
+			}
+			unlock_decision_category_tooltip = NKE_the_struggle_on_power_category
+		}
+	}
+	
+	focus = {	#公布维安娜·维尔的罪孽
+		id = NKE_reveal_Viana_Weil_guilt
+		icon = GFX_Generic_Elections
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			authoritarian_republican < 0.5
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_oppose_Viana_Weil }
+		relative_position_id = NKE_oppose_Viana_Weil
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {	#走上街去！
+		id = NKE_go_to_the_street
+		icon = GFX_goal_revolution
+		x = 0
+		y = 2
+		cost = 4.3
+		available = {
+			authoritarian_republican < 0.25
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_reveal_Viana_Weil_guilt }
+		relative_position_id = NKE_reveal_Viana_Weil_guilt
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = authoritarian_republican
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {	#维安娜·维尔的命运
+		id = NKE_the_fate_of_Viana_Weil
+		icon = GFX_goal_Generic_Political_Purge
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+			authoritarian_republican < 0.1
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_go_to_the_street }
+		relative_position_id = NKE_go_to_the_street
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = NKE_the_fate_of_Viana_Weil_tt
+			hidden_effect = {
+				set_country_leader_description = {
+					ideology = authoritarian_republican
+					desc = NKE_Emergency_Committee
+				}
+				set_country_leader_name = {
+					ideology = authoritarian_republican
+					name = NKE_Emergency_Committee
+				}
+				set_country_leader_portrait = {
+					ideology = authoritarian_republican
+					portrait = GFX_portrait_NKE_Emergency_Committee
+				}
+				remove_country_leader_trait = the_savior_of_nation
+				remove_country_leader_trait = the_corruption_group
+				country_event = NKE.0201
+			}
+		}
+	}
+	
+	focus = {	#宪政民主运动
+		id = NKE_constitution_democracy_movement
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_oppose_Viana_Weil }
+		relative_position_id = NKE_oppose_Viana_Weil
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Pramo_Evaty
+		}
+	}
+	
+	focus = {	#劳工代表
+		id = NKE_labour_representive
+		icon = GFX_Generic_Working_Class_Family
+		x = 2
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_oppose_Viana_Weil }
+		relative_position_id = NKE_oppose_Viana_Weil
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NKE_Aratr_Masse
+		}
+	}
+	
+	focus = {	#上议院主导
+		id = NKE_upper_house_govern
+		icon = GFX_goal_government_centralised_icon
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_constitution_democracy_movement }
+		relative_position_id = NKE_constitution_democracy_movement
+		mutually_exclusive = { focus = NKE_downer_house_govern }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = 0.1
+			}
+			SPC_research_development_amount_up_2 = yes
+		}
+	}
+	
+	focus = {	#下议院主导
+		id = NKE_downer_house_govern
+		icon = GFX_goal_government_icon
+		x = 0
+		y = 1
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_labour_representive }
+		relative_position_id = NKE_labour_representive
+		mutually_exclusive = { focus = NKE_upper_house_govern }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.1
+			}
+			SPC_living_standard_development_amount_up_2 = yes
+		}
+	}
+	
+	focus = {	#自由的国度，自由的政府
+		id = NKE_liberal_republican_government
+		icon = GFX_Generic_Liberalism
+		x = 1
+		y = 3
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_upper_house_govern }
+		prerequisite = { focus = NKE_the_fate_of_Viana_Weil }
+		relative_position_id = NKE_upper_house_govern
+		mutually_exclusive = { focus = NKE_social_democrat_government }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = liberal_republican
+				elections_allowed = no
+			}
+		}
+	}
+	
+	focus = {	#人民当家做主人
+		id = NKE_social_democrat_government
+		icon = GFX_Generic_Liberation
+		x = -1
+		y = 3
+		cost = 4.3
+		available = {
+		}
+		
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_if_invalid = no
+		prerequisite = { focus = NKE_downer_house_govern }
+		prerequisite = { focus = NKE_the_fate_of_Viana_Weil }
+		relative_position_id = NKE_downer_house_govern
+		mutually_exclusive = { focus = NKE_liberal_republican_government }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = worldunion_democrat
+				elections_allowed = no
+			}
+		}
+	}
+}
+

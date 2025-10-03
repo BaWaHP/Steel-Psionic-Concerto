@@ -1,0 +1,37 @@
+
+state={
+	id=84
+	name="STATE_84"
+	resources={
+		chromium=15.000
+	}
+
+	history={
+		owner = ARO
+		add_core_of = LTH
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			7295 = { bunker = 2 }
+			18430 = { bunker = 2 }
+			6800 = { bunker = 2 }
+			18488 = {
+				bunker = 4
+			}
+		}
+		victory_points = {
+			18186 1 
+		}
+		victory_points = {
+			18488 5 
+		}
+	}
+
+	provinces={
+		1392 4916 4964 6800 7295 7428 18095 18173 18186 18272 18303 18369 18384 18417 18430 18456 18488 18498 18524 18537 18592 
+	}
+	manpower=937000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

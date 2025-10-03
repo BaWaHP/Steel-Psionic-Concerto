@@ -1,0 +1,40 @@
+
+state={
+	id=322
+	name="STATE_322"
+
+	resources = {
+		steel = 18
+		chromium = 22
+		oil = 30
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 2
+			air_base = 1
+			air_base = 2
+			5795 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			20536 15
+		}
+		victory_points = {
+			5795 8
+		}
+	}
+
+	provinces={
+		3263 5795 7420 8085 11060 20484 20500 20535 20536 20566 20631 
+	}
+	manpower = 1020000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

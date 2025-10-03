@@ -1,0 +1,339 @@
+ideas = {
+
+	taxes_laws = {
+		law = yes
+		use_list_view = yes
+
+		barely_no_taxes = {		#几乎零税收
+
+			cost = 150
+			
+			level = 5
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.1
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 4
+				monthly_research_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 10
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.1
+					}
+				}
+
+				modifier = {
+					factor = 8
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.2
+					}
+				}
+
+				modifier = {
+					factor = 4
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.3
+					}
+				}
+
+				modifier = {
+					factor = 2
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.4
+					}
+				}
+
+   			}
+		}
+
+		low_taxes = {		#较低税收
+
+			cost = 150
+			
+			level = 4
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				monthly_living_standard_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+				
+   				modifier = {
+					factor = 1
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.1
+					}
+				}
+
+				modifier = {
+					factor = 2
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.2
+					}
+				}
+
+				modifier = {
+					factor = 4
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.3
+					}
+				}
+
+				modifier = {
+					factor = 8
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.4
+					}
+				}
+   			}
+		}
+		normal_taxes = {		#普通税收
+
+			cost = 150
+			
+			level = 3
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.3
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 3
+
+   				modifier = {
+					factor = 0
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.1
+					}
+				}
+
+				modifier = {
+					factor = 1
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.2
+					}
+				}
+
+				modifier = {
+					factor = 2
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.3
+					}
+				}
+
+				modifier = {
+					factor = 8
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.4
+					}
+				}
+
+				modifier = {
+					factor = 6
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.6
+					}
+				}
+   			}
+		}
+		high_taxes = {		#较高税收
+
+			cost = 150
+			
+			level = 2
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.4
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				research_speed_factor = -0.05
+				monthly_industrial_development_process = -2
+				monthly_agricultural_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 4
+
+   				modifier = {
+					factor = 0
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.3
+					}
+				}
+				
+				modifier = {
+					factor = 8
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.6
+					}
+				}
+
+				modifier = {
+					factor = 10
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.8
+					}
+				}
+
+   			}
+		}
+		too_much_taxes = {		#苛捐杂税
+
+			cost = 150
+			
+			level = 1
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_tax_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.5
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+				research_speed_factor = -0.1
+				monthly_industrial_development_process = -4
+				monthly_agricultural_development_process = -4
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 5
+
+   				modifier = {
+					factor = 0
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.4
+					}
+				}
+				
+				modifier = {
+					factor = 6
+					check_variable = {
+						modifier@consumer_goods_expected_value < 0.6
+					}
+				}
+
+				modifier = {
+					factor = 8
+					check_variable = {
+						modifier@consumer_goods_expected_value > 0.6
+					}
+				}
+
+				modifier = {
+					factor = 10
+					check_variable = {
+						modifier@consumer_goods_expected_value > 0.8
+					}
+				}
+
+   			}
+		}
+	}
+
+}

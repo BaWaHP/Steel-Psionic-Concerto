@@ -1,0 +1,31 @@
+
+state={
+	id=15
+	name="STATE_15"
+	resources={
+		aluminium=8
+	}
+
+	history={
+		owner = NFH
+		add_core_of = NFH
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			air_base = 6
+
+		}
+		victory_points = {
+			6412 3 
+		}
+
+	}
+
+	provinces={
+		1494 2618 3002 6412 8038 11730 16468 16713 16977 17012 
+	}
+	manpower=711560
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

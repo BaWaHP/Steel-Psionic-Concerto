@@ -1,0 +1,30 @@
+
+state={
+	id=269
+	name="STATE_269"
+	provinces={
+		344 373 1209 1210 2106 6279 7889 8308 8422 9998 10464 11177 14959 15097 15108 15277 15311 15410 
+	}
+	resources = {
+		steel = 6
+		magic_crystal = 24
+	}
+	history={
+		owner = UTM
+		add_core_of = UTM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			15108 5
+		}
+		victory_points = {
+			1210 3
+		}
+	}
+	manpower = 240000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

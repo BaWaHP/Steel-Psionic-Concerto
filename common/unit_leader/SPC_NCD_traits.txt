@@ -1,0 +1,164 @@
+leader_traits = {
+	NCD_military_moderatist = {		#军队温和派
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		modifier = {}
+		ai_will_do = { factor = 1 }
+	}
+	NCD_military_radicalist = {		#军队激进派
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		modifier = {}
+		ai_will_do = { factor = 1 }
+	}
+	NCD_obstinate_judgment = {		#固执判断
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		attack_skill = 1
+		defense_skill = -1
+		planning_skill = -1
+
+		modifier = {
+			planning_speed = -0.5
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_marionette = {		#提线木偶
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		planning_skill = -1
+
+		modifier = {
+			max_commander_army_size = 0.6
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_gutless = {		#胆小如鼠
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		attack_skill = 1
+		logistics_skill = 1
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_Ling_blood = {		#麟人血统
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		attack_skill = 2
+
+		modifier = {
+			supply_consumption_factor = 0.2
+			army_org_regain = -0.1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_plain_fighter = {		#平原作战学者
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		modifier = {
+			plains = {
+				attack = 0.05
+				defense = 0.05
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_military_royalist = {		#军队王党派
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_royal_family = {		#王族人员
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		defense_skill = 1
+
+		modifier = {
+			reassignment_duration_factor = 1
+			army_org_regain = 0.1
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_military_republican = {		#军队共和派
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_opportunist = {		#投机主义者
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		attack_skill = 1
+
+		modifier = {
+			custom_modifier_tooltip = NCD_opportunist_tt
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	NCD_eyes_behind = {		#暗后有眼
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = { always = no }
+		allowed = { always = no }
+
+		defense_skill = 1
+		
+
+		modifier = {
+			planning_speed = -0.5
+			experience_gain_factor = -0.25
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+}

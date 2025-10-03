@@ -1,0 +1,34 @@
+### AI ###
+#BUL_is_historical_ai
+#BUL_is_communist_stalinist_ai
+#BUL_is_communist_balkan_ai
+#BUL_is_democratic_socialist_ai
+#BUL_is_democratic_liberal_ai
+#BUL_is_fascist_axis_ai
+#BUL_is_monarchist_ferdinand_ai
+
+ideas = {
+
+
+##    ##    ###    ######## ####  #######  ##    ##    ###    ##           ######  ########  #### ########  #### ########  ######  
+###   ##   ## ##      ##     ##  ##     ## ###   ##   ## ##   ##          ##    ## ##     ##  ##  ##     ##  ##     ##    ##    ## 
+####  ##  ##   ##     ##     ##  ##     ## ####  ##  ##   ##  ##          ##       ##     ##  ##  ##     ##  ##     ##    ##       
+## ## ## ##     ##    ##     ##  ##     ## ## ## ## ##     ## ##           ######  ########   ##  ########   ##     ##     ######  
+##  #### #########    ##     ##  ##     ## ##  #### ######### ##                ## ##         ##  ##   ##    ##     ##          ## 
+##   ### ##     ##    ##     ##  ##     ## ##   ### ##     ## ##          ##    ## ##         ##  ##    ##   ##     ##    ##    ## 
+##    ## ##     ##    ##    ####  #######  ##    ## ##     ## ########     ######  ##        #### ##     ## ####    ##     ######  
+
+
+	country = { #DLC
+
+		BUL_army_restrictions = {
+			picture = tfv_can_conscription_crisis
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+	
+	}
+
+}

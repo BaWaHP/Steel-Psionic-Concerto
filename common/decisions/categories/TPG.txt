@@ -1,0 +1,15 @@
+TPG_influence_of_worm_empire_category = {	#沃姆帝国的影响
+	allowed = { tag = TPG }
+	visible = { tag = TPG }
+	scripted_gui = TPG_wom_influence_window_ui
+	visible_when_empty = no
+	priority = 10
+}
+
+TPG_military_reform = {	#军队改革
+	scripted_gui = TPG_military_reform_window_ui
+	allowed = { tag = TPG }
+	visible = { tag = TPG }
+	visible_when_empty = no
+	priority = 10
+}

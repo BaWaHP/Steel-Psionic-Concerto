@@ -1,0 +1,23 @@
+characters={
+
+	#斐迪南·蒂·阿尼姆
+	OPH_ferdinand_d_aninm = {
+   		name = OPH_ferdinand_d_aninm
+   		portraits = {
+   			civilian = {
+   				large="GFX_OPH_ferdinand_d_aninm"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_OPH_ferdinand_d_aninm"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+}

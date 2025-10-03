@@ -1,0 +1,24 @@
+scripted_gui = {
+	SPC_peace_popup_menu_window_ui = {
+		context_type = player_context
+		window_name = "SPC_peace_popup_menu_window"
+
+		visible = {
+			is_ai = no
+			has_global_flag = show_peace_popup_alert
+		}
+
+		effects = {
+			Close_click = {
+				clr_global_flag = show_peace_popup_alert
+				clr_global_flag = losing_country_multiple
+				clr_global_flag = winning_country_multiple
+				clr_global_flag = war_won
+				clr_global_flag = war_continuing
+
+				clear_global_event_target = winning_country
+				clear_global_event_target = losing_country
+			}
+		}
+	}
+}

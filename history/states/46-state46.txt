@@ -1,0 +1,33 @@
+
+state={
+	id=46
+	name="STATE_46"
+	provinces={
+		4852 8048 9480 10257 10270 12133 19887 19949 19959 19960 20043 20116 
+	}
+	resources = {
+		oil = 15
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 2
+			12133 = {
+				naval_base = 4
+				naval_facility = 1
+			}
+		}
+		victory_points = {
+			4852 10
+		}
+	}
+	manpower=3210000
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

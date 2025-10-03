@@ -1,0 +1,633 @@
+characters={
+	PEO_LiFangde = {	#李方徳
+		name = PEO_LiFangde
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_LiFangde_desc
+			ideology = pioneer_team_communism
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_eric_cyril = {	#埃里克·西里尔
+		name = PEO_eric_cyril
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_eric_cyril_desc
+			ideology = popular_communism
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_rick_heckler = {	#里克·黑克勒
+		name = PEO_rick_heckler
+		portraits = {
+			civilian = {
+				large="GFX_PEO_rick_heckler"
+				small="GFX_idea_PEO_rick_heckler"
+			}
+			army = {
+				large="GFX_PEO_rick_heckler"
+				small="GFX_idea_PEO_rick_heckler"
+			}
+		}
+		country_leader = {
+			desc = PEO_rick_heckler_desc
+			ideology = exporting_revolutionism
+			traits = { PEO_friends_of_workers }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_BoWei = {	#柏维
+		name = PEO_BoWei
+		portraits = {
+			civilian = {
+				large="GFX_PEO_BoWei"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_PEO_BoWei"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_BoWei_desc
+			ideology = democratic_socialism
+			traits = { PEO_controversial_socialist }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_BoFangzhou = {	#伯芳舟
+		name = PEO_BoFangzhou
+		portraits = {
+			civilian = {
+				large="GFX_PEO_BoFangzhou"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_PEO_BoFangzhou"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_BoFangzhou_desc
+			ideology = radical_republican
+			traits = { PEO_ideal_pragmatist }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_barry_kimyao = {	#巴里·金淼
+		name = PEO_barry_kimyao
+		portraits = {
+			civilian = {
+				large="GFX_PEO_barry_kimyao"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_PEO_barry_kimyao"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_barry_kimyao_desc
+			ideology = conservative_liberalism
+			traits = { PEO_conservative_progressives }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_KongSinian = {	#孔斯年
+		name = PEO_KongSinian
+		portraits = {
+			civilian = {
+				large="GFX_PEO_KongSinian"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_PEO_KongSinian"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_KongSinian_desc
+			ideology = directed_democracy
+			traits = { PEO_exhauasted_patriot }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { politically_connected PEO_shield_of_republic_unit organisational_leader unyielding_defender }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	PEO_BianYimin = {	#边宜民
+		name = PEO_BianYimin
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_BianYimin_desc
+			ideology = social_racism
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_unknown_1 = {	#暂无1
+		name = PEO_unknown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			#desc = 
+			ideology = authoritarian_nationalism_subtype
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_LuGuiyue = {	#卢桂月
+		name = PEO_LuGuiyue
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_LuGuiyue_desc
+			ideology = absolute_monarchy
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_unknown_2 = {	#暂无2
+		name = PEO_unknown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			#desc = 
+			ideology = wizard_rules_subtype
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_taoyuan_conference = {	#“桃源会议”
+		name = PEO_taoyuan_conference
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_taoyuan_conference_desc
+			ideology = independent_world
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_alliance_council = {	#联盟理事会
+		name = PEO_alliance_council
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			desc = PEO_alliance_council_desc
+			ideology = anarcho_syndicalism
+			traits = { }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	PEO_Suer = {		#苏尔
+		name = PEO_Suer
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_Suer_idea
+			desc = PEO_Suer_desc
+			allowed = { original_tag = PEO }
+			available = { always = yes }
+			traits = { puppet_president }
+		}
+		field_marshal = {
+			traits = { war_hero offensive_doctrine fast_planner }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	PEO_Obstin_Jolson = {		#奥博斯丁·约尔逊
+		name = PEO_Obstin_Jolson
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_Obstin_Jolson_idea
+			desc = PEO_Obstin_Jolson_desc
+			allowed = { original_tag = PEO }
+			available = { always = yes }
+			traits = { radical_industrialize_supporter }
+		}
+	}
+	PEO_LiHaisheng = {		#李海盛
+		name = PEO_LiHaisheng
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_LiHaisheng_idea
+			desc = PEO_LiHaisheng_desc
+			allowed = { original_tag = PEO }
+			available = { always = yes }
+			traits = { ice_breaker }
+		}
+	}
+	PEO_burke_john = {		#伯克·约翰
+		name = PEO_burke_john
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_burke_john_idea
+			desc = PEO_burke_john_desc
+			allowed = { original_tag = PEO }
+			available = { always = yes }
+			traits = { torch_of_revolution }
+		}
+	}
+	PEO_republic_parliament = {		#共和国议会
+		name = PEO_republic_parliament
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_oberst_chris = {		#奥伯斯特·克里斯
+		name = PEO_oberst_chris
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_oberst_chris_idea
+			desc = PEO_oberst_chris_desc
+			allowed = { original_tag = PEO }
+			available = { has_country_leader_ideology = directed_democracy }
+			traits = { captain_of_industry }
+		}
+	}
+	PEO_eberhardt_ford = {		#埃伯哈特·福德
+		name = PEO_eberhardt_ford
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_eberhardt_ford_idea
+			desc = PEO_eberhardt_ford_desc
+			allowed = { original_tag = PEO }
+			available = { has_country_leader_ideology = directed_democracy }
+			traits = { education_expert }
+		}
+	}
+	PEO_kovner_schreiting = {		#科夫纳·思雷汀
+		name = PEO_kovner_schreiting
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = PEO_kovner_schreiting_idea
+			desc = PEO_kovner_schreiting_desc
+			allowed = { original_tag = PEO }
+			available = { has_government = authoritarian_republican }
+			traits = { treacherous_backstabber }
+		}
+	}
+	PEO_monk_corleone = {		#蒙克·科莱昂
+		name = PEO_monk_corleone
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_expert brilliant_strategist trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	PEO_Huang_Xizhong = {		#黄习中
+		name = PEO_Huang_Xizhong
+		portraits = {
+			civilian = {
+				large="GFX_PEO_Huang_Xizhong"
+				small="GFX_idea_PEO_Huang_Xizhong"
+			}
+			army = {
+				large="GFX_PEO_Huang_Xizhong"
+				small="GFX_idea_PEO_Huang_Xizhong"
+			}
+		}
+		corps_commander = {
+			traits = { PEO_military_reform_implementers_unit trait_cautious ambusher }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	PEO_moncrean_lisbon = {		#蒙克里安·里斯本
+		name = PEO_moncrean_lisbon
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		corps_commander = {
+			traits = { bearer_of_artillery trait_engineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	PEO_kankanid_sowodnyu = {		#堪坎尼德·索沃德纽
+		name = PEO_kankanid_sowodnyu
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		navy_leader = {
+			traits = { gentlemanly bold blue_water_expert cruiser_captain }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	PEO_gilbert_mcWhite = {		#吉尔伯特·麦克怀特
+		name = PEO_gilbert_mcWhite
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_ZhangWhenhong = {		#张文宏
+		name = PEO_ZhangWhenhong
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_john_adderley = {		#约翰·艾德礼
+		name = PEO_john_adderley
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_donald_warren = {		#唐纳德·沃伦
+		name = PEO_donald_warren
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_SongRen = {		#张林生
+		name = PEO_SongRen
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_anna_patrick = {		#安娜·帕特里克
+		name = PEO_anna_patrick
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_ZhangWu = {		#章武
+		name = PEO_ZhangWu
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+	PEO_lee_melrose = {		#李·梅尔罗斯
+		name = PEO_lee_melrose
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+	}
+}

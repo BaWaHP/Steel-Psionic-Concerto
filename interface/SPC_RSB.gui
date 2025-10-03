@@ -1,0 +1,154 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "RSB_federal_financial_budget_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 180 }
+
+		instantTextboxType = {
+			name = "RSB_financial_budget_title"
+			position = { x = 17 y = 2 }
+			font = "hoi_24header"
+			text = RSB_financial_budget_title_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+			tooltip = RSB_financial_budget_title_tt
+		}
+
+		iconType = {
+			name = "RSB_financial_budget_bar_bg"
+			spriteType = "GFX_RSB_financial_budget_bar_bg"
+			position = { x = 12 y = 30 }
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "RSB_financial_budget_bar_1"
+			spriteType = "GFX_RSB_financial_budget_bar"
+			position = { x = 21 y = 42 }
+			frame = 100
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "RSB_financial_budget_bar_2"
+			spriteType = "GFX_RSB_financial_budget_bar"
+			position = { x = 21 y = 42 }
+			frame = 80
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "RSB_financial_budget_bar_3"
+			spriteType = "GFX_RSB_financial_budget_bar"
+			position = { x = 21 y = 42 }
+			frame = 60
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "RSB_financial_budget_bar_4"
+			spriteType = "GFX_RSB_financial_budget_bar"
+			position = { x = 21 y = 42 }
+			frame = 30
+			scale = 1.5
+		}
+
+		instantTextboxType = {
+			name = "RSB_financial_budget"
+			position = { x = -325 y = 40 }
+			font = "hoi_24header"
+			text = RSB_financial_budget_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "RSB_financial_budget_div"
+			position = { x = 115 y = 40 }
+			font = "hoi_24header"
+			text = RSB_financial_budget_div_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "RSB_financial_budget_max"
+			position = { x = 135 y = 40 }
+			font = "hoi_24header"
+			text = RSB_financial_budget_max_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "RSB_asset_title"
+			position = { x = 17 y = 85 }
+			font = "hoi_24header"
+			text = RSB_asset_title_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+
+		iconType = {
+			name = "RSB_asset_bar_bg"
+			spriteType = "GFX_RSB_asset_bar_bg"
+			position = { x = 12 y = 110 }
+			scale = 1.5
+		}
+
+		iconType = {
+			name = "RSB_asset_bar"
+			spriteType = "GFX_RSB_asset_bar"
+			position = { x = 21 y = 122 }
+			frame = 100
+			scale = 1.5
+		}
+
+		instantTextboxType = {
+			name = "RSB_asset_budget"
+			position = { x = -325 y = 120 }
+			font = "hoi_24header"
+			text = RSB_asset_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "RSB_asset_div"
+			position = { x = 115 y = 120 }
+			font = "hoi_24header"
+			text = RSB_asset_div_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "RSB_asset_max"
+			position = { x = 135 y = 120 }
+			font = "hoi_24header"
+			text = RSB_asset_max_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "RSB_financial_budget_hint"
+			position = { x = 17 y = 155 }
+			font = "hoi_20b"
+			text = RSB_financial_budget_hint_txt
+			maxWidth = 450
+			maxHeight = 20
+			format = left
+		}
+	}
+
+}

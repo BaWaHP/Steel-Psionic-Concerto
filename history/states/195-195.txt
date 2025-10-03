@@ -1,0 +1,33 @@
+
+state={
+	id=195
+	name="STATE_195"
+
+	resources = {
+		chromium = 16
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 2
+			10298 = { bunker = 1 }
+			816 = { bunker = 1 }
+		}
+		victory_points = {
+			10298 2
+		}
+		victory_points = {
+			816 1	
+		}
+	}
+
+	provinces={
+		816 4936 7541 10298 11640 16770 16855 16931 17011 17315 17369 17475 17520 17617 17618 
+	}
+	manpower=352300
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,285 @@
+SPC_generic_region_trigger_1_control = {	#控制全远乡
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_1_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_1
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_1_1_control = {	#控制全南远乡
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_1_1_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_1_1
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_1_2_control = {	#控制全北远乡
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_1_2_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_1_2
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_1_3_control = {	#控制全西北远乡
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_1_3_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_1_3
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_2_control = {	#控制全联合王国
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_2_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_2
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_2_1_control = {	#控制全奥罗日亚
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_2_1_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_2_1
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_2_2_control = {	#控制全西莉迪亚
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_2_2_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_2_2
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_2_3_control = {	#控制全皮奥瑞亚
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_2_3_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_2_3
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_control = {	#控制全大沃姆
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_1_control = {	#控制全小沃姆
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_1_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3_1
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_2_control = {	#控制全戈尔维亚
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_2_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3_2
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_3_control = {	#控制全斯布里奇
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_3_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3_3
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_4_control = {	#控制全吉拉尼亚
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_4_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3_4
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_3_5_control = {	#控制全阿瑞萨
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_3_5_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_3_5
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_50_control = {	#控制全特尼安
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_50_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_50
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_100_control = {	#控制全提特兰
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_100_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_100
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_101_control = {	#控制全坎达德尔
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_101_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_101
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_102_control = {	#控制全蒙特
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_102_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_102
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_103_control = {	#控制全马加尔斯
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_103_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_103
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_104_control = {	#控制全伊斯恰
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_104_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_104
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_250_control = {	#控制全北中巴
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_250_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_250
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+SPC_generic_region_trigger_251_control = {	#控制全雀鸟
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_251_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_251
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}

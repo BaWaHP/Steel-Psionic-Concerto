@@ -1,0 +1,835 @@
+ideologies = {
+
+	pioneer_communism = {	#先锋共产主义
+	
+		types = {
+		
+			pioneer_communism_subtype = {
+			}
+
+			pioneer_team_communism = {
+				can_be_randomly_selected = no
+			}
+
+			rational_communism = {
+				can_be_randomly_selected = no
+			}
+
+			interstellar_revolutionism = {
+				can_be_randomly_selected = no
+			}
+
+			military_government_communism = {
+				can_be_randomly_selected = no
+			}
+
+			national_communism = {	#民族共产主义
+				can_be_randomly_selected = no
+			}
+
+			directive_communism = {	#指令共产主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 120 30 0 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.9
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	revolutionary_communism = {		#革命共产主义
+	
+		types = {
+		
+			revolutionary_communism_subtype = {
+			}
+
+			continuous_revolutionism = {
+				can_be_randomly_selected = no
+			}
+
+			popular_communism = {
+				can_be_randomly_selected = no
+			}
+			
+			agrarian_socialism = {
+				can_be_randomly_selected = no
+			}
+
+			leftist_guerrilla_movement = {		#左翼游击运动
+				can_be_randomly_selected = no
+			}
+
+			market_socialism = {		#市场社会主义
+				can_be_randomly_selected = no
+			}
+
+			self_governing_communism = {		#自治共产主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 255 57 35 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.0
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	worldunion_socialist = {	#社会世联主义
+	
+		types = {
+		
+			worldunion_socialist_subtype = {
+			}
+
+			exporting_revolutionism = {
+				can_be_randomly_selected = no
+			}
+
+			humane_socialism = {
+				can_be_randomly_selected = no
+			}
+
+			utopian_socialism = {
+				can_be_randomly_selected = no
+			}
+
+			religious_wordunion = {
+				can_be_randomly_selected = no
+			}
+
+			revolutionary_front = {		#革命阵线
+				can_be_randomly_selected = no
+			}
+
+			pan_north_bastian_thought = {		#泛北巴斯蒂亚思想
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 255 102 85 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.0
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	worldunion_democrat = {		#民主世联主义
+	
+		types = {
+		
+			worldunion_democrat_subtype = {
+			}
+
+			social_democrat = {
+				can_be_randomly_selected = no
+			}
+
+			democratic_socialism = {
+				can_be_randomly_selected = no
+			}
+
+			people_worldunion = {
+				can_be_randomly_selected = no
+			}
+
+			liberal_worldunion = {
+				can_be_randomly_selected = no
+			}
+
+			religious_progressivism = {		#宗教进步主义
+				can_be_randomly_selected = no
+			}
+
+			left_wing_nationalism = {		#左翼民族主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 96 103 255 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.25
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	liberal_republican = {		#自由共和主义
+	
+		types = {
+		
+			liberal_republican_subtype = {
+			}
+
+			radical_republican = {
+				can_be_randomly_selected = no
+			}
+
+			market_liberalism = {
+				can_be_randomly_selected = no
+			}
+
+			democratic_republican = {
+				can_be_randomly_selected = no
+			}
+
+			liberal_racism = {
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 96 200 255 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.25
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	conservative_republican = {		#保守共和主义
+	
+		types = {
+		
+			conservative_republican_subtype = {
+			}
+
+			conservative_liberalism = {
+				can_be_randomly_selected = no
+			}
+
+			democratic_traditionalism = {
+				can_be_randomly_selected = no
+			}
+
+			agrarian_popularism = {
+				can_be_randomly_selected = no
+			}
+
+			paternal_conservatism = {
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 11 0 195 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.0
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	authoritarian_republican = {		#威权共和主义
+	
+		types = {
+		
+			authoritarian_republican_subtype = {
+			}
+
+			republic_of_nobility = {
+				can_be_randomly_selected = no
+			}
+
+			dual_system_of_constitutional_monarchy = {
+				can_be_randomly_selected = no
+			}
+
+			directed_democracy = {
+				can_be_randomly_selected = no
+			}
+
+			oligarchy = {
+				can_be_randomly_selected = no
+			}
+
+			authoritarian_developmentalism = {	#威权发展主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 120 120 120 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.0
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	national_socialist = {		#国家社会主义
+	
+		types = {
+		
+			national_socialist_subtype = {
+			}
+
+			worldunion_militarism = {		#军国世联主义
+				can_be_randomly_selected = no
+			}
+
+			social_racism = {		#种族社会主义
+				can_be_randomly_selected = no
+			}
+
+			social_corporatism = {		#社会合作主义
+				can_be_randomly_selected = no
+			}
+
+			imperial_socialism = {		#帝国社会主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 255 121 0 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.75
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	authoritarian_nationalism = {		#威权民族主义
+	
+		types = {
+		
+			authoritarian_nationalism_subtype = {
+			}
+
+			militaristic_hegemonism = {		#军国霸权
+				can_be_randomly_selected = no
+			}
+
+			racial_supremacy = {	#种族至上主义
+				can_be_randomly_selected = no
+			}
+
+			racial_homonationalism = {	#种族归一主义
+				can_be_randomly_selected = no
+			}
+
+			human_hegemony = {	#人类霸权主义
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 193 117 0 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.75
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	paternal_autocrat = {		#家长式独裁
+	
+		types = {
+		
+			paternal_autocrat_subtype = {
+			}
+
+			absolute_monarchy = {		#绝对君主制
+				can_be_randomly_selected = no
+			}
+
+			military_dictatorship = {	#军事专政
+				can_be_randomly_selected = no
+			}
+			
+			reign_god_emperor = {
+				can_be_randomly_selected = no
+			}
+
+			colonial_government = {		#殖民地政府
+				can_be_randomly_selected = no
+			}
+
+			civilian_dictatorship = {	#文官独裁
+				can_be_randomly_selected = no
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 45 45 45 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.9
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	wizard_rules = {		#高魔势力统治
+	
+		types = {
+		
+			wizard_rules_subtype = {
+			}
+
+			magician_dictatorship = {
+				can_be_randomly_selected = no
+			}
+
+			adventurers_league = {
+				can_be_randomly_selected = no
+			}
+			
+			phoenix_dynasty = {
+				can_be_randomly_selected = no
+			}
+
+			world_shunners = {
+				can_be_randomly_selected = no
+			}
+
+			secondary_creatures_utopia = {
+				can_be_randomly_selected = no
+			}
+
+			security_bureau_of_union = {
+				can_be_randomly_selected = no
+			}
+
+			crystal_court = {
+				can_be_randomly_selected = no
+			}
+
+			original_desire = {
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 204 24 255 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.5
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	religious_extremism = {		#宗教极端主义
+	
+		types = {
+		
+			religious_extremism_subtype = {
+			}
+
+			sacred_battles = {
+				can_be_randomly_selected = no
+			}
+
+			heresy_ruling = {
+				can_be_randomly_selected = no
+			}
+
+			morality_judgement = {
+				can_be_randomly_selected = no
+			}
+
+			independent_world = {
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 126 0 117 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 0.5
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	anarchism = {		#无政府主义
+	
+		types = {
+		
+			anarchism_subtype = {
+			}
+
+			anarcho_pacifism = {
+				can_be_randomly_selected = no
+			}
+			
+			individualist_anarchism = {
+				can_be_randomly_selected = no
+			}
+
+			anarchy_commusim = {
+				can_be_randomly_selected = no
+			}
+
+			anarcho_syndicalism = {
+				can_be_randomly_selected = no
+			}
+
+			anarcho_populism = {
+				can_be_randomly_selected = no
+			}
+
+			anarcho_capitalism = {
+				can_be_randomly_selected = no
+			}
+
+			eco_anarchism = {
+				can_be_randomly_selected = no
+			}
+
+			anarcho_transhumanism = {
+				can_be_randomly_selected = no
+			}
+
+			anarchy_state = {		#无政府状态
+				can_be_randomly_selected = no
+			}
+
+		}
+		
+		dynamic_faction_names = {
+			
+		}
+		
+		color = { 255 250 250 }
+		
+		war_impact_on_world_tension = 1.0			
+		faction_impact_on_world_tension = 1.0
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_send_volunteers = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			guarantee_tension = 0.5
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 7.5
+			navy_intel_to_others = 12.5
+			airforce_intel_to_others = 7.5
+			war_exhaustion_gain_modifier = 1.0
+			send_volunteer_divisions_required = -1
+		}
+
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+}

@@ -1,0 +1,23 @@
+characters={
+
+	#盘角·黑手
+	MNT_panjiao_heishou = {
+		name = MNT_panjiao_heishou
+		portraits = {
+			civilian = {
+				large="GFX_MNT_panjiao_heishou"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_MNT_panjiao_heishou"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = racial_supremacy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+}

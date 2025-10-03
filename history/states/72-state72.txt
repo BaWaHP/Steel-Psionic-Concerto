@@ -1,0 +1,51 @@
+
+state={
+	id=72
+	name="STATE_72"
+
+	history={
+		owner = ARO
+		add_core_of = ARO
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			1237 = {
+				bunker = 3
+
+			}
+			2581 = {
+				bunker = 3
+
+			}
+			19049 = {
+				bunker = 3
+
+			}
+			19175 = {
+				bunker = 3
+
+			}
+			19259 = {
+				bunker = 3
+
+			}
+			19297 = {
+				bunker = 3
+
+			}
+
+		}
+		victory_points = {
+			11068 5 
+		}
+
+	}
+
+	provinces={
+		1237 1620 2581 11068 19039 19048 19049 19131 19175 19213 19259 19297 
+	}
+	manpower=2347000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

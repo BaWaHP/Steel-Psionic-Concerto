@@ -1,0 +1,39 @@
+
+state={
+	id=162
+	name="STATE_162"
+	resources={
+		oil = 60
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = ZHE
+		victory_points = {
+			15635 20
+		}
+		victory_points = {
+			15865 3
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 2
+			dockyard = 2
+			fuel_silo = 1
+			air_base = 6
+			radar_station = 1
+			15865 = {
+				naval_base = 6
+			}
+		}
+	}
+
+	provinces={
+		2913 5553 9858 15635 15740 15865 15948 16050 
+	}
+	manpower=4980000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+	local_supplies=0.000
+}

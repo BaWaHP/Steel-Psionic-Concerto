@@ -1,0 +1,159 @@
+leader_traits = {
+
+	MGC_piety_motherland_nation = {		#虔诚，祖国，民族
+		random = no
+		
+		stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_piety_motherland_nation_2 = {		#虔诚，祖国，民族
+		name = MGC_piety_motherland_nation
+		random = no
+		
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_dictatorship = {		#联盟独裁派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_dictatorship_unsure = {		#联盟独裁派...？
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_loyalists = {		#联盟保皇派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_republican = {		#联盟共和派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_nationalist = {		#联盟民族派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_alliance_neutrals = {		#联盟中立派
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_may_mullers_shed_tears = {		#愿穆勒斯垂泪
+		random = no
+
+		stability_factor = 0.1
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_magalhaesg_rand_la_salle = {		#马加尔斯大拉萨尔
+		random = no
+
+		army_speed_factor = 0.05
+		attrition = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_the_incorruptible = {		#不可腐蚀者
+		random = no
+
+		drift_defence_factor = 0.05
+		production_speed_rail_way_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_long_axe_and_general = {		#长斧与将军
+		random = no
+
+		war_support_factor = 0.1
+		political_power_gain = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_different_kind_of_dictatorship = {		#不太一样的独裁派
+		random = no
+
+		research_speed_factor = 0.075
+		production_speed_industrial_complex_factor = 0.075
+		production_speed_arms_factory_factor = 0.075
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_republican_dictator = {		#共和派独裁者
+		random = no
+
+		liberal_republican_drift = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_former_minister_of_agriculture = {		#前共和国农业部长
+		random = no
+
+		stability_factor = 0.025
+		monthly_agricultural_development_process = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	MGC_chief_inquisitor = {		#首席宗教法官
+		random = no
+
+		stability_factor = 0.025
+		research_speed_factor = -0.015
+		
+		ai_will_do = { factor = 1 }
+	}
+
+}

@@ -1,0 +1,445 @@
+SPC_generic_debug_decision_category = {
+	TCW_debug_load_focus_1 = {		#读取初始国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = TCW }
+
+		fire_only_once = no
+
+		complete_effect = {
+			load_focus_tree = TCW_focus_1
+		}
+	}
+	TCW_debug_load_focus_2 = {		#读取总统晕了国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = TCW }
+
+		fire_only_once = no
+
+		complete_effect = {
+			load_focus_tree = TCW_focus_2
+		}
+	}
+	TCW_debug_load_focus_3 = {		#读取内战后国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = TCW }
+
+		fire_only_once = no
+
+		complete_effect = {
+			load_focus_tree = TCW_focus_3
+		}
+	}
+	TCW_debug_load_focus_4 = {		#读取青年党国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = TCW }
+
+		fire_only_once = no
+
+		complete_effect = {
+			load_focus_tree = TCW_focus_4
+		}
+	}
+}
+
+TCW_resettlement_of_refugees_decision_category = {
+	TCW_advancing_resettlement = {		#推进安置工作
+		icon = GFX_decision_eng_trade_unions_support
+
+		visible = { NOT = { has_country_flag = TCW_resettlement_of_refugees_decision_over } }
+
+		cost = 60
+		fire_only_once = no
+		days_re_enable = 10
+		days_remove = 35
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		remove_effect = {
+			if = {
+				limit = { OR = { 
+					has_completed_focus = TCW_special_police_enforcement_regulations 
+					has_completed_focus = TCW_foreign_employment_secure_act
+				} }
+				add_to_variable = { TCW_refugee_settlement_var = 15 }
+				clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+				custom_effect_tooltip = TCW_refugee_progress_up_tt_3
+			}
+			else = {
+				add_to_variable = { TCW_refugee_settlement_var = 10 }
+				clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+				custom_effect_tooltip = TCW_refugee_progress_up_tt_2	
+			}
+		}
+	}
+	TCW_westward_movement = {		#西进运动
+		icon = GFX_decision_eng_trade_unions_demand
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TCW_refugee_settlement_tr_1
+				check_variable = { TCW_refugee_settlement_var > 29 }
+			}
+		}
+
+		visible = { NOT = { has_country_flag = TCW_resettlement_of_refugees_decision_over } }
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 50
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		remove_effect = {
+			384 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+
+			add_to_variable = { TCW_refugee_settlement_count = 1 }
+		}
+	}
+	TCW_expand_ministry_of_science = {		#扩建科学部
+		icon = GFX_decision_generic_research
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TCW_refugee_settlement_tr_2
+				check_variable = { TCW_refugee_settlement_var > 59 }
+			}
+		}
+
+		visible = { NOT = { has_country_flag = TCW_resettlement_of_refugees_decision_over } }
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = TCW_expand_ministry_of_science
+				category = electronics
+				uses = 1
+				bonus = 0.4
+			}
+			add_tech_bonus = {
+				name = TCW_expand_ministry_of_science
+				category = industry
+				uses = 1
+				bonus = 0.4
+			}
+			add_to_variable = { TCW_refugee_settlement_count = 1 }
+		}
+	}
+	TCW_blood_and_grace = {		#鲜血与恩情
+		icon = GFX_decision_generic_reorganize_irregulars
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TCW_refugee_settlement_tr_3
+				check_variable = { TCW_refugee_settlement_var > 89 }
+			}
+		}
+
+		visible = { NOT = { has_country_flag = TCW_resettlement_of_refugees_decision_over } }
+
+		cost = 0
+		custom_cost_trigger = { command_power > 19 }
+		custom_cost_text = decision_cost_CP_20
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		remove_effect = {
+			division_template = {
+				name = "难民旅"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"难民旅\" division_template = \"难民旅\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = TCW
+				}
+				create_unit = {
+					division = "name = \"难民旅\" division_template = \"难民旅\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+					owner = TCW
+				}
+			}
+			add_ideas = TCW_refugee_settlement_count
+			add_to_variable = { TCW_refugee_settlement_var = 5 }
+			clamp_variable = { var = TCW_refugee_settlement_var min = 0 max = 100 }
+			custom_effect_tooltip = TCW_refugee_progress_up_tt_1
+			add_ideas = TCW_refugee_brigade
+
+			add_to_variable = { TCW_refugee_settlement_count = 1 }
+		}
+	}
+	TCW_completion_of_refugee_resettlement = {		#完成难民安置
+		icon = GFX_decision_generic_nationalism
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TCW_completion_of_refugee_resettlement_tr
+				check_variable = { TCW_refugee_settlement_var = 100 }
+				check_variable = { TCW_refugee_settlement_count = 3 }
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+		days_re_enable = 0
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		remove_effect = {
+			set_country_flag = TCW_resettlement_of_refugees_decision_over
+		}
+	}
+}
+
+TCW_president_awaking_decision_category = {
+	TCW_president_awake = { 		#总统苏醒
+		allowed = { tag = TCW }
+		available = {
+			has_country_flag = TCW_president_awake_flag
+		}
+		activation = {
+			has_completed_focus = TCW_unconcious_president
+			NOT = {
+				has_country_flag = TCW_president_awake_flag
+			}
+		}
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		timeout_effect = {  
+			set_country_flag = TCW_president_awake_flag
+			country_event = TCW.12
+		}
+	}
+	TCW_misappropriation_of_precision_medical_devices = {		#挪用精密医疗器械
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = TCW_unconcious_president
+			has_equipment = {
+				support_equipment > 49
+			}
+		}
+
+		visible = {
+			has_completed_focus = TCW_unconcious_president
+			NOT = { has_country_flag = TCW_president_awake_flag }
+		}
+
+		cost = 0
+		fire_only_once = yes
+		#days_re_enable = 0
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 50
+			}
+			add_stability = -0.05
+			add_days_mission_timeout = {
+				mission = TCW_president_awake
+				days = -10
+			}
+		}
+	}
+	TCW_try_special_magic_treatment = {		#尝试特殊魔法治疗
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = TCW_unconcious_president
+			has_equipment = {
+				support_equipment > 49
+			}
+		}
+
+		visible = {
+			has_completed_focus = TCW_unconcious_president
+			NOT = { has_country_flag = TCW_president_awake_flag }
+		}
+
+		cost = 0
+		fire_only_once = yes
+		#days_re_enable = 0
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		complete_effect = {
+			random_list = {
+				60 = {
+					country_event = TCW.13
+				}
+				40 = {
+					country_event = TCW.14
+				}
+			}
+		}
+	}
+}
+
+economy_decisions = {
+	TCW_lingsen_military_industrial_complex = {	#岭森军工复合体
+		icon = GFX_decision_generic_construction
+
+		visible = { 
+			tag = TCW
+			has_country_flag = TCW_52_b_flag
+		}
+
+		cost = 60
+		days_remove = 80
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			monthly_industrial_development_process = 2
+		}
+
+		complete_effect = {
+			341 = {
+				add_state_modifier = {
+					modifier = {
+						local_science_development_monthly = 0.01
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			341 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+				}
+				add_state_modifier = {
+					modifier = {
+						local_science_development_monthly = -0.01
+					}
+				}
+			}
+			clr_country_flag = TCW_52_b_flag
+		}		
+	}
+
+	TCW_nesida_river_hydropower_station = {	#奈西达河水电站
+		icon = GFX_decision_generic_construction
+
+		visible = { 
+			tag = TCW
+			has_country_flag = TCW_52_a_flag
+		}
+
+		cost = 60
+		days_remove = 80
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		modifier = {
+			monthly_industrial_development_process = 2
+		}
+
+		complete_effect = {
+			383 = {
+				add_state_modifier = {
+					modifier = {
+						local_science_development_monthly = 0.01
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			383 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				set_state_category = large_city
+				add_state_modifier = {
+					modifier = {
+						local_science_development_monthly = -0.01
+					}
+				}
+			}
+			clr_country_flag = TCW_52_a_flag
+		}
+	}
+}
+
+TCW_soutern_problems = {
+	TCW_rebuild_rep = {	#重铸共和
+		icon = GFX_decision_generic_construction
+
+		available = {
+			KTL = { exists = no }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = { factor = 99999 }
+
+		complete_effect = {
+			remove_country_leader_trait = gov_in_struggle
+			load_focus_tree = TCW_focus_3
+			add_timed_idea = {
+				idea = TCW_rep_only
+				days = 365
+			}
+		}
+	}
+}

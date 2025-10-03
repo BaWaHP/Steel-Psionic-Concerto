@@ -1,0 +1,26 @@
+state={
+	id=519
+	name="STATE_519"
+	resources = {
+		chromium = 4
+	}
+	history = {
+		owner = UIS
+		add_core_of = UIS
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			3392 5
+		}
+	}
+	provinces={
+		3392 3600 6980 8470 9715 10446 13473 
+	}
+	manpower=1410000
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

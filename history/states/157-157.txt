@@ -1,0 +1,44 @@
+
+state={
+	id=157
+	name="STATE_157"
+
+	resources = {
+		steel = 12
+	}
+
+	history={
+		owner = WUN
+		add_core_of = WUN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 1
+			9945 = {
+				bunker = 3
+			}
+			8237 = {
+				bunker = 1
+			}
+			7048 = {
+				bunker = 3
+			}
+		}
+		victory_points = {
+			9945 15
+		}
+		victory_points = {
+			7048 8
+		}
+
+	}
+
+	provinces={
+		107 2316 7048 8237 8245 8434 9826 9945 10643 11451 12030 15364 15611 15778 15866 
+	}
+	manpower=1420000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,377 @@
+﻿capital = 34
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+oob = "PEO"
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "PEO_naval"
+	else = {
+		set_naval_oob = "PEO_naval_legacy"
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "PEO_air"
+	else = {
+		set_air_oob = "PEO_air_legacy"
+	}
+}
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 7
+	revolutionary_communism = 5
+	worldunion_socialist = 14
+	worldunion_democrat = 20
+	liberal_republican = 15
+	conservative_republican = 12
+	authoritarian_republican = 15
+	national_socialist = 3
+	authoritarian_nationalism = 0
+	paternal_autocrat = 3
+	wizard_rules = 0
+	religious_extremism = 1
+	anarchism = 5
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	melee_training = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	heavy_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	defensive_function_imrpovement = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	basic_train = 1
+	tech_support = 1
+	engine_tech_1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_monster_tamer = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_medium_tank_chassis = 1
+			armor_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			early_ship_hull_cruiser = 1
+			basic_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_submarine = 1
+			smoke_generator = 1
+			basic_depth_charges = 1
+			sonar = 1
+			improved_airplane_launcher = 1
+			basic_cruiser_armor_scheme = 1
+			basic_torpedo = 1
+			basic_battery = 1
+			basic_light_battery = 1
+			basic_medium_battery = 1
+			basic_heavy_battery = 1
+			mtg_transport = 1
+			basic_naval_mines = 1
+		}
+	}
+}
+
+#坦克及装甲模板
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "90型轻型突击坦克"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+	}
+	create_equipment_variant = {
+		name = "中型坦克"
+		type = medium_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			special_type_slot_1 = wet_ammo_storage
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+		}
+	}
+}
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "共和级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "先驱级"
+		type = ship_hull_light_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_light_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "和平级"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "皮奥瑞亚级"
+		type = ship_hull_cruiser_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = empty
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "休伯特·格里芬级"
+		type = ship_hull_cruiser_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = empty
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "平等级"
+		type = ship_hull_heavy_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = empty
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "自由级"
+		type = ship_hull_heavy_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_bb_1
+			fixed_ship_secondaries_slot = empty
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+#空军模板
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "90式战斗飞行器"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "90式战斗轰炸飞行器"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
+
+#开局领导人
+recruit_character = PEO_LiFangde
+recruit_character = PEO_eric_cyril
+recruit_character = PEO_rick_heckler
+recruit_character = PEO_BoWei
+recruit_character = PEO_BoFangzhou
+recruit_character = PEO_barry_kimyao
+recruit_character = PEO_KongSinian
+recruit_character = PEO_BianYimin
+recruit_character = PEO_unknown_1
+recruit_character = PEO_LuGuiyue
+recruit_character = PEO_unknown_2
+recruit_character = PEO_taoyuan_conference
+recruit_character = PEO_alliance_council
+#后期领导人
+recruit_character = PEO_republic_parliament
+#内阁
+recruit_character = PEO_Suer
+recruit_character = PEO_Obstin_Jolson
+recruit_character = PEO_LiHaisheng
+recruit_character = PEO_burke_john
+recruit_character = PEO_oberst_chris
+recruit_character = PEO_eberhardt_ford
+recruit_character = PEO_kovner_schreiting
+recruit_character = PEO_gilbert_mcWhite
+recruit_character = PEO_ZhangWhenhong
+recruit_character = PEO_john_adderley
+recruit_character = PEO_donald_warren
+recruit_character = PEO_SongRen
+recruit_character = PEO_anna_patrick
+recruit_character = PEO_ZhangWu
+#将领
+recruit_character = PEO_monk_corleone
+recruit_character = PEO_Huang_Xizhong
+recruit_character = PEO_moncrean_lisbon
+recruit_character = PEO_kankanid_sowodnyu
+
+add_ideas = PEO_why_nobody_talking
+add_ideas = PEO_new_national_constitution
+add_ideas = PEO_army_under_politics
+add_ideas = PEO_deal_with_CLD
+add_ideas = PEO_united_opposition
+add_ideas = PEO_flourished_ocean_trade_3
+#顾问
+add_ideas = PEO_Suer_idea

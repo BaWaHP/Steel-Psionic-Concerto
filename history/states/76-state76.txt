@@ -1,0 +1,38 @@
+
+state={
+	id=76
+	name="STATE_76"
+
+	history={
+		owner = ARO
+		add_core_of = ARC
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			4117 = {
+				bunker = 2
+			}
+			19379 = {
+				bunker = 2
+			}
+
+		}
+		victory_points = {
+			1840 5 
+		}
+		
+		start_resistance = yes
+		set_compliance = 0
+		set_resistance = 60
+		set_garrison_strength = 0.8
+
+	}
+
+	provinces={
+		1188 1840 4117 5311 5338 6370 19296 19348 19379 19436 19496 19520 19538 19580 19590 19598 
+	}
+	manpower=430000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+
+		#所担之责
+		RCC_burden_of_responsibility = {
+			picture = neutrality_idea
+			allowed = { original_tag = RCC }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				war_support_factor = -0.05
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+}

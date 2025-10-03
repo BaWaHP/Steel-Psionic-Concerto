@@ -1,0 +1,67 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "SPC_peace_popup_menu_window"
+		position = { x = 0 y = 0 }
+		size = { width = 564 height = 300 }
+		orientation= center
+		origo = center
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+		show_sound = peace_summary_message
+		#hide_sound = menu_close_window
+		click_to_front = yes
+
+		Background = {
+			name = "Background"
+			quadTextureSprite = "GFX_SPC_peace_popup_bg"
+		}
+
+		instantTextboxType = {
+			name = "Title"
+			position = { x = 175 y = 20 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "SPC_peace_popup_title_txt"
+			maxWidth = 240
+			maxHeight = 20
+			format = center	
+		}
+
+		instantTextboxType = {
+			name = "Intro"
+			position = { x = 118 y = 70 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "SPC_peace_popup_intro_txt"
+			maxWidth = 360
+			maxHeight = 20
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "Speech"
+			position = { x = 180 y = 150 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "SPC_peace_popup_speech_txt"
+			maxWidth = 240
+			maxHeight = 20
+			format = center
+		}
+
+		buttonType = {
+			name = "Close"
+			quadTextureSprite = "GFX_SPC_peace_button"
+			buttonFont = "hoi_16mbs"
+			#buttonText = "SPC_peace_popup_close_txt"
+			pdx_tooltip = "SPC_peace_popup_btn_tt"
+			clicksound = click_default
+			position = { x = 494 y = 170 }
+			shortcut = "ESCAPE"
+			shortcut = "RETURN"
+		}
+	}
+}

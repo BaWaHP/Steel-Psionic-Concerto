@@ -1,0 +1,274 @@
+# All infantry equipment
+
+equipments = {
+
+	light_titan_equipment = {
+		year = 1900
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = no
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		
+		#Misc Abilities
+		maximum_speed = 12
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 24
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 16
+		hard_attack = 21
+		ap_attack = 81
+		air_attack = 11
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+		
+		build_cost_ic = 8
+		resources = {
+			steel = 2
+			magic_crystal = 1
+		}
+
+		fuel_consumption = 2.4
+	}
+
+	great_war_titan_equipment_0 = {
+		year = 1990
+	
+		active = no
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		#Misc Abilities
+		maximum_speed = 8
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 12
+		hardness = 0.5
+		armor_value = 1
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 3
+		ap_attack = 11
+		air_attack = 1
+		
+		build_cost_ic = 16
+		resources = {
+			steel = 4
+			magic_crystal = 2
+		}
+
+		fuel_consumption = 4.2
+	}
+
+	light_titan_equipment_0 = {
+		year = 1998
+	
+		active = no
+		parent = great_war_titan_equipment_0
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 1
+
+		build_cost_ic = 8
+	}
+
+	ronin_titan_equipment_0 = {
+		year = 2002
+	
+		active = no
+		parent = light_titan_equipment_0
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 2
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 32
+		hardness = 0.8
+		armor_value = 15
+
+		#Offensive Abilities
+		soft_attack = 26
+		hard_attack = 21
+		ap_attack = 91
+		air_attack = 11
+
+		build_cost_ic = 9
+		fuel_consumption = 3
+		resources = {
+			steel = 2
+			magic_crystal = 2
+		}
+	}
+
+	ronin_titan_equipment_1 = {
+		year = 2008
+	
+		active = no
+		parent = ronin_titan_equipment_0
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 3
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 36
+		hardness = 0.8
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 31
+		hard_attack = 26
+		ap_attack = 101
+		air_attack = 16
+
+		build_cost_ic = 10
+		fuel_consumption = 3.6
+		resources = {
+			steel = 3
+			magic_crystal = 3
+		}
+	}
+
+	ronin_titan_equipment_2 = {
+		year = 2012
+	
+		active = no
+		parent = ronin_titan_equipment_1
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 4
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 40
+		hardness = 0.8
+		armor_value = 25
+
+		#Offensive Abilities
+		soft_attack = 36
+		hard_attack = 31
+		ap_attack = 111
+		air_attack = 21
+
+		build_cost_ic = 11
+		fuel_consumption = 4.2
+		resources = {
+			steel = 4
+			magic_crystal = 4
+			chromium = 1
+		}
+	}
+
+	northstar_titan_equipment_0 = {
+		year = 2002
+	
+		active = no
+		parent = light_titan_equipment_0
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 2
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 20
+		hardness = 0.8
+		armor_value = 15
+
+		#Offensive Abilities
+		soft_attack = 21
+		hard_attack = 26
+		ap_attack = 101
+		air_attack = 16
+
+		build_cost_ic = 9
+		fuel_consumption = 3
+		resources = {
+			steel = 2
+			magic_crystal = 2
+		}
+	}
+
+	northstar_titan_equipment_1 = {
+		year = 2008
+	
+		active = no
+		parent = northstar_titan_equipment_0
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 2
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 24
+		hardness = 0.8
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 26
+		hard_attack = 31
+		ap_attack = 121
+		air_attack = 21
+
+		build_cost_ic = 10
+		fuel_consumption = 3.6
+		resources = {
+			steel = 3
+			magic_crystal = 3
+		}
+	}
+
+	northstar_titan_equipment_2 = {
+		year = 2012
+	
+		active = no
+		parent = northstar_titan_equipment_1
+		archetype = light_titan_equipment
+		priority = 05
+		visual_level = 2
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 28
+		hardness = 0.8
+		armor_value = 25
+
+		#Offensive Abilities
+		soft_attack = 31
+		hard_attack = 36
+		ap_attack = 141
+		air_attack = 26
+
+		build_cost_ic = 11
+		fuel_consumption = 4.2
+		resources = {
+			steel = 4
+			magic_crystal = 4
+			chromium = 1
+		}
+	}
+
+}

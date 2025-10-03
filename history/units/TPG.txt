@@ -1,0 +1,174 @@
+focus = {
+	current = "TPG_newyear_speech"
+	progress = 0
+}
+
+division_template = {
+	name = "占领驻军"
+
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+		police_infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes 
+
+	priority = 0
+}
+division_template = {
+	name = "建设兵团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes 
+
+	priority = 1
+}
+division_template = {
+	name = "殖民地军警"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes 
+
+	priority = 1
+}
+division_template = {
+	name = "边防军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	is_locked = yes 
+
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "工业生产建设兵团"
+		location = 5846
+		division_template = "建设兵团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "农业生产建设兵团"
+		location = 18148
+		division_template = "建设兵团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "工业生产建设兵团"
+		location = 272
+		division_template = "建设兵团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "工业生产建设兵团"
+		location = 8570
+		division_template = "建设兵团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "殖民地军警"
+		location = 11333
+		division_template = "殖民地军警"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民地军警"
+		location = 6736
+		division_template = "殖民地军警"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民地军警"
+		location = 4862
+		division_template = "殖民地军警"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民地军警"
+		location = 4201
+		division_template = "殖民地军警"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "边防军"
+		location = 11333
+		division_template = "边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "边防军"
+		location = 6736
+		division_template = "边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "边防军"
+		location = 4862
+		division_template = "边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "边防军"
+		location = 4201
+		division_template = "边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

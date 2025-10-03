@@ -1,0 +1,32 @@
+
+state={
+	id=6
+	name="STATE_6"
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			8897 = {
+				naval_base = 2
+
+			}
+
+		}
+		victory_points = {
+			8897 8
+		}
+
+	}
+
+	provinces={
+		5181 8869 8873 8897 9406 19061 19146 19239 
+	}
+	manpower=752220
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

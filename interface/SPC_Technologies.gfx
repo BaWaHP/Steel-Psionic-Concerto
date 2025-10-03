@@ -1,0 +1,1987 @@
+spriteTypes = {
+
+	###科技树###
+
+	spriteType = {
+		name = "GFX_magic_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_special_tab.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_titan_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_titan_tab.png"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_secret_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_special_tab.dds"
+		noOfFrames = 2		
+	}
+
+	#步兵特殊科技补充#
+	spriteType = {
+		name = "GFX_technology_infantry_folder_special_project_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_folder_special_project_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_folder_special_project_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//technology_special_project_small_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_folder_special_project_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//technology_special_project_small_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	#特殊科技类
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_secret_folder_small_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	#泰坦科技类
+
+	spriteType = {
+		name = "GFX_technology_titan_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_titan_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_titan_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_titan_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_titan_folder_small_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	#非常规武装科技类
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_secret_folder_small_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	#魔法科技类
+
+	spriteType = {
+		name = "GFX_technology_magic_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_magic_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_magic_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_magic_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_magic_folder_small_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	###单位###
+
+	#轻步兵
+	spriteType = { 
+		name = "GFX_unit_light_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_light_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_light_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_light_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_light_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#警察
+	spriteType = { 
+		name = "GFX_unit_police_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_police_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_police_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_police_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_police_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_police_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#驯兽师
+	spriteType = { 
+		name = "GFX_unit_monster_tamer_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_monster_tamer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_monster_tamer_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_monster_tamer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_monster_tamer_icon_small"
+		texturefile = "gfx/texticons/unit_monster_tamer_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#近战
+	spriteType = { 
+		name = "GFX_unit_melee_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_melee_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_melee_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_melee_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_melee_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_melee_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#近战支援
+	spriteType = { 
+		name = "GFX_unit_melee_support_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_melee_support_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_melee_support_icon_small"
+		texturefile = "gfx/texticons/unit_melee_support_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#轻型泰坦
+	spriteType = { 
+		name = "GFX_unit_light_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_light_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_light_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_light_titan_icon_small"
+		texturefile = "gfx/texticons/unit_light_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#中型泰坦
+	spriteType = { 
+		name = "GFX_unit_medium_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_medium_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_medium_titan_icon_small"
+		texturefile = "gfx/texticons/unit_medium_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#重型泰坦
+	spriteType = { 
+		name = "GFX_unit_heavy_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_heavy_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_titan_icon_small"
+		texturefile = "gfx/texticons/unit_heavy_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导步兵
+	spriteType = { 
+		name = "GFX_unit_caster_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_caster_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导步兵支援连
+	spriteType = { 
+		name = "GFX_unit_caster_support_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_support_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_support_icon_small"
+		texturefile = "gfx/texticons/unit_caster_support_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导通信侦察连
+	spriteType = { 
+		name = "GFX_unit_caster_recon_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_recon_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_recon_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_recon_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_recon_icon_small"
+		texturefile = "gfx/texticons/unit_caster_recon_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导攻击支援连
+	spriteType = { 
+		name = "GFX_unit_caster_attacker_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_attacker_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_attacker_icon_small"
+		texturefile = "gfx/texticons/unit_caster_attacker_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导工程技术连
+	spriteType = { 
+		name = "GFX_unit_caster_engineer_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_engineer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_engineer_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_engineer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_engineer_icon_small"
+		texturefile = "gfx/texticons/unit_caster_engineer_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导联勤保障连
+	spriteType = { 
+		name = "GFX_unit_caster_logistics_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_logistics_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_logistics_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_logistics_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_caster_logistics_icon_small"
+		texturefile = "gfx/texticons/unit_caster_logistics_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#肉山
+	spriteType = { 
+		name = "GFX_unit_lust_mountain_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_roshan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_lust_mountain_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_roshan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_lust_mountain_icon_small"
+		texturefile = "gfx/texticons/unit_lust_mountain_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#半人马
+	spriteType = { 
+		name = "GFX_unit_centaur_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_centaur_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_centaur_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_centaur_icon.png" 
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_centaur_icon_small"
+		texturefile = "gfx/texticons/unit_centaur_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	#半人马民兵
+	spriteType = { 
+		name = "GFX_unit_centaur_militia_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_centaur_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_centaur_militia_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_centaur_icon.png" 
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_centaur_militia_icon_small"
+		texturefile = "gfx/texticons/unit_centaur_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###分类###
+
+	spriteType = {
+		name = "GFX_unit_category_caster"
+		texturefile = "gfx/interface/counters/categories/category_caster.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_caster_supporters"
+		texturefile = "gfx/interface/counters/categories/category_caster_supporters.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_police"
+		texturefile = "gfx/interface/counters/categories/category_police.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_signal"
+		texturefile = "gfx/interface/counters/categories/category_signal.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_engineer"
+		texturefile = "gfx/interface/counters/categories/category_engineer.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_maintenance"
+		texturefile = "gfx/interface/counters/categories/category_maintenance.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_logistics"
+		texturefile = "gfx/interface/counters/categories/category_logistics.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unit_category_field_hospital"
+		texturefile = "gfx/interface/counters/categories/category_field_hospital.png"
+		legacy_lazy_load = no
+	}
+
+	### archetype ###
+
+	###装备###
+
+	SpriteType = {
+		name = "GFX_primitive_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/primitive_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_primitive_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/primitive_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_police_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_police_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_police_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_melee_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/melee_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_melee_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_melee_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/light_melee_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_melee_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/light_melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_melee_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/heavy_melee_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_melee_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/heavy_melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_00.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_uniform_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniform_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniform_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniform_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniform_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniform_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniform_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_great_war_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/great_war_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/light_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ronin_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ronin_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ronin_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_northstar_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_northstar_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_northstar_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_medium_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/medium_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ion_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ion_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ion_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tone_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tone_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tone_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/heavy_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_scorch_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_scorch_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_scorch_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_legion_titan_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_legion_titan_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_legion_titan_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_lust_mountain_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_lust_chrysalides_0_medium"
+		texturefile = "gfx/interface/technologies/train_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_meat_chrysalis_0_medium"
+		texturefile = "gfx/interface/technologies/motorized_equipment_0.dds"
+	}
+
+	###科技###
+
+	SpriteType = {
+		name = "GFX_primitive_weapons_medium"
+		texturefile = "gfx/interface/technologies/primitive_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_weapons_fining_technique_medium"
+		texturefile = "gfx/interface/technologies/weapons_fining_technique.png"
+	}
+
+	SpriteType = {
+		name = "GFX_police_training_medium"
+		texturefile = "gfx/interface/technologies/police_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_suppress_equipment_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_magic_of_mental_deviation_medium"
+		texturefile = "gfx/interface/technologies/magic_of_mental_deviation.png"
+	}
+
+	SpriteType = {
+		name = "GFX_compliance_hint_medium"
+		texturefile = "gfx/interface/technologies/compliance_hint.png"
+	}
+
+	SpriteType = {
+		name = "GFX_anti_mob_blunt_medium"
+		texturefile = "gfx/interface/technologies/mob_blunt.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_armor_for_police_medium"
+		texturefile = "gfx/interface/technologies/light_armor_for_police.png"
+	}
+
+	SpriteType = {
+		name = "GFX_improved_police_equipment_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_unyielding_doctrine_medium"
+		texturefile = "gfx/interface/technologies/unyielding_doctrine.png"
+	}
+
+	SpriteType = {
+		name = "GFX_moderate_doctrine_medium"
+		texturefile = "gfx/interface/technologies/moderate_doctrine.png"
+	}
+
+	SpriteType = {
+		name = "GFX_undeadly_weapons_medium"
+		texturefile = "gfx/interface/technologies/undeadly_weapons.png"
+	}
+
+	SpriteType = {
+		name = "GFX_body_worn_camera_medium"
+		texturefile = "gfx/interface/technologies/body_worn_camera.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modernized_police_equipment_medium"
+		texturefile = "gfx/interface/technologies/police_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_improved_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/melee_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modernized_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/modernized_melee_weapons.png"
+	}
+
+	SpriteType = {
+		name = "GFX_melee_training_medium"
+		texturefile = "gfx/interface/technologies/melee_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_outdoors_survive_training_medium"
+		texturefile = "gfx/interface/technologies/outdoors_survive_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modernized_troops_training_medium"
+		texturefile = "gfx/interface/technologies/modernized_troops_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_expanding_training_scale_medium"
+		texturefile = "gfx/interface/technologies/expanding_training_scale.png"
+	}
+
+	SpriteType = {
+		name = "GFX_elite_troops_medium"
+		texturefile = "gfx/interface/technologies/elite_troops.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_combat_tactic_medium"
+		texturefile = "gfx/interface/technologies/modern_combat_tactic.png"
+	}
+
+	SpriteType = {
+		name = "GFX_multi_department_training_medium"
+		texturefile = "gfx/interface/technologies/multi_department_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_serious_military_discipline_medium"
+		texturefile = "gfx/interface/technologies/serious_military_discipline.png"
+	}
+
+	SpriteType = {
+		name = "GFX_melee_weapons_I_medium"
+		texturefile = "gfx/interface/technologies/melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/light_melee_weapons.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/heavy_melee_weapons.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_melee_weapons_II_medium"
+		texturefile = "gfx/interface/technologies/light_melee_equipment_0.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_melee_weapons_II_medium"
+		texturefile = "gfx/interface/technologies/heavy_melee_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_material_improvement_medium"
+		texturefile = "gfx/interface/technologies/material_improvement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_melee_weapons_III_medium"
+		texturefile = "gfx/interface/technologies/light_melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_melee_weapons_III_medium"
+		texturefile = "gfx/interface/technologies/heavy_melee_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_harming_training_medium"
+		texturefile = "gfx/interface/technologies/harming_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ap_training_medium"
+		texturefile = "gfx/interface/technologies/ap_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_breakthrough_training_medium"
+		texturefile = "gfx/interface/technologies/breakthrough_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_early_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/primitive_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_00.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/light_infantry_weapons.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heavy_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/heavy_infantry_weapons.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_infantry_weapons_II_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_assault_elite_medium"
+		texturefile = "gfx/interface/technologies/assault_elite.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_design_medium"
+		texturefile = "gfx/interface/technologies/defensive_design.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_weapons_III_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modernization_improvement_medium"
+		texturefile = "gfx/interface/technologies/modernization_improvement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_new_scopes_medium"
+		texturefile = "gfx/interface/technologies/new_scopes.png"
+	}
+
+	SpriteType = {
+		name = "GFX_powered_ammos_medium"
+		texturefile = "gfx/interface/technologies/powered_ammos.png"
+	}
+
+	SpriteType = {
+		name = "GFX_infantry_weapons_IV_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_night_vision_medium"
+		texturefile = "gfx/interface/technologies/night_vision1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_night_vision2_medium"
+		texturefile = "gfx/interface/technologies/night_vision22.png"
+	}
+
+	SpriteType = {
+		name = "GFX_careful_doctrine_medium"
+		texturefile = "gfx/interface/technologies/careful_doctrine.png"
+	}
+
+	SpriteType = {
+		name = "GFX_aggressive_doctrine_medium"
+		texturefile = "gfx/interface/technologies/aggressive_doctrine.png"
+	}
+
+	SpriteType = {
+		name = "GFX_night_vision3_medium"
+		texturefile = "gfx/interface/technologies/night_vision3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_early_infantry_uniforms_medium"
+		texturefile = "gfx/interface/technologies/uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modernized_infantry_uniforms_medium"
+		texturefile = "gfx/interface/technologies/modernized_infantry_uniforms.png"
+	}
+
+	SpriteType = {
+		name = "GFX_against_terrible_weather_medium"
+		texturefile = "gfx/interface/technologies/against_terrible_weather.png"
+	}
+
+	SpriteType = {
+		name = "GFX_against_terrible_environment_medium"
+		texturefile = "gfx/interface/technologies/against_terrible_environment.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_against_extreme_environment_medium"
+		texturefile = "gfx/interface/technologies/against_extreme_environment.png"
+	}
+
+	SpriteType = {
+		name = "GFX_against_extreme_landscape_medium"
+		texturefile = "gfx/interface/technologies/against_extreme_landscape.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_function_imrpovement_medium"
+		texturefile = "gfx/interface/technologies/defensive_function_imrpovement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniforms_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniforms_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_automatic_healing_enchantment_medium"
+		texturefile = "gfx/interface/technologies/automatic_healing_enchantment.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniforms_II_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniforms_II_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_breakthrough_improvement_medium"
+		texturefile = "gfx/interface/technologies/breakthrough_improvement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_more_defense_improvement_medium"
+		texturefile = "gfx/interface/technologies/more_defense_improvement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_attack_improvement_medium"
+		texturefile = "gfx/interface/technologies/attack_improvement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_uniforms_III_medium"
+		texturefile = "gfx/interface/technologies/defensive_uniform_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_durable_uniforms_III_medium"
+		texturefile = "gfx/interface/technologies/durable_uniform_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_magic_refinement_improvement_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_magic_refinement_improvement_plus_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_quality_first_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_compound_magic_shield_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_defensive_reinforcement_again_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_backfire_enchantment_on_shield_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_magic_shield_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	###特种###
+
+	SpriteType = {
+		name = "GFX_early_special_forces_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equip_inprovement_I_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equip_inprovement_II_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_special_forces_equip_inprovement_III_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_improve_special_forces_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_special_forces_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_modern_special_forces_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_marines4_medium"
+		texturefile = "gfx/interface/technologies/marines4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_mountaineers4_medium"
+		texturefile = "gfx/interface/technologies/mountain4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_paratroopers4_medium"
+		texturefile = "gfx/interface/technologies/paratroopers4.png"
+	}
+
+	###支援###
+
+	SpriteType = {
+		name = "GFX_tech_engineers_flamethrower_medium"
+		texturefile = "gfx/interface/technologies/tech_engineers_flamethrower.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_engineers2_explosive_mag_medium"
+		texturefile = "gfx/interface/technologies/engineers2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_engineers3_tools_improvement_medium"
+		texturefile = "gfx/interface/technologies/engineers3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_engineers4_construction_mag_medium"
+		texturefile = "gfx/interface/technologies/engineers4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_engineers5_medium"
+		texturefile = "gfx/interface/technologies/engineers5.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_recon_military_scopes_medium"
+		texturefile = "gfx/interface/technologies/recon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_recon2_heat_detection_mag_medium"
+		texturefile = "gfx/interface/technologies/recon2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_recon3_invisible_mag_medium"
+		texturefile = "gfx/interface/technologies/recon3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_recon4_short_distance_flying_mag_medium"
+		texturefile = "gfx/interface/technologies/recon4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_recon5_medium"
+		texturefile = "gfx/interface/technologies/recon5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_maintenance_company_toolbox_medium"
+		texturefile = "gfx/interface/technologies/tech_maintenance_company.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_maintenance_company2_storage_mag_medium"
+		texturefile = "gfx/interface/technologies/tech_maintenance_company2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_maintenance_company3_new_sets_of_tools_medium"
+		texturefile = "gfx/interface/technologies/tech_maintenance_company3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_maintenance_company4_automatic_enchantment_medium"
+		texturefile = "gfx/interface/technologies/tech_maintenance_company4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_maintenance_company5_medium"
+		texturefile = "gfx/interface/technologies/tech_maintenance_company5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer_muscle_reinforcement_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer2_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer2_explosive_remould_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer3_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer3_commanding_mag_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer4_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer4_suicidal_reinforcement_mag_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_monster_tamer5_medium"
+		texturefile = "gfx/interface/technologies/monster_tamer5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_field_hospital_disinfectant_medium"
+		texturefile = "gfx/interface/technologies/tech_field_hospital.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_field_hospital2_individual_healing_mag_medium"
+		texturefile = "gfx/interface/technologies/tech_field_hospital2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_field_hospital3_bodies_restoration_medium"
+		texturefile = "gfx/interface/technologies/tech_field_hospital3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_field_hospital4_group_healing_mag_medium"
+		texturefile = "gfx/interface/technologies/tech_field_hospital4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_field_hospital5_medium"
+		texturefile = "gfx/interface/technologies/tech_field_hospital5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_logistics_company_compressed_rations_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_logistics_company2_adding_dopes_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_logistics_company3_carrying_mag_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_logistics_company4_food_improvement_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_logistics_company5_medium"
+		texturefile = "gfx/interface/technologies/tech_logistics_company5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_signal_company_telepathy_medium"
+		texturefile = "gfx/interface/technologies/tech_signal_company.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_signal_company2_mobile_radio_medium"
+		texturefile = "gfx/interface/technologies/tech_signal_company2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_signal_company3_locate_and_communicate_mag_medium"
+		texturefile = "gfx/interface/technologies/tech_signal_company3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_signal_company4_lr_ptelepathy_medium"
+		texturefile = "gfx/interface/technologies/tech_signal_company4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_signal_company5_medium"
+		texturefile = "gfx/interface/technologies/tech_signal_company5.png"
+	}
+
+	###泰坦###
+
+	SpriteType = {
+		name = "GFX_great_war_titan_medium"
+		texturefile = "gfx/interface/technologies/great_war_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_stryder_titan_medium"
+		texturefile = "gfx/interface/technologies/light_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_lightweight_transformation_medium"
+		texturefile = "gfx/interface/technologies/lightweight_transformation.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ronin_titan_core_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_echanted_swords_medium"
+		texturefile = "gfx/interface/technologies/echanted_swords.png"
+	}
+
+	SpriteType = {
+		name = "GFX_echantment_destroyer_medium"
+		texturefile = "gfx/interface/technologies/echantment_destroyer.png"
+	}
+
+	SpriteType = {
+		name = "GFX_shrapnel_ejection_medium"
+		texturefile = "gfx/interface/technologies/shrapnel_ejection.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_ronin_core_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_short_range_instantaneous_movement_medium"
+		texturefile = "gfx/interface/technologies/short_range_instantaneous_movement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_ronin_core_medium"
+		texturefile = "gfx/interface/technologies/ronin_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_northstar_titan_core_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_handheld_ship_guns_medium"
+		texturefile = "gfx/interface/technologies/handheld_ship_guns.png"
+	}
+
+	SpriteType = {
+		name = "GFX_proliferation_missiles_medium"
+		texturefile = "gfx/interface/technologies/proliferation_missiles.png"
+	}
+
+	SpriteType = {
+		name = "GFX_trip_lock_trap_medium"
+		texturefile = "gfx/interface/technologies/trip_lock_trap.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_northstar_core_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_short_range_flight_capability_medium"
+		texturefile = "gfx/interface/technologies/short_range_flight_capability.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_northstar_core_medium"
+		texturefile = "gfx/interface/technologies/northstar_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_atlas_titan_medium"
+		texturefile = "gfx/interface/technologies/medium_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_adaptive_enhancement_medium"
+		texturefile = "gfx/interface/technologies/adaptive_enhancement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ion_titan_core_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_diffusion_magic_launcher_medium"
+		texturefile = "gfx/interface/technologies/diffusion_magic_launcher.png"
+	}
+
+	SpriteType = {
+		name = "GFX_vortex_shield_medium"
+		texturefile = "gfx/interface/technologies/vortex_shield.png"
+	}
+
+	SpriteType = {
+		name = "GFX_laser_mega_cannon_medium"
+		texturefile = "gfx/interface/technologies/laser_mega_cannon.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_ion_core_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_magic_storation_medium"
+		texturefile = "gfx/interface/technologies/reinforced_magic_storation.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_ion_core_medium"
+		texturefile = "gfx/interface/technologies/ion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tone_titan_core_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_small_missile_launcher_medium"
+		texturefile = "gfx/interface/technologies/small_missile_launcher.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tracking_missiles_medium"
+		texturefile = "gfx/interface/technologies/tracking_missiles.png"
+	}
+
+	SpriteType = {
+		name = "GFX_energy_shield_medium"
+		texturefile = "gfx/interface/technologies/energy_shield.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_tone_core_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_hostile_unit_detection_system_medium"
+		texturefile = "gfx/interface/technologies/hostile_unit_detection_system.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_tone_core_medium"
+		texturefile = "gfx/interface/technologies/tone_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ogre_titan_medium"
+		texturefile = "gfx/interface/technologies/heavy_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_high_energy_weapons_medium"
+		texturefile = "gfx/interface/technologies/high_energy_weapons.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_scorch_titan_core_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_aluminum_thermite_emitter_medium"
+		texturefile = "gfx/interface/technologies/aluminum_thermite_emitter.png"
+	}
+
+	SpriteType = {
+		name = "GFX_aluminum_thermite_wall_medium"
+		texturefile = "gfx/interface/technologies/aluminum_thermite_wall.png"
+	}
+
+	SpriteType = {
+		name = "GFX_heat_shield_medium"
+		texturefile = "gfx/interface/technologies/heat_shield.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_scorch_core_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_flame_trap_medium"
+		texturefile = "gfx/interface/technologies/flame_trap.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_scorch_core_medium"
+		texturefile = "gfx/interface/technologies/scorch_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_legion_titan_core_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_giant_rotary_machine_gun_medium"
+		texturefile = "gfx/interface/technologies/giant_rotary_machine_gun.png"
+	}
+
+	SpriteType = {
+		name = "GFX_high_performance_ammunition_medium"
+		texturefile = "gfx/interface/technologies/high_performance_ammunition.png"
+	}
+
+	SpriteType = {
+		name = "GFX_blast_type_ammunition_medium"
+		texturefile = "gfx/interface/technologies/blast_type_ammunition.png"
+	}
+
+	SpriteType = {
+		name = "GFX_reinforced_legion_core_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_machinegun_shield_medium"
+		texturefile = "gfx/interface/technologies/machinegun_shield.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_legion_core_medium"
+		texturefile = "gfx/interface/technologies/legion_titan_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_mp_storage_tech_medium"
+		texturefile = "gfx/interface/technologies/mp_storage_tech.png"
+	}
+
+	SpriteType = {
+		name = "GFX_early_caster_equipments_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_all_terrain_combat_special_training_medium"
+		texturefile = "gfx/interface/technologies/all_terrain_combat_special_training.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_enhanced_device_stability_medium"
+		texturefile = "gfx/interface/technologies/enhanced_device_stability.png"
+	}
+
+	SpriteType = {
+		name = "GFX_harmonize_production_specifications_medium"
+		texturefile = "gfx/interface/technologies/harmonize_production_specifications.png"
+	}
+
+	SpriteType = {
+		name = "GFX_active_mp_supply_medium"
+		texturefile = "gfx/interface/technologies/active_mp_supply.png"
+	}
+
+	SpriteType = {
+		name = "GFX_improved_mobility_medium"
+		texturefile = "gfx/interface/technologies/improved_mobility.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_advanced_energy_supply_facility_medium"
+		texturefile = "gfx/interface/technologies/advanced_energy_supply_facility.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/caster_equipment_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_enhanced_endurance_medium"
+		texturefile = "gfx/interface/technologies/enhanced_endurance.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_spatial_awareness_circuit_medium"
+		texturefile = "gfx/interface/technologies/spatial_awareness_circuit.png"
+	}
+
+	SpriteType = {
+		name = "GFX_enhanced_recognition_magic_medium"
+		texturefile = "gfx/interface/technologies/enhanced_recognition_magic.png"
+	}
+
+	SpriteType = {
+		name = "GFX_long_distance_communication_circuits_medium"
+		texturefile = "gfx/interface/technologies/long_distance_communication_circuits.png"
+	}
+
+	SpriteType = {
+		name = "GFX_frontline_coordination_center_medium"
+		texturefile = "gfx/interface/technologies/frontline_coordination_center.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_short_distance_teleportation_magic_medium"
+		texturefile = "gfx/interface/technologies/short_distance_teleportation_magic.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_recon_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/caster_recon_equipment_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_caster_attaker_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_high_energy_destructive_magic_medium"
+		texturefile = "gfx/interface/technologies/high_energy_destructive_magic.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_wide_area_bombing_medium"
+		texturefile = "gfx/interface/technologies/wide_area_bombing.png"
+	}
+
+	SpriteType = {
+		name = "GFX_sustained_fire_suppression_medium"
+		texturefile = "gfx/interface/technologies/sustained_fire_suppression.png"
+	}
+
+	SpriteType = {
+		name = "GFX_compressed_shells_medium"
+		texturefile = "gfx/interface/technologies/compressed_shells.png"
+	}
+
+	SpriteType = {
+		name = "GFX_over_the_horizon_strike_medium"
+		texturefile = "gfx/interface/technologies/over_the_horizon_strike.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_auto_track_magic_medium"
+		texturefile = "gfx/interface/technologies/auto_track_magic.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_attaker_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/caster_attaker_equipment_4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_0.png"
+	}
+
+	SpriteType = {
+		name = "GFX_modular_design_medium"
+		texturefile = "gfx/interface/technologies/modular_design.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_field_medical_modules_medium"
+		texturefile = "gfx/interface/technologies/field_medical_modules.png"
+	}
+
+	SpriteType = {
+		name = "GFX_logistics_handling_module_medium"
+		texturefile = "gfx/interface/technologies/logistics_handling_module.png"
+	}
+
+	SpriteType = {
+		name = "GFX_frontline_engineering_module_medium"
+		texturefile = "gfx/interface/technologies/frontline_engineering_module.png"
+	}
+
+	SpriteType = {
+		name = "GFX_equipment_repair_module_medium"
+		texturefile = "gfx/interface/technologies/equipment_repair_module.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_light_survival_module_medium"
+		texturefile = "gfx/interface/technologies/light_survival_module.png"
+	}
+
+	SpriteType = {
+		name = "GFX_caster_support_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/caster_support_equipment_3.png"
+	}
+
+}

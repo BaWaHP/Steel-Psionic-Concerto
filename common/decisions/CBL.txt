@@ -1,0 +1,133 @@
+CBL_putting_down_rebellion_decision_category = {
+	CBL_suppressing_commis = {		#镇压赤匪
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = CBL }
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = CBL_putting_down_rebellion_tr
+				always = no
+			}
+			num_divisions_in_states = {
+				count > 1
+				states = { 204 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		complete_effect = {}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					num_divisions_in_states = {
+						count > 1
+						states = { 204 }
+					}
+				}
+				custom_effect_tooltip = CBL_putting_down_rebellion_tt1
+			}
+			else = {
+				set_country_flag = CBL_pre_civ_state_situ_1
+				custom_effect_tooltip = CBL_putting_down_rebellion_tt2
+			}
+		}
+	}
+	CBL_resisting_knights = {		#抵御骑士团
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = CBL }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CBL_putting_down_rebellion_tr
+				always = no
+			}
+			num_divisions_in_states = {
+				count > 1
+				states = { 210 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		complete_effect = {}
+
+		timeout_effect = {  
+			if = {
+				limit = {
+					num_divisions_in_states = {
+						count > 1
+						states = { 210 }
+					}
+				}
+				custom_effect_tooltip = CBL_putting_down_rebellion_tt1
+			}
+			else = {
+				set_country_flag = CBL_pre_civ_state_situ_2
+				custom_effect_tooltip = CBL_putting_down_rebellion_tt2
+			}
+		}
+	}
+	CBL_take_over_key_sopts = {		#占领关键地区
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = RCC }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CBL_putting_down_rebellion_tr
+				always = no
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = yes
+		days_mission_timeout = 30
+
+		complete_effect = {}
+
+		timeout_effect = {  
+			if = {
+				limit = {
+					NOT = {
+						num_divisions_in_states = { count > 3 states = { 203 } }
+					}
+				}
+				set_country_flag = CBL_pre_civ_state_situ_3
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						num_divisions_in_states = { count > 6 states = { 207 } }
+					}
+				}
+				set_country_flag = CBL_pre_civ_state_situ_4
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						num_divisions_in_states = { count > 9 states = { 201 } }
+					}
+				}
+				set_country_flag = CBL_pre_civ_state_situ_5
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						num_divisions_in_states = { count > 11 states = { 214 } }
+					}
+				}
+				set_country_flag = CBL_pre_civ_state_situ_6
+			}
+
+			CBL_civil_war_begin_3_effect = yes
+		}
+	}
+}

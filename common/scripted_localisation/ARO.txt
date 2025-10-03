@@ -1,0 +1,505 @@
+defined_text = {
+	name = ARO_satisfaction_warmongers_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_warmongers < 0 }
+		}
+		localization_key = ARO_satisfaction_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_warmongers < 20 }
+		}
+		localization_key = ARO_satisfaction_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_warmongers < 40 }
+		}
+		localization_key = ARO_satisfaction_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_warmongers < 60 }
+		}
+		localization_key = ARO_satisfaction_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_warmongers < 80 }
+		}
+		localization_key = ARO_satisfaction_loc_4
+	}
+	text = {
+		localization_key = ARO_satisfaction_loc_5
+	}
+}
+
+defined_text = {
+	name = ARO_satisfaction_republicans_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_republicans < 0 }
+		}
+		localization_key = ARO_satisfaction_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_republicans < 20 }
+		}
+		localization_key = ARO_satisfaction_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_republicans < 40 }
+		}
+		localization_key = ARO_satisfaction_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_republicans < 60 }
+		}
+		localization_key = ARO_satisfaction_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_republicans < 80 }
+		}
+		localization_key = ARO_satisfaction_loc_4
+	}
+	text = {
+		localization_key = ARO_satisfaction_loc_5
+	}
+}
+
+defined_text = {
+	name = ARO_satisfaction_cultists_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_cultists < 0 }
+		}
+		localization_key = ARO_satisfaction_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_cultists < 20 }
+		}
+		localization_key = ARO_satisfaction_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_cultists < 40 }
+		}
+		localization_key = ARO_satisfaction_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_cultists < 60 }
+		}
+		localization_key = ARO_satisfaction_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_satisfaction_cultists < 80 }
+		}
+		localization_key = ARO_satisfaction_loc_4
+	}
+	text = {
+		localization_key = ARO_satisfaction_loc_5
+	}
+}
+defined_text = {
+	name = ARO_popularity_warmongers_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_warmongers < 5 }
+		}
+		localization_key = ARO_popularity_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_warmongers < 15 }
+		}
+		localization_key = ARO_popularity_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_warmongers < 25 }
+		}
+		localization_key = ARO_popularity_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_warmongers < 35 }
+		}
+		localization_key = ARO_popularity_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_warmongers < 50 }
+		}
+		localization_key = ARO_popularity_loc_4
+	}
+	text = {
+		localization_key = ARO_popularity_loc_5
+	}
+}
+
+defined_text = {
+	name = ARO_popularity_republicans_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_republicans < 5 }
+		}
+		localization_key = ARO_popularity_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_republicans < 15 }
+		}
+		localization_key = ARO_popularity_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_republicans < 25 }
+		}
+		localization_key = ARO_popularity_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_republicans < 35 }
+		}
+		localization_key = ARO_popularity_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_republicans < 50 }
+		}
+		localization_key = ARO_popularity_loc_4
+	}
+	text = {
+		localization_key = ARO_popularity_loc_5
+	}
+}
+
+defined_text = {
+	name = ARO_popularity_cultists_loc
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_cultists < 5 }
+		}
+		localization_key = ARO_popularity_loc_0
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_cultists < 15 }
+		}
+		localization_key = ARO_popularity_loc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_cultists < 25 }
+		}
+		localization_key = ARO_popularity_loc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_cultists < 35 }
+		}
+		localization_key = ARO_popularity_loc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_popularity_cultists < 50 }
+		}
+		localization_key = ARO_popularity_loc_4
+	}
+	text = {
+		localization_key = ARO_popularity_loc_5
+	}
+}
+
+defined_text = {
+	name = ARO_internal_tense_level
+	text = {
+		trigger = {
+			check_variable = { ARO_internal_tense > 0.2 }
+		}
+		localization_key = ARO_internal_tense_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { ARO_internal_tense > 0.1 }
+		}
+		localization_key = ARO_internal_tense_level_1
+	}
+	text = {
+		localization_key = ARO_internal_tense_level_0
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_selected_icon_name
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 72 }} localization_key = ARO_mfL_state_selected_icon_name_72 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 73 }} localization_key = ARO_mfL_state_selected_icon_name_73 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 74 }} localization_key = ARO_mfL_state_selected_icon_name_74 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 75 }} localization_key = ARO_mfL_state_selected_icon_name_75 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 79 }} localization_key = ARO_mfL_state_selected_icon_name_79 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 80 }} localization_key = ARO_mfL_state_selected_icon_name_80 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 81 }} localization_key = ARO_mfL_state_selected_icon_name_81 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 82 }} localization_key = ARO_mfL_state_selected_icon_name_82 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 83 }} localization_key = ARO_mfL_state_selected_icon_name_83 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 84 }} localization_key = ARO_mfL_state_selected_icon_name_84 }
+	text = { trigger = { check_variable = { ARO_mfL_state_selected = 86 }} localization_key = ARO_mfL_state_selected_icon_name_86 }
+	text = {
+		localization_key = ARO_mfL_state_selected_icon_name_79
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_72_name
+	text = { trigger = { 72 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_72_0"}
+	text = { trigger = { 72 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_72_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_72_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_73_name
+	text = { trigger = { 73 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_73_0"}
+	text = { trigger = { 73 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_73_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_73_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_74_name
+	text = { trigger = { 74 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_74_0"}
+	text = { trigger = { 74 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_74_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_74_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_75_name
+	text = { trigger = { 75 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_75_0"}
+	text = { trigger = { 75 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_75_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_75_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_79_name
+	text = { trigger = { 79 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_79_0"}
+	text = { trigger = { 79 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_79_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_79_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_80_name
+	text = { trigger = { 80 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_80_0"}
+	text = { trigger = { 80 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_80_1"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_80_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_81_name
+	text = { trigger = { 81 = { has_state_flag = ARO_mfL_state_status_cd }} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_cd"}
+	text = { trigger = { 81 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_0"}
+	text = { trigger = { 81 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_1"}
+	text = { trigger = { 81 = {check_variable = { ARO_mfL_state_status = 2 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_2"}
+	text = { trigger = { 81 = {check_variable = { ARO_mfL_state_status = 3 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_3"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_81_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_82_name
+	text = { trigger = { 82 = {has_state_flag = ARO_mfL_state_status_cd }} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_cd"}
+	text = { trigger = { 82 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_0"}
+	text = { trigger = { 82 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_1"}
+	text = { trigger = { 82 = {check_variable = { ARO_mfL_state_status = 2 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_2"}
+	text = { trigger = { 82 = {check_variable = { ARO_mfL_state_status = 3 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_3"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_82_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_83_name
+	text = { trigger = { 83 = {has_state_flag = ARO_mfL_state_status_cd }} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_cd"}
+	text = { trigger = { 83 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_0"}
+	text = { trigger = { 83 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_1"}
+	text = { trigger = { 83 = {check_variable = { ARO_mfL_state_status = 2 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_2"}
+	text = { trigger = { 83 = {check_variable = { ARO_mfL_state_status = 3 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_3"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_83_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_84_name
+	text = { trigger = { 84 = {has_state_flag = ARO_mfL_state_status_cd }} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_cd"}
+	text = { trigger = { 84 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_0"}
+	text = { trigger = { 84 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_1"}
+	text = { trigger = { 84 = {check_variable = { ARO_mfL_state_status = 2 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_2"}
+	text = { trigger = { 84 = {check_variable = { ARO_mfL_state_status = 3 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_3"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_84_0"
+	}
+}
+
+defined_text = {
+	name = ARO_mfL_state_86_name
+	text = { trigger = { 86 = {has_state_flag = ARO_mfL_state_status_cd }} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_cd"}
+	text = { trigger = { 86 = {check_variable = { ARO_mfL_state_status = 0 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_0"}
+	text = { trigger = { 86 = {check_variable = { ARO_mfL_state_status = 1 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_1"}
+	text = { trigger = { 86 = {check_variable = { ARO_mfL_state_status = 2 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_2"}
+	text = { trigger = { 86 = {check_variable = { ARO_mfL_state_status = 3 }}} localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_3"}
+	text = {
+		localization_key = "GFX_ARO_maraud_from_Lesnoden_state_86_0"
+	}
+}
+
+defined_text = {
+	name = ARO_dc_state_selected_icon_name
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 72 }} localization_key = "GFX_ARO_generic_gui_state_72_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 73 }} localization_key = "GFX_ARO_generic_gui_state_73_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 74 }} localization_key = "GFX_ARO_generic_gui_state_74_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 75 }} localization_key = "GFX_ARO_generic_gui_state_75_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 76 }} localization_key = "GFX_ARO_generic_gui_state_76_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 77 }} localization_key = "GFX_ARO_generic_gui_state_77_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 78 }} localization_key = "GFX_ARO_generic_gui_state_78_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 79 }} localization_key = "GFX_ARO_generic_gui_state_79_s" }
+	text = { trigger = { check_variable = { ARO_dc_state_selected = 80 }} localization_key = "GFX_ARO_generic_gui_state_80_s" }
+	text = {
+		localization_key = "GFX_ARO_generic_gui_state_79"
+	}
+}
+
+defined_text = {
+	name = ARO_dc_state_72_name
+	text = { trigger = { 72 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_72_3_0"}
+	text = { trigger = { 72 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_72_2_0"}
+	text = { trigger = { 72 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_72_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_72_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_73_name
+	text = { trigger = { 73 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_73_3_0"}
+	text = { trigger = { 73 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_73_2_0"}
+	text = { trigger = { 73 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_73_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_73_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_74_name
+	text = { trigger = { 74 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_74_3_0"}
+	text = { trigger = { 74 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_74_2_0"}
+	text = { trigger = { 74 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_74_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_74_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_75_name
+	text = { trigger = { 75 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_75_3_0"}
+	text = { trigger = { 75 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_75_2_0"}
+	text = { trigger = { 75 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_75_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_75_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_76_name
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_3_3"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_3_2"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_3_1"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_3_0"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_2_2"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_2_1"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_2_0"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 24.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_1_1"}
+	text = { trigger = { 76 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_76_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_76_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_77_name
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_3_3"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_3_2"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_3_1"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_3_0"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_2_2"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_2_1"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_2_0"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 24.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_1_1"}
+	text = { trigger = { 77 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_77_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_77_0_0"}
+}
+
+defined_text = {
+	name = ARO_dc_state_78_name
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_3_3"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_3_2"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 99.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_3_1"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_3_0"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_2_2"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 49.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_2_1"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_2_0"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 24.9 } check_variable = { ARO_annexation_of_skilight_cult > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_1_1"}
+	text = { trigger = { 78 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_78_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_78_0_0"}
+}
+
+defined_text = {
+	name = ARO_dc_state_79_name
+	text = { trigger = { 79 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_79_3_0"}
+	text = { trigger = { 79 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_79_2_0"}
+	text = { trigger = { 79 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_79_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_79_0_0" }
+}
+
+defined_text = {
+	name = ARO_dc_state_80_name
+	text = { trigger = { 80 = { check_variable = { ARO_influence_dawn_faith > 99.9 }}} localization_key = "GFX_ARO_dawn_church_state_80_3_0"}
+	text = { trigger = { 80 = { check_variable = { ARO_influence_dawn_faith > 49.9 }}} localization_key = "GFX_ARO_dawn_church_state_80_2_0"}
+	text = { trigger = { 80 = { check_variable = { ARO_influence_dawn_faith > 24.9 }}} localization_key = "GFX_ARO_dawn_church_state_80_1_0"}
+	text = { localization_key = "GFX_ARO_dawn_church_state_80_0_0" }
+}
+
+defined_text = {
+	name = ARO_dawn_church_desc_select
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { ARO_dc_state_selected = 76 }
+				check_variable = { ARO_dc_state_selected = 77 }
+				check_variable = { ARO_dc_state_selected = 78 }
+			}
+		}
+		localization_key = ARO_dawn_church_desc_selected
+	}
+	text = { localization_key = ARO_dawn_church_desc_null }
+}
+
+defined_text = {
+	name = ARO_0106_d1
+	text = { trigger = { has_country_flag = ARO_Cheng_Yulu_Salvation } localization_key = ARO.0106.d1.1 }
+	text = { localization_key = ARO.0106.d1.2 }
+}
+
+defined_text = {
+	name = ARO_0134_d1
+	text = { trigger = { has_completed_focus = ARO_Lesnoden_Glonia_cooperation } localization_key = ARO.0134.d1.1 }
+	text = { localization_key = ARO.0134.d1.2 }
+}
+

@@ -1,0 +1,24 @@
+characters={
+
+	OHL_andral_shokufu = {		#安德拉尔·烁羽
+   		name = OHL_andral_shokufu
+   		portraits = {
+   			civilian = {
+   				large="GFX_OHL_andral_shokufu"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_OHL_andral_shokufu"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			#desc = OHL_andral_shokufu_desc
+   			ideology = oligarchy
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+}

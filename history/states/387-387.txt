@@ -1,0 +1,29 @@
+
+state={
+	id=387
+	name="STATE_387"
+	resources = {
+		rubber = 24
+		steel = 4
+	}
+	provinces={
+		3490 5496 6554 6731 10105 11463 11653 19463 19529 19541 19619 19626 19703 19763 19786 
+	}
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 1
+			11463 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			11463 3
+		}
+	}
+	manpower=397100
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

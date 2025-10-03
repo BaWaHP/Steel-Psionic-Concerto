@@ -1,0 +1,249 @@
+leader_traits = {
+
+	western_coast_industrial_nobility = {					#西海岸工业贵族
+		random = no
+
+		consumer_goods_expected_value = 0.05
+		industrial_capacity_factory = -0.1
+		industrial_capacity_dockyard = -0.1
+		production_speed_buildings_factor = -0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	western_coast_industrial_expert = {					#西海岸工业大亨
+		random = no
+
+		production_speed_buildings_factor = 0.05
+		production_factory_efficiency_gain_factor = -0.1
+		production_factory_max_efficiency_factor = 0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	corrupted_landlord = {					#陈腐的乡绅
+		random = no
+
+		political_power_factor = -0.05
+		stability_factor = -0.1
+		consumer_goods_expected_value = 0.05
+		local_building_slots_factor = -0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	retired_landlord = {					#退休乡绅
+		random = no
+
+		political_power_factor = -0.05
+		stability_factor = 0.05
+		local_building_slots_factor = 0.05
+		monthly_population = 0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	confident_mineral_tycoon = {					#自以为是的矿产大亨
+		random = no
+
+		political_power_factor = -0.05
+		consumer_goods_expected_value = 0.05
+		local_resources_factor = -0.1
+		production_speed_buildings_factor = -0.05
+		industrial_capacity_factory = -0.05
+		industrial_capacity_dockyard = -0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	son_of_mineral_tycoon = {					#矿产大亨之子
+		random = no
+
+		local_resources_factor = 0.1
+		production_speed_buildings_factor = 0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ambitious_nobility = {					#野心勃勃的贵族
+		random = no
+
+		political_power_factor = -0.1
+		consumer_goods_expected_value = 0.05
+		stability_factor = -0.1
+		war_support_factor = -0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	moderate_nobility = {					#温和的贵族
+		random = no
+
+		political_power_factor = 0.1
+		stability_factor = -0.05
+		war_support_factor = -0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	agriculture_and_geology_speicalist = {					#农业与地理专家
+		random = no
+
+		monthly_population = 0.1
+		global_building_slots_factor = 0.05
+		local_resources_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		monthly_agricultural_development_process = 1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	crazy_magic_researcher = {					#疯狂的魔法研究者
+		random = no
+
+		research_speed_factor = 0.05
+		stability_factor = -0.05
+		political_power_factor = -0.05
+		state_magic_development_monthly = 0.02
+
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	king_royalist = {					#国王忠诚派
+		random = no
+
+		political_power_factor = 0.2
+		stability_factor = 0.1
+		drift_defence_factor = 0.3
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	reformation_broker = {					#改革派皮条客
+		random = no
+
+		political_power_factor = -0.05
+		stability_factor = -0.05
+		worldunion_socialist_drift = 0.01
+		worldunion_democrat_drift = 0.01
+		liberal_republican_drift = 0.01
+		authoritarian_republican_drift = 0.01
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	research_elite = {					#学术精英
+		random = no
+
+		research_speed_factor = 0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_mysterious_one = {					#神秘之人
+		random = no
+
+		stability_factor = -0.05
+		political_power_factor = 0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	determination_of_the_dying_one = {					#将死之人的决心
+		random = no
+
+		stability_factor = 0.05
+		political_power_factor = 0.2
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SFH_give_power_to_people = {					#放权于民
+		random = no
+
+		stability_factor = -0.2
+		stability_weekly = 0.002
+		war_support_factor = -0.1
+		war_support_weekly = 0.001
+		political_power_factor = 0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SFH_peoples_queen = {					#人民的女皇
+		random = no
+
+		stability_factor = 0.1
+		political_power_factor = -0.1
+		political_advisor_cost_factor = -0.25
+		army_advisor_cost_factor = -0.25
+		navy_advisor_cost_factor = -0.25
+		air_advisor_cost_factor = -0.25
+		consumer_goods_factor = -0.05
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SFH_queen_with_constitution = {					#立宪女皇
+		random = no
+
+		stability_factor = 0.1
+		political_power_factor = -0.2
+		stability_weekly = 0.001
+		production_speed_buildings_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.1
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SFH_ruler_of_farhome = {					#远乡之主
+		random = no
+
+		stability_factor = 0.25
+		war_support_factor = 0.25
+		political_power_factor = 0.25
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

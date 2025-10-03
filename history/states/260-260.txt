@@ -1,0 +1,40 @@
+
+state={
+	id=260
+	name="STATE_260"
+
+	resources = {
+		rubber = 24
+		magic_crystal = 4
+		tungsten = 2
+	}
+
+	history={
+		owner = UAC
+		add_core_of = UAC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			7708 = {
+				naval_base = 1
+			}
+			20634 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			20634 3
+		}
+		victory_points = {
+			7708 1
+		}
+	}
+
+	provinces={
+		2096 4049 7708 9499 9699 10622 12101 20515 20634 20655 20681 20694 20719 20776 20788 20805 
+	}
+	manpower=800200
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

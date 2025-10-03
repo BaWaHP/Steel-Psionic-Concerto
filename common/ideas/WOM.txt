@@ -1,0 +1,128 @@
+ideas = {
+	country = {
+
+		WOM_triumph_of_empire = {		#凯旋之帝国
+			picture = WOM_triumph_of_empire
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				drift_defence_factor = 0.2
+				rulling_ideology_drift = 0.02
+				army_strength_factor = 1
+			}
+		}
+
+		WOM_slavery_for_unhuman_races = {		#非人物种奴隶制
+			picture = WOM_slavery_for_unhuman_races
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				monthly_population = -0.2
+				conscription_factor = -0.2
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		WOM_wome_national_army = {		#沃姆国防军
+			picture = WOM_wome_national_army
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				planning_speed = 0.1
+				command_power_gain_mult = 0.1
+				max_command_power_mult = -0.2
+				experience_gain_army_factor = 0.1
+				land_doctrine_cost_factor = -0.1
+				monthly_military_development_process = 2
+			}
+		}
+
+		WOM_end_of_econ_miracle = {		#经济腾飞的尾声
+			picture = WOM_end_of_econ_miracle
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_industrial_development_process = 1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#潜在的通胀危机
+		WOM_potential_inflation_crisis = {
+			picture = ARG_economic_reactivation
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#国防军不满
+		WOM_national_army_discontent = {
+			picture = WOM_wome_national_army
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				war_support_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+				planning_speed = -0.2
+				command_power_gain_mult = -0.1
+				max_command_power_mult = -0.2
+				training_time_army_factor = 1
+				monthly_military_development_process = -1
+			}
+		}
+
+		#黑霜危机
+		WOM_black_frost_crisis_1 = {	
+			name = WOM_black_frost_crisis
+			picture = generic_economic_crisis
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			on_add = { WOM_black_frost_crisis_effect = yes }
+			modifier = {
+				consumer_goods_factor = 0.4
+				research_speed_factor = -0.2
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				monthly_industrial_development_process = -2
+				monthly_agricultural_development_process = -2
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		#奴隶暴动
+		WOM_slave_revolt_1 = {
+			name = WOM_slave_revolt
+			picture = MEX_revolutionary_army
+			allowed = { original_tag = WOM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.1
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+	}
+}

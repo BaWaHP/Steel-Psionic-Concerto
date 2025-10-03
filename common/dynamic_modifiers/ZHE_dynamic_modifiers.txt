@@ -1,0 +1,74 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+ZHE_forward_planning_dynamic_modifier = {		#超前规划
+	enable = { always = yes }
+
+	icon = GFX_idea_air_support_focus
+
+	political_power_factor = ZHE_forward_planning_ppf
+	production_speed_infrastructure_factor = ZHE_forward_planning_psif
+	production_speed_rail_way_factor = ZHE_forward_planning_psrwf
+	production_speed_industrial_complex_factor = ZHE_forward_planning_psicf
+	production_speed_arms_factory_factor = ZHE_forward_planning_psaff
+	production_speed_supply_node_factor = ZHE_forward_planning_dynamic_modifier_pssnf
+	industrial_concern_cost_factor = ZHE_forward_planning_dynamic_modifier_iccf
+}
+
+#ZHE_made_in_zhetysu = {		#七河制造
+#	enable = { always = yes }
+#
+#	icon = GFX_idea_ZHE_made_in_zhetysu
+#
+#	conscription_factor = ZHE_made_in_zhetysu_cf
+#	production_factory_max_efficiency_factor = ZHE_made_in_zhetysu_pfmef
+#	line_change_production_efficiency_factor = ZHE_made_in_zhetysu_lcpef
+#	production_factory_efficiency_gain_factor = ZHE_made_in_zhetysu_pfegf
+#}
+
+ZHE_interest_groups_dynamic_modifier = {		#利益集团影响力
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_disjointed_gov
+
+	stability_factor = ZHE_interest_group_st
+	political_power_factor = ZHE_interest_group_ppf
+	industrial_capacity_factory = ZHE_interest_group_icf
+	local_resources_factor = ZHE_interest_group_lrf
+	production_factory_efficiency_gain_factor = ZHE_interest_group_pfegf
+	production_factory_max_efficiency_factor = ZHE_interest_group_pfmef
+}
+
+ZHE_bureaucratic_monopoly_dynamic_modifier = {		#官僚垄断
+	enable = { always = yes }
+
+	icon = GFX_idea_ZHE_unbreakable_federation
+
+	political_power_cost = ZHE_bureaucratic_monopoly_var_ppc
+	consumer_goods_factor = ZHE_bureaucratic_monopoly_var_cgf
+	local_resources_factor = ZHE_bureaucratic_monopoly_var_lrf
+	command_power_gain_mult = ZHE_bureaucratic_monopoly_var_cpgm
+}

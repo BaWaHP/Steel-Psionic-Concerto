@@ -1,0 +1,57 @@
+ARO_Auroretia_internal_crisis = {		#奥罗日亚内部危机
+	allowed = { tag = ARO }
+	visible = { 
+		NOT = {
+			has_country_flag = ARO_civil_war_broke_out
+		}
+	}
+	visible_when_empty = no
+	priority = 100
+}
+
+ARO_maraud_from_Lesnoden = {		#掠夺雷斯诺顿
+	scripted_gui = ARO_maraud_from_Lesnoden_gui
+	allowed = { tag = ARO }
+	visible = { 
+		has_completed_focus = ARO_maraud_Lesnoden_industry
+		NOT = {
+			AND = {
+				has_country_flag = ARO_marauders_is_purged
+				check_variable = { ARO_mfL_maraud_action_plenty < 49.9 }
+			}
+		}
+		controls_state = 72
+		controls_state = 73
+		controls_state = 74
+		controls_state = 75
+		controls_state = 79
+		controls_state = 80
+		controls_state = 81
+		controls_state = 82
+		controls_state = 83
+		controls_state = 84
+		controls_state = 86
+	}
+	visible_when_empty = no
+	priority = 90
+}
+
+ARO_dawn_church = {		#曙光教廷
+	scripted_gui = ARO_dawn_church_gui
+	allowed = { tag = ARO }
+	visible = { 
+		#has_completed_focus = ARO_maraud_Lesnoden_industry
+		NOT = { has_country_flag = ARO_faction_problem_solved_c }
+		controls_state = 72
+		controls_state = 73
+		controls_state = 74
+		controls_state = 75
+		controls_state = 76
+		controls_state = 77
+		controls_state = 78
+		controls_state = 79
+		controls_state = 80
+	}
+	visible_when_empty = yes
+	priority = 180
+}

@@ -1,0 +1,357 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_VLF_startup_effect = {
+	if = {
+		limit = { tag = VLF }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = high_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = uncomfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_government_target
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_freedom_speech
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_herbivorous_orcs
+		add_ideas = SR_unharmonized_multi_ethnic_states
+		add_ideas = RAP_suppression
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		give_resource_rights = {
+			receiver = ZHE
+			state = 455
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 456
+		}
+		###控制省份对应普及度##
+		455 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		456 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+			add_dynamic_modifier = { modifier = VLF_land_of_bunkers }
+		}
+		457 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		465 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+	}
+}
+
+VLF_regents_wish_setup = {
+	set_country_flag = VLF_regents_wish_on
+	unlock_decision_category_tooltip = VLF_regents_wish
+
+	#教会
+	set_variable = { VLF_regents_wish_1_1 = 60 }	#支持度
+	set_variable = { VLF_regents_wish_1_2 = 60 }	#影响力
+
+	#贵族
+	set_variable = { VLF_regents_wish_2_1 = 15 }	#支持度
+	set_variable = { VLF_regents_wish_2_2 = 70 }	#影响力
+
+	#民众
+	set_variable = { VLF_regents_wish_3_1 = 25 }	#支持度
+	set_variable = { VLF_regents_wish_3_2 = 10 }	#影响力
+
+	add_dynamic_modifier = { modifier = VLF_regents_wish_modifier_1 }
+	add_dynamic_modifier = { modifier = VLF_regents_wish_modifier_2 }
+	add_dynamic_modifier = { modifier = VLF_regents_wish_modifier_3 }
+
+	set_variable = { VLF_refugee_crisis_time = 50 }
+	activate_mission = VLF_refugee_crisis
+	activate_mission = VLF_gov_distable
+
+	VLF_regents_wish_update = yes
+}
+
+VLF_regents_wish_update = {
+	clamp_temp_variable = {
+		var = VLF_regents_wish_1_1
+		min = 0
+		max = 100
+	}
+	clamp_temp_variable = {
+		var = VLF_regents_wish_1_2
+		min = 0
+		max = 100
+	}
+	clamp_temp_variable = {
+		var = VLF_regents_wish_2_1
+		min = 0
+		max = 100
+	}
+	clamp_temp_variable = {
+		var = VLF_regents_wish_2_2
+		min = 0
+		max = 100
+	}
+	clamp_temp_variable = {
+		var = VLF_regents_wish_3_1
+		min = 0
+		max = 100
+	}
+	clamp_temp_variable = {
+		var = VLF_regents_wish_3_2
+		min = 0
+		max = 100
+	}
+	VLF_regents_wish_update_modifier = yes
+}
+
+VLF_regents_wish_update_modifier = {
+	if = {
+		limit = { check_variable = { VLF_regents_wish_1_1 > 80 } }
+		set_variable = { VLF_regents_wish_modifier_1_ppf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_1 < 80 } }
+		set_variable = { VLF_regents_wish_modifier_1_ppf = -0.05 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_1_1 > 49 } }
+		set_variable = { VLF_regents_wish_1_1_level = 1 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_1_1_level = -1 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_1_2 > 80 } }
+		set_variable = { VLF_regents_wish_1_2_level = 5 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2 > 60 } }
+		set_variable = { VLF_regents_wish_1_2_level = 4 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2 > 40 } }
+		set_variable = { VLF_regents_wish_1_2_level = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2 > 20 } }
+		set_variable = { VLF_regents_wish_1_2_level = 2 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_1_2_level = 1 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_2_1 > 80 } }
+		set_variable = { VLF_regents_wish_modifier_2_ppf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_1 < 80 } }
+		set_variable = { VLF_regents_wish_modifier_2_ppf = -0.05 }
+	}
+	if = {
+		limit = { check_variable = { VLF_regents_wish_2_1 > 49 } }
+		set_variable = { VLF_regents_wish_2_1_level = 1 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_2_1_level = -1 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_2_2 > 80 } }
+		set_variable = { VLF_regents_wish_2_2_level = 5 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2 > 60 } }
+		set_variable = { VLF_regents_wish_2_2_level = 4 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2 > 40 } }
+		set_variable = { VLF_regents_wish_2_2_level = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2 > 20 } }
+		set_variable = { VLF_regents_wish_2_2_level = 2 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_2_2_level = 1 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_3_1 > 80 } }
+		set_variable = { VLF_regents_wish_modifier_3_ppf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_1 < 80 } }
+		set_variable = { VLF_regents_wish_modifier_3_ppf = -0.05 }
+	}
+	if = {
+		limit = { check_variable = { VLF_regents_wish_3_1 > 49 } }
+		set_variable = { VLF_regents_wish_3_1_level = 1 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_3_1_level = -1 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_3_2 > 80 } }
+		set_variable = { VLF_regents_wish_3_2_level = 5 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2 > 60 } }
+		set_variable = { VLF_regents_wish_3_2_level = 4 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2 > 40 } }
+		set_variable = { VLF_regents_wish_3_2_level = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2 > 20 } }
+		set_variable = { VLF_regents_wish_3_2_level = 2 }
+	}
+	else = {
+		set_variable = { VLF_regents_wish_3_2_level = 1 }
+	}
+
+	set_variable = { VLF_regents_wish_modifier_wsf = 0 }
+	set_variable = { VLF_regents_wish_modifier_ttaf = 0 }
+	set_variable = { VLF_regents_wish_modifier_aor = 0 }
+	set_variable = { VLF_regents_wish_modifier_sf = 0 }
+	set_variable = { VLF_regents_wish_modifier_pacf = 0 }
+	set_variable = { VLF_regents_wish_modifier_ps = 0 }
+	set_variable = { VLF_regents_wish_modifier_cgf = 0 }
+	set_variable = { VLF_regents_wish_modifier_psbf = 0 }
+	set_variable = { VLF_regents_wish_modifier_icf = 0 }
+	set_variable = { VLF_regents_wish_modifier_lrf = 0 }
+	set_variable = { VLF_regents_wish_modifier_cf = 0 }
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_1_2_level = 2 } }
+		set_variable = { VLF_regents_wish_modifier_wsf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2_level = 3 } }
+		set_variable = { VLF_regents_wish_modifier_wsf = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2_level = 4 } }
+		set_variable = { VLF_regents_wish_modifier_wsf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_ttaf = -0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_1_2_level = 5 } }
+		set_variable = { VLF_regents_wish_modifier_wsf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_ttaf = -0.1 }
+		set_variable = { VLF_regents_wish_modifier_aor = -0.05 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_2_2_level = 2 } }
+		set_variable = { VLF_regents_wish_modifier_sf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2_level = 3 } }
+		set_variable = { VLF_regents_wish_modifier_sf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_pacf = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2_level = 4 } }
+		set_variable = { VLF_regents_wish_modifier_sf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_pacf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_ps = 0.05 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_2_2_level = 5 } }
+		set_variable = { VLF_regents_wish_modifier_sf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_pacf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_ps = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_cgf = -0.05 }
+	}
+
+	if = {
+		limit = { check_variable = { VLF_regents_wish_3_2_level = 2 } }
+		set_variable = { VLF_regents_wish_modifier_psbf = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2_level = 3 } }
+		set_variable = { VLF_regents_wish_modifier_psbf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_icf = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2_level = 4 } }
+		set_variable = { VLF_regents_wish_modifier_psbf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_icf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_lrf = 0.1 }
+	}
+	else_if = {
+		limit = { check_variable = { VLF_regents_wish_3_2_level = 5 } }
+		set_variable = { VLF_regents_wish_modifier_psbf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_icf = 0.15 }
+		set_variable = { VLF_regents_wish_modifier_lrf = 0.1 }
+		set_variable = { VLF_regents_wish_modifier_cf = 0.15 }
+	}
+
+	multiply_variable = { VLF_regents_wish_modifier_wsf = VLF_regents_wish_1_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_ttaf = VLF_regents_wish_1_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_aor = VLF_regents_wish_1_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_sf = VLF_regents_wish_2_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_pacf = VLF_regents_wish_2_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_ps = VLF_regents_wish_2_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_cgf = VLF_regents_wish_2_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_psbf = VLF_regents_wish_3_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_icf = VLF_regents_wish_3_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_lrf = VLF_regents_wish_3_1_level }
+	multiply_variable = { VLF_regents_wish_modifier_cf = VLF_regents_wish_3_1_level }
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=440
+	name="STATE_440"
+	provinces={
+		622 7544 8360 9661 12087 20577 20591 20702 
+	}
+	resources = {
+		oil = 10
+	}
+	history = {
+		owner = IMC
+		add_core_of = IMC
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 2
+			dockyard = 2
+			12087 = { naval_base = 3 }
+		}
+		victory_points = {
+			7544 25
+		}
+		victory_points = {
+			12087 5
+		}
+	}
+	manpower = 1100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=28
+	name="STATE_28"
+	resources={
+		chromium=24.000
+		magic_crystal=8.000
+	}
+
+	history={
+		owner = KOD
+		add_core_of = KOD
+		add_claim_by = SFH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			6315 8
+		}
+	}
+
+	provinces={
+		4824 5752 6315 7525 11056 11492 16231 16276 16329 16374 16420 16564 16627 
+	}
+	manpower = 642468
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

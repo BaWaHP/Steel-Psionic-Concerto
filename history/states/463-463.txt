@@ -1,0 +1,29 @@
+
+state={
+	id=463
+	name="STATE_463"
+	provinces={
+		2780 4582 5527 6607 6743 6926 7491 9172 9195 18108 18197 18285 18317 18556 18654 
+	}
+	history = {
+		owner = MTV
+		add_core_of = MTV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			5527 8
+		}
+		victory_points = {
+			2780 8
+		}
+		victory_points = {
+			6926 5
+		}
+	}
+	manpower = 1600000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

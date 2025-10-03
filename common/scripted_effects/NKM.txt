@@ -1,0 +1,280 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_NKM_startup_effect = {
+	if = {
+		limit = {
+			tag = NKM
+		}
+		###政府法案###
+		add_ideas = extensive_conscription
+		add_ideas = basic_training
+		add_ideas = partial_economic_mobilisation
+		add_ideas = export_focus
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = isolation_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = self_efficient_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = struggle_to_survive
+		add_ideas = relatively_comfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_basic_funds
+		add_ideas = WP_symbolic_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_no_restriction
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_Subhuman
+		add_ideas = SR_wingman
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_reactionary_policy
+		#损害建筑#
+		223 = {
+			damage_building = { type = industrial_complex damage = 0.5 }
+			damage_building = { type = arms_factory damage = 0.5 }
+		}
+		224 = {
+			damage_building = { type = industrial_complex damage = 0.3 }
+		}
+		225 = {
+			damage_building = { type = arms_factory damage = 0.3 }
+		}
+		226 = {
+			damage_building = { type = arms_factory damage = 0.8 }
+		}
+		228 = {
+			damage_building = { type = infrastructure damage = 0.8 }
+			damage_building = { type = industrial_complex damage = 0.5 }
+			damage_building = { type = arms_factory damage = 0.8 }
+			damage_building = { type = dockyard damage = 0.8 }
+		}
+		229 = {
+			damage_building = { type = infrastructure damage = 0.2 }
+		}
+		230 = {
+			damage_building = { type = infrastructure damage = 0.2 }
+			damage_building = { type = dockyard damage = 0.2 }
+		}
+		231 = {
+			damage_building = { type = infrastructure damage = 0.2 }
+			damage_building = { type = industrial_complex damage = 0.8 }
+		}
+		232 = {
+			damage_building = { type = infrastructure damage = 0.5 }
+			damage_building = { type = industrial_complex damage = 0.8 }
+			damage_building = { type = dockyard damage = 0.5 }
+		}
+		233 = {
+			damage_building = { type = infrastructure damage = 0.2 }
+			damage_building = { type = arms_factory damage = 0.8 }
+		}
+		234 = {
+			damage_building = { type = infrastructure damage = 0.2 }
+			damage_building = { type = industrial_complex damage = 0.2 }
+		}
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 218
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 219
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 220
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 221
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 222
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 223
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 224
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 225
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 226
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 227
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 228
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 229
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 230
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 231
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 232
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 233
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 234
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 235
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 279
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+		}
+	}
+}

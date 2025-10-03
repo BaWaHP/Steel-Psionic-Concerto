@@ -1,0 +1,80 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_QTA_startup_effect = {
+	if = {
+		limit = { tag = QTA }
+		###介绍页面###
+		set_variable = { SPC_intro_screen = 1 }
+		###普及度修正部分###
+		set_variable = { magic_development_monthly_buff = 0 }
+		set_variable = { science_development_monthly_buff = 0 }
+		every_owned_state = {
+			set_variable = { state_magic_monthly_buff = 0 }
+			set_variable = { state_science_monthly_buff = 0 }
+		}
+		###政府法案###
+		add_ideas = service_by_requirement
+		add_ideas = no_standard_at_all
+		add_ideas = partial_economic_mobilisation
+		add_ideas = limited_exports
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = aggressive_tatic
+		###发展度###
+		add_ideas = handcraft_industry
+		add_ideas = weak_agriculture
+		add_ideas = unorganized_army
+		add_ideas = normally_living
+		add_ideas = uncomfortable
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_basic_funding
+		add_ideas = IP_basic_funds
+		add_ideas = WP_basic_laws
+		add_ideas = AP_better_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_only_our_voice
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_LingRen
+		add_ideas = RAP_suppression
+		add_ideas = RLP_moralism
+		add_ideas = SXP_recessing_policy
+		###发展度设置###
+		SPC_development_update_effect = yes
+		###其它开局设置###
+		delete_unit_template_and_units = { division_template = "皇家卫队" }
+		delete_unit_template_and_units = { division_template = "远乡正规军" }
+		delete_unit_template_and_units = { division_template = "远乡边防军" }
+		delete_unit_template_and_units = { division_template = "远乡装甲部队" }
+		load_oob = "QTA"
+		activate_mission = SFH_taking_actions
+		activate_mission = SFR_taking_actions
+		activate_mission = QTA_taking_actions
+	}
+}

@@ -1,0 +1,30 @@
+﻿units = {
+	fleet = {
+		name = "远乡皇家舰队"
+		naval_base = 8314
+		task_force = {
+			name = "远乡皇家舰队"
+			location = 8314
+			ship = { name = "麒麟级" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = SFH version_name = "麒麟级"} } }
+			ship = { name = "平京级" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = SFH version_name = "平京级"} } }
+			ship = { name = "大港级一号舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SFH version_name = "大港级"} } }
+			ship = { name = "大港级二号舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SFH version_name = "大港级"} } }
+			ship = { name = "大港级三号舰" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SFH version_name = "大港级"} } }
+			ship = { name = "乡安级一号舰" definition = light_cruiser equipment = { ship_hull_light_1 = { amount = 1 owner = SFH version_name = "乡安级"} } }
+			ship = { name = "乡安级二号舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SFH version_name = "乡安级"} } }
+			ship = { name = "乡安级三号舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SFH version_name = "乡安级"} } }
+			ship = { name = "乡安级四号舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SFH version_name = "乡安级"} } }
+			ship = { name = "乡安级五号舰" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SFH version_name = "乡安级"} } }
+			ship = { name = "王国级一号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级二号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级三号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级四号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级五号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级六号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级七号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级八号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级九号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+			ship = { name = "王国级十号舰" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SFH version_name = "王国级"} } }
+		}
+	}
+}

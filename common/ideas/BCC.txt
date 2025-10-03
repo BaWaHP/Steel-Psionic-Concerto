@@ -1,0 +1,63 @@
+ideas = {
+
+	country = {
+
+        BCC_security_contractor = {		#安全承包商
+			picture = ETH_peacekeeping_forces
+			allowed = { original_tag = BCC }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				global_building_slots_factor = -0.2
+				conscription_factor = -0.5
+				weekly_manpower = 2000
+				custom_modifier_tooltip = BCC_security_contractor_tt
+			}
+		}
+
+        BCC_veteran_of_hundred_wars = {		#百战老兵
+			picture = generic_reserve_divisions
+			allowed = { original_tag = BCC }
+			removal_cost = -1
+
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.2
+				experience_gain_army_factor = -0.5
+				training_time_factor = 0.5
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+		
+        BCC_no_way_home = {		#归乡无期
+			picture = prc_low_popular_support
+			allowed = { original_tag = BCC }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
+				custom_modifier_tooltip = BCC_no_way_home_tt
+			}
+		}
+
+        BCC_turn_a_blind_eye = {		#“睁一只眼，闭一只眼”
+			picture = tur_coordinated_balkan_armed_forces
+			allowed = { original_tag = BCC }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = 0.05
+			}
+		}
+
+	}
+
+}

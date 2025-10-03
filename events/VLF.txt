@@ -1,0 +1,121 @@
+﻿add_namespace = VLF
+
+country_event = {	#没有意义的谈判
+	id = VLF.1
+	title = VLF.1.t
+	desc = VLF.1.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = VLF.1.a
+		add_ideas = VLF_cracked_crown
+	}
+}
+
+country_event = {	#穆勒斯只怜悯先选之民
+	id = VLF.2
+	title = VLF.2.t
+	desc = VLF.2.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = VLF.2.a
+		VLF_vallefiorita_church = {
+			add_advisor_role = {
+				advisor = {
+					cost = 150
+					slot = political_advisor
+					idea_token = VLF_vallefiorita_church_idea
+					traits = { VLF_spiritual_mobilization }
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#空余酒味飘荡
+	id = VLF.3
+	title = VLF.3.t
+	desc = VLF.3.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = VLF.3.a
+		VLF_regents_wish_setup = yes
+	}
+}
+
+country_event = {	#愿奥布雷偌维奇的铁蹄长鸣
+	id = VLF.4
+	title = VLF.4.t
+	desc = VLF.4.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = VLF.4.a
+		add_advisor_role = {
+			character = VLF_ivan_obrenovich
+			advisor = {
+				slot = political_advisor
+				cost = 100
+				idea_token = VLF_ivan_obrenovich_idea
+				traits = { VLF_opposition_assistance }
+			}
+		}
+	}
+}
+
+country_event = {	#为铁军再次注入润滑剂
+	id = VLF.5
+	title = VLF.5.t
+	desc = VLF.5.d
+	#picture = 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = VLF.5.a
+		add_political_power = -100
+		add_corps_commander_role = {
+			character = VLF_rinaldav_obrenovich
+			traits = { organizer infantry_leader }
+			skill = 4
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+}
+
+###新闻###
+
+add_namespace = VLFNews
+
+news_event = {
+	id = VLFNews.1
+	title = VLFNews.1.t
+	desc = VLFNews.1.d
+	picture = GFX_news_event_generic_rally
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = VLFNews.1.a
+	}
+}

@@ -1,0 +1,19 @@
+﻿###########################
+# Ace pilots Events
+###########################
+
+add_namespace = BSK
+
+#总暴动
+country_event = {
+	id = BSK.1
+	title = BSK.1.t
+	desc = BSK.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = BSK.1.a
+	}
+}

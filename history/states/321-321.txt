@@ -1,0 +1,26 @@
+
+state={
+	id=321
+	name="STATE_321"
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		victory_points = {
+			1177 3 
+		}
+
+	}
+
+	provinces={
+		283 1177 5992 9138 9918 11341 20238 20306 
+	}
+	manpower=1730000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

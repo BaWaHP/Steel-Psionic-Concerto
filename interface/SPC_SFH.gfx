@@ -1,0 +1,806 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_SFH_ZhengJun"
+		texturefile = "gfx/leaders/SFH/SFH_ZhengJun.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhengHong_1"
+		texturefile = "gfx/leaders/SFH/ZhengHong_1.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhengHong_2"
+		texturefile = "gfx/leaders/SFH/ZhengHong_2.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhengHong_3"
+		texturefile = "gfx/leaders/SFH/ZhengHong_3.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhengHong_4"
+		texturefile = "gfx/leaders/SFH/ZhengHong_3.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_XuSheng"
+		texturefile = "gfx/leaders/SFH/XuSheng.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhouGongyi"
+		texturefile = "gfx/leaders/SFH/ZhouGongyi.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_LuZhan"
+		texturefile = "gfx/leaders/SFH/LuZhan.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_HaiWei"
+		texturefile = "gfx/leaders/SFH/HaiWei.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_LuBo"
+		texturefile = "gfx/leaders/SFH/LuBo.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhangHuawu"
+		texturefile = "gfx/leaders/SFH/ZhangHuawu.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_LinChun"
+		texturefile = "gfx/leaders/SFH/LinChun.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_YuanHai"
+		texturefile = "gfx/leaders/SFH/YuanHai.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_HuaiYang"
+		texturefile = "gfx/leaders/SFH/HuaiYang.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_NiuShou"
+		texturefile = "gfx/leaders/SFH/NiuShou.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_YaoBai"
+		texturefile = "gfx/leaders/SFH/YaoBai.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_YingQichen"
+		texturefile = "gfx/leaders/SFH/YingQichen.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_GanPan"
+		texturefile = "gfx/leaders/SFH/GanPan.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhuangFugui"
+		texturefile = "gfx/leaders/SFH/ZhuangFugui.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_FengLongzhi"
+		texturefile = "gfx/leaders/SFH/FengLongzhi.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_XiongYunzhi"
+		texturefile = "gfx/leaders/SFH/XiongYunzhi.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_MuShaoyuan"
+		texturefile = "gfx/leaders/SFH/MuShaoyuan.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_JiangLebai"
+		texturefile = "gfx/leaders/SFH/JiangLebai.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_ZhuChen"
+		texturefile = "gfx/leaders/SFH/ZhuChen.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_LuoYi"
+		texturefile = "gfx/leaders/SFH/LuoYi.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_SFH_ZhengJun"
+		texturefile = "gfx/advisors/SFH/ZhengJun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LiGuan"
+		texturefile = "gfx/advisors/SFH/LiGuan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_WangYigong"
+		texturefile = "gfx/advisors/SFH/WangYigong.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LiuQi"
+		texturefile = "gfx/advisors/SFH/LiuQi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LiuSui"
+		texturefile = "gfx/advisors/SFH/LiuSui.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_XuSheng"
+		texturefile = "gfx/advisors/SFH/XuSheng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_HaungQiu"
+		texturefile = "gfx/advisors/SFH/HaungQiu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_XueQingshan"
+		texturefile = "gfx/advisors/SFH/XueQingshan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_WangShengwu"
+		texturefile = "gfx/advisors/SFH/WangShengwu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_MingXiang"
+		texturefile = "gfx/advisors/SFH/MingXiang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhangYaowu"
+		texturefile = "gfx/advisors/SFH/ZhangYaowu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_WangYue"
+		texturefile = "gfx/advisors/SFH/WangYue.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_MingXin"
+		texturefile = "gfx/advisors/SFH/MingXin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhouGongli"
+		texturefile = "gfx/advisors/SFH/ZhouGongli.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhouGongyi"
+		texturefile = "gfx/advisors/SFH/ZhouGongyi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LuZhan"
+		texturefile = "gfx/advisors/SFH/LuZhan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_JingYabo"
+		texturefile = "gfx/advisors/SFH/JingYabo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_HaiWei"
+		texturefile = "gfx/advisors/SFH/HaiWei.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_HuangJi"
+		texturefile = "gfx/advisors/SFH/HuangJi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LuBo"
+		texturefile = "gfx/advisors/SFH/LuBo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhangHuawu"
+		texturefile = "gfx/advisors/SFH/ZhangHuawu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LinChun"
+		texturefile = "gfx/advisors/SFH/LinChun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_YuanHai"
+		texturefile = "gfx/advisors/SFH/YuanHai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_HuaiYang"
+		texturefile = "gfx/advisors/SFH/HuaiYang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_NiuShou"
+		texturefile = "gfx/advisors/SFH/NiuShou.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_DaiGuangyao"
+		texturefile = "gfx/advisors/SFH/DaiGuangyao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_WuYue"
+		texturefile = "gfx/advisors/SFH/WuYue.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LiangYi"
+		texturefile = "gfx/advisors/SFH/LiangYi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZongQianwan"
+		texturefile = "gfx/advisors/SFH/ZongQianwan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_YaoBai"
+		texturefile = "gfx/advisors/SFH/YaoBai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_YingQichen"
+		texturefile = "gfx/advisors/SFH/YingQichen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_GanPan"
+		texturefile = "gfx/advisors/SFH/GanPan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhuangFugui"
+		texturefile = "gfx/advisors/SFH/ZhuangFugui.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_FengLongzhi"
+		texturefile = "gfx/advisors/SFH/FengLongzhi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_QuanLinxin"
+		texturefile = "gfx/advisors/SFH/QuanLinxin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_FangBufan"
+		texturefile = "gfx/advisors/SFH/FangBufan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_QiYunzhou"
+		texturefile = "gfx/advisors/SFH/QiYunzhou.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_DuXinpeng"
+		texturefile = "gfx/advisors/SFH/DuXinpeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_GuFeng"
+		texturefile = "gfx/advisors/SFH/GuFeng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_XiongYunzhi"
+		texturefile = "gfx/advisors/SFH/XiongYunzhi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_MuShaoyuan"
+		texturefile = "gfx/advisors/SFH/MuShaoyuan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_JiangLebai"
+		texturefile = "gfx/advisors/SFH/JiangLebai.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_ZhuChen"
+		texturefile = "gfx/advisors/SFH/ZhuChen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_LuoYi"
+		texturefile = "gfx/advisors/SFH/LuoYi.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_mermaid_influence_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/mermaid_influence_dynamic_modifier.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_angrier_aristocrats"
+		texturefile = "gfx/interface/ideas/SFH_angrier_aristocrats.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_failure_in_democracy"
+		texturefile = "gfx/interface/ideas/SFH_failure_in_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_terrible_heirs"
+		texturefile = "gfx/interface/ideas/SFH_terrible_heirs.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_passing_glory"
+		texturefile = "gfx/interface/ideas/SFH_passing_glory.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_end_of_heros"
+		texturefile = "gfx/interface/ideas/SFH_end_of_heros.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SFH_corrupted_army_dynamic_modifier"
+		texturefile = "gfx/interface/ideas/SFH_corrupted_army_dynamic_modifier.png"
+	}
+	###国策###
+	spriteType = {
+		name = "GFX_SFH_unified_farhome"
+		texturefile = "gfx/interface/goals/SFH_unified_farhome.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_declare_complete_reunification"
+		texturefile = "gfx/interface/goals/SFH_declare_complete_reunification.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_no_longer_young"
+		texturefile = "gfx/interface/goals/SFH_no_longer_young.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_looking_through_nation"
+		texturefile = "gfx/interface/goals/SFH_looking_through_nation.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_looking_through_myself"
+		texturefile = "gfx/interface/goals/SFH_looking_through_myself.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_I_must_move_on"
+		texturefile = "gfx/interface/goals/SFH_I_must_move_on.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_wheres_our_enemy"
+		texturefile = "gfx/interface/goals/SFH_wheres_our_enemy.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_wind_of_changes"
+		texturefile = "gfx/interface/goals/SFH_wind_of_changes.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_reopen_reformation"
+		texturefile = "gfx/interface/goals/SFH_reopen_reformation.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_learn_from_the_past"
+		texturefile = "gfx/interface/goals/SFH_learn_from_the_past.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_continue_the_old_policy"
+		texturefile = "gfx/interface/goals/SFH_continue_the_old_policy.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_reorganization_of_the_administration"
+		texturefile = "gfx/interface/goals/SFH_reorganization_of_the_administration.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_let_us_lead"
+		texturefile = "gfx/interface/goals/SFH_let_us_lead.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_listen_to_opposition"
+		texturefile = "gfx/interface/goals/SFH_listen_to_opposition.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_constitutional_convention"
+		texturefile = "gfx/interface/goals/SFH_constitutional_convention.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_social_promotion"
+		texturefile = "gfx/interface/goals/SFH_social_promotion.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_encourage_political_ideas"
+		texturefile = "gfx/interface/goals/SFH_encourage_political_ideas.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_replace_local_officials"
+		texturefile = "gfx/interface/goals/SFH_replace_local_officials.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_create_democracy_facility"
+		texturefile = "gfx/interface/goals/SFH_create_democracy_facility.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_looking_for_the_future"
+		texturefile = "gfx/interface/goals/SFH_looking_for_the_future.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_middle_route"
+		texturefile = "gfx/interface/goals/SFH_middle_route.png"
+	}
+	spriteType = {
+		name = "GFX_SFH_consolidate_traditions"
+		texturefile = "gfx/interface/goals/SFH_consolidate_traditions.png"
+	}
+	###GUI###
+	spriteType = {
+		name = "GFX_SFH_preparation_bar_bg"
+		textureFile = "gfx/interface/occupation/collaboration_bar_large_bg.dds"
+	}
+	progressbartype = {
+		name = "GFX_SFH_preparation_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/occupation/collaboration_bar_large.dds"
+		textureFile2 = "gfx/interface/occupation/large_bar_empty.dds"
+		size = { x = 249 y = 21 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_future_Zhenghong_portraits_layout"
+		texturefile = "gfx/interface/SFH/SFH_future_Zhenghong_portraits_layout.png"
+	}
+
+	###BOT###
+	#BG#
+	spriteType = {
+		name = "GFX_SFH_bot_bg"
+		texturefile = "gfx/interface/SFH/SFH_bot_bg.png"
+		transparencecheck = yes
+	}
+
+	#info#
+	spriteType = {
+		name = "GFX_SFH_bot_info"
+		texturefile = "gfx/interface/SFH/SFH_bot_info.png"
+		transparencecheck = yes
+	}
+
+	###13###
+	spriteType = {
+		name = "Get_SFH_bot_state_13_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_13_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_13_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_13_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_13_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_13_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_13_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_13_selected.png"
+		transparencecheck = yes
+	}
+	###121###
+	spriteType = {
+		name = "Get_SFH_bot_state_121_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_121_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_121_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_121_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_121_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_121_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_121_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_121_selected.png"
+		transparencecheck = yes
+	}
+	###11###
+	spriteType = {
+		name = "Get_SFH_bot_state_11_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_11_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_11_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_11_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_11_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_11_selected.png"
+		transparencecheck = yes
+	}
+	###9###
+	spriteType = {
+		name = "Get_SFH_bot_state_9_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_9_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_9_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_9_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_9_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_9_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_9_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_9_selected.png"
+		transparencecheck = yes
+	}
+	###10###
+	spriteType = {
+		name = "Get_SFH_bot_state_10_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_10_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_10_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_10_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_10_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_10_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_10_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_10_selected.png"
+		transparencecheck = yes
+	}
+	###174###
+	spriteType = {
+		name = "Get_SFH_bot_state_174_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_174_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_174_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_174_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_174_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_174_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_174_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_174_selected.png"
+		transparencecheck = yes
+	}
+	###170###
+	spriteType = {
+		name = "Get_SFH_bot_state_170_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_170_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_170_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_170_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_170_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_170_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_170_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_170_selected.png"
+		transparencecheck = yes
+	}
+	###5###
+	spriteType = {
+		name = "Get_SFH_bot_state_5_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_5_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_5_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_5_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_5_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_5_selected.png"
+		transparencecheck = yes
+	}
+	###7###
+	spriteType = {
+		name = "Get_SFH_bot_state_7_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_7_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_7_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_7_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_7_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_7_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_7_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_7_selected.png"
+		transparencecheck = yes
+	}
+	###8###
+	spriteType = {
+		name = "Get_SFH_bot_state_8_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_8_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_8_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_8_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_8_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_8_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_8_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_8_selected.png"
+		transparencecheck = yes
+	}
+	###173###
+	spriteType = {
+		name = "Get_SFH_bot_state_173_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_173_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_173_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_173_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_173_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_173_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_173_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_173_selected.png"
+		transparencecheck = yes
+	}
+	###6###
+	spriteType = {
+		name = "Get_SFH_bot_state_6_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_6_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_6_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_6_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_6_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_6_selected.png"
+		transparencecheck = yes
+	}
+	###4###
+	spriteType = {
+		name = "Get_SFH_bot_state_4_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_4_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_4_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_4_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_4_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_4_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_4_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_4_selected.png"
+		transparencecheck = yes
+	}
+	###171###
+	spriteType = {
+		name = "Get_SFH_bot_state_171_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_171_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_171_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_171_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_171_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_171_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_171_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_171_selected.png"
+		transparencecheck = yes
+	}
+	###172###
+	spriteType = {
+		name = "Get_SFH_bot_state_172_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_172_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_172_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_172_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_172_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_172_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_172_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_172_selected.png"
+		transparencecheck = yes
+	}
+	###3###
+	spriteType = {
+		name = "Get_SFH_bot_state_3_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_3_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_3_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_3_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_3_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_3_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_3_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_3_selected.png"
+		transparencecheck = yes
+	}
+	###2###
+	spriteType = {
+		name = "Get_SFH_bot_state_2_1"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_2_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_2_2"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_2_2.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "Get_SFH_bot_state_2_3"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_2_3.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SFH_bot_state_2_selected"
+		texturefile = "gfx/interface/SFH/SFH_bot_state_2_selected.png"
+		transparencecheck = yes
+	}
+
+	###pie###
+	spritetype = {
+		name = "GFX_SFH_bot_piechart_overlay"
+		texturefile = "gfx/interface/SFH/piechart_overlay.dds"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_SFH_bot_piechart_1"
+		texturefile1 = "gfx/interface/SFH/piechart_1.dds"
+		texturefile2 = "gfx/interface/SFH/empty_piechart.dds"
+		size = { x = 120 y = 120 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		#horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_SFH_bot_piechart_2"
+		texturefile1 = "gfx/interface/SFH/piechart_2.dds"
+		texturefile2 = "gfx/interface/SFH/empty_piechart.dds"
+		size = { x = 120 y = 120 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		#horizontal = no
+	}
+	progressbartype = {
+		name = "GFX_SFH_bot_piechart_3"
+		texturefile1 = "gfx/interface/SFH/piechart_3.dds"
+		texturefile2 = "gfx/interface/SFH/empty_piechart.dds"
+		size = { x = 120 y = 120 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		#horizontal = no
+	}
+}

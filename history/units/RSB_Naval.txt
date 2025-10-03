@@ -1,0 +1,41 @@
+﻿units = {
+	fleet = {
+		name = "巴斯蒂亚战争舰队"
+		naval_base = 4349
+		task_force = {
+			name = "特尼安舰队"
+			location = 4349
+			ship = { name = "Great war" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = RSB version_name = "伟大战争级"} } }
+			ship = { name = "Krayano" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Toledo" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Russar" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Akutornian" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Donvodsk" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Austlenia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "度弗道夫" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "斯图纲特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "麦恩茨" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "曼海宁" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "摩尼什" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "里斯巴腾" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+			ship = { name = "德勒斯" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "西马拉索亚级"} } }
+		}
+		task_force = {
+			name = "大洋舰队"
+			location = 20875
+			ship = { name = "Hungelia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Letternian" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "Viltawnion" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "联邦级"} } }
+			ship = { name = "北普莱尔茨" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "共和国级"} } }
+			ship = { name = "南普莱尔茨" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "共和国级"} } }
+			ship = { name = "帕尔腾" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "共和国级"} } }
+			ship = { name = "下奥斯特艾特" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RSB version_name = "共和国级"} } }
+			ship = { name = "桑泰克珀尔根" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+			ship = { name = "林茨" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+			ship = { name = "英斯博克" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+			ship = { name = "盖茨" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+			ship = { name = "克拉肯弗特" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+			ship = { name = "埃斯塔克" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RSB version_name = "东马拉索亚级"} } }
+		}
+	}
+}

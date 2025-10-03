@@ -1,0 +1,28 @@
+
+state={
+	id=471
+	name="STATE_471"
+	provinces={
+		2700 5931 7749 7951 11902 17431 17441 17492 17585 17614 17656 
+	}
+	resources = {
+		steel = 10
+	}
+	history = {
+		owner = MGC
+		add_core_of = MGC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			17614 8
+		}
+		victory_points = {
+			17585 3
+		}
+	}
+	manpower = 1500000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

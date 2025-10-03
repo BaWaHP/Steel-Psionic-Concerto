@@ -1,0 +1,883 @@
+ideas = {
+
+	economy = {
+		law = yes
+		use_list_view = yes
+
+		undisturbed_isolation = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.50
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				agency_upgrade_time = 1.0
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_military_development_process = -2
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.5
+					has_war = yes
+				}
+			}
+
+			cancel_if_invalid = no
+		}
+
+		isolation = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_military_development_process = -2
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			allowed_to_remove = {
+				OR = {
+					has_war_support > 0.75
+					has_war = yes
+				}
+			}
+
+			cancel_if_invalid = no
+		}
+
+		civilian_economy = {
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			level = 1
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+		}
+
+		low_economic_mobilisation = {
+
+			available = {
+				has_war_support > 0.15
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			level = 2
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				fuel_gain_factor = -0.25
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+
+					is_major = yes
+				}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0 #don't even look at it if you could be taking partial mob
+				}
+   			}
+		}
+
+		partial_economic_mobilisation = {
+
+			available = {
+				has_war_support > 0.25
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			level = 3
+			cost = 150
+			removal_cost = -1
+			
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				fuel_gain_factor = -0.1
+				monthly_living_standard_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+
+					is_major = yes
+				}
+   			}
+		}
+
+		war_economy = {
+
+			available = {
+				has_war_support > 0.5
+				custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						ic_ratio = {
+								tag = ROOT
+							ratio > 0.4
+						}
+					}
+				}
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			level = 4
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				monthly_industrial_development_process = -2
+				monthly_agricultural_development_process = -2
+				monthly_living_standard_development_process = -4
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 3
+
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+
+				modifier = {
+					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
+					factor = 0
+
+					manpower_per_military_factory > 15000
+					has_war = yes
+					has_war_support > 0.8
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.5
+						}
+					}
+				}
+
+				modifier = {
+					add = 1800
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+
+		tot_economic_mobilisation = {
+
+			available = {
+				has_war = yes
+				has_war_support > 0.8
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.5
+					}
+				}
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory > 15000
+				}
+
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  10000
+				}
+
+
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+
+				# Germany needs to be careful
+   			}
+
+			level = 5
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_econ_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				monthly_industrial_development_process = -4
+				monthly_agricultural_development_process = -4
+				monthly_living_standard_development_process = -6
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+
+		free_trade = {
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			level = 1
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+				monthly_industrial_development_process = -2
+				monthly_agricultural_development_process = -2
+				monthly_living_standard_development_process = 4
+				monthly_research_development_process = 4
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = ZHE_has_bureaucratic_monopoly
+					}
+				}
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		export_focus = {
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			level = 2
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+				monthly_living_standard_development_process = 2
+				monthly_research_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		limited_exports = {
+			available = {
+				OR = {
+					has_idea = partial_economic_mobilisation
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			level = 3
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 5
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					add = -1
+
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					add = -1
+
+					is_major = no
+					has_war = no
+				}
+
+				modifier = {
+					add = 1500
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+
+		autarkic_economy = {
+			visible = {
+				always = no
+			}
+
+			available = {
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.15
+				#industrial_capacity_factory = 0.05
+				#industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				lend_lease_tension = 0.20
+				faction_trade_opinion_factor = 0.25
+				#cic_construction_boost = -0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = { #Germany should always for AutarkicEconomy if its available
+   				factor = 100
+
+   				modifier = {
+   					add = 500
+   					has_idea = limited_exports
+   				}
+
+   				modifier = {
+   					add = 1500
+   					has_idea = closed_economy
+   					has_large_ally_not_pick_closed_economy = yes
+   				}
+   			}
+		}
+
+		autarkic_economy_improved = {
+			picture = autarkic_economy
+			name = autarkic_economy
+			visible = {
+				always = no
+			}
+
+			available = {
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.15
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				lend_lease_tension = 0.20
+				faction_trade_opinion_factor = 0.5
+				#cic_construction_boost = -0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = { #Germany should always for AutarkicEconomy if its available
+   				factor = 100
+
+   				modifier = {
+   					add = 500
+   					has_idea = limited_exports
+   				}
+
+   				modifier = {
+   					add = 1500
+   					has_idea = closed_economy
+   					has_large_ally_not_pick_closed_economy = yes
+   				}
+   			}
+		}
+
+		closed_economy = {
+
+			available = {
+				has_war = yes
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			level = 4
+			cost = 150
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_trade_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				min_export = 0
+				#civilian_intel_to_others = 0.0
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = -2
+				monthly_research_development_process = -2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+
+				# minors not at war should want to get the bonuses from free trade
+				modifier = {
+					factor = 0
+
+					is_major = no
+					has_war = no
+				}
+
+				modifier = {
+					factor = 0
+
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+	}
+	nationalization_policy = {
+		law = yes
+		use_list_view = yes
+
+		NP_totally_free_market = {		#nationalization_policy - NP
+
+			allowed = {
+				always = yes
+			}
+
+			available = {
+				NOT = {
+					OR = {
+						has_government = pioneer_communism
+						has_government = revolutionary_communism
+						has_government = national_socialist
+						has_government = authoritarian_nationalism
+						has_government = paternal_autocrat
+						has_government = wizard_rules
+						has_government = religious_extremism
+					}
+				}
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				research_speed_factor = 0.05
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = -2
+				monthly_research_development_process = 4
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+		}
+
+		NP_light_nationalization = {		#nationalization_policy - NP
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				monthly_research_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+			default = yes
+		}
+
+		NP_medium_nationalization = {		#nationalization_policy - NP
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			modifier = {
+				monthly_living_standard_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+		}
+
+		NP_high_nationalization = {		#nationalization_policy - NP
+
+			available = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			allowed_to_remove = {
+				NOT = { has_country_flag = SPC_ban_nationalization_policy }
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				monthly_industrial_development_process = 2
+				monthly_agricultural_development_process = 2
+				monthly_research_development_process = 2
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+		}
+
+		NP_total_nationalization = {		#nationalization_policy - NP
+
+			allowed = {
+				always = yes
+			}
+
+			available = {
+				always = no
+			}
+
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+				#production_factory_start_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = -0.05
+				monthly_industrial_development_process = 4
+				monthly_agricultural_development_process = 4
+				monthly_living_standard_development_process = -2
+				monthly_research_development_process = 4
+			}
+
+			on_add = {
+				SPC_development_update_effect = yes
+			}
+			on_remove = {
+				custom_effect_tooltip = country_development_leaving
+			}
+
+		}
+	}
+}

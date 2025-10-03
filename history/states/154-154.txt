@@ -1,0 +1,33 @@
+
+state={
+	id=154
+	name="STATE_154"
+
+	resources = {
+		steel = 24
+	}
+
+	history={
+		owner = OAS
+		add_core_of = OAS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			15853 10
+		}
+		victory_points = {
+			11938 1
+		}
+	}
+
+	provinces={
+		667 811 3730 5956 11938 15590 15612 15677 15699 15714 15837 15853 
+	}
+	manpower=840000
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

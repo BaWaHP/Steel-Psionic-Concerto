@@ -1,0 +1,76 @@
+﻿capital = 456
+
+oob = "VLF"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 2
+	revolutionary_communism = 3
+	worldunion_socialist = 3
+	worldunion_democrat = 4
+	liberal_republican = 3
+	conservative_republican = 2
+	authoritarian_republican = 20
+	national_socialist = 2
+	authoritarian_nationalism = 2
+	paternal_autocrat = 45
+	wizard_rules = 1
+	religious_extremism = 6
+	anarchism = 7
+}
+
+add_ideas = {
+	VLF_young_dictator
+	VLF_harassment_from_mtv
+	VLF_ideological_testing_ground
+	VLF_rise_of_pan_centaur_nationalism
+	VLF_national_dev_council
+	VLF_joint_ventures
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	magic_of_mental_deviation = 1
+	improved_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	tech_support = 1
+	basic_train = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+}
+
+recruit_character = VLF_ugrevik_seat_committee
+recruit_character = VLF_djimon_obrenova
+recruit_character = VLF_the_atheist_jury
+recruit_character = VLF_yanez_ribal
+recruit_character = VLF_protic_davidovic
+recruit_character = VLF_draca_milosevic
+recruit_character = VLF_ivan_obrenovic
+recruit_character = VLF_gnaeus_merciar
+recruit_character = VLF_velicko_simovic
+recruit_character = VLF_alexande_urosh
+recruit_character = VLF_vallefiorita_church
+recruit_character = VLF_the_cult
+recruit_character = VLF_nikolai_vozd_yeniseev
+
+recruit_character = VLF_ivan_obrenovich
+
+recruit_character = VLF_rinaldav_obrenovich
+
+give_military_access = ZHE

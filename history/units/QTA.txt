@@ -1,0 +1,126 @@
+﻿###templates###
+division_template = {
+	name = "青天团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "农民起义军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "骑兵部队"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 4 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "青天团"
+		location = 8897
+		division_template = "青天团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "农民起义军一团"
+		location = 9406
+		division_template = "农民起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.4
+	}
+}
+
+units = {
+	division = {
+		name = "农民起义军二团"
+		location = 5181
+		division_template = "农民起义军"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+}
+
+units = {
+	division = {
+		name = "农民起义军三团"
+		location = 19239
+		division_template = "农民起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.4
+	}
+}
+
+units = {
+	division = {
+		name = "农民起义军三团"
+		location = 19061
+		division_template = "农民起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.4
+	}
+}
+
+units = {
+	division = {
+		name = "骑兵军一团"
+		location = 8873
+		division_template = "骑兵部队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.6
+	}
+}
+
+units = {
+	division = {
+		name = "骑兵军二团"
+		location = 8869
+		division_template = "骑兵部队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 0.6
+	}
+}

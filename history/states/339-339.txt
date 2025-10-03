@@ -1,0 +1,29 @@
+
+state={
+	id=339
+	name="STATE_339"
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 5
+			air_base = 4
+			anti_air_building = 1
+		}
+		victory_points = {
+			2667 30
+		}
+
+	}
+
+	provinces={
+		2667 5701 6239 20307 20367 20420 20434 
+	}
+	manpower=7240000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

@@ -1,0 +1,174 @@
+﻿###templates###
+division_template = {
+	name = "北远乡驻军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "北远乡正规军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "北远乡骑兵军"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "北方驻军第一师"
+		location = 6009
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方驻军第二师"
+		location = 6412
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方驻军第三师"
+		location = 16737
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方驻军第四师"
+		location = 11183
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方驻军第五师"
+		location = 15979
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方驻军第六师"
+		location = 16692
+		division_template = "北远乡驻军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "北方正规军第一师"
+		location = 8956
+		division_template = "北远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "北方正规军第二师"
+		location = 8453
+		division_template = "北远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "北方正规军第三师"
+		location = 8673
+		division_template = "北远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "北方正规军第四师"
+		location = 16764
+		division_template = "北远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "北方正规军第五师"
+		location = 9896
+		division_template = "北远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第一师"
+		location = 16738
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第二师"
+		location = 10923
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第三师"
+		location = 16352
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第四师"
+		location = 6412
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第五师"
+		location = 17268
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "骑兵军第六师"
+		location = 4099
+		division_template = "北远乡骑兵军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+}

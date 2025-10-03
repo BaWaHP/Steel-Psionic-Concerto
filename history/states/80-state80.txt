@@ -1,0 +1,28 @@
+
+state={
+	id=80
+	name="STATE_80"
+	provinces={
+		1630 4148 4646 5113 5390 5437 9407 9992 18130 18144 18235 18273 18370 18432 18582 
+	}
+	history = {
+		owner = ARO
+		add_core_of = ARO
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 3
+
+			5390 = {
+				air_facility = 1
+			}
+		}
+		victory_points = {
+			18432 8
+		}
+	}
+	manpower = 6360000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

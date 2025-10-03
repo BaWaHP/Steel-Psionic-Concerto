@@ -1,0 +1,39 @@
+scripted_gui = {
+
+	ROT_kick_rsb_ass_ui = {
+		context_type = decision_category
+		window_name = "ROT_kick_rsb_ass_window"
+
+		properties = {
+			ROT_two_army_tension_bar = {
+				frame = ROT_two_army_tension
+			}
+		}
+	}
+
+	ROT_class_and_nation_ui = {
+		context_type = decision_category
+		window_name = "ROT_class_and_nation_window"
+
+		properties = {
+			Faction_1 = {
+				image = "[Get_ROT_Faction_1]"
+			}
+			Faction_2 = {
+				image = "[Get_ROT_Faction_2]"
+			}
+			Faction_3 = {
+				image = "[Get_ROT_Faction_3]"
+			}
+			Faction_4 = {
+				image = "[Get_ROT_Faction_4]"
+			}
+			Faction_5 = {
+				image = "[Get_ROT_Faction_5]"
+			}
+			Faction_6 = {
+				image = "[Get_ROT_Faction_6]"
+			}
+		}
+	}
+}

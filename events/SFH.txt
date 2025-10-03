@@ -1,0 +1,4613 @@
+﻿###########################
+# SFH Events #
+###########################
+
+add_namespace = SFH
+
+country_event = {
+	id = SFH.0
+	title = SFH.0.t
+	desc = SFH.0.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.0.a
+		add_ideas = SFH_angrier_aristocrats
+		add_ideas = SFH_failure_in_democracy
+		add_ideas = SFH_terrible_heirs
+		add_ideas = SFH_passing_glory
+		add_ideas = SFH_end_of_heros
+	}
+}
+
+country_event = {
+	id = SFH.1
+	title = SFH.1.t
+	desc = SFH.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.1.a
+		set_country_flag = SFH_influence_from_mermaid_flag
+		add_dynamic_modifier = { modifier = SFH_mermaid_influence_dynamic_modifier }
+		SFH_mermaid_influence_modifier_update = yes
+		unlock_decision_category_tooltip = SFH_influence_from_mermaid_category
+	}
+}
+
+country_event = {
+	id = SFH.2
+	title = SFH.2.t
+	desc = SFH.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.2.a
+		country_event = {
+			id = SFH.3
+			days = 3
+		}
+	}
+}
+
+country_event = {
+	id = SFH.3
+	title = SFH.3.t
+	desc = SFH.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.3.a
+		hidden_effect = {
+			country_event = SFH.4
+		}
+	}
+}
+
+country_event = {
+	id = SFH.4
+	title = SFH.4.t
+	desc = SFH.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.4.a
+		add_political_power = -20
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = SFH.5
+	title = SFH.5.t
+	desc = SFH.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.5.a
+		custom_effect_tooltip = SFH.5.tt
+		hidden_effect = {
+			country_event = {
+				id = SFH.6
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SFH.6
+	title = SFH.6.t
+	desc = SFH.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.6.a
+		country_event = {
+			id = SFH.7
+			days = 3
+		}
+		news_event = {
+			id = SFHNews.1
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = SFH.7
+	title = SFH.7.t
+	desc = SFH.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		#保皇
+		name = SFH.7.a
+		SFH_pre_civil_war_setup = yes
+		activate_mission = SFH_gathering_storm
+		SFR = { activate_mission = SFH_gathering_storm_for_others }
+		QTA = { activate_mission = SFH_gathering_storm_for_others }
+	}
+
+	option = {		#革命
+		name = SFH.7.b
+		SFH_pre_civil_war_setup = yes
+		activate_mission = SFH_gathering_storm
+		SFR = { activate_mission = SFH_gathering_storm_for_others }
+		QTA = { activate_mission = SFH_gathering_storm_for_others }
+		SFR = { change_tag_from = SFH }
+	}
+
+	option = {		#起义
+		name = SFH.7.c
+		SFH_pre_civil_war_setup = yes
+		activate_mission = SFH_gathering_storm
+		SFR = { activate_mission = SFH_gathering_storm_for_others }
+		QTA = { activate_mission = SFH_gathering_storm_for_others }
+		QTA = { change_tag_from = SFH }
+	}
+}
+
+country_event = {		#改革派政变
+	id = SFH.8
+	title = SFH.8.t
+	desc = SFH.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.8.a
+		retire_country_leader = yes
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.5
+		}
+		set_politics = {
+			ruling_party = liberal_republican
+		}
+		hidden_effect = {
+			load_focus_tree = generic_focus
+		}
+	}
+}
+
+country_event = {		#保守派政变
+	id = SFH.9
+	title = SFH.9.t
+	desc = SFH.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.9.a
+		retire_country_leader = yes
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.5
+		}
+		set_politics = {
+			ruling_party = authoritarian_nationalism
+		}
+		hidden_effect = {
+			load_focus_tree = generic_focus
+		}
+	}
+}
+
+country_event = {		#苏醒
+	id = SFH.10
+	title = SFH.10.t
+	desc = SFH.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.10.a
+		add_stability = -0.02
+		add_political_power = -5
+		country_event = SFH.11
+	}
+}
+
+country_event = {		#苏醒
+	id = SFH.11
+	title = SFH.11.t
+	desc = SFH.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.11.a
+		add_stability = 0.02
+	}
+}
+
+country_event = {		#审视国家
+	id = SFH.12
+	title = SFH.12.t
+	desc = SFH.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.12.a
+		add_political_power = 10
+	}
+}
+
+country_event = {		#审视自我
+	id = SFH.13
+	title = SFH.13.t
+	desc = SFH.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.13.a
+		add_political_power = 10
+	}
+}
+
+country_event = {		#圆月
+	id = SFH.14
+	title = SFH.14.t
+	desc = SFH.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.14.a
+		add_country_leader_trait = determination_of_the_dying_one
+	}
+}
+
+country_event = {		#回忆
+	id = SFH.15
+	title = SFH.15.t
+	desc = SFH.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.15.a
+		country_event = SFH.16
+	}
+}
+
+country_event = {		#小改一笔
+	id = SFH.16
+	title = SFH.16.t
+	desc = SFH.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.16.a
+	}
+}
+
+country_event = {		#远乡军队报告书
+	id = SFH.17
+	title = SFH.17.t
+	desc = SFH.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.17.a
+
+		hidden_effect = {
+			SFH_weak_army_setup = yes
+			country_event = {
+				id = SFH.18
+				days = 3
+			}
+		}
+		remove_dynamic_modifier = {
+			modifier = SFH_corrupted_army_dynamic_modifier
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_template = "临时私兵" }
+				set_division_template_lock = {
+					division_template = 临时私兵
+					is_locked = no
+				}
+			}
+		}
+		complete_national_focus = SFH_saving_the_money
+	}
+
+	option = {		
+		name = SFH.17.b
+
+		hidden_effect = {
+			SFH_weak_army_setup = yes
+			country_event = {
+				id = SFH.18
+				days = 3
+			}
+		}
+		remove_dynamic_modifier = {
+			modifier = SFH_corrupted_army_dynamic_modifier
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_template = "临时私兵" }
+				set_division_template_lock = {
+					division_template = 临时私兵
+					is_locked = no
+				}
+			}
+		}
+		add_stability = 0.05
+		add_political_power = 20
+		complete_national_focus = SFH_readjust_the_army
+	}
+}
+
+country_event = {		#报告中的异样
+	id = SFH.18
+	title = SFH.18.t
+	desc = SFH.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.18.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.19
+				days = 10
+			}
+		}
+		add_political_power = 50
+		add_stability = 0.1
+	}
+
+	option = {		
+		name = SFH.18.b
+		hidden_effect = {
+			country_event = {
+				id = SFH.20
+				days = 10
+			}
+		}
+		add_stability = -0.05
+		add_political_power = -20
+	}
+}
+
+country_event = {		#决心-但是得到认可
+	id = SFH.19
+	title = SFH.19.t
+	desc = SFH.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.19.a
+		add_manpower = 1
+		add_stability = 0.01
+		SFH_king_power_up_small = yes
+		SFH_conservative_power_up_small = yes
+		country_event = {
+			id = SFH.21
+			days = 30
+		}
+	}
+}
+
+country_event = {		#决心-但是没有得到认可
+	id = SFH.20
+	title = SFH.20.t
+	desc = SFH.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.20.a
+		add_manpower = -1
+		add_stability = -0.01
+		SFH_king_power_down_small = yes
+	}
+}
+
+country_event = {		#翻新后的调查报告
+	id = SFH.21
+	title = SFH.21.t
+	desc = SFH.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.21.a
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_political_power = 20
+		army_experience = 30
+		SFH_conservative_power_up_large = yes
+		SFH_reformist_power_down_small = yes
+		add_to_variable = {
+			SFH_weak_army_dynamic_modifier_aof = 0.1
+		}
+		add_to_variable = {
+			SFH_weak_army_dynamic_modifier_aor = 0.1
+		}
+		set_variable = {
+			SFH_weak_army_dynamic_modifier_lrr = 0.01
+		}
+		set_variable = {
+			SFH_weak_army_dynamic_modifier_mxp = 0.2
+		}
+		add_to_variable = {
+			SFH_weak_army_dynamic_modifier_cgf = -0.05
+		}
+		force_update_dynamic_modifier = yes
+		custom_effect_tooltip = SFH.21.tt
+	}
+}
+
+country_event = {		#贵族抗议
+	id = SFH.22
+	title = SFH.22.t
+	desc = SFH.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.22.a
+		add_stability = -0.05
+		add_political_power = -30
+		SFH_king_power_down_small = yes
+		add_timed_idea = {
+			idea = SFH_conforting_nobilities
+			days = 180
+		}
+		custom_effect_tooltip = SFH.22.tt
+	}
+}
+
+country_event = {		#内战爆发后-背叛的军官
+	id = SFH.23
+	title = SFH.23.t
+	desc = SFH.23.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.23.a
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_political_power = -50
+		add_timed_idea = {
+			idea = SFH_betraying_officials
+			days = 200
+		}
+		set_country_flag = SFH_civil_war_betrayed_officier
+	}
+}
+
+country_event = {		#现代化之军
+	id = SFH.24
+	title = SFH.24.t
+	desc = SFH.24.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.24.a
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_political_power = 30
+	}
+}
+
+country_event = {		#选择困难症
+	id = SFH.25
+	title = SFH.25.t
+	desc = SFH.25.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.25.a
+	}
+}
+
+country_event = {		#我曾经有一份工作
+	id = SFH.26
+	title = SFH.26.t
+	desc = SFH.26.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.26.a
+	}
+}
+
+country_event = {		#不再让步
+	id = SFH.27
+	title = SFH.27.t
+	desc = SFH.27.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.27.a
+	}
+}
+
+country_event = {		#新资金，新管理
+	id = SFH.28
+	title = SFH.28.t
+	desc = SFH.28.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.28.a
+	}
+}
+
+country_event = {		#浪子
+	id = SFH.29
+	title = SFH.29.t
+	desc = SFH.29.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.29.a
+		add_manpower = 1
+		army_experience = 10
+	}
+}
+
+country_event = {		#设计师的苦恼
+	id = SFH.30
+	title = SFH.30.t
+	desc = SFH.30.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.30.a
+		add_political_power = -10
+		add_stability = -0.02
+	}
+}
+
+country_event = {		#特训
+	id = SFH.31
+	title = SFH.31.t
+	desc = SFH.31.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.31.a
+		add_manpower = 200
+		army_experience = 5
+	}
+}
+
+country_event = {		#愤怒
+	id = SFH.32
+	title = SFH.32.t
+	desc = SFH.32.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.32.a
+		add_political_power = -10
+		add_stability = -0.02
+	}
+}
+
+country_event = {		#坠落
+	id = SFH.33
+	title = SFH.33.t
+	desc = SFH.33.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.33.a
+		add_manpower = -1
+		add_stability = -0.02
+	}
+}
+
+country_event = {		#军用魔法
+	id = SFH.34
+	title = SFH.34.t
+	desc = SFH.34.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.34.a
+		add_tech_bonus = {
+			name = SFH_push_for_magic_application
+			bonus = 0.5
+			uses = 1
+			category = secret_weapons
+		}
+		add_war_support = 0.05
+	}
+}
+
+country_event = {		#记忆
+	id = SFH.35
+	title = SFH.35.t
+	desc = SFH.35.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.35.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.36
+				day = 7
+			}
+		}
+	}
+}
+
+country_event = {		#血与泪
+	id = SFH.36
+	title = SFH.36.t
+	desc = SFH.36.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.36.a
+		add_manpower = -1
+	}
+}
+
+country_event = {		#失败者的忏悔
+	id = SFH.37
+	title = SFH.37.t
+	desc = SFH.37.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.37.a
+		add_political_power = -10
+		add_stability = -0.02
+		SFH_reformist_power_up_small = yes
+	}
+
+	option = {		
+		name = SFH.37.b
+		add_war_support = -0.05
+		SFH_king_power_down_small = yes
+	}
+}
+
+country_event = {		#死亡之愿
+	id = SFH.38
+	title = SFH.38.t
+	desc = SFH.38.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.38.a
+		custom_effect_tooltip = SFH.38.tt
+		add_manpower = -2
+	}
+}
+
+country_event = {		#会面
+	id = SFH.39
+	title = SFH.39.t
+	desc = SFH.39.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.39.a
+		add_stability = 0.05
+		SFH_king_power_up_small = yes
+	}
+}
+
+country_event = {		#阴影之下
+	id = SFH.40
+	title = SFH.40.t
+	desc = SFH.40.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.40.a
+		add_stability = -0.02
+	}
+}
+
+country_event = {		#吵闹
+	id = SFH.41
+	title = SFH.41.t
+	desc = SFH.41.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.41.a
+		add_war_support = -0.02
+	}
+}
+
+country_event = {		#新站点
+	id = SFH.42
+	title = SFH.42.t
+	desc = SFH.42.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.42.a
+		add_manpower = 1
+		add_war_support = 0.05
+	}
+}
+
+country_event = {		#远乡民生考察报告
+	id = SFH.43
+	title = SFH.43.t
+	desc = SFH.43.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.43.a
+		complete_national_focus = SFH_no_time_to_lose
+	}
+
+	option = {		
+		name = SFH.43.b
+		complete_national_focus = SFH_foundation_for_the_future
+	}
+}
+
+country_event = {		#排队
+	id = SFH.44
+	title = SFH.44.t
+	desc = SFH.44.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.44.a
+		add_stability = -0.02
+		add_manpower = -14
+	}
+}
+
+country_event = {		#课堂
+	id = SFH.45
+	title = SFH.45.t
+	desc = SFH.45.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.45.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = {		#行善的贵族
+	id = SFH.46
+	title = SFH.46.t
+	desc = SFH.46.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.46.a
+	}
+}
+
+country_event = {		#绝非嗟来之食
+	id = SFH.47
+	title = SFH.47.t
+	desc = SFH.47.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.47.a
+	}
+}
+
+country_event = {		#新时代，旧把戏
+	id = SFH.48
+	title = SFH.48.t
+	desc = SFH.48.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.48.a
+	}
+}
+
+country_event = {		#……修万里路
+	id = SFH.49
+	title = SFH.49.t
+	desc = SFH.49.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.49.a
+	}
+}
+
+country_event = {		#自我清理
+	id = SFH.50
+	title = SFH.50.t
+	desc = SFH.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.50.a
+	}
+}
+
+country_event = {		#重新做人
+	id = SFH.51
+	title = SFH.51.t
+	desc = SFH.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.51.a
+		add_manpower = 1
+	}
+
+	option = {		
+		name = SFH.51.b
+		add_political_power = 1
+	}
+}
+
+country_event = {		#无形的对抗
+	id = SFH.52
+	title = SFH.52.t
+	desc = SFH.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.52.a
+		trigger = {
+			has_completed_focus = SFH_reorganization_of_the_judiciary
+		}
+		custom_effect_tooltip = SFH.52.a.tt
+	}
+
+	option = {		
+		name = SFH.52.b
+		add_political_power = -10
+	}
+}
+
+country_event = {		#教育即阶梯…
+	id = SFH.53
+	title = SFH.53.t
+	desc = SFH.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.53.a
+	}
+}
+
+country_event = {		#课外阅读
+	id = SFH.54
+	title = SFH.54.t
+	desc = SFH.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.54.a
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {		#谁保护谁
+	id = SFH.55
+	title = SFH.55.t
+	desc = SFH.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.55.a
+	}
+}
+
+country_event = {		#一日主夫
+	id = SFH.56
+	title = SFH.56.t
+	desc = SFH.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.56.a
+	}
+}
+
+country_event = {		#占位符
+	id = SFH.57
+	title = SFH.57.t
+	desc = SFH.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.57.a
+	}
+}
+
+country_event = {		#房屋清理
+	id = SFH.58
+	title = SFH.58.t
+	desc = SFH.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.58.a
+	}
+}
+
+country_event = {		#新的开始
+	id = SFH.59
+	title = SFH.59.t
+	desc = SFH.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.59.a
+		add_manpower = 50000
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+country_event = {		#背叛的滋味
+	id = SFH.100
+	title = SFH.100.t
+	desc = SFH.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.100.a
+		country_event = SFH.101
+	}
+}
+
+country_event = {		#对付贵族
+	id = SFH.101
+	title = SFH.101.t
+	desc = SFH.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.101.a
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_sail_peacefully
+				has_completed_focus = SFH_now_we_are_safe
+			}
+		}
+		custom_effect_tooltip = SFH_due_to_finish_focus_right
+		complete_national_focus = SFH_done_it_peacefully
+	}
+
+	option = {		
+		name = SFH.101.b
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_looking_for_the_future
+				has_completed_focus = SFH_sail_peacefully
+			}
+		}
+		custom_effect_tooltip = SFH_due_to_finish_focus_left
+		complete_national_focus = SFH_no_more_toleration
+	}
+}
+
+country_event = {		#绵里藏针
+	id = SFH.102
+	title = SFH.102.t
+	desc = SFH.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.102.a
+	}
+}
+
+country_event = {		#醉生梦死
+	id = SFH.103
+	title = SFH.103.t
+	desc = SFH.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.103.a
+	}
+}
+
+country_event = {		#尽心尽力
+	id = SFH.104
+	title = SFH.104.t
+	desc = SFH.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.104.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {		#个人魅力
+	id = SFH.105
+	title = SFH.105.t
+	desc = SFH.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.105.a
+	}
+}
+
+country_event = {		#是，公主
+	id = SFH.106
+	title = SFH.106.t
+	desc = SFH.106.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.106.a
+	}
+}
+
+country_event = {		#重拳出击
+	id = SFH.107
+	title = SFH.107.t
+	desc = SFH.107.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.107.a
+	}
+}
+
+country_event = {		#再见了您内！
+	id = SFH.108
+	title = SFH.108.t
+	desc = SFH.108.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.108.a
+	}
+}
+
+country_event = {		#流言蜚语
+	id = SFH.109
+	title = SFH.109.t
+	desc = SFH.109.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.109.a
+	}
+}
+
+country_event = {		#独家爆料
+	id = SFH.110
+	title = SFH.110.t
+	desc = SFH.110.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.110.a
+	}
+}
+
+country_event = {		#权宜之盟
+	id = SFH.111
+	title = SFH.111.t
+	desc = SFH.111.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.111.a
+	}
+}
+
+country_event = {		#微妙平衡
+	id = SFH.112
+	title = SFH.112.t
+	desc = SFH.112.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.112.a
+	}
+}
+
+country_event = {		#人走茶凉
+	id = SFH.113
+	title = SFH.113.t
+	desc = SFH.113.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.113.a
+	}
+}
+
+country_event = {		#犹豫
+	id = SFH.200
+	title = SFH.200.t
+	desc = SFH.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.200.a
+		country_event = SFH.201
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	option = {		
+		name = SFH.200.b
+		complete_national_focus = SFH_consolidate_traditions
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {		#变革之风
+	id = SFH.201
+	title = SFH.201.t
+	desc = SFH.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.201.a
+		complete_national_focus = SFH_reopen_reformation
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {		
+		name = SFH.201.b
+		complete_national_focus = SFH_middle_route
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {		#立宪会议-开始
+	id = SFH.250
+	title = SFH.250.t
+	desc = SFH.250.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {		
+		name = SFH.250.a
+		custom_effect_tooltip = SFH.250.a.tt
+		hidden_effect = {
+			country_event = {
+				id = SFH.251
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-议题1-改革的基础
+	id = SFH.251
+	title = SFH.251.t
+	desc = SFH.251.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.251.a
+		add_stability = -0.05
+		add_political_power = 20
+		SFH_reformation_wining_chance_down_small = yes
+		custom_effect_tooltip = SFH.251.a.tt
+		add_to_variable = {
+			SFH_reformation_pp = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.252
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.251.b
+		add_stability = 0.05
+		add_political_power = -20
+		SFH_reformation_wining_chance_up_small = yes
+		custom_effect_tooltip = SFH.251.b.tt
+		add_to_variable = {
+			SFH_reformation_st = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.252
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.251.c
+		trigger = {
+			has_completed_focus = SFH_learn_from_the_past
+		}
+		add_political_power = 20
+		custom_effect_tooltip = SFH.251.c.tt
+		add_to_variable = {
+			SFH_reformation_pp = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.252
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.251.dd
+		trigger = {
+			has_completed_focus = SFH_continue_the_old_policy
+		}
+		add_stability = 0.05
+		SFH_reformation_wining_chance_up_large = yes
+		custom_effect_tooltip = SFH.251.dd.tt
+		add_to_variable = {
+			SFH_reformation_st = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.252
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-议题2-政府在社会中的地位
+	id = SFH.252
+	title = SFH.252.t
+	desc = SFH.252.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.252.a
+		add_stability = 0.05
+		add_political_power = -25
+		SFH_reformation_wining_chance_up_small = yes
+		custom_effect_tooltip = SFH.252.a.tt
+		add_to_variable = {
+			SFH_reformation_st = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.253
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.252.b
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+		add_stability = 0.1
+		add_political_power = -50
+		custom_effect_tooltip = SFH.252.b.tt
+		hidden_effect = {
+			country_event = {
+				id = SFH.253
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.252.c
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = authoritarian_republican
+			popularity = 0.05
+		}
+		add_war_support = 0.2
+		add_political_power = -100
+		SFH_reformation_wining_chance_down_small = yes
+		custom_effect_tooltip = SFH.252.c.tt
+		add_to_variable = {
+			SFH_reformation_pp = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.253
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-议题3-反对派的地位
+	id = SFH.253
+	title = SFH.253.t
+	desc = SFH.253.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.253.a
+		add_stability = 0.05
+		add_political_power = -50
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.05
+		}
+		custom_effect_tooltip = SFH.253.a.tt
+		add_to_variable = {
+			SFH_reformation_st = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.254
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.253.b
+		add_stability = -0.05
+		add_political_power = 25
+		SFH_reformation_wining_chance_down_large = yes
+		custom_effect_tooltip = SFH.253.b.tt
+		add_to_variable = {
+			SFH_reformation_st = -2
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.254
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.253.c
+		add_stability = 0.1
+		add_political_power = -25
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.1
+		}
+		SFH_reformation_wining_chance_down_small = yes
+		custom_effect_tooltip = SFH.253.c.tt
+		add_to_variable = {
+			SFH_reformation_st = 1
+		}
+		trigger = {
+			has_completed_focus = SFH_listen_to_opposition
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.254
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.253.dd
+		add_stability = -0.05
+		add_political_power = 50
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.05
+		}
+		SFH_reformation_wining_chance_up_small = yes
+		custom_effect_tooltip = SFH.253.dd.tt
+		add_to_variable = {
+			SFH_reformation_pp = 1
+		}
+		trigger = {
+			has_completed_focus = SFH_let_us_lead
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.254
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-议题4-面向群体
+	id = SFH.254
+	title = SFH.254.t
+	desc = SFH.254.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SFH.254.a
+		add_stability = 0.1
+		add_political_power = -50
+		custom_effect_tooltip = SFH.254.a.tt
+		SFH_reformation_wining_chance_up_large = yes
+		add_to_variable = {
+			SFH_reformation_st = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.255
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.254.b
+		add_stability = 0.05
+		add_political_power = -25
+		SFH_reformation_wining_chance_up_small = yes
+		custom_effect_tooltip = SFH.254.b.tt
+		add_to_variable = {
+			SFH_reformation_st = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.255
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = SFH.254.c
+		add_stability = -0.1
+		add_political_power = 50
+		SFH_reformation_wining_chance_down_small = yes
+		custom_effect_tooltip = SFH.254.c.tt
+		add_to_variable = {
+			SFH_reformation_pp = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = SFH.255
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-结束
+	id = SFH.255
+	title = SFH.255.t
+	desc = SFH.255.d
+	#picture = 
+	
+	immediate = {
+		multiply_variable = {
+			SFH_reformation_st = 0.01
+		}
+		multiply_variable = {
+			SFH_reformation_pp = 10
+		}
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.255.a
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						SFH_reformation_wining_chance > -1	
+					}
+				}
+				country_event = SFH.256
+			}
+			else = {
+				country_event = SFH.257
+			}
+		}
+	}
+}
+
+country_event = {		#立宪会议-多数人支持
+	id = SFH.256
+	title = SFH.256.t
+	desc = SFH.256.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.256.a
+		add_stability = SFH_reformation_st
+		add_political_power = SFH_reformation_pp
+		hidden_effect = {
+			news_event = SFHNews.5
+		}
+	}
+}
+
+country_event = {		#立宪会议-少数人支持
+	id = SFH.257
+	title = SFH.257.t
+	desc = SFH.257.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.257.a
+		add_stability = -0.1
+		add_political_power = -50
+		custom_effect_tooltip = SFH.257.a.tt
+		hidden_effect = {
+			news_event = SFHNews.5
+		}
+	}
+}
+
+country_event = {		#应付革命党人
+	id = SFH.300
+	title = SFH.300.t
+	desc = SFH.300.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.300.a
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_looking_for_the_future
+				has_completed_focus = SFH_sail_peacefully
+			}
+		}
+		custom_effect_tooltip = SFH_due_to_finish_focus_left
+		complete_national_focus = SFH_preserve_the_fire
+	}
+
+	option = {
+		name = SFH.300.b
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_sail_peacefully
+				has_completed_focus = SFH_now_we_are_safe
+			}
+		}
+		custom_effect_tooltip = SFH_due_to_finish_focus_right
+		complete_national_focus = SFH_blow_out_the_fire
+	}
+}
+
+country_event = {		#应付工业贵族
+	id = SFH.400
+	title = SFH.400.t
+	desc = SFH.400.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.400.a
+		complete_national_focus = SFH_harnessing_the_oligarchy
+	}
+
+	option = {
+		name = SFH.400.b
+		complete_national_focus = SFH_keep_current_situation
+	}
+}
+
+country_event = {		#应付地主阶级
+	id = SFH.500
+	title = SFH.500.t
+	desc = SFH.500.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.500.a
+		complete_national_focus = SFH_show_them_no_mercy
+	}
+
+	option = {
+		name = SFH.500.b
+		complete_national_focus = SFH_the_white_gloves
+	}
+}
+
+country_event = {		#开诚布公
+	id = SFH.501
+	title = SFH.501.t
+	desc = SFH.501.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.501.a
+	}
+}
+
+country_event = {		#小小骚乱
+	id = SFH.502
+	title = SFH.502.t
+	desc = SFH.502.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.502.a
+		add_stability = -0.03
+		add_war_support = 0.01
+	}
+}
+
+country_event = {		#汹涌民意
+	id = SFH.503
+	title = SFH.503.t
+	desc = SFH.503.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.503.a
+		add_political_power = 5
+	}
+}
+
+country_event = {		#意外的失败
+	id = SFH.504
+	title = SFH.504.t
+	desc = SFH.504.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.504.a
+	}
+}
+
+country_event = {		#缓慢进军
+	id = SFH.505
+	title = SFH.505.t
+	desc = SFH.505.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.505.a
+	}
+}
+
+country_event = {		#勤劳工作
+	id = SFH.506
+	title = SFH.506.t
+	desc = SFH.506.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.506.a
+	}
+}
+
+country_event = {		#特殊优惠
+	id = SFH.507
+	title = SFH.507.t
+	desc = SFH.507.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.507.a
+	}
+}
+
+country_event = {		#剿匪战略
+	id = SFH.508
+	title = SFH.508.t
+	desc = SFH.508.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.508.a
+		add_manpower = -236
+	}
+}
+
+country_event = {		#均田则国安
+	id = SFH.509
+	title = SFH.509.t
+	desc = SFH.509.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	option = {
+		name = SFH.509.a
+		add_political_power = 15
+	}
+}
+
+country_event = {		#人鱼亲善大使遭暗杀！
+	id = SFH.600
+	title = SFH.600.t
+	desc = SFH.600.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.600.a
+		set_country_flag = SFH_crisis_on
+		set_country_flag = SFH_mermaid_crisis_on
+		add_ideas = SFH_people_in_terror
+		add_ideas = SFH_angry_mermaid
+		custom_effect_tooltip = SFH_mermaid_satisfaction_tt_down_large
+		add_to_variable = {
+			SFH_mermaid_satisfaction_variable = -15
+		}
+		custom_effect_tooltip = SFH_mermaid_influence_tt_down_large
+		add_to_variable = {
+			SFH_mermaid_influence_variable = -0.15
+		}
+		custom_effect_tooltip = SFH_people_satisfaction_tt_down_large
+		add_to_variable = {
+			SFH_people_satisfaction_variable = -15
+		}
+		SFH_mermaid_influence_modifier_update = yes
+		news_event = SFHNews.9
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {		#接下来，怎么办?
+	id = SFH.601
+	title = SFH.601.t
+	desc = SFH.601.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.601.a
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_middle_route
+			}
+		}
+		complete_national_focus = SFH_ala_being_careful
+		custom_effect_tooltip = SFH.601.a.tt
+	}
+
+	option = {
+		name = SFH.601.b
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		complete_national_focus = SFH_or_probably_a_good_time
+		custom_effect_tooltip = SFH.601.b.tt
+	}
+}
+
+country_event = {		#王武的故事（1）
+	id = SFH.602
+	title = SFH.602.t
+	desc = SFH.602.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.602.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.603
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = {		#王武的故事（2）
+	id = SFH.603
+	title = SFH.603.t
+	desc = SFH.603.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.603.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.604
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = {		#王武的故事（3）
+	id = SFH.604
+	title = SFH.604.t
+	desc = SFH.604.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.604.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.605
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = {		#王武的故事（4）
+	id = SFH.605
+	title = SFH.605.t
+	desc = SFH.605.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.605.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.606
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = {		#王武的故事（5）
+	id = SFH.606
+	title = SFH.606.t
+	desc = SFH.606.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.606.a
+		hidden_effect = {
+			country_event = {
+				id = SFH.607
+				days = 40
+			}
+		}
+	}
+}
+
+country_event = {		#思考
+	id = SFH.607
+	title = SFH.607.t
+	desc = SFH.607.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.607.a
+		country_event = SFH.608
+	}
+}
+
+country_event = {		#演讲
+	id = SFH.608
+	title = SFH.608.t
+	desc = SFH.608.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.608.a
+		country_event = {
+			id = SFH.600
+			days = 1
+		}
+	}
+}
+
+country_event = {		#江洲人质危机
+	id = SFH.700
+	title = SFH.700.t
+	desc = SFH.700.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.700.a
+		set_country_flag = SFH_crisis_on
+		set_country_flag = SFH_subhuman_crisis_on
+		add_ideas = SFH_jiangzhou_hostage_crisis_idea
+		SFH_king_power_down_large = yes
+		news_event = SFHNews.10
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {		#应对人质危机
+	id = SFH.701
+	title = SFH.701.t
+	desc = SFH.701.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.701.a
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_reopen_reformation
+				has_completed_focus = SFH_middle_route
+			}
+		}
+		complete_national_focus = SFH_negotiator_approach
+		custom_effect_tooltip = SFH.701.a.tt
+	}
+
+	option = {
+		name = SFH.701.b
+		trigger = {
+			has_completed_focus = SFH_reopen_reformation
+		}
+		complete_national_focus = SFH_conservative_plan
+	}
+
+	option = {
+		name = SFH.701.c
+		trigger = {
+			OR = {
+				has_completed_focus = SFH_middle_route
+				has_completed_focus = SFH_consolidate_traditions
+			}
+		}
+		complete_national_focus = SFH_radical_act
+	}
+}
+
+country_event = {		#仁巧的故事（1）
+	id = SFH.702
+	title = SFH.702.t
+	desc = SFH.702.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.702.a
+		country_event = {
+			id = SFH.703
+			days = 40
+		}
+	}
+}
+
+country_event = {		#仁巧的故事（2）
+	id = SFH.703
+	title = SFH.703.t
+	desc = SFH.703.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.703.a
+		country_event = {
+			id = SFH.704
+			days = 40
+		}
+	}
+}
+
+country_event = {		#仁巧的故事（3）
+	id = SFH.704
+	title = SFH.704.t
+	desc = SFH.704.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.704.a
+		country_event = {
+			id = SFH.705
+			days = 40
+		}
+	}
+}
+
+country_event = {		#仁巧的故事（4）
+	id = SFH.705
+	title = SFH.705.t
+	desc = SFH.705.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.705.a
+		country_event = {
+			id = SFH.706
+			days = 40
+		}
+	}
+}
+
+country_event = {		#仁巧的故事（5）
+	id = SFH.706
+	title = SFH.706.t
+	desc = SFH.706.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.706.a
+		country_event = {
+			id = SFH.707
+			days = 40
+		}
+	}
+}
+
+country_event = {		#陆千秋
+	id = SFH.707
+	title = SFH.707.t
+	desc = SFH.707.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.707.a
+		country_event = SFH.708
+	}
+}
+
+country_event = {		#无路可退
+	id = SFH.708
+	title = SFH.708.t
+	desc = SFH.708.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.708.a
+		country_event = {
+			id = SFH.700
+			days = 1
+		}
+	}
+}
+
+country_event = {		#山雨欲来
+	id = SFH.800
+	title = SFH.800.t
+	desc = SFH.800.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.800.a
+		set_country_flag = SFH_civil_war_on
+		news_event = SFHNews.2
+		add_ideas = SFH_civil_war_army
+		clr_country_flag = SFH_pre_war_flag
+		every_owned_state = {
+			if = {
+				limit = { has_state_flag = SFH_state_influence_not_under_control }
+				if = {
+					limit = { check_variable = { SFR_state_influence_var > QTA_state_influence_var } }
+					transfer_state_to = SFR
+				}
+				else = {
+					transfer_state_to = QTA
+				}
+			}
+
+			clr_state_flag = SFH_state_influence_under_control
+			clr_state_flag = SFH_state_influence_not_under_control
+			clr_state_flag = SFH_state_influence_lock
+		}
+		SFR = {
+			every_owned_state = {
+				clr_state_flag = SFH_state_influence_under_control
+				clr_state_flag = SFH_state_influence_not_under_control
+				clr_state_flag = SFH_state_influence_lock
+			}
+			declare_war_on = {
+				target = SFH
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					has_country_flag = SFR_getting_weaker
+				}
+				add_timed_idea = {
+					idea = SFH_weaker_opposition_civil_war
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SFR_getting_stronger
+				}
+				add_timed_idea = {
+					idea = SFH_stronger_opposition_civil_war
+					days = 100
+				}
+			}
+		}
+		QTA = {
+			every_owned_state = {
+				clr_state_flag = SFH_state_influence_under_control
+				clr_state_flag = SFH_state_influence_not_under_control
+				clr_state_flag = SFH_state_influence_lock
+			}
+			declare_war_on = {
+				target = SFH
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					has_country_flag = QTA_getting_weaker
+				}
+				add_timed_idea = {
+					idea = SFH_weaker_opposition_civil_war
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = QTA_getting_stronger
+				}
+				add_timed_idea = {
+					idea = SFH_stronger_opposition_civil_war
+					days = 100
+				}
+			}
+		}
+		hidden_effect = {
+			SFH_civil_war_begin_setup = yes
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {		#内战爆发-军改成功
+	id = SFH.801
+	title = SFH.801.t
+	desc = SFH.801.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.801.a
+		add_manpower = 10000
+		add_war_support = 0.05
+		add_command_power = 25
+		add_timed_idea = {
+			idea = SFH_well_organized_army
+			days = 200
+		}
+		custom_effect_tooltip = SFH.801.tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = SFH_civil_war_betrayed_officier
+				}
+				country_event = {
+					id = SFH.23
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+country_event = {		#内战爆发-军改失败
+	id = SFH.802
+	title = SFH.802.t
+	desc = SFH.802.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.802.a
+		add_manpower = -10000
+		add_war_support = -0.05
+		add_command_power = -25
+		add_timed_idea = {
+			idea = SFH_army_in_chaos
+			days = 200
+		}
+		custom_effect_tooltip = SFH.802.tt
+	}
+}
+
+country_event = {		#内战爆发-厌战成功
+	id = SFH.803
+	title = SFH.803.t
+	desc = SFH.803.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.803.a
+		add_war_support = 0.05
+		add_manpower = 20000
+		add_timed_idea = {
+			idea = SFH_supportive_people
+			days = 200
+		}
+		custom_effect_tooltip = SFH.803.tt
+	}
+}
+
+country_event = {		#内战爆发-厌战失败
+	id = SFH.804
+	title = SFH.804.t
+	desc = SFH.804.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.804.a
+		add_war_support = -0.05
+		add_manpower = -20000
+		add_timed_idea = {
+			idea = SFH_anti_war_people
+			days = 200
+		}
+		custom_effect_tooltip = SFH.804.tt
+	}
+}
+
+country_event = {		#内战爆发-社改成功
+	id = SFH.805
+	title = SFH.805.t
+	desc = SFH.805.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.805.a
+		add_stability = 0.05
+		add_political_power = 25
+		add_timed_idea = {
+			idea = SFH_stable_society
+			days = 200
+		}
+		custom_effect_tooltip = SFH.805.tt
+	}
+}
+
+country_event = {		#内战爆发-社改失败
+	id = SFH.806
+	title = SFH.806.t
+	desc = SFH.806.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.806.a
+		add_stability = -0.05
+		add_political_power = -25
+		add_timed_idea = {
+			idea = SFH_society_in_chaos
+			days = 200
+		}
+		custom_effect_tooltip = SFH.806.tt
+	}
+}
+
+country_event = {		#内战爆发-工改成功
+	id = SFH.807
+	title = SFH.807.t
+	desc = SFH.807.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.807.a
+		add_stability = 0.05
+		add_political_power = 25
+		add_timed_idea = {
+			idea = SFH_solid_industrial_system
+			days = 200
+		}
+		custom_effect_tooltip = SFH.807.tt
+	}
+}
+
+country_event = {		#内战爆发-工改失败
+	id = SFH.808
+	title = SFH.808.t
+	desc = SFH.808.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.808.a
+		add_stability = -0.05
+		add_political_power = -25
+		add_timed_idea = {
+			idea = SFH_industrial_system_in_chaos
+			days = 200
+		}
+		custom_effect_tooltip = SFH.808.tt
+	}
+}
+
+country_event = {		#内战前-省份失去控制
+	id = SFH.850
+	title = SFH.850.t
+	desc = SFH.850.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.850.a
+		add_stability = -0.02
+		SFH_king_power_down_small = yes
+	}
+}
+
+country_event = {		#内战前-省份被直接夺取
+	id = SFH.851
+	title = SFH.851.t
+	desc = SFH.851.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.851.a
+		add_stability = -0.02
+		SFH_king_power_down_small = yes
+	}
+}
+
+country_event = {		#失去的过去
+	id = SFH.900
+	title = SFH.900.t
+	desc = SFH.900.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.900.a
+		country_event = {
+			id = SFH.901
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.900.b
+		country_event = {
+			id = SFH.901
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#为君之道
+	id = SFH.901
+	title = SFH.901.t
+	desc = SFH.901.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.901.a
+		country_event = {
+			id = SFH.902
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.901.b
+		country_event = {
+			id = SFH.902
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#远乡的崛起
+	id = SFH.902
+	title = SFH.902.t
+	desc = SFH.902.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.902.a
+		country_event = {
+			id = SFH.903
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.902.b
+		country_event = {
+			id = SFH.903
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#贵族们
+	id = SFH.903
+	title = SFH.903.t
+	desc = SFH.903.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.903.a
+		country_event = {
+			id = SFH.904
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.903.b
+		country_event = {
+			id = SFH.904
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#流民
+	id = SFH.904
+	title = SFH.904.t
+	desc = SFH.904.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.904.a
+		country_event = {
+			id = SFH.905
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.904.b
+		country_event = {
+			id = SFH.905
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#郑红的交际圈
+	id = SFH.905
+	title = SFH.905.t
+	desc = SFH.905.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.905.a
+		country_event = {
+			id = SFH.906
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.905.b
+		country_event = {
+			id = SFH.906
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#郑钧的建议
+	id = SFH.906
+	title = SFH.906.t
+	desc = SFH.906.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.906.a
+		country_event = {
+			id = SFH.907
+			days = 100
+		}
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.906.b
+		country_event = {
+			id = SFH.907
+			days = 100
+		}
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#奇迹的力量
+	id = SFH.907
+	title = SFH.907.t
+	desc = SFH.907.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.907.a
+		SFH_Zhenghong_get_soften_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+
+	option = {
+		name = SFH.907.b
+		SFH_Zhenghong_get_tough_effect = yes
+		add_to_variable = {
+			SFH_preparation_bar_var = 5
+		}
+		custom_effect_tooltip = SFH_preparation_up_effect
+	}
+}
+
+country_event = {		#企业会谈
+	id = SFH.950
+	title = SFH.950.t
+	desc = SFH.950.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.950.a
+	}
+}
+
+country_event = {		#请神容易送神难
+	id = SFH.951
+	title = SFH.951.t
+	desc = SFH.951.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.951.a
+	}
+}
+
+country_event = {		#发展的代价
+	id = SFH.952
+	title = SFH.952.t
+	desc = SFH.952.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.952.a
+	}
+}
+
+country_event = {		#警示
+	id = SFH.953
+	title = SFH.953.t
+	desc = SFH.953.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.953.a
+	}
+}
+
+country_event = {		#愚昧？
+	id = SFH.954
+	title = SFH.954.t
+	desc = SFH.954.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.954.a
+	}
+}
+
+country_event = {		#内战结束
+	id = SFH.1000
+	title = SFH.1000.t
+	desc = SFH.1000.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1000.a
+		add_stability = 0.2
+		add_war_support = -0.1
+		add_political_power = 100
+		news_event = SFHNews.3
+		custom_effect_tooltip = SFH.1000.tt
+		clr_country_flag = SFH_civil_war_on
+		set_country_flag = SFH_civil_war_over
+		#set_country_flag = SFH_game_over
+		add_ideas = SFH_chaos_after_war_1
+		hidden_effect = {
+			remove_ideas = {
+				SFH_civil_war_army
+				SFH_civil_war_army_1
+				SFH_civil_war_army_2
+				SFH_civil_war_army_3
+				SFH_civil_war_army_4
+				SFH_civil_war_army_5
+			}
+			clr_country_flag = SFH_national_reformation_flag
+			set_variable = { SFH_king_power = 100 }
+			set_variable = { SFH_reformist_power = 0 }
+			set_variable = { SFH_conservative_power = 0 }
+			SFH_political_struggle_var_clamp = yes
+		}
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#西北
+country_event = {		#南方来电
+	id = SFH.1100
+	title = SFH.1100.t
+	desc = SFH.1100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1100.a
+		SFH = {
+			country_event = SFH.1101
+		}
+	}
+}
+
+country_event = {		#邱元帅同意了！
+	id = SFH.1101
+	title = SFH.1101.t
+	desc = SFH.1101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1101.a
+		add_stability = 0.02
+		set_country_flag = SFH_nwf_agree_to_unify_flag
+		NWF = { add_ideas = NWF_absolute_loyal }
+	}
+}
+
+country_event = {		#递出橄榄枝
+	id = SFH.1120
+	title = SFH.1120.t
+	desc = SFH.1120.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1120.a
+	}
+}
+
+country_event = {		#双方会谈
+	id = SFH.1121
+	title = SFH.1121.t
+	desc = SFH.1121.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1121.a
+		ai_chance = {
+			base = 50
+		}
+		SFH = {
+			country_event = SFH.1122
+		}
+	}
+
+	option = {
+		name = SFH.1121.b
+		ai_chance = {
+			base = 50
+		}
+		SFH = {
+			country_event = SFH.1123
+		}
+	}
+}
+
+country_event = {		#会谈成功
+	id = SFH.1122
+	title = SFH.1122.t
+	desc = SFH.1122.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1122.a
+		add_stability = 0.02
+		set_country_flag = SFH_nwf_meeting_success
+	}
+}
+
+country_event = {		#会谈失败
+	id = SFH.1123
+	title = SFH.1123.t
+	desc = SFH.1123.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1123.a
+		add_stability = -0.02
+		set_country_flag = SFH_nwf_meeting_failure
+	}
+}
+
+country_event = {		#南方来信
+	id = SFH.1200
+	title = SFH.1200.t
+	desc = SFH.1200.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1200.a
+		country_event = SFH.1202
+		custom_effect_tooltip = SFH.1200.a.tt
+	}
+}
+
+country_event = {		#发信
+	id = SFH.1201
+	title = SFH.1201.t
+	desc = SFH.1201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1201.a
+		NFH = {
+			country_event = {
+				id = SFH.1200
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {		#回信
+	id = SFH.1202
+	title = SFH.1202.t
+	desc = SFH.1202.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1202.a
+		SFH = {
+			country_event = {
+				id = SFH.1203
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {		#北方来信
+	id = SFH.1203
+	title = SFH.1203.t
+	desc = SFH.1203.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1203.a
+		custom_effect_tooltip = SFH.1203.a.tt
+	}
+}
+
+country_event = {		#北远乡局势
+	id = SFH.1220
+	title = SFH.1220.t
+	desc = SFH.1220.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1220.a
+	}
+}
+
+country_event = {		#邀请郑义
+	id = SFH.1221
+	title = SFH.1221.t
+	desc = SFH.1221.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1221.a
+		NFH = {
+			country_event = SFH.1222
+		}
+	}
+}
+
+country_event = {		#如何参与会议？
+	id = SFH.1222
+	title = SFH.1222.t
+	desc = SFH.1222.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1222.a
+		ai_chance = {
+			base = 40
+		}
+		SFH = { country_event = { id = SFH.1223 days = 3 } }
+		set_country_flag = SFH_nfh_meeting_option_1
+	}
+
+	option = {
+		name = SFH.1222.b
+		ai_chance = {
+			base = 60
+		}
+		SFH = { country_event = { id = SFH.1223 days = 3 } }
+		set_country_flag = SFH_nfh_meeting_option_2
+	}
+}
+
+country_event = {		#兄长驾到
+	id = SFH.1223
+	title = SFH.1223.t
+	desc = SFH.1223.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1223.a
+		hidden_effect = {
+			if = {
+				limit = { NFH = { has_country_flag = SFH_nfh_meeting_option_1 } }
+				country_event = { id = SFH.1224 days = 5 }
+			}
+			else_if = {
+				limit = { NFH = { has_country_flag = SFH_nfh_meeting_option_2 } }
+				country_event = { id = SFH.1225 days = 5 }
+			}
+		}
+	}
+}
+
+country_event = {		#达成共识
+	id = SFH.1224
+	title = SFH.1224.t
+	desc = SFH.1224.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1224.a
+		set_country_flag = SFH_nfh_agree_unification
+		custom_effect_tooltip = SFH.1224.tt
+	}
+}
+
+country_event = {		#谈判破裂
+	id = SFH.1225
+	title = SFH.1225.t
+	desc = SFH.1225.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1225.a
+		set_country_flag = SFH_nfh_disagree_unification
+	}
+}
+
+country_event = {		#人鱼特区事宜
+	id = SFH.1240
+	title = SFH.1240.t
+	desc = SFH.1240.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1240.a
+	}
+}
+
+country_event = {		#修正条约？
+	id = SFH.1241
+	title = SFH.1241.t
+	desc = SFH.1241.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1241.a
+		MSA = {
+			country_event = {
+				id = SFH.1242
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFH.1241.b
+		add_political_power = -50
+		MSA = {
+			country_event = {
+				id = SFH.1243
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFH.1241.c
+		add_stability = -0.05
+		add_political_power = -100
+		MSA = {
+			country_event = {
+				id = SFH.1244
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {		#收紧缰绳
+	id = SFH.1242
+	title = SFH.1242.t
+	desc = SFH.1242.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1242.a
+		SFH = {
+			country_event = {
+				id = SFH.1245
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	option = {
+		name = SFH.1242.b
+		SFH = {
+			country_event = {
+				id = SFH.1248
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {		#新的要约
+	id = SFH.1243
+	title = SFH.1243.t
+	desc = SFH.1243.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1243.a
+		SFH = {
+			country_event = {
+				id = SFH.1246
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {
+		name = SFH.1243.b
+		SFH = {
+			country_event = {
+				id = SFH.1248
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {		#特区的终结
+	id = SFH.1244
+	title = SFH.1244.t
+	desc = SFH.1244.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1244.a
+		SFH = {
+			country_event = {
+				id = SFH.1247
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name = SFH.1244.b
+		SFH = {
+			country_event = {
+				id = SFH.1248
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+}
+
+country_event = {		#同意请求-1
+	id = SFH.1245
+	title = SFH.1245.t
+	desc = SFH.1245.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1245.a
+		set_country_flag = SFH_mermaid_unification_choice_1
+		set_country_flag = SFH_msa_agree_unification
+	}
+}
+
+country_event = {		#同意请求-2
+	id = SFH.1246
+	title = SFH.1246.t
+	desc = SFH.1246.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1246.a
+		set_country_flag = SFH_mermaid_unification_choice_2
+		set_country_flag = SFH_msa_agree_unification
+	}
+}
+
+country_event = {		#同意请求-3
+	id = SFH.1247
+	title = SFH.1247.t
+	desc = SFH.1247.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1247.a
+		set_country_flag = SFH_mermaid_unification_choice_3
+		set_country_flag = SFH_msa_agree_unification
+	}
+}
+
+country_event = {		#拒绝提案
+	id = SFH.1248
+	title = SFH.1248.t
+	desc = SFH.1248.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1248.a
+		set_country_flag = SFH_msa_disagree_unification
+	}
+}
+
+country_event = {		#无序的北远乡
+	id = SFH.1260
+	title = SFH.1260.t
+	desc = SFH.1260.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1260.a
+	}
+}
+
+country_event = {		#内战援助
+	id = SFH.1280
+	title = SFH.1280.t
+	desc = SFH.1280.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1280.a
+		SFH = { country_event = { id = SFH.1281 days = 1 } }
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = {
+		name = SFH.1280.b
+		SFH = { country_event = { id = SFH.1282 days = 1 } }
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {		#郑义让步
+	id = SFH.1281
+	title = SFH.1281.t
+	desc = SFH.1281.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1281.a
+		add_stability = 0.02
+		set_country_flag = SFH_nfh_agree_union
+	}
+}
+
+country_event = {		#郑义拒绝
+	id = SFH.1282
+	title = SFH.1282.t
+	desc = SFH.1282.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1282.a
+		add_stability = -0.02
+		set_country_flag = SFH_nfh_disagree_union
+	}
+}
+
+country_event = {		#国王来信
+	id = SFH.1300
+	title = SFH.1300.t
+	desc = SFH.1300.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1300.a
+		SFH = {
+			country_event = {
+				id = SFH.1301
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = SFH.1300.b
+		SFH = {
+			country_event = {
+				id = SFH.1302
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+country_event = {		#贵族同意
+	id = SFH.1301
+	title = SFH.1301.t
+	desc = SFH.1301.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1301.a
+		add_stability = 0.02
+		set_country_flag = SFH_afh_agree_unification
+	}
+}
+
+country_event = {		#贵族拒绝
+	id = SFH.1302
+	title = SFH.1302.t
+	desc = SFH.1302.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1302.a
+		add_stability = -0.02
+		set_country_flag = SFH_afh_disagree_unification
+	}
+}
+
+country_event = {		#人鱼特区问题
+	id = SFH.1320
+	title = SFH.1320.t
+	desc = SFH.1320.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1320.a
+		add_political_power = -100
+		MSA = {
+			country_event = {
+				id = SFH.1321
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = SFH.1320.b
+		add_stability = -0.05
+		add_war_support = 0.1
+		set_country_flag = SFH_msa_by_force
+	}
+}
+
+country_event = {		#让步与否？
+	id = SFH.1321
+	title = SFH.1321.t
+	desc = SFH.1321.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1321.a
+		SFH = {
+			country_event = {
+				id = SFH.1322
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = SFH.1321.b
+		SFH = {
+			country_event = {
+				id = SFH.1323
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+country_event = {		#人鱼选择让步
+	id = SFH.1322
+	title = SFH.1322.t
+	desc = SFH.1322.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1322.a
+		set_country_flag = SFH_msa_by_peace
+	}
+}
+
+country_event = {		#人鱼拒绝让步
+	id = SFH.1323
+	title = SFH.1323.t
+	desc = SFH.1323.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1323.a
+		add_war_support = 0.05
+		set_country_flag = SFH_msa_by_force
+	}
+}
+
+country_event = {		#最后的请求
+	id = SFH.1340
+	title = SFH.1340.t
+	desc = SFH.1340.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1340.a
+		SFH = {
+			country_event = {
+				id = SFH.1341
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = SFH.1340.b
+		SFH = {
+			country_event = {
+				id = SFH.1342
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+country_event = {		#郑义投降
+	id = SFH.1341
+	title = SFH.1341.t
+	desc = SFH.1341.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1341.a
+		set_country_flag = SFH_shake_hands_flag
+	}
+}
+
+country_event = {		#郑义拒绝投降
+	id = SFH.1342
+	title = SFH.1342.t
+	desc = SFH.1342.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1342.a
+		set_country_flag = SFH_only_the_fight_flag
+	}
+}
+
+country_event = {		#已经结束嘞！
+	id = SFH.1400
+	title = SFH.1400.t
+	desc = SFH.1400.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1400.a
+		#set_country_flag = SFH_game_over
+		#unlock_decision_category_tooltip = SFH_aftergame_decisions
+		custom_effect_tooltip = unlock_diplomacy_tt
+		clr_country_flag = lock_diplomacy
+	}
+}
+
+country_event = {		#顿恩之罪
+	id = SFH.1500
+	title = SFH.1500.t
+	desc = SFH.1500.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1500.a
+		add_manpower = 5000
+	}
+}
+
+country_event = {		#远乡向我们索要领土！（西北）
+	id = SFH.1501
+	title = SFH.1501.t
+	desc = SFH.1501.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1501.a
+		SFH = {
+			country_event = {
+				id = SFH.1502
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 20
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.2
+				}
+			}
+			modifier = {
+				add = 40
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.5
+				}
+			}
+			modifier = {
+				add = 200
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SFH.1501.b
+		SFH = {
+			country_event = {
+				id = SFH.1503
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]同意了我们的要求！
+	id = SFH.1502
+	title = SFH.1502.t
+	desc = SFH.1502.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1502.a
+		FROM = {
+			if = {
+				limit = { owns_state = 27 }
+				SFH = { transfer_state = 27 }
+			}
+			if = {
+				limit = { owns_state = 28 }
+				SFH = { transfer_state = 28 }
+			}
+			if = {
+				limit = { owns_state = 143 }
+				SFH = { transfer_state = 143 }
+			}
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]拒绝了我们的要求！
+	id = SFH.1503
+	title = SFH.1503.t
+	desc = SFH.1503.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1503.a
+		add_war_support = 0.01
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+}
+
+country_event = {		#吉拉尼亚的贪婪
+	id = SFH.1520
+	title = SFH.1520.t
+	desc = SFH.1520.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1501.a
+	}
+}
+
+country_event = {		#远乡向我们索要领土！（西南）
+	id = SFH.1521
+	title = SFH.1521.t
+	desc = SFH.1521.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1521.a
+		SFH = {
+			country_event = {
+				id = SFH.1522
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 20
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.2
+				}
+			}
+			modifier = {
+				add = 40
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.5
+				}
+			}
+			modifier = {
+				add = 200
+				strength_ratio = {
+					tag = SFH
+					ratio > 0.8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SFH.1521.b
+		SFH = {
+			country_event = {
+				id = SFH.1523
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]同意了我们的要求！
+	id = SFH.1522
+	title = SFH.1522.t
+	desc = SFH.1522.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1522.a
+		FROM = {
+			if = {
+				limit = { owns_state = 32 }
+				SFH = { transfer_state = 32 }
+			}
+			if = {
+				limit = { owns_state = 33 }
+				SFH = { transfer_state = 33 }
+			}
+			if = {
+				limit = { owns_state = 55 }
+				SFH = { transfer_state = 55 }
+			}
+			if = {
+				limit = { owns_state = 56 }
+				SFH = { transfer_state = 56 }
+			}
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]拒绝了我们的要求！
+	id = SFH.1523
+	title = SFH.1523.t
+	desc = SFH.1523.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1523.a
+		add_war_support = 0.01
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+}
+
+country_event = {		#新的曙光
+	id = SFH.1540
+	title = SFH.1540.t
+	desc = SFH.1540.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SFH.1540.a
+		remove_ideas = SFH_regaining_our_territories
+	}
+}
+
+country_event = {		#远乡邀请我们加入阵营！
+	id = SFH.1560
+	title = SFH.1560.t
+	desc = SFH.1560.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1560.a
+		SFH = {
+			country_event = {
+				id = SFH.1561
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+
+	option = {
+		name = SFH.1560.b
+		SFH = {
+			country_event = {
+				id = SFH.1562
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]同意加入我们的阵营
+	id = SFH.1561
+	title = SFH.1561.t
+	desc = SFH.1561.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1561.a
+		FROM = {
+			add_to_faction = SFH
+		}
+	}
+}
+
+country_event = {		#[FROM.GetName]拒绝加入我们的阵营
+	id = SFH.1562
+	title = SFH.1562.t
+	desc = SFH.1562.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = SFH.1562.a
+		add_political_power = -10
+	}
+}
+
+country_event = {		#对外扩张事宜
+	id = SFH.1750
+	title = SFH.1750.t
+	desc = SFH.1750.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {		#适当扩张
+		name = SFH.1750.a
+		set_country_flag = SFH_expansion_route_1
+	}
+
+	option = {		#西进
+		name = SFH.1750.b
+		set_country_flag = SFH_expansion_route_1
+		set_country_flag = SFH_expansion_route_2
+	}
+
+	option = {		#北扩
+		name = SFH.1750.c
+		set_country_flag = SFH_expansion_route_1
+		set_country_flag = SFH_expansion_route_3
+	}
+
+	option = {		#全面出击
+		name = SFH.1750.dd
+		set_country_flag = SFH_expansion_route_1
+		set_country_flag = SFH_expansion_route_2
+		set_country_flag = SFH_expansion_route_3
+	}
+}
+
+country_event = {		#我们的势力圈
+	id = SFH.1800
+	title = SFH.1800.t
+	desc = SFH.1800.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {		#适当地采取武力措施也未尝不可。
+		name = SFH.1800.a
+		add_war_support = 0.05
+	}
+
+	option = {		#还是以和为贵啦。
+		name = SFH.1800.b
+		add_stability = 0.05
+	}
+}
+
+country_event = {		#远乡孤立主义
+	id = SFH.1850
+	title = SFH.1850.t
+	desc = SFH.1850.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {		#我们会守卫自己的疆界！
+		name = SFH.1850.a
+		add_stability = 0.1
+		add_political_power = 100
+	}
+}
+
+country_event = {		#重逢
+	id = SFH.2000
+	title = SFH.2000.t
+	desc = SFH.2000.d
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {		#重逢
+		name = SFH.2000.a
+		remove_ideas = SFH_ZhengJun_idea
+		add_manpower = -1
+		custom_effect_tooltip = SFH.2000.tt
+		hidden_effect = { news_event = SFHNews.15 }
+		hidden_effect = { country_event = { id = SFH.1400 days = 5 } }
+	}
+}
+
+###新闻###
+
+add_namespace = SFHNews
+
+news_event = {
+	id = SFHNews.1
+	title = SFHNews.1.t
+	desc = SFHNews.1.d
+	picture = GFX_news_event_generic_45
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.1.a
+	}
+}
+
+news_event = {
+	id = SFHNews.2		#远乡内战
+	title = SFHNews.2.t
+	desc = SFHNews.2.d
+	picture = GFX_news_event_generic_73
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.2.a
+	}
+}
+
+news_event = {
+	id = SFHNews.3		#远乡内战结束-王国胜
+	title = SFHNews.3.t
+	desc = SFHNews.3.d
+	picture = GFX_news_event_generic_57
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.3.a
+	}
+}
+
+news_event = {
+	id = SFHNews.4		#远乡内战结束-反对派胜
+	title = SFHNews.4.t
+	desc = SFHNews.4.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.4.a
+	}
+}
+
+news_event = {
+	id = SFHNews.5		#远乡正制定宪法？
+	title = SFHNews.5.t
+	desc = SFHNews.5.d
+	picture = GFX_news_event_generic_80
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.5.a
+	}
+}
+
+news_event = {
+	id = SFHNews.6		#远乡确立民主化改革
+	title = SFHNews.6.t
+	desc = SFHNews.6.d
+	picture = GFX_news_event_generic_81
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.6.a
+	}
+}
+
+news_event = {
+	id = SFHNews.7		#远乡宣告未来政改计划
+	title = SFHNews.7.t
+	desc = SFHNews.7.d
+	picture = GFX_news_event_generic_84
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.7.a
+	}
+}
+
+news_event = {
+	id = SFHNews.8		#远乡国王拒绝改革！
+	title = SFHNews.8.t
+	desc = SFHNews.8.d
+	picture = GFX_news_event_generic_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.8.a
+	}
+}
+
+news_event = {
+	id = SFHNews.9		#人鱼远乡亲善大使遭暗杀！
+	title = SFHNews.9.t
+	desc = SFHNews.9.d
+	picture = GFX_news_event_generic_13
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.9.a
+	}
+}
+
+news_event = {
+	id = SFHNews.10		#江洲人质危机
+	title = SFHNews.10.t
+	desc = SFHNews.10.d
+	picture = GFX_news_event_generic_16
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.10.a
+	}
+}
+
+news_event = {
+	id = SFHNews.11		#远乡王国统一-1
+	title = SFHNews.11.t
+	desc = SFHNews.11.d
+	picture = GFX_news_event_generic_29
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.11.a
+	}
+}
+
+news_event = {
+	id = SFHNews.12		#远乡王国统一-2
+	title = SFHNews.12.t
+	desc = SFHNews.12.d
+	picture = GFX_news_event_generic_40
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.12.a
+	}
+}
+
+news_event = {
+	id = SFHNews.13		#远乡王国统一-3
+	title = SFHNews.13.t
+	desc = SFHNews.13.d
+	picture = GFX_news_event_generic_63
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.13.a
+	}
+}
+
+news_event = {
+	id = SFHNews.14		#远乡王国击败西北叛军
+	title = SFHNews.14.t
+	desc = SFHNews.14.d
+	picture = GFX_news_event_generic_43
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.14.a
+		trigger = { NOT = { tag = SFH } }
+	}
+
+	option = {
+		name = SFHNews.14.b
+		trigger = { tag = SFH }
+	}
+}
+
+news_event = {
+	id = SFHNews.15		#远乡前国王逝世
+	title = SFHNews.15.t
+	desc = SFHNews.15.d
+	picture = GFX_news_event_generic_50
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.15.a
+	}
+}
+
+news_event = {
+	id = SFHNews.16		#远乡内战结束-反对派胜
+	title = SFHNews.16.t
+	desc = SFHNews.16.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.16.a
+	}
+}
+
+news_event = {
+	id = SFHNews.17		#远乡内战结束-反对派胜
+	title = SFHNews.17.t
+	desc = SFHNews.17.d
+	picture = GFX_news_event_generic_58
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFHNews.17.a
+	}
+}

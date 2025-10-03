@@ -1,0 +1,55 @@
+NKE_national_university_decisions_category = {
+	allowed = {
+		tag = NKE
+	}
+	visible = {
+		has_completed_focus = NKE_national_university
+	}
+	visible_when_empty = no
+	priority = 10
+}
+NKE_planned_farming_decisions_category = {
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = {
+		tag = NKE
+	}
+	visible = {
+		has_completed_focus = NKE_planned_farming
+	}
+	visible_when_empty = no
+	priority = 11
+}
+NKE_citify_tso_naghara_category = {
+	scripted_gui = NKE_citify_tso_naghara_category_ui
+	allowed = {
+		tag = NKE
+	}
+	visible = {
+		OR = {
+			AND = {
+				has_completed_focus = NKE_industrial_final_upgrade
+				NOT = { has_idea = NKE_pearl_of_the_ocean }
+			}
+			is_debug = yes
+		}
+	}
+	visible_when_empty = no
+	priority = 12
+}
+
+NKE_the_struggle_on_power_category = {
+	allowed = {
+		tag = NKE
+	}
+	visible = {
+		has_completed_focus = NKE_oppose_Viana_Weil
+		NOT = {
+			OR = {
+				has_completed_focus = NKE_liberal_republican_government
+				has_completed_focus = NKE_social_democrat_government
+			}
+		}
+	}
+	visible_when_empty = no
+	priority = 12
+}

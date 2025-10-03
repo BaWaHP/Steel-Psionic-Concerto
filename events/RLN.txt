@@ -1,0 +1,779 @@
+﻿###########################
+# RLN Events #
+###########################
+
+add_namespace = RLN
+
+country_event = {
+	id = RLN.1		#辗转反侧
+	title = RLN.1.t
+	desc = RLN.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.1.a
+	}
+}
+
+country_event = {
+	id = RLN.2		#武装征粮？
+	title = RLN.2.t
+	desc = RLN.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.2.a
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = RLN.3
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RLN.3		#满载而归
+	title = RLN.3.t
+	desc = RLN.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.3.a
+		add_stability = 0.1
+		310 = {
+			create_unit = {
+				division = "name = \"特尼安赤卫队\" division_template = \"特尼安赤卫队\" start_experience_factor = 0.1 start_equipment_factor = 1"  
+				owner = RLN
+				prioritize_location = 7616
+			}
+		}
+		add_ideas = RLN_support_of_people
+	}
+}
+
+country_event = {
+	id = RLN.4		#逃兵与叛徒
+	title = RLN.4.t
+	desc = RLN.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.4.a
+		add_manpower = -177
+		RLN_militarists_influence_down_1 = yes
+	}
+}
+
+country_event = {
+	id = RLN.5		#理想还是现实？
+	title = RLN.5.t
+	desc = RLN.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.5.a
+	}
+}
+
+country_event = {
+	id = RLN.6		#新生之日
+	title = RLN.6.t
+	desc = RLN.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.6.a
+		add_ideas = isolation_tatic
+		add_ideas = limited_exports
+		add_ideas = RLN_devastation_everywhere
+		add_ideas = RLN_biohazard
+		311 = {
+			set_demilitarized_zone = yes
+			remove_dynamic_modifier = {
+				modifier = LNR_biohazard_giant_cacti
+			}
+			add_dynamic_modifier = {
+				modifier = LNR_biohazard_disaster_giant_cacti
+			}
+		}
+	}
+}
+
+country_event = {
+	id = RLN.7		#游击队的军事法庭
+	title = RLN.7.t
+	desc = RLN.7.d
+	picture = GFX_report_event_RLN_7
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.7.a
+		add_manpower = -1
+	}
+}
+
+country_event = {
+	id = RLN.50		#处理“肮脏”资产
+	title = RLN.50.t
+	desc = RLN.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.50.a
+		add_political_power = -50
+		add_cic = 1000
+		RLN_financists_influence_up_2 = yes
+	}
+
+	option = {
+		name = RLN.50.b
+		add_political_power = 100
+		add_stability = -0.05
+		add_manpower = -2000
+	}
+}
+
+country_event = {
+	id = RLN.51		#政府机关人员问题
+	title = RLN.51.t
+	desc = RLN.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.51.a
+		RLN_financists_influence_up_2 = yes
+		RLN_solidaritists_influence_up_2 = yes
+		SPC_research_development_amount_up_2 = yes
+	}
+
+	option = {
+		name = RLN.51.b
+		RLN_principlists_influence_up_1 = yes
+		add_political_power = -50
+		add_war_support = 0.1
+	}
+
+	option = {
+		name = RLN.51.c
+		RLN_militarists_influence_up_3 = yes
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = RLN.52		#吵闹的民政局
+	title = RLN.52.t
+	desc = RLN.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.52.a
+	}
+}
+
+country_event = {
+	id = RLN.53		#作战计划
+	title = RLN.53.t
+	desc = RLN.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.53.a
+		add_timed_idea = {
+			idea = RLN_easy_steady
+			days = 360
+		}
+	}
+
+	option = {
+		name = RLN.53.b
+		add_timed_idea = {
+			idea = RLN_fast_battles
+			days = 100
+		}
+	}
+}
+
+country_event = {
+	id = RLN.54		#交易
+	title = RLN.54.t
+	desc = RLN.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.54.a
+		RLN = {
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			if = {
+				limit = { NOT = { has_completed_focus = RLN_tenian_econ_miracle } }
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -10
+					tooltip = RLN_food_shortage_var_tt
+				}
+				RLN_rebuild_econs_var_clamp = yes
+			}
+			SPC_research_development_amount_up_2 = yes
+			transfer_state = 333
+		}
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = RLN
+		}
+		army_experience = 50
+		give_market_access = RLN
+	}
+}
+
+country_event = {
+	id = RLN.55		#老兵已死……
+	title = RLN.55.t
+	desc = RLN.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.55.a
+		add_manpower = -1
+		remove_advisor_role = {
+			character = RLN_ben_singler
+			slot = political_advisor
+		}
+	}
+}
+
+country_event = {
+	id = RLN.56		#赤军的请假条
+	title = RLN.56.t
+	desc = RLN.56.d
+	picture = GFX_report_event_RLN_56
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.56.a
+		add_manpower = -15000
+		add_war_support = -0.05
+		if = {
+			limit = { has_active_mission = RLN_need_of_the_people }
+			add_days_mission_timeout  = {
+				mission = RLN_need_of_the_people
+				days = 30
+			}
+		}
+		if = {
+			limit = { has_active_mission = RLN_visions_of_utopia }
+			add_days_mission_timeout  = {
+				mission = RLN_visions_of_utopia
+				days = 30
+			}
+		}
+		custom_effect_tooltip = RLN.56.tt
+		set_country_flag = RLN_event_56_flag
+	}
+}
+
+country_event = {
+	id = RLN.57		#英雄归队
+	title = RLN.57.t
+	desc = RLN.57.d
+	picture = GFX_report_event_RLN_56
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.57.a
+		add_manpower = 20000
+		add_war_support = 0.1
+	}
+}
+
+country_event = {
+	id = RLN.100		#团结派宣布不参加主席选举
+	title = RLN.100.t
+	desc = RLN.100.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.100.a
+		RLN_solidaritists_influence_down_3 = yes
+		add_stability = 0.05
+		news_event = RLNNews.4
+	}
+}
+
+country_event = {
+	id = RLN.101		#制宪会议开始
+	title = RLN.101.t
+	desc = RLN.101.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.101.a
+		country_event = RLN.102
+	}
+}
+
+country_event = {
+	id = RLN.102		#制宪会议：行使国家权力
+	title = RLN.102.t
+	desc = RLN.102.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.102.a
+		RLN_principlists_influence_up_2 = yes
+		RLN_militarists_influence_up_2 = yes
+		country_event = RLN.103
+	}
+
+	option = {
+		name = RLN.102.b
+		RLN_financists_influence_up_2 = yes
+		country_event = RLN.103
+	}
+}
+
+country_event = {
+	id = RLN.103		#制宪会议：共和与民主
+	title = RLN.103.t
+	desc = RLN.103.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.103.a
+		RLN_financists_influence_up_4 = yes
+		country_event = { id = RLN.104 days = 7 }
+	}
+
+	option = {
+		name = RLN.103.b
+		RLN_principlists_influence_up_2 = yes
+		add_stability = 0.05
+		country_event = { id = RLN.104 days = 7 }
+	}
+
+	option = {
+		name = RLN.103.c
+		RLN_militarists_influence_up_3 = yes
+		add_stability = -0.05
+		country_event = { id = RLN.104 days = 7 }
+	}
+}
+
+country_event = {
+	id = RLN.104		#制宪会议：主席权力
+	title = RLN.104.t
+	desc = RLN.104.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.104.a
+		RLN_financists_influence_up_1 = yes
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
+		country_event = { id = RLN.105 days = 7 }
+	}
+
+	option = {
+		name = RLN.104.b
+		RLN_principlists_influence_up_2 = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		country_event = { id = RLN.105 days = 7 }
+	}
+
+	option = {
+		name = RLN.104.c
+		RLN_militarists_influence_up_3 = yes
+		add_stability = -0.05
+		country_event = { id = RLN.105 days = 7 }
+	}
+}
+
+country_event = {
+	id = RLN.105		#制宪会议：司法权
+	title = RLN.105.t
+	desc = RLN.105.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.105.a
+		add_stability = -0.05
+		RLN_militarists_influence_up_1 = yes
+		RLN_financists_influence_up_4 = yes
+		country_event = { id = RLN.106 days = 7 }
+	}
+
+	option = {
+		name = RLN.105.b
+		RLN_principlists_influence_up_3 = yes
+		country_event = { id = RLN.106 days = 7 }
+	}
+}
+
+country_event = {
+	id = RLN.106		#国家主席选举
+	title = RLN.106.t
+	desc = RLN.106.d
+	picture = GFX_report_event_RLN_constitution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.106.a
+		RLN_election_result_effect = yes
+	}
+}
+
+country_event = {
+	id = RLN.107		#索雷尔的胜利
+	title = RLN.107.t
+	desc = RLN.107.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.107.a
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.05
+		}
+		RLN_principlists_influence_up_5 = yes
+		set_country_flag = RLN_focus_2_1_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = RLN.108		#卡瑞安·柏林赢得选举
+	title = RLN.108.t
+	desc = RLN.108.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.108.a
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.1
+		}
+		set_politics = { ruling_party = worldunion_democrat }
+		RLN_financists_influence_up_5 = yes
+		set_country_flag = RLN_focus_2_2_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = RLN.109		#金斯伯格·代普接管政权
+	title = RLN.109.t
+	desc = RLN.109.d
+	#picture = GFX_
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RLN.109.a
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		custom_effect_tooltip = RLN.109.a.tt
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.1
+		}
+		set_politics = { ruling_party = pioneer_communism }
+		RLN_militarists_influence_up_4 = yes
+		set_country_flag = RLN_focus_2_3_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+add_namespace = RLNNews
+
+news_event = {
+	id = RLNNews.1	#勒泰特尼安内战
+	title = RLNNews.1.t
+	desc = RLNNews.1.d
+	picture = GFX_news_event_generic_32
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.1.a
+	}
+}
+
+news_event = {
+	id = RLNNews.2	#第二次特尼安半岛战争
+	title = RLNNews.2.t
+	desc = RLNNews.2.d
+	picture = GFX_news_event_generic_66
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.2.a
+		trigger = { tag = RLN }
+	}
+
+	option = {
+		name = RLNNews.2.b
+		trigger = { tag = KOA }
+	}
+
+	option = {
+		name = RLNNews.2.c
+		trigger = {
+			NOT = { tag = RLN tag = KOA }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = RLNNews.2.dd
+		trigger = { 
+			NOT = {
+				tag = RLN tag = KOA
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+}
+
+news_event = {
+	id = RLNNews.3	#第二次特尼安半岛战争
+	title = RLNNews.3.t
+	desc = RLNNews.3.d
+	picture = GFX_news_event_generic_66
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.3.a
+		trigger = { tag = RLN }
+	}
+
+	option = {
+		name = RLNNews.3.b
+		trigger = { tag = KOA }
+	}
+
+	option = {
+		name = RLNNews.3.c
+		trigger = {
+			NOT = { tag = RLN tag = KOA }
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = RLNNews.3.dd
+		trigger = { 
+			NOT = {
+				tag = RLN tag = KOA
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+}
+
+news_event = {
+	id = RLNNews.4	#赤色特尼安制宪会议
+	title = RLNNews.4.t
+	desc = RLNNews.4.d
+	picture = GFX_news_event_RLN_constitution
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.4.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+			}
+		}
+	}
+
+	option = {
+		name = RLNNews.4.b
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+			}
+		}
+	}
+}
+
+news_event = {
+	id = RLNNews.5	#索雷尔·卡彭成功连任
+	title = RLNNews.5.t
+	desc = RLNNews.5.d
+	picture = GFX_news_event_RLN_election_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.5.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = national_socialist
+			}
+		}
+	}
+
+	option = {
+		name = RLNNews.5.b
+		trigger = { has_government = magician_dictatorship }
+	}
+
+	option = {
+		name = RLNNews.5.c
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = national_socialist
+				has_government = magician_dictatorship
+			}
+		}
+	}
+}
+
+news_event = {
+	id = RLNNews.6	#财务派接管赤色特尼安
+	title = RLNNews.6.t
+	desc = RLNNews.6.d
+	picture = GFX_news_event_RLN_election_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.6.a
+	}
+}
+
+news_event = {
+	id = RLNNews.7	#拥军派掌控赤色特尼安
+	title = RLNNews.7.t
+	desc = RLNNews.7.d
+	picture = GFX_news_event_RLN_election_3
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = RLNNews.7.a
+		trigger = { has_government = pioneer_communism }
+	}
+
+	option = {
+		name = RLNNews.7.b
+		trigger = {
+			OR = {
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = RLNNews.7.c
+		trigger = { 
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+}

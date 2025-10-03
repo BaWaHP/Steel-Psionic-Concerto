@@ -1,0 +1,790 @@
+PEO_maritime_trade_administration = {
+
+	PEO_expand_convoy_fleets = { 		#扩展运输船队
+
+		icon = generic_civil_support
+
+		available = {
+			has_equipment = {
+				convoy > 24
+			}
+		}
+
+		cost = 25
+		days_remove = 25
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_2 = yes
+		}
+	}
+
+	PEO_contact_for_new_trade_routes = { 		#联系新的对外贸易渠道
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 20
+		days_remove = 30
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_3 = yes
+		}
+	}
+
+	PEO_invest_more_dockyards = { 		#投资更多造船厂
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_invest_more_dockyards_tr
+				check_variable = { PEO_invest_more_dockyards_count < 3 }
+			}
+		}
+
+		cost = 100
+		days_remove = 70
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
+			add_to_variable = { PEO_invest_more_dockyards_count = 1 }
+		}
+	}
+
+	PEO_nationalize_standard_ports = { 		#设立国家标准化贸易港
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 150
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_dockyard_factor = -0.25
+		}
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_7 = yes
+		}
+	}
+
+	PEO_suppression_of_smuggled_goods = { 		#查禁走私商品
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 50
+		days_remove = 35
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_2 = yes
+		}
+	}
+
+	PEO_naval_fleet_escort = { 		#海军舰队护航
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 100
+		days_remove = 100
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_6 = yes
+		}
+	}
+
+	PEO_naval_fleet_escort = { 		#严格监管标准和市场准入
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_naval_fleet_escort_tr
+				check_variable = { PEO_naval_fleet_escort_count < 2 }
+			}
+		}
+
+		cost = 25
+		days_remove = 70
+
+		modifier = {
+			political_power_cost = -0.05
+		}
+
+		remove_effect = {
+			PEO_maritime_trade_administration_add_5 = yes
+			add_to_variable = { PEO_naval_fleet_escort_count = 1 }
+		}
+	}
+
+	PEO_release_check_points = { 		#放宽市场准入条件以及检查标准
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 0
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			monthly_industrial_development_process = 4
+		}
+
+		complete_effect = {
+			add_political_power = 25
+		}
+
+		remove_effect = {
+			PEO_maritime_trade_administration_min_15 = yes
+		}
+	}
+
+	PEO_release_smuggling = { 		#放宽走私
+
+		icon = generic_civil_support
+
+		available = {
+		}
+
+		cost = 0
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		remove_effect = {
+			PEO_maritime_trade_administration_min_20 = yes
+		}
+	}
+
+}
+
+PEO_econ_reform = {
+	PEO_fix_national_business_law = { 		#修正《国家商业经营法》
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_fix_national_business_law_tr
+				check_variable = { PEO_econ_reform_var > 2 }
+			}
+		}
+
+		cost = 50
+		days_remove = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -3 }
+			custom_effect_tooltip = PEO_fix_national_business_law_tt1
+			PEO_econ_var_clamp = yes
+		}
+
+		remove_effect = {
+			add_political_power = 150
+			43 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = { PEO_econ_reform_var = 5 }
+			custom_effect_tooltip = PEO_fix_national_business_law_tt2
+			PEO_econ_var_clamp = yes
+		}
+	}
+
+	PEO_establish_econ_office = { 		#设立国家金融工作办公室
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_establish_econ_office_tr
+				check_variable = { PEO_econ_reform_var > 11 }
+			}
+		}
+
+		cost = 150
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -12 }
+			custom_effect_tooltip = PEO_fix_national_business_law_tt
+			PEO_econ_var_clamp = yes
+			country_event = PEO.8
+		}
+	}
+
+	PEO_invest_national_transportation = { 		#投资国家运输系统
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_invest_national_transportation_tr
+				check_variable = { PEO_econ_reform_var > 3 }
+			}
+			num_of_available_civilian_factories > 9
+		}
+
+		cost = 100
+		days_remove = 100
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -4 }
+			custom_effect_tooltip = PEO_invest_national_transportation_tt
+			PEO_econ_var_clamp = yes
+			country_event = PEO.8
+		}
+
+		remove_effect = {
+			40 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 1520
+				}
+			}
+			43 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			49 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+	PEO_invest_civilian_industries = { 		#投资民用工业
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_invest_civilian_industries_tr1
+				check_variable = { PEO_econ_reform_var > 3 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = PEO_invest_civilian_industries_tr2
+				check_variable = { PEO_invest_civilian_industries_count < 3 }
+			}
+			num_of_available_civilian_factories > 4
+		}
+
+		cost = 25
+		days_remove = 40
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -4 }
+			add_to_variable = { PEO_invest_civilian_industries_count = 1 }
+			custom_effect_tooltip = PEO_invest_civilian_industries_tt
+			PEO_econ_var_clamp = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+
+	PEO_restrict_industry_pollution = { 		#加强工业污染管制
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_restrict_industry_pollution_tr
+				check_variable = { PEO_restrict_industry_pollution_count < 2 }
+			}
+		}
+
+		cost = 20
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = 2 }
+			add_to_variable = { PEO_restrict_industry_pollution_count = 1 }
+			custom_effect_tooltip = PEO_restrict_industry_pollution_tt
+			PEO_econ_var_clamp = yes
+		}
+
+		remove_effect = {
+			SPC_industrial_development_amount_down_2 = yes
+			SPC_living_standard_development_amount_up_3 = yes
+		}
+	}
+
+	PEO_new_mining_standards = { 		#设立新国家矿业标准
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_new_mining_standards_tr
+				check_variable = { PEO_econ_reform_var > 5 }
+			}
+		}
+
+		cost = 150
+		days_remove = 100
+		fire_only_once = yes
+
+		modifier = {
+			local_resources_factor = -0.2
+			consumer_goods_factor = 0.2
+		}
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -6 }
+			custom_effect_tooltip = PEO_new_mining_standards_tt
+			PEO_econ_var_clamp = yes
+		}
+
+		remove_effect = {
+			add_ideas = PEO_miracle_under_land
+		}
+	}
+
+	PEO_central_bank_magic = { 		#中央银行的魔法
+
+		icon = generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_central_bank_magic_tr
+				check_variable = { PEO_econ_reform_var > 349 }
+			}
+			has_idea = PEO_new_central_bank
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_variable = { PEO_econ_reform_var = -6 }
+			custom_effect_tooltip = PEO_central_bank_magic_tt
+			swap_ideas = {
+				remove_idea = PEO_new_central_bank
+				add_idea = PEO_new_central_bank_2
+			}
+			PEO_econ_var_clamp = yes
+		}
+	}
+}
+
+PEO_prime_minister_desk_category = {
+	PEO_cabinet_to_general_speeches = { 		#邀请内阁出席一般性演讲
+		icon = GFX_decision_hol_radio_oranje
+
+		cost = 50
+		days_re_enable = 15
+		fire_only_once = no
+
+		complete_effect = {
+			randomize_temp_variable = {
+				var = PEO_random_seats_gained
+				distribution = uniform
+				min = 4.51
+				max = 7.49
+			}
+			round_temp_variable = PEO_random_seats_gained
+			add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+			PEO_congress_seats_update = yes
+			custom_effect_tooltip = PEO_cabinet_to_general_speeches_tt
+		}
+	}
+	PEO_meeting_with_opposition = { 		#与反对派举行会谈
+		icon = GFX_decision_generic_political_discourse
+
+		cost = 50
+		days_remove = 70
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				65 = {
+					randomize_temp_variable = {
+						var = PEO_random_seats_gained
+						distribution = uniform
+						min = 9.51
+						max = 15.49
+					}
+					round_temp_variable = PEO_random_seats_gained
+					add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_cabinet_to_general_speeches_tt
+				}
+				5 = {
+					add_to_variable = { PEO_congress_seats_supporter = -5 }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_cabinet_to_general_speeches_tt
+				}
+				30 = {}
+			}
+		}
+	}
+	PEO_special_means = { 		#特殊手段
+		icon = GFX_decision_generic_police_action
+
+		cost = 100
+		days_remove = 50
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				65 = {
+					randomize_temp_variable = {
+						var = PEO_random_seats_gained
+						distribution = uniform
+						min = 14.51
+						max = 20.49
+					}
+					round_temp_variable = PEO_random_seats_gained
+					add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_special_means_tt1
+				}
+				35 = {
+					add_to_variable = { PEO_congress_seats_supporter = -25 }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_special_means_tt2
+				}
+			}
+		}
+	}
+	PEO_minister_live_stream = { 		#总理现场答辩
+		icon = GFX_decision_generic_political_address
+
+		cost = 25
+		days_remove = 7
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				75 = {
+					randomize_temp_variable = {
+						var = PEO_random_seats_gained
+						distribution = uniform
+						min = 4.51
+						max = 6.49
+					}
+					round_temp_variable = PEO_random_seats_gained
+					add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_minister_live_stream_tt
+				}
+				25 = {}
+			}
+		}
+	}
+	PEO_parliament_open_day = { 		#举行议会开放日
+		icon = GFX_decision_generic_political_rally
+
+		cost = 25
+		days_remove = 7
+		fire_only_once = no
+
+		fixed_random_seed = no
+
+		complete_effect = {
+			random_list = {
+				75 = {
+					randomize_temp_variable = {
+						var = PEO_random_seats_gained
+						distribution = uniform
+						min = 4.51
+						max = 6.49
+					}
+					round_temp_variable = PEO_random_seats_gained
+					add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_parliament_open_day_tt1
+					add_popularity = {
+						ideology = ROOT
+						popularity = 0.025
+					}
+				}
+				25 = {
+					randomize_temp_variable = {
+						var = PEO_random_seats_gained
+						distribution = uniform
+						min = -0.51
+						max = -7.49
+					}
+					round_temp_variable = PEO_random_seats_gained
+					add_to_variable = { PEO_congress_seats_supporter = PEO_random_seats_gained }
+					PEO_congress_seats_update = yes
+					custom_effect_tooltip = PEO_parliament_open_day_tt2
+					add_popularity = {
+						ideology = ROOT
+						popularity = -0.025
+					}
+				}
+			}
+		}
+	}
+	PEO_declare_national_emergency = { 		#宣布国家进入国家紧急状态
+		icon = GFX_decision_eng_blackshirt_speech
+
+		cost = 150
+		fire_only_once = no
+
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = PEO_declare_national_emergency_tr
+					check_variable = { PEO_congress_seats_supporter > 183 }
+				}
+				has_country_flag = PEO_national_crisis_flag
+				surrender_progress > 0.85
+			}
+			NOT = { has_idea = PEO_national_emergency_act }
+		}
+
+		complete_effect = {
+			if = {
+				limit = { has_idea = PEO_third_republic_constitution_mid_left }
+				swap_ideas = {
+					remove_idea = PEO_third_republic_constitution_mid_left
+					add_idea = PEO_national_emergency_act
+				}
+			}
+			activate_mission = PEO_people_angry_at_emgerncy
+			activate_mission = PEO_special_inquiry_from_congress
+		}
+	}
+	PEO_people_angry_at_emgerncy = {		#人民对紧急状态感到不满
+		icon = GFX_decision_revolt
+		allowed = { tag = PEO }
+		available = { NOT = { has_idea = PEO_national_emergency_act } }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 250
+
+		timeout_effect = {  
+			swap_ideas = {
+				remove_idea = PEO_national_emergency_act
+				add_idea = PEO_republic_constitutional_crisis
+			}
+			country_event = PEO.1000
+		}
+	}
+	PEO_special_inquiry_from_congress = {		#国民议会针对紧急状态的非常质询
+		icon = GFX_decision_revolt
+		allowed = { tag = PEO }
+		available = { NOT = { has_idea = PEO_national_emergency_act } }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 180
+
+		timeout_effect = {
+			country_event = PEO.1002
+		}
+	}
+	PEO_maintain_balance = { 		#维持平衡
+		icon = GFX_decision_SOV_place_hq
+
+		cost = 250
+		fire_only_once = no
+
+		available = {
+			NOT = { has_country_flag = PEO_gov_switching_cooling_flag }
+			NOT = { check_variable = { PEO_palace_of_republic_status_var = 4 } }
+		}
+
+		complete_effect = {
+			set_country_flag = PEO_gov_switching_cooling_flag
+			set_variable = { PEO_palace_of_republic_status_var = 4 }
+			PEO_minister_desk_remove_all_gov_bonus = yes
+			activate_mission = PEO_gov_switching_cooling
+		}
+	}
+	PEO_administrative_first = { 		#行政优先
+		icon = GFX_decision_SOV_place_hq
+
+		cost = 250
+		fire_only_once = no
+
+		available = {
+			NOT = { has_country_flag = PEO_gov_switching_cooling_flag }
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+
+		complete_effect = {
+			set_country_flag = PEO_gov_switching_cooling_flag
+			set_variable = { PEO_palace_of_republic_status_var = 0 }
+			add_ideas = PEO_strong_federal_gov_1
+			activate_mission = PEO_other_departments_unhappy
+			activate_mission = PEO_gov_switching_cooling
+		}
+	}
+	PEO_legislation_first = { 		#立法为主
+		icon = GFX_decision_SOV_place_hq
+
+		cost = 250
+		fire_only_once = no
+
+		available = {
+			NOT = { has_country_flag = PEO_gov_switching_cooling_flag }
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+
+		complete_effect = {
+			set_country_flag = PEO_gov_switching_cooling_flag
+			set_variable = { PEO_palace_of_republic_status_var = 1 }
+			add_ideas = PEO_parliament_power_expanstion_1
+			activate_mission = PEO_other_departments_unhappy
+			activate_mission = PEO_gov_switching_cooling
+		}
+	}
+	PEO_judicial_supremacy = { 		#司法至高
+		icon = GFX_decision_SOV_place_hq
+
+		cost = 250
+		fire_only_once = no
+
+		available = {
+			NOT = { has_country_flag = PEO_gov_switching_cooling_flag }
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+
+		complete_effect = {
+			set_country_flag = PEO_gov_switching_cooling_flag
+			set_variable = { PEO_palace_of_republic_status_var = 2 }
+			add_ideas = PEO_judiciary_first_1
+			activate_mission = PEO_other_departments_unhappy
+			activate_mission = PEO_gov_switching_cooling
+		}
+	}
+	PEO_military_first = { 		#军事优先
+		icon = GFX_decision_FIN_stop_motti_tactics
+
+		cost = 250
+		fire_only_once = no
+
+		available = {
+			has_war = yes
+			NOT = { has_country_flag = PEO_gov_switching_cooling_flag }
+			check_variable = { PEO_palace_of_republic_status_var = 4 }
+		}
+
+		complete_effect = {
+			set_country_flag = PEO_gov_switching_cooling_flag
+			set_variable = { PEO_palace_of_republic_status_var = 3 }
+			add_ideas = PEO_military_force_first_1
+			activate_mission = PEO_other_departments_unhappy
+			activate_mission = PEO_gov_switching_cooling
+		}
+	}
+	PEO_gov_switching_cooling = {		#政府行动冷却
+		icon = GFX_decision_revolt
+		allowed = { tag = PEO }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_other_departments_unhappy_tr
+				check_variable = { PEO_palace_of_republic_status_var = 4 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 150
+
+		timeout_effect = {
+			clr_country_flag = PEO_gov_switching_cooling_flag
+		}
+	}
+	PEO_other_departments_unhappy = {		#其他部门对xx感到不满
+		icon = GFX_decision_revolt
+		allowed = { tag = PEO }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PEO_other_departments_unhappy_tr
+				check_variable = { PEO_palace_of_republic_status_var = 4 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 200
+
+		timeout_effect = {
+			PEO_minister_desk_remove_update_gov_bonus = yes
+		}
+	}
+}

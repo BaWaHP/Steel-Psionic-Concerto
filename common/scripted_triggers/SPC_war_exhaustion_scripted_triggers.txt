@@ -1,0 +1,3 @@
+SPC_war_exhaustion_eligible = {
+	any_enemy_country = { NOT = { has_country_flag = ignorant_filth } }
+}

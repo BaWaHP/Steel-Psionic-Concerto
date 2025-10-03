@@ -1,0 +1,39 @@
+
+state={
+	id=333
+	name="STATE_333"
+
+	resources = {
+		steel = 6
+		tungsten = 28
+		rubber = 34
+	}
+
+	history={
+		owner = ZBC
+		add_core_of = ZBC
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 3
+			air_base = 6
+			radar_station = 1
+			7556 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+		}
+		victory_points = {
+			7556 25
+		}
+	}
+
+	provinces={
+		7556 20973 21035 
+	}
+	manpower = 1140000
+	buildings_max_level_factor=1.000
+	state_category = large_city
+	local_supplies=0.000
+}

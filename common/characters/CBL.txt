@@ -1,0 +1,559 @@
+characters={
+	CBL_karl_matuschka = {		#卡尔·马图施卡
+		name = CBL_karl_matuschka
+		portraits = {
+   			civilian = {
+   				large="GFX_CBL_karl_matuschka"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_CBL_karl_matuschka"
+				small="GFX_idea_unknown_advisor"
+   			}
+		}
+		country_leader = {
+			ideology = market_liberalism
+			desc = CBL_karl_matuschka_desc
+			traits = { CBL_lucky_dude_with_great_ancestors }
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	CBL_reinhardt_caprivi = {		#莱茵哈特·卡普里维
+		name = CBL_reinhardt_caprivi
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_reinhardt_caprivi_idea
+			can_be_fired = no
+			traits = { CBL_railway_family }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_rand_artus = {		#兰德·阿图斯
+		name = CBL_rand_artus
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_rand_artus_idea
+			traits = { CBL_agriculture_oligarch }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_phil_larsens_otto = {		#菲尔拉森斯·奥托
+		name = CBL_phil_larsens_otto
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_phil_larsens_otto_idea
+			traits = { CBL_rsu_mine_corp_ceo }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_derek_T_rescorrien = {		#德里克·蒂·雷斯科里恩
+		name = CBL_derek_T_rescorrien
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_derek_T_rescorrien_idea
+			traits = { CBL_wiesel_chariot }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_krakow_wannh_oknen = {		#克拉考夫·万赫·奥克宁
+		name = CBL_krakow_wannh_oknen
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_krakow_wannh_oknen_idea
+			traits = { CBL_hardworking_technocrat }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_lufthansa_nader = {		#璐芙茜丝·奈德
+		name = CBL_lufthansa_nader
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_lufthansa_nader_idea
+			traits = { CBL_federal_human_rights_commissioner education_expert }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_boleski_marek = {		#波雷斯基·马雷克
+		name = CBL_boleski_marek
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_boleski_marek_idea
+			traits = { smooth_talking_charmer CBL_bureaucracy_informant }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_alovic_kozioniev = {		#阿罗维奇·科泽奥尼尔夫
+		name = CBL_alovic_kozioniev
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_alovic_kozioniev_idea
+			traits = { captain_of_industry CBL_authoritarian_opposition }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_alfred_george = {		#阿尔弗雷德·乔治
+		name = CBL_alfred_george
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_alfred_george_idea
+			traits = { CBL_son_of_hero }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_otto_freedman = {		#奥托·弗雷德曼
+		name = CBL_otto_freedman
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CBL_otto_freedman_idea
+			traits = { CBL_goldenhill_representatives }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_federal_military_advisory_group = {		#联盟军事顾问团
+		name = CBL_federal_military_advisory_group
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = CBL_federal_military_advisory_group_idea
+			traits = { superior_firepower_expert }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CBL_federal_military_advisory_group_army_chief_idea
+			traits = { army_chief_reform_3 }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = CBL_federal_military_advisory_group_air_chief_idea
+			traits = { air_close_air_support_3 }
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader infantry_expert skilled_staffer expert_delegator offensive_doctrine }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CBL_bart_schmidt = {		#巴特·施密特
+		name = CBL_bart_schmidt
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = CBL_bart_schmidt_idea
+			traits = { mass_assault_expert }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_johannes_spey = {		#约翰尼斯·施佩
+		name = CBL_johannes_spey
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CBL_johannes_spey_idea
+			traits = { army_chief_defensive_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { infantry_leader defensive_doctrine organisational_leader }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CBL_maximilian_kohler = {		#马克西米连·科勒
+		name = CBL_maximilian_kohler
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = CBL_maximilian_kohler_idea
+			traits = { army_chief_offensive_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader offensive_doctrine trait_engineer }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	CBL_barham_john_brown = {		#巴勒姆·约翰·布朗
+		name = CBL_barham_john_brown
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = CBL_barham_john_brown_idea
+			traits = { navy_chief_decisive_battle_1 }
+			cost = 499
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { commando skirmisher organisational_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	CBL_herman_ernst = {		#赫尔曼·恩斯特
+		name = CBL_herman_ernst
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = CBL_herman_ernst_idea
+			traits = { army_chief_offensive_1 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_bach_thi_ost = {		#巴赫·蒂·欧斯特
+		name = CBL_bach_thi_ost
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CBL_bach_thi_ost_idea
+			traits = { army_regrouping_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	CBL_erich_keutber = {		#埃里希·克奥特伯
+		name = CBL_erich_keutber
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CBL_erich_keutber_idea
+			traits = { army_artillery_1 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	CBL_ludwig_T_reskoulien = {		#路德维希·蒂·雷斯科里恩
+		name = CBL_ludwig_T_reskoulien
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CBL_ludwig_T_reskoulien_idea
+			traits = { army_armored_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { panzer_leader panzer_expert trait_engineer fortress_buster }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CBL_irving_green = {		#艾尔温·格林
+		name = CBL_irving_green
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CBL_irving_green_idea
+			traits = { army_infantry_1 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	CBL_yaroslav_wawrzynski = {		#雅罗斯瓦夫·华伦斯基
+		name = CBL_yaroslav_wawrzynski
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CBL_yaroslav_wawrzynski_idea
+			traits = { air_air_combat_training_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

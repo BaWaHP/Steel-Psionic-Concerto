@@ -1,0 +1,22 @@
+characters={
+
+	#格哈德·冯·施坦因
+	IRC_Gerhard_von_Stein = {
+   		name = IRC_Gerhard_von_Stein
+   		portraits = {
+   			civilian = {
+   				large="GFX_IRC_Gerhard_von_Stein"
+   				small="GFX_idea_IRC_Gerhard_von_Stein"
+   			}
+   			army = {
+				large="GFX_IRC_Gerhard_von_Stein"
+				small="GFX_idea_IRC_Gerhard_von_Stein"
+   			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

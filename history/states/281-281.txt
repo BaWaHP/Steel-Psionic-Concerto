@@ -1,0 +1,34 @@
+
+state={
+	id=281
+	name="STATE_281"
+
+	resources = {
+		steel = 12
+	}
+
+	history={
+		owner = NLL
+		add_core_of = NLL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 4
+		}
+		victory_points = {
+			4395 10
+		}
+		victory_points = {
+			6415 5
+		}
+	}
+
+	provinces={
+		3438 4395 5847 6415 16121 16140 16431 16477 22058 
+	}
+	manpower = 1430000 
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

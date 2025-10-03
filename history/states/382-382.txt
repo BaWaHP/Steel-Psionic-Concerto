@@ -1,0 +1,32 @@
+
+state={
+	id=382
+	name="STATE_382"
+	resources={
+		steel=11.000
+		tungsten=23.000
+	}
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			6519 10 
+		}
+
+	}
+
+	provinces={
+		5989 6519 8821 20502 20675 20728 
+	}
+	manpower=3060000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

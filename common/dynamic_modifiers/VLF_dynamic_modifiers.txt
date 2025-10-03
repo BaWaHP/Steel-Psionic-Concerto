@@ -1,0 +1,47 @@
+VLF_land_of_bunkers = {	#碉堡之地
+	enable = { always = yes }
+	icon = GFX_idea_VLF_land_of_bunkers
+
+	recruitable_population_factor = 0.1
+	resistance_damage_to_garrison = 0.15
+	state_production_speed_buildings_factor = 0.05
+}
+
+VLF_regents_wish_modifier_1 = {	#摄政王的野望：教会
+	enable = { always = yes }
+	icon = GFX_idea_SOV_new_old_church
+
+	political_power_factor = VLF_regents_wish_modifier_1_ppf
+	war_support_factor = VLF_regents_wish_modifier_wsf
+	training_time_army_factor = VLF_regents_wish_modifier_ttaf
+	army_org_regain = VLF_regents_wish_modifier_aor
+}
+
+VLF_regents_wish_modifier_2 = {	#摄政王的野望：贵族
+	enable = { always = yes }
+	icon = GFX_idea_GER_fan_prussian_militarism
+
+	political_power_factor = VLF_regents_wish_modifier_2_ppf
+	stability_factor = VLF_regents_wish_modifier_sf
+	political_advisor_cost_factor = VLF_regents_wish_modifier_pacf
+	planning_speed = VLF_regents_wish_modifier_ps
+	consumer_goods_factor = VLF_regents_wish_modifier_cgf
+}
+
+VLF_regents_wish_modifier_3 = {	#摄政王的野望：民众
+	enable = { always = yes }
+	icon = GFX_idea_MEX_revolutionary_army
+
+	political_power_factor = VLF_regents_wish_modifier_3_ppf
+	production_speed_buildings_factor = VLF_regents_wish_modifier_psbf
+	industrial_capacity_factory = VLF_regents_wish_modifier_icf
+	local_resources_factor = VLF_regents_wish_modifier_lrf
+	conscription_factor = VLF_regents_wish_modifier_cf
+}
+
+VLF_gov_specified_fund = {	#政府专项资金
+	enable = { always = yes }
+	icon = GFX_idea_HUN_revaluing_the_pengo
+
+	state_production_speed_buildings_factor = 0.05
+}

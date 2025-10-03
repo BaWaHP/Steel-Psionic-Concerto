@@ -1,0 +1,465 @@
+ideas = {
+	country = {
+
+		KOA_scarlet_crown = {		#血色王冠
+			picture = por_monarchist_uprising
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			}
+		}
+
+		KOA_political_chaos = {		#政治混乱
+			picture = SPR_political_violence
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				disabled_ideas = 1
+			}
+		}
+
+		#落后的经济
+		KOA_backward_economy = {		#落后的经济1
+			picture = great_depression
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.2
+				conscription_factor = -0.4
+			}
+		}
+		KOA_backward_economy_2 = {		#落后的经济2
+			name = KOA_backward_economy
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				conscription_factor = -0.2
+			}
+		}
+		KOA_backward_economy_3 = {		#落后的经济3
+			name = KOA_backward_economy
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		KOA_backward_economy_4 = {		#落后的经济4
+			name = KOA_backward_economy
+			picture = great_depression
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		
+		KOA_backward_economy_5 = {		#落后的经济5
+			name = KOA_backward_economy
+			picture = great_depression
+			modifier = {
+			}
+		}
+
+		KOA_sea_land_conflict = {		#海陆矛盾
+			picture = jap_interservice_rivalry_navy_strengthened
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				promote_cost_factor = 0.5
+				land_doctrine_cost_factor = 0.25
+				air_doctrine_cost_factor = 0.25
+				naval_doctrine_cost_factor = 0.25
+				command_power_gain_mult = -0.5
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+		KOA_cronation = {		#加冕典礼
+			picture = por_monarchist_uprising
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		KOA_revolutionary_enthusiasm = { #革命热情
+			picture = por_monarchist_uprising
+			modifier = {
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				army_core_defence_factor = 0.1
+				political_power_factor = -0.1
+        		stability_factor = -0.05
+			}
+		}
+		KOA_directed_democracy = { #训政
+			picture = por_monarchist_uprising
+			modifier = {
+				stability_factor = 0.2
+				political_power_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		KOA_old_school_opposition = { #守旧派的反对
+			picture = por_monarchist_uprising
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.1
+			}
+		}
+		KOA_Household_contract_responsibility_system = { #土地承包制
+			picture = por_monarchist_uprising
+			modifier = {
+				consumer_goods_factor = -0.1
+				conscription_factor = 0.1
+				monthly_agricultural_development_process = 5
+			}
+		}
+		KOA_rebuilt_state_owned_enterprises = { #重建的国有企业
+			picture = por_monarchist_uprising
+			modifier = {
+				monthly_agricultural_development_process = 2
+				monthly_industrial_development_process = 2
+				political_power_factor = -0.1
+			}
+		}
+		KOA_Army_Republic_Restoration = { #军队、共和、维新
+			picture = por_monarchist_uprising
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+		KOA_Seizure_of_illegal_assets = { #收缴非法资产
+			picture = por_monarchist_uprising
+			modifier = {
+				consumer_goods_factor = -0.05
+				monthly_living_standard_development_process = 2
+			}
+		}
+		KOA_war_bonds = { #战争债券
+			picture = por_monarchist_uprising
+			modifier = {
+				political_power_factor = 0.2
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.1
+				mobilization_laws_cost_factor = -0.2
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		KOA_empty_assets = { 	#国库空虚
+			picture = por_monarchist_uprising
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.3
+			}
+		}
+		KOA_politics_in_command_idea = { 	#政治挂帅
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_army_factor = -0.1
+			}
+		}
+		KOA_ocean_shirt = {	#海魂衫
+			picture = SPA_la_division_azul
+			modifier = {
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.05
+				special_forces_cap = 0.05
+				army_org_factor = 0.1
+			}
+		}
+		KOA_the_new_army = { 	#新军
+			picture = MEX_politicised_army
+			modifier = {
+				army_core_attack_factor = 0.05
+				experience_gain_army_factor = 0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+		KOA_revolutionary_guards_idea = { 	#革命保卫队
+			picture = MEX_revolutionary_army
+			modifier = {
+				conscription_factor = 0.1
+				army_org_regain = 0.1
+			}
+		}
+		KOA_army_of_roosters_idea_1 = { 	#雄鸡之师
+			name = KOA_army_of_roosters_idea
+			picture = MEX_revolutionary_army
+			modifier = {
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.05
+				special_forces_cap = 0.05
+				army_org_factor = 0.1
+				army_speed_factor = 0.05
+				attrition = -0.1
+			}
+		}
+		KOA_army_of_roosters_idea_2 = { 	#雄鸡之师
+			name = KOA_army_of_roosters_idea
+			picture = MEX_revolutionary_army
+			modifier = {
+				conscription_factor = 0.1
+				army_org_regain = 0.1
+				army_speed_factor = 0.05
+				attrition = -0.1
+			}
+		}
+		KOA_difficult_reformation = {		#改革举步维艰
+			picture = SPR_political_violence
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				political_advisor_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+				traning_laws_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				taxes_laws_cost_factor = 0.5
+				nationalization_policy_cost_factor = 0.5	
+				foreign_policy_cost_factor = 0.5
+			}
+		}
+		KOA_open_politics_idea = {		#政治开放
+			picture = generic_democratic_drift_bonus
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				conservative_republican_drift = 0.5
+				liberal_republican_drift = 0.5
+				worldunion_democrat_drift = 0.5
+			}
+		}
+		KOA_spring_of_stabevel_idea = {		#斯塔比翁之春
+			picture = SPR_torchbearers_of_tomorrow
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.15
+			}
+		}
+		KOA_bicameral_idea = {		#两院制
+			picture = generic_constitutional_guarantees
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				mobilization_laws_cost_factor = -0.15
+				traning_laws_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				taxes_laws_cost_factor = -0.15
+				nationalization_policy_cost_factor = -0.15	
+				foreign_policy_cost_factor = -0.15
+			}
+		}
+		KOA_local_reform = {		#地方改革
+			picture = generic_local_self_management
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		KOA_dark_tide_surging = {		#暗潮涌动
+			picture = generic_disjointed_gov
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				paternal_autocrat_drift = 0.05
+				conservative_republican_drift = 0.03
+			}
+		}
+
+		KOA_local_infidelity = {		#地方不忠
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.2
+			}
+		}
+
+		KOA_new_system_of_associations = {		#新协会制
+			picture = FRA_factory_strikes
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		KOA_squire_of_st_pauls_idea = {		#圣保禄侍从团
+			picture = FRA_factory_strikes
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				monthly_military_development_process = 4
+				army_leader_cost_factor = -0.05
+				command_power_gain_mult = 0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		KOA_new_levy_system_idea = {		#新莱维体制
+			picture = GFX_idea_MEX_politicised_army_2
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				monthly_population = 0.1
+				conscription_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+
+		#和平建国
+		KOA_peaceful_founding = {
+			picture = EST_democratic_opposition
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		#抵抗运动-分裂威胁
+		KOA_resistance_movement_1 = {
+			picture = chi_war_of_resistance3
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.4
+				army_core_defence_factor = -0.1
+				stability_factor = -0.2
+			}
+		}
+
+		#抵抗运动-焦头烂额
+		KOA_resistance_movement_2 = {
+			picture = chi_war_of_resistance2
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				army_core_defence_factor = -0.05
+				stability_factor = -0.15
+			}
+		}
+
+		#抵抗运动-初具规模
+		KOA_resistance_movement_3 = {
+			picture = chi_war_of_resistance2
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				army_core_defence_factor = -0.05
+				stability_factor = -0.1
+			}
+		}
+
+		#抵抗运动-不成威胁
+		KOA_resistance_movement_4 = {
+			picture = chi_war_of_resistance1
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+
+		#抵抗运动-聊胜于无
+		KOA_resistance_movement_5 = {
+			picture = chi_war_of_resistance1
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+
+		#北企南分
+		KOA_north_enterprise_south_division = {
+			picture = eng_tackle_capitalism
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+
+			on_remove = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = -2
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.15
+				offsite_cic_building = 2
+			}
+		}
+
+		#特贸局
+		KOA_special_trade_bureau = {
+			picture = can_wartime_prices_and_trade_board
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+
+			modifier = {
+				political_advisor_cost_factor = 0.25
+				conscription_factor = 0.1
+				stability_factor = 0.15
+			}
+		}
+
+		#新冲突
+		KOA_new_conflict = {
+			picture = FRA_army_of_aggression_focus
+			allowed = { original_tag = KOA }
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+	}
+}

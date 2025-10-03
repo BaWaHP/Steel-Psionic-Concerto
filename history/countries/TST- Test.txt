@@ -1,0 +1,26 @@
+﻿capital = 1
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = anarchism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	anarchism = 100
+}
+
+
+
+add_ideas = TST_dont_touch
+
+create_country_leader = {
+	name = "开发中"
+	#desc = ""
+	picture = GFX_portrait_TST_on_dev
+	expire = "3000.1.1"
+	ideology = anarchism_subtype
+}

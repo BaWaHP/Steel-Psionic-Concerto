@@ -1,0 +1,36 @@
+SFR_maintain_the_front = {		#维持阵线
+	icon = GFX_decision_category_SFR_maintain_the_front
+	allowed = { tag = SFR }
+	visible = { has_country_flag = SFR_maintain_the_front_on }
+	visible_when_empty = yes
+	scripted_gui = SFR_maintain_the_front_ui
+	priority = 999999
+}
+
+SFR_opposition_bop_decisions = {	#反对派bop
+	allowed = { tag = SFR }
+	visible = { has_country_flag = SFR_opposition_bop_on }
+}
+
+SFR_commi_bop_decisions = {		#康米bop
+	allowed = { tag = SFR }
+	visible = { has_country_flag = SFR_commi_bop_on }
+}
+
+#远乡工农代表大会
+SFR_workers_and_peasants_congress = {
+	icon = GFX_decision_category_SFR_workers_and_peasants_congress
+	allowed = { tag = SFR }
+	visible = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
+	visible_when_empty = yes
+}
+
+#全国土地改革
+SFR_land_reform_decisions = {
+	icon = GFX_decision_category_SFR_land_reform_decisions
+	allowed = { tag = SFR }
+	visible = { has_completed_focus = SFR_start_land_reform }
+	visible_when_empty = yes
+	scripted_gui = SFR_land_reform_decisions_ui
+	priority = 999999
+}

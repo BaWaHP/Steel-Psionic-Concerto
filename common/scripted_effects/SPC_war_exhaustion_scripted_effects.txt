@@ -1,0 +1,46 @@
+SPC_war_exhaustion_initialize = {
+	set_variable = { war_exhaustion = 0 }
+}
+SPC_war_exhaustion_clamp = {
+	clamp_variable = {
+		var = war_exhaustion
+		min = 0
+		max = 1
+	}
+}
+SPC_weekly_war_exhaustion_countdown = {
+	if = {
+		limit = { SPC_war_exhaustion_eligible = yes }
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = SPC_war_exhaustion_dynamic_modifier } } }
+			country_event = SPC_War_Exh.1001
+		}
+		set_temp_variable = { war_exhaustion_gain_modifier_temp = modifier@war_exhaustion_gain_modifier }
+		clamp_temp_variable = {
+			var = war_exhaustion_gain_modifier_temp
+			min = 0
+			max = 100
+		}
+		multiply_temp_variable = { war_exhaustion_gain_modifier_temp = 0.01 }
+		add_to_variable = { war_exhaustion = war_exhaustion_gain_modifier_temp }
+		SPC_war_exhaustion_clamp = yes
+		set_variable = { minus_war_exhaustion = war_exhaustion }
+		multiply_variable = { minus_war_exhaustion = -1 }
+		set_variable = { minus_halfed_war_exhaustion = war_exhaustion }
+		multiply_variable = { minus_halfed_war_exhaustion = 0.5 }
+		set_variable = { rounded_minus_tenfold_war_exhaustion = war_exhaustion }
+		multiply_variable = { rounded_minus_tenfold_war_exhaustion = 10 }
+		round_variable = rounded_minus_tenfold_war_exhaustion
+	}
+	else = {
+		if = {
+			limit = { has_dynamic_modifier = { modifier = SPC_war_exhaustion_dynamic_modifier } }
+			country_event = SPC_War_Exh.1002
+		}
+		if = {
+			limit = { check_variable = { war_exhaustion > 0 } }
+			add_to_variable = { war_exhaustion = -0.01 }
+			SPC_war_exhaustion_clamp = yes
+		}
+	}
+}

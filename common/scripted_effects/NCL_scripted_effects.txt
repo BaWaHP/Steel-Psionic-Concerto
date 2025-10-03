@@ -1,0 +1,116 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_NCL_startup_effect = {
+	###初始省份###
+	add_state_core = 120
+	transfer_state = 120
+	every_owned_state = { add_core_of = NCL }
+	###非初始国家默认设置###
+	###介绍页面###
+	set_variable = { SPC_intro_screen = 1 }
+	###普及度修正部分###
+	set_variable = { magic_development_monthly_buff = 0 }
+	set_variable = { science_development_monthly_buff = 0 }
+	every_owned_state = {
+		set_variable = { state_magic_monthly_buff = 0 }
+		set_variable = { state_science_monthly_buff = 0 }
+	}
+	###发展度设置###
+	SPC_development_update_effect = yes
+	###自定义内容###
+	###政府法案###
+	add_ideas = limited_conscription
+	add_ideas = advanced_training
+	add_ideas = civilian_economy
+	add_ideas = free_trade
+	add_ideas = too_much_taxes
+	add_ideas = NP_light_nationalization
+	add_ideas = defensive_tatic
+	###发展度###
+	add_ideas = early_factory_industry
+	add_ideas = modern_agriculture
+	add_ideas = experienced_army
+	add_ideas = normally_living
+	add_ideas = controlled_pollution
+	add_ideas = fake_exists
+	###工业政策###
+	add_ideas = EP_minimum_control
+	add_ideas = RP_basic_funding
+	add_ideas = IP_basic_funds
+	add_ideas = WP_symbolic_laws
+	add_ideas = AP_advanced_funds
+	add_ideas = RP_basic_funds
+	###政府政策###
+	add_ideas = MP_mixed_media
+	add_ideas = SP_sybolized_funds
+	add_ideas = MP_research_only
+	add_ideas = SPP_police_special_unit
+	add_ideas = FP_traditional_place
+	add_ideas = EP_wooden_schools
+	###种族和特殊魔法###
+	add_ideas = SM_no_special_magic
+	add_ideas = LR_humans
+	add_ideas = SR_Celydreans
+	add_ideas = RAP_discrimination
+	add_ideas = RLP_national_religion
+	add_ideas = SXP_traditional_policy
+	###其它开局设置###
+	inherit_technology = NCD
+	give_military_access = ARO
+	add_opinion_modifier = {
+		target = ARO
+		modifier = SPC_support_regime
+	}
+	ARO = { 
+		give_military_access = NCL give_guarantee = NCL 
+		add_opinion_modifier = {
+			target = NCL
+			modifier = SPC_support_regime
+		}
+	}
+	NCD = { give_guarantee = NCL }
+
+	division_template = {
+		name = "北西莉迪亚近卫队"
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			artillery_brigade = { x = 2 y = 0 }
+		}
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"北西莉迪亚近卫队\" division_template = \"北西莉迪亚近卫队\" start_experience_factor = 0.3 start_equipment_factor = 1"  
+			owner = NCL
+			prioritize_location = 19185
+			count = 2
+		}
+	}
+	120 = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+		}
+	}
+	
+}

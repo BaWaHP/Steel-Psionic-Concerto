@@ -1,0 +1,44 @@
+
+state={
+	id=410
+	name="STATE_410"
+	resources = {
+		tungsten = 24
+	}
+	provinces={
+		1303 2085 4909 5326 8418 9605 20340 20369 20377 20394 20423 20468 20469 20506 
+	}
+	history={
+		owner = MSA
+		add_core_of = MSA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 2
+			air_base = 6
+			20469 = {
+				naval_base = 8
+			}
+			20506 = {
+				naval_base = 4
+			}
+			20369 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			20469 30
+		}
+		victory_points = {
+			20506 15
+		}
+		victory_points = {
+			20369 8
+		}
+	}
+	manpower = 3112000
+	state_category = metropolis
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

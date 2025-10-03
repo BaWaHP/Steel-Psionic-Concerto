@@ -1,0 +1,35 @@
+
+state={
+	id=313
+	name="STATE_313"
+	resources={
+		magic_crystal = 12
+		steel = 24
+		tungsten = 8
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			4613 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			4613 3
+		}
+
+	}
+
+	provinces={
+		4613 7987 9568 11088 11108 19921 19971 20042 20051 20123 20137 20150 20199 20200 
+	}
+	manpower=683210
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

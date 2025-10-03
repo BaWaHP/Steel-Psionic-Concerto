@@ -1,0 +1,113 @@
+SPC_generic_sekeleton_decision_category = {
+	UTM_generic_war_decision = {		#北中巴通用吃鸡决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_250 = yes }
+
+		available = {
+			date > 1999.6.1
+			has_war = no
+			FROM = { is_neighbor_of = ROOT }
+		}
+
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				SPC_generic_region_trigger_250 = yes
+				NOT = { tag = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	UTM_generic_production_decision = {		#北中巴通用生产
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_250 = yes }
+
+		visible = {
+			date < 2002.1.1
+		}
+
+		fire_only_once = no
+		days_remove = 30
+
+		remove_effect = {
+			add_manpower = 2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = caster_attaker_equipment
+				amount = 50
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+SPC_generic_national_reunification_decision_category = {
+	UTM_reunification_decision = {		#奥提摩统一决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_250 = yes }
+
+		available = {
+			SPC_generic_region_trigger_250_control = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 200
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_250
+				if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_core_of = ROOT
+				}
+			}
+			set_global_flag = SPC_region_unified_global_250
+			if = {
+				limit = { tag = UTM }
+				news_event = UTMNews.1
+			}
+			if = {
+				limit = { tag = EOM }
+				OAS = { add_to_faction = EOM }
+			}
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+	}
+}
+

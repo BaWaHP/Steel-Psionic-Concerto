@@ -1,0 +1,13 @@
+MGC_supreme_industria_ministry_inf = {		#全军联盟最高工业部
+	name = MGC_supreme_industria_ministry
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	allowed = { tag = MGC }
+}
+
+MGC_supreme_industria_ministry_art = {		#全军联盟最高工业部
+	name = MGC_supreme_industria_ministry
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { tag = MGC }
+}

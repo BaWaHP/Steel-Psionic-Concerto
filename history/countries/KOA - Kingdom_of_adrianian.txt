@@ -1,0 +1,294 @@
+﻿capital = 307
+
+oob = "KOA"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "KOA_naval"
+	else = {
+		set_naval_oob = "KOA_naval_legacy"
+	}
+}
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 8
+	liberal_republican = 11
+	conservative_republican = 22
+	authoritarian_republican = 34
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 25
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_mountaineers = 1
+	marines = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	improved_energy_storage = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+	#特殊科技
+	panzerschiffe = 1
+}
+
+#变量
+#选王
+set_variable = { KOA_var_support_stanwaf = 0 }	
+set_variable = { KOA_var_support_willian = 0 }	
+set_variable = { KOA_var_support_yulian = 0 }	
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+
+
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			smoke_generator = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+#领导人#
+recruit_character = KOA_king_electing_council
+recruit_character =	KOA_stanwaf
+recruit_character = KOA_willian
+recruit_character = KOA_yulian
+recruit_character = KOA_tocman_lowes
+recruit_character = KOA_merk_hill
+
+#内阁#
+recruit_character = KOA_william_anconin
+recruit_character = KOA_torkman_loss
+recruit_character = KOA_christian_matte
+recruit_character = KOA_paul_van_der_laan
+recruit_character = KOA_laurence_vanniga
+
+#将领#
+recruit_character = KOA_simon_monteleone
+recruit_character = KOA_auxier_constantinier
+recruit_character = KOA_carl_christian
+
+add_ideas = {
+	KOA_scarlet_crown
+	KOA_political_chaos
+	KOA_sea_land_conflict
+}
+
+#海军模板
+if = {
+	limit = { 
+		has_dlc = "Man the Guns" 
+	}
+	create_equipment_variant = {
+		name = "S-13"
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1 
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	create_equipment_variant = {
+		name = "顺从级"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "库斯特海芬级"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = empty
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	create_equipment_variant = {
+		name = "斯塔比翁提级"
+		type = ship_hull_cruiser_panzerschiff
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			rear_1_custom_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+		}
+	}
+}
+
+add_equipment_to_stockpile = {
+	type = police_equipment_0
+	amount = 2000
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_0
+	amount = 1000
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 1000
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = uniform_equipment_0
+	amount = 1000
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = special_forces_equipment_0
+	amount = 800
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = convoy
+	amount = 30
+	producer = KOA
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 5
+	producer = KOA
+}

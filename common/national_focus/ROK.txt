@@ -1,0 +1,4331 @@
+focus_tree = {
+	id = ROK
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ROK
+		}
+	}
+
+	#ROK_focus_1 #初始国策
+	#ROK_focus_2 #康米
+	#ROK_focus_2_1 #康米阶段一
+	#ROK_focus_2_2 #康米 埃米
+	
+	default = no
+	
+	#持续性国策位置
+	continuous_focus_position = { x = 20 y = 3000 } #原数值{ x = 20 y = 1000 }
+
+	#民主线 通用经济线
+
+	#继续1988经济复兴法
+	focus = {
+		id = ROK_continued_economic_recovery_act_of_nineteen_eighty_eight
+		icon = GFX_Generic_Industry
+		cost = 5
+		x = 1
+		y = 0
+
+		allow_branch = {
+			has_country_flag = ROK_focus_1
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			SPC_industry_policy_up = yes
+			add_stability = -0.1
+			add_political_power = -50
+			country_event = { id = ROK_default_industry.1 }
+		}
+	}
+
+	#加强贸易
+	focus = {
+		id = ROK_strengthen_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		prerequisite = { focus = ROK_continued_economic_recovery_act_of_nineteen_eighty_eight }
+		relative_position_id = ROK_continued_economic_recovery_act_of_nineteen_eighty_eight
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.025
+			add_political_power = 25
+			343 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#振兴工业
+	focus = {
+		id = ROK_revitalize_industry
+		icon = GFX_Generic_Industry02
+		x = 0
+		y = 1
+		cost = 4.4
+		
+		prerequisite = { focus = ROK_strengthen_trade }
+		relative_position_id = ROK_strengthen_trade
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	#尝试农业机械化
+	focus = {
+		id = ROK_try_agricultural_mechanization
+		icon = GFX_goal_Generic_farming_industry
+		x = -1
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_revitalize_industry }
+		relative_position_id = ROK_revitalize_industry
+		
+		available = {
+			has_country_flag = ROK_politic_stable
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = ROK_try_agricultural_mechanization_idea
+		}
+	}
+
+	#处理失业问题
+	focus = {
+		id = ROK_dealing_with_unemployment
+		icon = GFX_goal_workers_for_business
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_try_agricultural_mechanization }
+		relative_position_id = ROK_try_agricultural_mechanization
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -50
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#投资公共工程
+	focus = {
+		id = ROK_invest_in_public_works
+		icon = GFX_Generic_Public_Works
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_dealing_with_unemployment }
+		relative_position_id = ROK_dealing_with_unemployment
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.025
+			add_political_power = -25
+			360 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			375 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#进一步拓展工业体系
+	focus = {
+		id = ROK_further_expansion_the_industry_system
+		icon = GFX_Generic_Industrial_Complexes
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_invest_in_public_works }
+		relative_position_id = ROK_invest_in_public_works
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			360 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			375 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	#投资国家铁路
+	focus = {
+		id = ROK_invest_in_national_railways
+		icon = GFX_Generic_Railroads
+		x = 1
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_revitalize_industry }
+		relative_position_id = ROK_revitalize_industry
+		
+		available = {
+			has_country_flag = ROK_politic_stable
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.025
+			add_political_power = -50
+			build_railway = {
+				level = 2
+				path = { 19876 8515 20067 7742 10315 4896 8014 }
+			}
+		}
+	}
+	
+	#投资克拉亚诺大学
+	focus = {
+		id = ROK_invest_in_krakow_university
+		icon = GFX_generic_Bookstack
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_invest_in_national_railways }
+		relative_position_id = ROK_invest_in_national_railways
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			add_research_slot = 1
+			custom_effect_tooltip = ROK_invest_in_krakow_university_tt
+			344 = {
+				add_to_variable = { var = state_science_progress  value = 10 }
+			}
+		}
+	}
+	
+	#加强社会保障体系
+	focus = {
+		id = ROK_strengthen_the_social_security_system
+		icon = GFX_goal_Generic_Workers_Democracy
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_invest_in_krakow_university }
+		relative_position_id = ROK_invest_in_krakow_university
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+			SPC_subsidies_policy_up = yes
+		}
+	}
+	
+	#投资高等教育
+	focus = {
+		id = ROK_invest_in_higher_education
+		icon = GFX_goal_Focus_Examine_Foreign_Laws
+		x = 0
+		y = 1
+		cost = 2.90
+		
+		prerequisite = { focus = ROK_strengthen_the_social_security_system }
+		relative_position_id = ROK_strengthen_the_social_security_system
+		
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			343 = {
+				add_to_variable = { var = state_science_progress  value = 10 }
+			}
+			360 = {
+				add_to_variable = { var = state_science_progress  value = 10 }
+			}
+			375 = {
+				add_to_variable = { var = state_science_progress  value = 10 }
+			}
+			custom_effect_tooltip = ROK_invest_in_higher_education_tt
+			SPC_education_policy_up = yes
+		}
+	}
+	
+	#走向新经济
+	focus = {
+		id = ROK_towards_a_new_economy
+		icon = GFX_Generic_Industrialization
+		x = 1
+		y = 1
+		cost = 2.20
+		
+		prerequisite = { focus = ROK_invest_in_higher_education }
+		prerequisite = { focus = ROK_further_expansion_the_industry_system }
+		relative_position_id = ROK_further_expansion_the_industry_system
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			360 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				add_idea = ROK_new_economy_system
+				remove_idea = ROK_try_agricultural_mechanization_idea
+			}
+		}
+	}
+	#左线
+
+	#烈火与玫瑰
+	focus = {
+		id = ROK_fire_and_rose
+		icon = GFX_ROK_fire_and_rose
+		x = -8
+		y = 1
+		cost = 0.8
+
+		relative_position_id = ROK_emergency_election
+
+		prerequisite = { focus = ROK_emergency_election }
+
+		available = {
+			has_country_flag = ROK_election_deadlocked
+			has_country_flag = ROK_choose_the_left
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_popularity = { ideology = revolutionary_communism popularity = 0.15 }
+			add_popularity = { ideology = liberal_republican popularity = -0.15 }
+			swap_ideas = {
+				remove_idea = ROK_influence_from_new_revolution_party
+				add_idea = ROK_government_of_people
+			}
+			set_party_name = { ideology = pioneer_communism long_name = ROK_people_party_long name = ROK_people_party }
+			set_party_name = { ideology = revolutionary_communism long_name = ROK_people_party_long name = ROK_people_party }
+			set_party_name = { ideology = worldunion_socialist long_name = ROK_people_party_long name = ROK_people_party }
+			set_party_name = { ideology = worldunion_democrat long_name = ROK_people_party_long name = ROK_people_party }
+		}
+	}
+
+	#新的革命
+	focus = {
+		id = ROK_new_revolution
+		icon = GFX_ROK_new_revolution
+		x = 0
+		y = 1
+		cost = 2.2
+
+		relative_position_id = ROK_fire_and_rose
+
+		prerequisite = { focus = ROK_fire_and_rose }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = ROK_new_revolution_tt
+			add_political_power = 50
+			remove_ideas = ROK_vancouvers_parliament
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ROK_fire_reburn_modifier
+				}
+				set_politics = {
+					ruling_party = revolutionary_communism
+				}
+			}
+			set_variable = { ROK_fr_political_power_factor = -0.2 }
+			set_variable = { ROK_fr_stability_factor = -0.3 }
+			set_variable = { ROK_fr_war_support_factor = -0.15 }
+			set_variable = { ROK_fr_production_speed_buildings_factor = -0.15 }
+			set_variable = { ROK_fr_industrial_capacity_factory = 0.05 }
+			set_variable = { ROK_fr_consumer_goods_factor = 0.1 }
+			set_variable = { ROK_fr_pioneer_communism_drift = 0.02 }
+			set_variable = { ROK_fr_revolutionary_communism_drift = 0.02 }
+			set_variable = { ROK_fr_worldunion_socialist_drift = 0.02 }
+			set_variable = { ROK_fr_worldunion_democrat_drift = 0.02 }
+		}
+	}
+
+	#重新分配财富
+	focus = {
+		id = ROK_redistribute_the_money
+		icon = GFX_ROK_redistribute_the_money
+		x = -1
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_new_revolution
+
+		prerequisite = { focus = ROK_new_revolution }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { ROK_fr_stability_factor = 0.1 }
+			add_to_variable = { ROK_fr_political_power_factor = 0.05 }
+			add_to_variable = { ROK_fr_war_support_factor = 0.05 }
+			add_to_variable = { ROK_fr_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { ROK_fr_consumer_goods_factor = -0.05 }
+			custom_effect_tooltip = ROK_redistribute_the_money_tt
+		}
+	}
+
+	#控制生产资料
+	focus = {
+		id = ROK_control_the_means_of_production
+		icon = GFX_ROK_control_the_means_of_production
+		x = 1
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_new_revolution
+
+		prerequisite = { focus = ROK_new_revolution }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_to_variable = { ROK_fr_stability_factor = 0.1 }
+			add_to_variable = { ROK_fr_political_power_factor = 0.1 }
+			add_to_variable = { ROK_fr_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { ROK_fr_industrial_capacity_factory = 0.1 }
+			custom_effect_tooltip = ROK_control_the_means_of_production_tt
+		}
+	}
+
+	#打破社会阶级
+	focus = {
+		id = ROK_break_down_social_class
+		icon = GFX_ROK_break_down_social_class
+		x = 0
+		y = 2
+		cost = 2.9
+
+		relative_position_id = ROK_new_revolution
+
+		prerequisite = { focus = ROK_redistribute_the_money }
+		prerequisite = { focus = ROK_control_the_means_of_production }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+			country_event = { id = ROK_left.4 } 
+		}
+	}
+	
+	#清洗反对派
+	focus = {
+		id = ROK_purge_the_opposition
+		icon = GFX_ROK_purge_the_opposition
+		x = -1
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_break_down_social_class
+
+		prerequisite = { focus = ROK_break_down_social_class }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = ROK_chaotic_government
+			add_popularity = { ideology = liberal_republican popularity = -0.10 }
+			add_popularity = { ideology = conservative_republican popularity = -0.10 }
+			add_popularity = { ideology = authoritarian_republican popularity = -0.10 }
+			add_popularity = { ideology = national_socialist popularity = -0.10 }
+			add_popularity = { ideology = authoritarian_nationalism popularity = -0.10 }
+		}
+	}
+
+	#新的工会
+	focus = {
+		id = ROK_new_workers_union
+		icon = GFX_ROK_new_workers_union
+		x = 0
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_purge_the_opposition
+
+		prerequisite = { focus = ROK_purge_the_opposition }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { ROK_fr_stability_factor = 0.1 }
+			add_to_variable = { ROK_fr_political_power_factor = 0.1 }
+			add_to_variable = { ROK_fr_war_support_factor = 0.1 }
+			add_to_variable = { ROK_fr_production_speed_buildings_factor = 0.1 }
+			add_to_variable = { ROK_fr_industrial_capacity_factory = 0.05 }
+			add_to_variable = { ROK_fr_consumer_goods_factor = -0.05 }
+			custom_effect_tooltip = ROK_new_workers_union_tt
+		}
+	}
+
+	#清洗军队中的野心家
+	focus = {
+		id = ROK_purge_careerists_in_the_army
+		icon = GFX_ROK_purge_careerists_in_the_army
+		x = 1
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_break_down_social_class
+
+		prerequisite = { focus = ROK_break_down_social_class }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_command_power = -30
+			add_stability = -0.05
+			ROK_alexandra_vysokov = { retire = yes }
+			ROK_blanka_velimavsky = { retire = yes }
+			country_event = {
+				id = ROK_left.5
+				days = 1
+			}
+		}
+	}
+
+	#确保经济
+	focus = {
+		id = ROK_ensure_the_economy
+		icon = GFX_ROK_ensure_the_economy
+		x = 0
+		y = 1
+		cost = 3.6
+
+		relative_position_id = ROK_purge_careerists_in_the_army
+
+		prerequisite = { focus = ROK_purge_careerists_in_the_army }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			remove_ideas = ROK_old_eagle
+		}
+	}
+
+	#宣告革命成功
+	focus = {
+		id = ROK_revolution_win
+		icon = GFX_ROK_revolution_win
+		x = 0
+		y = 3
+		cost = 4.4
+
+		relative_position_id = ROK_break_down_social_class
+
+		prerequisite = { focus = ROK_new_workers_union }
+		prerequisite = { focus = ROK_ensure_the_economy }
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = ROK_fire_reburn_modifier
+				}
+				add_ideas = ROK_victory_of_people
+				news_event = ROKNews.1
+			}
+			set_cosmetic_tag = ROK_commi_nation_cosmetic
+			custom_effect_tooltip = ROK_revolution_win_tt
+			if = {
+				limit = { has_country_flag = ROK_focus_1 }
+				clr_country_flag = ROK_focus_1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ROK_focus_2 } }
+				set_country_flag = ROK_focus_2 
+			}
+			if = {
+				limit = { NOT = { has_country_flag = ROK_focus_2_1 } }
+				set_country_flag = ROK_focus_2_1
+			}
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+		}
+	}
+
+	#民主线
+
+	#斯人已逝...
+	focus = {
+		id = ROK_he_has_passed_away
+		icon = GFX_ROK_he_has_passed_away
+		x = 13
+		y = 0
+		cost = 0.80
+		
+		available = {
+			not = {
+				has_country_leader = { 
+					character = ROK_moser_heludon
+					ruling_only = yes 
+				}
+			}
+		}
+
+		allow_branch = {
+			has_country_flag = ROK_focus_1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = -200
+			remove_ideas = ROK_stabiliy_based_on_one
+			remove_ideas = ROK_about_to_die
+			swap_ideas = {
+				add_idea = ROK_vancouvers_parliament
+				remove_idea = ROK_continous_promoted_democracy
+			}
+		}
+	}
+	
+	#此地空余...
+	focus = {
+		id = ROK_and_here_is_free
+		icon = GFX_ROK_and_here_is_free
+		x = 0
+		y = 1
+		cost = 0.80
+		
+		prerequisite = { focus = ROK_he_has_passed_away }
+		relative_position_id = ROK_he_has_passed_away
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = -150
+			add_ideas = ROK_chaotic_government
+		}
+	}
+	
+	#紧急选举
+	focus = {
+		id = ROK_emergency_election
+		icon = GFX_ROK_emergency_election
+		x = 0
+		y = 1
+		cost = 4.30
+		
+		prerequisite = { focus = ROK_and_here_is_free }
+		relative_position_id = ROK_and_here_is_free
+
+		available = {
+		}
+	
+		cancelable = no
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50
+			custom_effect_tooltip = ROK_emergency_election_tooltip
+			hidden_effect = {
+				country_event = { days = 3 id = ROK.0 } 
+			}
+		}
+	}
+	
+	#社民党的胜利
+	focus = {
+		id = ROK_victory_for_social_democrats
+		icon = GFX_Generic_Social_Democracy
+		x = -4
+		y = 1
+		cost = 0.8
+		
+		prerequisite = { focus = ROK_emergency_election }
+
+		mutually_exclusive = {
+			focus = ROK_victory_for_new_democratic
+			focus = ROK_victory_for_democratic
+		}
+		
+		relative_position_id = ROK_emergency_election
+
+		available = {
+			has_country_flag = ROK_victory_for_social_democrats_unlock
+			NOT = {
+				has_country_flag = ROK_election_deadlocked
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = { ideology = worldunion_democrat popularity = 0.15 }
+			add_timed_idea = { idea = ROK_victory_for_social_democrats_idea days = 60 }
+		}
+	}
+
+	#签署紧急法案
+	focus = {
+		id = ROK_sign_the_emergency_bill
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		cost = 2.20
+		
+		prerequisite = { focus = ROK_victory_for_social_democrats }
+		relative_position_id = ROK_victory_for_social_democrats
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				hidden_effect = {
+					create_intelligence_agency = yes
+				}
+				custom_effect_tooltip = ROK_sign_the_emergency_bill_tooltip
+			}
+		}
+	}
+	
+	#乡村生活运动
+	focus = {
+		id = ROK_country_life_movement
+		icon = GFX_Generic_Farming
+		x = -1
+		y = 1
+		cost = 3.60
+		
+		prerequisite = { focus = ROK_sign_the_emergency_bill }
+		relative_position_id = ROK_sign_the_emergency_bill
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				add_idea = ROK_gradually_stabilized_government
+				remove_idea = ROK_chaotic_government
+			}
+		}
+	}
+	
+	#解决经济问题
+	focus = {
+		id = ROK_solve_economic_problems
+		icon = GFX_goal_manage_industries
+		x = 0
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_country_life_movement }
+		relative_position_id = ROK_country_life_movement
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ROK_more_stable_parliament
+				remove_idea = ROK_vancouvers_parliament
+			}
+		}
+	}
+	
+	#对国际的保证
+	focus = {
+		id = ROK_guarantee_to_international
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_solve_economic_problems }
+		relative_position_id = ROK_solve_economic_problems
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			remove_ideas = ROK_army_of_ambition
+			#country_event = ROX.与南巴的会晤 #事件未完成
+		}
+	}
+	
+	#保障工人权益
+	focus = {
+		id = ROK_protect_workers_rights
+		icon = GFX_goal_workers_rights
+		x = 1
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_sign_the_emergency_bill }
+		relative_position_id = ROK_sign_the_emergency_bill
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_ideas = ROK_worker_benefits_idea
+		}
+	}
+	
+	#工会的机遇
+	focus = {
+		id = ROK_opportunities_for_unions
+		icon = GFX_union_agreement
+		x = 0
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_protect_workers_rights }
+		relative_position_id = ROK_protect_workers_rights
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ROK_opportunities_for_unions_tooltip
+			remove_ideas = ROK_influence_from_new_revolution_party
+			hidden_effect = {
+				swap_ideas = {
+					add_idea = ROK_worker_benefits_idea_1
+					remove_idea = ROK_worker_benefits_idea
+				}
+			}
+			#country_event = ROK.新的工会 #事件未完成
+		}
+	}
+	
+	#维护人权
+	focus = {
+		id = ROK_uphold_human_rights
+		icon = GFX_Generic_Pass_Legislation
+		x = 0
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_opportunities_for_unions }
+		relative_position_id = ROK_opportunities_for_unions
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = ROK_uphold_human_rights_tooltip
+			hidden_effect = {
+				swap_ideas = {
+					add_idea = ROK_worker_benefits_idea_2
+					remove_idea = ROK_worker_benefits_idea_1
+				}
+			}
+		}
+	}
+	
+	#面包与玫瑰！
+	focus = {
+		id = ROK_bread_and_roses
+		icon = GFX_Generic_Bread_and_Peace
+		x = -1
+		y = 1
+		cost = 3.60
+
+		prerequisite = { focus = ROK_guarantee_to_international }
+		prerequisite = { focus = ROK_uphold_human_rights }
+
+		relative_position_id = ROK_uphold_human_rights
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_bread_and_roses_tt
+			swap_ideas = {
+				add_idea = ROK_smooth_sailing_parliament
+				remove_idea = ROK_more_stable_parliament
+			}
+			hidden_effect = {
+				swap_ideas = {
+					add_idea = ROK_worker_benefits_idea_3
+					remove_idea = ROK_worker_benefits_idea_2
+				}
+				news_event = ROKNews.2
+			}	
+		}
+	}	
+	
+	#新民主党的胜利
+	focus = {
+		id = ROK_victory_for_new_democratic
+		icon = GFX_Social_Liberalism
+		x = 0
+		y = 1
+		cost = 0.80
+		
+		prerequisite = { focus = ROK_emergency_election }
+		
+		mutually_exclusive = {
+			focus = ROK_victory_for_social_democrats
+			focus = ROK_victory_for_democratic
+		}
+
+		relative_position_id = ROK_emergency_election
+		
+		available = {
+			has_country_flag = ROK_victory_for_new_democratic_unlock
+			NOT = {
+				has_country_flag = ROK_election_deadlocked
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = { ideology = liberal_republican popularity = 0.15 }
+			add_timed_idea = { idea = ROK_victory_for_new_democratic_idea days = 60 }
+		}
+	}
+	
+	#坚守民主
+	focus = {
+		id = ROK_stick_to_democracy
+		icon = GFX_Liberal_Conservatism
+		x = 0
+		y = 1
+		cost = 2.20
+		prerequisite = { focus = ROK_victory_for_new_democratic }
+		relative_position_id = ROK_victory_for_new_democratic
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = ROK_more_stable_parliament
+				remove_idea = ROK_vancouvers_parliament
+			}
+			#country_event = ROX.议会演讲 #事件未完成
+		}
+	}
+
+	#做出许诺
+	focus = {
+		id = ROK_make_the_promise
+		icon = GFX_Generic_War_Propaganda03
+		x = -1
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_stick_to_democracy }
+		relative_position_id = ROK_stick_to_democracy
+			
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+			add_ideas = ROK_temporarily_quelled_rebellion
+		}
+	}
+
+	#重组阵线
+	focus = {
+		id = ROK_reorganization_front
+		icon = GFX_goal_government_icon
+		x = 0
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_make_the_promise }
+		relative_position_id = ROK_make_the_promise
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+			swap_ideas = {
+				add_idea = ROK_gradually_stabilized_government
+				remove_idea = ROK_chaotic_government
+			}
+			#country_event = ROK.再次联合 #事件未完成
+		}
+	}
+	
+	#振兴农业
+	focus = {
+		id = ROK_revitalize_agriculture
+		icon = GFX_goal_improvised_farming_machinery
+		x = 0
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_reorganization_front }
+		relative_position_id = ROK_reorganization_front
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			remove_ideas = ROK_temporarily_quelled_rebellion
+		}
+	}
+
+	#向各方妥协
+	focus = {
+		id = ROK_compromise_with_all_parties
+		icon = GFX_goal_new_treaty
+		x = 1
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_stick_to_democracy }
+		relative_position_id = ROK_stick_to_democracy
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			#country_event = ROK.各方会谈 #事件未完成
+		}
+	}
+	
+	#工人福利
+	focus = {
+		id = ROK_worker_benefits
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_compromise_with_all_parties }
+		relative_position_id = ROK_compromise_with_all_parties
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+			remove_ideas = ROK_influence_from_new_revolution_party
+		}
+	}
+	
+	#继续民主化进程
+	focus = {
+		id = ROK_continue_the_democratization_process
+		icon = GFX_Generic_Liberation
+		x = 0
+		y = 1
+		cost = 3.6
+		prerequisite = { focus = ROK_worker_benefits }
+		relative_position_id = ROK_worker_benefits
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.1
+		}
+	}	
+	
+	#平稳航行
+	focus = {
+		id = ROK_smooth_sailing
+		icon = GFX_goal_liberty_ships
+		x = -1
+		y = 1
+		cost = 4.40
+		prerequisite = { focus = ROK_revitalize_agriculture }
+		prerequisite = { focus = ROK_continue_the_democratization_process }
+		relative_position_id = ROK_continue_the_democratization_process
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ROK_smooth_sailing_parliament
+				remove_idea = ROK_more_stable_parliament
+			}
+			remove_ideas = ROK_army_of_ambition
+			hidden_effect = {
+				news_event = ROKNews.3
+			}
+		}
+	}
+	
+	#民主党的胜利
+	focus = {
+		id = ROK_victory_for_democratic
+		icon = GFX_goal_Conservative
+		x = 4
+		y = 1
+		cost = 0.80
+		
+		prerequisite = { focus = ROK_emergency_election }
+
+		mutually_exclusive = {
+			focus = ROK_victory_for_social_democrats
+			focus = ROK_victory_for_new_democratic
+		}
+
+		relative_position_id = ROK_emergency_election
+			
+		available = {
+			has_country_flag = ROK_victory_for_democratic_unlock
+			NOT = {
+				has_country_flag = ROK_election_deadlocked
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = { ideology = conservative_republican popularity = 0.15 }
+			add_timed_idea = { idea = ROK_victory_for_democratic_idea days = 60}
+		}
+	}
+	
+	#重申1976安全法
+	focus = {
+		id = ROK_rebirth_security_act_of_nineteen_seventy_six
+		icon = GFX_Generic_Factionalism
+		x = 0
+		y = 1
+		cost = 2.20
+		prerequisite = { focus = ROK_victory_for_democratic }
+		relative_position_id = ROK_victory_for_democratic
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -10000
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ROK_security_act_of_1976_dynamic_modifier
+				}
+			}
+			set_variable = { ROK_security_act_of_1976_political_power_factor = -0.05 }
+			set_variable = { ROK_security_act_of_1976_stability_factor = 0.05 }
+			set_variable = { ROK_security_act_of_1976_conscription_factor = -0.1 }
+			set_variable = { ROK_security_act_of_1976_industrial_capacity_factory = 0 }
+			custom_effect_tooltip = ROK_rebirth_security_act_of_nineteen_seventy_six_tt
+		}
+
+	}
+	
+	#制止暴乱
+	focus = {
+		id = ROK_stop_exposure
+		icon = GFX_Generic_Arrests
+		x = -1
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_rebirth_security_act_of_nineteen_seventy_six }
+		relative_position_id = ROK_rebirth_security_act_of_nineteen_seventy_six
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -15000
+			add_to_variable = { ROK_security_act_of_1976_stability_factor = 0.05 }
+			add_to_variable = { ROK_security_act_of_1976_conscription_factor = 0.05 }
+			add_to_variable = { ROK_security_act_of_1976_industrial_capacity_factory = 0.05 }
+			custom_effect_tooltip = ROK_stop_exposure_tt
+			#country_event = ROK.流血 #事件未完成
+		}
+	}
+
+	#缓解危机
+	focus = {
+		id = ROK_alleviate_the_crisis
+		icon = GFX_Generic_Colonial_Army
+		x = 0
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_stop_exposure }
+		relative_position_id = ROK_stop_exposure
+			
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_to_variable = { ROK_security_act_of_1976_political_power_factor = 0.1 }
+			add_to_variable = { ROK_security_act_of_1976_stability_factor = 0.1 }
+			add_to_variable = { ROK_security_act_of_1976_conscription_factor = 0.05 }
+			add_to_variable = { ROK_security_act_of_1976_industrial_capacity_factory = 0.1 }
+			custom_effect_tooltip = ROK_alleviate_the_crisis_tt
+		}
+	}
+	
+	#新农村体系
+	focus = {
+		id = ROK_the_new_rural_system
+		icon = GFX_Generic_Cotton_Farming
+		x = 0
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_alleviate_the_crisis }
+		relative_position_id = ROK_alleviate_the_crisis
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.05
+			swap_ideas = {
+				add_idea = ROK_gradually_stabilized_government
+				remove_idea = ROK_chaotic_government
+			}
+		}
+	}	
+	
+	#对南巴的忠心
+	focus = {
+		id = ROK_loyalty_to_namba
+		icon = GFX_Generic_Chess_Move
+		x = 1
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_rebirth_security_act_of_nineteen_seventy_six }
+		relative_position_id = ROK_rebirth_security_act_of_nineteen_seventy_six
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.025
+			#country_event = ROK.与南巴的会晤 #事件未完成
+		}
+	}
+	
+	#社会问题就是国家问题
+	focus = {
+		id = ROK_the_social_problems_are_national_problems
+		icon = GFX_goal_ideology_social_conservative
+		x = 0
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_loyalty_to_namba }
+		relative_position_id = ROK_loyalty_to_namba
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			remove_ideas = ROK_influence_from_new_revolution_party
+			#country_event = ROK.慈善机构 #事件未完成
+		}
+	}
+	
+	#和军队保持合作
+	focus = {
+		id = ROK_cooperate_with_the_military
+		icon = GFX_Generic_American_Soldier
+		x = 0
+		y = 1
+		cost = 3.60
+		prerequisite = { focus = ROK_the_social_problems_are_national_problems }
+		relative_position_id = ROK_the_social_problems_are_national_problems
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_to_variable = { ROK_security_act_of_1976_political_power_factor = 0.1 }
+			add_to_variable = { ROK_security_act_of_1976_conscription_factor = 0.1 }
+			add_to_variable = { ROK_security_act_of_1976_industrial_capacity_factory = 0.1 }
+			custom_effect_tooltip = ROK_cooperate_with_the_military_tt
+			remove_ideas = ROK_army_of_ambition
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	#秩序井然
+	focus = {
+		id = ROK_orderly
+		icon = GFX_goal_social_reforms
+		x = -1
+		y = 1
+		cost = 4.40
+		prerequisite = { focus = ROK_cooperate_with_the_military }
+		prerequisite = { focus = ROK_the_new_rural_system }
+		relative_position_id = ROK_cooperate_with_the_military
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			remove_ideas = ROK_vancouvers_parliament
+			hidden_effect = {
+				news_event = ROKNews.4
+			}
+		}
+	}
+	
+	#道德，平等，繁荣
+	focus = {
+		id = ROK_morality_equality_prosperity
+		icon = GFX_goal_liberty
+		x = -4
+		y = 1
+		cost = 4.40
+		prerequisite = { 
+			focus = ROK_bread_and_roses
+			focus = ROK_smooth_sailing
+			focus = ROK_orderly
+		}
+		relative_position_id = ROK_orderly
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+			remove_ideas = ROK_old_eagle
+			remove_ideas = ROK_gradually_stabilized_government
+			set_country_flag = ROK_politic_stable
+			custom_effect_tooltip = ROK_morality_equality_prosperity_tt
+		}
+	}
+
+	#右线
+
+	#宣布戒严
+	focus = {
+		id = ROK_declare_martial_law
+		icon = GFX_ROK_declare_martial_law
+		x = 8
+		y = 1
+		cost = 0.8
+
+		prerequisite = { 
+			focus = ROK_emergency_election
+		}
+
+		relative_position_id = ROK_emergency_election
+
+		available = {
+			has_country_flag = ROK_election_deadlocked
+			has_country_flag = ROK_choose_the_right
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.15
+			}
+			swap_ideas = {
+				remove_idea = ROK_army_of_ambition
+				add_idea = ROK_military_in_charge
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = ROK_paternal_autocrat_party_1_long
+				name = ROK_paternal_autocrat_party_1
+			}
+			set_politics = { ruling_party = paternal_autocrat }
+		}
+	}
+
+	#解散议会
+	focus = {
+		id = ROK_disolve_parliament
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		x = 0
+		y = 1
+		cost = 2.2
+
+		prerequisite = { focus = ROK_declare_martial_law }
+		relative_position_id = ROK_declare_martial_law
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			remove_ideas = ROK_vancouvers_parliament
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.05
+			}
+			country_event = {
+				id = ROK_right.1
+				days = 5
+			}
+		}
+	}
+
+	#军事镇压
+	focus = {
+		id = ROK_military_suppresion
+		icon = GFX_focus_SOV_penal_battalions
+		x = -1
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_disolve_parliament }
+		relative_position_id = ROK_disolve_parliament
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_manpower = -14231
+			add_stability = 0.05
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			country_event = {
+				id = ROK_right.2
+				days = 5
+			}
+		}
+	}
+
+	#忠于祖国
+	focus = {
+		id = ROK_loyal_to_mothernation
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		x = 1
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_disolve_parliament }
+		relative_position_id = ROK_disolve_parliament
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			country_event = {
+				id = ROK_right.3
+				days = 5
+			}
+		}
+	}
+
+	#和民主党的有限合作
+	focus = {
+		id = ROK_limited_cop_with_dem
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = -1
+		y = 1
+		cost = 2.86
+
+		prerequisite = { focus = ROK_military_suppresion }
+		prerequisite = { focus = ROK_loyal_to_mothernation }
+		relative_position_id = ROK_loyal_to_mothernation
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			remove_ideas = ROK_chaotic_government
+			custom_effect_tooltip = ROK_limited_cop_with_dem_tt
+		}
+	}
+
+	#消灭新革命党
+	focus = {
+		id = ROK_eliminate_new_rev
+		icon = GFX_focus_PAR_neuter_the_guion_rojo
+		x = -1
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_limited_cop_with_dem }
+		relative_position_id = ROK_limited_cop_with_dem
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_eliminate_new_rev_tt
+			set_party_name = {
+				ideology = pioneer_communism
+				long_name = ROK_pioneer_communism_party_1_long
+				name = ROK_pioneer_communism_party_1
+			}
+			set_party_name = {
+				ideology = revolutionary_communism
+				long_name = ROK_revolutionary_communism_party_1_long
+				name = ROK_revolutionary_communism_party_1
+			}
+			set_party_name = {
+				ideology = worldunion_socialist
+				long_name = ROK_worldunion_socialist_party_1_long
+				name = ROK_worldunion_socialist_party_1
+			}
+			set_party_name = {
+				ideology = worldunion_democrat
+				long_name = ROK_worldunion_democrat_party_1_long
+				name = ROK_worldunion_democrat_party_1
+			}
+			remove_ideas = ROK_influence_from_new_revolution_party
+			add_manpower = -12500
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			country_event = {
+				id = ROK_right.4
+				days = 7
+			}
+		}
+	}
+
+	#重组国家警察
+	focus = {
+		id = ROK_reorg_national_cops
+		icon = GFX_Generic_Execute_Dissidents02
+		x = 1
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_limited_cop_with_dem }
+		relative_position_id = ROK_limited_cop_with_dem
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -1500
+			add_political_power = 25
+		}
+	}
+
+	#社会军事化
+	focus = {
+		id = ROK_military_society
+		icon = GFX_focus_SOV_restore_cossack_units
+		x = 0
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_eliminate_new_rev }
+		relative_position_id = ROK_eliminate_new_rev
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROK_military_in_charge
+				add_idea = ROK_military_society_idea
+			}
+		}
+	}
+
+	#军事戒严扩大化
+	focus = {
+		id = ROK_expand_martial_law
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
+		x = 0
+		y = 1
+		cost = 3.58
+
+		prerequisite = { focus = ROK_reorg_national_cops }
+		relative_position_id = ROK_reorg_national_cops
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			country_event = ROK_right.5
+		}
+	}
+
+	#确立新体制
+	focus = {
+		id = ROK_establish_new_system
+		icon = GFX_Paternal_Autocrat
+		x = 1
+		y = 1
+		cost = 4.3
+
+		prerequisite = { focus = ROK_military_society }
+		prerequisite = { focus = ROK_expand_martial_law }
+		relative_position_id = ROK_military_society
+
+		available = {
+		}
+			
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = ROK_old_eagle
+				add_idea = ROK_support_from_monarchist
+			}
+		}
+	}
+
+	focus = {	#红旗终招展
+		id = ROK_red_flag_arise
+		icon = GFX_ROK_red_flag_arise
+		x = 5
+		y = 0
+		cost = 2
+
+		allow_branch = {
+			has_country_flag = ROK_focus_2
+			has_country_flag = ROK_focus_2_1
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.50
+				days = 1
+			}
+			custom_effect_tooltip = ROK_red_flag_arise_tt
+		}
+	}
+
+	focus = {	#看向内部
+		id = ROK_watch_inside
+		icon = GFX_ROK_watch_inside
+		x = -4
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_red_flag_arise }
+		relative_position_id = ROK_red_flag_arise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.53
+				days = 1
+			}
+			add_ideas = ROK_whos_victory
+			custom_effect_tooltip = ROK_internal_external_conflict
+			custom_effect_tooltip = ROK_watch_inside_tt
+		}
+	}
+
+	focus = {	#先锋之声
+		id = ROK_vanguard_voice
+		icon = GFX_ROK_vanguard_voice
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_inside }
+		relative_position_id = ROK_watch_inside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROK_leader_2_prop
+				value = 2
+				tooltip = ROK_leader_2_prop_var_tt
+			}
+			ROK_internal_external_conflict_clamp_aio = yes
+			country_event = {
+				id = ROK_left.54
+				days = 1
+			}
+			custom_effect_tooltip = ROK_vanguard_voice_tt
+		}
+	}
+
+	focus = {	#依人民之诉求
+		id = ROK_as_people_demand
+		icon = GFX_ROK_as_people_demand
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_inside }
+		relative_position_id = ROK_watch_inside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROK_leader_1_prop
+				value = 2
+				tooltip = ROK_leader_1_prop_var_tt
+			}
+			ROK_internal_external_conflict_clamp_aio = yes
+			country_event = {
+				id = ROK_left.55
+				days = 1
+			}
+			custom_effect_tooltip = ROK_as_people_demand_tt
+		}
+	}
+
+	focus = {	#退一步，进两步
+		id = ROK_back_one_step_move_forward
+		icon = GFX_ROK_back_one_step_move_forward
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_inside }
+		relative_position_id = ROK_watch_inside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = ROK_leader_3_prop
+				value = 2
+				tooltip = ROK_leader_3_prop_var_tt
+			}
+			ROK_internal_external_conflict_clamp_aio = yes
+			country_event = {
+				id = ROK_left.56
+				days = 1
+			}
+			custom_effect_tooltip = ROK_back_one_step_move_forward_tt
+		}
+	}
+
+	focus = {	#貌合神离
+		id = ROK_split_from_inside
+		icon = GFX_ROK_split_from_inside
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_vanguard_voice }
+		prerequisite = { focus = ROK_as_people_demand }
+		prerequisite = { focus = ROK_back_one_step_move_forward }
+		relative_position_id = ROK_as_people_demand
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.57
+				days = 1
+			}
+			add_to_variable = {
+				var = ROK_leader_1_prop
+				value = 5
+				tooltip = ROK_leader_1_prop_var_tt
+			}
+			add_to_variable = {
+				var = ROK_leader_2_prop
+				value = 5
+				tooltip = ROK_leader_2_prop_var_tt
+			}
+			add_to_variable = {
+				var = ROK_leader_3_prop
+				value = 5
+				tooltip = ROK_leader_3_prop_var_tt
+			}
+			ROK_internal_external_conflict_clamp_aio = yes
+			custom_effect_tooltip = ROK_split_from_inside_tt
+		}
+	}
+
+	focus = {	#着眼当下
+		id = ROK_watch_nowadays
+		icon = GFX_ROK_watch_nowadays
+		x = 4
+		y = 1
+		cost = 2
+
+		available = {
+			has_completed_focus = ROK_split_from_inside
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_red_flag_arise }
+		relative_position_id = ROK_red_flag_arise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.58
+				days = 1
+			}
+			add_political_power = 25
+			custom_effect_tooltip = ROK_watch_nowadays_tt
+		}
+	}
+
+	focus = {	#清查旧建制派
+		id = ROK_sweep_old_guards
+		icon = GFX_ROK_sweep_old_guards
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_nowadays }
+		relative_position_id = ROK_watch_nowadays
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = authoritarian_nationalism
+				popularity = -0.2
+			}
+			custom_effect_tooltip = ROK_sweep_old_guards_tt
+		}
+	}
+
+	focus = {	#规划农业发展
+		id = ROK_plan_arg_dev
+		icon = GFX_ROK_plan_arg_dev
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_nowadays }
+		relative_position_id = ROK_watch_nowadays
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			360 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_timed_idea = {
+				idea = ROK_new_land_reform
+				days = 180
+			}
+			custom_effect_tooltip = ROK_plan_arg_dev_tt
+		}
+	}
+
+	focus = {	#巩固阵线联盟
+		id = ROK_consolidate_union
+		icon = GFX_ROK_consolidate_union
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_watch_nowadays }
+		relative_position_id = ROK_watch_nowadays
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.1
+			}
+			custom_effect_tooltip = ROK_consolidate_union_tt
+			hidden_effect = {
+				country_event = {
+					id = ROK_left.59
+					days = 7
+				}
+			}
+		}
+	}
+
+	focus = {	#人事皆定
+		id = ROK_all_settle_down
+		icon = GFX_ROK_all_settle_down
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_sweep_old_guards }
+		prerequisite = { focus = ROK_plan_arg_dev }
+		prerequisite = { focus = ROK_consolidate_union }
+		relative_position_id = ROK_plan_arg_dev
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		}
+	}
+
+	focus = {	#向胜利迈去
+		id = ROK_toward_victory
+		icon = GFX_ROK_toward_victory
+		x = 4
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_split_from_inside }
+		prerequisite = { focus = ROK_all_settle_down }
+		relative_position_id = ROK_split_from_inside
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = ROK_left.60
+				days = 1
+			}
+			custom_effect_tooltip = ROK_toward_victory_tt
+			unlock_decision_category_tooltip = ROK_shining_path_of_revolution
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			hidden_effect = {
+				if = {
+					limit = {	#埃米
+						check_variable = { ROK_leader_1_prop > ROK_leader_2_prop }
+						check_variable = { ROK_leader_1_prop > ROK_leader_3_prop }
+					}
+					custom_effect_tooltip = ROK_toward_victory_tt_1
+					clr_country_flag = ROK_focus_2_1
+					set_country_flag = ROK_focus_2_2
+					mark_focus_tree_layout_dirty = yes
+				}
+				else_if = {
+					limit = {	#施塔尔
+						check_variable = { ROK_leader_2_prop > ROK_leader_1_prop }
+						check_variable = { ROK_leader_2_prop > ROK_leader_3_prop }
+					}
+					set_politics = {
+						ruling_party = pioneer_communism
+					}
+					load_focus_tree = generic_focus
+				}
+				else = {	#亨利克
+					set_politics = {
+						ruling_party = worldunion_socialist
+					}
+					load_focus_tree = generic_focus
+				}
+			}
+			clr_country_flag = ROK_internal_external_conflict_on
+		}
+	}
+
+	focus = {	#埃米主席
+		id = ROK_chairman_amy
+		icon = GFX_ROK_chairman_amy
+		x = 5
+		y = 0
+		cost = 1
+
+		allow_branch = {
+			has_country_flag = ROK_focus_2
+			has_country_flag = ROK_focus_2_2
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id =
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_chairman_amy_tt
+		}
+	}
+
+	focus = {	#人民已经发声...
+		id = ROK_people_have_spoken
+		icon = GFX_ROK_people_have_spoken
+		x = -1
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_chairman_amy }
+		relative_position_id = ROK_chairman_amy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.100
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#...为你自己而战
+		id = ROK_fight_for_yourself
+		icon = GFX_ROK_fight_for_yourself
+		x = 1
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_chairman_amy }
+		relative_position_id = ROK_chairman_amy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = {
+				id = ROK_left.101
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#成立委员会
+		id = ROK_form_committee
+		icon = GFX_ROK_form_committee
+		x = 1
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_people_have_spoken }
+		prerequisite = { focus = ROK_fight_for_yourself }
+		relative_position_id = ROK_people_have_spoken
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			unlock_decision_category_tooltip = ROK_social_and_cultural_committee
+			set_country_flag = ROK_social_and_cultural_committee_on
+			set_variable = { ROK_proposal_index = 0 }
+			custom_effect_tooltip = ROK_form_committee_tt
+		}
+	}
+
+	focus = {	#让革命继续向前
+		id = ROK_rev_move_forward
+		icon = GFX_ROK_rev_move_forward
+		x = -2
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_form_committee }
+		relative_position_id = ROK_form_committee
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.102
+				days = 7
+			}
+		}
+	}
+
+	focus = {	#反对派的反对者
+		id = ROK_opposition_opponent
+		icon = GFX_ROK_opposition_opponent
+		x = -1
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_rev_move_forward }
+		relative_position_id = ROK_rev_move_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.05
+			}
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {	#新文化实验场
+		id = ROK_new_cul_exp
+		icon = GFX_ROK_new_cul_exp
+		x = 1
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_rev_move_forward }
+		relative_position_id = ROK_rev_move_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = {
+				var = research_development_mod
+				value = 2
+				tooltip = research_development_mod_tt_up_1
+			}
+		}
+	}
+
+	focus = {	#当笛声从各处响起
+		id = ROK_flute_sounded_from_everywhere
+		icon = GFX_ROK_flute_sounded_from_everywhere
+		x = 1
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_opposition_opponent }
+		prerequisite = { focus = ROK_new_cul_exp }
+		relative_position_id = ROK_opposition_opponent
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_flute_sounded_from_everywhere_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt3_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt1_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 3 }
+			set_variable = { ROK_faction_alt_4_var = 1 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 17 }
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#解散阵线
+		id = ROK_dismantle_front
+		icon = GFX_ROK_dismantle_front
+		x = 2
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_17_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_form_committee }
+		relative_position_id = ROK_form_committee
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.103
+				days = 7
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {	#惩前毖后，治病救人
+		id = ROK_cure_people
+		icon = GFX_ROK_cure_people
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_17_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_dismantle_front }
+		relative_position_id = ROK_dismantle_front
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			if = {
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+			}
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {	#和谐的政党关系
+		id = ROK_harmony_parties
+		icon = GFX_ROK_harmony_parties
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_17_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_cure_people }
+		relative_position_id = ROK_cure_people
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_democrat
+				popularity = 0.05
+			}
+			custom_effect_tooltip = ROK_harmony_parties_tt
+		}
+	}
+
+	focus = {	#时代，前进
+		id = ROK_time_move_forward
+		icon = GFX_ROK_time_move_forward
+		x = 2
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_17_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_flute_sounded_from_everywhere }
+		prerequisite = { focus = ROK_harmony_parties }
+		relative_position_id = ROK_flute_sounded_from_everywhere
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_time_move_forward_tt
+		}
+	}
+
+	focus = {	#艺术与社会主义
+		id = ROK_art_and_socialism
+		icon = GFX_ROK_art_and_socialism
+		x = -18
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_time_move_forward }
+		relative_position_id = ROK_time_move_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.104
+				days = 7
+			}
+			custom_effect_tooltip = ROK_art_and_socialism_tt
+		}
+	}
+
+	focus = {	#一场灵魂的革命
+		id = ROK_soul_revolution
+		icon = GFX_ROK_soul_revolution
+		x = -5
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_art_and_socialism }
+		relative_position_id = ROK_art_and_socialism
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_soul_revolution_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt3_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 1 }
+			set_variable = { ROK_faction_alt_4_var = 3 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 18 }
+
+			custom_effect_tooltip = ROK_soul_revolution_tt
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#摧毁旧时代
+		id = ROK_end_old_era
+		icon = GFX_ROK_end_old_era
+		x = 0
+		y = 1
+		cost = 4.4
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_18_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_soul_revolution }
+		relative_position_id = ROK_soul_revolution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.105
+				days = 7
+			}
+			custom_effect_tooltip = ROK_end_old_era_tt
+		}
+	}
+
+	focus = {	#现代之革命
+		id = ROK_modern_revolution
+		icon = GFX_ROK_modern_revolution
+		x = -3
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_end_old_era }
+		relative_position_id = ROK_end_old_era
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = FP_joining_the_poitics
+			custom_effect_tooltip = ROK_modern_revolution_tt
+		}
+	}
+
+	focus = {	#未来之完满
+		id = ROK_complete_perfection
+		icon = GFX_ROK_complete_perfection
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_end_old_era }
+		relative_position_id = ROK_end_old_era
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.106
+				days = 7
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 2
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			custom_effect_tooltip = ROK_complete_perfection_tt
+		}
+	}
+
+	focus = {	#人类之奇迹
+		id = ROK_wonder_of_human
+		icon = GFX_ROK_wonder_of_human
+		x = 3
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_end_old_era }
+		relative_position_id = ROK_end_old_era
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = research_development_mod
+				value = 4
+				tooltip = research_development_mod_tt_up_2
+			}
+			add_ideas = ROK_wonder_creator
+			custom_effect_tooltip = ROK_wonder_of_human_tt
+		}
+	}
+
+	focus = {	#未来的炼金术士
+		id = ROK_future_alchemist
+		icon = GFX_ROK_future_alchemist
+		x = 3
+		y = 1
+		cost = 4.4
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_modern_revolution }
+		prerequisite = { focus = ROK_complete_perfection }
+		prerequisite = { focus = ROK_wonder_of_human }
+		relative_position_id = ROK_modern_revolution
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			add_research_slot = 1
+
+			custom_effect_tooltip = ROK_future_alchemist_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt3_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 2 }
+			set_variable = { ROK_faction_alt_4_var = 3 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 19 }
+
+			custom_effect_tooltip = ROK_future_alchemist_tt
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#从身体的革命者...
+		id = ROK_rev_from_bodies
+		icon = GFX_ROK_rev_from_bodies
+		x = 5
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_art_and_socialism }
+		relative_position_id = ROK_art_and_socialism
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_rev_from_bodies_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt3_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 2 }
+			set_variable = { ROK_faction_alt_4_var = 3 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 20 }
+
+			custom_effect_tooltip = ROK_rev_from_bodies_tt
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#...到思想的革命者
+		id = ROK_to_mind_revs
+		icon = GFX_ROK_to_mind_revs
+		x = 0
+		y = 1
+		cost = 4.4
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				has_country_flag = ROK_proposal_20_passed
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_rev_from_bodies }
+		relative_position_id = ROK_rev_from_bodies
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.107
+				days = 7
+			}
+			custom_effect_tooltip = ROK_to_mind_revs_tt
+		}
+	}
+
+	focus = {	#无产者，为了你！
+		id = ROK_for_you_proletarians
+		icon = GFX_ROK_for_you_proletarians
+		x = -3
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_to_mind_revs }
+		relative_position_id = ROK_to_mind_revs
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 4
+				tooltip = living_standard_development_mod_tt_up_2
+			}
+			custom_effect_tooltip = ROK_for_you_proletarians_tt
+		}
+	}
+
+	focus = {	#接纳先锋艺术
+		id = ROK_accept_pioneer_art
+		icon = GFX_ROK_accept_pioneer_art
+		x = 0
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_to_mind_revs }
+		relative_position_id = ROK_to_mind_revs
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.108
+				days = 7
+			}
+			custom_effect_tooltip = ROK_accept_pioneer_art_tt
+		}
+	}
+
+	focus = {	#已无善恶
+		id = ROK_no_more_good_or_bad
+		icon = GFX_ROK_no_more_good_or_bad
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_to_mind_revs }
+		relative_position_id = ROK_to_mind_revs
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = ROK_our_morality
+				days = 90
+			}
+			custom_effect_tooltip = ROK_no_more_good_or_bad_tt
+		}
+	}
+
+	focus = {	#社会主义新公民
+		id = ROK_soc_new_citizen
+		icon = GFX_ROK_soc_new_citizen
+		x = 3
+		y = 1
+		cost = 4.4
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_for_you_proletarians }
+		prerequisite = { focus = ROK_accept_pioneer_art }
+		prerequisite = { focus = ROK_no_more_good_or_bad }
+		relative_position_id = ROK_for_you_proletarians
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_soc_new_citizen_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt3_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 1 }
+			set_variable = { ROK_faction_alt_4_var = 3 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 21 }
+
+			custom_effect_tooltip = ROK_soc_new_citizen_tt
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#艺术之神的黎明
+		id = ROK_dawn_of_art_god
+		icon = GFX_ROK_dawn_of_art_god
+		x = 5
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_country_flag = ROK_proposal_19_passed
+					has_country_flag = ROK_proposal_21_passed
+				}
+				hidden_trigger = { is_ai = yes }
+			}
+		}
+
+		prerequisite = { focus = ROK_future_alchemist }
+		prerequisite = { focus = ROK_soc_new_citizen }
+		relative_position_id = ROK_future_alchemist
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = ROK_dawn_of_art_god_tt
+		}
+	}
+
+	focus = {	#诗歌中的建筑
+		id = ROK_building_in_poet
+		icon = GFX_ROK_building_in_poet
+		x = -2
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_dawn_of_art_god }
+		relative_position_id = ROK_dawn_of_art_god
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			343 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			custom_effect_tooltip = ROK_building_in_poet_tt
+		}
+	}
+
+	focus = {	#以立体攻入未来
+		id = ROK_dimensional_attack_future
+		icon = GFX_ROK_dimensional_attack_future
+		x = 0
+		y = 2
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_building_in_poet }
+		relative_position_id = ROK_building_in_poet
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROK_dimensional_attack_future
+				bonus = 0.5 
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				name = ROK_dimensional_attack_future
+				bonus = 0.5 
+				uses = 2
+				category = electronics
+			}
+			custom_effect_tooltip = ROK_dimensional_attack_future_tt
+		}
+	}
+
+	focus = {	#世界在此处构成
+		id = ROK_this_is_where_world_built
+		icon = GFX_ROK_this_is_where_world_built
+		x = 2
+		y = 1
+		cost = 3
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_dawn_of_art_god }
+		relative_position_id = ROK_dawn_of_art_god
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			375 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+			360 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			custom_effect_tooltip = ROK_this_is_where_world_built_tt
+		}
+	}
+
+	focus = {	#构成，至上！
+		id = ROK_composition_supreme
+		icon = GFX_ROK_composition_supreme
+		x = 0
+		y = 2
+		cost = 2
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_this_is_where_world_built }
+		relative_position_id = ROK_this_is_where_world_built
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = ROK_left.109
+				days = 7
+			}
+			custom_effect_tooltip = ROK_composition_supreme_tt
+		}
+	}
+
+	focus = {	#向着未来的乌托邦
+		id = ROK_towards_future_utopia
+		icon = GFX_ROK_towards_future_utopia
+		x = 2
+		y = 3
+		cost = 4.4
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = ROK_committe_on_flag
+				has_country_flag = ROK_committe_off_flag
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		prerequisite = { focus = ROK_dimensional_attack_future }
+		prerequisite = { focus = ROK_composition_supreme }
+		relative_position_id = ROK_dimensional_attack_future
+		#mutually_exclusive = { focus = }
+
+		select_effect = { set_country_flag = ROK_committe_prepare_on }
+		cancel_effect = { clr_country_flag = ROK_committe_prepare_on }
+
+		completion_reward = {
+			custom_effect_tooltip = ROK_towards_future_utopia_law_tt
+			custom_effect_tooltip = ROK_proposal_header_tt
+			custom_effect_tooltip = ROK_proposal_body_sec1_alt1_tt
+			custom_effect_tooltip = ROK_proposal_body_sec2_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec3_alt2_tt
+			custom_effect_tooltip = ROK_proposal_body_sec4_alt3_tt
+
+			set_variable = { ROK_faction_alt_1_var = 1 }
+			set_variable = { ROK_faction_alt_2_var = 2 }
+			set_variable = { ROK_faction_alt_3_var = 2 }
+			set_variable = { ROK_faction_alt_4_var = 3 }
+
+			custom_effect_tooltip = ROK_if_proposal_pass_tt
+			effect_tooltip = {
+				custom_effect_tooltip = unlock_new_focus_tt
+			}
+
+			activate_mission = ROK_proposal_is_being_voted_on
+			set_country_flag = ROK_committe_on_flag
+			set_variable = { ROK_proposal_index = 22 }
+
+			country_event = {
+				id = ROK_left.110
+				days = 7
+			}
+			custom_effect_tooltip = ROK_towards_future_utopia_tt
+			clr_country_flag = ROK_committe_prepare_on
+		}
+	}
+
+	focus = {	#无产阶级经济
+		id = ROK_proletarian_economy
+		icon = GFX_Generic_State_Socialism
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_time_move_forward }
+		relative_position_id = ROK_time_move_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#激进的再分配
+		id = ROK_radical_redistribution
+		icon = GFX_Generic_Militant_Socialism
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_proletarian_economy }
+		relative_position_id = ROK_proletarian_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩大生产总局
+		id = ROK_expand_prod_bureau
+		icon = GFX_focus_SWE_socialist_reforms
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_proletarian_economy }
+		relative_position_id = ROK_proletarian_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#全面更新工业
+		id = ROK_full_update_industries
+		icon = GFX_focus_generic_communist_industry
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_proletarian_economy }
+		relative_position_id = ROK_proletarian_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#取缔旧协会
+		id = ROK_eliminate_old_associations
+		icon = GFX_focus_SOV_the_last_purge
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_radical_redistribution }
+		prerequisite = { focus = ROK_expand_prod_bureau }
+		prerequisite = { focus = ROK_full_update_industries }
+		relative_position_id = ROK_radical_redistribution
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#社会主义教育
+		id = ROK_socialist_education
+		icon = GFX_focus_NOR_moscows_education_centers
+		x = -3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_eliminate_old_associations }
+		relative_position_id = ROK_eliminate_old_associations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#以工人教育为先
+		id = ROK_worker_edu_first
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_socialist_education }
+		relative_position_id = ROK_socialist_education
+		mutually_exclusive = { focus = ROK_sci_edu_first }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#工人夜校
+		id = ROK_worker_night_school
+		icon = GFX_focus_AUS_womens_education_initiative
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_worker_edu_first }
+		relative_position_id = ROK_worker_edu_first
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#以科研教育为先
+		id = ROK_sci_edu_first
+		icon = GFX_goal_Focus_Examine_Foreign_Science
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_socialist_education }
+		relative_position_id = ROK_socialist_education
+		mutually_exclusive = { focus = ROK_worker_edu_first }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#加拨科研经费
+		id = ROK_more_sci_fund
+		icon = GFX_focus_CHL_silverworking
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_sci_edu_first }
+		relative_position_id = ROK_sci_edu_first
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#我们，还有下一代
+		id = ROK_we_get_next_gen
+		icon = GFX_focus_generic_workers
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_worker_night_school focus = ROK_more_sci_fund }
+		relative_position_id = ROK_worker_night_school
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#改造工商业
+		id = ROK_reform_industry_commerce
+		icon = GFX_Generic_Communist_Propaganda02
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_eliminate_old_associations }
+		relative_position_id = ROK_eliminate_old_associations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#予以教化
+		id = ROK_to_educate
+		icon = GFX_Generic_Socialist_Propaganda
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_reform_industry_commerce }
+		relative_position_id = ROK_reform_industry_commerce
+		mutually_exclusive = { focus = ROK_please_comrade_pistol_speak }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#自愿改造
+		id = ROK_willing_reform
+		icon = GFX_Generic_War_Propaganda03
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_to_educate }
+		relative_position_id = ROK_to_educate
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#请手枪同志发言
+		id = ROK_please_comrade_pistol_speak
+		icon = GFX_Focus_Communist_Spy02
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_reform_industry_commerce }
+		relative_position_id = ROK_reform_industry_commerce
+		mutually_exclusive = { focus = ROK_to_educate }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#强制推行
+		id = ROK_forced_enactment
+		icon = GFX_Generic_Arrests
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_please_comrade_pistol_speak }
+		relative_position_id = ROK_please_comrade_pistol_speak
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#夙愿已成
+		id = ROK_wish_come_true
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_willing_reform focus = ROK_forced_enactment }
+		relative_position_id = ROK_willing_reform
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#阶段性胜利
+		id = ROK_staged_victory
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_we_get_next_gen }
+		prerequisite = { focus = ROK_wish_come_true }
+		relative_position_id = ROK_we_get_next_gen
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#高质量农业机械化
+		id = ROK_agricultural_mechanization
+		icon = GFX_focus_generic_farmland
+		x = -3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_staged_victory }
+		relative_position_id = ROK_staged_victory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#增加农业补贴
+		id = ROK_more_arg_fund
+		icon = GFX_Generic_Farming
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_agricultural_mechanization }
+		relative_position_id = ROK_agricultural_mechanization
+		mutually_exclusive = { focus = ROK_control_arg_prod }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#农业一把抓
+		id = ROK_control_arg_prod
+		icon = GFX_goal_improvised_farming_machinery
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_agricultural_mechanization }
+		relative_position_id = ROK_agricultural_mechanization
+		mutually_exclusive = { focus = ROK_more_arg_fund }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#饥饿已成历史
+		id = ROK_hunger_only_history
+		icon = GFX_focus_HUN_goulash_communism
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_more_arg_fund focus = ROK_control_arg_prod }
+		relative_position_id = ROK_more_arg_fund
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#土地之馈赠
+		id = ROK_gift_of_land
+		icon = GFX_CLD_progress_the_plains
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_staged_victory }
+		relative_position_id = ROK_staged_victory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新工业体系
+		id = ROK_new_ind_system
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_staged_victory }
+		relative_position_id = ROK_staged_victory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#索尔里克的经验指明方向
+		id = ROK_exp_points_direction
+		icon = GFX_focus_generic_industrialists
+		x = -2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_new_ind_system }
+		relative_position_id = ROK_new_ind_system
+		mutually_exclusive = { focus = ROK_one_move_us_ahead }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#马尔多斯让我们前进
+		id = ROK_one_move_us_ahead
+		icon = GFX_focus_generic_modernize_industry
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_new_ind_system }
+		relative_position_id = ROK_new_ind_system
+		mutually_exclusive = { focus = ROK_exp_points_direction }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#自成一系
+		id = ROK_independent_system
+		icon = GFX_Generic_Industry02
+		x = 2
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_exp_points_direction focus = ROK_one_move_us_ahead }
+		relative_position_id = ROK_exp_points_direction
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#经济奇迹
+		id = ROK_economic_miracle
+		icon = GFX_Generic_Industrialization
+		x = 0
+		y = 3
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_hunger_only_history }
+		prerequisite = { focus = ROK_gift_of_land }
+		prerequisite = { focus = ROK_independent_system }
+		relative_position_id = ROK_gift_of_land
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#革命新制度
+		id = ROK_rev_new_system
+		icon = GFX_ROK_rev_new_system
+		x = 18
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_time_move_forward }
+		relative_position_id = ROK_time_move_forward
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#设立基层代表
+		id = ROK_set_local_representatives
+		icon = GFX_ROK_set_local_representatives
+		x = -5
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_rev_new_system }
+		relative_position_id = ROK_rev_new_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#支持自治组织
+		id = ROK_support_autonomous_organizations
+		icon = GFX_ROK_support_autonomous_organizations
+		x = -3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_set_local_representatives }
+		relative_position_id = ROK_set_local_representatives
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#一切权力归人民！
+		id = ROK_all_rights_to_people
+		icon = GFX_ROK_all_rights_to_people
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_support_autonomous_organizations }
+		relative_position_id = ROK_support_autonomous_organizations
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#我们的无产阶级民主
+		id = ROK_our_proletarian_dem
+		icon = GFX_ROK_our_proletarian_dem
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_set_local_representatives }
+		relative_position_id = ROK_set_local_representatives
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#成立政治青年团
+		id = ROK_form_pol_teens
+		icon = GFX_ROK_form_pol_teens
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_set_local_representatives }
+		relative_position_id = ROK_set_local_representatives
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#放开统共党标准
+		id = ROK_relax_commi_party_standard
+		icon = GFX_ROK_relax_commi_party_standard
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_form_pol_teens }
+		relative_position_id = ROK_form_pol_teens
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#推行直接民主制
+		id = ROK_promote_direct_democracy
+		icon = GFX_ROK_promote_direct_democracy
+		x = 0
+		y = 2
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_all_rights_to_people }
+		prerequisite = { focus = ROK_our_proletarian_dem }
+		prerequisite = { focus = ROK_relax_commi_party_standard }
+		relative_position_id = ROK_our_proletarian_dem
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#解放为了谁？
+		id = ROK_for_whom_liberate
+		icon = GFX_ROK_for_whom_liberate
+		x = 5
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_rev_new_system }
+		relative_position_id = ROK_rev_new_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#按住官僚主义毒蛇...
+		id = ROK_end_bureaucratic_snake
+		icon = GFX_ROK_end_bureaucratic_snake
+		x = -3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_for_whom_liberate }
+		relative_position_id = ROK_for_whom_liberate
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#...直到工人权利落实
+		id = ROK_until_worker_rights_ensured
+		icon = GFX_ROK_until_worker_rights_ensured
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_end_bureaucratic_snake }
+		relative_position_id = ROK_end_bureaucratic_snake
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#自由的生产者们
+		id = ROK_free_producers
+		icon = GFX_ROK_free_producers
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_for_whom_liberate }
+		relative_position_id = ROK_for_whom_liberate
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#农村公社计划
+		id = ROK_rural_commune_program
+		icon = GFX_ROK_rural_commune_program
+		x = 3
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_for_whom_liberate }
+		relative_position_id = ROK_for_whom_liberate
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#因地制宜
+		id = ROK_adapting_to_local_conditions
+		icon = GFX_ROK_adapting_to_local_conditions
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_rural_commune_program }
+		relative_position_id = ROK_rural_commune_program
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#为了工农！
+		id = ROK_for_workers_and_peasants
+		icon = GFX_ROK_for_workers_and_peasants
+		x = 0
+		y = 2
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_until_worker_rights_ensured }
+		prerequisite = { focus = ROK_free_producers }
+		prerequisite = { focus = ROK_adapting_to_local_conditions }
+		relative_position_id = ROK_free_producers
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#要那红旗高高飘
+		id = ROK_let_red_flag_arise
+		icon = GFX_ROK_let_red_flag_arise
+		x = 5
+		y = 2
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_promote_direct_democracy }
+		prerequisite = { focus = ROK_for_workers_and_peasants }
+		relative_position_id = ROK_promote_direct_democracy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#昔日已去
+		id = ROK_old_days_gone
+		icon = GFX_ROK_old_days_gone
+		x = -2
+		y = 2
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_let_red_flag_arise }
+		relative_position_id = ROK_let_red_flag_arise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#让人民解放自己
+		id = ROK_let_people_liberate_themselves
+		icon = GFX_ROK_let_people_liberate_themselves
+		x = 2
+		y = 2
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_let_red_flag_arise }
+		relative_position_id = ROK_let_red_flag_arise
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#向着自由王国前进
+		id = ROK_march_for_free_kingdom
+		icon = GFX_ROK_march_for_free_kingdom
+		x = 2
+		y = 3
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_old_days_gone }
+		prerequisite = { focus = ROK_let_people_liberate_themselves }
+		relative_position_id = ROK_old_days_gone
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#在暴风雨中所闪耀
+		id = ROK_shining_in_storm
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 0
+		y = 1
+		cost = 1
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROK_towards_future_utopia }
+		prerequisite = { focus = ROK_economic_miracle }
+		prerequisite = { focus = ROK_march_for_free_kingdom }
+		relative_position_id = ROK_economic_miracle
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			
+		}
+	}
+
+}

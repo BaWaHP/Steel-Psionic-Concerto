@@ -1,0 +1,76 @@
+ideas = {
+	country = {
+
+		GLV_servant_of_wom = {		#沃姆的仆从
+			picture = GLV_servant_of_wom
+			allowed = {  original_tag = GLV }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = WOM
+				extra_trade_to_target_factor = 0.5
+				cic_to_target_factor = 0.4
+				mic_to_target_factor = 0.4
+			}
+		}
+
+		GLV_broken_united_dream = {		#大戈尔维亚之梦破碎
+			picture = GLV_broken_united_dream
+			allowed = {  original_tag = GLV }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				mobilization_speed = -0.5
+				army_org_factor = -0.2
+			}
+		}
+
+		GLV_less_trusted_ruling_party = {		#失去威信的执政党
+			picture = GLV_less_trusted_ruling_party
+			allowed = {  original_tag = GLV }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				disabled_ideas = 1
+				rulling_ideology_drift = -0.02
+				drift_defence_factor = -0.2
+			}
+		}
+
+		GLV_legacy_of_1997 = {		#1997大旱的余波
+			picture = GLV_legacy_of_1997
+			allowed = {  original_tag = GLV }
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.2
+				consumer_goods_factor = 0.1
+				research_speed_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		GLV_wom_army_representative = {		#沃姆国防军代表团
+			picture = GLV_wom_army_representative
+			allowed = {  original_tag = GLV }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = 0.1
+				command_power_gain_mult = -0.5
+				industrial_capacity_factory = -0.3
+				training_time_army_factor = 1
+				conscription_factor = -0.3
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+	}
+}

@@ -1,0 +1,24 @@
+on_actions = {
+
+    on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				set_variable = { industrial_development_process = 4 }
+				set_variable = { agricultural_development_process = 4 }
+				set_variable = { military_development_process = 4 }
+				set_variable = { living_standard_development_process = 4 }
+				set_variable = { environment_development_process = 4 }
+				set_variable = { research_development_process = 4 }
+				#set_variable = { race_mixing_status_process = 4 }
+			}
+			else = {
+				SPC_development_update_effect = yes
+			}
+			SPC_country_development_upgrade = yes
+		}
+	}
+
+}

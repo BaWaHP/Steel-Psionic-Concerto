@@ -1,0 +1,2537 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+####发展度####
+#工业#
+#SPC_country_development_ideas_change_industry_up
+#SPC_country_development_ideas_change_industry_down
+#农业#
+#SPC_country_development_ideas_change_agriculture_up
+#SPC_country_development_ideas_change_agriculture_down
+#军事#
+#SPC_country_development_ideas_change_military_up
+#SPC_country_development_ideas_change_military_down
+#生活#
+#SPC_country_development_ideas_change_living_up
+#SPC_country_development_ideas_change_living_down
+#环境#
+#SPC_country_development_ideas_change_environment_up
+#SPC_country_development_ideas_change_environment_down
+#学术#
+#SPC_country_development_ideas_change_research_up
+#SPC_country_development_ideas_change_research_down
+
+####其它政策####
+#征兵#
+#SPC_mobilization_laws_up
+#SPC_mobilization_laws_down
+#训练#
+#SPC_training_laws_up
+#SPC_training_laws_down
+#贸易#
+#SPC_trade_laws_up
+#SPC_trade_laws_down
+#经济#
+#SPC_economy_up
+#SPC_economy_down
+#税收#
+#SPC_taxes_laws_up
+#SPC_taxes_laws_down
+#国有化#
+#SPC_nationalization_policy_up
+#SPC_nationalization_policy_down
+
+####产业政策####
+#环境#
+#SPC_environment_policy_up
+#SPC_environment_policy_down
+#资源#
+#SPC_resource_policy_up
+#SPC_resource_policy_down
+#企业#
+#SPC_industry_policy_up
+#SPC_industry_policy_down
+#劳工#
+#SPC_working_policy_up
+#SPC_working_policy_down
+#农业#
+#SPC_agricultural_policy_up
+#SPC_agricultural_policy_down
+#科研#
+#SPC_research_policy_up
+#SPC_research_policy_down
+
+####政府政策####
+#媒体#
+#SPC_media_policy_up
+#SPC_media_policy_down
+#福利#
+#SPC_subsidies_policy_up
+#SPC_subsidies_policy_down
+#魔法#
+#SPC_magician_policy_up
+#SPC_magician_policy_down
+#情报#
+#SPC_secret_police_policy_up
+#SPC_secret_police_policy_down
+#女权#
+#SPC_female_policy_up
+#SPC_female_policy_down
+#教育#
+#SPC_education_policy_up
+#SPC_education_policy_down
+
+####种族文化####
+#种族#
+#SPC_race_policy_up
+#SPC_race_policy_down
+#性少数#
+#SPC_sex_policy_up
+#SPC_sex_policy_down
+
+####发展度增长####
+#工业#
+#SPC_industrial_development_amount_up_1
+#SPC_industrial_development_amount_up_2
+#SPC_industrial_development_amount_up_3
+#SPC_industrial_development_amount_up_4
+#SPC_industrial_development_amount_down_1
+#SPC_industrial_development_amount_down_2
+#SPC_industrial_development_amount_down_3
+#SPC_industrial_development_amount_down_4
+#农业#
+#SPC_agricultural_development_amount_up_1
+#SPC_agricultural_development_amount_up_2
+#SPC_agricultural_development_amount_up_3
+#SPC_agricultural_development_amount_up_4
+#SPC_agricultural_development_amount_down_1
+#SPC_agricultural_development_amount_down_2
+#SPC_agricultural_development_amount_down_3
+#SPC_agricultural_development_amount_down_4
+#军事#
+#SPC_military_development_amount_up_1
+#SPC_military_development_amount_up_2
+#SPC_military_development_amount_up_3
+#SPC_military_development_amount_up_4
+#SPC_military_development_amount_down_1
+#SPC_military_development_amount_down_2
+#SPC_military_development_amount_down_3
+#SPC_military_development_amount_down_4
+#生活水平#
+#SPC_living_standard_development_amount_up_1
+#SPC_living_standard_development_amount_up_2
+#SPC_living_standard_development_amount_up_3
+#SPC_living_standard_development_amount_up_4
+#SPC_living_standard_development_amount_down_1
+#SPC_living_standard_development_amount_down_2
+#SPC_living_standard_development_amount_down_3
+#SPC_living_standard_development_amount_down_4
+#自然环境#
+#SPC_environment_development_amount_up_1
+#SPC_environment_development_amount_up_2
+#SPC_environment_development_amount_up_3
+#SPC_environment_development_amount_up_4
+#SPC_environment_development_amount_down_1
+#SPC_environment_development_amount_down_2
+#SPC_environment_development_amount_down_3
+#SPC_environment_development_amount_down_4
+#学术氛围#
+#SPC_research_development_amount_up_1
+#SPC_research_development_amount_up_2
+#SPC_research_development_amount_up_3
+#SPC_research_development_amount_up_4
+#SPC_research_development_amount_down_1
+#SPC_research_development_amount_down_2
+#SPC_research_development_amount_down_3
+#SPC_research_development_amount_down_4
+
+#industrial_development_mod_tt_up_1
+#industrial_development_mod_tt_up_2
+#industrial_development_mod_tt_up_3
+#industrial_development_mod_tt_down_1
+#industrial_development_mod_tt_down_2
+#industrial_development_mod_tt_down_3
+
+#agricultural_development_mod_tt_up_1
+#agricultural_development_mod_tt_up_2
+#agricultural_development_mod_tt_up_3
+#agricultural_development_mod_tt_down_1
+#agricultural_development_mod_tt_down_2
+#agricultural_development_mod_tt_down_3
+
+#military_development_mod_tt_up_1
+#military_development_mod_tt_up_2
+#military_development_mod_tt_up_3
+#military_development_mod_tt_down_1
+#military_development_mod_tt_down_2
+#military_development_mod_tt_down_3
+
+#living_standard_development_mod_tt_up_1
+#living_standard_development_mod_tt_up_2
+#living_standard_development_mod_tt_up_3
+#living_standard_development_mod_tt_down_1
+#living_standard_development_mod_tt_down_2
+#living_standard_development_mod_tt_down_3
+
+#environment_development_mod_tt_up_1
+#environment_development_mod_tt_up_2
+#environment_development_mod_tt_up_3
+#environment_development_mod_tt_down_1
+#environment_development_mod_tt_down_2
+#environment_development_mod_tt_down_3
+
+#research_development_mod_tt_up_1
+#research_development_mod_tt_up_2
+#research_development_mod_tt_up_3
+#research_development_mod_tt_down_1
+#research_development_mod_tt_down_2
+#research_development_mod_tt_down_3
+
+SPC_industrial_development_amount_up_1 = {
+	add_to_variable = {
+		industrial_development_amount = 5
+	}
+	custom_effect_tooltip = industrial_development_amount_up_1
+}
+
+SPC_industrial_development_amount_up_2 = {
+	add_to_variable = {
+		industrial_development_amount = 10
+	}
+	custom_effect_tooltip = industrial_development_amount_up_2
+}
+
+SPC_industrial_development_amount_up_3 = {
+	add_to_variable = {
+		industrial_development_amount = 20
+	}
+	custom_effect_tooltip = industrial_development_amount_up_3
+}
+
+SPC_industrial_development_amount_up_4 = {
+	add_to_variable = {
+		industrial_development_amount = 30
+	}
+	custom_effect_tooltip = industrial_development_amount_up_4
+}
+
+SPC_industrial_development_amount_down_1 = {
+	add_to_variable = {
+		industrial_development_amount = -5
+	}
+	custom_effect_tooltip = industrial_development_amount_down_1
+}
+
+SPC_industrial_development_amount_down_2 = {
+	add_to_variable = {
+		industrial_development_amount = -10
+	}
+	custom_effect_tooltip = industrial_development_amount_down_2
+}
+
+SPC_industrial_development_amount_down_3 = {
+	add_to_variable = {
+		industrial_development_amount = -20
+	}
+	custom_effect_tooltip = industrial_development_amount_down_3
+}
+
+SPC_industrial_development_amount_down_4 = {
+	add_to_variable = {
+		industrial_development_amount = -30
+	}
+	custom_effect_tooltip = industrial_development_amount_down_4
+}
+
+#农业
+SPC_agricultural_development_amount_up_1 = {
+	add_to_variable = {
+		agricultural_development_amount = 5
+	}
+	custom_effect_tooltip = agricultural_development_amount_up_1
+}
+
+SPC_agricultural_development_amount_up_2 = {
+	add_to_variable = {
+		agricultural_development_amount = 10
+	}
+	custom_effect_tooltip = agricultural_development_amount_up_2
+}
+
+SPC_agricultural_development_amount_up_3 = {
+	add_to_variable = {
+		agricultural_development_amount = 20
+	}
+	custom_effect_tooltip = agricultural_development_amount_up_3
+}
+
+SPC_agricultural_development_amount_up_4 = {
+	add_to_variable = {
+		agricultural_development_amount = 30
+	}
+	custom_effect_tooltip = agricultural_development_amount_up_4
+}
+
+SPC_agricultural_development_amount_down_1 = {
+	add_to_variable = {
+		agricultural_development_amount = -5
+	}
+	custom_effect_tooltip = agricultural_development_amount_down_1
+}
+
+SPC_agricultural_development_amount_down_2 = {
+	add_to_variable = {
+		agricultural_development_amount = -10
+	}
+	custom_effect_tooltip = agricultural_development_amount_down_2
+}
+
+SPC_agricultural_development_amount_down_3 = {
+	add_to_variable = {
+		agricultural_development_amount = -20
+	}
+	custom_effect_tooltip = agricultural_development_amount_down_3
+}
+
+SPC_agricultural_development_amount_down_4 = {
+	add_to_variable = {
+		agricultural_development_amount = -30
+	}
+	custom_effect_tooltip = agricultural_development_amount_down_4
+}
+
+#军事
+SPC_military_development_amount_up_1 = {
+	add_to_variable = {
+		military_development_amount = 5
+	}
+	custom_effect_tooltip = military_development_amount_up_1
+}
+
+SPC_military_development_amount_up_2 = {
+	add_to_variable = {
+		military_development_amount = 10
+	}
+	custom_effect_tooltip = military_development_amount_up_2
+}
+
+SPC_military_development_amount_up_3 = {
+	add_to_variable = {
+		military_development_amount = 20
+	}
+	custom_effect_tooltip = military_development_amount_up_3
+}
+
+SPC_military_development_amount_up_4 = {
+	add_to_variable = {
+		military_development_amount = 30
+	}
+	custom_effect_tooltip = military_development_amount_up_4
+}
+
+SPC_military_development_amount_down_1 = {
+	add_to_variable = {
+		military_development_amount = -5
+	}
+	custom_effect_tooltip = military_development_amount_down_1
+}
+
+SPC_military_development_amount_down_2 = {
+	add_to_variable = {
+		military_development_amount = -10
+	}
+	custom_effect_tooltip = military_development_amount_down_2
+}
+
+SPC_military_development_amount_down_3 = {
+	add_to_variable = {
+		military_development_amount = -20
+	}
+	custom_effect_tooltip = military_development_amount_down_3
+}
+
+SPC_military_development_amount_down_4 = {
+	add_to_variable = {
+		military_development_amount = -30
+	}
+	custom_effect_tooltip = military_development_amount_down_4
+}
+
+#生活水平
+SPC_living_standard_development_amount_up_1 = {
+	add_to_variable = {
+		living_standard_development_amount = 5
+	}
+	custom_effect_tooltip = living_standard_development_amount_up_1
+}
+
+SPC_living_standard_development_amount_up_2 = {
+	add_to_variable = {
+		living_standard_development_amount = 10
+	}
+	custom_effect_tooltip = living_standard_development_amount_up_2
+}
+
+SPC_living_standard_development_amount_up_3 = {
+	add_to_variable = {
+		living_standard_development_amount = 20
+	}
+	custom_effect_tooltip = living_standard_development_amount_up_3
+}
+
+SPC_living_standard_development_amount_up_4 = {
+	add_to_variable = {
+		living_standard_development_amount = 30
+	}
+	custom_effect_tooltip = living_standard_development_amount_up_4
+}
+
+SPC_living_standard_development_amount_down_1 = {
+	add_to_variable = {
+		living_standard_development_amount = -5
+	}
+	custom_effect_tooltip = living_standard_development_amount_down_1
+}
+
+SPC_living_standard_development_amount_down_2 = {
+	add_to_variable = {
+		living_standard_development_amount = -10
+	}
+	custom_effect_tooltip = living_standard_development_amount_down_2
+}
+
+SPC_living_standard_development_amount_down_3 = {
+	add_to_variable = {
+		living_standard_development_amount = -20
+	}
+	custom_effect_tooltip = living_standard_development_amount_down_3
+}
+
+SPC_living_standard_development_amount_down_4 = {
+	add_to_variable = {
+		living_standard_development_amount = -30
+	}
+	custom_effect_tooltip = living_standard_development_amount_down_4
+}
+
+#自然环境
+SPC_environment_development_amount_up_1 = {
+	add_to_variable = {
+		environment_development_amount = 5
+	}
+	custom_effect_tooltip = environment_development_amount_up_1
+}
+
+SPC_environment_development_amount_up_2 = {
+	add_to_variable = {
+		environment_development_amount = 10
+	}
+	custom_effect_tooltip = environment_development_amount_up_2
+}
+
+SPC_environment_development_amount_up_3 = {
+	add_to_variable = {
+		environment_development_amount = 20
+	}
+	custom_effect_tooltip = environment_development_amount_up_3
+}
+
+SPC_environment_development_amount_up_4 = {
+	add_to_variable = {
+		environment_development_amount = 30
+	}
+	custom_effect_tooltip = environment_development_amount_up_4
+}
+
+SPC_environment_development_amount_down_1 = {
+	add_to_variable = {
+		environment_development_amount = -5
+	}
+	custom_effect_tooltip = environment_development_amount_down_1
+}
+
+SPC_environment_development_amount_down_2 = {
+	add_to_variable = {
+		environment_development_amount = -10
+	}
+	custom_effect_tooltip = environment_development_amount_down_2
+}
+
+SPC_environment_development_amount_down_3 = {
+	add_to_variable = {
+		environment_development_amount = -20
+	}
+	custom_effect_tooltip = environment_development_amount_down_3
+}
+
+SPC_environment_development_amount_down_4 = {
+	add_to_variable = {
+		environment_development_amount = -30
+	}
+	custom_effect_tooltip = environment_development_amount_down_4
+}
+
+#学术氛围
+SPC_research_development_amount_up_1 = {
+	add_to_variable = {
+		research_development_amount = 5
+	}
+	custom_effect_tooltip = research_development_amount_up_1
+}
+
+SPC_research_development_amount_up_2 = {
+	add_to_variable = {
+		research_development_amount = 10
+	}
+	custom_effect_tooltip = research_development_amount_up_2
+}
+
+SPC_research_development_amount_up_3 = {
+	add_to_variable = {
+		research_development_amount = 20
+	}
+	custom_effect_tooltip = research_development_amount_up_3
+}
+
+SPC_research_development_amount_up_4 = {
+	add_to_variable = {
+		research_development_amount = 30
+	}
+	custom_effect_tooltip = research_development_amount_up_4
+}
+
+SPC_research_development_amount_down_1 = {
+	add_to_variable = {
+		research_development_amount = -5
+	}
+	custom_effect_tooltip = research_development_amount_down_1
+}
+
+SPC_research_development_amount_down_2 = {
+	add_to_variable = {
+		research_development_amount = -10
+	}
+	custom_effect_tooltip = research_development_amount_down_2
+}
+
+SPC_research_development_amount_down_3 = {
+	add_to_variable = {
+		research_development_amount = -20
+	}
+	custom_effect_tooltip = research_development_amount_down_3
+}
+
+SPC_research_development_amount_down_4 = {
+	add_to_variable = {
+		research_development_amount = -30
+	}
+	custom_effect_tooltip = research_development_amount_down_4
+}
+
+SPC_mobilization_laws_up = {
+	if = {
+		limit = {
+			has_idea = disarmed_nation
+		}
+		swap_ideas = {
+			remove_idea = disarmed_nation
+			add_idea = volunteer_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = volunteer_only
+		}
+		swap_ideas = {
+			remove_idea = volunteer_only
+			add_idea = limited_conscription
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_conscription
+		}
+		swap_ideas = {
+			remove_idea = limited_conscription
+			add_idea = extensive_conscription
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = extensive_conscription
+		}
+		swap_ideas = {
+			remove_idea = extensive_conscription
+			add_idea = service_by_requirement
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = service_by_requirement
+		}
+		swap_ideas = {
+			remove_idea = service_by_requirement
+			add_idea = all_adults_serve
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = all_adults_serve
+		}
+		swap_ideas = {
+			remove_idea = all_adults_serve
+			add_idea = scraping_the_barrel
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = scraping_the_barrel
+		}
+		add_manpower = 100000
+		add_stability = -0.05
+	}
+}
+
+SPC_mobilization_laws_down = {
+	if = {
+		limit = {
+			has_idea = scraping_the_barrel
+		}
+		swap_ideas = {
+			remove_idea = scraping_the_barrel
+			add_idea = all_adults_serve
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = all_adults_serve
+		}
+		swap_ideas = {
+			remove_idea = all_adults_serve
+			add_idea = service_by_requirement
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = service_by_requirement
+		}
+		swap_ideas = {
+			remove_idea = service_by_requirement
+			add_idea = extensive_conscription
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = extensive_conscription
+		}
+		swap_ideas = {
+			remove_idea = extensive_conscription
+			add_idea = limited_conscription
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_conscription
+		}
+		swap_ideas = {
+			remove_idea = limited_conscription
+			add_idea = volunteer_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = volunteer_only
+		}
+		swap_ideas = {
+			remove_idea = volunteer_only
+			add_idea = disarmed_nation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = disarmed_nation
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+SPC_training_laws_up = {
+	if = {
+		limit = {
+			has_idea = no_standard_at_all
+		}
+		swap_ideas = {
+			remove_idea = no_standard_at_all
+			add_idea = basic_training
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = basic_training
+		}
+		swap_ideas = {
+			remove_idea = basic_training
+			add_idea = advanced_training
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = advanced_training
+		}
+		swap_ideas = {
+			remove_idea = advanced_training
+			add_idea = reinforced_training
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = reinforced_training
+		}
+		swap_ideas = {
+			remove_idea = reinforced_training
+			add_idea = elite_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = elite_only
+		}
+		swap_ideas = {
+			remove_idea = elite_only
+			add_idea = best_of_the_best
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = no_standard_at_all
+		}
+		add_war_support = 0.1
+		add_stability = -0.05
+	}
+}
+
+SPC_training_laws_down = {
+	if = {
+		limit = {
+			has_idea = best_of_the_best
+		}
+		swap_ideas = {
+			remove_idea = best_of_the_best
+			add_idea = elite_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = elite_only
+		}
+		swap_ideas = {
+			remove_idea = elite_only
+			add_idea = reinforced_training
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = reinforced_training
+		}
+		remove_ideas = reinforced_training
+		add_ideas = advanced_training
+	}
+	else_if = {
+		limit = {
+			has_idea = advanced_training
+		}
+		swap_ideas = {
+			remove_idea = advanced_training
+			add_idea = basic_training
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = basic_training
+		}
+		swap_ideas = {
+			remove_idea = basic_training
+			add_idea = no_standard_at_all
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = no_standard_at_all
+		}
+		add_war_support = -0.1
+		add_stability = 0.05
+	}
+}
+
+SPC_trade_laws_up = {
+	if = {
+		limit = {
+			has_idea = free_trade
+		}
+		swap_ideas = {
+			remove_idea = free_trade
+			add_idea = export_focus
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = export_focus
+		}
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_exports
+		}
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = closed_economy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = closed_economy
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_trade_laws_down = {
+	if = {
+		limit = {
+			has_idea = closed_economy
+		}
+		swap_ideas = {
+			remove_idea = closed_economy
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_exports
+		}
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = export_focus
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = export_focus
+		}
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = free_trade
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = free_trade
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_economy_up = {
+	if = {
+		limit = {
+			has_idea = civilian_economy
+		}
+		swap_ideas = {
+			remove_idea = civilian_economy
+			add_idea = low_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_economic_mobilisation
+		}
+		swap_ideas = {
+			remove_idea = low_economic_mobilisation
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = partial_economic_mobilisation
+		}
+		swap_ideas = {
+			remove_idea = partial_economic_mobilisation
+			add_idea = war_economy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = war_economy
+		}
+		swap_ideas = {
+			remove_idea = war_economy
+			add_idea = tot_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = tot_economic_mobilisation
+		}
+		add_war_support = 0.1
+		add_political_power = 50
+		add_stability = -0.05
+	}
+}
+
+SPC_economy_down = {
+	if = {
+		limit = {
+			has_idea = tot_economic_mobilisation
+		}
+		swap_ideas = {
+			remove_idea = tot_economic_mobilisation
+			add_idea = war_economy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = war_economy
+		}
+		swap_ideas = {
+			remove_idea = war_economy
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = partial_economic_mobilisation
+		}
+		swap_ideas = {
+			remove_idea = partial_economic_mobilisation
+			add_idea = low_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_economic_mobilisation
+		}
+		swap_ideas = {
+			remove_idea = low_economic_mobilisation
+			add_idea = civilian_economy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = civilian_economy
+		}
+		add_war_support = 0.1
+		add_political_power = 50
+		add_stability = -0.05
+	}
+}
+
+SPC_taxes_laws_up = {
+	if = {
+		limit = {
+			has_idea = barely_no_taxes
+		}
+		swap_ideas = {
+			remove_idea = barely_no_taxes
+			add_idea = low_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_taxes
+		}
+		swap_ideas = {
+			remove_idea = low_taxes
+			add_idea = normal_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = normal_taxes
+		}
+		swap_ideas = {
+			remove_idea = normal_taxes
+			add_idea = high_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_taxes
+		}
+		swap_ideas = {
+			remove_idea = high_taxes
+			add_idea = too_much_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = too_much_taxes
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_taxes_laws_down = {
+	if = {
+		limit = {
+			has_idea = too_much_taxes
+		}
+		swap_ideas = {
+			remove_idea = too_much_taxes
+			add_idea = high_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_taxes
+		}
+		swap_ideas = {
+			remove_idea = high_taxes
+			add_idea = normal_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = normal_taxes
+		}
+		swap_ideas = {
+			remove_idea = normal_taxes
+			add_idea = low_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_taxes
+		}
+		swap_ideas = {
+			remove_idea = low_taxes
+			add_idea = barely_no_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = barely_no_taxes
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_nationalization_policy_up = {
+	if = {
+		limit = {
+			has_idea = NP_light_nationalization
+		}
+		swap_ideas = {
+			remove_idea = NP_light_nationalization
+			add_idea = NP_medium_nationalization
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NP_medium_nationalization
+		}
+		swap_ideas = {
+			remove_idea = NP_medium_nationalization
+			add_idea = NP_high_nationalization
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NP_high_nationalization
+		}
+		swap_ideas = {
+			remove_idea = NP_high_nationalization
+			add_idea = NP_total_nationalization
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NP_high_nationalization
+		}
+		add_political_power = 50
+		add_stability = -0.05
+	}
+}
+
+SPC_nationalization_policy_down = {
+	if = {
+		limit = {
+			has_idea = NP_high_nationalization
+		}
+		swap_ideas = {
+			remove_idea = NP_high_nationalization
+			add_idea = NP_medium_nationalization
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NP_medium_nationalization
+		}
+		swap_ideas = {
+			remove_idea = NP_medium_nationalization
+			add_idea = NP_light_nationalization
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = NP_light_nationalization
+		}
+		add_political_power = -20
+		add_stability = 0.1
+	}
+}
+
+SPC_environment_policy_up = {
+	if = {
+		limit = {
+			has_idea = EP_barely_nothing
+		}
+		swap_ideas = {
+			remove_idea = EP_barely_nothing
+			add_idea = EP_minimum_control
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_minimum_control
+		}
+		swap_ideas = {
+			remove_idea = EP_minimum_control
+			add_idea = EP_more_observation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_more_observation
+		}
+		swap_ideas = {
+			remove_idea = EP_more_observation
+			add_idea = EP_government_target
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_government_target
+		}
+		swap_ideas = {
+			remove_idea = EP_government_target
+			add_idea = EP_more_limitations
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_more_limitations
+		}
+		swap_ideas = {
+			remove_idea = EP_more_limitations
+			add_idea = EP_maximum_punishment
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_maximum_punishment
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_environment_policy_down = {
+	if = {
+		limit = {
+			has_idea = EP_maximum_punishment
+		}
+		swap_ideas = {
+			remove_idea = EP_maximum_punishment
+			add_idea = EP_more_limitations
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_more_limitations
+		}
+		swap_ideas = {
+			remove_idea = EP_more_limitations
+			add_idea = EP_government_target
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_government_target
+		}
+		swap_ideas = {
+			remove_idea = EP_government_target
+			add_idea = EP_more_observation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_more_observation
+		}
+		swap_ideas = {
+			remove_idea = EP_more_observation
+			add_idea = EP_minimum_control
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_minimum_control
+		}
+		swap_ideas = {
+			remove_idea = EP_minimum_control
+			add_idea = EP_barely_nothing
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_barely_nothing
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_resource_policy_up = {
+	if = {
+		limit = {
+			has_idea = RP_decide_themselves
+		}
+		swap_ideas = {
+			remove_idea = RP_decide_themselves
+			add_idea = RP_basic_funding
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_basic_funding
+		}
+		swap_ideas = {
+			remove_idea = RP_basic_funding
+			add_idea = RP_asisting_research
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_asisting_research
+		}
+		swap_ideas = {
+			remove_idea = RP_asisting_research
+			add_idea = RP_locating_resource
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_locating_resource
+		}
+		swap_ideas = {
+			remove_idea = RP_locating_resource
+			add_idea = RP_extensive_mining
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_extensive_mining
+		}
+		swap_ideas = {
+			remove_idea = RP_extensive_mining
+			add_idea = RP_total_funding
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_total_funding
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_resource_policy_down = {
+	if = {
+		limit = {
+			has_idea = RP_total_funding
+		}
+		swap_ideas = {
+			remove_idea = RP_total_funding
+			add_idea = RP_extensive_mining
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_extensive_mining
+		}
+		swap_ideas = {
+			remove_idea = RP_extensive_mining
+			add_idea = RP_locating_resource
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_locating_resource
+		}
+		swap_ideas = {
+			remove_idea = RP_locating_resource
+			add_idea = RP_asisting_research
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_asisting_research
+		}
+		swap_ideas = {
+			remove_idea = RP_asisting_research
+			add_idea = RP_basic_funding
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_basic_funding
+		}
+		swap_ideas = {
+			remove_idea = RP_basic_funding
+			add_idea = RP_decide_themselves
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_decide_themselves
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_industry_policy_up = {
+	if = {
+		limit = {
+			has_idea = IP_no_intervention
+		}
+		swap_ideas = {
+			remove_idea = IP_no_intervention
+			add_idea = IP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = IP_basic_funds
+			add_idea = IP_creating_business
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_creating_business
+		}
+		swap_ideas = {
+			remove_idea = IP_creating_business
+			add_idea = IP_funding_proj
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_funding_proj
+		}
+		swap_ideas = {
+			remove_idea = IP_funding_proj
+			add_idea = IP_cutting_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_cutting_taxes
+		}
+		swap_ideas = {
+			remove_idea = IP_cutting_taxes
+			add_idea = IP_more_business
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_more_business
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_industry_policy_down = {
+	if = {
+		limit = {
+			has_idea = IP_more_business
+		}
+		swap_ideas = {
+			remove_idea = IP_more_business
+			add_idea = IP_cutting_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_cutting_taxes
+		}
+		swap_ideas = {
+			remove_idea = IP_cutting_taxes
+			add_idea = IP_funding_proj
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_funding_proj
+		}
+		swap_ideas = {
+			remove_idea = IP_funding_proj
+			add_idea = IP_creating_business
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_creating_business
+		}
+		swap_ideas = {
+			remove_idea = IP_creating_business
+			add_idea = IP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = IP_basic_funds
+			add_idea = IP_no_intervention
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = IP_no_intervention
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_working_policy_up = {
+	if = {
+		limit = {
+			has_idea = WP_no_specific_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_no_specific_laws
+			add_idea = WP_symbolic_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_symbolic_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_symbolic_laws
+			add_idea = WP_basic_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_basic_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_basic_laws
+			add_idea = WP_limited_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_limited_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_limited_laws
+			add_idea = WP_better_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_better_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_better_laws
+			add_idea = WP_worker_council
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_worker_council
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_working_policy_down = {
+	if = {
+		limit = {
+			has_idea = WP_worker_council
+		}
+		swap_ideas = {
+			remove_idea = WP_worker_council
+			add_idea = WP_better_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_better_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_better_laws
+			add_idea = WP_limited_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_limited_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_limited_laws
+			add_idea = WP_basic_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_basic_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_basic_laws
+			add_idea = WP_symbolic_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_symbolic_laws
+		}
+		swap_ideas = {
+			remove_idea = WP_symbolic_laws
+			add_idea = WP_no_specific_laws
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = WP_no_specific_laws
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_agricultural_policy_up = {
+	if = {
+		limit = {
+			has_idea = AP_no_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_no_funds
+			add_idea = AP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_basic_funds
+			add_idea = AP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_advanced_funds
+			add_idea = AP_better_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_better_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_better_funds
+			add_idea = AP_cutting_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_cutting_taxes
+		}
+		swap_ideas = {
+			remove_idea = AP_cutting_taxes
+			add_idea = AP_endless_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_endless_funds
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_agricultural_policy_down = {
+	if = {
+		limit = {
+			has_idea = AP_endless_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_endless_funds
+			add_idea = AP_cutting_taxes
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_cutting_taxes
+		}
+		swap_ideas = {
+			remove_idea = AP_cutting_taxes
+			add_idea = AP_better_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_better_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_better_funds
+			add_idea = AP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_advanced_funds
+			add_idea = AP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = AP_basic_funds
+			add_idea = AP_no_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = AP_no_funds
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_research_policy_up = {
+	if = {
+		limit = {
+			has_idea = RP_no_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_no_funds
+			add_idea = RP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_basic_funds
+			add_idea = RP_limited_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_limited_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_limited_funds
+			add_idea = RP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_advanced_funds
+			add_idea = RP_even_more_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_even_more_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_even_more_funds
+			add_idea = RP_full_power_in_science
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_full_power_in_science
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_research_policy_down = {
+	if = {
+		limit = {
+			has_idea = RP_full_power_in_science
+		}
+		swap_ideas = {
+			remove_idea = RP_full_power_in_science
+			add_idea = RP_even_more_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_even_more_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_even_more_funds
+			add_idea = RP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_advanced_funds
+			add_idea = RP_limited_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_limited_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_limited_funds
+			add_idea = RP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = RP_basic_funds
+			add_idea = RP_no_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RP_no_funds
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_media_policy_up = {
+	if = {
+		limit = {
+			has_idea = MP_freedom_speech
+		}
+		swap_ideas = {
+			remove_idea = MP_freedom_speech
+			add_idea = MP_mixed_media
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_mixed_media
+		}
+		swap_ideas = {
+			remove_idea = MP_mixed_media
+			add_idea = MP_funding_media
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_funding_media
+		}
+		swap_ideas = {
+			remove_idea = MP_funding_media
+			add_idea = MP_only_our_voice
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_only_our_voice
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_media_policy_down = {
+	if = {
+		limit = {
+			has_idea = MP_only_our_voice
+		}
+		swap_ideas = {
+			remove_idea = MP_only_our_voice
+			add_idea = MP_funding_media
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_funding_media
+		}
+		swap_ideas = {
+			remove_idea = MP_funding_media
+			add_idea = MP_mixed_media
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_mixed_media
+		}
+		swap_ideas = {
+			remove_idea = MP_mixed_media
+			add_idea = MP_freedom_speech
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_freedom_speech
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_subsidies_policy_up = {
+	if = {
+		limit = {
+			has_idea = SP_no_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_no_funds
+			add_idea = SP_sybolized_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_sybolized_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_sybolized_funds
+			add_idea = SP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_basic_funds
+			add_idea = SP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_advanced_funds
+			add_idea = SP_no_worries_for_food
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_no_worries_for_food
+		}
+		swap_ideas = {
+			remove_idea = SP_no_worries_for_food
+			add_idea = SP_full_scale_help
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_full_scale_help
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_subsidies_policy_down = {
+	if = {
+		limit = {
+			has_idea = SP_full_scale_help
+		}
+		swap_ideas = {
+			remove_idea = SP_full_scale_help
+			add_idea = SP_no_worries_for_food
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_no_worries_for_food
+		}
+		swap_ideas = {
+			remove_idea = SP_no_worries_for_food
+			add_idea = SP_advanced_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_advanced_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_advanced_funds
+			add_idea = SP_basic_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_basic_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_basic_funds
+			add_idea = SP_sybolized_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_sybolized_funds
+		}
+		swap_ideas = {
+			remove_idea = SP_sybolized_funds
+			add_idea = SP_no_funds
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SP_no_funds
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_magician_policy_up = {
+	if = {
+		limit = {
+			has_idea = MP_fuck_off_the_magician
+		}
+		swap_ideas = {
+			remove_idea = MP_fuck_off_the_magician
+			add_idea = MP_research_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_research_only
+		}
+		swap_ideas = {
+			remove_idea = MP_research_only
+			add_idea = MP_strict_control
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_strict_control
+		}
+		swap_ideas = {
+			remove_idea = MP_strict_control
+			add_idea = MP_open_for_application
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_open_for_application
+		}
+		swap_ideas = {
+			remove_idea = MP_open_for_application
+			add_idea = MP_no_restriction
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_no_restriction
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_magician_policy_down = {
+	if = {
+		limit = {
+			has_idea = MP_no_restriction
+		}
+		swap_ideas = {
+			remove_idea = MP_no_restriction
+			add_idea = MP_open_for_application
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_open_for_application
+		}
+		swap_ideas = {
+			remove_idea = MP_open_for_application
+			add_idea = MP_strict_control
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_strict_control
+		}
+		swap_ideas = {
+			remove_idea = MP_strict_control
+			add_idea = MP_research_only
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_research_only
+		}
+		swap_ideas = {
+			remove_idea = MP_research_only
+			add_idea = MP_fuck_off_the_magician
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MP_fuck_off_the_magician
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_secret_police_policy_up = {
+	if = {
+		limit = {
+			has_idea = SPP_no_secreat_police
+		}
+		swap_ideas = {
+			remove_idea = SPP_no_secreat_police
+			add_idea = SPP_police_special_unit
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_police_special_unit
+		}
+		swap_ideas = {
+			remove_idea = SPP_police_special_unit
+			add_idea = SPP_limited_national_dep
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_limited_national_dep
+		}
+		swap_ideas = {
+			remove_idea = SPP_limited_national_dep
+			add_idea = SPP_unlimited_national_dep
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_unlimited_national_dep
+		}
+		swap_ideas = {
+			remove_idea = SPP_unlimited_national_dep
+			add_idea = SPP_cia_everywhere
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_cia_everywhere
+		}
+		swap_ideas = {
+			remove_idea = SPP_cia_everywhere
+			add_idea = SPP_we_are_watching_you
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_we_are_watching_you
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_secret_police_policy_down = {
+	if = {
+		limit = {
+			has_idea = SPP_we_are_watching_you
+		}
+		swap_ideas = {
+			remove_idea = SPP_we_are_watching_you
+			add_idea = SPP_cia_everywhere
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_cia_everywhere
+		}
+		swap_ideas = {
+			remove_idea = SPP_cia_everywhere
+			add_idea = SPP_unlimited_national_dep
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_unlimited_national_dep
+		}
+		swap_ideas = {
+			remove_idea = SPP_unlimited_national_dep
+			add_idea = SPP_limited_national_dep
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_limited_national_dep
+		}
+		swap_ideas = {
+			remove_idea = SPP_limited_national_dep
+			add_idea = SPP_police_special_unit
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_police_special_unit
+		}
+		swap_ideas = {
+			remove_idea = SPP_police_special_unit
+			add_idea = SPP_no_secreat_police
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SPP_no_secreat_police
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_female_policy_up = {
+	if = {
+		limit = {
+			has_idea = FP_traditional_place
+		}
+		swap_ideas = {
+			remove_idea = FP_traditional_place
+			add_idea = FP_calling_for_equality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_calling_for_equality
+		}
+		swap_ideas = {
+			remove_idea = FP_calling_for_equality
+			add_idea = FP_working_euqality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_working_euqality
+		}
+		swap_ideas = {
+			remove_idea = FP_working_euqality
+			add_idea = FP_joining_the_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_joining_the_army
+		}
+		swap_ideas = {
+			remove_idea = FP_joining_the_army
+			add_idea = FP_joining_the_poitics
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_joining_the_poitics
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_female_policy_down = {
+	if = {
+		limit = {
+			has_idea = FP_joining_the_poitics
+		}
+		swap_ideas = {
+			remove_idea = FP_joining_the_poitics
+			add_idea = FP_joining_the_army
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_joining_the_army
+		}
+		swap_ideas = {
+			remove_idea = FP_joining_the_army
+			add_idea = FP_working_euqality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_working_euqality
+		}
+		swap_ideas = {
+			remove_idea = FP_working_euqality
+			add_idea = FP_calling_for_equality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_calling_for_equality
+		}
+		swap_ideas = {
+			remove_idea = FP_calling_for_equality
+			add_idea = FP_traditional_place
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = FP_traditional_place
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_education_policy_up = {
+	if = {
+		limit = {
+			has_idea = EP_minimum_spending
+		}
+		swap_ideas = {
+			remove_idea = EP_minimum_spending
+			add_idea = EP_wooden_schools
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_wooden_schools
+		}
+		swap_ideas = {
+			remove_idea = EP_wooden_schools
+			add_idea = EP_sharing_textbooks
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_sharing_textbooks
+		}
+		swap_ideas = {
+			remove_idea = EP_sharing_textbooks
+			add_idea = EP_modern_textbooks
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_modern_textbooks
+		}
+		swap_ideas = {
+			remove_idea = EP_modern_textbooks
+			add_idea = EP_helping_the_countryside
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_helping_the_countryside
+		}
+		swap_ideas = {
+			remove_idea = EP_helping_the_countryside
+			add_idea = EP_university_cities
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_university_cities
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_education_policy_down = {
+	if = {
+		limit = {
+			has_idea = EP_university_cities
+		}
+		swap_ideas = {
+			remove_idea = EP_university_cities
+			add_idea = EP_helping_the_countryside
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_helping_the_countryside
+		}
+		swap_ideas = {
+			remove_idea = EP_helping_the_countryside
+			add_idea = EP_modern_textbooks
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_modern_textbooks
+		}
+		swap_ideas = {
+			remove_idea = EP_modern_textbooks
+			add_idea = EP_sharing_textbooks
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_sharing_textbooks
+		}
+		swap_ideas = {
+			remove_idea = EP_sharing_textbooks
+			add_idea = EP_wooden_schools
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_wooden_schools
+		}
+		swap_ideas = {
+			remove_idea = EP_wooden_schools
+			add_idea = EP_minimum_spending
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = EP_minimum_spending
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_race_policy_up = {
+	if = {
+		limit = {
+			has_idea = RAP_suppression
+		}
+		swap_ideas = {
+			remove_idea = RAP_suppression
+			add_idea = RAP_lower_suppression
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_lower_suppression
+		}
+		swap_ideas = {
+			remove_idea = RAP_lower_suppression
+			add_idea = RAP_discrimination
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_discrimination
+		}
+		swap_ideas = {
+			remove_idea = RAP_discrimination
+			add_idea = RAP_legally_equality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_legally_equality
+		}
+		swap_ideas = {
+			remove_idea = RAP_legally_equality
+			add_idea = RAP_active_promotion
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_active_promotion
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_race_policy_down = {
+	if = {
+		limit = {
+			has_idea = RAP_active_promotion
+		}
+		swap_ideas = {
+			remove_idea = RAP_active_promotion
+			add_idea = RAP_legally_equality
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_legally_equality
+		}
+		swap_ideas = {
+			remove_idea = RAP_legally_equality
+			add_idea = RAP_discrimination
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_discrimination
+		}
+		swap_ideas = {
+			remove_idea = RAP_discrimination
+			add_idea = RAP_lower_suppression
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_lower_suppression
+		}
+		swap_ideas = {
+			remove_idea = RAP_lower_suppression
+			add_idea = RAP_suppression
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RAP_suppression
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}
+
+SPC_sex_policy_up = {
+	if = {
+		limit = {
+			has_idea = SXP_recessing_policy
+		}
+		swap_ideas = {
+			remove_idea = SXP_recessing_policy
+			add_idea = SXP_reactionary_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_reactionary_policy
+		}
+		swap_ideas = {
+			remove_idea = SXP_reactionary_policy
+			add_idea = SXP_traditional_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_traditional_policy
+		}
+		swap_ideas = {
+			remove_idea = SXP_traditional_policy
+			add_idea = SXP_legally_equal
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_legally_equal
+		}
+		swap_ideas = {
+			remove_idea = SXP_legally_equal
+			add_idea = SXP_active_role
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_active_role
+		}
+		add_political_power = -50
+		add_stability = 0.1
+	}
+}
+
+SPC_sex_policy_down = {
+	if = {
+		limit = {
+			has_idea = SXP_active_role
+		}
+		swap_ideas = {
+			remove_idea = SXP_active_role
+			add_idea = SXP_legally_equal
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_legally_equal
+		}
+		swap_ideas = {
+			remove_idea = SXP_legally_equal
+			add_idea = SXP_traditional_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_traditional_policy
+		}
+		swap_ideas = {
+			remove_idea = SXP_traditional_policy
+			add_idea = SXP_reactionary_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_reactionary_policy
+		}
+		swap_ideas = {
+			remove_idea = SXP_reactionary_policy
+			add_idea = SXP_recessing_policy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = SXP_recessing_policy
+		}
+		add_political_power = 50
+		add_stability = -0.1
+	}
+}

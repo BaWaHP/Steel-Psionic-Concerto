@@ -1,0 +1,22 @@
+scripted_gui = {
+
+	TCW_resettlement_of_refugees_ui = {
+		context_type = decision_category
+		window_name = "TCW_resettlement_of_refugees_window"
+		properties = {
+			TCW_resettlement_of_refugees_bar = {
+				frame = TCW_refugee_settlement_var
+			}
+		}
+	}
+
+	TCW_national_parliament_ui = {
+		context_type = decision_category
+		window_name = "TCW_national_parliament_window"
+		properties = {
+			Portraits = {
+				image = "GFX_TCW_arcado_vincent"
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+﻿###templates###
+division_template = {
+	name = "骑士团总旗队"
+
+	regiments = {
+		caster_infantry = { x = 0 y = 0 }
+		caster_infantry = { x = 0 y = 1 }
+		caster_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 1 y = 3 }
+		light_titan = { x = 2 y = 0 }
+		light_titan = { x = 2 y = 1 }
+	}
+
+	support = {
+		melee_support = { x = 0 y = 0 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "骑士团民兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 1 y = 3 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "骑士团总旗队"
+		location = 18182
+		division_template = "骑士团总旗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "骑士团总旗队"
+		location = 18182
+		division_template = "骑士团总旗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 18182
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 18182
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 17587
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "骑士团总旗队"
+		location = 5576
+		division_template = "骑士团总旗队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.95
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 18366
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 18366
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "骑士团民兵师"
+		location = 2165
+		division_template = "骑士团民兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

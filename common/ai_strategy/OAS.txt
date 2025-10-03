@@ -1,0 +1,29 @@
+OAS_support_all_allies = {
+	allowed = { tag = OAS }
+	enable = { always = yes }
+	abort = { always = no }
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 20
+    }
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NOH
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CBI
+		value = 50
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = EOM
+		value = 100
+	}
+}
+

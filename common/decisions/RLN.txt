@@ -1,0 +1,396 @@
+RLN_house_of_cards = {
+	RLN_prepare_for_wars = {		#抓紧备战
+		icon = generic_industry
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			industrial_capacity_factory = 0.2
+			production_speed_bunker_factor = 0.2
+		}
+
+		complete_effect = {
+			SPC_living_standard_development_amount_down_2 = yes
+			RLN_militarists_influence_up_1 = yes
+		}
+	}
+	RLN_mobilize_the_people = {		#发动群众
+		icon = eng_blackshirt_march
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_war_support = 0.05
+			RLN_militarists_influence_down_1 = yes
+			RLN_principlists_influence_up_1 = yes
+		}
+	}
+	RLN_economic_macro_control = {		#经济宏观调控
+		icon = generic_decision
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_stability = 0.05
+			SPC_living_standard_development_amount_up_2 = yes
+			RLN_financists_influence_up_1 = yes
+		}
+	}
+	RLN_strengthening_united_front = {		#加强“统战”工作
+		icon = generic_nationalism
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = -0.05
+			SPC_living_standard_development_amount_up_1 = yes
+			RLN_principlists_influence_down_2 = yes
+		}
+	}
+	RLN_soldiers_work_with_civilians = {		#让军队与平民一起劳动
+		icon = hol_exchange_intelligence_data
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			repair_speed_factor = 0.1
+			industry_free_repair_factor = 0.2
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			RLN_financists_influence_down_1 = yes
+		}
+	}
+}
+
+RLN_rebuild_econs = {
+	RLN_need_of_the_people = {		#人民的需求
+		icon = GFX_decision_SWI_consolidate_council_power
+		allowed = { tag = RLN }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RLN_need_of_the_people_tr
+				check_variable = { RLN_food_shortage_var = 0 }
+				check_variable = { RLN_reproduction_var = 100 }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 400
+
+		complete_effect = {
+			add_stability = 0.1
+			RLN_financists_influence_up_2 = yes
+			if = {
+				limit = { NOT = { has_country_flag = RLN_need_of_the_people_over } }
+				set_country_flag = RLN_need_of_the_people_over
+			}
+		}
+
+		timeout_effect = { 
+			RLN_principlists_influence_down_3 = yes
+			RLN_financists_influence_down_3 = yes
+			remove_ideas = RLN_support_of_people
+			add_ideas = RLN_great_famine
+			if = {
+				limit = { NOT = { has_country_flag = RLN_need_of_the_people_over } }
+				set_country_flag = RLN_need_of_the_people_over
+			}
+		}
+	}
+
+	RLN_visions_of_utopia = {		#乌托邦的愿景
+		icon = GFX_decision_POL_organize_strike_two
+		allowed = { tag = RLN }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RLN_need_of_the_people_tr
+				check_variable = { RLN_food_shortage_var = 0 }
+				check_variable = { RLN_reproduction_var = 100 }
+			}
+			has_living_standard_development_more_than_3 = yes
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 400
+
+		complete_effect = {
+			RLN_principlists_influence_up_3 = yes
+			RLN_financists_influence_up_4 = yes
+			add_ideas = RLN_econ_miracle_of_revolution
+			if = {
+				limit = { NOT = { has_country_flag = RLN_visions_of_utopia_over } }
+				set_country_flag = RLN_visions_of_utopia_over
+			}
+		}
+
+		timeout_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = RLN_visions_of_utopia_over } }
+				set_country_flag = RLN_visions_of_utopia_over
+			}
+		}
+	}
+
+	RLN_issue_new_currency = {		#发行新货币
+		icon = GFX_decision_gre_investment_decisions
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = RLN_reproduction_var
+				value = 10
+				tooltip = RLN_reproduction_var_tt
+			}
+			RLN_rebuild_econs_var_clamp = yes
+			set_country_flag = RLN_issue_new_currency_flag
+		}
+	}
+
+	RLN_purchase_food_internationally = {		#在国际市场上采购粮食
+		icon = GFX_decision_generic_consumer_goods
+
+		visible = { has_country_flag = RLN_issue_new_currency_flag }
+
+		cost = 75
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_completed_focus = RLN_window_of_the_world }
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -5
+					tooltip = RLN_food_shortage_var_tt
+				}
+				SPC_living_standard_development_amount_up_1 = yes
+			}
+			else = {
+				add_to_variable = {
+					var = RLN_food_shortage_var
+					value = -2
+					tooltip = RLN_food_shortage_var_tt
+				}
+			}
+			RLN_rebuild_econs_var_clamp = yes
+		}
+	}
+	
+	RLN_support_national_industries = {		#扶持国有企业
+		icon = GFX_decision_hol_exchange_intelligence_data
+
+		cost = 75
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = RLN_reproduction_var
+				value = 10
+				tooltip = RLN_reproduction_var_tt
+			}
+			RLN_rebuild_econs_var_clamp = yes
+			310 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+
+	RLN_expand_relief_expenditures = {		#扩大救济支出
+		icon = GFX_decision_generic_motorized
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			SPC_subsidies_policy_up = yes
+			add_to_variable = {
+				var = RLN_reproduction_var
+				value = 5
+				tooltip = RLN_reproduction_var_tt
+			}
+			add_to_variable = {
+				var = RLN_food_shortage_var
+				value = -5
+				tooltip = RLN_food_shortage_var_tt
+			}
+			RLN_rebuild_econs_var_clamp = yes
+		}
+	}
+
+	RLN_expand_state_owned_fishing_fleet = {		#扩大国有渔业舰队
+		icon = GFX_decision_generic_merge_plant_ship
+
+		available = {
+			has_equipment = { convoy > 49 }
+			has_manpower > 99
+			custom_trigger_tooltip = {
+				tooltip = RLN_expand_state_owned_fishing_fleet_tr
+				check_variable = { RLN_expand_state_owned_fishing_fleet_count < 3 }
+			}
+		}
+
+		visible = { check_variable = { RLN_expand_state_owned_fishing_fleet_count < 3 } }
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			add_manpower = -100
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -50
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = { check_variable = { RLN_expand_state_owned_fishing_fleet_count = 0 } }
+				activate_mission = RLN_fishing_and_hunting
+			}
+			else = {
+				custom_effect_tooltip = RLN_expand_state_owned_fishing_fleet_tt
+			}
+			if = {
+				limit = { check_variable = { RLN_expand_state_owned_fishing_fleet_count = 2 } }
+				unlock_decision_tooltip = RLN_hunt_for_sea_monsters
+			}
+			add_to_variable = { RLN_expand_state_owned_fishing_fleet_count = 1 }
+		}
+	}
+	RLN_fishing_and_hunting = {		#捕鱼与狩猎
+		icon = GFX_decision_generic_naval
+		allowed = { tag = RLN }
+		available = { has_completed_focus = RLN_tenian_econ_miracle }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			set_temp_variable = { RLN_fishing_and_hunting_var = RLN_expand_state_owned_fishing_fleet_count }
+			multiply_temp_variable = { RLN_fishing_and_hunting_var = -1 }
+			add_to_variable = { RLN_food_shortage_var = RLN_fishing_and_hunting_var }
+			RLN_rebuild_econs_var_clamp = yes
+			custom_effect_tooltip = RLN_fishing_and_hunting_tt
+		}
+	}
+	RLN_hunt_for_sea_monsters = {		#狩猎可食用海洋魔兽
+		icon = GFX_decision_generic_police_action
+
+		visible = { check_variable = { RLN_expand_state_owned_fishing_fleet_count = 3 } }
+
+		cost = 0
+		custom_cost_text = decision_cost_CP_25
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			add_command_power = -25
+			add_to_variable = {
+				var = RLN_food_shortage_var
+				value = -5
+				tooltip = RLN_food_shortage_var_tt
+			}
+			RLN_rebuild_econs_var_clamp = yes
+		}
+	}
+	RLN_support_for_agriculture = {		#扶持农业
+		icon = GFX_decision_hol_inundate_water_lines
+
+		visible = { check_variable = { RLN_expand_state_owned_fishing_fleet_count = 3 } }
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		remove_effect = {
+			SPC_agricultural_development_amount_up_1 = yes
+			add_to_variable = {
+				var = RLN_reproduction_var
+				value = 5
+				tooltip = RLN_reproduction_var_tt
+			}
+			RLN_rebuild_econs_var_clamp = yes
+		}
+	}
+}

@@ -1,0 +1,73 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_UDT_startup_effect = {
+	UDT = {
+		###控制省份###
+		add_state_core = 430
+		transfer_state = 430
+		###介绍页面###
+		set_variable = { SPC_intro_screen = 1 }
+		###普及度修正部分###
+		set_variable = { magic_development_monthly_buff = 0 }
+		set_variable = { science_development_monthly_buff = 0 }
+		every_owned_state = {
+			set_variable = { state_magic_monthly_buff = 0 }
+			set_variable = { state_science_monthly_buff = 0 }
+		}
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = normal_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = hard_to_survive
+		add_ideas = controlled_pollution
+		add_ideas = few_cares
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_locating_resource
+		add_ideas = IP_basic_funds
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_limited_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_limited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_wooden_schools
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_unharmonized_multi_ethnic_states
+		add_ideas = RAP_legally_equality
+		add_ideas = RLP_national_religion
+		add_ideas = SXP_traditional_policy
+		###发展度设置###
+		SPC_development_update_effect = yes
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=331
+	name="STATE_331"
+
+	resources = {
+		steel = 10
+	}
+
+	history={
+		owner = RSB
+		add_core_of = RSB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			7246 5
+		}
+	}
+
+	provinces={
+		638 6000 7246 10474 11185 11756 12179 20386 20387 20463 20491 20544 
+	}
+	manpower = 980000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

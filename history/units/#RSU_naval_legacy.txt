@@ -1,0 +1,14 @@
+units = {
+	fleet = {
+		name = "皮奥瑞亚海军"
+		naval_base = 5655
+		task_force = {
+			name = "皮奥瑞亚国防军海军白洋特混编队"
+			location = 5655
+			ship = { name = "共和" pride_of_the_fleet = no definition = destroyer equipment = { destroyer_1 = {{ amount = 1 owner = PEO } } } }
+			ship = { name = "平等" pride_of_the_fleet = no definition = destroyer equipment = { destroyer_1 = {{ amount = 1 owner = PEO } } } }
+			ship = { name = "社会" pride_of_the_fleet = no definition = destroyer equipment = { destroyer_1 = {{ amount = 1 owner = PEO } } } }
+			ship = { name = "企业" pride_of_the_fleet = no definition = light_cruiser equipment = { light_cruiser_1 = {{ amount = 1 owner = PEO } } } }
+		}
+	}
+}

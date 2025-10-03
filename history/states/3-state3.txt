@@ -1,0 +1,28 @@
+
+state={
+	id=3
+	name="STATE_3"
+
+	history={
+		owner = SFH
+		add_core_of = SFH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+
+		}
+		victory_points = {
+			9935 5
+		}
+
+	}
+
+	provinces={
+		834 3039 9935 19223 19371 19380 19456 19512 
+	}
+	manpower=1836094
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

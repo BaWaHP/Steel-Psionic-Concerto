@@ -1,0 +1,45 @@
+on_actions = {
+
+	on_daily = {
+		effect = {
+			every_controlled_state = {
+				if = {
+					limit = {
+						check_variable = {
+							var = state_magic_monthly_buff
+							value = PREV.magic_development_monthly_buff
+							compare = not_equals
+						}
+					}
+					set_variable = {
+						state_magic_monthly_buff = PREV.magic_development_monthly_buff
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							var = state_science_monthly_buff
+							value = PREV.science_development_monthly_buff
+							compare = not_equals
+						}
+					}
+					set_variable = {
+						state_science_monthly_buff = PREV.science_development_monthly_buff
+					}
+				}
+			}
+			SPC_monthly_development_rate_update = yes
+		}
+	}
+
+    on_monthly = {
+		effect = {
+			###省份普及度###
+			SPC_monthly_development_rate_update = yes
+			SPC_monthly_development_level_update = yes
+			SPC_magic_panel_variable_update = yes
+			SPC_magic_panel_data_update = yes
+		}
+	}
+
+}

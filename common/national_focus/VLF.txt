@@ -1,0 +1,498 @@
+focus_tree = {
+	id = VLF_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VLF
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 5000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#愈发严重的压力
+		id = VLF_stressing_up_pressure
+		icon = GFX_focus_ARG_balancing_act
+		x = 5
+		y = 0
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = VLF.1
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#忏悔与惩罚
+		id = VLF_confession_and_punishment
+		icon = GFX_focus_BEL_christian_corporatism
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_stressing_up_pressure }
+		relative_position_id = VLF_stressing_up_pressure
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = VLF.2
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#布满铁锈的勋章
+		id = VLF_medal_covered_in_rust
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_confession_and_punishment }
+		relative_position_id = VLF_confession_and_punishment
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = VLF.3
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#潜入旧时代的圈子
+		id = VLF_infiltrate_the_old_world
+		icon = GFX_focus_generic_monetary_union
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_medal_covered_in_rust }
+		relative_position_id = VLF_medal_covered_in_rust
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.1
+			}
+		}
+	}
+
+	focus = {	#打开台球俱乐部的大门
+		id = VLF_open_the_pool_club_doors
+		icon = GFX_Generic_Chess_Move
+		x = -2
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_infiltrate_the_old_world }
+		relative_position_id = VLF_infiltrate_the_old_world
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			unlock_decision_tooltip = VLF_show_respect
+			set_country_flag = VLF_show_respect_flag
+		}
+	}
+
+	focus = {	#新的承诺
+		id = VLF_new_commitment
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VLF_regents_wish_2_1_tr_1
+				OR = {
+					is_ai = yes
+					check_variable = { VLF_regents_wish_2_1 > 29 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_open_the_pool_club_doors }
+		relative_position_id = VLF_open_the_pool_club_doors
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = {
+				id = VLF.4
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#弥合伤口
+		id = VLF_heal_a_wound
+		icon = GFX_focus_BRA_ethical_internationalism
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_infiltrate_the_old_world }
+		relative_position_id = VLF_infiltrate_the_old_world
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = VLF_regents_wish_2_1
+				value = 10
+				tooltip = VLF_regents_wish_2_1_tt
+			}
+			VLF_regents_wish_update = yes
+			country_event = {
+				id = VLF.5
+				days = 1
+			}
+		}
+	}
+
+	focus = {	#旧日之影
+		id = VLF_shadow_of_the_old_days
+		icon = GFX_Generic_Checkmate
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_heal_a_wound }
+		relative_position_id = VLF_heal_a_wound
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			division_template = {
+				name = "典范军"
+				regiments = {
+					centaur = { x = 0 y = 0 }
+					centaur = { x = 0 y = 1 }
+					centaur = { x = 0 y = 2 }
+					centaur = { x = 1 y = 0 }
+					centaur = { x = 1 y = 1 }
+					centaur = { x = 1 y = 2 }
+				}
+			}
+			456 = {
+				create_unit = {
+					division = "name = \"第一典范军\" division_template = \"第一典范军\" start_experience_factor = 0.3"
+					owner = VLF
+					count = 1
+					prioritize_location = 18722
+				}
+			}
+		}
+	}
+
+	focus = {	#稳定政府系统
+		id = VLF_stable_government_system
+		icon = GFX_focus_generic_industrialists
+		x = 1
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		available = {
+			if = {
+				limit = { is_ai = no }
+				custom_trigger_tooltip = {
+					tooltip = VLF_stable_government_system_tr
+					set_temp_variable = { VLF_stable_government_system_temp = party_popularity@authoritarian_republican }
+					add_to_temp_variable = { VLF_stable_government_system_temp = party_popularity@religious_extremism }
+					check_variable = { VLF_stable_government_system_temp > 0.5 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_shadow_of_the_old_days }
+		prerequisite = { focus = VLF_new_commitment }
+		relative_position_id = VLF_new_commitment
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = -0.05
+			custom_effect_tooltip = VLF_stable_government_system_tt
+			add_to_variable = {
+				var = VLF_regents_wish_2_2
+				value = -10
+				tooltip = VLF_regents_wish_2_2_tt
+			}
+			VLF_regents_wish_update = yes
+		}
+	}
+
+	focus = {	#我们名义上的宗主国
+		id = VLF_our_nominal_suzerain
+		icon = GFX_Generic_Anti_German_Propaganda
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_medal_covered_in_rust }
+		relative_position_id = VLF_medal_covered_in_rust
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {	#协调愿意配合的贵族
+		id = VLF_coordinate_willing_nobles
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		cost = 4.4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_our_nominal_suzerain }
+		relative_position_id = VLF_our_nominal_suzerain
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -100
+			457 = {
+				add_dynamic_modifier = {
+					modifier = VLF_gov_specified_fund
+				}
+			}
+			465 = {
+				add_dynamic_modifier = {
+					modifier = VLF_gov_specified_fund
+				}
+			}
+		}
+	}
+
+	focus = {	#加强边境设施
+		id = VLF_strengthen_border_facilities
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_coordinate_willing_nobles }
+		relative_position_id = VLF_coordinate_willing_nobles
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = -30
+			set_variable = { VLF_refugee_crisis_time = 100 }
+			add_days_mission_timeout = {
+				mission = VLF_refugee_crisis
+				days = 50
+			}
+			custom_effect_tooltip = VLF_refugee_crisis_tt
+		}
+	}
+
+	focus = {	#寻找难民在中的人才
+		id = VLF_looking_for_talent
+		icon = GFX_focus_generic_population_growth
+		x = 2
+		y = 1
+		cost = 2.2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_our_nominal_suzerain }
+		relative_position_id = VLF_our_nominal_suzerain
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			custom_effect_tooltip = VLF_refugee_crisis_tt
+		}
+	}
+
+	focus = {	#难民问题的内部解决方案
+		id = VLF_internal_solution
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_looking_for_talent }
+		relative_position_id = VLF_looking_for_talent
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			set_variable = { VLF_refugee_crisis_new_fac_457 = 457.building_level@industrial_complex }
+			set_variable = { VLF_refugee_crisis_new_fac_465 = 465.building_level@industrial_complex }
+			custom_effect_tooltip = VLF_internal_solution_tt
+		}
+	}
+
+	focus = {	#可控的难民潮
+		id = VLF_controlled_refugees
+		icon = GFX_Generic_Outside_Aid
+		x = 1
+		y = 1
+		cost = 2.2
+
+		available = { has_country_flag = VLF_refugee_crisis_done }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_strengthen_border_facilities }
+		prerequisite = { focus = VLF_internal_solution }
+		relative_position_id = VLF_strengthen_border_facilities
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_to_variable = {
+				var = VLF_regents_wish_1_1
+				value = 10
+				tooltip = VLF_regents_wish_1_1_tt
+			}
+			add_to_variable = {
+				var = VLF_regents_wish_3_1
+				value = 10
+				tooltip = VLF_regents_wish_3_1_tt
+			}
+			VLF_regents_wish_update = yes
+			swap_ideas = {
+				remove_idea = VLF_cracked_crown
+				add_idea = VLF_cracked_crown_2
+			}
+		}
+	}
+
+	focus = {	#初步稳定国内
+		id = VLF_initially_stabilize_the_country
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		cost = 1.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = VLF_stable_government_system }
+		prerequisite = { focus = VLF_controlled_refugees }
+		relative_position_id = VLF_stable_government_system
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			VLF_alexande_urosh = {
+				swap_country_leader_traits = {
+					remove = VLF_supreme_regent
+					add = VLF_regent
+				}
+			}
+		}
+	}
+
+}

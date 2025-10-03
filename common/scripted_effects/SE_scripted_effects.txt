@@ -1,0 +1,79 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+SE_flag_clr = {
+	if = {
+		limit = { has_country_flag = SPC_SE_foundation_of_our_team_flag }
+		clr_country_flag = SPC_SE_foundation_of_our_team_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_zhetysu_collapsing_flag }
+		clr_country_flag = SPC_SE_zhetysu_collapsing_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_UK_reunification_CR_flag }
+		clr_country_flag = SPC_SE_UK_reunification_CR_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_central_bastia_civil_war_flag }
+		clr_country_flag = SPC_SE_central_bastia_civil_war_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_disaster_original_desire_flag }
+		clr_country_flag = SPC_SE_disaster_original_desire_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_second_east_bastia_war_flag }
+		clr_country_flag = SPC_SE_second_east_bastia_war_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_farhome_reunification_sfh1_flag }
+		clr_country_flag = SPC_SE_farhome_reunification_sfh1_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_farhome_reunification_sfh2_flag }
+		clr_country_flag = SPC_SE_farhome_reunification_sfh2_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_farhome_reunification_sfh3_flag }
+		clr_country_flag = SPC_SE_farhome_reunification_sfh3_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_RSB_civil_war_flag }
+		clr_country_flag = SPC_SE_RSB_civil_war_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_ROT_1_flag }
+		clr_country_flag = SPC_SE_reunification_ROT_1_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_ROT_2_flag }
+		clr_country_flag = SPC_SE_reunification_ROT_2_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_IMC_1_flag }
+		clr_country_flag = SPC_SE_reunification_IMC_1_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_SFR_1_flag }
+		clr_country_flag = SPC_SE_reunification_SFR_1_flag
+	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
+		clr_country_flag = SPC_SE_reunification_SFR_2_flag
+	}
+}

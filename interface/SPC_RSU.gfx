@@ -1,0 +1,96 @@
+spriteTypes = {	
+	###领导人###
+	spriteType = {
+		name = "GFX_RSU_stade_eger"
+		texturefile = "gfx/leaders/RSU/stade_eger.png"
+	}
+	spriteType = {
+		name = "GFX_RSU_reinhart_sudem"
+		texturefile = "gfx/leaders/RSU/reinhart_sudem.png"
+	}
+	spriteType = {
+		name = "GFX_RSU_teresa_meyerena"
+		texturefile = "gfx/leaders/RSU/teresa_meyerena.png"
+	}
+	spriteType = {
+		name = "GFX_RSU_edilvan_hegobogen"
+		texturefile = "gfx/leaders/RSU/edilvan_hegobogen.png"
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_RSU_torn_society"
+		texturefile = "gfx/interface/ideas/RSU_torn_society.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSU_majestic_haze"
+		texturefile = "gfx/interface/ideas/RSU_majestic_haze.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSU_regions_affected_by_labor_union"
+		texturefile = "gfx/interface/ideas/RSU_regions_affected_by_labor_union.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSU_transport_key_of_south_bastia"
+		texturefile = "gfx/interface/ideas/RSU_transport_key_of_south_bastia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSU_perfect_market_econ"
+		texturefile = "gfx/interface/ideas/RSU_perfect_market_econ.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RSU_rusty_war_machine"
+		texturefile = "gfx/interface/ideas/RSU_rusty_war_machine.png"
+	}
+	###特质###
+	spriteType = {
+		name = "GFX_trait_RSU_left_wing_sympathisers"
+		texturefile = "gfx/interface/traits/personal/RSU_left_wing_sympathisers.png"
+		legacy_lazy_load = no
+	}
+	###GUI###
+	spriteType = {
+		name = "GFX_RSU_union_development_BG"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_bg.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_north_icon_0"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_north_icon_0.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_north_icon_1"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_north_icon_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_east_icon_0"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_east_icon_0.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_east_icon_1"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_east_icon_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_south_icon_0"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_south_icon_0.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_south_icon_1"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_south_icon_1.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_west_icon_0"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_west_icon_0.png"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_RSU_union_development_west_icon_1"
+		texturefile = "gfx/interface/RSU/GFX_RSU_union_development_west_icon_1.png"
+		transparencecheck = yes
+	}
+}

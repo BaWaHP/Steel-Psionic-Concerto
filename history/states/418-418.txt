@@ -1,0 +1,25 @@
+
+state={
+	id=418
+	name="STATE_418"
+	provinces={
+		711 4428 4743 7683 8284 10218 10344 11758 19020 19116 19157 
+	}
+	resources = {
+		magic_crystal = 18
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			711 5
+		}
+	}
+	manpower = 1000000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

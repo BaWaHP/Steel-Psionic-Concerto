@@ -1,0 +1,107 @@
+bookmarks = {
+	bookmark = {
+		name = "BASTIA_1_NAME"
+		desc = "BASTIA_1_DESC"
+		date = 1998.1.1.1
+		picture = "GFX_bookmark_bastia_1"
+		default_country = "TCW"
+		default = yes
+
+		"TCW"={
+			history = "TCW_BASTIA_DESC"
+			ideology = authoritarian_republican
+			ideas = {
+				TCW_ethnicity_and_racism
+				TCW_army_of_ambition
+				TCW_division_of_power
+			}
+			focuses = {
+				TCW_crisis_hidden_in_shadows
+				TCW_new_milestone_of_national_rev
+				TCW_long_awaited_democratic_cheer
+			}
+		}
+
+		"ROK"={
+			history = "ROK_BASTIA_DESC"
+			ideology = liberal_republican
+			ideas = {
+				ROK_stabiliy_based_on_one
+				ROK_memory_of_donvodsk
+				ROK_old_eagle
+			}
+			focuses = {
+				ROK_victory_for_social_democrats
+				ROK_victory_for_new_democratic
+				ROK_victory_for_democratic
+			}
+		}
+
+		"UPV"={
+			history = "UPV_BASTIA_DESC"
+			ideology = authoritarian_republican
+			ideas = {
+				UPV_corruption_everywhere
+				UPV_deeply_rooted_aristocracy
+				UPV_treaty_with_tcw
+			}
+			focuses = {
+				UPV_determination_of_the_queen
+				UPV_royal_new_politics
+				UPV_stop_for_god_sake
+			}
+		}
+
+		"KOA"={
+			history = "KOA_BASTIA_DESC"
+			ideology = authoritarian_republican
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		"LNR"={
+			history = "LNR_BASTIA_DESC"
+			ideology = conservative_republican
+			ideas = {
+				LNR_chaotic_political_situation
+				LNR_mountain_horror
+				LNR_clan_influence
+			}
+			focuses = {
+				LNR_rule_of_mr_general
+				LNR_keep_things_down
+				RLN_the_lasting_red_flag
+			}
+		}
+
+		"RSU"={
+			history = "RSU_BASTIA_DESC"
+			ideology = liberal_republican
+			ideas = {
+				RSU_transport_key_of_south_bastia
+				RSU_perfect_market_econ
+				RSU_torn_society
+			}
+			focuses = {
+				RSU_fresh_new_year
+				RSU_our_current_status
+				RSU_fixing_the_division
+			}
+		}
+
+		"---"={
+			history = "OTHER_BASTIA_DESC"
+		}
+
+		#次要国家
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

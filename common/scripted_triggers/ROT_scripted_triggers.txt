@@ -1,0 +1,24 @@
+ROT_hatred_spread_sp_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = ROT_hatred_spread_tr
+		check_variable = { ROT_a_national_revolution_1 < 20 }
+		check_variable = { ROT_a_national_revolution_2 < 20 }
+		check_variable = { ROT_a_national_revolution_3 < 20 }
+		check_variable = { ROT_a_national_revolution_4 < 20 }
+	}
+	has_country_flag = ROT_class_and_nation_on
+}
+
+ROT_unite_country_sp_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = ROT_unite_country_tr
+		check_variable = { ROT_a_national_revolution_1 > 79 }
+		check_variable = { ROT_a_national_revolution_2 > 79 }
+		check_variable = { ROT_a_national_revolution_3 > 79 }
+		check_variable = { ROT_a_national_revolution_4 > 79 }
+	}
+	custom_trigger_tooltip = {
+		tooltip = ROT_unite_country_tr2
+		check_variable = { ROT_a_national_revolution_6 < 100 }
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=53
+	name="STATE_53"
+	provinces={
+		7239 7450 9234 9523 10792 11416 19423 19443 19509 19510 19591 19678 
+	}
+	resources = {
+		chromium = 5
+	}
+	history = {
+		owner = PEO
+		add_core_of = PEO
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			7239 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			7239 2
+		}
+	}
+	manpower=271000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

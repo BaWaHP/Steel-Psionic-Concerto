@@ -1,0 +1,21 @@
+characters={
+
+	FTC_daryl_starburst = {		#达里尔·星辉
+   		name = FTC_daryl_starburst
+   		portraits = {
+   			civilian = {
+   				large="GFX_FTC_daryl_starburst"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_FTC_daryl_starburst"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = market_liberalism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

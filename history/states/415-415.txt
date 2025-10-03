@@ -1,0 +1,32 @@
+
+state={
+	id=415
+	name="STATE_415"
+	provinces={
+		37 2065 4412 9607 19665 19684 19747 19758 19780 19832 19833 19902 19986 
+	}
+	resources = {
+		steel = 23
+	}
+	history = {
+		owner = ROT
+		add_core_of = ROT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			synthetic_refinery = 1
+			arms_factory = 1
+			air_base = 3
+		}
+		victory_points = {
+			37 20
+		}
+		victory_points = {
+			19986 20
+		}
+	}
+	manpower = 4100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

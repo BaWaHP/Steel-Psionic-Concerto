@@ -1,0 +1,21 @@
+characters={
+
+	GOS_stone_shield_balto = {		#石盾·巴尔托
+   		name = GOS_stone_shield_balto
+   		portraits = {
+   			civilian = {
+   				large="GFX_GOS_stone_shield_balto"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_GOS_stone_shield_balto"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

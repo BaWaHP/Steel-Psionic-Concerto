@@ -1,0 +1,209 @@
+﻿capital = 344
+
+oob = "ROK"
+
+set_convoys = 0
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.5
+
+#选举事件用变量
+set_variable = { rok_worldunion_democrat_votes = 0 } #社民党票数
+set_variable = { rok_liberal_republican_votes = 0 } #新民主党票数
+set_variable = { rok_conservative_republican_votes = 0 } #民主党票数
+#set_variable = { rok_remaining_vote_event_num = 4 } #剩余选举事件数量
+
+set_politics = {
+	ruling_party = liberal_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 5
+	revolutionary_communism = 5
+	worldunion_socialist = 5
+	worldunion_democrat = 20
+	liberal_republican = 30
+	conservative_republican = 5
+	authoritarian_republican = 2
+	national_socialist = 10
+	authoritarian_nationalism = 10
+	paternal_autocrat = 8
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	early_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	armored_car1 = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	infantry_weapons = 1
+	modernized_infantry_uniforms = 1
+	armored_car2 = 1
+	anti_mob_blunt = 1
+	melee_weapons_I = 1
+	light_infantry_weapons = 1
+	tech_mountaineers = 1
+	marines = 1
+	tech_support = 1
+	basic_train = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			photo_reconnaisance = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battlecruiser = 1
+		early_battleship = 1
+		transport = 1
+		early_carrier = 1
+		early_submarine = 1
+	}
+	else = {
+		set_technology = {
+			early_ship_hull_light = 1
+			smoke_generator = 1
+			basic_depth_charges = 1
+			sonar = 1
+			early_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			early_ship_hull_carrier = 1
+			basic_torpedo = 1
+			early_ship_hull_submarine = 1
+			basic_battery = 1
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			mtg_transport = 1
+		}
+	}
+}
+
+recruit_character = ROK_moser_heludon
+recruit_character = ROK_krakow_congress
+recruit_character = ROK_katarzyna_werner
+
+recruit_character = ROK_stahl_wickes
+recruit_character = ROK_emmy_puskia
+recruit_character = ROK_henrik_lofsky
+recruit_character = ROK_corriman_wickrena
+
+recruit_character = ROK_osinski_heidemann
+recruit_character = ROK_ROK_priest_jankovsky
+recruit_character = ROK_polz_okovsky
+recruit_character = ROK_andre_clemens
+recruit_character = ROK_josef_helvikowski
+recruit_character = ROK_none_1
+recruit_character = ROK_velkori_venavsky
+recruit_character = ROK_konstantin_ostrovsky
+recruit_character = ROK_velislank_yansolivsky
+
+#内阁
+recruit_character = ROK_slimander_volinkowski
+recruit_character = ROK_wolfschild_veliwski
+recruit_character = ROK_andrew_fields
+recruit_character = ROK_shevelid_oakleaf
+recruit_character = ROK_villarama_selianski
+recruit_character = ROK_hayevcliffe_oswicki
+recruit_character = ROK_willimann_hefriede_hindriemann
+
+#将领
+recruit_character = ROK_shadyrov_rikovskyn
+recruit_character = ROK_alejandro_vednovsky
+recruit_character = ROK_alexandra_vysokov
+recruit_character = ROK_blanka_velimavsky
+recruit_character = ROK_karen_swifliard
+recruit_character = ROK_breshin_podovsky
+recruit_character = ROK_damian_sverloff
+recruit_character = ROK_jerzy_kosintsovsky
+recruit_character = ROK_carolina_cliff
+
+add_ideas = {
+	ROK_continous_promoted_democracy
+	ROK_stabiliy_based_on_one
+	ROK_about_to_die
+	ROK_legacy_of_industrialization
+	ROK_army_of_ambition
+	ROK_influence_from_new_revolution_party
+	ROK_memory_of_donvodsk
+	ROK_old_eagle
+	ROK_slimander_volinkowski
+	ROK_wolfschild_veliwski
+	ROK_andrew_fields
+}

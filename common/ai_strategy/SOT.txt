@@ -1,0 +1,25 @@
+SOT_help_CBI_whatever_it_takes = {
+	allowed = { tag = SOT }
+	enable = { always = yes }
+
+	abort = {
+		OR = {
+			has_global_flag = SPC_region_unified_global_11
+			CBI = { exists = no }
+		}
+	}
+
+	ai_strategy = {
+        type = build_army
+		id = infantry
+		value = 100
+    }
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CBI
+		value = 999
+	}
+}
+
+

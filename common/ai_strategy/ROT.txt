@@ -1,0 +1,11 @@
+ROT_for_the_unification = {
+	allowed = { tag = ROT }
+	enable = { always = yes }
+	abort = { has_global_flag = SPC_region_unified_global_4 }
+
+	ai_strategy = {
+        type = force_build_armies
+        value = 50
+    }
+}
+

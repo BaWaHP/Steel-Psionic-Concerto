@@ -1,0 +1,38 @@
+
+state={
+	id=352
+	name="STATE_352"
+	resources={
+		steel=24.000
+		magic_crystal=12.000
+	}
+
+	history={
+		owner = BSK
+		add_core_of = BSK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+
+		}
+		victory_points = {
+			18635 15 
+		}
+		victory_points = {
+			18676 3 
+		}
+		victory_points = {
+			10789 5 
+		}
+
+	}
+
+	provinces={
+		4287 4544 4798 4857 6283 6589 8787 9777 10789 18442 18476 18547 18580 18589 18635 18676 18738 18744 18905 
+	}
+	manpower=3520000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

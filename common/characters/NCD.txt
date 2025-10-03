@@ -1,0 +1,624 @@
+characters={
+
+   	NCD_none_1 = {		#无
+   		name = NCD_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = pioneer_communism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+   	NCD_none_2 = {		#无
+   		name = NCD_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = revolutionary_communism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_west_spear_1 = {		#韦斯特·斯佩尔
+   		name = NCD_west_spear
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = humane_socialism
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_west_spear_2 = {		#韦斯特·斯佩尔
+   		name = NCD_west_spear
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = democratic_socialism
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_ottacite_redd = {		#欧塔西特·雷德
+   		name = NCD_ottacite_redd
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	NCD_nalle_westerle_1 = {		#拿勒·威斯特尔
+   		name = NCD_nalle_westerle
+   		portraits = {
+			civilian = {
+				large="GFX_NCD_nalle_westerle"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_NCD_nalle_westerle"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = NCD_nalle_westerle_desc
+   			ideology = democratic_republican
+   			traits = { NCD_republic_struggler }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_nalle_westerle_2 = {		#拿勒·威斯特尔
+   		name = NCD_nalle_westerle
+   		portraits = {
+			civilian = {
+				large="GFX_NCD_nalle_westerle"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_NCD_nalle_westerle"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = NCD_nalle_westerle_desc
+   			ideology = conservative_liberalism
+   			traits = { NCD_republic_struggler }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_nalle_westerle_idea
+			desc = NCD_nalle_westerle_desc
+			allowed = { original_tag = NCD }
+			traits = { compassionate_gentleman }
+		}
+	}
+
+	NCD_temp_order_committee = {		#临时秩序委员会
+   		name = NCD_temp_order_committee
+   		portraits = {
+			civilian = {
+				large="GFX_NCD_temp_order_committee"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_NCD_temp_order_committee"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = NCD_temp_order_committee_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { NCD_trusted_by_people }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_per_henschel = {		#佩尔·亨舍尔
+   		name = NCD_per_henschel
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	NCD_heinrich_tzur_1 = {		#海因尼·茨尔
+   		name = NCD_heinrich_tzur
+   		portraits = {
+			civilian = {
+				large="GFX_NCD_heinrich_tzur"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_NCD_heinrich_tzur"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = NCD_heinrich_tzur_desc
+   			ideology = national_socialist_subtype
+   			traits = { NCD_extremist_militarists }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_heinrich_tzur_2 = {		#海因尼·茨尔
+   		name = NCD_heinrich_tzur
+   		portraits = {
+			civilian = {
+				large="GFX_NCD_heinrich_tzur"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_NCD_heinrich_tzur"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = NCD_heinrich_tzur_desc
+   			ideology = militaristic_hegemonism
+   			traits = { NCD_extremist_militarists }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_artus_tzur = {		#阿尔特斯·茨尔
+   		name = NCD_artus_tzur
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = military_dictatorship
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+   	NCD_none_3 = {		#无
+   		name = NCD_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = wizard_rules_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+   	NCD_none_4 = {		#无
+   		name = NCD_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = religious_extremism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_none_5 = {		#无
+   		name = NCD_none
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+   			ideology = anarchism_subtype
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	NCD_kerr_celydrea = {		#克尔·西莉迪亚
+   		name = NCD_kerr_celydrea
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	NCD_uller_spepp = {		#乌尔勒·斯佩普
+   		name = NCD_uller_spepp
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_uller_spepp_idea
+			desc = NCD_uller_spepp_desc
+			allowed = { original_tag = NCD }
+			traits = { financial_expert armament_enthusiasts }
+		}
+	}
+
+	NCD_portia_hall = {		#波斯特亚·霍尔
+   		name = NCD_portia_hall
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_portia_hall_idea
+			desc = NCD_portia_hall_desc
+			allowed = { original_tag = NCD }
+			traits = { technocrat NCD_fearing_wars }
+		}
+	}
+
+	NCD_vitensiane_helenl = {		#维特斯尼亚·海伦
+   		name = NCD_vitensiane_helenl
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_vitensiane_helenl_idea
+			desc = NCD_vitensiane_helenl_desc
+			allowed = { original_tag = NCD }
+			traits = { propaganda_expert NCD_silent_supporter }
+		}
+	}
+
+	NCD_kirsten_scherrer = {		#柯斯汀·舍尔勒
+   		name = NCD_kirsten_scherrer
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_kirsten_scherrer_idea
+			desc = NCD_kirsten_scherrer_desc
+			allowed = { original_tag = NCD }
+			traits = { NCD_commi_cearer war_industrialist }
+		}
+	}
+
+	NCD_hispaniola = {		#卡斯帕尼亚
+   		name = NCD_hispaniola
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_hispaniola_idea
+			allowed = { original_tag = NCD }
+			traits = { prince_of_terror NCD_creepy_smiler }
+		}
+	}
+
+	NCD_ck_kljalfen = {		#丙克·克尔亚芬
+   		name = NCD_ck_kljalfen
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = NCD_ck_kljalfen_idea
+			allowed = { original_tag = NCD }
+			traits = { NCD_military_organizer immature_fortification_engineer }
+		}
+	}
+
+	NCD_raphael_bern = {		#拉斐尔·伯尔尼
+   		name = NCD_raphael_bern
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 3
+			traits = { NCD_military_moderatist old_guard politically_connected }
+		}
+	}
+
+	NCD_heinie_zell = {		#海因尼·茨尔
+   		name = NCD_heinie_zell
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		field_marshal = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+			traits = { NCD_military_radicalist NCD_obstinate_judgment trickster }
+		}
+	}
+
+	NCD_felix_hull = {		#费利克斯·赫尔
+   		name = NCD_felix_hull
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			traits = { NCD_military_radicalist harsh_leader infantry_officer }
+		}
+	}
+
+	NCD_carl_stebbingsen = {		#卡尔·斯特比尔森
+   		name = NCD_carl_stebbingsen
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { NCD_military_radicalist career_officer trait_reckless NCD_marionette }
+		}
+	}
+
+	NCD_kristin_wallen = {		#克里斯汀·瓦伦
+   		name = NCD_kristin_wallen
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { NCD_military_moderatist old_guard armor_officer NCD_gutless }
+		}
+	}
+
+	NCD_LingChete = {		#林彻特
+   		name = NCD_LingChete
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			traits = { NCD_Ling_blood NCD_plain_fighter }
+		}
+	}
+
+	NCD_clivia_celidia = {		#克里肯亚·西莉迪亚
+   		name = NCD_clivia_celidia
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { NCD_military_royalist NCD_royal_family infantry_officer }
+		}
+	}
+
+	NCD_anstre_cheliat = {		#安斯特列·切利雅特
+   		name = NCD_anstre_cheliat
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { NCD_military_republican NCD_opportunist NCD_eyes_behind }
+		}
+	}
+
+}

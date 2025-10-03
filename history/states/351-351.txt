@@ -1,0 +1,35 @@
+
+state={
+	id=351
+	name="STATE_351"
+	resources={
+		aluminium=14.000
+		magic_crystal=6.000
+	}
+
+	history={
+		owner = HGL
+		add_core_of = HGL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+
+		}
+		victory_points = {
+			4025 20
+		}
+		victory_points = {
+			19083 8 
+		}
+
+	}
+
+	provinces={
+		583 2623 4025 5921 9609 10385 11980 12047 18994 19005 19082 19083 19174 19196 19245 19304 19330 19339 
+	}
+	manpower=3270000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

@@ -1,0 +1,35 @@
+scripted_gui = {
+
+	TPG_Gilania_Archduke_health_state_category_ui = {
+		context_type = decision_category
+		window_name = "TPG_crystalize_progress_window"
+		properties = {
+			TPG_crystalize_progressbar = {
+				frame = TPG_crystalize_progress
+			}
+		}
+	}
+	
+	TPG_wom_influence_window_ui = {
+		context_type = decision_category
+		window_name = "TPG_wom_influence_window"
+		properties = {
+			TPG_domestic_ind_dev_icon = {
+				image = "[GET_TPG_domestic_ind_dev_icon]"
+			}
+			TPG_wom_influence_level_icon = {
+				image = "[GET_TPG_wom_influence_level_icon]"
+			}
+		}
+	}
+	
+	TPG_military_reform_window_ui = {
+		context_type = decision_category
+		window_name = "TPG_military_reform_window"
+		properties = {
+			TPG_military_reform_icon = {
+				image = "TPG_military_reform_icon"
+			}
+		}
+	}
+}

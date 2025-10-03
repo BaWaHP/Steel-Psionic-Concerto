@@ -1,0 +1,33 @@
+
+state={
+	id=374
+	name="STATE_374"
+	resources={
+		steel = 24
+		magic_crystal = 6
+		aluminium = 8
+		oil = 8
+	}
+
+	history={
+		owner = UPV
+		add_core_of = UPV
+		add_claim_by = ROK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		victory_points = {
+			19659 15 
+		}
+	}
+
+	provinces={
+		4802 7017 7569 10511 19494 19507 19526 19588 19597 19658 19659 19675 
+	}
+	manpower=4600000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=1.000
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=179
+	name="STATE_179"
+
+	resources = {
+		magic_crystal = 48
+		aluminium = 24
+		oil = 12
+	}
+
+	history={
+		owner = UTM
+		add_core_of = UTM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			14921 = { bunker = 2 }
+			air_base = 2
+		}
+		victory_points = {
+			14921 3
+		}
+		victory_points = {
+			4377 10
+		}
+		victory_points = {
+			15082 5
+		}
+	}
+
+	provinces={
+		208 3188 4124 4377 7134 8987 10590 11339 11621 14721 14722 14802 14822 14896 14921 15082 15083 
+	}
+	manpower=840000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

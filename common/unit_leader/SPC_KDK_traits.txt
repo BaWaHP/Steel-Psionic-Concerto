@@ -1,0 +1,20 @@
+leader_traits = {
+	KDK_royal_loyalist = {				#王室效忠者
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = { always = no }
+
+		new_commander_weight = { factor = 0 }
+		ai_will_do = { factor = 1 }
+	}
+	KDK_poplar_alliance_sympathizers = {				#白杨同盟同情者
+		type = land
+		trait_type = personality_trait
+
+		gain_xp = { always = no }
+
+		new_commander_weight = { factor = 0 }
+		ai_will_do = { factor = 1 }
+	}
+}

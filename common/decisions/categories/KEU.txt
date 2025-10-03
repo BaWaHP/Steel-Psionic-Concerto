@@ -1,0 +1,11 @@
+KEU_Merciful_Overlord_death_decision_category = {
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = {
+		tag = KEU
+	}
+	visible = {
+		tag = KEU
+	}
+	visible_when_empty = yes
+	priority = 10
+}

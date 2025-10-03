@@ -1,0 +1,22 @@
+characters={
+	MSA_william_seastrand = {		#威廉姆·西斯特兰德
+   		name = MSA_william_seastrand
+   		portraits = {
+			civilian = {
+				large="GFX_MSA_william_seastrand"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_MSA_william_seastrand"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+   		country_leader = {
+			desc = MSA_william_seastrand_desc
+   			ideology = colonial_government
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

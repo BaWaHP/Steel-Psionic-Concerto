@@ -1,0 +1,44 @@
+﻿capital = 120
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 2
+	revolutionary_communism = 2
+	worldunion_socialist = 1
+	worldunion_democrat = 28
+	liberal_republican = 5
+	conservative_republican = 5
+	authoritarian_republican = 42
+	national_socialist = 2
+	authoritarian_nationalism = 1
+	paternal_autocrat = 12
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 0
+}
+
+recruit_character = NCL_unkown
+recruit_character = NCL_sperdak_chevinson
+recruit_character = NCL_vestigne_lille
+recruit_character = NCL_cheriste_coville
+recruit_character = NCL_tria_orsino
+recruit_character = NCL_wilt_kerchak
+recruit_character = NCL_slendon_griffiths
+recruit_character = NCL_almodi_neri
+recruit_character = NCL_kennet_celidia
+
+add_ideas = {
+	NCL_being_puppet
+	NCL_lack_nation_identity
+}

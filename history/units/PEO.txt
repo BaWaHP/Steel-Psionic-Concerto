@@ -1,0 +1,277 @@
+﻿###templates###
+division_template = {
+	name = "皮奥瑞亚陆军教导队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		military_police = { x = 0 y = 2 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "皮奥瑞亚国防军步兵师"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+division_template = {
+	name = "共和国武装警察部队"
+
+	regiments = {
+		police_infantry = { x = 0 y = 0 }
+		police_infantry = { x = 0 y = 1 }
+		police_infantry = { x = 0 y = 2 }
+		police_infantry = { x = 1 y = 0 }
+		police_infantry = { x = 1 y = 1 }
+		police_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+
+	is_locked = yes
+
+	priority = 0
+}
+
+division_template = {
+	name = "皮奥瑞亚装甲突击师"
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		mot_artillery_brigade = { x = 1 y = 3 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		military_police = { x = 0 y = 3 }
+	}
+
+	is_locked = yes
+
+	priority = 2
+}
+
+division_template = {
+	name = "皮奥瑞亚国防军装甲突击师"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+
+	is_locked = yes
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "联邦武装警察总队"
+		location = 5655
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "共和国卫队"
+		location = 5655
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "吉庆州属武装警察大队"
+		location = 10959
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "联邦武装警察3大队-“科尔师”"
+		location = 19923
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "吉列州属武装警察大队"
+		location = 1520
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦武装警察2大队-自由旅"
+		location = 4852
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "联邦特派维稳大队"
+		location = 20036
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "联邦武装警察4大队-共和之刃"
+		location = 20180
+		division_template = "共和国武装警察部队"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "皮奥瑞亚国防军第1师-大蓝师"
+		location = 19667
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军第2师"
+		location = 19618
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "皮奥瑞亚国防军第3师-合众师"
+		location = 7239
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "皮奥瑞亚国防军第14师"
+		location = 19359
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军第21师-克莱尔·盖尔师"
+		location = 19359
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军装甲教导总队"
+		location = 19359
+		division_template = "皮奥瑞亚国防军装甲突击师"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军第114师-国际师"
+		location = 19249
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军第88师-盖叶师"
+		location = 19069
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚国防军第221师"
+		location = 18922
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "皮奥瑞亚国防军第112师-绿魔师"
+		location = 2863
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "皮奥瑞亚国防军第101师-空中骑士师"
+		location = 9511
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "皮奥瑞亚国防军45师-钢铁师"
+		location = 9013
+		division_template = "皮奥瑞亚国防军步兵师"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "皮奥瑞亚第一步兵集群"
+		location = 4493
+		division_template = "皮奥瑞亚陆军教导队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "皮奥瑞亚步兵教导队"
+		location = 4493
+		division_template = "皮奥瑞亚陆军教导队"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "皮奥瑞亚装甲教导总团"
+		location = 19533
+		division_template = "皮奥瑞亚装甲突击师"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+}

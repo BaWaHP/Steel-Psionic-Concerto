@@ -1,0 +1,29 @@
+
+state={
+	id=186
+	name="STATE_186"
+
+	resources = {
+		steel = 24
+	}
+
+	history={
+		owner = IPK
+		add_core_of = IPK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			15422 10
+		}
+	}
+
+	provinces={
+		6113 9199 9575 10386 11966 15249 15332 15422 15443 15552 15624 15690 
+	}
+	manpower = 810000 
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,23 @@
+characters={
+
+	ALR_Slate_Moria = {		#板岩·莫瑞亚
+   		name = ALR_Slate_Moria
+   		portraits = {
+   			civilian = {
+   				large="GFX_ALR_Slate_Moria"
+   				small="GFX_idea_ALR_Slate_Moria"
+   			}
+   			army = {
+				large="GFX_ALR_Slate_Moria"
+				small="GFX_idea_ALR_Slate_Moria"
+   			}
+   		}
+   		country_leader = {
+			desc = ALR_Slate_Moria_desc
+   			ideology = dual_system_of_constitutional_monarchy
+   			traits = { financial_expert }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

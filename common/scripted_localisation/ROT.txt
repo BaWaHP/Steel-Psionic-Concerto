@@ -1,0 +1,271 @@
+
+defined_text = {  #帝国残影 or 驱逐南巴遗毒
+	name = ROT_kick_imperialist_ass_loc
+	text = {
+		trigger = { has_government = national_socialist }
+		localization_key = ROT_kick_imperialist_ass_loc_1
+	}
+	text = {
+		trigger = { has_government = religious_extremism }
+		localization_key = ROT_kick_imperialist_ass_loc_2
+	}	
+	text = {
+		localization_key = ROT_kick_imperialist_ass_loc_2
+	}	
+}
+
+defined_text = {  #帝国残影 or 驱逐南巴遗毒 desc
+	name = ROT_kick_imperialist_ass_desc_loc
+	text = {
+		trigger = { has_government = national_socialist }
+		localization_key = ROT_kick_imperialist_ass_desc_loc_1
+	}
+	text = {
+		trigger = { has_government = religious_extremism }
+		localization_key = ROT_kick_imperialist_ass_desc_loc_2
+	}	
+	text = {
+		localization_key = ROT_kick_imperialist_ass_desc_loc_2
+	}	
+}
+
+defined_text = {  #两军对峙
+	name = ROT_two_army_stand_loc
+	text = {
+		trigger = {  
+			power_balance_value = {
+				id = ROT_two_army_stand_bop
+				value < -0.5
+			}
+		}
+		localization_key = ROT_two_army_stand_loc_1
+	}
+	text = {
+		trigger = {
+			power_balance_value = {
+				id = ROT_two_army_stand_bop
+				value < 0
+			}
+		}
+		localization_key = ROT_two_army_stand_loc_2
+	}	
+	text = {
+		trigger = {
+			power_balance_value = {
+				id = ROT_two_army_stand_bop
+				value < 0.5
+			}
+		}
+		localization_key = ROT_two_army_stand_loc_3
+	}
+	text = {
+		localization_key = ROT_two_army_stand_loc_4
+	}	
+}
+
+defined_text = {  #紧张度
+	name = ROT_two_army_tension_loc
+	text = {
+		trigger = { check_variable = { ROT_two_army_tension < 20 } }
+		localization_key = ROT_two_army_tension_loc_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_two_army_tension < 60 } }
+		localization_key = ROT_two_army_tension_loc_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_two_army_tension < 101 } }
+		localization_key = ROT_two_army_tension_loc_3
+	}
+	text = {
+		localization_key = ROT_two_army_tension_loc_3
+	}	
+}
+
+defined_text = {  #帝国残影 or 驱逐南巴遗毒 desc
+	name = ROT_troops_approaching_capital_loc
+	text = {
+		trigger = { has_government = national_socialist }
+		localization_key = ROT_troops_approaching_capital_loc_1
+	}
+	text = {
+		trigger = { has_government = religious_extremism }
+		localization_key = ROT_troops_approaching_capital_loc_2
+	}	
+	text = {
+		localization_key = ROT_troops_approaching_capital_loc_2
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_1
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_1 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_1_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_1 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_1_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_1 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_1_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_1 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_1_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_1 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_1_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_1_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_2
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_2 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_2_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_2 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_2_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_2 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_2_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_2 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_2_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_2 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_2_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_2_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_3
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_3 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_3_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_3 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_3_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_3 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_3_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_3 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_3_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_3 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_3_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_3_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_4
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_4 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_4_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_4 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_4_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_4 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_4_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_4 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_4_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_4 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_4_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_4_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_5
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_5 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_5_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_5 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_5_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_5 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_5_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_5 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_5_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_5 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_5_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_5_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_Faction_6
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_6 < 13 } }
+		localization_key = GFX_ROT_a_national_revolution_6_1
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_6 < 38 } }
+		localization_key = GFX_ROT_a_national_revolution_6_2
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_6 < 63 } }
+		localization_key = GFX_ROT_a_national_revolution_6_3
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_6 < 88 } }
+		localization_key = GFX_ROT_a_national_revolution_6_4
+	}
+	text = {
+		trigger = { check_variable = { ROT_a_national_revolution_6 < 101 } }
+		localization_key = GFX_ROT_a_national_revolution_6_5
+	}
+	text = {
+		localization_key = GFX_ROT_a_national_revolution_6_5
+	}	
+}
+
+defined_text = {
+	name = Get_ROT_bop_icon_left
+	text = {
+		trigger = { has_government = national_socialist }
+		localization_key = "GFX_Get_ROT_bop_icon_left_1"
+	}
+	text = {
+		localization_key = "GFX_Get_ROT_bop_icon_left_2"
+	}
+}

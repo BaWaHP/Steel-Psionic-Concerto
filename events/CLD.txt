@@ -1,0 +1,702 @@
+﻿###########################
+# Ace pilots Events
+###########################
+
+add_namespace = CLD
+
+#支部建在连队上
+country_event = {
+	id = CLD.1
+	title = CLD.1.t
+	desc = CLD.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.1.a
+	}
+}
+
+#当那一天来临
+country_event = {
+	id = CLD.2
+	title = CLD.2.t
+	desc = CLD.2.d
+	picture = GFX_report_event_CLD_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.2.a
+	}
+}
+
+#星星之火
+country_event = {
+	id = CLD.3
+	title = CLD.3.t
+	desc = CLD.3.d
+	picture = GFX_report_event_CLD_3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.3.a
+	}
+}
+
+#113号命令
+country_event = {
+	id = CLD.4
+	title = CLD.4.t
+	desc = CLD.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.4.a
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+#大会
+country_event = {
+	id = CLD.5
+	title = CLD.5.t
+	desc = CLD.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.5.a
+	}
+}
+
+#救赎
+country_event = {
+	id = CLD.6
+	title = CLD.6.t
+	desc = CLD.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.6.a
+	}
+}
+
+#日记
+country_event = {
+	id = CLD.7
+	title = CLD.7.t
+	desc = CLD.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.7.a
+	}
+}
+
+#守则
+country_event = {
+	id = CLD.8
+	title = CLD.8.t
+	desc = CLD.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.8.a
+	}
+}
+
+#剧变（1）
+country_event = {
+	id = CLD.9
+	title = CLD.9.t
+	desc = CLD.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.9.a
+		country_event = {
+			id = CLD.10
+			days = 20
+		}
+	}
+}
+
+#剧变（2）
+country_event = {
+	id = CLD.10
+	title = CLD.10.t
+	desc = CLD.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.10.a
+		country_event = {
+			id = CLD.11
+			days = 20
+		}
+	}
+}
+
+#剧变（3）
+country_event = {
+	id = CLD.11
+	title = CLD.11.t
+	desc = CLD.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.11.a
+		country_event = {
+			id = CLD.12
+			days = 20
+		}
+	}
+}
+
+#剧变（4）
+country_event = {
+	id = CLD.12
+	title = CLD.12.t
+	desc = CLD.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.12.a
+		country_event = {
+			id = CLD.13
+			days = 20
+		}
+	}
+}
+
+#剧变（5）
+country_event = {
+	id = CLD.13
+	title = CLD.13.t
+	desc = CLD.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.13.a
+		country_event = {
+			id = CLD.14
+			days = 20
+		}
+	}
+}
+
+#剧变（6）
+country_event = {
+	id = CLD.14
+	title = CLD.14.t
+	desc = CLD.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.14.a
+	}
+}
+
+#胜利之夜
+country_event = {
+	id = CLD.15
+	title = CLD.15.t
+	desc = CLD.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.15.a
+	}
+}
+
+#翻飞的木屑
+country_event = {
+	id = CLD.16
+	title = CLD.16.t
+	desc = CLD.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.16.a
+		hidden_effect = {
+			country_event = {
+				id = CLD.17
+				days = 3
+			}
+		}
+	}
+}
+
+#急刹车
+country_event = {
+	id = CLD.17
+	title = CLD.17.t
+	desc = CLD.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.17.a
+	}
+}
+
+#熟能生巧
+country_event = {
+	id = CLD.18
+	title = CLD.18.t
+	desc = CLD.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.18.a
+	}
+}
+
+#肃清
+country_event = {
+	id = CLD.19
+	title = CLD.19.t
+	desc = CLD.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.19.a
+	}
+}
+
+#公审
+country_event = {
+	id = CLD.20
+	title = CLD.20.t
+	desc = CLD.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.20.a
+	}
+}
+
+#宣言
+country_event = {
+	id = CLD.21
+	title = CLD.21.t
+	desc = CLD.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.21.a
+	}
+}
+
+#新规定
+country_event = {
+	id = CLD.22
+	title = CLD.22.t
+	desc = CLD.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.22.a
+	}
+}
+
+#清单
+country_event = {
+	id = CLD.23
+	title = CLD.23.t
+	desc = CLD.23.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.23.a
+	}
+}
+
+#抉择
+country_event = {
+	id = CLD.24
+	title = CLD.24.t
+	desc = CLD.24.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.24.a
+	}
+}
+
+#争论
+country_event = {
+	id = CLD.25
+	title = CLD.25.t
+	desc = CLD.25.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.25.a
+	}
+}
+
+#改造完成
+country_event = {
+	id = CLD.26
+	title = CLD.26.t
+	desc = CLD.26.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.26.a
+	}
+}
+
+#七嘴八舌
+country_event = {
+	id = CLD.27
+	title = CLD.27.t
+	desc = CLD.27.d
+	picture = GFX_report_event_CLD_26
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.27.a
+	}
+}
+
+#土包子进军校
+country_event = {
+	id = CLD.28
+	title = CLD.28.t
+	desc = CLD.28.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.28.a
+		country_event = {
+			id = CLD.29
+			days = 7
+		}
+	}
+}
+
+#新教员
+country_event = {
+	id = CLD.29
+	title = CLD.29.t
+	desc = CLD.29.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.29.a
+	}
+}
+
+#军校参谋培训
+country_event = {
+	id = CLD.30
+	title = CLD.30.t
+	desc = CLD.30.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.30.a
+	}
+}
+
+#屹立在绿海上的合作社
+country_event = {
+	id = CLD.31
+	title = CLD.31.t
+	desc = CLD.31.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.31.a
+		country_event = {
+			id = CLD.32
+			days = 15
+		}
+	}
+}
+
+#钢铁与梦想
+country_event = {
+	id = CLD.32
+	title = CLD.32.t
+	desc = CLD.32.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.32.a
+		add_equipment_to_stockpile = {
+			type = convoy
+			amount = 20
+		}
+		country_event = {
+			id = CLD.33
+			days = 15
+		}
+	}
+}
+
+#黄昏惊魂
+country_event = {
+	id = CLD.33
+	title = CLD.33.t
+	desc = CLD.33.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.33.a
+	}
+}
+
+#挫败破坏
+country_event = {
+	id = CLD.34
+	title = CLD.34.t
+	desc = CLD.34.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.34.a
+		army_experience = 5
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 10
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 5
+		}
+		NCD = { add_manpower = -20 }
+	}
+}
+
+#边境遇袭报告
+country_event = {
+	id = CLD.35
+	title = CLD.35.t
+	desc = CLD.35.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.35.a
+		add_manpower = -30
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -20
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -10
+		}
+		army_experience = 5
+	}
+}
+
+#敌特恐怖袭击
+country_event = {
+	id = CLD.36
+	title = CLD.36.t
+	desc = CLD.36.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.36.a
+		add_manpower = -150
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -50
+		}
+		add_stability = -0.05
+	}
+}
+
+#敌特传单
+country_event = {
+	id = CLD.37
+	title = CLD.37.t
+	desc = CLD.37.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.37.a
+		add_stability = -0.03
+		add_war_support = -0.05
+	}
+}
+
+#军工厂遇袭
+country_event = {
+	id = CLD.38
+	title = CLD.38.t
+	desc = CLD.38.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.38.a
+		random_owned_state = {
+			limit = { arms_factory > 0 }
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = -20
+		}
+		add_manpower = -2
+	}
+}
+
+#军火库爆炸
+country_event = {
+	id = CLD.39
+	title = CLD.39.t
+	desc = CLD.39.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.39.a
+		add_stability = -0.02
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -100
+		}
+		add_equipment_to_stockpile = {
+			type = uniform_equipment
+			amount = -200
+		}
+	}
+}
+
+#尴尬
+country_event = {
+	id = CLD.40
+	title = CLD.40.t
+	desc = CLD.40.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.40.a
+		country_event = {
+			id = CLD.41
+			days = 5
+		}
+	}
+}
+
+#夜谈
+country_event = {
+	id = CLD.41
+	title = CLD.41.t
+	desc = CLD.41.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.41.a
+	}
+}
+
+###新闻###
+
+add_namespace = CLDNews
+
+news_event = {
+	id = CLDNews.1
+	title = CLDNews.1.t
+	desc = CLDNews.1.d
+	picture = GFX_news_event_generic_21
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = CLDNews.1.a
+		hidden_effect = {
+			every_country = {
+				set_country_flag = superevent_show_flag
+				set_country_flag = SPC_SE_UK_reunification_CR_flag
+				scoped_play_song = "SE_UK_reunification_CR_sound"
+			}
+		}
+	}
+}

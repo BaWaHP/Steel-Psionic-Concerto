@@ -1,0 +1,29 @@
+
+state={
+	id=449
+	name="STATE_449"
+	provinces={
+		2033 5692 6149 9175 9322 10383 10819 11713 19284 19391 19410 19441 19477 19489 
+	}
+	resources = {
+		magic_crystal = 30
+		aluminium = 20
+	}
+	history = {
+		owner = KDK
+		add_core_of = KDK
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			6149 3
+		}
+		victory_points = {
+			10383 1
+		}
+	}
+	manpower = 114980
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=460
+	name="STATE_460"
+	provinces={
+		311 421 605 1454 3493 5079 10817 12093 12199 18521 18577 18613 18642 18686 18725 18736 18838 18958 19019 19044 
+	}
+	resources = {
+		magic_crystal = 15
+	}
+	history = {
+		owner = MTV
+		add_core_of = MTV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+		}
+		victory_points = {
+			605 15
+		}
+		victory_points = {
+			18725 10
+		}
+		victory_points = {
+			18577 5
+		}
+	}
+	manpower = 2100000
+	state_category = city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

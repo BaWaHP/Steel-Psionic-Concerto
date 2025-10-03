@@ -1,0 +1,640 @@
+UPV_reform_by_the_Grand_Duchess = {
+	UPV_retreat_to_advance = {		#以退为进
+		icon = eng_trade_unions_demand
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 10
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			add_political_power = 50
+			UPV_Duchess_reform_progress_down_1 = yes
+		}
+	}
+	UPV_attract_the_army = {		#拉拢军队
+		icon = eng_ally_imperialist_coup
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 25
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 10
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_progress_up_1 = yes
+		}
+	}
+	UPV_participate_aristocrat_party = {		#参加贵族宴会
+		icon = gre_investment_decisions
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 10
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_aristocrat_attitude_up_1 = yes
+		}
+	}
+	UPV_dinner_with_parliamentarians = {		#与议会派共进晚餐
+		icon = gre_investment_decisions
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 15
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 10
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_parliament_attitude_up = yes
+		}
+	}
+	UPV_hold_general_meeting = {		#召开全体大会
+		icon = hol_exchange_intelligence_data
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 20
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_progress_up_1 = yes
+			UPV_Duchess_reform_aristocrat_attitude_up_1 = yes
+			UPV_Duchess_reform_parliament_attitude_up = yes
+		}
+	}
+	UPV_attack_aristocrat_behavior = {		#抨击贵族行径
+		icon = generic_speech
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_progress_up_1 = yes
+			UPV_Duchess_reform_aristocrat_attitude_down_1 = yes
+		}
+	}
+	UPV_attack_parliament_policy = {		#批评议会政策
+		icon = generic_speech
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_progress_up_1 = yes
+			UPV_Duchess_reform_parliament_attitude_down_1 = yes
+		}
+	}
+	UPV_fight_over_governmental_corruption = {		#打击政府腐败
+		icon = generic_arrest
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			UPV_Duchess_reform_progress_up_2 = yes
+			UPV_Duchess_reform_aristocrat_attitude_down_2 = yes
+			UPV_Duchess_reform_parliament_attitude_down_2 = yes
+		}
+	}
+	UPV_problem_of_Duchess_herself = {		#大公的问题？
+		icon = SWI_no_elected_president
+
+		available = { NOT = { has_country_flag = UPV_Duchess_reforming_flag } }
+		visible = { NOT = { has_country_flag = UPV_Duchess_reform_over } }
+
+		cost = 40
+		fire_only_once = yes
+		days_remove = 35
+
+		ai_will_do = { factor = 1 }
+
+		modifier = { stability_factor = -0.1 }
+
+		complete_effect = {
+			set_country_flag = UPV_Duchess_reforming_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_Duchess_reforming_flag
+			country_event = UPV.1
+		}
+	}
+	UPV_advance_military_reform = {		#促进军队改革
+		icon = generic_prepare_civil_war
+
+		available = { has_army_experience > 14 }
+		visible = { NOT = { check_variable = { UPV_Duchess_reform_title_var = 6 } } }
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 30
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			experience_gain_army_factor = 0.05
+			army_org_factor = -0.15
+		}
+
+		complete_effect = {
+			army_experience = -15
+		}
+
+		remove_effect = {
+			UPV_military_reform_effect = yes
+		}
+	}
+}
+
+UPV_industrialization_process = {
+	UPV_industrilization_point_weekly_add = { 		#每日点数增长
+		icon = generic_decision
+		allowed = { tag = UPV }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 7
+
+		timeout_effect = {  
+			activate_mission = UPV_industrilization_point_weekly_add
+			add_to_variable = { UPV_industrialization_point = UPV_industrialization_point_weekly }
+			custom_effect_tooltip = UPV_industrilization_point_weekly_add_tt
+			clamp_variable = {
+				var = UPV_industrialization_point
+				min = 0
+				max = 100
+			}
+		}
+	}
+	UPV_get_support_from_tcw = {		#获取托莱多的支持
+		icon = hol_exchange_intelligence_data
+
+		available = { NOT = { has_country_flag = UPV_industrilization_reforming_flag } }
+		visible = {}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+		}
+
+		remove_effect = {
+			UPV_industrialization_point_20 = yes
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_get_support_from_gdd = {		#寻求顿伏茨克的支持
+		icon = hol_exchange_intelligence_data
+
+		available = { NOT = { has_country_flag = UPV_industrilization_reforming_flag } }
+		visible = {}
+
+		cost = 30
+		fire_only_once = no
+		days_remove = 20
+		days_re_enable = 30
+
+		ai_will_do = { factor = 1 }
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			random_owned_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				set_variable = { ROOT.UPV_get_support_from_gdd_state_id = THIS.id }
+			}
+		}
+
+		remove_effect = {
+			UPV_industrialization_point_20 = yes
+			var:UPV_get_support_from_gdd_state_id = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_compromise_to_rok = {		#向克拉亚诺妥协
+		icon = hol_exchange_intelligence_data
+
+		available = { NOT = { has_country_flag = UPV_industrilization_reforming_flag } }
+		visible = {}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 10
+		days_re_enable = 20
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {
+			industrial_capacity_factory = -0.2
+			custom_modifier_tooltip = UPV_industrialization_point_weekly_1_mod
+		}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			hidden_effect = {
+				UPV_industrialization_point_weekly_1 = yes	
+			}
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+			add_to_variable = { UPV_industrialization_point_weekly = -1 }
+		}
+	}
+	UPV_invest_military_facility = {		#投资军用设施
+		icon = ger_military_buildup
+
+		available = { 
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = { UPV_industrialization_point = 100 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = UPV_invest_military_facility_tr
+				check_variable = { UPV_invest_military_facility_count < 3 }
+			}
+		}
+		visible = { check_variable = { UPV_invest_military_facility_count < 3 } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			add_to_variable = { UPV_invest_military_facility_count = 1 }
+			UPV_industrialization_point_cost_100 = yes
+		}
+
+		remove_effect = {
+			364 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_invest_civilian_construction = {		#投资民用建设
+		icon = gre_investment_decisions
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = {
+					UPV_industrialization_point = 100
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = UPV_invest_civilian_construction_tr
+				check_variable = { UPV_invest_civilian_construction_count < 3 }
+			}
+		}
+		visible = { check_variable = { UPV_invest_civilian_construction_count < 3 } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			add_to_variable = { UPV_invest_civilian_construction_count = 1 }
+			UPV_industrialization_point_cost_100 = yes
+		}
+
+		remove_effect = {
+			374 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_renew_industrial_equipment = {		#工厂设备更新
+		icon = generic_merge_plant_materiel
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = {
+					UPV_industrialization_point = 100
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = UPV_renew_industrial_equipment_tr
+				check_variable = { UPV_renew_industrial_equipment_count < 2 }
+			}
+		}
+		visible = { check_variable = { UPV_renew_industrial_equipment_count < 2 } }
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			add_to_variable = { UPV_renew_industrial_equipment_count = 1 }
+			UPV_industrialization_point_cost_100 = yes
+			add_to_variable = { UPV_newly_developed_industries_dynamic_modifier_icf = 0.05 }
+			custom_effect_tooltip = UPV_renew_industrial_equipment_tt
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_expand_industrial_lands = {		#扩张工业用地
+		icon = generic_operation
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = {
+					UPV_industrialization_point = 100
+				}
+			}
+		}
+		visible = {}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			UPV_industrialization_point_cost_100 = yes
+			add_to_variable = { UPV_newly_developed_industries_dynamic_modifier_gbsf = 0.05 }
+			custom_effect_tooltip = UPV_expand_industrial_lands_tt
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_reinforce_factory_management = {		#加强工厂管理
+		icon = generic_speech
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = {
+					UPV_industrialization_point = 100
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = UPV_reinforce_factory_management_tr
+				check_variable = { UPV_reinforce_factory_management_count < 2 }
+			}
+		}
+		visible = {}
+
+		cost = 0
+		fire_only_once = no
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			add_to_variable = { UPV_reinforce_factory_management_count = 1 }
+			UPV_industrialization_point_cost_100 = yes
+			add_to_variable = { UPV_newly_developed_industries_dynamic_modifier_pfmef = 0.05 }
+			custom_effect_tooltip = UPV_reinforce_factory_management_tt
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_mining_equipment_advancement = {		#挖掘设备更新
+		icon = generic_construction
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_industrialization_point_has_100_tt
+				check_variable = {
+					UPV_industrialization_point = 100
+				}
+			}
+		}
+		visible = {}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 0
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			UPV_industrialization_point_cost_100 = yes
+			add_to_variable = { UPV_newly_developed_industries_dynamic_modifier_lrf = 0.05 }
+			custom_effect_tooltip = UPV_mining_equipment_advancement_tt
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+		}
+	}
+	UPV_announcing_new_achievement = {		#宣告新成就
+		icon = generic_monarchy
+
+		available = {
+			NOT = { has_country_flag = UPV_industrilization_reforming_flag } 
+			custom_trigger_tooltip = {
+				tooltip = UPV_announcing_new_achievement_tr
+				check_variable = { UPV_invest_military_facility_count = 3 }
+				check_variable = { UPV_invest_civilian_construction_count = 3 }
+				check_variable = { UPV_newly_developed_industries_dynamic_modifier_lrf = 0.15 }
+				check_variable = { UPV_newly_developed_industries_dynamic_modifier_icf = 0.15 }
+				check_variable = { UPV_newly_developed_industries_dynamic_modifier_gbsf = 0.1 }
+				check_variable = { UPV_newly_developed_industries_dynamic_modifier_pfmef = 0.05 }
+			}
+		}
+		visible = {}
+
+		cost = 0
+		fire_only_once = yes
+		days_remove = 30
+		days_re_enable = 0
+
+		ai_will_do = { factor = 1 }
+
+		modifier = {}
+
+		complete_effect = {
+			set_country_flag = UPV_industrilization_reforming_flag
+			UPV_industrialization_point_cost_100 = yes
+			add_to_variable = { UPV_newly_developed_industries_dynamic_modifier_lrf = 0.05 }
+			custom_effect_tooltip = UPV_mining_equipment_advancement_tt
+		}
+
+		remove_effect = {
+			clr_country_flag = UPV_industrilization_reforming_flag
+			remove_dynamic_modifier = {
+				modifier = UPV_newly_developed_industries_dynamic_modifier
+			}
+			add_ideas = UPV_mature_industrial_system
+			country_event = UPV.4
+		}
+	}
+}

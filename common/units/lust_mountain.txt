@@ -1,0 +1,47 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+
+	lust_mountain = {		#你这涩涩的有点tm过了啊
+		abbreviation = "LMT"
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 60
+
+		max_strength = 666
+		max_organisation = 120
+		default_morale = 0.4
+		maximum_speed = 0.4
+		manpower = 40000
+
+		training_time = 360
+		suppression = 40
+		weight = 20
+
+		supply_consumption = 1.2
+
+		need = {
+			lust_mountain_equipment_0 = 1000
+		}
+	}
+}

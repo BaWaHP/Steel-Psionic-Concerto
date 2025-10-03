@@ -1,0 +1,27 @@
+
+state={
+	id=31
+	name="STATE_31"
+	provinces={
+		2693 2842 3589 4691 6558 8113 16184 17139 
+	}
+	history={
+		owner = MSA
+		add_core_of = MSA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			2842 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			2842 3
+		}
+	}
+	manpower = 56130
+	state_category = small_island
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

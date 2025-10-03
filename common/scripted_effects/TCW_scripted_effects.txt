@@ -1,0 +1,208 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_TCW_startup_effect = {
+	if = {
+		limit = {
+			tag = TCW
+		}
+		###介绍页面###
+		set_variable = { SPC_intro_screen = 1 }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = advanced_training
+		add_ideas = low_economic_mobilisation
+		add_ideas = limited_exports
+		add_ideas = normal_taxes
+		add_ideas = NP_high_nationalization
+		add_ideas = aggressive_tatic
+		###发展度###
+		add_ideas = factory_industry
+		add_ideas = weak_agriculture
+		add_ideas = experienced_army
+		add_ideas = normally_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_minimum_control
+		add_ideas = RP_asisting_research
+		add_ideas = IP_basic_funds
+		add_ideas = WP_basic_laws
+		add_ideas = AP_basic_funds
+		add_ideas = RP_basic_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_sybolized_funds
+		add_ideas = MP_research_only
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_traditional_place
+		add_ideas = EP_sharing_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = RAP_discrimination
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###其它设置###
+		set_variable = { TCW_refugee_settlement_var = 0 }
+		set_variable = { TCW_refugee_settlement_count = 0 }
+		country_event = {
+			id = TCW.20
+			days = 33
+		}
+		country_event = {
+			id = TCW.21
+			days = 720
+		}
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 339
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }
+			}
+			if = {
+				limit = {
+					state = 382
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }
+				add_dynamic_modifier = {
+					modifier = TCW_autonomous_nations
+				}
+			}
+			if = {
+				limit = {
+					state = 337
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+				add_dynamic_modifier = {
+					modifier = TCW_autonomous_regions_1
+				}
+			}
+			if = {
+				limit = {
+					state = 338
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+				add_dynamic_modifier = {
+					modifier = TCW_autonomous_regions_2
+				}
+			}
+			if = {
+				limit = {
+					state = 385
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+				add_dynamic_modifier = {
+					modifier = TCW_autonomous_regions_3
+				}
+			}
+			if = {
+				limit = {
+					state = 383
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }
+			}
+			if = {
+				limit = {
+					state = 384
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 381
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 380
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 342
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }
+			}
+			if = {
+				limit = {
+					state = 386
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }
+			}
+			if = {
+				limit = {
+					state = 341
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 0 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }
+			}
+		}
+	}
+}
+
+TCW_national_parliament_setup = {
+	unlock_decision_category_tooltip = TCW_national_parliament
+	set_country_flag = TCW_national_parliament_on
+
+	set_variable = { TCW_national_parliament_seat_max = 208 }
+	set_variable = { TCW_national_parliament_seat_1 = 81 }	#青年党
+	set_variable = { TCW_national_parliament_seat_2 = 53 }	#正义党
+	set_variable = { TCW_national_parliament_seat_3 = 33 }	#无党派人士
+	set_variable = { TCW_national_parliament_seat_4 = 28 }	#科维斯族代表
+	set_variable = { TCW_national_parliament_seat_5 = 13 }	#军方代表
+}

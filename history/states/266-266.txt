@@ -1,0 +1,30 @@
+
+state={
+	id=266
+	name="STATE_266"
+
+	resources = {
+		steel = 48
+		tungsten = 24
+	}
+
+	history={
+		owner = NLL
+		add_core_of = NLL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			15978 8
+		}
+	}
+
+	provinces={
+		1731 4384 6995 7080 7129 9145 11037 15978 16043 16054 16170 16295 
+	}
+	manpower=360000 
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

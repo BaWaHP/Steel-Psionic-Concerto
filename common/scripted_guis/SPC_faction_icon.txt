@@ -1,0 +1,47 @@
+scripted_gui = {
+	SPC_faction_icon_ui_pol = {
+		parent_window_token = politics_tab
+		window_name = "SPC_faction_icon_window_pol"
+
+		triggers = {
+			RSB_federation_icon_1_visible = {	#南巴联邦-主导国
+				has_country_flag = RSB_federation_icon_1
+            }
+			RSB_federation_icon_2_visible = {	#南巴联邦-成员国
+				has_country_flag = RSB_federation_icon_2
+            }
+			RSB_federation_icon_3_visible = {	#南巴共和国-保护国
+				has_country_flag = RSB_federation_icon_3
+            }
+			SFH_farhome_kingdom_icon_visible = {	#远乡王朝
+				has_country_flag = SFH_farhome_kingdom_icon
+            }
+			WOM_influence_faction_icon_visible = {	#沃姆帝国势力圈
+				has_country_flag = WOM_influence_faction_icon
+            }
+        }
+	}
+	SPC_faction_icon_ui_dip = {
+		parent_window_token = selected_country_view_diplomacy
+		context_type = selected_country_context
+		window_name = "SPC_faction_icon_window_dip"
+
+		triggers = {
+			RSB_federation_icon_1_visible = {	#南巴联邦-主导国
+				has_country_flag = RSB_federation_icon_1
+            }
+			RSB_federation_icon_2_visible = {	#南巴联邦-成员国
+				has_country_flag = RSB_federation_icon_2
+            }
+			RSB_federation_icon_3_visible = {	#南巴共和国-保护国
+				has_country_flag = RSB_federation_icon_3
+            }
+			SFH_farhome_kingdom_icon_visible = {	#远乡王朝
+				has_country_flag = SFH_farhome_kingdom_icon
+            }
+			WOM_influence_faction_icon_visible = {	#沃姆帝国势力圈
+				has_country_flag = WOM_influence_faction_icon
+            }
+        }
+	}
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=427
+	name="STATE_427"
+	provinces={
+		68 425 3864 8489 11024 11122 11986 19080 19156 19181 19236 19293 19320 19376 
+	}
+	resources = {
+		magic_crystal = 20
+		steel = 5
+	}
+	history = {
+		owner = MTV
+		add_core_of = MTV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			11024 10
+		}
+		victory_points = {
+			19181 5
+		}
+	}
+	manpower = 1600000
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

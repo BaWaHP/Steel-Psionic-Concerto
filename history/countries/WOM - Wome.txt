@@ -1,0 +1,147 @@
+﻿capital = 69
+
+oob = "WOM"
+
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 4
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 1
+	revolutionary_communism = 1
+	worldunion_socialist = 15
+	worldunion_democrat = 20
+	liberal_republican = 20
+	conservative_republican = 15
+	authoritarian_republican = 20
+	national_socialist = 3
+	authoritarian_nationalism = 3
+	paternal_autocrat = 1
+	wizard_rules = 0
+	religious_extremism = 0
+	anarchism = 1
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	early_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	armored_car1 = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	infantry_weapons = 1
+	modernized_infantry_uniforms = 1
+	armored_car2 = 1
+	anti_mob_blunt = 1
+	melee_weapons_I = 1
+	light_infantry_weapons = 1
+	tech_support = 1
+	basic_train = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+	great_war_titan = 1
+	stryder_titan = 1
+	atlas_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	improved_energy_storage = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	basic_machine_tools = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		cv_early_fighter = 1
+		early_bomber = 1
+		fighter1 = 1
+		tactical_bomber1 = 1
+	}
+	else = {
+		set_technology = {
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			early_bombs = 1
+			photo_reconnaisance = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		basic_light_td = 1
+		basic_light_art = 1
+		basic_light_spaa = 1
+		basic_heavy_tank = 1
+		basic_heavy_td = 1
+		basic_heavy_art = 1
+		basic_heavy_spaa = 1
+	}
+	else = {
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			engine_tech_1 = 1
+		}
+	}
+}
+
+recruit_character = WOM_wome_IV
+
+add_ideas = {
+	WOM_triumph_of_empire
+	WOM_slavery_for_unhuman_races
+	WOM_wome_national_army
+	WOM_end_of_econ_miracle
+}
+
+create_faction = WOM_INFLUENCE_FACTION
+add_to_faction = TPG
+add_to_faction = KOD
+add_to_faction = GLV
+add_to_faction = ARZ
+add_to_faction = RMN
+add_to_faction = HLD
+add_to_faction = SBG
+add_to_faction = HCB
+
+WOM_influence_faction_icon_setup = yes
+every_allied_country = {
+	limit = { NOT = { tag = TPG } }
+	WOM_influence_faction_icon_setup = yes
+	set_cosmetic_tag = WOM_cosmetic
+}
+TPG = { WOM_influence_faction_icon_setup = yes }

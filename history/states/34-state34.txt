@@ -1,0 +1,32 @@
+
+state={
+	id=34
+	name="STATE_34"
+	provinces={
+		2799 4351 5846 8598 17888 17996 18081 18096 18112 18211 18295 18335 18445 
+	}
+	resources = {
+		magic_crystal = 20
+		steel = 12
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 1
+			18295 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			18335 30
+		}
+	}
+	manpower=7470000
+	state_category = large_city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

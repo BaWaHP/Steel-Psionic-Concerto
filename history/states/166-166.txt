@@ -1,0 +1,33 @@
+
+state={
+	id=166
+	name="STATE_166"
+	resources={
+		steel = 16
+		chromium = 8
+	}
+
+	history={
+		owner = ZHE
+		add_core_of = TEG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			11665 3
+		}
+		victory_points = {
+			11954 1
+		}
+
+	}
+
+	provinces={
+		1024 10065 11665 11954 16853 16867 16988 16999 17101 17116 17133 17234 17249 
+	}
+	manpower=2230000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

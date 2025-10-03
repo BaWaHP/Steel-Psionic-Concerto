@@ -1,0 +1,28 @@
+state={
+	id=231
+	name="STATE_231"
+
+	resources = {
+		rubber = 2
+	}
+
+	history={
+		owner = NKM
+		add_core_of = NKM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			21581 3
+		}
+	}
+	
+	provinces={
+		295 1435 3140 3573 21581 
+	}
+	manpower = 961000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

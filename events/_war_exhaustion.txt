@@ -1,0 +1,72 @@
+#厌战度相关事件
+add_namespace = SPC_War_Exh
+
+#系统相关
+country_event = {	#厌战！
+	id = SPC_War_Exh.1001
+	title = SPC_War_Exh.1001.t
+	desc = SPC_War_Exh.1001.desc
+	is_triggered_only = yes
+	option = {
+        name = SPC_War_Exh.1001.a
+		add_dynamic_modifier = { modifier = SPC_war_exhaustion_dynamic_modifier }
+    }
+}
+
+country_event = {	#战争结束
+	id = SPC_War_Exh.1002
+	title = SPC_War_Exh.1002.t
+	desc = SPC_War_Exh.1002.desc
+	is_triggered_only = yes
+	option = {
+        name = SPC_War_Exh.1002.a
+		remove_dynamic_modifier = { modifier = SPC_war_exhaustion_dynamic_modifier }
+    }
+}
+
+#决议事件、
+
+country_event = {	#统治者作战英勇
+	id = SPC_War_Exh.2001
+	title = SPC_War_Exh.2001.t
+	desc = SPC_War_Exh.2001.desc
+	is_triggered_only = yes
+	option = {
+        name = SPC_War_Exh.2001.a
+		custom_effect_tooltip = SPC_War_Exh.2001.a.tt
+		add_variable = { war_exhaustion = -0.1 }
+		SPC_war_exhaustion_clamp = yes
+    }
+}
+
+country_event = {	#统治者作战失利
+	id = SPC_War_Exh.2002
+	title = SPC_War_Exh.2002.t
+	desc = SPC_War_Exh.2002.desc
+	is_triggered_only = yes
+	option = {
+        name = SPC_War_Exh.2002.a
+		custom_effect_tooltip = SPC_War_Exh.2002.a.tt
+		add_variable = { war_exhaustion = 0.2 }
+		add_stability = -0.1
+		SPC_war_exhaustion_clamp = yes
+    }
+}
+
+country_event = {	#统治者身负重伤
+	id = SPC_War_Exh.2003
+	title = SPC_War_Exh.2003.t
+	desc = SPC_War_Exh.2003.desc
+	is_triggered_only = yes
+	option = {
+        name = SPC_War_Exh.2003.a
+		custom_effect_tooltip = SPC_War_Exh.2003.a.tt
+		add_variable = { war_exhaustion = 0.3 }
+		add_stability = -0.2
+		every_character = {
+			limit = { is_country_leader = yes }
+			add_country_leader_trait = hardly_wounded_leader
+		}
+		SPC_war_exhaustion_clamp = yes
+    }
+}

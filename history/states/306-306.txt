@@ -1,0 +1,27 @@
+
+state={
+	id=306
+	name="STATE_306"
+	provinces={
+		258 2322 5319 8830 8843 10587 15461 15484 15622 15730 
+	}
+	history={
+		owner = OLA
+		add_core_of = OLA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			258 5
+		}
+		victory_points = {
+			8843 10
+		}
+	}
+	manpower = 1310000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

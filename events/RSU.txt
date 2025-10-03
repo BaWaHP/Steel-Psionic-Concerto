@@ -1,0 +1,462 @@
+﻿###########################
+# RSU Events #
+###########################
+
+add_namespace = RSU
+
+country_event = {
+	id = RSU.1		#岁律更新
+	title = RSU.1.t
+	desc = RSU.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.1.a
+	}
+}
+
+country_event = {
+	id = RSU.2		#现状
+	title = RSU.2.t
+	desc = RSU.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.2.a
+		custom_effect_tooltip = RSU.2.a.tt
+	}
+}
+
+country_event = {
+	id = RSU.3		#市场与鲁萨尔（1）
+	title = RSU.3.t
+	desc = RSU.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.3.a
+		country_event = RSU.10
+	}
+}
+
+country_event = {
+	id = RSU.4		#布雷施特大游行
+	title = RSU.4.t
+	desc = RSU.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.4.a
+		add_political_power = -10
+		319 = { add_dynamic_modifier = { modifier = RSU_regions_affected_by_labor_union } }
+	}
+}
+
+country_event = {
+	id = RSU.5		#与七河大使的会面
+	title = RSU.5.t
+	desc = RSU.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.5.a
+	}
+}
+
+country_event = {
+	id = RSU.6		#一场豪赌
+	title = RSU.6.t
+	desc = RSU.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.6.a
+	}
+}
+
+country_event = {
+	id = RSU.7		#小酒馆的谈话
+	title = RSU.7.t
+	desc = RSU.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.7.a
+	}
+}
+
+country_event = {
+	id = RSU.8		#内心的抉择
+	title = RSU.8.t
+	desc = RSU.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.8.a
+	}
+}
+
+country_event = {
+	id = RSU.9		#大选结果
+	title = RSU.9.t
+	desc = RSU.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.9.a
+		add_political_power = -100
+		set_country_flag = RSU_focus_flag_1
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = RSU.10		#市场与鲁萨尔（2）
+	title = RSU.10.t
+	desc = RSU.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.10.a
+		country_event = RSU.11
+	}
+}
+
+country_event = {
+	id = RSU.11		#市场与鲁萨尔（3）
+	title = RSU.11.t
+	desc = RSU.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.11.a
+	}
+}
+
+country_event = {
+	id = RSU.12		#黑色幽默
+	title = RSU.12.t
+	desc = RSU.12.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.12.a
+
+		add_dynamic_modifier = { modifier = RSU_gronissen_mining_disaster }
+		set_variable = { RSU_gronissen_mining_disaster_cgf = 0 }
+		set_variable = { RSU_gronissen_mining_disaster_lrf = -0.1 }
+		set_variable = { RSU_gronissen_mining_disaster_wm = -100 }
+		set_variable = { RSU_gronissen_mining_disaster_sf = -0.15 }
+		set_variable = { RSU_gronissen_mining_disaster_rcd = 0.05 }
+
+		add_dynamic_modifier = { modifier = RSU_cb_crisis }
+		set_variable = { RSU_cb_crisis_ppf = -0.1 }
+		set_variable = { RSU_cb_crisis_cgf = 0.3 }
+		set_variable = { RSU_cb_crisis_pfegf = -0.2 }
+		set_variable = { RSU_cb_crisis_pfmef = -0.05 }
+		set_variable = { RSU_cb_crisis_lrd = 0 }
+
+		remove_ideas = RSU_prepaid_central_bastia_income_idea
+
+		319 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+			add_resource = {
+				type = steel
+				amount = -6
+			}
+			add_resource = {
+				type = aluminium
+				amount = -10
+			}
+		}
+
+		set_country_flag = RSU_focus_flag_2
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = RSU.13		#忏悔
+	title = RSU.13.t
+	desc = RSU.13.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.13.a
+	}
+}
+
+country_event = {
+	id = RSU.14		#各方态度
+	title = RSU.14.t
+	desc = RSU.14.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.14.a
+		add_timed_idea = {
+			idea = RSU_compromise_product
+			days = 360
+		}
+	}
+}
+
+country_event = {
+	id = RSU.15		#横祸
+	title = RSU.15.t
+	desc = RSU.15.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.15.a
+	}
+}
+
+country_event = {
+	id = RSU.16		#补偿
+	title = RSU.16.t
+	desc = RSU.16.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.16.a
+		custom_effect_tooltip = RSU.16.a.tt
+		add_to_variable = { RSU_gronissen_mining_disaster_cgf = 0.1 }
+		add_to_variable = { RSU_gronissen_mining_disaster_wm = 50 }
+		add_to_variable = { RSU_gronissen_mining_disaster_sf = 0.1 }
+		set_country_flag = RSU_16_a_flag
+	}
+
+	option = {
+		name = RSU.16.b
+		custom_effect_tooltip = RSU.16.b.tt
+		add_to_variable = { RSU_gronissen_mining_disaster_cgf = -0.05 }
+		add_to_variable = { RSU_gronissen_mining_disaster_sf = 0.05 }
+		set_country_flag = RSU_16_b_flag
+	}
+}
+
+country_event = {
+	id = RSU.17		#秘密会面
+	title = RSU.17.t
+	desc = RSU.17.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.17.a
+		custom_effect_tooltip = RSU.17.a.tt
+		add_to_variable = { RSU_gronissen_mining_disaster_lrf = 0.05 }
+		add_to_variable = { RSU_gronissen_mining_disaster_sf = 0.05 }
+	}
+}
+
+country_event = {
+	id = RSU.18		#无言的信
+	title = RSU.18.t
+	desc = RSU.18.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.18.a
+	}
+}
+
+country_event = {
+	id = RSU.19		#心有余而力......
+	title = RSU.19.t
+	desc = RSU.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.19.a
+		custom_effect_tooltip = RSU.19.a.tt
+		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
+	}
+}
+
+country_event = {
+	id = RSU.20		#求助于七河
+	title = RSU.20.t
+	desc = RSU.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.20.a
+	}
+}
+
+country_event = {
+	id = RSU.21		#无功而返
+	title = RSU.21.t
+	desc = RSU.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.21.a
+	}
+}
+
+country_event = {
+	id = RSU.22		#无功而返
+	title = RSU.22.t
+	desc = RSU.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.22.a
+		custom_effect_tooltip = RSU.22.a.tt
+		add_to_variable = { RSU_cb_crisis_ppf = 0.05 }
+	}
+}
+
+country_event = {
+	id = RSU.23		#议会上的承诺
+	title = RSU.23.t
+	desc = RSU.23.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.23.a
+		custom_effect_tooltip = RSU.23.a.tt
+		add_to_variable = { RSU_cb_crisis_ppf = 0.05 }
+	}
+}
+
+country_event = {
+	id = RSU.24		#正义宫前的演讲
+	title = RSU.24.t
+	desc = RSU.24.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.24.a
+		country_event = { id = RSU.25 days = 5 }
+	}
+}
+
+country_event = {
+	id = RSU.25		#千钧一发
+	title = RSU.25.t
+	desc = RSU.25.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.25.a
+		country_event = { id = RSU.26 days = 5 }
+	}
+}
+
+country_event = {
+	id = RSU.26		#炽热的心
+	title = RSU.26.t
+	desc = RSU.26.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.26.a
+		country_event = { id = RSU.27 days = 5 }
+	}
+}
+
+country_event = {
+	id = RSU.27		#仓促，仓促
+	title = RSU.27.t
+	desc = RSU.27.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.27.a
+		hidden_effect = { RRF = { SPC_RRF_startup_effect = yes } }
+		country_event = {
+			id = RSU.28
+			days = 7
+		}
+		remove_dynamic_modifier = { modifier = RSU_union_conference }
+	}
+
+	option = {
+		name = RSU.27.b
+		hidden_effect = { RRF = { SPC_RRF_startup_effect = yes } }
+		RRF = { change_tag_from = ROOT }
+		country_event = {
+			id = RSU.28
+			days = 7
+		}
+		remove_dynamic_modifier = { modifier = RSU_union_conference }
+	}
+}
+
+country_event = {
+	id = RSU.28		#兄，弟
+	title = RSU.28.t
+	desc = RSU.28.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.28.a
+		every_unit_leader = {
+			limit = { has_trait = RSU_left_wing_sympathisers }
+			set_nationality = RRF
+		}
+	}
+}
+

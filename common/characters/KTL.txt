@@ -1,0 +1,151 @@
+characters={
+
+	KTL_noble_parliament = {		#贵族议会
+   		name = KTL_noble_parliament
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_noble_parliament"
+   				small="GFX_idea_KTL_noble_parliament"
+   			}
+   			army = {
+				large="GFX_KTL_noble_parliament"
+				small="GFX_idea_KTL_noble_parliament"
+   			}
+   		}
+   		country_leader = {
+   			ideology = republic_of_nobility
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KTL_levant_jean_faustin = {		#连凡特·让·弗西汀
+   		name = KTL_levant_jean_faustin
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_levant_jean_faustin"
+   				small="GFX_idea_KTL_levant_jean_faustin"
+   			}
+   			army = {
+				large="GFX_KTL_levant_jean_faustin"
+				small="GFX_idea_KTL_levant_jean_faustin"
+   			}
+   		}
+   		country_leader = {
+   			ideology = absolute_monarchy
+			desc = KTL_levant_jean_faustin_desc
+   			traits = { royal_bloodline }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KTL_josephine_jean_faustin = {		#约瑟芬·让·弗西汀
+   		name = KTL_josephine_jean_faustin
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_josephine_jean_faustin"
+   				small="GFX_idea_KTL_josephine_jean_faustin"
+   			}
+   			army = {
+				large="GFX_KTL_josephine_jean_faustin"
+				small="GFX_idea_KTL_josephine_jean_faustin"
+   			}
+   		}
+	}
+
+	KTL_herman_von_salza_1 = {		#赫尔曼·冯·萨尔扎
+   		name = KTL_herman_von_salza
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_herman_von_salza"
+   				small="GFX_idea_KTL_herman_von_salza"
+   			}
+   			army = {
+				large="GFX_KTL_herman_von_salza"
+				small="GFX_idea_KTL_herman_von_salza"
+   			}
+   		}
+   		country_leader = {
+   			ideology = social_corporatism
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KTL_herman_von_salza_2 = {		#赫尔曼·冯·萨尔扎
+   		name = KTL_herman_von_salza
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_herman_von_salza"
+   				small="GFX_idea_KTL_herman_von_salza"
+   			}
+   			army = {
+				large="GFX_KTL_herman_von_salza"
+				small="GFX_idea_KTL_herman_von_salza"
+   			}
+   		}
+   		country_leader = {
+   			ideology = heresy_ruling
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+
+	KTL_darke_chino = {		#达科·奇诺
+   		name = KTL_darke_chino
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_darke_chino"
+   				small="GFX_idea_KTL_darke_chino"
+   			}
+   			army = {
+				large="GFX_KTL_darke_chino"
+				small="GFX_idea_KTL_darke_chino"
+   			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { artillery_general organizer }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KTL_darke_chino_idea
+			traits = { army_artillery_2 }
+		}
+	}
+
+	KTL_wagner_bogo = {		#瓦格纳·博戈
+   		name = KTL_wagner_bogo
+   		portraits = {
+   			civilian = {
+   				large="GFX_KTL_wagner_bogo"
+   				small="GFX_idea_KTL_wagner_bogo"
+   			}
+   			army = {
+				large="GFX_KTL_wagner_bogo"
+				small="GFX_idea_KTL_wagner_bogo"
+   			}
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			traits = { trait_engineer commando }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = KTL_wagner_bogo_idea
+			traits = { army_infantry_2 }
+		}
+	}
+}

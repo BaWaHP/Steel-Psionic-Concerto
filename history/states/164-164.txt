@@ -1,0 +1,33 @@
+
+state={
+	id=164
+	name="STATE_164"
+
+	history={
+		owner = ZHE
+		add_core_of = ZHE
+		victory_points = {
+			9149 10
+		}
+		victory_points = {
+			8999 3
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 3
+			8999 = {
+				naval_base = 6
+			}
+		}
+	}
+
+	provinces={
+		2326 8999 9149 16324 16359 16398 16490 
+	}
+	manpower=2080000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

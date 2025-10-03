@@ -1,0 +1,23 @@
+characters={
+
+	NOH_tallinn_swiftfeather = {		#塔林·迅羽
+   		name = NOH_tallinn_swiftfeather
+   		portraits = {
+   			civilian = {
+				large="GFX_NOH_tallinn_swiftfeather"
+				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_NOH_tallinn_swiftfeather"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = NOH_tallinn_swiftfeather_desc
+   			ideology = directed_democracy
+   			traits = { NOH_permanent_president }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

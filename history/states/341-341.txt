@@ -1,0 +1,30 @@
+
+state={
+	id=341
+	name="STATE_341"
+	resources={
+		oil=8.000
+	}
+
+	history={
+		owner = TCW
+		add_core_of = TCW
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			10693 5
+		}
+
+	}
+
+	provinces={
+		3113 4481 5428 9700 10693 20315 20349 
+	}
+	manpower=1410000
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

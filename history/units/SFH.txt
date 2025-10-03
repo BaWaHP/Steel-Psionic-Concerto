@@ -1,0 +1,264 @@
+﻿###templates###
+division_template = {
+	name = "皇家卫队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "远乡正规军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "远乡边防军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+division_template = {
+	name = "远乡装甲部队"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		light_titan = { x = 2 y = 0 }
+		light_titan = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "远乡皇家卫队"
+		location = 8314
+		division_template = "皇家卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡正规军一师"
+		location = 19366
+		division_template = "远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡正规军二师"
+		location = 18336
+		division_template = "远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡正规军三师"
+		location = 11860
+		division_template = "远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡正规军四师"
+		location = 4466
+		division_template = "远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡正规军五师"
+		location = 9405
+		division_template = "远乡正规军"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军一师"
+		location = 9247
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军二师"
+		location = 18043
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军三师"
+		location = 11682
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军四师"
+		location = 18657
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军五师"
+		location = 7915
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军六师"
+		location = 9935
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军七师"
+		location = 11126
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡边防军八师"
+		location = 18082
+		division_template = "远乡边防军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+units = {
+	division = {
+		name = "远乡装甲部队一师"
+		location = 10369
+		division_template = "远乡装甲部队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+units = {
+	division = {
+		name = "远乡装甲部队二师"
+		location = 11344
+		division_template = "远乡装甲部队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "SFH"
+		}
+		requested_factories = 5
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SFH"
+		}
+		requested_factories = 3
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "SFH" 
+		}
+		requested_factories = 3
+		progress = 0.3
+		efficiency = 100
+	}
+}

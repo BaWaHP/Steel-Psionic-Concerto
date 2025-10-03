@@ -1,0 +1,380 @@
+characters={
+
+	FCR_fras_kona = {		#弗拉斯·科奈
+   		name = FCR_fras_kona
+   		portraits = {
+   			civilian = {
+   				large="GFX_FCR_fras_kona"
+   				small="GFX_idea_FCR_fras_kona"
+   			}
+   			army = {
+				large="GFX_FCR_fras_kona"
+				small="GFX_idea_FCR_fras_kona"
+   			}
+   		}
+   		country_leader = {
+			desc = FCR_fras_kona_desc
+   			ideology = military_dictatorship
+   			traits = { popular_figurehead }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	FCR_chen_yue = {		#陈岳
+   		name = FCR_chen_yue
+   		portraits = {
+   			civilian = {
+   				large="GFX_FCR_chen_yue"
+   				small="GFX_idea_FCR_chen_yue"
+   			}
+   			army = {
+				large="GFX_FCR_chen_yue"
+				small="GFX_idea_FCR_chen_yue"
+   			}
+   		}
+   		country_leader = {
+			desc = FCR_chen_yue_desc
+   			ideology = worldunion_democrat_subtype
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_chen_yue_advisor_desc
+			idea_token = FCR_chen_yue_idea
+			traits = { captain_of_industry }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_benito_aconton = {		#班尼托·阿康顿
+   		name = FCR_benito_aconton
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = FCR_benito_aconton_desc
+   			ideology = liberal_racism
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_benito_aconton_advisor_desc
+			idea_token = FCR_benito_aconton_idea
+			traits = { mature_technocrat }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_skandru_alrisis = {		#斯康德鲁·阿尔瑞西斯
+   		name = FCR_skandru_alrisis
+   		portraits = {
+   			civilian = {
+   				large="GFX_FCR_skandru_alrisis"
+   				small="GFX_idea_FCR_skandru_alrisis"
+   			}
+   			army = {
+				large="GFX_FCR_skandru_alrisis"
+				small="GFX_idea_FCR_skandru_alrisis"
+   			}
+   		}
+   		country_leader = {
+			desc = FCR_skandru_alrisis_desc
+   			ideology = oligarchy
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			slot = high_command
+			desc = FCR_skandru_alrisis_advisor_desc
+			idea_token = FCR_skandru_alrisis_idea
+			can_be_fired = no
+			traits = { army_regrouping_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	
+	FCR_manny_strona_matteoda = {		#曼尼·斯特罗纳·马蒂奥达
+   		name = FCR_manny_strona_matteoda
+   		portraits = {
+   			civilian = {
+   				large="GFX_FCR_manny_strona_matteoda"
+   				small="GFX_idea_FCR_manny_strona_matteoda"
+   			}
+   			army = {
+				large="GFX_FCR_manny_strona_matteoda"
+				small="GFX_idea_FCR_manny_strona_matteoda"
+   			}
+   		}
+   		country_leader = {
+			desc = FCR_manny_strona_matteoda_desc
+   			ideology = human_hegemony
+   			traits = {  }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		advisor = {
+			slot = high_command
+			desc = FCR_manny_strona_matteoda_advisor_desc
+			idea_token = FCR_manny_strona_matteoda_idea
+			can_be_fired = no
+			traits = { army_logistics_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { trait_reckless FCR_mental_disorders FCR_force_surpasses }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	FCR_gru_strahmann = {		#格鲁·斯德鲁曼
+   		name = FCR_gru_strahmann
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_gru_strahmann_advisor_desc
+			idea_token = FCR_gru_strahmann_idea
+			traits = { war_profiteer propaganda_expert }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_ricolo_mafti = {		#瑞科洛·马夫蒂
+   		name = FCR_ricolo_mafti
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_ricolo_mafti_advisor_desc
+			idea_token = FCR_ricolo_mafti_idea
+			traits = { LNR_cunning_villain }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_wagon_romanov = {		#瓦根·罗曼诺夫
+   		name = FCR_wagon_romanov
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_wagon_romanov_advisor_desc
+			idea_token = FCR_wagon_romanov_idea
+			traits = { economy_learner smooth_talking_charmer }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_edmund_smirnov = {		#埃德蒙·斯米尔诺夫
+   		name = FCR_edmund_smirnov
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = political_advisor
+			desc = FCR_edmund_smirnov_advisor_desc
+			idea_token = FCR_edmund_smirnov_idea
+			traits = { FCR_corrupt_political_brokers }
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	FCR_daniel_garcia = {		#丹尼尔·加西亚
+   		name = FCR_daniel_garcia
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = army_chief
+			desc = FCR_daniel_garcia_advisor_desc
+			idea_token = FCR_daniel_garcia_idea
+			traits = { army_chief_maneuver_2 }
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { organizer cavalry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	
+	FCR_pablo_martin = {		#巴勃罗·马丁
+   		name = FCR_pablo_martin
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			slot = army_chief
+			desc = FCR_pablo_martin_advisor_desc
+			idea_token = FCR_pablo_martin_idea
+			traits = { army_chief_offensive_1 }
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	FCR_hartless_desport = {		#哈特雷斯·德斯波特
+   		name = FCR_hartless_desport
+   		portraits = {
+   			civilian = {
+   				large="GFX_FCR_hartless_desport"
+   				small="GFX_idea_FCR_hartless_desport"
+   			}
+   			army = {
+				large="GFX_FCR_hartless_desport"
+				small="GFX_idea_FCR_hartless_desport"
+   			}
+   		}
+		advisor = {
+			slot = high_command
+			desc = FCR_hartless_desport_advisor_desc
+			idea_token = FCR_hartless_desport_idea
+			can_be_fired = no
+			traits = { army_concealment_2 }
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist aggressive_assaulter }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	
+	FCR_pandanil_anderson = {		#潘达尼尔·安德森
+   		name = FCR_pandanil_anderson
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		corps_commander = {
+			traits = { panzer_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

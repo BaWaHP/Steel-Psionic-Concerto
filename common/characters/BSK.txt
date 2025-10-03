@@ -1,0 +1,86 @@
+characters={
+
+	BSK_blake_andwhite = {		#布莱克·安德怀特
+   		name = BSK_blake_andwhite
+   		portraits = {
+   			civilian = {
+   				large="GFX_BSK_blake_andwhite"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_BSK_blake_andwhite"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = BSK_blake_andwhite_desc
+   			ideology = military_dictatorship
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	BSK_jan_piotr_noblin = {		#扬·皮奥特尔·诺布林绘
+   		name = BSK_jan_piotr_noblin
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = BSK_jan_piotr_noblin_desc
+   			ideology = oligarchy
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	BSK_venn_club = {		#维恩社团
+   		name = BSK_venn_club
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = BSK_venn_club_desc
+   			ideology = anarcho_syndicalism
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+	
+	BSK_herman_salazar = {		#赫尔曼·萨拉查
+   		name = BSK_herman_salazar
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+   		country_leader = {
+			desc = BSK_herman_salazar_desc
+   			ideology = heresy_ruling
+   			traits = { }
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

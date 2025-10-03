@@ -1,0 +1,33 @@
+
+state={
+	id=188
+	name="STATE_188"
+
+	resources = {
+		steel = 6
+	}
+
+	history={
+		owner = NLL
+		add_core_of = NLL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			7268 8
+		}
+		victory_points = {
+			16202 5
+		}
+	}
+
+	provinces={
+		7268 7339 7580 7764 11873 15920 15921 16202 16244 16326 16372 16503 
+	}
+	manpower = 480000 
+	buildings_max_level_factor=1.000
+	state_category = large_town
+	local_supplies=0.000
+}

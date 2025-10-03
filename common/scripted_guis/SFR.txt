@@ -1,0 +1,81 @@
+scripted_gui = {
+
+	SFR_maintain_the_front_ui = {
+		context_type = decision_category
+		window_name = "SFR_maintain_the_front_window"
+
+		properties = {
+			SFR_unity_bar = { frame = SFR_maintain_the_front_unity }
+		}
+	}
+
+	SFR_land_reform_decisions_ui = {
+		context_type = decision_category
+		window_name = "SFR_land_reform_decisions_window"
+		
+		triggers = {
+			SFR_land_reform_icon_1_flipped_visible = {
+				has_country_flag = SFR_land_reform_icon_1_flipped
+			}
+			SFR_land_reform_icon_2_flipped_visible = {
+				has_country_flag = SFR_land_reform_icon_2_flipped
+			}
+			SFR_land_reform_icon_3_flipped_visible = {
+				has_country_flag = SFR_land_reform_icon_3_flipped
+			}
+			SFR_land_reform_icon_4_flipped_visible = {
+				has_country_flag = SFR_land_reform_icon_4_flipped
+			}
+			SFR_land_reform_btn_1_visible = {
+				NOT = { has_country_flag = SFR_land_reform_icon_1_flipped }
+				check_variable = {
+					SFR_land_reform_decisions_progress > 25
+				}
+			}
+			SFR_land_reform_btn_2_visible = {
+				NOT = { has_country_flag = SFR_land_reform_icon_2_flipped }
+				check_variable = {
+					SFR_land_reform_decisions_progress > 50
+				}
+			}
+			SFR_land_reform_btn_3_visible = {
+				NOT = { has_country_flag = SFR_land_reform_icon_3_flipped }
+				check_variable = {
+					SFR_land_reform_decisions_progress > 75
+				}
+			}
+			SFR_land_reform_btn_4_visible = {
+				NOT = { has_country_flag = SFR_land_reform_icon_4_flipped }
+				check_variable = {
+					SFR_land_reform_decisions_progress = 100
+				}
+			}
+			SFR_land_reform_btn_end_enabled = {
+				check_variable = {
+					SFR_land_reform_decisions_progress = 100
+				}
+			}
+		}
+
+		effects = {
+			SFR_land_reform_btn_1_click = {
+				set_country_flag = SFR_land_reform_icon_1_flipped
+			}
+			SFR_land_reform_btn_2_click = {
+				set_country_flag = SFR_land_reform_icon_2_flipped
+			}
+			SFR_land_reform_btn_3_click = {
+				set_country_flag = SFR_land_reform_icon_3_flipped
+			}
+			SFR_land_reform_btn_4_click = {
+				set_country_flag = SFR_land_reform_icon_3_flipped
+			}
+		}
+
+		properties = {
+			SFR_land_reform_btn_end = {
+				image = "[GET_SFR_land_reform_btn_end]"
+			}
+		}
+	}
+}

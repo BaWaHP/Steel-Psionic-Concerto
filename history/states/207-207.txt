@@ -1,0 +1,30 @@
+
+state={
+	id=207
+	name="STATE_207"
+
+	resources = {
+		oil = 8
+		steel = 2
+	}
+
+	history={
+		owner = CBL
+		add_core_of = CBL
+		buildings = {
+			infrastructure = 1
+			17767 = { bunker = 1 }
+		}
+		victory_points = {
+			17767 2
+		}
+	}
+
+	provinces={
+		1084 1109 2801 6012 9150 9439 9922 10215 10668 10905 11511 17190 17207 17208 17223 17367 17368 17517 17518 17548 17767 
+	}
+	manpower=181500
+	buildings_max_level_factor=1.000
+	state_category = rural
+	local_supplies=0.000
+}

@@ -1,0 +1,147 @@
+﻿capital = 157
+
+oob = "WUN"
+
+set_convoys = 0
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.5
+
+set_politics = {
+	ruling_party = authoritarian_nationalism
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 0
+	liberal_republican = 0
+	conservative_republican = 0
+	authoritarian_republican = 0
+	national_socialist = 0
+	authoritarian_nationalism = 75
+	paternal_autocrat = 12
+	wizard_rules = 0
+	religious_extremism = 12
+	anarchism = 1
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	early_infantry_weapons = 1
+	early_infantry_uniforms = 1
+	suppress_equipment = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	infantry_weapons = 1
+	modernized_infantry_uniforms = 1
+	tech_mountaineers = 1
+	melee_weapons_I = 1
+	tech_support = 1
+	basic_train = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	basic_machine_tools = 1
+	construction1 = 1
+	centaur_tech = 1
+}
+
+recruit_character = WUN_Yaqub_kuli_bek
+recruit_character = WUN_ZhangMazi
+recruit_character = WUN_zidovudine
+recruit_character = WUN_lust_mountain
+recruit_character = WUN_yaqub_huda_bek
+recruit_character = WUN_yaqub_haighura_bek
+recruit_character = WUN_yaqub_ginsham_bek
+recruit_character = WUN_Libido
+recruit_character = WUN_yunusjan_cutarai_bek
+recruit_character = WUN_niyaz_kharidal_bek
+
+#民族精神#
+add_ideas = ZHE_king_behind_king
+add_ideas = WUN_nomadic_society
+add_ideas = WUN_boke_system
+add_ideas = WUN_spread_of_racist_sentiment
+add_ideas = WUN_spread_of_nationalism_sentiment
+#内阁
+add_ideas = WUN_yaqub_huda_bek_idea
+add_ideas = WUN_yaqub_haighura_bek_idea
+add_ideas = WUN_yaqub_ginsham_bek_idea
+add_ideas = WUN_yunusjan_cutarai_bek_idea
+add_ideas = WUN_niyaz_kharidal_bek_idea
+#企业
+add_ideas = firdaws_allqbal
+
+declare_war_on = {
+	target = ZHE
+	type = independence_wargoal
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 1000
+	producer = WCH
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 200
+	producer = WCH
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 400
+	producer = WCH
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 800
+	producer = WUN
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 100
+	producer = WUN
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 200
+	producer = WUN
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_1
+	amount = 400
+	producer = WUN
+}
+
+add_opinion_modifier = {
+	target = WCH
+	modifier = WUN_king_behind_a_king_opinion_modifier
+}
+
+WCH = {
+	add_opinion_modifier = {
+		target = WUN
+		modifier = WUN_king_behind_a_king_opinion_modifier
+	}
+}
+
+157 = {
+	add_dynamic_modifier = {
+		modifier = WUN_rob_hole
+	}
+}

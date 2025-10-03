@@ -1,0 +1,124 @@
+﻿###templates###
+division_template = {
+	name = "西侧起义军团"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }  
+		artillery = { x = 0 y = 1 }  
+	}
+
+	priority = 2
+}
+
+division_template = {
+	name = "西侧地方起义军"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "西侧起义军团"
+		location = 7784
+		division_template = "西侧起义军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西侧起义军团"
+		location = 12103
+		division_template = "西侧起义军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 17947
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 17696
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 2712
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 2755
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧起义军团"
+		location = 7784
+		division_template = "西侧起义军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西侧起义军团"
+		location = 12103
+		division_template = "西侧起义军团"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 17947
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 17696
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 2712
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "西侧地方起义军"
+		location = 2755
+		division_template = "西侧地方起义军"
+		start_experience_factor = 0
+		start_equipment_factor = 0.8
+	}
+}

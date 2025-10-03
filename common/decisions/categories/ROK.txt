@@ -1,0 +1,28 @@
+ROK_internal_external_conflict = { 	#外部革命，内部斗争
+	icon = GFX_decision_category_SOV_civil_war
+	#picture = GFX_decision_cat_picture_faction_management_bulgaria
+	allowed = { tag = ROK }	
+	visible = { has_country_flag = ROK_internal_external_conflict_on }
+	scripted_gui = ROK_internal_external_conflict_ui
+	visible_when_empty = yes
+	priority = 100
+}
+
+ROK_social_and_cultural_committee = { 	#克拉亚诺社改及文化委员会
+	icon = GFX_decision_category_SOV_permanent_revolution
+	#picture = GFX_decision_cat_picture_faction_management_bulgaria
+	allowed = { tag = ROK }	
+	visible = { has_country_flag = ROK_social_and_cultural_committee_on }
+	scripted_gui = ROK_social_and_cultural_committee_ui
+	visible_when_empty = yes
+	priority = 100
+}
+
+ROK_shining_path_of_revolution = { 	#革命的光辉之路
+	icon = GFX_decision_category_SOV_propaganda
+	#picture = GFX_decision_cat_picture_faction_management_bulgaria
+	allowed = { tag = ROK }	
+	visible = { has_completed_focus = ROK_toward_victory }
+	priority = 100
+}
+

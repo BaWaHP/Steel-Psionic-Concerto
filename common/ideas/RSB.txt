@@ -1,0 +1,613 @@
+ideas = {
+	country = {
+
+		RSB_maligned_government = {		#被人诟病的政府
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				political_advisor_cost_factor = 0.5
+			}
+		}
+
+		RSB_maligned_government_2 = {		#被人诟病的政府
+			name = RSB_maligned_government
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				political_advisor_cost_factor = 0.4
+			}
+		}
+
+		RSB_maligned_government_3 = {		#被人诟病的政府
+			name = RSB_maligned_government
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.1
+				political_advisor_cost_factor = 0.3
+			}
+		}
+		
+		RSB_maligned_government_4 = {		#被人诟病的政府
+			name = RSB_maligned_government
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.1
+				political_advisor_cost_factor = 0.2
+			}
+		}
+
+		RSB_legacy_of_the_great_war = {		#伟大战争的遗产
+			picture = eng_imperial_conscription
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				planning_speed = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				training_time_factor = 0.1
+			}
+		}
+
+		RSB_Ekuriel_case_fiasco = {		#艾库瑞尔案风波
+			picture = generic_fascism_drift_2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.15
+				worldunion_socialist_drift = 0.02
+				conservative_republican_drift = 0.02
+				national_socialist_drift = 0.02
+			}
+		}
+
+		RSB_zhe_rsb_friendly_treaty = {		#《南巴斯蒂亚-七河友好互助协定》
+			picture = generic_constitutional_guarantees
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.1
+				min_export = 0.1
+				consumer_goods_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = ZHE
+				trade_cost_for_target_factor = -0.25
+				trade_opinion_factor = 0.25
+				ai_license_acceptance = 20
+			}
+		}
+
+		RSB_zhe_rsb_friendly_treaty_2 = {		#《南巴斯蒂亚-七河友好互助协定》
+			name = RSB_zhe_rsb_friendly_treaty
+			picture = generic_constitutional_guarantees
+			allowed = { original_tag = RSB }
+			removal_cost = -1
+
+			cancel = {
+				OR = {
+					ZHE = { exists = no }
+					RSB = { has_war = yes }
+				}
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				local_resources_factor = 0.1
+				min_export = 0.1
+				consumer_goods_factor = 0.05
+				custom_modifier_tooltip = RSB_zhe_rsb_friendly_treaty_tt
+			}
+			targeted_modifier = {
+				tag = ZHE
+				trade_cost_for_target_factor = -0.25
+				trade_opinion_factor = 0.25
+				ai_license_acceptance = 20
+			}
+		}
+
+		RSB_military_overspending = {		#军队超支
+			picture = tfv_can_conscription_crisis
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = -0.1
+				consumer_goods_factor = 0.1
+				supply_consumption_factor = 0.2
+				conscription_factor = -0.3
+				monthly_military_development_process = 1
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_military_overspending_2 = {		#军队超支
+			name = RSB_military_overspending
+			picture = tfv_can_conscription_crisis
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army_factor = -0.1
+				consumer_goods_factor = 0.05
+				supply_consumption_factor = 0.2
+				conscription_factor = -0.3
+				monthly_military_development_process = 1
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_military_overspending_3 = {		#军队超支
+			name = RSB_military_overspending
+			picture = tfv_can_conscription_crisis
+			allowed = { original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				experience_gain_army_factor = -0.05
+				consumer_goods_factor = 0.05
+				supply_consumption_factor = 0.15
+				conscription_factor = -0.3
+				monthly_military_development_process = 1
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_military_overspending_3_l = {		#军队超支
+			name = RSB_military_overspending
+			picture = tfv_can_conscription_crisis
+			allowed = { original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				experience_gain_army_factor = -0.05
+				consumer_goods_factor = 0.05
+				supply_consumption_factor = 0.1
+				conscription_factor = -0.3
+				monthly_military_development_process = 1
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_military_overspending_3_r = {		#军队超支
+			name = RSB_military_overspending
+			picture = tfv_can_conscription_crisis
+			allowed = { original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				experience_gain_army_factor = -0.05
+				supply_consumption_factor = 0.05
+				conscription_factor = -0.3
+				monthly_military_development_process = -4
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_military_overspending_4 = {		#军队超支
+			name = RSB_military_overspending
+			picture = tfv_can_conscription_crisis
+			allowed = { original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				experience_gain_army_factor = -0.05
+				conscription_factor = -0.3
+				monthly_military_development_process = -4
+				monthly_living_standard_development_process = 2
+				custom_modifier_tooltip = lock_all_troops_tt
+			}
+		}
+
+		RSB_gw_arsenal_infantry_idea_1 = {		#启用军火库：步兵用Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.1
+				}
+			}
+		}
+
+		RSB_gw_arsenal_infantry_idea_2 = {		#启用军火库：步兵用Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.15
+				}
+			}
+		}
+
+		RSB_gw_arsenal_infantry_idea_3 = {		#启用军火库：步兵用Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.2
+				}
+			}
+		}
+
+		RSB_gw_arsenal_infantry_idea_4 = {		#启用军火库：步兵用Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.25
+				}
+			}
+		}
+
+		RSB_gw_arsenal_infantry_idea_5 = {		#启用军火库：步兵用Ⅴ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.3
+				}
+			}
+		}
+
+		RSB_gw_arsenal_artillery_idea_1 = {		#启用军火库：炮兵用Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				artillery = {
+					soft_attack = -0.1
+				}
+			}
+		}
+
+		RSB_gw_arsenal_artillery_idea_2 = {		#启用军火库：炮兵用Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				artillery = {
+					soft_attack = -0.15
+				}
+			}
+		}
+
+		RSB_gw_arsenal_artillery_idea_3 = {		#启用军火库：炮兵用Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				artillery = {
+					soft_attack = -0.2
+				}
+			}
+		}
+
+		RSB_gw_arsenal_artillery_idea_4 = {		#启用军火库：炮兵用Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				artillery = {
+					soft_attack = -0.25
+				}
+			}
+		}
+
+		RSB_gw_arsenal_artillery_idea_5 = {		#启用军火库：炮兵用V级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				artillery = {
+					soft_attack = -0.3
+				}
+			}
+		}
+
+		RSB_gw_arsenal_titan_idea_1 = {		#启用军火库：泰坦Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				light_titan_equipment = {
+					hardness = -0.1
+				}
+			}
+		}
+
+		RSB_gw_arsenal_titan_idea_2 = {		#启用军火库：泰坦Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				light_titan_equipment = {
+					hardness = -0.15
+				}
+			}
+		}
+
+		RSB_gw_arsenal_titan_idea_3 = {		#启用军火库：泰坦Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				light_titan_equipment = {
+					hardness = -0.2
+				}
+			}
+		}
+
+		RSB_gw_arsenal_titan_idea_4 = {		#启用军火库：泰坦Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				light_titan_equipment = {
+					hardness = -0.25
+				}
+			}
+		}
+
+		RSB_gw_arsenal_titan_idea_5 = {		#启用军火库：泰坦V级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				light_titan_equipment = {
+					hardness = -0.3
+				}
+			}
+		}
+
+		RSB_ww_arsenal_infantry_idea_1 = {		#启用联邦军火库：步兵用Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				support_equipment = {
+					reliability_factor = -0.05
+				}
+			}
+		}
+
+		RSB_ww_arsenal_infantry_idea_2 = {		#启用联邦军火库：步兵用Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				support_equipment = {
+					reliability_factor = -0.1
+				}
+			}
+		}
+
+		RSB_ww_arsenal_infantry_idea_3 = {		#启用联邦军火库：步兵用Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				support_equipment = {
+					reliability_factor = -0.15
+				}
+			}
+		}
+
+		RSB_ww_arsenal_infantry_idea_4 = {		#启用联邦军火库：步兵用Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				support_equipment = {
+					reliability_factor = -0.2
+				}
+			}
+		}
+
+		RSB_ww_arsenal_infantry_idea_5 = {		#启用联邦军火库：步兵用V级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+			equipment_bonus = {
+				support_equipment = {
+					reliability_factor = -0.25
+				}
+			}
+		}
+
+		RSB_ww_arsenal_artillery_idea_1 = {		#启用联邦军火库：火炮用Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = -0.05
+			}
+		}
+
+		RSB_ww_arsenal_artillery_idea_2 = {		#启用联邦军火库：火炮用Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = -0.1
+			}
+		}
+
+		RSB_ww_arsenal_artillery_idea_3 = {		#启用联邦军火库：火炮用Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = -0.15
+			}
+		}
+
+		RSB_ww_arsenal_artillery_idea_4 = {		#启用联邦军火库：火炮用Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = -0.2
+			}
+		}
+
+		RSB_ww_arsenal_artillery_idea_5 = {		#启用联邦军火库：火炮用V级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = -0.25
+			}
+		}
+
+		RSB_ww_arsenal_armor_idea_1 = {		#启用联邦军火库：装甲兵器Ⅰ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = -0.05
+			}
+		}
+
+		RSB_ww_arsenal_armor_idea_2 = {		#启用联邦军火库：装甲兵器Ⅱ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = -0.1
+			}
+		}
+
+		RSB_ww_arsenal_armor_idea_3 = {		#启用联邦军火库：装甲兵器Ⅲ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = -0.15
+			}
+		}
+
+		RSB_ww_arsenal_armor_idea_4 = {		#启用联邦军火库：装甲兵器Ⅳ级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = -0.2
+			}
+		}
+
+		RSB_ww_arsenal_armor_idea_5 = {		#启用联邦军火库：装甲兵器V级
+			picture = GFX
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				breakthrough_factor = -0.25
+			}
+		}
+
+		RSB_politic_sit_local_party_trust_effect_1 = {		#地方政党联盟
+			name = RSB_politic_sit_local_party_trust_effect
+			picture = generic_deal_with_the_devil2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				conversion_cost_civ_to_mil_factor = 0.1
+			}
+		}
+
+		RSB_politic_sit_local_party_trust_effect_2 = {		#地方政党联盟
+			name = RSB_politic_sit_local_party_trust_effect
+			picture = generic_deal_with_the_devil2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				conversion_cost_civ_to_mil_factor = 0.05
+			}
+		}
+
+		RSB_politic_sit_local_party_trust_effect_3 = {		#地方政党联盟
+			name = RSB_politic_sit_local_party_trust_effect
+			picture = generic_deal_with_the_devil2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {}
+		}
+
+		RSB_politic_sit_local_party_trust_effect_4 = {		#地方政党联盟
+			name = RSB_politic_sit_local_party_trust_effect
+			picture = generic_deal_with_the_devil2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+
+		RSB_politic_sit_local_party_trust_effect_5 = {		#地方政党联盟
+			name = RSB_politic_sit_local_party_trust_effect
+			picture = generic_deal_with_the_devil2
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		RSB_burning_ground_outside_capital = {		#首都外燃烧的大地
+			picture = NOR_complacent_cabinet_ns
+			allowed = {  original_tag = RSB }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.1
+				mobilization_speed = -0.15
+				experience_gain_army_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+
+	}
+}

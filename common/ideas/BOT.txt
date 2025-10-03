@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+
+		BOT_blood_line = {		#血裔
+			picture = por_monarchist_uprising
+			allowed = { 
+				original_tag = BOT
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				rulling_ideology_drift = 0.05
+			}
+		}
+
+	}
+}

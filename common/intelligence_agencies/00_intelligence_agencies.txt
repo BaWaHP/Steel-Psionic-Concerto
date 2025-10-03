@@ -1,0 +1,417 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+
+###SPC###
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "七河合作防御卓越中心" }
+	
+	available = { tag = ZHE }
+	
+	default = { original_tag = ZHE } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_1 #暂未修改图标
+	names = { "克拉亚诺第五局" }
+	
+	available = { 
+		tag = ROK
+		NOT = {
+			has_government = revolutionary_communism
+		}
+	}
+	
+	default = { original_tag = ROK } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ita
+	names = { "BCIA" }
+	
+	available = { tag = RSB }
+	
+	default = { original_tag = RSB } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "西莉迪亚最高安全局" }
+	
+	available = { tag = NCD }
+	
+	default = { original_tag = NCD } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "KSDA" }
+	
+	available = { tag = ROK has_government = revolutionary_communism }
+	
+	default = { original_tag = ROK } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "提特兰内务部" }
+	
+	available = { tag = ROT has_government = national_socialist }
+	
+	default = { original_tag = ROT } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "地毯" }
+	
+	available = { tag = ROT has_government = liberal_republican }
+	
+	default = { original_tag = ROT } 
+}
+
+###原版###
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_usa
+	names = { "Office of Strategic Services" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_uk
+	names = { "MI6" "SIS" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_sov
+	names = { "NKVD" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_fra
+	names = { "Deuxième Bureau" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ger
+	names = { "Abwehr" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "G-2 Department" "Section 3" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ita
+	names = { "Servizio Informazioni Militare" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_swe
+	names = { "C-byrån" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_nor
+	names = { "E-tjenesten" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bel
+	names = { "ADIV" "SGRS" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { "Bureau Inlichtingen" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_rom
+	names = { "Serviciul Special de Informatii" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_prc
+	names = { "Intelligence Department Central Military Commission" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_chi
+	names = { "NBIS" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_yug
+	names = { "OZNA" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_spr
+	names = { "SIM" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_spa
+	names = { "SIPM" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "Dwójka" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_man
+	names = { "Hoankyoku" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_por
+	names = { "PIDE" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_fin
+	names = { "PE TIEDOS" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_tur
+	names = { "Millî Emniyet Hizmeti" }
+
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_gre
+	names = { "Diéfthynsi Eidikís Asfaleías tou Krátous" "I Eidikí" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_bul
+	names = { "Natsionalnata Razuznavatelna Sluzhba" }
+
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_agency_logo_eth_fetno_derash
+	names = { fetno_derash arbegnoch }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_crid
+	names = { crid black_lions }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_eth_smie
+	names = { smie }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Buero Ha" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
+	names = { "Federal Police" }
+	
+	default = { always = no }
+	available = { always = yes }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "Rooke" }
+	
+	default = { always = yes }
+	available = { always = yes }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "Tower" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_3
+	names = { "Snake" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_4
+	names = { "Stag" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_5
+	names = { "Golden Lion" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_6
+	names = { "Arrow" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_7
+	names = { "Lion Head" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_8
+	names = { "Golden Eagle" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "Hammer and Sickle" }
+	
+	default = { always = no }
+	available = { always = yes } 
+}
+

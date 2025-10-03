@@ -1,0 +1,61 @@
+ideas = {
+	country = {
+
+		RMN_knights_of_the_frontier = {		#边疆骑士团
+			picture = RMN_knights_of_the_frontier
+			allowed = {  original_tag = RMN }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				war_support_factor = -0.2
+				mobilization_speed = -0.5
+				conscription_factor = -0.3
+			}
+			targeted_modifier = {
+				tag = GLV
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = WOM
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+		}
+
+		RMN_terrible_environment = {		#恶劣的自然环境
+			picture = RMN_terrible_environment
+			allowed = {  original_tag = RMN }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				global_building_slots_factor = -0.2
+			}
+		}
+
+		RMN_unsustainable_development = {		#不可持续的发展
+			picture = RMN_unsustainable_development
+			allowed = {  original_tag = RMN }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				research_speed_factor = -0.2
+				industrial_capacity_factory = -0.2
+				monthly_population = -0.5
+				weekly_manpower = -200
+			}
+		}
+
+		RMN_tale_of_dream_lake = {		#梦之湖的传说
+			picture = HLD_tale_of_dream_lake
+			allowed = {  original_tag = RMN }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.01
+			}
+		}
+
+	}
+}

@@ -1,0 +1,309 @@
+spriteTypes = {	
+	###大肖像###
+	spriteType = {
+		name = "GFX_RLN_sorrell_capone"
+		texturefile = "gfx/leaders/RLN/sorrell_capone.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_ginsberg_depp"
+		texturefile = "gfx/leaders/RLN/ginsberg_depp.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_spicer_seck"
+		texturefile = "gfx/leaders/RLN/spicer_seck.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_karianne_berlin"
+		texturefile = "gfx/leaders/RLN/karianne_berlin.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_boris_walker"
+		texturefile = "gfx/leaders/RLN/boris_walker.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_hanks_walzer"
+		texturefile = "gfx/leaders/RLN/hanks_walzer.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_manuel_cardenas"
+		texturefile = "gfx/leaders/RLN/manuel_cardenas.png"
+	}
+	spriteType = {
+		name = "GFX_RLN_salvador_milo"
+		texturefile = "gfx/leaders/RLN/salvador_milo.png"
+	}
+	###小肖像###
+	spriteType = {
+		name = "GFX_idea_RLN_ginsberg_depp"
+		texturefile = "gfx/advisors/RLN/ginsberg_depp.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_spicer_seck"
+		texturefile = "gfx/advisors/RLN/spicer_seck.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_karianne_berlin"
+		texturefile = "gfx/advisors/RLN/karianne_berlin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_ben_singler"
+		texturefile = "gfx/advisors/RLN/ben_singler.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_boris_walker"
+		texturefile = "gfx/advisors/RLN/boris_walker.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_hanks_walzer"
+		texturefile = "gfx/advisors/RLN/hanks_walzer.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_manuel_cardenas"
+		texturefile = "gfx/advisors/RLN/manuel_cardenas.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RLN_salvador_milo"
+		texturefile = "gfx/advisors/RLN/salvador_milo.png"
+	}
+	###国策###
+	SpriteType = {
+		name = "GFX_RLN_the_lasting_red_flag"
+		texturefile = "gfx/interface/goals/RLN_the_lasting_red_flag.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_review_the_use_of_violence"
+		texturefile = "gfx/interface/goals/RLN_review_the_use_of_violence.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_open_the_vault"
+		texturefile = "gfx/interface/goals/RLN_open_the_vault.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_promote_military_democracy"
+		texturefile = "gfx/interface/goals/RLN_promote_military_democracy.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_settle_refugees"
+		texturefile = "gfx/interface/goals/RLN_settle_refugees.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_one_last_fight_with_enemies"
+		texturefile = "gfx/interface/goals/RLN_one_last_fight_with_enemies.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_help_people_first"
+		texturefile = "gfx/interface/goals/RLN_help_people_first.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_support_army_first"
+		texturefile = "gfx/interface/goals/RLN_support_army_first.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_battlefield_behind_enemies"
+		texturefile = "gfx/interface/goals/RLN_battlefield_behind_enemies.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_battle_for_revenge"
+		texturefile = "gfx/interface/goals/RLN_battle_for_revenge.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_the_victory"
+		texturefile = "gfx/interface/goals/RLN_the_victory.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_taking_over_the_nation"
+		texturefile = "gfx/interface/goals/RLN_taking_over_the_nation.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_public_trials"
+		texturefile = "gfx/interface/goals/RLN_public_trials.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_democrats_outside_the_party"
+		texturefile = "gfx/interface/goals/RLN_democrats_outside_the_party.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_econ_reconstruct_committe"
+		texturefile = "gfx/interface/goals/RLN_econ_reconstruct_committe.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_send_civilian_construct_corps"
+		texturefile = "gfx/interface/goals/RLN_send_civilian_construct_corps.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_mobilize_the_locals"
+		texturefile = "gfx/interface/goals/RLN_mobilize_the_locals.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_ask_for_help"
+		texturefile = "gfx/interface/goals/RLN_ask_for_help.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_study_the_giant_cacti"
+		texturefile = "gfx/interface/goals/RLN_study_the_giant_cacti.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_back_to_normal"
+		texturefile = "gfx/interface/goals/RLN_back_to_normal.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_reopen_factories"
+		texturefile = "gfx/interface/goals/RLN_reopen_factories.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_food_act"
+		texturefile = "gfx/interface/goals/RLN_food_act.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_focus_on_production"
+		texturefile = "gfx/interface/goals/RLN_focus_on_production.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_military_first"
+		texturefile = "gfx/interface/goals/RLN_military_first.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_civilian_first"
+		texturefile = "gfx/interface/goals/RLN_civilian_first.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_tenian_econ_miracle"
+		texturefile = "gfx/interface/goals/RLN_tenian_econ_miracle.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_party_and_gov"
+		texturefile = "gfx/interface/goals/RLN_party_and_gov.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_socialist_education"
+		texturefile = "gfx/interface/goals/RLN_socialist_education.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_reshape_cultures"
+		texturefile = "gfx/interface/goals/RLN_reshape_cultures.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_release_civil_powers"
+		texturefile = "gfx/interface/goals/RLN_release_civil_powers.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_reinforce_central_authority"
+		texturefile = "gfx/interface/goals/RLN_reinforce_central_authority.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_immortals_of_revolution"
+		texturefile = "gfx/interface/goals/RLN_immortals_of_revolution.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_learn_war_from_war"
+		texturefile = "gfx/interface/goals/RLN_learn_war_from_war.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_magic_in_military"
+		texturefile = "gfx/interface/goals/RLN_magic_in_military.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_uniform_commands"
+		texturefile = "gfx/interface/goals/RLN_uniform_commands.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_party_leads_the_gun"
+		texturefile = "gfx/interface/goals/RLN_party_leads_the_gun.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_professional_army"
+		texturefile = "gfx/interface/goals/RLN_professional_army.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_holy_commi_violence"
+		texturefile = "gfx/interface/goals/RLN_holy_commi_violence.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_penetrate_the_south"
+		texturefile = "gfx/interface/goals/RLN_penetrate_the_south.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_free_the_peninsular"
+		texturefile = "gfx/interface/goals/RLN_free_the_peninsular.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_retake_ports"
+		texturefile = "gfx/interface/goals/RLN_retake_ports.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_we_are_the_same"
+		texturefile = "gfx/interface/goals/RLN_we_are_the_same.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_window_of_the_world"
+		texturefile = "gfx/interface/goals/RLN_window_of_the_world.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_relife_of_our_motherland"
+		texturefile = "gfx/interface/goals/RLN_relife_of_our_motherland.png"			
+	}
+	SpriteType = {
+		name = "GFX_RLN_first_nationwide_election"
+		texturefile = "gfx/interface/goals/RLN_first_nationwide_election.png"			
+	}
+	###民族精神###
+	spriteType = {
+		name = "GFX_idea_RLN_one_party_four_factions"
+		texturefile = "gfx/interface/ideas/RLN_one_party_four_factions.png"
+	}
+	###事件###
+	spriteType = {
+		name = "GFX_report_event_RLN_7"
+		texturefile = "gfx/event_pictures/report_event_RLN_7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_RLN_56"
+		texturefile = "gfx/event_pictures/report_event_RLN_56.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_RLN_constitution"
+		texturefile = "gfx/event_pictures/report_event_RLN_constitution.dds"
+	}
+	###新闻###
+	spriteType = {
+		name = "GFX_news_event_RLN_constitution"
+		texturefile = "gfx/event_pictures/news_event_RLN_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_RLN_election_1"
+		texturefile = "gfx/event_pictures/news_event_RLN_election_1.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_RLN_election_2"
+		texturefile = "gfx/event_pictures/news_event_RLN_election_2.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_RLN_election_3"
+		texturefile = "gfx/event_pictures/news_event_RLN_election_3.dds"
+	}
+	###决议###
+	spriteType = {
+		name = "GFX_RLN_rebuild_econs_window_pic"
+		texturefile = "gfx/interface/RLN/RLN_rebuild_econs_window_pic.png"
+	}
+	progressbartype = {
+		name = "GFX_RLN_food_shortage_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/ProgressBars/SPC_generic_bar_yellow.png"
+		textureFile2 = "gfx/interface/ProgressBars/SPC_generic_bar_empty.png"
+		size = { x = 320 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+	progressbartype = {
+		name = "GFX_RLN_reproduction_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/ProgressBars/SPC_generic_bar_green.png"
+		textureFile2 = "gfx/interface/ProgressBars/SPC_generic_bar_empty.png"
+		size = { x = 320 y = 40 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

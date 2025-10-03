@@ -1,0 +1,247 @@
+on_actions = {
+  
+	on_startup = {
+		effect = {
+			###厌战度部分###暂时禁用###
+			#SPC_war_exhaustion_initialize = yes
+			###省份普及度部分###
+			every_country = {
+				###省份普及度###
+				SPC_states_development_startup = yes
+				SPC_monthly_development_rate_update = yes
+				###魔法面板相关###
+				set_variable = { SPC_magic_panel = 0 }
+				SPC_magic_panel_startup = yes
+				###魔法科研系统###	###为什么这么玩意在这儿？因为就一行，我才不要为了用不上还只有一行的玩意单独开一个文件。###
+				#SPC_MP_research_startup = yes
+			}
+			###发展度部分
+			every_country = {
+				SPC_development_update_effect = yes
+
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					set_variable = { industrial_development_process = 4 }
+					set_variable = { agricultural_development_process = 4 }
+					set_variable = { military_development_process = 4 }
+					set_variable = { living_standard_development_process = 4 }
+					set_variable = { environment_development_process = 4 }
+					set_variable = { research_development_process = 4 }
+					#set_variable = { race_mixing_status_process = 4 }
+				}
+
+				#ai经济快乐法案#
+				#add_ideas = civilian_economy
+				#add_ideas = export_focus
+				#add_ideas = neutral_tatic
+				#add_ideas = volunteer_only
+				#add_ideas = normal_taxes
+				#add_ideas = advanced_training
+				###未完成专属政策###
+				#add_ideas = ai_environment_policy
+				#add_ideas = ai_industry_policy
+				#add_ideas = ai_resource_policy
+				#add_ideas = ai_working_policy
+				#add_ideas = ai_agricultural_policy
+				#add_ideas = ai_research_policy
+				#add_ideas = ai_media_policy
+				#add_ideas = ai_subsidies_policy
+				#add_ideas = ai_magician_policy
+				#add_ideas = ai_secret_police_policy
+				#add_ideas = ai_female_policy
+				#add_ideas = ai_education_policy
+				#开局国家的法案会后覆盖所以不用担心#
+
+				set_variable = { industrial_development_amount = 0 }
+				set_variable = { agricultural_development_amount = 0 }
+				set_variable = { military_development_amount = 0 }
+				set_variable = { living_standard_development_amount = 0 }
+				set_variable = { environment_development_amount = 0 }
+				set_variable = { research_development_amount = 0 }
+				#set_variable = { race_mixing_status_amount = 0 }
+
+				#开局政策添加，尽可能放在最底下#
+                SPC_startup_scripted_effect = yes
+				###省份普及度###
+				SPC_monthly_development_rate_update = yes
+				SPC_monthly_development_level_update = yes
+				SPC_magic_panel_variable_update = yes
+				SPC_magic_panel_data_update = yes
+			}
+			###新闻###
+			TST = {
+				news_event = { 
+					id = GlobalNews.1 days = 150
+				}
+				news_event = { 
+					id = GlobalNews.2 days = 200
+				}
+				#news_event = { 
+				#	id = GlobalNews.3 days = 100
+				#}
+				country_event = {
+					id = Global.2 days = 30
+				}
+				news_event = { 
+					id = GlobalNews.5 days = 60
+				}
+			}
+			###地区数组设置###
+			every_country = {
+				###东巴###
+				#远乡#
+				if = {
+					limit = { SPC_generic_region_trigger_1 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_1 = THIS.id }
+					}
+				}
+				if = {
+					limit = { tag = SFH }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_1_1 = THIS.id }
+					}
+				}
+				if = {
+					limit = { tag = NWF }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_1_2 = THIS.id }
+					}
+				}
+				if = {
+					limit = { OR = { tag = NFH tag = MSA } }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_1_3 = THIS.id }
+					}
+				}
+				#联合王国#
+				if = {
+					limit = { SPC_generic_region_trigger_2 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_2 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_2_1 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_2_1 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_2_2 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_2_2 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_2_3 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_2_3 = THIS.id }
+					}
+				}
+				#沃姆#
+				if = {
+					limit = { 
+						SPC_generic_region_trigger_3 = yes
+						NOT = { tag = TPG }
+					}	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_3_1 = yes  }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3_1 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_3_2 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3_2 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_3_3 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3_3 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_3_4 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3_4 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_3_5 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_3_5 = THIS.id }
+					}
+				}
+				###南巴###
+				#特尼安#
+				if = {
+					limit = { SPC_generic_region_trigger_50 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_50 = THIS.id }
+					}
+				}
+				###提特兰###
+				if = {
+					limit = { SPC_generic_region_trigger_100 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_100 = THIS.id }
+					}
+				}
+				#坎达德尔#
+				if = {
+					limit = { tag = KDK }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_101 = THIS.id }
+					}
+				}
+				#蒙特#
+				if = {
+					limit = { SPC_generic_region_trigger_102 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_102 = THIS.id }
+					}
+				}
+				#马加尔斯#
+				if = {
+					limit = { tag = MGC }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_103 = THIS.id }
+					}
+				}
+				#伊斯恰#
+				if = {
+					limit = { tag = IMC }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_104 = THIS.id }
+					}
+				}
+				###中巴###
+				if = {
+					limit = { SPC_generic_region_trigger_250 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_250 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_251 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_251 = THIS.id }
+					}
+				}
+			}
+			###补充数据###
+			###提特兰###
+			add_to_array = { global.SPC_generic_region_states_100 = 472.id }
+		}
+	}
+
+}

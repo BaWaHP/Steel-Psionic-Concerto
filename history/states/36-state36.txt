@@ -1,0 +1,29 @@
+
+state={
+	id=36
+	name="STATE_36"
+	provinces={
+		2250 9219 10488 10507 10874 11253 18148 18238 18419 18433 18491 18527 18583 18637 18689 18728 
+	}
+	resources = {
+		oil = 8
+	}
+	history = {
+		owner = TPG
+		add_core_of = TPG
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			18689 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			18238 10
+		}
+	}
+	manpower=3540000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

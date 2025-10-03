@@ -1,0 +1,49 @@
+characters={
+
+	#卡尔·布劳恩
+	PRF_Karl_Braun = {
+   		name = PRF_Karl_Braun
+   		portraits = {
+   			civilian = {
+   				large="GFX_PRF_Karl_Braun"
+   				small="GFX_idea_PRF_Karl_Braun"
+   			}
+   			army = {
+				large="GFX_PRF_Karl_Braun"
+				small="GFX_idea_PRF_Karl_Braun"
+   			}
+   		}
+   		country_leader = {
+   			ideology = continuous_revolutionism
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	#康拉德·赫尔维希
+	PRF_Konrad_Herwig = {
+   		name = PRF_Konrad_Herwig
+   		portraits = {
+   			civilian = {
+   				large="GFX_PRF_Konrad_Herwig"
+   				small="GFX_idea_PRF_Konrad_Herwig"
+   			}
+   			army = {
+				large="GFX_PRF_Konrad_Herwig"
+				small="GFX_idea_PRF_Konrad_Herwig"
+   			}
+   		}
+   		country_leader = {
+   			ideology = revolutionary_front
+   			expire = "3000.1.1.1"
+   			id = -1
+   		}
+	}
+}

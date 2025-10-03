@@ -1,0 +1,74 @@
+ideas = {
+	country = {
+
+		SHA_granary_of_zhetysu = {		#七河粮仓
+			picture = POL_succesful_four_year_plan
+			allowed = { 
+				original_tag = SHA
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				conscription = 0.02
+				monthly_living_standard_development_process = -2
+				monthly_agricultural_development_process = 2
+			}
+		}
+
+		SHA_life_is_cheap = {		#生命廉价
+			picture = air_war_plans_division_focus
+			allowed = { 
+				original_tag = SHA
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.15
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SHA_dual_structure_impose_cost = {		#二元结构-代价
+			picture = generic_democratic_opposition
+			allowed = { 
+				original_tag = SHA
+			}
+			removal_cost = -1
+			modifier = {
+				autonomy_manpower_share = -0.5
+				extra_trade_to_overlord_factor = 0.25
+				cic_to_overlord_factor = 0.5
+				autonomy_gain_trade_factor = -0.75
+			}
+		}
+
+		SHA_Ill_fares_the_land = {		#沉疴遍地
+			picture = ZHE_Ill_fares_the_land
+			allowed = { 
+				original_tag = SHA
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		SHA_let_the_bullets_fly = {		#马匪之患
+			picture = ZHE_let_the_bullets_fly
+			allowed = { 
+				original_tag = SHA
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+	}
+}

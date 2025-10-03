@@ -1,0 +1,263 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ROK_internal_external_conflict_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 300 }
+
+		instantTextboxType = {
+			name = "ROK_Prop_title"
+			position = { x = 227 y = 10 }
+			font = "hoi_18mbs"
+			maxWidth = 50
+			maxHeight = 30
+			format = center
+			text = ROK_Prop_txt
+			pdx_tooltip = ROK_Prop_txt
+		}
+
+		iconType = {
+			name = "Leader_1"
+			spriteType = "GFX_ROK_emmy_puskia"
+			position = { x = 20 y = 50 }
+			pdx_tooltip = ROK_emmy_puskia_desc
+			scale = 0.9
+		}
+
+		iconType = {
+			name = "Leader_bg_1"
+			spriteType = "GFX_Leader_bg"
+			position = { x = 8 y = 30 }
+			pdx_tooltip = ROK_emmy_puskia_desc
+			scale = 0.9
+		}
+
+		instantTextboxType = {
+			name = "Leader_name_1"
+			position = { x = 0 y = 245 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = center
+			text = ROK_emmy_puskia
+			pdx_tooltip = ROK_emmy_puskia_desc
+		}
+
+		instantTextboxType = {
+			name = "Leader_prop_1"
+			position = { x = 55 y = 265 }
+			font = "hoi_12header"
+			maxWidth = 80
+			maxHeight = 30
+			format = center
+			text = ROK_Leader_1_prop_tt
+			pdx_tooltip = ROK_Leader_1_prop_tt
+		}
+
+		iconType = {
+			name = "Leader_2"
+			spriteType = "GFX_ROK_stahl_wickes"
+			position = { x = 180 y = 50 }
+			pdx_tooltip = ROK_stahl_wickes_desc
+			scale = 0.9
+		}
+
+		iconType = {
+			name = "Leader_bg_2"
+			spriteType = "GFX_Leader_bg"
+			position = { x = 168 y = 30 }
+			pdx_tooltip = ROK_stahl_wickes_desc
+			scale = 0.9
+		}
+
+		instantTextboxType = {
+			name = "Leader_name_2"
+			position = { x = 157 y = 245 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = center
+			text = ROK_stahl_wickes
+			pdx_tooltip = ROK_stahl_wickes_desc
+		}
+
+		instantTextboxType = {
+			name = "Leader_prop_2"
+			position = { x = 215 y = 265 }
+			font = "hoi_12header"
+			maxWidth = 80
+			maxHeight = 30
+			format = center
+			text = ROK_Leader_2_prop_tt
+			pdx_tooltip = ROK_Leader_2_prop_tt
+		}
+
+		iconType = {
+			name = "Leader_3"
+			spriteType = "GFX_ROK_henrik_lofsky"
+			position = { x = 340 y = 50 }
+			pdx_tooltip = ROK_henrik_lofsky_desc
+			scale = 0.9
+		}
+
+		iconType = {
+			name = "Leader_bg_3"
+			spriteType = "GFX_Leader_bg"
+			position = { x = 328 y = 30 }
+			pdx_tooltip = ROK_henrik_lofsky_desc
+			scale = 0.9
+		}
+
+		instantTextboxType = {
+			name = "Leader_name_3"
+			position = { x = 315 y = 245 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			format = center
+			text = ROK_henrik_lofsky
+			pdx_tooltip = ROK_henrik_lofsky_desc
+		}
+
+		instantTextboxType = {
+			name = "Leader_prop_3"
+			position = { x = 377 y = 265 }
+			font = "hoi_12header"
+			maxWidth = 80
+			maxHeight = 30
+			format = center
+			text = ROK_Leader_3_prop_tt
+			pdx_tooltip = ROK_Leader_3_prop_tt
+		}
+	}
+
+	containerWindowType = {
+		name = "ROK_social_and_cultural_committee_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 600 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_ROK_SCC_bg"
+			position = { x = 25 y = 0 }
+		}
+
+		buttonType = {
+			name = "Left_btn"
+			position = { x = 78 y = -386 }
+			quadTextureSprite ="GFX_ROK_SCC_Left_btn"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_Left_btn_tt
+		}
+
+		iconType = {
+			name = "Left_btn_selected"
+			position = { x = 78 y = -386 }
+			quadTextureSprite ="GFX_ROK_SCC_Left_btn_slected"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_Left_btn_tt
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "Right_btn"
+			position = { x = 288 y = -384 }
+			quadTextureSprite ="GFX_ROK_SCC_Right_btn"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_Right_btn_tt
+		}
+
+		iconType = {
+			name = "Right_btn_selected"
+			position = { x = 288 y = -384 }
+			quadTextureSprite ="GFX_ROK_SCC_Right_btn_slected"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_Right_btn_tt
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "Current_title"
+			position = { x = 50 y = 350 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = center
+			text = ROK_Current_title_txt
+		}
+
+		instantTextboxType = {
+			name = "Current_agenda"
+			position = { x = 50 y = 375 }
+			font = "hoi_24header"
+			maxWidth = 400
+			maxHeight = 30
+			format = center
+			text = Current_agenda_txt
+		}
+
+		buttonType = {
+			name = "faction_btn_1"
+			position = { x = 70 y = -145 }
+			quadTextureSprite ="GFX_ROK_faction_btn_1"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_1_tt
+		}
+
+		buttonType = {
+			name = "faction_btn_2"
+			position = { x = 162 y = -145 }
+			quadTextureSprite ="GFX_ROK_faction_btn_2"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_2_tt
+		}
+
+		buttonType = {
+			name = "faction_btn_3"
+			position = { x = 254 y = -145 }
+			quadTextureSprite ="GFX_ROK_faction_btn_3"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_3_tt
+		}
+
+		buttonType = {
+			name = "faction_btn_4"
+			position = { x = 346 y = -145 }
+			quadTextureSprite ="GFX_ROK_faction_btn_4"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_4_tt
+		}
+
+		iconType = {
+			name = "faction_alt_1"
+			position = { x = 125 y = -98 }
+			quadTextureSprite = "GFX_faction_alt_gfx_0"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_1_tt
+		}
+
+		iconType = {
+			name = "faction_alt_2"
+			position = { x = 217 y = -98 }
+			quadTextureSprite = "GFX_faction_alt_gfx_0"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_2_tt
+		}
+
+		iconType = {
+			name = "faction_alt_3"
+			position = { x = 309 y = -98 }
+			quadTextureSprite = "GFX_faction_alt_gfx_0"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_3_tt
+		}
+
+		iconType = {
+			name = "faction_alt_4"
+			position = { x = 401 y = -98 }
+			quadTextureSprite = "GFX_faction_alt_gfx_0"
+			Orientation = "LOWER_LEFT"
+			tooltip = ROK_faction_alt_4_tt
+		}
+	}
+}

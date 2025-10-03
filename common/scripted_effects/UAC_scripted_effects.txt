@@ -1,0 +1,237 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_UAC_startup_effect = {
+	if = {
+		limit = { tag = UAC }
+		###政府法案###
+		add_ideas = limited_conscription
+		add_ideas = basic_training
+		add_ideas = civilian_economy
+		add_ideas = free_trade
+		add_ideas = barely_no_taxes
+		add_ideas = NP_totally_free_market
+		add_ideas = friendly_tatic
+		###发展度###
+		add_ideas = early_factory_industry
+		add_ideas = self_efficient_agriculture
+		add_ideas = experienced_army
+		add_ideas = struggle_to_survive
+		add_ideas = uncomfortable
+		add_ideas = nobody_cares
+		###工业政策###
+		add_ideas = EP_barely_nothing
+		add_ideas = RP_locating_resource
+		add_ideas = IP_no_intervention
+		add_ideas = WP_no_specific_laws
+		add_ideas = AP_no_funds
+		add_ideas = RP_no_funds
+		###政府政策###
+		add_ideas = MP_mixed_media
+		add_ideas = SP_no_funds
+		add_ideas = MP_no_restriction
+		add_ideas = SPP_police_special_unit
+		add_ideas = FP_traditional_place
+		add_ideas = EP_minimum_spending
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_suderian
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_pluralismm
+		add_ideas = SXP_recessing_policy
+		###疟疾###
+		399 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		400 = { add_dynamic_modifier = { modifier = UAC_fulminant_malaria_epidemic } }
+		395 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		256 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		397 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		392 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		391 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		390 = { add_dynamic_modifier = { modifier = UAC_highly_prevalent_malaria_epidemic } }
+		387 = { add_dynamic_modifier = { modifier = UAC_highly_prevalent_malaria_epidemic } }
+		388 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		238 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		260 = { add_dynamic_modifier = { modifier = UAC_malaria_epidemic } }
+		261 = { add_dynamic_modifier = { modifier = UAC_highly_prevalent_malaria_epidemic } }
+		###发展度###
+		398 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		397 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		396 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+		}
+		395 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		399 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		400 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 3 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 5 }
+		}
+		256 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 0 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		412 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		411 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 2 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 4 }
+		}
+		407 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 0 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		401 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 0 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		388 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		389 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		257 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 0 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		249 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		387 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		238 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		237 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		239 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		247 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		260 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		261 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		394 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		393 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		391 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+		392 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 1 }
+		}
+		390 = {
+			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_level = 1 }
+			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_level = 3 }
+		}
+	}
+}

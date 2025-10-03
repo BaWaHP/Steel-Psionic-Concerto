@@ -1,0 +1,102 @@
+SPC_generic_sekeleton_decision_category = {
+	WOM_generic_war_decision = {		#沃姆通用吃鸡决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3 = yes }
+
+		available = {
+			date > 2003.1.1
+			ARZ = { exists = no }
+			has_war = no
+			FROM = { is_neighbor_of = ROOT }
+		}
+
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				SPC_generic_region_trigger_3 = yes
+				NOT = { tag = ROOT }
+				NOT = { tag = ARZ }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { FROM = { NOT = { tag = TPG } } }
+				FROM = {
+					add_to_ROOT_potential_cores = yes
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+
+SPC_generic_national_reunification_decision_category = {
+	WOM_reunification_decision_1 = {		#小沃姆统一决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3_1 = yes }
+
+		available = {
+			SPC_generic_region_trigger_3_1_control = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 200
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_3_1
+				if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_core_of = ROOT
+				}
+			}
+			set_global_flag = SPC_region_unified_global_10
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+	}
+	WOM_reunification_decision_2 = {		#大沃姆统一决议
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_3_1 = yes }
+
+		available = {
+			SPC_generic_region_trigger_3_control = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 200
+			for_each_scope_loop = {
+				array = global.SPC_generic_region_states_3
+				if = {
+					limit = { NOT = { is_core_of = ROOT } }
+					add_core_of = ROOT
+				}
+			}
+			set_global_flag = SPC_region_unified_global_3
+		}
+
+		ai_will_do = {
+			base = 999
+		}
+	}
+}
+

@@ -1,0 +1,35 @@
+
+state={
+	id=184
+	name="STATE_184"
+
+	resources = {
+		steel = 12
+		tungsten = 24
+		aluminium = 24
+	}
+
+	history={
+		owner = UTM
+		add_core_of = UTM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 3
+		}
+		victory_points = {
+			11376 15
+		}
+		victory_points = {
+			5214 5
+		}
+	}
+
+	provinces={
+		1174 2382 4710 5214 11376 11787 14922 15047 15152 15323 15411 15431 15453 15530 
+	}
+	manpower=1120000 
+	buildings_max_level_factor=1.000
+	state_category = city
+	local_supplies=0.000
+}

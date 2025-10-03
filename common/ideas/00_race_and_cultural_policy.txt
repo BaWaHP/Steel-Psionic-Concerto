@@ -1,0 +1,1522 @@
+ideas = {
+
+	special_magic = {
+		law = yes
+		use_list_view = yes
+
+		SM_no_special_magic = {	#SM - special_magic
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_no_special_magic }
+			available = { }
+
+			modifier = {
+				stability_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_crystal_secret_code = {	#SM - special_magic	#水晶秘典
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_crystal_secret_code }
+			available = { always = no }
+
+			modifier = { }
+
+			research_bonus = {
+				electronics = -0.05
+				industry = -0.05
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					breakthrough = 0.05
+					ap_attack = 0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					breakthrough = 0.05
+					ap_attack = 0.05
+					instant = yes
+				}
+				caster_equipment = {
+					breakthrough = 0.05
+					ap_attack = 0.05
+					instant = yes
+				}
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_adpative_magic = {	#SM - special_magic	#环境适应魔法
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_adpative_magic }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = 0.2
+				global_building_slots_factor = 0.05
+				attrition = -0.05
+				terrain_penalty_reduction = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_heart_of_the_mountain = {	#大山之心
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_heart_of_the_mountain }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				local_resources_factor = 0.25
+				monthly_population = -0.5
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_partial_mimicry = {	#局部拟态
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_partial_mimicry }
+			available = { always = no }
+
+			modifier = {
+				enemy_army_bonus_air_superiority_factor = -0.05
+				amphibious_invasion = 0.05
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_extreme_override = {	#极限过载
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_extreme_override }
+			available = { always = no }
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.2
+				army_defence_factor = -0.1
+				army_strength_factor = -0.1
+				conscription_factor = -0.2
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SM_rigil_kent = {	#疾驰姿态
+			level = 114514
+			cost = -1
+
+			visible = { has_idea = SM_rigil_kent }
+			available = { always = no }
+
+			modifier = {
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.1
+				supply_consumption_factor = 0.05
+				recon_factor = 0.5
+				breakthrough_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+	leading_race = {
+		law = yes
+		use_list_view = yes
+
+		LR_humans = {	#人类
+			level = 1
+
+			visible = { has_idea = LR_humans }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				monthly_population = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_Subhuman = {	#亚人
+			level = 2
+
+			visible = { has_idea = LR_Subhuman }
+
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = 0.05
+				army_org_regain = 0.05
+				army_org_factor = 0.05
+				monthly_population = 0.2
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_carnivorous_orcs = {	#肉食兽人
+
+			level = 3
+
+			visible = {
+				has_idea = LR_carnivorous_orcs
+			}
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+				monthly_population = -0.1
+				supply_consumption_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_herbivorous_orcs = {	#草食兽人
+			level = 4
+
+			visible = { has_idea = LR_herbivorous_orcs }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = 0.05
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				consumer_goods_factor = -0.1
+				monthly_population = 0.1
+				supply_consumption_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_omnivorous_orcs = {	#杂食兽人
+			level = 5
+
+			visible = { has_idea = LR_omnivorous_orcs }
+			available = { always = no }
+
+			modifier = {
+				army_org_factor = 0.05
+				research_speed_factor = 0.05
+				supply_consumption_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_demons = {	#魔族
+			level = 6
+
+			visible = { has_idea = LR_demons }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = 0.1
+				army_attack_factor = 0.05
+				monthly_population = -0.1
+			}
+
+			research_bonus = {
+				secret_weapons = 0.05
+				secret_weapons = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_monsters = {	#魔兽
+			level = 7
+
+			visible = { has_idea = LR_monsters }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				conscription_factor = 0.2
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_advanced_magician = {	#高魔个体
+			level = 8
+
+			visible = { has_idea = LR_advanced_magician }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				army_attack_factor = 0.1
+				political_power_factor = 0.2
+			}
+
+			research_bonus = {
+				secret_weapons = 0.3
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_intellectual_android = {	#智械
+			level = 9
+
+			visible = { has_idea = LR_intellectual_android }
+			available = { always = no }
+
+			modifier = {
+				conscription_factor = -0.3
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+				monthly_population = -0.3
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_race_equity = {	#种族平等
+			level = 10
+
+			visible = { has_idea = LR_race_equity }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.2
+				conscription_factor = 0.2
+				mobilization_speed = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		LR_naga_racism = {	#纳卡教种族主义
+			level = 11
+
+			visible = { has_idea = LR_naga_racism }
+			available = { always = no }
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+	specific_race = {
+		law = yes
+		use_list_view = yes
+
+		SR_LingRen = {	#SR - specific_race	#麟人
+			level = 1
+
+			visible = { has_idea = SR_LingRen }
+			available = { always = no }
+
+			modifier = {
+				conscription_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				army_org_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Celydreans = {	#SR - specific_race	#西莉迪亚人
+			level = 1
+
+			visible = { has_idea = SR_Celydreans }
+			available = { always = no }
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Peorians = {	#SR - specific_race	#皮奥瑞亚人
+			level = 1
+
+			visible = { has_idea = SR_Celydreans }
+			available = { always = no }
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Auroretians = {	#SR - specific_race	#奥罗日亚人
+			level = 1
+
+			visible = { has_idea = SR_Auroretians }
+			available = { always = no }
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.1
+				training_time_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Wome_people = {	#SR - specific_race	#沃姆人
+			level = 1
+
+			visible = { has_idea = SR_Wome_people }
+			available = { always = no }
+
+			modifier = {
+				mobilization_speed = 0.2
+				conscription_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.1
+				training_time_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Gorvians = {	#SR - specific_race	#戈尔维亚人
+			level = 1
+
+			visible = { has_idea = SR_Gorvians }
+			available = { always = no }
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				research_speed_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Sbridgens = {	#SR - specific_race	#斯布里奇人
+			level = 1
+
+			visible = { has_idea = SR_Sbridgens }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.05
+				local_resources_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Virtuoso = {	#维尔陶人
+			level = 1
+
+			visible = { has_idea = SR_Virtuoso }
+			available = { always = no }
+
+			modifier = {
+				army_speed_factor = 0.05
+				stability_factor = 0.05
+				army_defence_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_suderian = {	#苏德瑞尔人
+			level = 1
+
+			visible = { has_idea = SR_suderian }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = 0.05
+				army_org_regain = 0.05
+				army_attack_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Hongolea_Centaur = {	#宏戈利亚半人马
+			level = 1
+
+			visible = { has_idea = SR_Hongolea_Centaur }
+			available = { always = no }
+
+			modifier = {
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.05
+				stability_factor = 0.05
+				land_reinforce_rate = 0.02
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_Boyesco_ethnic_mixing = {	#波伊斯科种族混居
+			level = 1
+
+			visible = { has_idea = SR_Boyesco_ethnic_mixing }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = -0.05
+				stability_factor = -0.1
+				army_attack_factor = -0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SR_ink_elves = {	#SR - specific_race	#墨精灵
+			level = 1
+
+			visible = { has_idea = SR_ink_elves	}
+			available = { always = no }
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				monthly_population = -0.25
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		
+		SR_rabbitman = {	#兔人
+			level = 1
+
+			visible = { has_idea = SR_rabbitman }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = 0.25
+				army_attack_factor = -0.1
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		SR_rabbitman_n_tsubitman = {	#兔人与翼兔人
+			level = 1
+
+			visible = { OR = { has_idea = SR_rabbitman has_idea = SR_rabbitman_n_tsubitman } }
+			available = { always = no }
+			
+			modifier = {
+				monthly_population = 0.25
+				army_speed_factor = 0.1
+				army_attack_factor = -0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_wingman = {	#翼人
+			level = 1
+
+			visible = { has_idea = SR_wingman }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = 0.05
+				air_attack_factor = 0.05
+				breakthrough_factor = -0.05
+				army_attack_factor = 0.05
+				army_speed_factor = 0.1
+				recon_factor = 0.02
+				production_speed_buildings_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_crystals = {	#水晶族裔
+			level = 1
+
+			visible = { has_idea = SR_crystals }
+			available = { always = no }
+			
+			modifier = {
+				stability_factor = -0.1
+				army_attack_factor = 0.08
+				breakthrough_factor = 0.08
+				supply_consumption_factor = 0.08
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					soft_attack = 0.05
+					instant = yes	
+				}
+				caster_equipment = {
+					build_cost_ic = -0.05
+					soft_attack = 0.05
+					instant = yes	
+				}
+			}
+
+			research_bonus = {
+				industry = -0.03
+				electronics = -0.03
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_wuna_centaur = {	#于摩半人马
+			level = 1
+
+			visible = { has_idea = SR_wuna_centaur }
+			available = { always = no }
+			
+			modifier = {
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.05
+				mobilization_speed = 0.1
+				land_reinforce_rate = 0.02
+				modifier_army_sub_unit_centaur_militia_attack_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_tenians = {	#特尼安人
+			level = 1
+
+			visible = { has_idea = SR_tenians }
+			available = { always = no }
+			
+			modifier = {
+				stability_factor = 0.1
+				army_org_regain = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_white_ocean_mermaid = {	#白洋海人鱼族
+			level = 1
+
+			visible = { has_idea = SR_tenians }
+			available = { always = no }
+			
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				global_building_slots_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				trade_opinion_factor = 0.2
+				research_speed_factor = 0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_dwarves = {	#矮人
+			level = 1
+
+			visible = { has_idea = SR_dwarves }
+			available = { always = no }
+			
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				global_building_slots_factor = 0.25
+				industry_air_damage_factor = -0.15
+				stability_factor = -0.05
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_midans = {	#SP - specific_race	#米德人
+			level = 1
+
+			visible = { has_idea = SR_midans }
+			available = { always = no }
+
+			modifier = {
+				monthly_population = 0.05
+				army_org_regain = 0.075
+				army_attack_factor = 0.025
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_donvoltsk_centaurs = {	#SP - specific_race	#顿伏茨克半人马
+			level = 1
+
+			visible = { has_idea = SR_donvoltsk_centaurs }
+			available = { always = no }
+
+			modifier = {
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.05
+				land_reinforce_rate = 0.02
+				modifier_army_sub_unit_centaur_militia_attack_factor = 0.02
+				training_time_army_factor = -0.05
+				monthly_population = 0.02
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_owenderos = {	#SP - specific_race	#欧文德洛人
+			level = 1
+
+			visible = { has_idea = SR_owenderos }
+			available = { always = no }
+
+			modifier = {
+				training_time_factor = -0.1
+				supply_node_range = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_unharmonized_multi_ethnic_states = {	#SP - specific_race	#不和谐的多民族国家
+			level = 1
+
+			visible = { has_idea = SR_unharmonized_multi_ethnic_states }
+			available = { always = no }
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				stability_factor = -0.1
+				army_org_regain = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_teotland_people = {	#SP - specific_race	#提特兰人
+			level = 1
+
+			visible = { has_idea = SR_teotland_people }
+			available = { always = no }
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				local_resources_factor = 0.1
+			}
+
+			research_bonus = {
+				secret_weapons = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_confused_national_construction = { #迷茫的民族建构
+			level = 1
+
+			visible = { has_idea = SR_confused_national_construction }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_verdes = { #维尔德人
+			level = 1
+
+			visible = { has_idea = SR_verdes }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_empire_five = { #帝国五族
+			level = 1
+
+			visible = { has_idea = SR_empire_five }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		SR_race_euqality = {	#SP - specific_race	#民族平等
+			level = 1
+
+			visible = { has_idea = SR_race_euqality }
+			available = { always = no }
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				conscription_factor = 0.1
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	race_policy = {
+		law = yes
+		use_list_view = yes
+
+		RAP_suppression = {	#RAP - race_policy
+			level = 1
+			cost = -1
+
+			available = { always = no }
+
+			modifier = {
+				conscription_factor = -0.2
+				stability_factor = 0.2
+				political_power_factor = 0.2
+				production_speed_buildings_factor = -0.2
+			}
+
+			allowed_to_remove = { always = no }
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RAP_lower_suppression = {	#RAP - race_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = -0.1
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RAP_discrimination = {	#RAP - race_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RAP_legally_equality = {	#RAP - race_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RAP_active_promotion = {	#RAP - race_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+	religion_policy = {
+		law = yes
+		use_list_view = yes
+
+		RLP_religious_state = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				war_support_factor = 0.25
+				justify_war_goal_time = -0.20
+				stability_factor = 0.15
+				monthly_population = 0.3
+				research_speed_factor = -0.1
+				drift_defence_factor = 0.25
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RLP_unreligious_state = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				war_support_factor = 0.15
+				justify_war_goal_time = -0.15
+				monthly_population = -0.15
+				drift_defence_factor = 0.25
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RLP_national_religion = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				monthly_population = 0.25
+				research_speed_factor = -0.05
+				drift_defence_factor = 0.15
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RLP_moralism = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				war_support_factor = 0.1
+				monthly_population = 0.1
+				drift_defence_factor = 0.15
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RLP_pluralismm = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.025
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		RLP_secularism = {	#RLP - religion_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = -0.1
+				research_speed_factor = 0.05
+				drift_defence_factor = -0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+	sex_policy = {
+		law = yes
+		use_list_view = yes
+
+		SXP_recessing_policy = {	#SXP - sex_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.2
+				drift_defence_factor = 0.3
+				consumer_goods_factor = -0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SXP_reactionary_policy = {	#SXP - sex_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.1
+				drift_defence_factor = 0.2
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SXP_traditional_policy = {	#SXP - sex_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = 0.05
+				drift_defence_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			default = yes
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SXP_legally_equal = {	#SXP - sex_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = -0.05
+				conscription_factor = 0.1
+				war_support_factor = 0.05
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		SXP_active_role = {	#SXP - sex_policy
+
+			level = 1
+
+			cost = -1
+
+			available = {
+				always = no
+			}
+
+			modifier = {
+				monthly_population = -0.1
+				conscription_factor = 0.2
+				war_support_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
+
+}

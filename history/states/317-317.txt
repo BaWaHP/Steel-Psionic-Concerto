@@ -1,0 +1,39 @@
+
+state={
+	id=317
+	name="STATE_317"
+	resources={
+		steel = 40
+		aluminium = 8
+	}
+
+	history={
+		owner = RSU
+		add_core_of = RSU
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 3
+			radar_station = 1
+			air_base = 4
+			8273 = {
+				air_facility = 1
+			}
+		}
+		victory_points = {
+			20085 30
+		}
+		victory_points = {
+			20348 5 
+		}
+
+	}
+
+	provinces={
+		4277 8273 8854 10972 11800 20072 20085 20141 20166 20267 20348 
+	}
+	manpower=4270000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

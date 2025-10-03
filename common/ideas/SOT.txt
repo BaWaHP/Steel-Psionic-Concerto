@@ -1,0 +1,98 @@
+ideas = {
+	country = {
+
+		SOT_dangerous_neighbor = {		#危险的邻居
+			picture = tur_sectarian_troubles_fundamentalism
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		SOT_oasis_window = {		#绿洲之窗
+			picture = ARG_invest_in_railways
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 3
+				}
+			}
+
+			on_remove = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = -3
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = -3
+				}
+			}
+
+			modifier = {
+				political_power_factor = -0.2
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.05
+				offsite_cic_building = 3
+				offsite_mil_building = 3
+			}
+			targeted_modifier = {
+				tag = OAS
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+			}
+		}
+
+		SOT_limited_armed_forces = {		#受限的军事力量
+			picture = SOV_purged_junior_army_officers
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				war_support_factor = -0.5
+				experience_gain_army_factor = -1
+				training_time_army_factor = 1
+				army_defence_factor = -0.3
+				army_org_factor = -0.3
+				monthly_military_development_process = -2
+			}
+		}
+
+		SOT_necessary_evil = {		#必要之恶
+			picture = NOR_printing_money
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				monthly_industrial_development_process = 2
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		SOT_gov_lack_of_control = {		#缺乏控制力的政府
+			picture = generic_disjointed_gov
+			allowed = {  original_tag = KOA }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				global_building_slots_factor = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+	}
+}

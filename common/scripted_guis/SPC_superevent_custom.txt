@@ -1,0 +1,31 @@
+scripted_gui = {
+
+    SPC_superevents_container = {
+        context_type = player_context
+        window_name = "SPC_superevents_container"
+        visible = {
+            has_country_flag = superevent_show_flag
+        }
+        effects = {
+            option_click = {
+                clr_country_flag = superevent_show_flag
+                SE_flag_clr = yes
+            }
+        }
+        properties = {
+            image = {
+				image = "[Get_superevent_bg]"
+			}
+        }
+        ai_enabled = {
+            always = yes
+        }
+        ai_weights = {
+            option_click = {
+                ai_will_do = {
+                    factor = 1
+                }
+            }
+        }
+    }
+}

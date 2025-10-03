@@ -1,0 +1,64 @@
+﻿###templates###
+division_template = {
+	name = "殖民军团"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+
+###units###
+
+units = {
+	division = {
+		name = "殖民军团"
+		location = 4395
+		division_template = "殖民军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民军团"
+		location = 4395
+		division_template = "殖民军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民军团"
+		location = 6415
+		division_template = "殖民军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "殖民军团"
+		location = 4809
+		division_template = "殖民军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "殖民军团"
+		location = 7073
+		division_template = "殖民军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "殖民军团"
+		location = 4384
+		division_template = "殖民军团"
+		start_experience_factor = 0
+		start_equipment_factor = 0.7
+	}
+}

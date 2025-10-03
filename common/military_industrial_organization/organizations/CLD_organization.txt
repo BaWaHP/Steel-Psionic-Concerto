@@ -1,0 +1,14 @@
+CLD_peace_design_bureau = {		#“和平”设计局
+	name = CLD_peace_design_bureau
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_2
+	allowed = { tag = CLD }
+}
+
+CLD_revolutionary_armor_bureau = {		#革命装甲局
+	name = CLD_revolutionary_armor_bureau
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+	allowed = { tag = CLD }
+	visible = { CLD = { has_completed_focus = CLD_establish_armor_research_bureau } }
+}

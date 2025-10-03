@@ -1,0 +1,806 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_RSB_startup_effect = {
+	if = {
+		limit = { tag = RSB }
+		###政府法案###
+		add_ideas = volunteer_only
+		add_ideas = advanced_training
+		add_ideas = low_economic_mobilisation
+		add_ideas = free_trade
+		add_ideas = high_taxes
+		add_ideas = NP_light_nationalization
+		add_ideas = defensive_tatic
+		###发展度###
+		add_ideas = grouped_factory_industry
+		add_ideas = modern_agriculture
+		add_ideas = very_experienced_army
+		add_ideas = extra_living
+		add_ideas = controlled_pollution
+		add_ideas = fake_exists
+		###工业政策###
+		add_ideas = EP_government_target
+		add_ideas = RP_extensive_mining
+		add_ideas = IP_funding_proj
+		add_ideas = WP_limited_laws
+		add_ideas = AP_advanced_funds
+		add_ideas = RP_advanced_funds
+		###政府政策###
+		add_ideas = MP_funding_media
+		add_ideas = SP_advanced_funds
+		add_ideas = MP_open_for_application
+		add_ideas = SPP_unlimited_national_dep
+		add_ideas = FP_calling_for_equality
+		add_ideas = EP_modern_textbooks
+		###种族和特殊魔法###
+		add_ideas = SM_no_special_magic
+		add_ideas = LR_humans
+		add_ideas = SR_suderian
+		add_ideas = RAP_lower_suppression
+		add_ideas = RLP_secularism
+		add_ideas = SXP_traditional_policy
+		###省份修正###
+		324 = { add_dynamic_modifier = { modifier = RSB_the_etropolis } }
+		330 = { add_dynamic_modifier = { modifier = RSB_new_born_industrial_zone } }
+		327 = { add_dynamic_modifier = { modifier = RSB_trade_key_point } }
+		#add_dynamic_modifier = { modifier = RSB_gov_finance_risk_dynamic_modifier }
+		###开局设置###
+		country_event = {
+			id = RSB.50
+			days = 180
+		}
+
+		set_country_flag = RSB_federation_icon_1
+		add_ideas = SPC_faction_south_bastia_federation_leader
+		set_variable = { global.SPC_faction_south_bastia_federation_leader_nation = RSB.id }
+
+		every_country = {
+			if = {
+				limit = { is_in_faction_with = RSB NOT = { tag = RSB } NOT = { tag = ROT } }
+				set_country_flag = RSB_federation_icon_2
+				add_ideas = SPC_faction_south_bastia_federation_member
+			}
+		}
+
+		set_country_flag = RSB_federal_financial_budget_on
+		set_variable = { RSB_politic_sit_desc = 1 }
+		set_variable = { RSB_politic_sit_prestige = 65 }
+		set_variable = { RSB_politic_sit_unity = 75 }
+		set_variable = { RSB_politic_sit_scandal = 3 }
+		set_variable = { RSB_politic_sit_local_party_trust = 65 }
+
+		activate_mission = RSB_government_polls
+		activate_mission = RSB_inspection_of_government_work
+
+		set_variable = { RSB_gov_army_support = 0 }
+
+		###军火库变量###
+		set_country_flag = RSB_federal_war_arsenal_on
+		#伟大战争#
+		set_country_flag = RSB_gw_arsenal_lock_flag
+		set_variable = { RSB_gw_arsenal_infantry_equipment = 45000 }
+		set_variable = { RSB_gw_arsenal_uniform_equipment = 45000 }
+		set_variable = { RSB_gw_arsenal_artillery_equipment = 8000 }
+		set_variable = { RSB_gw_arsenal_titan_equipment = 500 }
+		#世界大战#
+		set_country_flag = RSB_ww_arsenal_lock_flag
+		set_variable = { RSB_ww_arsenal_infantry_equipment = 25000 }
+		set_variable = { RSB_ww_arsenal_uniform_equipment = 25000 }
+		set_variable = { RSB_ww_arsenal_artillery = 5000 }
+		set_variable = { RSB_ww_arsenal_anti_tank = 1000 }
+		set_variable = { RSB_ww_arsenal_light_tank = 800 }
+		set_variable = { RSB_ww_arsenal_medium_tank = 500 }
+		set_variable = { RSB_ww_arsenal_light_fighter = 250 }
+		set_variable = { RSB_ww_arsenal_medium_titan = 350 }
+		###财务预算变量###
+		set_variable = { RSB_financial_budget_income = 100 }	#年度财务预算
+		set_variable = { RSB_financial_budget_income_max = 100 }	#财务预算上限
+		set_variable = { RSB_financial_budget_asset = 0 }	#实用资金
+		set_variable = { RSB_financial_budget_asset_growth = 0 }	#实用资金
+		activate_mission = RSB_assets_growth_monthly
+		###控制省份对应普及度###
+		every_state = {
+			if = {
+				limit = {
+					state = 334
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 332
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 335
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 336
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 379
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 330
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
+			if = {
+				limit = {
+					state = 329
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 331
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 328
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 324
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			if = {
+				limit = {
+					state = 325
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 326
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 3 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 5 }		
+			}
+			if = {
+				limit = {
+					state = 327
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 4 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 6 }		
+			}
+			340 = {
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 1 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 1 }
+			}
+		}
+	}
+}
+
+RSB_gw_arsenal_infantry_up = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_1
+			add_idea = RSB_gw_arsenal_infantry_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_2
+			add_idea = RSB_gw_arsenal_infantry_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_3
+			add_idea = RSB_gw_arsenal_infantry_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_4
+			add_idea = RSB_gw_arsenal_infantry_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_gw_arsenal_infantry_idea_1
+	}
+}
+
+RSB_gw_arsenal_infantry_down = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_5
+			add_idea = RSB_gw_arsenal_infantry_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_4
+			add_idea = RSB_gw_arsenal_infantry_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_3
+			add_idea = RSB_gw_arsenal_infantry_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_infantry_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_infantry_idea_2
+			add_idea = RSB_gw_arsenal_infantry_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_gw_arsenal_infantry_idea_1
+	}
+}
+
+RSB_gw_arsenal_artillery_up = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_1
+			add_idea = RSB_gw_arsenal_artillery_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_2
+			add_idea = RSB_gw_arsenal_artillery_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_3
+			add_idea = RSB_gw_arsenal_artillery_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_4
+			add_idea = RSB_gw_arsenal_artillery_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_gw_arsenal_artillery_idea_1
+	}
+}
+
+RSB_gw_arsenal_artillery_down = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_5
+			add_idea = RSB_gw_arsenal_artillery_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_4
+			add_idea = RSB_gw_arsenal_artillery_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_3
+			add_idea = RSB_gw_arsenal_artillery_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_artillery_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_artillery_idea_2
+			add_idea = RSB_gw_arsenal_artillery_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_gw_arsenal_artillery_idea_1
+	}
+}
+
+RSB_gw_arsenal_titan_up = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_1
+			add_idea = RSB_gw_arsenal_titan_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_2
+			add_idea = RSB_gw_arsenal_titan_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_3
+			add_idea = RSB_gw_arsenal_titan_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_4
+			add_idea = RSB_gw_arsenal_titan_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_gw_arsenal_titan_idea_1
+	}
+}
+
+RSB_gw_arsenal_titan_down = {
+	if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_5
+			add_idea = RSB_gw_arsenal_titan_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_4
+			add_idea = RSB_gw_arsenal_titan_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_3
+			add_idea = RSB_gw_arsenal_titan_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_gw_arsenal_titan_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_gw_arsenal_titan_idea_2
+			add_idea = RSB_gw_arsenal_titan_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_gw_arsenal_titan_idea_1
+	}
+}
+
+RSB_ww_arsenal_infantry_up = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_1
+			add_idea = RSB_ww_arsenal_infantry_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_2
+			add_idea = RSB_ww_arsenal_infantry_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_3
+			add_idea = RSB_ww_arsenal_infantry_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_4
+			add_idea = RSB_ww_arsenal_infantry_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_ww_arsenal_infantry_idea_1
+	}
+}
+
+RSB_ww_arsenal_infantry_down = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_5
+			add_idea = RSB_ww_arsenal_infantry_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_4
+			add_idea = RSB_ww_arsenal_infantry_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_3
+			add_idea = RSB_ww_arsenal_infantry_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_infantry_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_infantry_idea_2
+			add_idea = RSB_ww_arsenal_infantry_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_ww_arsenal_infantry_idea_1
+	}
+}
+
+RSB_ww_arsenal_artillery_up = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_1
+			add_idea = RSB_ww_arsenal_artillery_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_2
+			add_idea = RSB_ww_arsenal_artillery_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_3
+			add_idea = RSB_ww_arsenal_artillery_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_4
+			add_idea = RSB_ww_arsenal_artillery_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_ww_arsenal_artillery_idea_1
+	}
+}
+
+RSB_ww_arsenal_artillery_down = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_5
+			add_idea = RSB_ww_arsenal_artillery_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_4
+			add_idea = RSB_ww_arsenal_artillery_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_3
+			add_idea = RSB_ww_arsenal_artillery_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_artillery_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_artillery_idea_2
+			add_idea = RSB_ww_arsenal_artillery_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_ww_arsenal_artillery_idea_1
+	}
+}
+
+RSB_ww_arsenal_armor_up = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_1 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_1
+			add_idea = RSB_ww_arsenal_armor_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_2
+			add_idea = RSB_ww_arsenal_armor_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_3
+			add_idea = RSB_ww_arsenal_armor_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_4
+			add_idea = RSB_ww_arsenal_armor_idea_5
+		}
+	}
+	else = {
+		add_ideas = RSB_ww_arsenal_armor_idea_1
+	}
+}
+
+RSB_ww_arsenal_armor_down = {
+	if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_5 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_5
+			add_idea = RSB_ww_arsenal_armor_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_4 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_4
+			add_idea = RSB_ww_arsenal_armor_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_3 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_3
+			add_idea = RSB_ww_arsenal_armor_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = RSB_ww_arsenal_armor_idea_2 }
+		swap_ideas = {
+			remove_idea = RSB_ww_arsenal_armor_idea_2
+			add_idea = RSB_ww_arsenal_armor_idea_1
+		}
+	}
+	else = {
+		remove_ideas = RSB_ww_arsenal_armor_idea_1
+	}
+}
+
+RSB_assets_cal = {
+	set_variable = { RSB_financial_budget_asset_growth = RSB_financial_budget_income }
+	multiply_variable = { RSB_financial_budget_asset_growth = 0.1 }
+}
+
+RSB_politic_sit_var_check = {
+	clamp_variable = {
+		var = RSB_politic_sit_prestige
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = RSB_politic_sit_unity
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = RSB_politic_sit_scandal
+		min = 0
+	}
+	clamp_variable = {
+		var = RSB_politic_sit_local_party_trust
+		min = 0
+		max = 100
+	}
+	RSB_politic_sit_scandal_update = yes
+	RSB_politic_sit_trust_update = yes
+}
+
+RSB_politic_sit_scandal_update = {
+	set_variable = { RSB_politic_sit_scandal_min = RSB_politic_sit_scandal }
+	divide_variable = { RSB_politic_sit_scandal_min = 5 }
+	multiply_variable = { RSB_politic_sit_scandal_min = -5 }
+
+	if = {
+		limit = {
+			check_variable = { RSB_politic_sit_scandal > 4 }
+		}
+		activate_mission = RSB_attack_from_opposition
+	}
+
+	clamp_variable = {
+		var = RSB_politic_sit_scandal
+		min = 0
+	}
+}
+
+RSB_politic_sit_trust_update = {
+	if = {
+		limit = { has_idea = RSB_politic_sit_local_party_trust_effect_1 }
+		remove_ideas = RSB_politic_sit_local_party_trust_effect_1
+	}
+	if = {
+		limit = { has_idea = RSB_politic_sit_local_party_trust_effect_2 }
+		remove_ideas = RSB_politic_sit_local_party_trust_effect_2
+	}
+	if = {
+		limit = { has_idea = RSB_politic_sit_local_party_trust_effect_3 }
+		remove_ideas = RSB_politic_sit_local_party_trust_effect_3
+	}
+	if = {
+		limit = { has_idea = RSB_politic_sit_local_party_trust_effect_4 }
+		remove_ideas = RSB_politic_sit_local_party_trust_effect_4
+	}
+	if = {
+		limit = { has_idea = RSB_politic_sit_local_party_trust_effect_5 }
+		remove_ideas = RSB_politic_sit_local_party_trust_effect_5
+	}
+
+	if = {
+		limit = {
+			check_variable = { RSB_politic_sit_local_party_trust < 20 }
+		}
+		add_ideas = RSB_politic_sit_local_party_trust_effect_1
+	}
+	if = {
+		limit = { 
+			check_variable = { RSB_politic_sit_local_party_trust > 19 }
+			check_variable = { RSB_politic_sit_local_party_trust < 40 }
+		}
+		add_ideas = RSB_politic_sit_local_party_trust_effect_2
+	}
+	if = {
+		limit = { 
+			check_variable = { RSB_politic_sit_local_party_trust > 39 }
+			check_variable = { RSB_politic_sit_local_party_trust < 60 }
+		}
+		add_ideas = RSB_politic_sit_local_party_trust_effect_3
+	}
+	if = {
+		limit = { 
+			check_variable = { RSB_politic_sit_local_party_trust > 59 }
+			check_variable = { RSB_politic_sit_local_party_trust < 80 }
+		}
+		add_ideas = RSB_politic_sit_local_party_trust_effect_4
+	}
+	if = {
+		limit = { 
+			check_variable = { RSB_politic_sit_local_party_trust > 79 }
+			check_variable = { RSB_politic_sit_local_party_trust < 101 }
+		}
+		add_ideas = RSB_politic_sit_local_party_trust_effect_5
+	}
+}
+
+RSB_dismantle_union_effect = {
+	dismantle_faction = yes
+	set_global_flag = RSB_faction_collapse
+	every_country = {
+		if = {
+			limit = { has_idea = SPC_faction_south_bastia_federation_leader }
+			remove_ideas = SPC_faction_south_bastia_federation_leader
+		}
+		if = {
+			limit = { has_idea = SPC_faction_south_bastia_federation_member }
+			remove_ideas = SPC_faction_south_bastia_federation_member
+		}
+		if = {
+			limit = { has_country_flag = RSB_federation_icon_1 }
+			clr_country_flag = RSB_federation_icon_1
+		}
+		if = {
+			limit = { has_country_flag = RSB_federation_icon_2 }
+			clr_country_flag = RSB_federation_icon_2
+		}
+		global = { clear_variable = SPC_faction_south_bastia_federation_leader_nation }
+		if = {
+			limit = { has_country_flag = RSB_federal_war_arsenal_on }
+			clr_country_flag = RSB_federal_war_arsenal_on
+		}
+	}
+	RSB_dismantle_union_others_effect = yes
+}
+
+RSB_dismantle_union_others_effect = {
+	#在这里执行南巴崩溃后其他人的效果#
+	ROT = {
+		country_event = {
+			id = ROT.11
+			days = 1
+		}
+	}
+}
+
+RSB_financial_health_committe_setup = {
+	add_dynamic_modifier = { modifier = RSB_financial_health_committe }
+	set_variable = { RSB_financial_health_committe_ppf = 0.05 }
+	set_variable = { RSB_financial_health_committe_cgf = -0.03 }
+	set_variable = { RSB_financial_health_committe_psbf = 0 }
+	set_variable = { RSB_financial_health_committe_rsf = 0 }
+	set_variable = { RSB_financial_health_committe_sf = 0 }
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=181
+	name="STATE_181"
+
+	resources = {
+		steel = 8
+		tungsten = 6
+		magic_crystal = 24
+	}
+
+	history={
+		owner = NOH
+		add_core_of = NOH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			15548 2
+		}
+	}
+
+	provinces={
+		1657 3685 6184 7847 8290 15548 15636 15676 15803 15901 
+	}
+	manpower = 390000
+	buildings_max_level_factor=1.000
+	state_category = town
+	local_supplies=0.000
+}

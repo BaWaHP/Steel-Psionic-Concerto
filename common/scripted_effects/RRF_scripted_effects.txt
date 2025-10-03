@@ -1,0 +1,98 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_RRF_startup_effect = {
+	###初始省份###
+	RSU = {
+		every_core_state = { 
+			add_core_of = RRF 
+			if = {
+				limit = { has_dynamic_modifier = { modifier = RSU_regions_affected_by_labor_union } }
+				remove_dynamic_modifier = { modifier = RSU_regions_affected_by_labor_union }
+				add_dynamic_modifier = {
+					modifier = RSU_regions_affected_by_labor_union_2
+					scope = RRF
+				}
+			}
+		}
+		set_country_flag = RSU_full_union_development_plan_ban
+		remove_dynamic_modifier = { modifier = RSU_union_conference }
+		remove_dynamic_modifier = { modifier = RSU_majestic_haze }
+		leave_faction = yes
+	}
+	transfer_state = 346
+	transfer_state = 320
+	transfer_state = 319
+	###非初始国家默认设置###
+	###介绍页面###
+	set_variable = { SPC_intro_screen = 1 }
+	###普及度修正部分###
+	set_variable = { magic_development_monthly_buff = 0 }
+	set_variable = { science_development_monthly_buff = 0 }
+	every_owned_state = {
+		set_variable = { state_magic_monthly_buff = 0 }
+		set_variable = { state_science_monthly_buff = 0 }
+	}
+	###发展度设置###
+	SPC_development_update_effect = yes
+	###自定义内容###
+	###政府法案###
+	add_ideas = limited_conscription
+	add_ideas = basic_training
+	add_ideas = partial_economic_mobilisation
+	add_ideas = limited_exports
+	add_ideas = normal_taxes
+	add_ideas = NP_medium_nationalization
+	add_ideas = defensive_tatic
+	###发展度###
+	add_ideas = factory_industry
+	add_ideas = weak_agriculture
+	add_ideas = unorganized_army
+	add_ideas = hard_to_survive
+	add_ideas = controlled_pollution
+	add_ideas = fake_exists
+	###工业政策###
+	add_ideas = EP_minimum_control
+	add_ideas = RP_asisting_research
+	add_ideas = IP_basic_funds
+	add_ideas = WP_basic_laws
+	add_ideas = AP_basic_funds
+	add_ideas = RP_basic_funds
+	###政府政策###
+	add_ideas = MP_funding_media
+	add_ideas = SP_basic_funds
+	add_ideas = MP_open_for_application
+	add_ideas = SPP_unlimited_national_dep
+	add_ideas = FP_calling_for_equality
+	add_ideas = EP_sharing_textbooks
+	###种族和特殊魔法###
+	add_ideas = SM_no_special_magic
+	add_ideas = LR_humans
+	add_ideas = SR_suderian
+	add_ideas = RAP_discrimination
+	add_ideas = RLP_pluralismm
+	add_ideas = SXP_traditional_policy
+	###其它开局设置###
+	inherit_technology = RSU
+	load_oob = "RRF"
+	declare_war_on = {
+		target = RSU
+		type = civil_war
+	}
+}

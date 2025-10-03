@@ -1,0 +1,411 @@
+scripted_gui = {
+	SPC_development_panel_state = {
+		context_type = selected_state_context
+		window_name = "SPC_development_panel_state"
+		parent_window_token = selected_state_view 
+
+		ai_enabled = {
+			always = yes
+		}
+
+		triggers = {
+			state_development_panel_button_visible = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		effects = {
+			state_development_panel_button_click = {
+				controller = {
+					set_country_flag = state_development_panel_on
+				}
+			}
+		}
+
+		ai_weights = {
+			state_development_panel_button_click = {
+				ai_will_do = {
+					base = 1
+				}
+			}			
+		}
+	}
+
+	SPC_state_development_panel = {
+		context_type = selected_state_context
+		window_name = "SPC_state_development_panel"
+
+		ai_enabled = {
+			always = yes
+		}
+
+		visible = {
+			ROOT = {
+				has_country_flag = state_development_panel_on
+			}
+			is_fully_controlled_by = ROOT
+		}
+
+		triggers = {
+		}
+
+		effects = {
+			close_click = {
+				ROOT = {
+					clr_country_flag = state_development_panel_on
+				}
+			}
+			special_op_mag_1_click = {
+				if = {
+					limit = {
+						NOT = { has_dynamic_modifier = { modifier = state_development_special_op_modifier_1 } }
+						ROOT = { has_political_power > 29 }
+					}
+					add_dynamic_modifier = { modifier = state_development_special_op_modifier_1 days = 30 }
+					ROOT = { add_political_power = -30 }
+					add_to_variable = { state_magic_progress = 5 }
+					SPC_special_op_update = yes
+				}
+			}
+			special_op_mag_2_click = {
+				if = {
+					limit = {
+						NOT = { has_dynamic_modifier = { modifier = state_development_special_op_modifier_2 } }
+						ROOT = { has_political_power > 29 }
+					}
+					add_dynamic_modifier = { modifier = state_development_special_op_modifier_2 days = 30 }
+					ROOT = { add_political_power = -30 }
+					add_to_variable = { state_magic_progress = 5 }
+					SPC_special_op_update = yes
+				}
+			}
+			special_op_mag_3_click = {
+				if = {
+					limit = {
+						check_variable = { state_science_progress > 4 }
+						ROOT = { has_political_power > 99 }
+					}
+					ROOT = { add_political_power = -100 }
+					add_to_variable = { state_magic_progress = 10 }				
+					add_to_variable = { state_science_progress = -5 }
+					SPC_special_op_update = yes	
+				}
+			}
+			special_op_mag_4_click = {
+				if = {
+					limit = { check_variable = { state_magic_progress > 4 } }
+					ROOT = { add_political_power = 20 }
+					add_to_variable = { state_magic_progress = -5 }				
+					SPC_special_op_update = yes
+				}
+			}
+			special_op_sci_1_click = {
+				if = {
+					limit = { ROOT = { has_political_power > 99 } }
+					ROOT = { add_political_power = -100 }
+					add_to_variable = { state_science_progress = 5 }
+					SPC_special_op_update = yes
+				}			
+			}
+			special_op_sci_2_click = {
+				if = {
+					limit = {
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+						ROOT = { has_political_power > 199 }
+					}
+					ROOT = { add_political_power = -200 }
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_to_variable = { state_science_progress = 5 }
+					SPC_special_op_update = yes
+				}			
+			}
+			special_op_sci_3_click = {
+				if = {
+					limit = {
+						check_variable = { state_magic_progress > 4 }
+						ROOT = { has_political_power > 99 }
+					}
+					ROOT = { add_political_power = -100 }
+					add_to_variable = { state_science_progress = 10 }
+					add_to_variable = { state_magic_progress = -5 }
+					SPC_special_op_update = yes
+				}
+			}
+			special_op_sci_4_click = {
+				if = {
+					limit = { check_variable = { state_science_progress > 4 } }
+					ROOT = { add_political_power = 20 }
+					add_to_variable = { state_science_progress = -5 }
+					SPC_special_op_update = yes	
+				}
+			}
+		}
+
+		properties = {
+			mag_progress_bar = {
+				frame = mag_progress_bar_frame
+			}
+			sci_progress_bar = {
+				frame = sci_progress_bar_frame
+			}
+		}
+
+		ai_weights = {
+			special_op_mag_1_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power > 299
+						}
+						add = 10
+					}
+				}
+			}
+			special_op_mag_2_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power > 299
+						}
+						add = 10
+					}
+				}
+			}
+			special_op_mag_3_click = {
+				ai_will_do = {
+					base = 0
+				}
+			}
+			special_op_mag_4_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power < -299
+						}
+						add = 5
+					}
+				}
+			}
+			special_op_sci_1_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power > 399
+						}
+						add = 2.5
+					}
+					modifier = {
+						ROOT = {
+							has_political_power > 599
+						}
+						add = 5
+					}
+				}				
+			}
+			special_op_sci_2_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power > 399
+						}
+						add = 2.5
+					}
+					modifier = {
+						ROOT = {
+							has_political_power > 599
+						}
+						add = 5
+					}
+				}				
+			}
+			special_op_sci_3_click = {
+				ai_will_do = {
+					base = 0
+				}
+			}
+			special_op_sci_4_click = {
+				ai_will_do = {
+					base = 0
+					modifier = {
+						ROOT = {
+							has_political_power < -299
+						}
+						add = 5
+					}
+				}
+			}
+		}
+	}
+
+	SPC_development_panel_country = {
+		context_type = player_context
+		window_name = "SPC_development_panel_country"
+		parent_window_token = politics_tab
+
+		effects = {
+			country_development_panel_button_click = {
+				if = {
+					limit = { has_country_flag = country_development_panel_on }
+					clr_country_flag = country_development_panel_on
+				}
+				else = {
+					set_country_flag = country_development_panel_on	
+				}
+			}
+		}
+	}
+
+	SPC_country_development_panel = {
+		context_type = player_context
+		window_name = "SPC_country_development_panel"
+		#parent_window_token = politics_tab
+
+		visible = {
+			has_country_flag = country_development_panel_on
+		}
+
+		effects = {
+			close_click = {
+				clr_country_flag = country_development_panel_on
+			}
+		}
+
+		properties = {
+			bar_1 = {
+				frame = industrial_development_amount
+			}
+			level_1_1 = {
+				image = "[GET_counrty_development_icon_1_1]"
+			}
+			level_1_2 = {
+				image = "[GET_counrty_development_icon_1_2]"
+			}
+			level_1_3 = {
+				image = "[GET_counrty_development_icon_1_3]"
+			}
+			level_1_4 = {
+				image = "[GET_counrty_development_icon_1_4]"
+			}
+			level_1_5 = {
+				image = "[GET_counrty_development_icon_1_5]"
+			}
+			level_1_6 = {
+				image = "[GET_counrty_development_icon_1_6]"
+			}
+			bar_2 = {
+				frame = agricultural_development_amount
+			}
+			level_2_1 = {
+				image = "[GET_counrty_development_icon_2_1]"
+			}
+			level_2_2 = {
+				image = "[GET_counrty_development_icon_2_2]"
+			}
+			level_2_3 = {
+				image = "[GET_counrty_development_icon_2_3]"
+			}
+			level_2_4 = {
+				image = "[GET_counrty_development_icon_2_4]"
+			}
+			level_2_5 = {
+				image = "[GET_counrty_development_icon_2_5]"
+			}
+			level_2_6 = {
+				image = "[GET_counrty_development_icon_2_6]"
+			}
+			bar_3 = {
+				frame = military_development_amount
+			}
+			level_3_1 = {
+				image = "[GET_counrty_development_icon_3_1]"
+			}
+			level_3_2 = {
+				image = "[GET_counrty_development_icon_3_2]"
+			}
+			level_3_3 = {
+				image = "[GET_counrty_development_icon_3_3]"
+			}
+			level_3_4 = {
+				image = "[GET_counrty_development_icon_3_4]"
+			}
+			level_3_5 = {
+				image = "[GET_counrty_development_icon_3_5]"
+			}
+			level_3_6 = {
+				image = "[GET_counrty_development_icon_3_6]"
+			}
+			bar_4 = {
+				frame = living_standard_development_amount
+			}
+			level_4_1 = {
+				image = "[GET_counrty_development_icon_4_1]"
+			}
+			level_4_2 = {
+				image = "[GET_counrty_development_icon_4_2]"
+			}
+			level_4_3 = {
+				image = "[GET_counrty_development_icon_4_3]"
+			}
+			level_4_4 = {
+				image = "[GET_counrty_development_icon_4_4]"
+			}
+			level_4_5 = {
+				image = "[GET_counrty_development_icon_4_5]"
+			}
+			level_4_6 = {
+				image = "[GET_counrty_development_icon_4_6]"
+			}
+			bar_5 = {
+				frame = environment_development_amount
+			}
+			level_5_1 = {
+				image = "[GET_counrty_development_icon_5_1]"
+			}
+			level_5_2 = {
+				image = "[GET_counrty_development_icon_5_2]"
+			}
+			level_5_3 = {
+				image = "[GET_counrty_development_icon_5_3]"
+			}
+			level_5_4 = {
+				image = "[GET_counrty_development_icon_5_4]"
+			}
+			level_5_5 = {
+				image = "[GET_counrty_development_icon_5_5]"
+			}
+			level_5_6 = {
+				image = "[GET_counrty_development_icon_5_6]"
+			}
+			bar_6 = {
+				frame = research_development_amount
+			}
+			level_6_1 = {
+				image = "[GET_counrty_development_icon_6_1]"
+			}
+			level_6_2 = {
+				image = "[GET_counrty_development_icon_6_2]"
+			}
+			level_6_3 = {
+				image = "[GET_counrty_development_icon_6_3]"
+			}
+			level_6_4 = {
+				image = "[GET_counrty_development_icon_6_4]"
+			}
+			level_6_5 = {
+				image = "[GET_counrty_development_icon_6_5]"
+			}
+			level_6_6 = {
+				image = "[GET_counrty_development_icon_6_6]"
+			}
+		}
+	}
+}
