@@ -68,5 +68,18 @@ ideas = {
 			}
 		}
 
+		#破败之国
+		NKM_broken_country = {
+			picture = AFG_parliament_building_damaged
+			allowed = { original_tag = NKM }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.5
+				initiative_factor = -0.5
+				coordination_bonus = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
 	}
 }
