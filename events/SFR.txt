@@ -3628,14 +3628,14 @@ country_event = {	#最后一次会议
 			set_temp_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_left_anger }
 			subtract_from_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_right_anger }
 			if = {
-				limit = { check_variable = { subtract_from_variable > 2 } }
+				limit = { check_variable = { SFR_pol_reform_anger_diff > 2 } }
 				country_event = {
 					id = SFR.384
 					days = 1
 				}
 			}
 			else_if = {
-				limit = { check_variable = { subtract_from_variable < -2 } }
+				limit = { check_variable = { SFR_pol_reform_anger_diff < -2 } }
 				country_event = {
 					id = SFR.383
 					days = 1
@@ -3823,6 +3823,56 @@ country_event = {	#全国土改圆满成功！
 	
 	option = {
 		name = SFR.401.a
+		add_stability = 0.1
+		add_political_power = 200
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		if = {
+			limit = { has_completed_focus = SFR_comrade_pistol_speech }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_1
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = SFR_land_requisition }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_2
+			}
+		}
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 5
+			tooltip = agricultural_development_mod_tt_up_2
+		}
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 5
+			tooltip = living_standard_development_mod_tt_up_2
+		}
 	}
 }
 
@@ -3836,6 +3886,56 @@ country_event = {	#全国土改正常收尾
 	
 	option = {
 		name = SFR.402.a
+		add_stability = 0.05
+		add_political_power = 50
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		if = {
+			limit = { has_completed_focus = SFR_comrade_pistol_speech }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_1
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = SFR_land_requisition }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_2
+			}
+		}
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 2
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
 	}
 }
 
@@ -3849,6 +3949,56 @@ country_event = {	#全国土改草草收尾
 	
 	option = {
 		name = SFR.403.a
+		add_stability = -0.05
+		add_political_power = -50
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = -10
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		if = {
+			limit = { has_completed_focus = SFR_comrade_pistol_speech }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_1
+			}
+		}
+		else_if = {
+			limit = { has_completed_focus = SFR_land_requisition }
+			swap_ideas = {
+				remove_idea = SFR_unfinished_land_reform_4
+				add_idea = SFR_finished_land_reform_2
+			}
+		}
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = 1
+			tooltip = agricultural_development_mod_tt_up_1
+		}
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 1
+			tooltip = living_standard_development_mod_tt_up_1
+		}
 	}
 }
 
@@ -3862,6 +4012,42 @@ country_event = {	#土改进展缓慢！
 	
 	option = {
 		name = SFR.404.a
+		add_stability = -0.1
+		add_political_power = -100
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = -5
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		add_to_variable = {
+			var = agricultural_development_mod
+			value = -1
+			tooltip = agricultural_development_mod_tt_down_1
+		}
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = -1
+			tooltip = living_standard_development_mod_tt_down_1
+		}
 	}
 }
 
@@ -4010,7 +4196,7 @@ country_event = {	#地方势力的不配合
 	}
 }
 
-country_event = {	#
+country_event = {	#最后抉择
 	id = SFR.409
 	title = SFR.409.t
 	desc = SFR.409.d
@@ -4020,6 +4206,76 @@ country_event = {	#
 	
 	option = {
 		name = SFR.409.a
+		effect_tooltip = { unlock_national_focus = SFR_comrade_pistol_speech }
+		set_country_flag = SFR_comrade_pistol_speech_flag
+	}
+
+	option = {
+		name = SFR.409.a
+		effect_tooltip = { unlock_national_focus = SFR_land_requisition }
+		set_country_flag = SFR_land_requisition_flag
+	}
+}
+
+country_event = {	#无意义的抵抗
+	id = SFR.410
+	title = SFR.410.t
+	desc = SFR.410.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.410.a
+		add_manpower = -42
+		add_political_power = 1
+	}
+}
+
+country_event = {	#“列祖列宗啊...”
+	id = SFR.411
+	title = SFR.411.t
+	desc = SFR.411.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.411.a
+		add_stability = 0.02
+		add_political_power = -10
+	}
+}
+
+country_event = {	#公审前夜
+	id = SFR.412
+	title = SFR.412.t
+	desc = SFR.412.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.412.a
+		country_event = {
+			id = SFR.413
+			days = 1
+		}
+	}
+}
+
+country_event = {	#公审大会
+	id = SFR.413
+	title = SFR.413.t
+	desc = SFR.413.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.413.a
+		custom_effect_tooltip = SFR.413.a.tt
+		add_manpower = -314
 	}
 }
 

@@ -4515,7 +4515,7 @@ focus_tree = {
 			SFR_land_reform_decisions_progress_update = yes
 			add_to_variable = {
 				var = agricultural_development_mod
-				value = 1
+				value = 2
 				tooltip = agricultural_development_mod_tt_up_1
 			}
 			add_timed_idea = {
@@ -4613,7 +4613,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = living_standard_development_mod
-				value = 1
+				value = 2
 				tooltip = living_standard_development_mod_tt_up_1
 			}
 			add_to_variable = { SFR_land_reform_in_progress_sf = -0.1 }
@@ -4634,7 +4634,7 @@ focus_tree = {
 		icon = GFX_focus_eng_crush_the_dream
 		x = 0
 		y = 1
-		cost = 5
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -4649,7 +4649,12 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = -0.05
+			add_political_power = 100
+			country_event = {
+				id = SFR.409
+				days = 1
+			}
 		}
 	}
 
@@ -4658,7 +4663,14 @@ focus_tree = {
 		icon = GFX_SOV_smersh_ccp_2d_sov_compatibility
 		x = -2
 		y = 1
-		cost = 5
+		cost = 3
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_focus_event_tt
+				has_country_flag = SFR_comrade_pistol_speech_flag
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -4671,7 +4683,32 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_land_requisition }
 
 		completion_reward = {
-			
+			add_stability = -0.1
+			add_political_power = -100
+			add_manpower = -91241
+			add_ideas = SFR_clearing_landlord_class
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 15
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			custom_effect_tooltip = SFR_land_reform_generic_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_finished_land_reform_0
+					add_idea = SFR_finished_land_reform_1
+				}
+			}
+			country_event = {
+				id = SFR.410
+				days = 1
+			}
 		}
 	}
 
@@ -4680,7 +4717,14 @@ focus_tree = {
 		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
 		x = 2
 		y = 1
-		cost = 5
+		cost = 3
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_focus_event_tt
+				has_country_flag = SFR_land_requisition_flag
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -4693,7 +4737,32 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_comrade_pistol_speech }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = -50
+			add_manpower = -8541
+			add_ideas = SFR_land_requisition_idea
+			add_to_variable = {
+				var = SFR_land_reform_decisions_progress
+				value = 10
+				tooltip = SFR_land_reform_decisions_progress_tt
+			}
+			SFR_land_reform_decisions_progress_update = yes
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = -1
+				tooltip = agricultural_development_mod_tt_down_1
+			}
+			custom_effect_tooltip = SFR_land_reform_generic_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_finished_land_reform_0
+					add_idea = SFR_finished_land_reform_2
+				}
+			}
+			country_event = {
+				id = SFR.411
+				days = 1
+			}
 		}
 	}
 
@@ -4716,7 +4785,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_political_power = 100
+			add_timed_idea = {
+				idea = SFR_great_public_trial
+				days = 360
+			}
+			custom_effect_tooltip = SFR_settle_past_evil_tt
+			country_event = {
+				id = SFR.412
+				days = 1
+			}
+			if = {
+				limit = { is_ai = yes } #孩子们我是作弊AI
+				add_to_variable = {
+					var = SFR_land_reform_decisions_progress
+					value = 100
+					tooltip = SFR_land_reform_decisions_progress_tt
+				}
+				SFR_land_reform_decisions_progress_update = yes
+			}
 		}
 	}
 

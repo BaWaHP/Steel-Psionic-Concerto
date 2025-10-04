@@ -1238,7 +1238,7 @@ ideas = {
 
 		#扩张基层网络
 		SFR_expanding_grassroots_networks = {
-			picture = ARG_construction_guilds
+			picture = generic_production_bonus
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -1247,6 +1247,178 @@ ideas = {
 				political_power_factor = 0.1
 				stability_weekly = 0.001
 				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#清理地主阶级
+		SFR_clearing_landlord_class = {
+			picture = generic_purge
+			allowed = { always = yes }
+			removal_cost = -1
+
+			cancel = { has_completed_focus = SFR_settle_past_evil }
+
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.2
+				weekly_manpower = -200
+				consumer_goods_factor = -0.1
+				monthly_agricultural_development_process = 1
+				monthly_living_standard_development_process = 1
+				custom_modifier_tooltip = SFR_land_reform_monthly_check_tt
+			}
+		}
+
+		#土地赎买
+		SFR_land_requisition_idea = {
+			picture = GER_economy_of_conquest
+			allowed = { always = yes }
+			removal_cost = -1
+
+			cancel = { has_completed_focus = SFR_settle_past_evil }
+
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				monthly_agricultural_development_process = 1
+				monthly_living_standard_development_process = 1
+				custom_modifier_tooltip = SFR_land_reform_monthly_check_tt
+			}
+		}
+
+		#大型公审
+		SFR_great_public_trial = {
+			picture = chi_war_of_resistance3
+			allowed = { always = yes }
+			removal_cost = -1
+
+			cancel = { has_completed_focus = SFR_settle_past_evil }
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				weekly_manpower = -200
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#尚未完成的土地改革
+		SFR_unfinished_land_reform_1 = {
+			name = SFR_unfinished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				monthly_population = 0.05
+			}
+		}
+
+		#尚未完成的土地改革
+		SFR_unfinished_land_reform_2 = {
+			name = SFR_unfinished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				monthly_population = 0.1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#尚未完成的土地改革
+		SFR_unfinished_land_reform_3 = {
+			name = SFR_unfinished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.15
+				monthly_population = 0.15
+				global_building_slots_factor = 0.05
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#尚未完成的土地改革
+		SFR_unfinished_land_reform_4 = {
+			name = SFR_unfinished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = -0.2
+				monthly_population = 0.2
+				global_building_slots_factor = 0.1
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+		#胜利的土地改革
+		SFR_finished_land_reform_0 = {
+			name = SFR_finished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = -0.2
+				monthly_population = 0.2
+				global_building_slots_factor = 0.1
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+		#胜利的土地改革
+		SFR_finished_land_reform_1 = {
+			name = SFR_finished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.3
+				monthly_population = 0.4
+				global_building_slots_factor = 0.2
+				monthly_agricultural_development_process = 3
+				monthly_living_standard_development_process = 3
+			}
+		}
+
+		#胜利的土地改革
+		SFR_finished_land_reform_2 = {
+			name = SFR_finished_land_reform
+			picture = ARG_construction_guilds
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.2
+				consumer_goods_factor = -0.1
+				monthly_population = 0.3
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_agricultural_development_process = 2
+				monthly_living_standard_development_process = 2
 			}
 		}
 

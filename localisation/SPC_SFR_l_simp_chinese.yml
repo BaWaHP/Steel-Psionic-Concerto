@@ -276,6 +276,16 @@ SFR_construction_guilds:0 "建设集体农庄"
 
 SFR_expanding_grassroots_networks:0 "扩张基层网络"
 
+SFR_clearing_landlord_class:0 "清理地主阶级"
+
+SFR_land_requisition_idea:0 "土地赎买"
+
+SFR_great_public_trial:0 "大型公审"
+
+SFR_unfinished_land_reform:0 "尚未完成的土地改革"
+
+SFR_finished_land_reform:0 "胜利的土地改革"
+
 SFR_red_constitution_of_far_soviet:0 "红色远乡宪法"
 
 SFR_land_reform_in_progress:0 "土地改革进行中"
@@ -596,6 +606,7 @@ SFR_land_requisition:0 "土地赎买"
 SFR_land_requisition_desc:0 ""
 SFR_settle_past_evil:0 "清算过去之恶"
 SFR_settle_past_evil_desc:0 ""
+SFR_settle_past_evil_tt:0 "§R只有完成了这项国策，我们才能收尾土改！§!\n§C这会清除土改期间的负面修正。§!"
 SFR_prepare_planning_committee:0 "准备统筹委员会"
 SFR_prepare_planning_committee_desc:0 ""
 SFR_social_reform_general_line:0 "社会改革总路线"
@@ -1659,6 +1670,28 @@ SFR.408.d:0 ""
 SFR.408.a:0 "“中央命令大于一切！”"
 SFR.408.b:0 "“但地方也有地方的难处...”"
 
+SFR.409.t:0 "最后抉择"
+SFR.409.d:0 ""
+SFR.409.a:0 "为了未来的发展！"
+SFR.409.b:0 "为了当下的和平。"
+
+SFR.410.t:0 "无意义的抵抗"
+SFR.410.d:0 "几个地主的联合起来搞民兵武装，被曹飞了。"
+SFR.410.a:0 "“哼，想逃？”"
+
+SFR.411.t:0 "“列祖列宗啊...”"
+SFR.411.d:0 "地主把祖宗传下来的地签字没了。"
+SFR.411.a:0 "他颤颤巍巍签下自己的名字。"
+
+SFR.412.t:0 "公审前夜"
+SFR.412.d:0 "监狱里，被关起来的地主老爷回想自己的前半生。"
+SFR.412.a:0 "然后，天亮了。"
+
+SFR.413.t:0 "公审大会"
+SFR.413.d:0 "本来打算带着气节被枪毙的老爷，在所有罪状被列出后，被民众痛骂到心虚。"
+SFR.413.a:0 "人群的呼喊一浪接过一浪，他的求饶声转瞬即逝。"
+SFR.413.a.tt:0 "§R报应最后还是来了。§!"
+
 SFR_constitution_generic_tt:0 "§C制宪会议结束后，§!"
 
 SFR.2000.t:0 "制宪会议"
@@ -1782,8 +1815,9 @@ SFR_land_reform_time_limit:0 "改革之期限"
 SFR_land_reform_time_limit_tr:0 "土改进度：§C100%§!"
 SFR_land_reform_time_limit_tt:0 "§R我们仍能继续推行土改，但得到的结果未必会一样好了...§!"
 SFR_land_reform_monthly_check:0 "月度改革推进"
-SFR_land_reform_monthly_check_tt:0 "§C强化§!§Y月度改革推进§!的效果。"
-SFR_land_reform_monthly_check_tt_2:0 "§P显著§!§C强化§!§Y月度改革推进§!的效果。"
+SFR_land_reform_monthly_check_tt:0 "§C强化§!§Y月度改革推进§!的效果"
+SFR_land_reform_monthly_check_tt_2:0 "§P显著§!§C强化§!§Y月度改革推进§!的效果"
+SFR_land_reform_decisions_over:0 "§C全国土地改革已经结束！§!\n§g提示：别忘了点击土改GUI的翻牌和按钮。§!"
 
 SFR_land_reform_nationwide_survey:0 "发出全国丈量令"
 SFR_land_reform_temporary_tribunal:0 "设立临时仲裁庭"

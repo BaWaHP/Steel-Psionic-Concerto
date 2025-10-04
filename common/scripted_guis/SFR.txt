@@ -31,44 +31,67 @@ scripted_gui = {
 				check_variable = {
 					SFR_land_reform_decisions_progress > 25
 				}
+				NOT = { has_idea = SFR_unfinished_land_reform_1 }
 			}
 			SFR_land_reform_btn_2_visible = {
 				NOT = { has_country_flag = SFR_land_reform_icon_2_flipped }
 				check_variable = {
 					SFR_land_reform_decisions_progress > 50
 				}
+				has_idea = SFR_unfinished_land_reform_1
 			}
 			SFR_land_reform_btn_3_visible = {
 				NOT = { has_country_flag = SFR_land_reform_icon_3_flipped }
 				check_variable = {
 					SFR_land_reform_decisions_progress > 75
 				}
+				has_idea = SFR_unfinished_land_reform_2
 			}
 			SFR_land_reform_btn_4_visible = {
 				NOT = { has_country_flag = SFR_land_reform_icon_4_flipped }
 				check_variable = {
 					SFR_land_reform_decisions_progress = 100
 				}
+				has_idea = SFR_unfinished_land_reform_3
 			}
 			SFR_land_reform_btn_end_enabled = {
-				check_variable = {
-					SFR_land_reform_decisions_progress = 100
-				}
+				has_completed_focus = SFR_settle_past_evil
+				has_country_flag = SFR_land_reform_icon_1_flipped
+				has_country_flag = SFR_land_reform_icon_2_flipped
+				has_country_flag = SFR_land_reform_icon_3_flipped
+				has_country_flag = SFR_land_reform_icon_4_flipped
+				has_idea = SFR_unfinished_land_reform_4
 			}
 		}
 
 		effects = {
 			SFR_land_reform_btn_1_click = {
 				set_country_flag = SFR_land_reform_icon_1_flipped
+				add_ideas = SFR_unfinished_land_reform_1
 			}
 			SFR_land_reform_btn_2_click = {
 				set_country_flag = SFR_land_reform_icon_2_flipped
+				swap_ideas = {
+					remove_idea = SFR_unfinished_land_reform_1
+					add_idea = SFR_unfinished_land_reform_2
+				}
 			}
 			SFR_land_reform_btn_3_click = {
 				set_country_flag = SFR_land_reform_icon_3_flipped
+				swap_ideas = {
+					remove_idea = SFR_unfinished_land_reform_2
+					add_idea = SFR_unfinished_land_reform_3
+				}
 			}
 			SFR_land_reform_btn_4_click = {
-				set_country_flag = SFR_land_reform_icon_3_flipped
+				set_country_flag = SFR_land_reform_icon_4_flipped
+				swap_ideas = {
+					remove_idea = SFR_unfinished_land_reform_3
+					add_idea = SFR_unfinished_land_reform_4
+				}
+			}
+			SFR_land_reform_btn_end_click = {
+				set_country_flag = SFR_land_reform_decisions_over
 			}
 		}
 
@@ -76,6 +99,18 @@ scripted_gui = {
 			SFR_land_reform_btn_end = {
 				image = "[GET_SFR_land_reform_btn_end]"
 			}
+		}
+
+		ai_enabled = {
+			always = yes
+		}
+
+		ai_weights = {
+			SFR_land_reform_btn_1_click = { ai_will_do = { base = 999999 } }
+			SFR_land_reform_btn_2_click = { ai_will_do = { base = 999999 } }
+			SFR_land_reform_btn_3_click = { ai_will_do = { base = 999999 } }
+			SFR_land_reform_btn_4_click = { ai_will_do = { base = 999999 } }
+			SFR_land_reform_btn_end_click = { ai_will_do = { base = 999999 } }		
 		}
 	}
 }

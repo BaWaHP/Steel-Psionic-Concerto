@@ -29,7 +29,10 @@ SFR_workers_and_peasants_congress = {
 SFR_land_reform_decisions = {
 	icon = GFX_decision_category_SFR_land_reform_decisions
 	allowed = { tag = SFR }
-	visible = { has_completed_focus = SFR_start_land_reform }
+	visible = { 
+		has_completed_focus = SFR_start_land_reform 
+		NOT = { has_country_flag = SFR_land_reform_decisions_over }
+	}
 	visible_when_empty = yes
 	scripted_gui = SFR_land_reform_decisions_ui
 	priority = 999999
