@@ -4484,6 +4484,12 @@ focus_tree = {
 				id = SFR.400
 				days = 1
 			}
+			hidden_effect = {
+				country_event = {
+					id = SFR.414
+					days = 7
+				}
+			}
 			custom_effect_tooltip = SFR_start_land_reform_tt
 		}
 	}

@@ -4279,6 +4279,99 @@ country_event = {	#公审大会
 	}
 }
 
+country_event = {	#簿册
+	id = SFR.414
+	title = SFR.414.t
+	desc = SFR.414.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.414.a
+		add_political_power = 1
+		add_manpower = 1
+	}
+}
+
+country_event = {	#吹号
+	id = SFR.415
+	title = SFR.415.t
+	desc = SFR.415.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.415.a
+	}
+}
+
+country_event = {	#红线
+	id = SFR.416
+	title = SFR.416.t
+	desc = SFR.416.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.416.a
+	}
+}
+
+country_event = {	#旧账
+	id = SFR.417
+	title = SFR.417.t
+	desc = SFR.417.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.417.a
+	}
+}
+
+country_event = {	#赖以为生...
+	id = SFR.418
+	title = SFR.418.t
+	desc = SFR.418.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.418.a
+	}
+}
+
+country_event = {	#券上的麦穗
+	id = SFR.419
+	title = SFR.419.t
+	desc = SFR.419.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.419.a
+	}
+}
+
+country_event = {	#人生几十年？
+	id = SFR.420
+	title = SFR.420.t
+	desc = SFR.420.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.420.a
+	}
+}
+
 ###工农代表大会###
 
 country_event = {	#参与的人选

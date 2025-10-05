@@ -68,12 +68,20 @@ scripted_gui = {
 			SFR_land_reform_btn_1_click = {
 				set_country_flag = SFR_land_reform_icon_1_flipped
 				add_ideas = SFR_unfinished_land_reform_1
+				country_event = {
+					id = SFR.415
+					days = 3
+				}
 			}
 			SFR_land_reform_btn_2_click = {
 				set_country_flag = SFR_land_reform_icon_2_flipped
 				swap_ideas = {
 					remove_idea = SFR_unfinished_land_reform_1
 					add_idea = SFR_unfinished_land_reform_2
+				}
+				country_event = {
+					id = SFR.416
+					days = 3
 				}
 			}
 			SFR_land_reform_btn_3_click = {
@@ -82,6 +90,10 @@ scripted_gui = {
 					remove_idea = SFR_unfinished_land_reform_2
 					add_idea = SFR_unfinished_land_reform_3
 				}
+				country_event = {
+					id = SFR.417
+					days = 3
+				}
 			}
 			SFR_land_reform_btn_4_click = {
 				set_country_flag = SFR_land_reform_icon_4_flipped
@@ -89,9 +101,26 @@ scripted_gui = {
 					remove_idea = SFR_unfinished_land_reform_3
 					add_idea = SFR_unfinished_land_reform_4
 				}
+				country_event = {
+					id = SFR.418
+					days = 3
+				}
 			}
 			SFR_land_reform_btn_end_click = {
 				set_country_flag = SFR_land_reform_decisions_over
+				if = {
+					limit = { has_completed_focus = SFR_comrade_pistol_speech }
+					country_event = {
+						id = SFR.419
+						days = 3
+					}
+				}
+				else = {
+					country_event = {
+						id = SFR.420
+						days = 3
+					}
+				}
 			}
 		}
 
