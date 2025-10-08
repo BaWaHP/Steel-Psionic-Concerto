@@ -62,6 +62,18 @@ SPC_MTV_startup_effect = {
 			id = MTV.1
 			days = 29
 		}
+		country_event = {
+			id = MTV.11
+			days = 70
+		}
+		give_resource_rights = {
+			receiver = RSB
+			state = 427
+		}
+		give_resource_rights = {
+			receiver = RSB
+			state = 423
+		}
 		###控制省份对应普及度##
 		427 = {
 			set_variable = { state_magic_progress = 0 }
@@ -172,8 +184,7 @@ MTV_civilwar_setup = {
 		transfer_state = 427
 		transfer_state = 452
 		transfer_state = 459
-		add_ideas = MTV_man_in_hell_1
-		activate_mission = MTV_civilwar_worsen_mission
+		SPC_WDR_startup_effect = yes
 	}
 	MCS = {
 		transfer_state = 464

@@ -13,19 +13,42 @@ set_politics = {
 }
 
 set_popularities = {
-	pioneer_communism = 0
-	revolutionary_communism = 0
-	worldunion_socialist = 0
-	worldunion_democrat = 0
-	liberal_republican = 0
-	conservative_republican = 0
-	authoritarian_republican = 0
-	national_socialist = 0
-	authoritarian_nationalism = 0
-	paternal_autocrat = 100
-	wizard_rules = 0
-	religious_extremism = 0
-	anarchism = 0
+	pioneer_communism = 12
+	revolutionary_communism = 15
+	worldunion_socialist = 5
+	worldunion_democrat = 7
+	liberal_republican = 10
+	conservative_republican = 5
+	authoritarian_republican = 6
+	national_socialist = 7
+	authoritarian_nationalism = 9
+	paternal_autocrat = 12
+	wizard_rules = 1
+	religious_extremism = 1
+	anarchism = 10
+}
+
+set_technology = {
+	primitive_weapons = 1
+	weapons_fining_technique = 1
+	police_training = 1
+	suppress_equipment = 1
+	anti_mob_blunt = 1
+	improved_melee_weapons = 1
+	modernized_melee_weapons = 1
+	early_infantry_weapons = 1
+	infantry_weapons = 1
+	early_infantry_uniforms = 1
+	modernized_infantry_uniforms = 1
+	basic_train = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	great_war_titan = 1
+	mp_storage_tech = 1
+	early_caster_equipments = 1
+	basic_machine_tools = 1
 }
 
 add_ideas = {
@@ -34,6 +57,8 @@ add_ideas = {
 	WDR_rep_one_party_dic
 	WDR_overcome_foreign_culture
 	WDR_unsatisfactory_land_reform
+	WDR_tinieo_brotherhood
+	WDR_corruption_smuggling_and_militia
 }
 
 recruit_character = WDR_princip_methodius
@@ -49,3 +74,5 @@ recruit_character = WDR_dmytro_dunov
 recruit_character = WDR_ved_churches
 recruit_character = WDR_broz_caligula_walter
 recruit_character = WDR_jaroslav_rakovsky
+
+

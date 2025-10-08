@@ -1,0 +1,57 @@
+﻿focus_tree = {
+	id = WDR_focus_1
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WDR
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {	#第二次土地改革会议
+		id = WDR_second_land_reform_conference
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = 10
+		y = 0
+		cost = 21.43
+
+		available_if_capitulated = yes
+
+		bypass = {
+			date > 1998.6.10
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		select_effect = {
+			country_event = {
+				id = WDR.1
+				days = 45
+			}
+			country_event = {
+				id = WDR.5
+				days = 60
+			}
+			country_event = {
+				id = WDR.6
+				days = 75
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = WDR_second_land_reform_conference_tt
+		}
+	}
+
+}
+

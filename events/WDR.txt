@@ -1,0 +1,412 @@
+﻿add_namespace = WDR
+
+country_event = {	#第二次土改
+	id = WDR.1
+	title = WDR.1.t
+	desc = WDR.1.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.1.a
+		country_event = {
+			id = WDR.2
+			days = 1
+		}
+	}
+}
+
+country_event = {	#第二次土改
+	id = WDR.2
+	title = WDR.2.t
+	desc = WDR.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.2.a
+		country_event = {
+			id = WDR.3
+			days = 1
+		}
+	}
+}
+
+country_event = {	#第二次土改
+	id = WDR.3
+	title = WDR.3.t
+	desc = WDR.3.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.3.a
+		add_stability = -0.05
+		custom_effect_tooltip = WDR.3.a.tt
+	}
+}
+
+country_event = {	#维尔德的混乱
+	id = WDR.4
+	title = WDR.4.t
+	desc = WDR.4.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.4.a
+	}
+
+	option = {
+		name = WDR.4.b
+		trigger = { OR = { tag = RSB tag = RSU } }
+		WDR = {
+			if = {
+				limit = { has_idea = WDR_foreign_capital_withdrawal }
+				swap_ideas = {
+					remove_idea = WDR_foreign_capital_withdrawal
+					add_idea = WDR_foreign_capital_panic
+				}
+			}
+			else = {
+				add_ideas = WDR_foreign_capital_withdrawal
+			}
+		}
+	}
+}
+
+country_event = {	#不安感蔓延
+	id = WDR.5
+	title = WDR.5.t
+	desc = WDR.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = WDR_tinieo_brotherhood
+				add_idea = WDR_tinieo_brotherhood_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_unsatisfactory_land_reform
+				add_idea = WDR_unsatisfactory_land_reform_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_rep_one_party_dic
+				add_idea = WDR_rep_one_party_dic_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_divided_house
+				add_idea = WDR_divided_house_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_land_of_ved
+				add_idea = WDR_land_of_ved_2
+			}
+		}
+	}
+	
+	option = {
+		name = WDR.5.a
+		add_stability = -0.05
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = WDR_tinieo_brotherhood
+				add_idea = WDR_tinieo_brotherhood_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_unsatisfactory_land_reform
+				add_idea = WDR_unsatisfactory_land_reform_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_rep_one_party_dic
+				add_idea = WDR_rep_one_party_dic_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_divided_house
+				add_idea = WDR_divided_house_2
+			}
+			swap_ideas = {
+				remove_idea = WDR_land_of_ved
+				add_idea = WDR_land_of_ved_2
+			}
+		}
+	}
+}
+
+country_event = {	#最后一次土改会议
+	id = WDR.6
+	title = WDR.6.t
+	desc = WDR.6.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.6.a
+		swap_ideas = {
+			remove_idea = WDR_unsatisfactory_land_reform_2
+			add_idea = WDR_failed_land_reform
+		}
+		remove_ideas = WDR_overcome_foreign_culture
+		remove_ideas = WDR_tinieo_brotherhood_2
+		swap_ideas = {
+			remove_idea = WDR_rep_one_party_dic_2
+			add_idea = WDR_rep_one_party_dic_3
+		}
+		delete_unit_template_and_units = {
+			division_template = "共和邦临时护卫军"
+		}
+		country_event = {
+			id = WDR.7
+			days = 15
+		}
+	}
+}
+
+country_event = {	#西部失去控制
+	id = WDR.7
+	title = WDR.7.t
+	desc = WDR.7.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.7.a
+		459 = {
+			add_core_of = WNS
+			transfer_state_to = WNS
+		}
+		country_event = {
+			id = WDR.8
+			days = 5
+		}
+		WNS = { hidden_effect = { SPC_WNS_startup_effect = yes } }
+	}
+
+	option = {
+		name = WDR.7.b
+		459 = {
+			add_core_of = WNS
+			transfer_state_to = WNS
+		}
+		country_event = {
+			id = WDR.8
+			days = 5
+		}
+		WNS = { hidden_effect = { SPC_WNS_startup_effect = yes } change_tag_from = ROOT } 
+	}
+}
+
+country_event = {	#东部的叛乱
+	id = WDR.8
+	title = WDR.8.t
+	desc = WDR.8.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.8.a
+		423 = {
+			add_core_of = WRF
+			transfer_state_to = WRF
+		}
+		country_event = {
+			id = WDR.9
+			days = 5
+		}
+		WRF = { hidden_effect = { SPC_WRF_startup_effect = yes } }
+	}
+
+	option = {
+		name = WDR.8.b
+		423 = {
+			add_core_of = WRF
+			transfer_state_to = WRF
+		}
+		country_event = {
+			id = WDR.9
+			days = 5
+		}
+		WRF = { hidden_effect = { SPC_WRF_startup_effect = yes } change_tag_from = ROOT } 
+	}
+}
+
+country_event = {	#南部的屠杀
+	id = WDR.9
+	title = WDR.9.t
+	desc = WDR.9.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.9.a
+		427 = {
+			add_core_of = TLA
+			transfer_state_to = TLA
+		}
+		country_event = {
+			id = WDR.10
+			days = 10
+		}
+		TLA = { hidden_effect = { SPC_TLA_startup_effect = yes } }
+	}
+
+	option = {
+		name = WDR.9.b
+		427 = {
+			add_core_of = TLA
+			transfer_state_to = TLA
+		}
+		country_event = {
+			id = WDR.10
+			days = 10
+		}
+		TLA = { hidden_effect = { SPC_TLA_startup_effect = yes } change_tag_from = ROOT } 
+	}
+}
+
+country_event = {	#乌齐库姆的混乱
+	id = WDR.10
+	title = WDR.10.t
+	desc = WDR.10.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.10.a
+		random_list = {
+			25 = {}
+			25 = {
+				WNS = {
+					if = {
+						limit = { NOT = { has_template = "维尔德志愿队" } }
+						division_template = {
+							name = "维尔德志愿队"
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+							}
+							priority = 0
+						}
+					}
+				}
+				427 = {
+					add_core_of = WNS
+					transfer_state_to = WNS
+					create_unit = {
+						division = "name = \"维尔德志愿队\" division_template = \"维尔德志愿队\" start_experience_factor = 0 start_equipment_factor = 0.3"  
+						owner = WNS
+						count = 2
+						prioritize_location = 8649
+					}
+				}
+			}
+			25 = {
+				WRF = {
+					if = {
+						limit = { NOT = { has_template = "维尔德革命卫队" } }
+						division_template = {
+							name = "维尔德革命卫队"
+							regiments = {
+								light_infantry = { x = 0 y = 0 }
+								light_infantry = { x = 0 y = 1 }
+								light_infantry = { x = 0 y = 2 }
+								light_infantry = { x = 1 y = 0 }
+								light_infantry = { x = 1 y = 1 }
+							}
+							priority = 0
+						}
+					}
+				}
+				423 = {
+					add_core_of = WRF
+					transfer_state_to = WRF
+					create_unit = {
+						division = "name = \"维尔德革命卫队\" division_template = \"维尔德革命卫队\" start_experience_factor = 0 start_equipment_factor = 0.3"  
+						owner = WRF
+						count = 2
+						prioritize_location = 8649
+					}
+				}
+			}
+			25 = {
+				TLA = {
+					if = {
+						limit = { NOT = { has_template = "缇尼厄奥解放军" } }
+						division_template = {
+							name = "缇尼厄奥解放军"
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+							support = {
+								recon = { x = 0 y = 0 }
+							}
+							priority = 1
+						}
+					}
+				}
+				427 = {
+					add_core_of = TLA
+					transfer_state_to = TLA
+					create_unit = {
+						division = "name = \"缇尼厄奥解放军\" division_template = \"缇尼厄奥解放军\" start_experience_factor = 0.3 start_equipment_factor = 0.3"  
+						owner = TLA
+						count = 2
+						prioritize_location = 8649
+					}
+				}
+			}
+		}
+		country_event = {
+			id = WDR.11
+			days = 7
+		}
+	}
+}
+
+country_event = {	#内战开打
+	id = WDR.11
+	title = WDR.11.t
+	desc = WDR.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = WDR.11.a
+	}
+}
+
+###新闻###
+
+add_namespace = WDRNews
+
+news_event = {		#
+	id = WDRNews.1
+	title = WDRNews.1.t
+	desc = WDRNews.1.d
+	picture = GFX_news_event_chinese_soldiers_city_ruin
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = WDRNews.1.a
+	}
+}

@@ -400,21 +400,12 @@ on_actions = {
 				###蒙特内内内内内内内内战###
 				if = {
 					limit = {
-						FROM = { OR = { tag = MTV tag = WDR tag = MCS tag = LCM } }
-						ROOT = { OR = { tag = MTV tag = WDR tag = MCS tag = LCM } }
+						FROM = { OR = { tag = MTV tag = MCS tag = LCM } }
+						ROOT = { OR = { tag = MTV tag = MCS tag = LCM } }
 					}
 					if = {
 						limit = { MTV = { exists = yes } }
 						MTV = {
-							add_days_mission_timeout = {
-								mission = MTV_civilwar_worsen_mission
-								days = 25
-							}
-						}
-					}
-					if = {
-						limit = { WDR = { exists = yes } }
-						WDR = {
 							add_days_mission_timeout = {
 								mission = MTV_civilwar_worsen_mission
 								days = 25

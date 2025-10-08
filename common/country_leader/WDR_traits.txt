@@ -1,9 +1,21 @@
 leader_traits = {
 	
-	WDR_dem_dictator = {	#维尔德民主的独裁官
+	#维尔德民主的独裁官
+	WDR_dem_dictator = {
 		random = no
 		
 		stability_factor = -0.05
 		army_core_defence_factor = 0.05
+	}
+
+	#实际的政府首脑
+	WDR_actual_head_of_government = {
+		random = no
+		
+		political_power_gain = 0.1
+	}
+	#共和制度党成员
+	WDR_rep_party_member = {
+		random = no
 	}
 }

@@ -95,6 +95,13 @@ characters = {
    			expire = "3000.1.1.1"
    			id = -1
    		}
+		advisor = {
+			cost = 150
+			can_be_fired = no
+			slot = political_advisor
+			idea_token = WDR_luzhzhi_vatsba_idea
+   			traits = { WDR_actual_head_of_government }
+   		}
 	}
 
 	WDR_plekhanov_hristov = {		#普列汉诺夫·赫里斯托夫
@@ -114,6 +121,13 @@ characters = {
    			expire = "3000.1.1.1"
    			id = -1
    		}
+		advisor = {
+			cost = 150
+			can_be_fired = no
+			slot = political_advisor
+			idea_token = WDR_plekhanov_hristov_idea
+   			traits = { WDR_rep_party_member }
+   		}
 	}
 
 	WDR_kubrat_maher = {		#库布拉特·马赫
@@ -132,6 +146,13 @@ characters = {
    			ideology = republic_of_nobility
    			expire = "3000.1.1.1"
    			id = -1
+   		}
+		advisor = {
+			cost = 150
+			can_be_fired = no
+			slot = political_advisor
+			idea_token = WDR_kubrat_maher_idea
+   			traits = { WDR_rep_party_member }
    		}
 	}
 
@@ -248,6 +269,28 @@ characters = {
    			ideology = anarcho_populism
    			expire = "3000.1.1.1"
    			id = -1
+   		}
+	}
+
+	#米特罗范·斯塔姆博洛夫
+	WDR_mitrofan_stamblov = {
+   		name = WDR_mitrofan_stamblov
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+   		}
+		advisor = {
+			cost = 150
+			can_be_fired = no
+			slot = political_advisor
+			idea_token = WDR_mitrofan_stamblov_idea
+   			traits = { WDR_rep_party_member }
    		}
 	}
 

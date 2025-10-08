@@ -5,25 +5,16 @@ MTV_civilwar_worsen = {		#内战恶化
 		available = {
 			if = {
 				limit = { tag = MTV }
-				WDR = { exists = no }
-				MCS = { exists = no }
-				LCM = { exists = no }
-			}
-			if = {
-				limit = { tag = WDR }
-				MTV = { exists = no }
 				MCS = { exists = no }
 				LCM = { exists = no }
 			}
 			if = {
 				limit = { tag = MCS }
-				WDR = { exists = no }
 				MTV = { exists = no }
 				LCM = { exists = no }
 			}
 			if = {
 				limit = { tag = LCM }
-				WDR = { exists = no }
 				MCS = { exists = no }
 				MTV = { exists = no }
 			}
@@ -36,6 +27,7 @@ MTV_civilwar_worsen = {		#内战恶化
 
 		timeout_effect = {  
 			MTV_civil_idea_worse = yes
+			activate_mission = MTV_civilwar_worsen_mission
 		}
 	}
 }

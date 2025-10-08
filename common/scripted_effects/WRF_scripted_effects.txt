@@ -17,7 +17,7 @@
 #
 
 ###开局政策添加###
-SPC_WDR_startup_effect = {
+SPC_WRF_startup_effect = {
 	###介绍页面###
 	set_variable = { SPC_intro_screen = 1 }
 	###普及度修正部分###
@@ -28,13 +28,8 @@ SPC_WDR_startup_effect = {
 		set_variable = { state_science_monthly_buff = 0 }
 	}
 	###其它开局设置###
-	country_lock_all_division_template = yes
-	activate_advisor = WDR_luzhzhi_vatsba_idea
-	activate_advisor = WDR_mitrofan_stamblov_idea
-	activate_advisor = WDR_kubrat_maher_idea
-	activate_advisor = WDR_plekhanov_hristov_idea
-	load_oob = "WDR"
-	inherit_technology = MTV
+	load_oob = "WRF"
+	inherit_technology = WDR
 	###政府法案###
 	add_ideas = limited_conscription
 	add_ideas = basic_training

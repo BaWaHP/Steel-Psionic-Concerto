@@ -205,6 +205,26 @@ country_event = {	#不承认，不承认，不承认
 	}
 }
 
+country_event = {	#南逃
+	id = MTV.11
+	title = MTV.11.t
+	desc = MTV.11.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = MTV.11.a
+		custom_effect_tooltip = MTV.11.a.tt
+	}
+
+	option = {
+		name = MTV.11.b
+		WDR = { change_tag_from = ROOT }
+		custom_effect_tooltip = MTV.11.b.tt
+	}
+}
+
 ###新闻###
 
 add_namespace = MTVNews

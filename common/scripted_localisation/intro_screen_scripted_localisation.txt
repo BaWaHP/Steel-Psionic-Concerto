@@ -336,6 +336,13 @@ defined_text = { # Country
 		}
 		localization_key = SPC_IS_RLN_national_desc_2
 	}
+	text = {
+		trigger = { 
+			tag = WDR
+			check_variable = { SPC_intro_screen = 1 } 
+		}
+		localization_key = SPC_IS_WDR_national_desc_1
+	}
 	#text = {	#有第二页的时候再说
 	#	trigger = { 
 	#		tag = ZZZ 
