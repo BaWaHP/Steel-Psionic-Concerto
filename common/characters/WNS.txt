@@ -1,0 +1,21 @@
+characters={
+	#科诺瓦利茨·瓦梭夫
+	WNS_konovalets_vasov = {
+		name = WNS_konovalets_vasov
+		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}

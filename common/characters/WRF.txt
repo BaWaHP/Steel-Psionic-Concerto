@@ -1,0 +1,21 @@
+characters={
+	#普林西普·美多德
+	WRF_princip_medoded = {
+		name = WRF_princip_medoded
+		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_unknown_advisor"
+   			}
+   			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+   			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}

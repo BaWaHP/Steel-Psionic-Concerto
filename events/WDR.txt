@@ -301,7 +301,7 @@ country_event = {	#乌齐库姆的混乱
 						}
 					}
 				}
-				427 = {
+				452 = {
 					add_core_of = WNS
 					transfer_state_to = WNS
 					create_unit = {
@@ -329,7 +329,7 @@ country_event = {	#乌齐库姆的混乱
 						}
 					}
 				}
-				423 = {
+				452 = {
 					add_core_of = WRF
 					transfer_state_to = WRF
 					create_unit = {
@@ -360,7 +360,7 @@ country_event = {	#乌齐库姆的混乱
 						}
 					}
 				}
-				427 = {
+				452 = {
 					add_core_of = TLA
 					transfer_state_to = TLA
 					create_unit = {
@@ -389,6 +389,19 @@ country_event = {	#内战开打
 	
 	option = {
 		name = WDR.11.a
+		every_country = {
+			limit = { SPC_generic_region_trigger_103 = yes }
+			every_country = {
+				limit = {
+					SPC_generic_region_trigger_103 = yes
+					NOT = { tag = PREV }
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
 	}
 }
 
