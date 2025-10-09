@@ -202,6 +202,10 @@ country_event = {	#不承认，不承认，不承认
 			target = MCS
 			type = annex_everything
 		}
+		country_event = {
+			id = MTV.11
+			days = 5
+		}
 	}
 }
 
