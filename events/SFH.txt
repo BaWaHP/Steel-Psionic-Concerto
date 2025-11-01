@@ -190,6 +190,11 @@ country_event = {		#改革派政变
 		set_politics = {
 			ruling_party = liberal_republican
 		}
+		SPC_party_clear_everyonw_show = yes
+		SPC_party_alliance_worldunion_democrat = yes
+		SPC_party_alliance_conservative_republican = yes
+		SPC_party_alliance_authoritarian_republican = yes
+		SPC_party_ban_paternal_autocrat = yes
 		hidden_effect = {
 			load_focus_tree = generic_focus
 		}
@@ -212,6 +217,10 @@ country_event = {		#保守派政变
 			ideology = authoritarian_nationalism
 			popularity = 0.5
 		}
+		SPC_party_clear_everyonw_show = yes
+		SPC_party_alliance_authoritarian_republican = yes
+		SPC_party_alliance_national_socialist = yes
+		SPC_party_ban_paternal_autocrat = yes
 		set_politics = {
 			ruling_party = authoritarian_nationalism
 		}

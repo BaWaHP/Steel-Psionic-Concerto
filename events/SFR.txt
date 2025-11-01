@@ -4356,6 +4356,16 @@ country_event = {	#券上的麦穗
 	
 	option = {
 		name = SFR.419.a
+		custom_effect_tooltip = SFR.419.a.tt
+		add_to_variable = { SFR_nation_of_people_dm_sf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_mp = 0.05 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_2
+			}
+		}
 	}
 }
 
@@ -4369,6 +4379,16 @@ country_event = {	#人生几十年？
 	
 	option = {
 		name = SFR.420.a
+		custom_effect_tooltip = SFR.420.a.tt
+		add_to_variable = { SFR_nation_of_people_dm_ppf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_mp = 0.05 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_3
+			}
+		}
 	}
 }
 

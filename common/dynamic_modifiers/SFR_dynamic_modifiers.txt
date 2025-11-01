@@ -28,6 +28,7 @@
 SFR_nation_of_people_dm = {
 	enable = { always = yes }
 	icon = GFX_idea_FIN_socialist_welfare
+	stability_factor = SFR_nation_of_people_dm_sf
 	political_power_factor = SFR_nation_of_people_dm_ppf
 	monthly_population = SFR_nation_of_people_dm_mp
 }

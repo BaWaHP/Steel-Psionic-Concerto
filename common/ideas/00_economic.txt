@@ -228,7 +228,6 @@ ideas = {
 
 			available = {
 				has_war_support > 0.5
-				custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
 				AND = {
 					has_war = yes
 					any_enemy_country = {

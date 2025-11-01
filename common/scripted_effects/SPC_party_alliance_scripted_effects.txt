@@ -1,0 +1,432 @@
+SPC_party_alliance_pioneer_communism = {
+	set_variable = { SPC_party_alliance_var_1 = 1 }
+	custom_effect_tooltip = pioneer_communism_alliance
+}
+
+SPC_party_ban_pioneer_communism = {
+	set_variable = { SPC_party_alliance_var_1 = 2 }
+	custom_effect_tooltip = pioneer_communism_ban
+}
+
+SPC_party_clear_pioneer_communism = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_1 = 1 } }
+		custom_effect_tooltip = pioneer_communism_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_1 = 2 } }
+		custom_effect_tooltip = pioneer_communism_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_1 = 0 }
+}
+
+SPC_party_alliance_revolutionary_communism = {
+	set_variable = { SPC_party_alliance_var_2 = 1 }
+	custom_effect_tooltip = revolutionary_communism_alliance
+}
+
+SPC_party_ban_revolutionary_communism = {
+	set_variable = { SPC_party_alliance_var_2 = 2 }
+	custom_effect_tooltip = revolutionary_communism_ban
+}
+
+SPC_party_clear_revolutionary_communism = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_2 = 1 } }
+		custom_effect_tooltip = revolutionary_communism_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_2 = 2 } }
+		custom_effect_tooltip = revolutionary_communism_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_2 = 0 }
+}
+
+SPC_party_alliance_worldunion_socialist = {
+	set_variable = { SPC_party_alliance_var_3 = 1 }
+	custom_effect_tooltip = worldunion_socialist_alliance
+}
+
+SPC_party_ban_worldunion_socialist = {
+	set_variable = { SPC_party_alliance_var_3 = 2 }
+	custom_effect_tooltip = worldunion_socialist_ban
+}
+
+SPC_party_clear_worldunion_socialist = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_3 = 1 } }
+		custom_effect_tooltip = worldunion_socialist_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_3 = 2 } }
+		custom_effect_tooltip = worldunion_socialist_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_3 = 0 }
+}
+
+SPC_party_alliance_worldunion_democrat = {
+	set_variable = { SPC_party_alliance_var_4 = 1 }
+	custom_effect_tooltip = worldunion_democrat_alliance
+}
+
+SPC_party_ban_worldunion_democrat = {
+	set_variable = { SPC_party_alliance_var_4 = 2 }
+	custom_effect_tooltip = worldunion_democrat_ban
+}
+
+SPC_party_clear_worldunion_democrat = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_4 = 1 } }
+		custom_effect_tooltip = worldunion_democrat_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_4 = 2 } }
+		custom_effect_tooltip = worldunion_democrat_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_4 = 0 }
+}
+
+SPC_party_alliance_liberal_republican = {
+	set_variable = { SPC_party_alliance_var_5 = 1 }
+	custom_effect_tooltip = liberal_republican_alliance
+}
+
+SPC_party_ban_liberal_republican = {
+	set_variable = { SPC_party_alliance_var_5 = 2 }
+	custom_effect_tooltip = liberal_republican_ban
+}
+
+SPC_party_clear_liberal_republican = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_5 = 1 } }
+		custom_effect_tooltip = liberal_republican_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_5 = 2 } }
+		custom_effect_tooltip = liberal_republican_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_5 = 0 }
+}
+
+SPC_party_alliance_conservative_republican = {
+	set_variable = { SPC_party_alliance_var_6 = 1 }
+	custom_effect_tooltip = conservative_republican_alliance
+}
+
+SPC_party_ban_conservative_republican = {
+	set_variable = { SPC_party_alliance_var_6 = 2 }
+	custom_effect_tooltip = conservative_republican_ban
+}
+
+SPC_party_clear_conservative_republican = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_6 = 1 } }
+		custom_effect_tooltip = conservative_republican_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_6 = 2 } }
+		custom_effect_tooltip = conservative_republican_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_6 = 0 }
+}
+
+SPC_party_alliance_authoritarian_republican = {
+	set_variable = { SPC_party_alliance_var_7 = 1 }
+	custom_effect_tooltip = authoritarian_republican_alliance
+}
+
+SPC_party_ban_authoritarian_republican = {
+	set_variable = { SPC_party_alliance_var_7 = 2 }
+	custom_effect_tooltip = authoritarian_republican_ban
+}
+
+SPC_party_clear_authoritarian_republican = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_7 = 1 } }
+		custom_effect_tooltip = authoritarian_republican_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_7 = 2 } }
+		custom_effect_tooltip = authoritarian_republican_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_7 = 0 }
+}
+
+SPC_party_alliance_national_socialist = {
+	set_variable = { SPC_party_alliance_var_8 = 1 }
+	custom_effect_tooltip = national_socialist_alliance
+}
+
+SPC_party_ban_national_socialist = {
+	set_variable = { SPC_party_alliance_var_8 = 2 }
+	custom_effect_tooltip = national_socialist_ban
+}
+
+SPC_party_clear_national_socialist = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_8 = 1 } }
+		custom_effect_tooltip = national_socialist_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_8 = 2 } }
+		custom_effect_tooltip = national_socialist_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_8 = 0 }
+}
+
+SPC_party_alliance_authoritarian_nationalism = {
+	set_variable = { SPC_party_alliance_var_9 = 1 }
+	custom_effect_tooltip = authoritarian_nationalism_alliance
+}
+
+SPC_party_ban_authoritarian_nationalism = {
+	set_variable = { SPC_party_alliance_var_9 = 2 }
+	custom_effect_tooltip = authoritarian_nationalism_ban
+}
+
+SPC_party_clear_authoritarian_nationalism = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_9 = 1 } }
+		custom_effect_tooltip = authoritarian_nationalism_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_9 = 2 } }
+		custom_effect_tooltip = authoritarian_nationalism_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_9 = 0 }
+}
+
+SPC_party_alliance_paternal_autocrat = {
+	set_variable = { SPC_party_alliance_var_10 = 1 }
+	custom_effect_tooltip = paternal_autocrat_alliance
+}
+
+SPC_party_ban_paternal_autocrat = {
+	set_variable = { SPC_party_alliance_var_10 = 2 }
+	custom_effect_tooltip = paternal_autocrat_ban
+}
+
+SPC_party_clear_paternal_autocrat = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_10 = 1 } }
+		custom_effect_tooltip = paternal_autocrat_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_10 = 2 } }
+		custom_effect_tooltip = paternal_autocrat_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_10 = 0 }
+}
+
+SPC_party_alliance_wizard_rules = {
+	set_variable = { SPC_party_alliance_var_11 = 1 }
+	custom_effect_tooltip = wizard_rules_alliance
+}
+
+SPC_party_ban_wizard_rules = {
+	set_variable = { SPC_party_alliance_var_11 = 2 }
+	custom_effect_tooltip = wizard_rules_ban
+}
+
+SPC_party_clear_wizard_rules = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_11 = 1 } }
+		custom_effect_tooltip = wizard_rules_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_11 = 2 } }
+		custom_effect_tooltip = wizard_rules_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_11 = 0 }
+}
+
+SPC_party_alliance_religious_extremism = {
+	set_variable = { SPC_party_alliance_var_12 = 1 }
+	custom_effect_tooltip = religious_extremism_alliance
+}
+
+SPC_party_ban_religious_extremism = {
+	set_variable = { SPC_party_alliance_var_12 = 2 }
+	custom_effect_tooltip = religious_extremism_ban
+}
+
+SPC_party_clear_religious_extremism = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_12 = 1 } }
+		custom_effect_tooltip = religious_extremism_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_12 = 2 } }
+		custom_effect_tooltip = religious_extremism_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_12 = 0 }
+}
+
+SPC_party_alliance_anarchism = {
+	set_variable = { SPC_party_alliance_var_13 = 1 }
+	custom_effect_tooltip = anarchism_alliance
+}
+
+SPC_party_ban_anarchism = {
+	set_variable = { SPC_party_alliance_var_13 = 2 }
+	custom_effect_tooltip = anarchism_ban
+}
+
+SPC_party_clear_anarchism = {
+	if = {
+		limit = { check_variable = { SPC_party_alliance_var_13 = 1 } }
+		custom_effect_tooltip = anarchism_clear_1
+	}
+	else_if = {
+		limit = { check_variable = { SPC_party_alliance_var_13 = 2 } }
+		custom_effect_tooltip = anarchism_clear_2
+	}
+	set_variable = { SPC_party_alliance_var_13 = 0 }
+}
+
+SPC_party_clear_everyonw_show = {
+	SPC_party_clear_pioneer_communism = yes
+	SPC_party_clear_revolutionary_communism = yes
+	SPC_party_clear_worldunion_socialist = yes
+	SPC_party_clear_worldunion_democrat = yes
+	SPC_party_clear_liberal_republican = yes
+	SPC_party_clear_conservative_republican = yes
+	SPC_party_clear_authoritarian_republican = yes
+	SPC_party_clear_national_socialist = yes
+	SPC_party_clear_authoritarian_nationalism = yes
+	SPC_party_clear_paternal_autocrat = yes
+	SPC_party_clear_wizard_rules = yes
+	SPC_party_clear_religious_extremism = yes
+	SPC_party_clear_anarchism = yes
+}
+
+SPC_party_clear_everyonw_invi = {
+	hidden_effect = {
+		SPC_party_clear_everyonw_show = yes
+	}
+}
+
+SPC_party_alliance_update = {
+	set_variable = { SPC_party_alliance_count = 0 }
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_1 = 1 } 
+				has_government = pioneer_communism
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@pioneer_communism }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_2 = 1 } 
+				has_government = revolutionary_communism
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@revolutionary_communism }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_3 = 1 } 
+				has_government = worldunion_socialist
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@worldunion_socialist }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_4 = 1 } 
+				has_government = worldunion_democrat
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@worldunion_democrat }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_5 = 1 } 
+				has_government = liberal_republican
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@liberal_republican }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_6 = 1 } 
+				has_government = conservative_republican
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@conservative_republican }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_7 = 1 } 
+				has_government = authoritarian_republican
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@authoritarian_republican }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_8 = 1 } 
+				has_government = national_socialist
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@national_socialist }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_9 = 1 } 
+				has_government = authoritarian_nationalism
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@authoritarian_nationalism }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_10 = 1 } 
+				has_government = paternal_autocrat
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@paternal_autocrat }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_11 = 1 } 
+				has_government = wizard_rules
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@wizard_rules }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_12 = 1 } 
+				has_government = religious_extremism
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@religious_extremism }
+	}
+	if = {
+		limit = { 
+			OR = {
+				check_variable = { SPC_party_alliance_var_13 = 1 } 
+				has_government = anarchism
+			}
+		}
+		add_to_variable = { SPC_party_alliance_count = var:party_popularity@anarchism }
+	}
+	set_variable = { SPC_party_alliance_mod_sf = 0.1 }
+	set_variable = { SPC_party_alliance_mod_ppg = 1 }
+	multiply_variable = { SPC_party_alliance_mod_sf = SPC_party_alliance_count }
+	multiply_variable = { SPC_party_alliance_mod_ppg = SPC_party_alliance_count }
+}

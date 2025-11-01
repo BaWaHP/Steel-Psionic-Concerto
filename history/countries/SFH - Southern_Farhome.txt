@@ -202,6 +202,13 @@ add_to_faction = NFH
 add_to_faction = NWF
 add_to_faction = MSA
 
+SPC_party_ban_pioneer_communism = yes
+SPC_party_ban_revolutionary_communism = yes
+SPC_party_ban_worldunion_socialist = yes
+SPC_party_ban_worldunion_democrat = yes
+SPC_party_alliance_conservative_republican = yes
+SPC_party_alliance_authoritarian_republican = yes
+
 #海军模板
 if = {
 	limit = { 

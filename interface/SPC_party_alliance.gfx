@@ -4,11 +4,23 @@ spriteTypes = {
 		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_leader.png"
 	}
 	spriteType = {
+		name = "GFX_party_leader_icon"
+		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_leader_icon.png"
+	}
+	spriteType = {
 		name = "GFX_party_alliance"
 		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_alliance.png"
 	}
 	spriteType = {
+		name = "GFX_party_alliance_icon"
+		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_alliance_icon.png"
+	}
+	spriteType = {
 		name = "GFX_party_ban"
 		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_ban.png"
+	}
+	spriteType = {
+		name = "GFX_party_ban_icon"
+		texturefile = "gfx/interface/party_alliance/SPC_pol_party_bg_ban_icon.png"
 	}
 }

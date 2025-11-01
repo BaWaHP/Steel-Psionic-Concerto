@@ -1,7 +1,27 @@
 on_actions = {
+
+	on_startup = {
+		effect = {
+			every_country = {
+				###政治联盟###
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = SPC_party_alliance_mod } } }
+					add_dynamic_modifier = { modifier = SPC_party_alliance_mod }
+				}
+				SPC_party_alliance_update = yes
+			}
+		}
+	}
   
 	on_daily = {
 		effect = {
+			###政治联盟###
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = SPC_party_alliance_mod } } }
+				add_dynamic_modifier = { modifier = SPC_party_alliance_mod }
+			}
+			SPC_party_alliance_update = yes
+
 			###模组自定义修正###
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = SPC_rulling_ideology_drift_mod } } }

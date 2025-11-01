@@ -4711,9 +4711,9 @@ focus_tree = {
 				remove_idea = SFH_fragile_reformation_2
 				add_idea = SFH_sucessful_reformation
 			}
-			set_politics = {
-				ruling_party = conservative_republican
-			}
+			SPC_party_alliance_liberal_republican = yes
+			hidden_effect = { SPC_party_clear_conservative_republican = yes }
+			set_politics = { ruling_party = conservative_republican }
 			hidden_effect = {
 				news_event = SFHNews.6
 			}
@@ -5104,6 +5104,8 @@ focus_tree = {
 				remove_idea = SFH_appropriate_reforms_3
 				add_idea = SFH_stable_reformation
 			}
+			hidden_effect = { SPC_party_clear_authoritarian_republican = yes }
+			SPC_party_alliance_paternal_autocrat = yes
 			set_politics = {
 				ruling_party = authoritarian_republican
 			}
@@ -5320,6 +5322,9 @@ focus_tree = {
 				add_idea = SFH_military_control
 			}
 			SFH_reformist_power_up_large = yes
+			SPC_party_ban_liberal_republican = yes
+			SPC_party_clear_conservative_republican = yes
+			SPC_party_clear_authoritarian_republican = yes
 		}
 	}
 
@@ -5493,7 +5498,7 @@ focus_tree = {
 			add_manpower = -80000
 			add_popularity = {
 				ideology = paternal_autocrat
-				popularity = 0.1
+				popularity = 0.2
 			}
 			swap_ideas = {
 				remove_idea = SFH_military_control_2
@@ -15349,6 +15354,8 @@ focus_tree = {
 					has_government = conservative_republican
 				}
 				set_politics = { ruling_party = liberal_republican }
+				hidden_effect = { SPC_party_clear_liberal_republican = yes }
+				SPC_party_alliance_conservative_republican = yes
 				add_popularity = {
 					ideology = liberal_republican
 					popularity = 0.5

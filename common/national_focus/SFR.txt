@@ -4834,7 +4834,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = -50
+			add_ideas = SFR_national_coordination_committee_1
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_3
 		}
 	}
 

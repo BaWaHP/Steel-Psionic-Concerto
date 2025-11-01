@@ -1,30 +1,652 @@
-containerWindowType = {
-	name = "SPC_party_alliance_window"
-	position = { x= 0 y = 0 }
-
+guiTypes = {
 	containerWindowType = {
-		name = "party_section_1"
-		position = { x = 340 y = 308 }
+		name = "SPC_party_alliance_window"
+		position = { x= 0 y = 0 }
+	
+		containerWindowType = {
+			name = "party_section_1"
+			position = { x = 340 y = 296 }
+	
+			iconType = {
+				name ="party_leader_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
 
-		iconType = {
-			name ="party_leader_1"
-			position = { x = 0 y = 16 }
-			quadTextureSprite = "GFX_party_leader"
-			alwaystransparent = yes
+			iconType = {
+				name ="party_leader_1_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_1_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_1"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_1_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+	
+		containerWindowType = {
+			name = "party_section_2"
+			position = { x = 340 y = 313 }
+	
+			iconType = {
+				name ="party_leader_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_2_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_2_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_2"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_2_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
 		}
 
-		iconType = {
-			name ="party_alliance_1"
-			position = { x = 0 y = 32 }
-			quadTextureSprite = "GFX_party_alliance"
-			alwaystransparent = yes
+		containerWindowType = {
+			name = "party_section_3"
+			position = { x = 340 y = 330 }
+	
+			iconType = {
+				name ="party_leader_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_3_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_3_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_3"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_3_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+		
+		containerWindowType = {
+			name = "party_section_4"
+			position = { x = 340 y = 347 }
+	
+			iconType = {
+				name ="party_leader_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_4_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_4_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_4"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_4_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
 		}
 
-		iconType = {
-			name ="party_ban_1"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_party_ban"
-			alwaystransparent = yes
+		containerWindowType = {
+			name = "party_section_5"
+			position = { x = 340 y = 364 }
+	
+			iconType = {
+				name ="party_leader_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_5_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_5_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_5"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_5_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_6"
+			position = { x = 340 y = 381 }
+	
+			iconType = {
+				name ="party_leader_6"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_6_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_6"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_6_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_6"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_6_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_7"
+			position = { x = 340 y = 398 }
+	
+			iconType = {
+				name ="party_leader_7"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_7_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_7"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_7_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_7"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_7_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_8"
+			position = { x = 340 y = 415 }
+	
+			iconType = {
+				name ="party_leader_8"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_8_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_8"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_8_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_8"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_8_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_9"
+			position = { x = 340 y = 432 }
+	
+			iconType = {
+				name ="party_leader_9"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_9_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_9"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_9_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_9"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_9_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_10"
+			position = { x = 340 y = 449 }
+	
+			iconType = {
+				name ="party_leader_10"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_10_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_10"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_10_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_10"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_10_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_11"
+			position = { x = 340 y = 466 }
+	
+			iconType = {
+				name ="party_leader_11"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_11_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_11"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_11_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_11"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_11_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_12"
+			position = { x = 340 y = 483 }
+	
+			iconType = {
+				name ="party_leader_12"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_12_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_12"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_12_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_12"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_12_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+		containerWindowType = {
+			name = "party_section_13"
+			position = { x = 340 y = 500 }
+	
+			iconType = {
+				name ="party_leader_13"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_leader"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_leader_13_icon"
+				position = { x = 173 y = 2 }
+				quadTextureSprite = "GFX_party_leader_icon"
+				pdx_tooltip = party_leader_tt
+			}
+	
+			iconType = {
+				name ="party_alliance_13"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_alliance"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_alliance_13_icon"
+				position = { x = 176 y = 2 }
+				quadTextureSprite = "GFX_party_alliance_icon"
+				pdx_tooltip = party_alliance_tt
+			}
+	
+			iconType = {
+				name ="party_ban_13"
+				position = { x = 0 y = 0 }
+				quadTextureSprite = "GFX_party_ban"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="party_ban_13_icon"
+				position = { x = 179 y = 2 }
+				quadTextureSprite = "GFX_party_ban_icon"
+				pdx_tooltip = party_ban_tt
+			}
+		}
+
+	}
+}
+
+guiTypes = {
+	containerWindowType = {
+		name = "SPC_party_alliance_topbar_window"
+		position = { x= 1140 y = 5 }
+
+		iconType ={
+			name ="text_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="icon"
+			spriteType = "GFX_open_intro_screen_btn"
+			position = { x=1 y=1 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+		}
+		
+		instantTextBoxType = {
+			name ="popularity_count"
+			position = { x=-3 y=3 }
+			text = SPC_party_alliance_topbar_text_short
+			pdx_tooltip = SPC_party_alliance_topbar_text
+			font = "hoi_18mbs"
+			format = center
+			maxWidth = 100
+			maxHeight = 100
+			fixedsize = yes
 		}
 	}
 }

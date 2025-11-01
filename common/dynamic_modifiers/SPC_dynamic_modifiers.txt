@@ -24,8 +24,12 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
+SPC_party_alliance_mod = {
+	stability_factor = SPC_party_alliance_mod_sf
+	political_power_gain = SPC_party_alliance_mod_ppg
+}
+
 SPC_rulling_ideology_drift_mod = {
-	
 	pioneer_communism_drift = SPC_pioneer_communism_drift_var
 	revolutionary_communism_drift = SPC_revolutionary_communism_drift_var
 	worldunion_socialist_drift = SPC_worldunion_socialist_drift_var

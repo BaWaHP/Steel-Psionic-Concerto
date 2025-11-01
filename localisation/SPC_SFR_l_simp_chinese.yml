@@ -268,6 +268,7 @@ SFR_left_right_unsatisfied:0 "左右不满"
 
 SFR_nation_of_people_dm:0 "人民之国"
 SFR_nation_of_people_dm_desc:0 ""
+
 SFR_red_star_over_capital:0 "红星照耀平京...\n§R...但那些光照不到的地方呢？§!"
 
 SFR_declined_gov_credit:0 "政府公信力降低"
@@ -289,6 +290,8 @@ SFR_finished_land_reform:0 "胜利的土地改革"
 SFR_red_constitution_of_far_soviet:0 "红色远乡宪法"
 
 SFR_land_reform_in_progress:0 "土地改革进行中"
+
+SFR_national_coordination_committee:0 "全国统筹委员会"
 
 ###国策###
 SFR_revolution_of_ours:0 "我们的革命"
@@ -1715,10 +1718,12 @@ SFR.418.a:0 "赖以为生..."
 SFR.419.t:0 "券上的麦穗"
 SFR.419.d:0 ""
 SFR.419.a:0 "券上的麦穗"
+SFR.419.a.tt:0 "§C土地改革以相对温和的方式实现了进展。§!"
 
 SFR.420.t:0 "人生几十年？"
 SFR.420.d:0 ""
 SFR.420.a:0 "人生几十年？"
+SFR.420.a.tt:0 "§R土地改革以相对强硬的方式实现了进展。§!"
 
 SFR_constitution_generic_tt:0 "§C制宪会议结束后，§!"
 
@@ -1804,6 +1809,7 @@ GET_SFR_workers_and_peasants_congress_desc_2_on:0 "\n\n远乡社会党：[?SFR_r
 SFR_workers_and_peasants_congress_voting:0 "§P代表大会正在投票！§!"
 SFR_workers_and_peasants_congress_vote_preview_win:0 "从目前的结果来看，投票会以支持率§G$VOTE_COUNT$%§!对§R$VOTE_ABORT_COUNT$%§!，超过要求的§Y$VOTE_PASS_COUNT$%§!，得到§C通过§!。"
 SFR_workers_and_peasants_congress_vote_preview_lose:0 "从目前的结果来看，投票会以支持率§G$VOTE_COUNT$%§!对§R$VOTE_ABORT_COUNT$%§!，低于要求的§Y$VOTE_PASS_COUNT$%§!，遭到§P否决§!。"
+SFR_workers_and_peasants_congress_vote_preview_lose_but_retry:0 "尽管我们这一次§R失败§!了，但我们下次§C仍有机会§!§3重新表决§!该§Y法案§!。"
 SFR_workers_and_peasants_congress_vote_preview_lose_but_win:0 "然而，鉴于该法案的§P重要性§!，中央将动用§t军委§!§l强行通过§!法案。在这种情况下，效果可能会被§R弱化§!。"
 SFR_current_vote_tt:0 "[?SFR_current_vote|0]"
 SFR_current_vote_abort_tt:0 "[?SFR_current_vote_abort|0]"
@@ -1818,6 +1824,12 @@ SFR_workers_and_peasants_congress_law_1_desc:0 ""
 
 SFR_workers_and_peasants_congress_law_2:0 "§S土地登记法§!"
 SFR_workers_and_peasants_congress_law_2_desc:0 ""
+
+SFR_workers_and_peasants_congress_law_3:0 "§R铺开统筹委员会§!"
+SFR_workers_and_peasants_congress_law_3_desc:0 ""
+
+SFR_red_star_over_capital_group_all_1_tt:0 "§R全派系§!：§s影响力§!：$VAL|Y=%%$。"
+SFR_red_star_over_capital_group_all_2_tt:0 "§R全派系§!：§j支持度§!：$VAL|+=%%$。"
 
 SFR_red_star_over_capital_group_1_1_tt:0 "§R强硬派§!：§s影响力§!：$RIGHT|Y=%%$。"
 SFR_red_star_over_capital_group_1_2_tt:0 "§R强硬派§!：§j支持度§!：$RIGHT|+=%%$。"

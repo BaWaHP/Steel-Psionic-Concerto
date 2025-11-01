@@ -1,0 +1,37 @@
+defined_text = {
+	name = GET_SPC_party_alliance_count_loc
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.25 } }
+		localization_key = SPC_party_alliance_count_1
+	}
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.5 } }
+		localization_key = SPC_party_alliance_count_2
+	}
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.75 } }
+		localization_key = SPC_party_alliance_count_3
+	}
+	text = {
+		localization_key = SPC_party_alliance_count_4
+	}
+}
+
+defined_text = {
+	name = GET_SPC_party_alliance_count_long_loc
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.25 } }
+		localization_key = SPC_party_alliance_count_long_1
+	}
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.5 } }
+		localization_key = SPC_party_alliance_count_long_2
+	}
+	text = {
+		trigger = { check_variable = { SPC_party_alliance_count < 0.75 } }
+		localization_key = SPC_party_alliance_count_long_3
+	}
+	text = {
+		localization_key = SPC_party_alliance_count_long_4
+	}
+}

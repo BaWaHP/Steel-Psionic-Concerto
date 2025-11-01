@@ -2,8 +2,104 @@ scripted_gui = {
 	SPC_party_alliance_gui = {
 		context_type = player_context
 		window_name = "SPC_party_alliance_window"
-		parent_window_name = "political_party_info_entry"
 		parent_window_token = politics_tab
-		visible = { always = no }
+
+        triggers = {
+			party_leader_1_visible = { has_government = pioneer_communism }
+			party_leader_1_icon_visible = { has_government = pioneer_communism }
+			party_alliance_1_visible = { check_variable = { SPC_party_alliance_var_1 = 1 } }
+			party_alliance_1_icon_visible = { check_variable = { SPC_party_alliance_var_1 = 1 } }
+			party_ban_1_visible = { check_variable = { SPC_party_alliance_var_1 = 2 } }
+			party_ban_1_icon_visible = { check_variable = { SPC_party_alliance_var_1 = 2 } }
+
+			party_leader_2_visible = { has_government = revolutionary_communism }
+			party_leader_2_icon_visible = { has_government = revolutionary_communism }
+			party_alliance_2_visible = { check_variable = { SPC_party_alliance_var_2 = 1 } }
+			party_alliance_2_icon_visible = { check_variable = { SPC_party_alliance_var_2 = 1 } }
+			party_ban_2_visible = { check_variable = { SPC_party_alliance_var_2 = 2 } }
+			party_ban_2_icon_visible = { check_variable = { SPC_party_alliance_var_2 = 2 } }
+
+			party_leader_3_visible = { has_government = worldunion_socialist }
+			party_leader_3_icon_visible = { has_government = worldunion_socialist }
+			party_alliance_3_visible = { check_variable = { SPC_party_alliance_var_3 = 1 } }
+			party_alliance_3_icon_visible = { check_variable = { SPC_party_alliance_var_3 = 1 } }
+			party_ban_3_visible = { check_variable = { SPC_party_alliance_var_3 = 2 } }
+			party_ban_3_icon_visible = { check_variable = { SPC_party_alliance_var_3 = 2 } }
+
+			party_leader_4_visible = { has_government = worldunion_democrat }
+			party_leader_4_icon_visible = { has_government = worldunion_democrat }
+			party_alliance_4_visible = { check_variable = { SPC_party_alliance_var_4 = 1 } }
+			party_alliance_4_icon_visible = { check_variable = { SPC_party_alliance_var_4 = 1 } }
+			party_ban_4_visible = { check_variable = { SPC_party_alliance_var_4 = 2 } }
+			party_ban_4_icon_visible = { check_variable = { SPC_party_alliance_var_4 = 2 } }
+
+			party_leader_5_visible = { has_government = liberal_republican }
+			party_leader_5_icon_visible = { has_government = liberal_republican }
+			party_alliance_5_visible = { check_variable = { SPC_party_alliance_var_5 = 1 } }
+			party_alliance_5_icon_visible = { check_variable = { SPC_party_alliance_var_5 = 1 } }
+			party_ban_5_visible = { check_variable = { SPC_party_alliance_var_5 = 2 } }
+			party_ban_5_icon_visible = { check_variable = { SPC_party_alliance_var_5 = 2 } }
+
+			party_leader_6_visible = { has_government = conservative_republican }
+			party_leader_6_icon_visible = { has_government = conservative_republican }
+			party_alliance_6_visible = { check_variable = { SPC_party_alliance_var_6 = 1 } }
+			party_alliance_6_icon_visible = { check_variable = { SPC_party_alliance_var_6 = 1 } }
+			party_ban_6_visible = { check_variable = { SPC_party_alliance_var_6 = 2 } }
+			party_ban_6_icon_visible = { check_variable = { SPC_party_alliance_var_6 = 2 } }
+
+			party_leader_7_visible = { has_government = authoritarian_republican }
+			party_leader_7_icon_visible = { has_government = authoritarian_republican }
+			party_alliance_7_visible = { check_variable = { SPC_party_alliance_var_7 = 1 } }
+			party_alliance_7_icon_visible = { check_variable = { SPC_party_alliance_var_7 = 1 } }
+			party_ban_7_visible = { check_variable = { SPC_party_alliance_var_7 = 2 } }
+			party_ban_7_icon_visible = { check_variable = { SPC_party_alliance_var_7 = 2 } }
+
+			party_leader_8_visible = { has_government = national_socialist }
+			party_leader_8_icon_visible = { has_government = national_socialist }
+			party_alliance_8_visible = { check_variable = { SPC_party_alliance_var_8 = 1 } }
+			party_alliance_8_icon_visible = { check_variable = { SPC_party_alliance_var_8 = 1 } }
+			party_ban_8_visible = { check_variable = { SPC_party_alliance_var_8 = 2 } }
+			party_ban_8_icon_visible = { check_variable = { SPC_party_alliance_var_8 = 2 } }
+
+			party_leader_9_visible = { has_government = authoritarian_nationalism }
+			party_leader_9_icon_visible = { has_government = authoritarian_nationalism }
+			party_alliance_9_visible = { check_variable = { SPC_party_alliance_var_9 = 1 } }
+			party_alliance_9_icon_visible = { check_variable = { SPC_party_alliance_var_9 = 1 } }
+			party_ban_9_visible = { check_variable = { SPC_party_alliance_var_9 = 2 } }
+			party_ban_9_icon_visible = { check_variable = { SPC_party_alliance_var_9 = 2 } }
+
+			party_leader_10_visible = { has_government = paternal_autocrat }
+			party_leader_10_icon_visible = { has_government = paternal_autocrat }
+			party_alliance_10_visible = { check_variable = { SPC_party_alliance_var_10 = 1 } }
+			party_alliance_10_icon_visible = { check_variable = { SPC_party_alliance_var_10 = 1 } }
+			party_ban_10_visible = { check_variable = { SPC_party_alliance_var_10 = 2 } }
+			party_ban_10_icon_visible = { check_variable = { SPC_party_alliance_var_10 = 2 } }
+
+			party_leader_11_visible = { has_government = wizard_rules }
+			party_leader_11_icon_visible = { has_government = wizard_rules }
+			party_alliance_11_visible = { check_variable = { SPC_party_alliance_var_11 = 1 } }
+			party_alliance_11_icon_visible = { check_variable = { SPC_party_alliance_var_11 = 1 } }
+			party_ban_11_visible = { check_variable = { SPC_party_alliance_var_11 = 2 } }
+			party_ban_11_icon_visible = { check_variable = { SPC_party_alliance_var_11 = 2 } }
+
+			party_leader_12_visible = { has_government = religious_extremism }
+			party_leader_12_icon_visible = { has_government = religious_extremism }
+			party_alliance_12_visible = { check_variable = { SPC_party_alliance_var_12 = 1 } }
+			party_alliance_12_icon_visible = { check_variable = { SPC_party_alliance_var_12 = 1 } }
+			party_ban_12_visible = { check_variable = { SPC_party_alliance_var_12 = 2 } }
+			party_ban_12_icon_visible = { check_variable = { SPC_party_alliance_var_12 = 2 } }
+
+			party_leader_13_visible = { has_government = anarchism }
+			party_leader_13_icon_visible = { has_government = anarchism }
+			party_alliance_13_visible = { check_variable = { SPC_party_alliance_var_13 = 1 } }
+			party_alliance_13_icon_visible = { check_variable = { SPC_party_alliance_var_13 = 1 } }
+			party_ban_13_visible = { check_variable = { SPC_party_alliance_var_13 = 2 } }
+			party_ban_13_icon_visible = { check_variable = { SPC_party_alliance_var_13 = 2 } }
+        }
+	}
+	SPC_party_alliance_gui = {
+		context_type = player_context
+		window_name = "SPC_party_alliance_topbar_window"
+		parent_window_token = top_bar
 	}
 }

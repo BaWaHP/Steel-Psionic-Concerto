@@ -1198,7 +1198,43 @@ ideas = {
 		}
 
 		#人民之国
+		SFR_nation_of_people_dm_tt_0 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		#人民之国
 		SFR_nation_of_people_dm_tt_1 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_2 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_3 = {
 			name = SFR_nation_of_people_dm
 			allowed = { always = yes }
 			removal_cost = -1
@@ -1681,6 +1717,41 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				political_advisor_cost_factor = -0.05
+			}
+		}
+
+		#全国统筹委员会
+		SFR_national_coordination_committee_1 = {
+			name = SFR_national_coordination_committee
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.05
+				repair_speed_factor = 0.1
+				research_speed_factor = 0.02
+				political_advisor_cost_factor = -0.33
+			}
+		}
+
+		#全国统筹委员会
+		SFR_national_coordination_committee_2 = {
+			name = SFR_national_coordination_committee
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				repair_speed_factor = 0.2
+				research_speed_factor = 0.05
+				political_advisor_cost_factor = -0.5
 			}
 		}
 
