@@ -4362,6 +4362,7 @@ focus_tree = {
 				long_name = SFR_pioneer_communism_party_3_long
 				name = SFR_pioneer_communism_party_3
 			}
+			SPC_party_alliance_pioneer_communism = yes
 			custom_effect_tooltip = SFR_all_power_to_workers_and_peasants_tt
 		}
 	}
@@ -4416,6 +4417,12 @@ focus_tree = {
 				long_name = SFR_worldunion_democrat_party_3_long
 				name = SFR_worldunion_democrat_party_3
 			}
+			set_party_name = {
+				ideology = liberal_republican
+				long_name = SFR_liberal_republican_party_3_long
+				name = SFR_liberal_republican_party_3
+			}
+			SPC_party_alliance_worldunion_democrat = yes
 			custom_effect_tooltip = SFR_national_assembly_proposal_tt
 		}
 	}

@@ -1129,7 +1129,13 @@ country_event = {	#来自左翼的审判
 		name = SFR.53.a
 		add_political_power = 10
 		add_stability = -0.02
-
+		SPC_party_clear_worldunion_socialist = yes
+		SPC_party_clear_worldunion_democrat = yes
+		set_party_name = {
+			ideology = revolutionary_communism
+			long_name = SFR_revolutionary_communism_party_3_long
+			name = SFR_revolutionary_communism_party_3
+		}
 		set_politics = { ruling_party = pioneer_communism }
 		add_popularity = {
 			ideology = pioneer_communism
@@ -1145,7 +1151,13 @@ country_event = {	#来自左翼的审判
 	option = {
 		name = SFR.53.b
 		add_stability = 0.02
-
+		SPC_party_clear_worldunion_socialist = yes
+		SPC_party_clear_worldunion_democrat = yes
+		set_party_name = {
+			ideology = revolutionary_communism
+			long_name = SFR_revolutionary_communism_party_3_long
+			name = SFR_revolutionary_communism_party_3
+		}
 		set_politics = { ruling_party = pioneer_communism }
 		add_popularity = {
 			ideology = pioneer_communism
@@ -1171,6 +1183,8 @@ country_event = {	#革命党人的怒火
 		name = SFR.54.a
 		add_manpower = -1
 
+		SPC_party_clear_revolutionary_communism = yes
+		SPC_party_alliance_liberal_republican = yes
 		set_politics = { ruling_party = paternal_autocrat }
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -1198,7 +1212,14 @@ country_event = {	#革命危难之际
 	
 	option = {
 		name = SFR.55.a
-
+		hidden_effect = { SPC_party_clear_revolutionary_communism = yes }
+		SPC_party_clear_worldunion_democrat = yes
+		set_party_name = {
+			ideology = pioneer_communism
+			long_name = SFR_pioneer_communism_party_2_long
+			name = SFR_pioneer_communism_party_2
+		}
+		SPC_party_alliance_pioneer_communism = yes
 		set_politics = { ruling_party = revolutionary_communism }
 		add_popularity = {
 			ideology = pioneer_communism
@@ -2155,10 +2176,17 @@ country_event = {	#大会闭幕！
 			ideology = revolutionary_communism
 			popularity = 0.3
 		}
-		retire_character = SFR_YeWenshi
-		set_politics = {
-			ruling_party = revolutionary_communism
+		set_party_name = {
+			ideology = worldunion_socialist
+			long_name = SFR_worldunion_socialist_party_4_long
+			name = SFR_worldunion_socialist_party_4
 		}
+		retire_character = SFR_YeWenshi
+		promote_character = SFR_LinQinlan
+		SPC_party_alliance_worldunion_socialist = yes
+		SPC_party_clear_worldunion_democrat = yes
+		hidden_effect = { SPC_party_clear_revolutionary_communism = yes }
+		set_politics = { ruling_party = revolutionary_communism }
 	}
 
 	option = {
@@ -2167,10 +2195,16 @@ country_event = {	#大会闭幕！
 		add_stability = 0.1
 		add_war_support = 0.1
 		retire_character = SFR_YeWenshi
+		set_party_name = {
+			ideology = worldunion_socialist
+			long_name = SFR_worldunion_socialist_party_3_long
+			name = SFR_worldunion_socialist_party_3
+		}
 		add_popularity = {
 			ideology = worldunion_socialist
 			popularity = 0.3
 		}
+		SPC_party_clear_revolutionary_communism = yes
 		promote_character = SFR_LinQinlan
 	}
 }
@@ -5016,8 +5050,8 @@ country_event = {	#开始表决！
 			localization_key = SFR_workers_and_peasants_congress_vote_start_tt
 			DAYS = 7
 		}
-		set_variable = { SFR_land_reform_voting_days = 7 }
-		hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 1 }	}
+		set_variable = { SFR_workers_and_peasants_congress_voting_days = 7 }
+		hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 1 }	}
 		effect_tooltip = { SFR_workers_and_peasants_congress_vote_1 = yes }
 	}
 }

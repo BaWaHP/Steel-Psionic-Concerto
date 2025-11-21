@@ -430,6 +430,10 @@ spriteTypes = {
 		horizontal = yes
 	}
 	SpriteType = {
+		name = "GFX_SFR_land_reform_topbar"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_topbar.png"
+	}
+	SpriteType = {
 		name = "GFX_SFR_land_reform_icon_1"
 		texturefile = "gfx/interface/SFR/SFR_land_reform_icon_1.png"
 	}
@@ -492,6 +496,51 @@ spriteTypes = {
 		legacy_lazy_load = no
 		transparencecheck = yes
 	}
+	progressbartype = {
+		name = "GFX_SFR_land_reform_progress"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/SFR/GFX_SFR_land_reform_progress_1.png"
+		textureFile2 = "gfx/interface/SFR/GFX_SFR_land_reform_progress_0.png"
+		size = { x = 118 y = 23 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	SpriteType = {
+		name = "GFX_SFR_land_reform_desc_bg"
+		texturefile = "gfx/interface/SFR/SFR_land_reform_desc_bg.png"
+	}
+	frameAnimatedSpriteType = {
+        name = "GFX_SFR_land_reform_icon_1_flipping"
+        textureFile = "gfx/interface/SFR/SFR_land_reform_icon_1_flipping.png"
+		noOfFrames = 24
+		animation_rate_fps = 36
+		looping = no
+		play_on_show = yes
+    }
+	frameAnimatedSpriteType = {
+        name = "GFX_SFR_land_reform_icon_2_flipping"
+        textureFile = "gfx/interface/SFR/SFR_land_reform_icon_2_flipping.png"
+		noOfFrames = 24
+		animation_rate_fps = 36
+		looping = no
+		play_on_show = yes
+    }
+	frameAnimatedSpriteType = {
+        name = "GFX_SFR_land_reform_icon_3_flipping"
+        textureFile = "gfx/interface/SFR/SFR_land_reform_icon_3_flipping.png"
+		noOfFrames = 24
+		animation_rate_fps = 36
+		looping = no
+		play_on_show = yes
+    }
+	frameAnimatedSpriteType = {
+        name = "GFX_SFR_land_reform_icon_4_flipping"
+        textureFile = "gfx/interface/SFR/SFR_land_reform_icon_4_flipping.png"
+		noOfFrames = 24
+		animation_rate_fps = 36
+		looping = no
+		play_on_show = yes
+    }
 	###国策###
 	SpriteType = {
 		name = "GFX_SFR_revolution_of_ours"

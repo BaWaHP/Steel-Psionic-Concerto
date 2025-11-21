@@ -23,6 +23,7 @@ SFR_workers_and_peasants_congress = {
 	allowed = { tag = SFR }
 	visible = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
 	visible_when_empty = yes
+	scripted_gui = SFR_workers_and_peasants_congress_ui
 }
 
 #全国土地改革
@@ -35,5 +36,5 @@ SFR_land_reform_decisions = {
 	}
 	visible_when_empty = yes
 	scripted_gui = SFR_land_reform_decisions_ui
-	priority = 999999
+	priority = 9999
 }

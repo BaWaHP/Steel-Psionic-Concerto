@@ -94,6 +94,12 @@ country_event = {
 	
 	option = {
 		name = TST.1.a
+		add_to_variable = {
+			var = SFR_land_reform_decisions_progress
+			value = 55
+			tooltip = SFR_land_reform_decisions_progress_tt
+		}
+		SFR_land_reform_decisions_progress_update = yes
 	}
 }
 
@@ -107,9 +113,7 @@ country_event = {
 	
 	option = {
 		name = TST.2.a
-		var:dsfaedf = {
-			add_political_power = 10
-		}
+		set_country_flag = sadafaegfeag
 	}
 }
 
@@ -123,14 +127,7 @@ country_event = {
 	
 	option = {
 		name = TST.3.a
-		add_ideas = SPC_region_idea_1
-		add_ideas = SPC_region_idea_2
-		add_ideas = SPC_region_idea_3
-		add_ideas = SPC_region_idea_4
-		add_ideas = SPC_region_idea_5
-		add_ideas = SPC_region_idea_6
-		add_ideas = SPC_region_idea_7
-		add_ideas = SPC_region_idea_8
+		clr_country_flag = sadafaegfeag
 	}
 }
 

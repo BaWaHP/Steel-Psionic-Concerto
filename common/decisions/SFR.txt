@@ -1561,6 +1561,39 @@ SFR_commi_bop_decisions = {
 }
 
 SFR_workers_and_peasants_congress = {
+	#派系支持度恢复
+	SFR_party_cooling = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { tag = SFR }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 90
+
+		timeout_effect = {
+			custom_effect_tooltip = SFR_party_cooling_tt
+			hidden_effect = { SFR_party_cooling_effect = yes }
+			activate_mission = SFR_party_cooling
+		}
+	}
+	#正在表决
+	SFR_workers_and_peasants_congress_voting = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = SFR }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = var:SFR_workers_and_peasants_congress_voting_days
+
+		timeout_effect = {
+			clr_country_flag = SFR_workers_and_peasants_congress_voting
+			SFR_workers_and_peasants_congress_voting_result_effect = yes
+		}
+	}
 	SFR_workers_and_peasants_congress_debug_law = {
 		icon = GFX_decision_generic_civil_support
 		allowed = { tag = SFR }
@@ -1573,7 +1606,7 @@ SFR_workers_and_peasants_congress = {
 			set_country_flag = SFR_workers_and_peasants_congress_voting
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
 			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
-			hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 0 }	}
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 0 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_0 = yes }
 		}
 	}
@@ -1610,7 +1643,7 @@ SFR_workers_and_peasants_congress = {
 			set_country_flag = SFR_workers_and_peasants_congress_voting
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_2 }
 			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
-			hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 2 }	}
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 2 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_2 = yes }
 		}
 	}
@@ -1630,24 +1663,8 @@ SFR_workers_and_peasants_congress = {
 			set_country_flag = SFR_workers_and_peasants_congress_voting
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_3 }
 			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
-			hidden_effect = { activate_mission = SFR_land_reform_voting set_variable = { SFR_land_reform_voting_index = 3 }	}
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 3 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_3 = yes }
-		}
-	}
-	#正在表决
-	SFR_land_reform_voting = {
-		icon = GFX_decision_generic_ignite_civil_war
-		allowed = { tag = SFR }
-		available = { always = no }
-		activation = { always = no }
-		
-		is_good = yes
-		selectable_mission = no
-		days_mission_timeout = var:SFR_land_reform_voting_days
-
-		timeout_effect = {
-			clr_country_flag = SFR_workers_and_peasants_congress_voting
-			SFR_land_reform_voting_result_effect = yes
 		}
 	}
 }
@@ -1655,7 +1672,7 @@ SFR_workers_and_peasants_congress = {
 SFR_land_reform_decisions = {
 	#改革之期限
 	SFR_land_reform_time_limit = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_revolt
 		allowed = { tag = SFR }
 		available = {
 			#custom_trigger_tooltip = {
@@ -1702,7 +1719,7 @@ SFR_land_reform_decisions = {
 	}
 	#月度改革推进
 	SFR_land_reform_monthly_check = {
-		icon = GFX_decision_generic_ignite_civil_war
+		icon = GFX_decision_generic_wreckers
 		allowed = { tag = SFR }
 		available = {
 			#custom_trigger_tooltip = {
@@ -1813,7 +1830,7 @@ SFR_land_reform_decisions = {
 	}
 	#发出全国丈量令
 	SFR_land_reform_nationwide_survey = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_speech
 		allowed = { tag = SFR }
 
 		cost = 25
@@ -1839,7 +1856,7 @@ SFR_land_reform_decisions = {
 	}
 	#设立临时仲裁庭
 	SFR_land_reform_temporary_tribunal = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_arrest
 		allowed = { tag = SFR }
 
 		cost = 50
@@ -1863,7 +1880,7 @@ SFR_land_reform_decisions = {
 	}
 	#下乡宣传队月
 	SFR_land_reform_propaganda_team = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_eng_propaganda_campaigns
 		allowed = { tag = SFR }
 
 		cost = 30
@@ -1906,7 +1923,7 @@ SFR_land_reform_decisions = {
 	}
 	#敲打反对派
 	SFR_land_reform_oppose_suppress = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_assassination
 		allowed = { tag = SFR }
 
 		cost = 30
@@ -1960,7 +1977,7 @@ SFR_land_reform_decisions = {
 	}
 	#合作社试点
 	SFR_land_reform_cooperative_pilot = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_operation
 		allowed = { tag = SFR }
 		visible = { has_completed_focus = SFR_prepare_collective_farms }
 
@@ -2019,7 +2036,7 @@ SFR_land_reform_decisions = {
 	}
 	#扩建集体农庄
 	SFR_land_reform_collective_farm = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_merge_plant_materiel
 		allowed = { tag = SFR }
 		visible = { has_completed_focus = SFR_prepare_collective_farms }
 
@@ -2067,7 +2084,7 @@ SFR_land_reform_decisions = {
 	}
 	#培训农民
 	SFR_land_reform_train_peasants = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_military
 		allowed = { tag = SFR }
 		visible = { has_completed_focus = SFR_send_party_members_to_grassroots }
 
@@ -2102,7 +2119,7 @@ SFR_land_reform_decisions = {
 	}
 	#工作队下乡
 	SFR_land_reform_work_team = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_nationalism
 		allowed = { tag = SFR }
 		visible = { has_completed_focus = SFR_send_party_members_to_grassroots }
 

@@ -9,6 +9,11 @@ scripted_gui = {
 		}
 	}
 
+	SFR_workers_and_peasants_congress_ui = {
+		context_type = decision_category
+		window_name = "SFR_workers_and_peasants_congress_window"
+	}
+
 	SFR_land_reform_decisions_ui = {
 		context_type = decision_category
 		window_name = "SFR_land_reform_decisions_window"
@@ -54,7 +59,7 @@ scripted_gui = {
 				}
 				has_idea = SFR_unfinished_land_reform_3
 			}
-			SFR_land_reform_btn_end_enabled = {
+			SFR_land_reform_btn_end_click_enabled = {
 				has_completed_focus = SFR_settle_past_evil
 				has_country_flag = SFR_land_reform_icon_1_flipped
 				has_country_flag = SFR_land_reform_icon_2_flipped
@@ -125,9 +130,11 @@ scripted_gui = {
 		}
 
 		properties = {
-			SFR_land_reform_btn_end = {
-				image = "[GET_SFR_land_reform_btn_end]"
-			}
+			SFR_land_reform_btn_end = { image = "[GET_SFR_land_reform_btn_end]" }
+			SFR_land_reform_progress_1 = { frame = SFR_land_reform_decisions_progress_bar_1 }
+			SFR_land_reform_progress_2 = { frame = SFR_land_reform_decisions_progress_bar_2 }
+			SFR_land_reform_progress_3 = { frame = SFR_land_reform_decisions_progress_bar_3 }
+			SFR_land_reform_progress_4 = { frame = SFR_land_reform_decisions_progress_bar_4 }
 		}
 
 		ai_enabled = {

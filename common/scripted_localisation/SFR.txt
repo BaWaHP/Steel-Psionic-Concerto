@@ -101,10 +101,18 @@ defined_text = {
 defined_text = {
 	name = GET_SFR_land_reform_btn_end
 	text = {
-		trigger = { check_variable = { SFR_land_reform_decisions_progress = 100 } }
+		trigger = {
+			has_completed_focus = SFR_settle_past_evil
+			has_country_flag = SFR_land_reform_icon_1_flipped
+			has_country_flag = SFR_land_reform_icon_2_flipped
+			has_country_flag = SFR_land_reform_icon_3_flipped
+			has_country_flag = SFR_land_reform_icon_4_flipped
+			has_idea = SFR_unfinished_land_reform_4
+		}
 		localization_key = "GFX_SFR_land_reform_btn_end_2"
 	}
 	text = {
 		localization_key = "GFX_SFR_land_reform_btn_end_1"
 	}
 }
+

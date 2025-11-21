@@ -691,6 +691,7 @@ SFR_workers_and_peasants_congress_init = {
 
 	SFR_workers_and_peasants_congress_update = yes
 	SFR_workers_and_peasants_congress_vote_weight = yes
+	activate_mission = SFR_party_cooling
 }
 
 SFR_workers_and_peasants_congress_update = {
@@ -1158,6 +1159,159 @@ SFR_workers_and_peasants_congress_all_mod_2 = {
 	SFR_red_star_over_capital_update = yes
 }
 
+SFR_party_cooling_effect = {
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_1_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_1_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_1_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			min = 50
+			max = 0
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_2_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_2_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			min = 50
+			max = 0
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_3_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_3_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			min = 50
+			max = 0
+		}
+	}
+	if = {
+		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_1 > 50 } }
+			add_to_variable = { SFR_red_star_over_capital_group_4_1 = 2.5 }
+			clamp_variable = {
+				var = SFR_red_star_over_capital_group_4_1
+				min = 50
+				max = 100
+			}
+		}
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 > 50 } }
+			add_to_variable = { SFR_red_star_over_capital_group_4_2 = 2.5 }
+			clamp_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				min = 50
+				max = 0
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_5_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_5_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_5_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			min = 50
+			max = 0
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_6_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_6_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_6_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_6_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_6_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			min = 50
+			max = 0
+		}
+	}
+	if = {
+		limit = { has_completed_focus = SFR_national_assembly_proposal }
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_7_1 > 50 } }
+			add_to_variable = { SFR_red_star_over_capital_group_7_1 = 2.5 }
+			clamp_variable = {
+				var = SFR_red_star_over_capital_group_7_1
+				min = 50
+				max = 100
+			}
+		}
+		if = {
+			limit = { check_variable = { SFR_red_star_over_capital_group_7_2 > 50 } }
+			add_to_variable = { SFR_red_star_over_capital_group_7_2 = 2.5 }
+			clamp_variable = {
+				var = SFR_red_star_over_capital_group_7_2
+				min = 50
+				max = 0
+			}
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_1 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_8_1 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_8_1
+			min = 50
+			max = 100
+		}
+	}
+	if = {
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 > 50 } }
+		add_to_variable = { SFR_red_star_over_capital_group_8_2 = 2.5 }
+		clamp_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			min = 50
+			max = 0
+		}
+	}
+}
+
 #权重列表
 #强硬派 15/10
 #稳健派 30
@@ -1246,21 +1400,21 @@ SFR_workers_and_peasants_congress_vote_cal = {
 	}
 }
 
-SFR_land_reform_voting_result_effect = {
+SFR_workers_and_peasants_congress_voting_result_effect = {
 	if = {
-		limit = { check_variable = { SFR_land_reform_voting_index = 0 } }
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 0 } }
 		SFR_workers_and_peasants_congress_vote_0 = yes
 	}
 	else_if = {
-		limit = { check_variable = { SFR_land_reform_voting_index = 1 } }
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 1 } }
 		SFR_workers_and_peasants_congress_vote_1 = yes
 	}
 	else_if = {
-		limit = { check_variable = { SFR_land_reform_voting_index = 2 } }
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 2 } }
 		SFR_workers_and_peasants_congress_vote_2 = yes
 	}
 	else_if = {
-		limit = { check_variable = { SFR_land_reform_voting_index = 3 } }
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 3 } }
 		SFR_workers_and_peasants_congress_vote_3 = yes
 	}
 }
@@ -1368,6 +1522,47 @@ SFR_land_reform_decisions_progress_update = {
 		min = 0
 		max = 100
 	}
+	if = {
+		limit = { check_variable = { SFR_land_reform_decisions_progress < 25 } }
+		set_variable = { SFR_land_reform_decisions_progress_bar_1 = SFR_land_reform_decisions_progress }
+		set_variable = { SFR_land_reform_decisions_progress_bar_2 = 0 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_3 = 0 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_4 = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_land_reform_decisions_progress < 50 } }
+		set_variable = { SFR_land_reform_decisions_progress_bar_1 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_2 = SFR_land_reform_decisions_progress }
+		subtract_from_variable = { SFR_land_reform_decisions_progress_bar_2 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_3 = 0 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_4 = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_land_reform_decisions_progress < 75 } }
+		set_variable = { SFR_land_reform_decisions_progress_bar_1 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_2 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_3 = SFR_land_reform_decisions_progress }
+		subtract_from_variable = { SFR_land_reform_decisions_progress_bar_3 = 50 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_4 = 0 }
+	}
+	else_if = {
+		limit = { check_variable = { SFR_land_reform_decisions_progress < 100 } }
+		set_variable = { SFR_land_reform_decisions_progress_bar_1 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_2 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_3 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_4 = SFR_land_reform_decisions_progress }
+		subtract_from_variable = { SFR_land_reform_decisions_progress_bar_4 = 75 }
+	}
+	else = {
+		set_variable = { SFR_land_reform_decisions_progress_bar_1 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_2 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_3 = 25 }
+		set_variable = { SFR_land_reform_decisions_progress_bar_4 = 25 }
+	}
+	multiply_variable = { SFR_land_reform_decisions_progress_bar_1 = 4 }
+	multiply_variable = { SFR_land_reform_decisions_progress_bar_2 = 4 }
+	multiply_variable = { SFR_land_reform_decisions_progress_bar_3 = 4 }
+	multiply_variable = { SFR_land_reform_decisions_progress_bar_4 = 4 }
 }
 
 SFR_land_reform_in_progress_init = {
