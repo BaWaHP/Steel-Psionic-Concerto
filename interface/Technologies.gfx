@@ -554,6 +554,19 @@ spriteTypes = {
 	}	
 
 	SpriteType = {
+		name = "GFX_rangers_tech_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech1.dds"
+	}
+	SpriteType = {
+		name = "GFX_rangers_tech2_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_rangers_tech3_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech3.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_tech_special_forces_medium"
 		texturefile = "gfx/interface/technologies/tech_special_forces.dds"
 	}
@@ -1261,6 +1274,60 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	
+	SpriteType = {
+		name = "GFX_special_forces_rangers_medium"
+		texturefile = "gfx/interface/technologies/special_forces_rangers_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_jaegers_training_medium"
+		texturefile = "gfx/interface/technologies/rangers_jaegers_training_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_jungle_training_medium"
+		texturefile = "gfx/interface/technologies/rangers_jungle_training_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_guerilla_doctrine_medium"
+		texturefile = "gfx/interface/technologies/rangers_guerilla_doctrine_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_recon_terrain_training_medium"
+		texturefile = "gfx/interface/technologies/rangers_recon_terrain_training_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_fire_support_integration_medium"
+		texturefile = "gfx/interface/technologies/rangers_fire_support_integration_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_urban_combat_medium"
+		texturefile = "gfx/interface/technologies/rangers_urban_combat_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_elite_rangers_doctrine_medium"
+		texturefile = "gfx/interface/technologies/elite_rangers_doctrine_medium.dds"
+		alwaystransparent = yes
+	}
+
+	SpriteType = {
+		name = "GFX_rangers_backbone_doctrine_medium"
+		texturefile = "gfx/interface/technologies/rangers_backbone_doctrine_medium.dds"
+		alwaystransparent = yes
+	}
 	
 	### Soviet Aircrafts ###
 
