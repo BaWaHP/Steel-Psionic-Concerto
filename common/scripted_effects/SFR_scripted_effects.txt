@@ -689,6 +689,20 @@ SFR_workers_and_peasants_congress_init = {
 		set_variable = { SFR_red_star_over_capital_group_8_2 = 20 }		#支持度	
 	}
 
+	if = {
+		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants  }
+		set_variable = { SFR_WAPC_party_5_y = 63 }
+		set_variable = { SFR_WAPC_party_6_y = 80 }
+		set_variable = { SFR_WAPC_party_7_y = 0 }
+		set_variable = { SFR_WAPC_party_8_y = 97 }
+	}
+	else = {
+		set_variable = { SFR_WAPC_party_5_y = 46 }
+		set_variable = { SFR_WAPC_party_6_y = 63 }
+		set_variable = { SFR_WAPC_party_7_y = 80 }
+		set_variable = { SFR_WAPC_party_8_y = 97 }
+	}
+
 	SFR_workers_and_peasants_congress_update = yes
 	SFR_workers_and_peasants_congress_vote_weight = yes
 	activate_mission = SFR_party_cooling

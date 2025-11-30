@@ -541,6 +541,10 @@ spriteTypes = {
 		looping = no
 		play_on_show = yes
     }
+	spriteType = {
+		name = "GFX_SPC_congress_empty"
+		textureFile = "gfx/interface/SFR/SPC_congress_empty.png"
+	}
 	###国策###
 	SpriteType = {
 		name = "GFX_SFR_revolution_of_ours"

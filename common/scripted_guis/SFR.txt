@@ -12,6 +12,24 @@ scripted_gui = {
 	SFR_workers_and_peasants_congress_ui = {
 		context_type = decision_category
 		window_name = "SFR_workers_and_peasants_congress_window"
+
+		triggers = {
+			Party_4_visible = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			Party_7_visible = { has_completed_focus = SFR_national_assembly_proposal }
+		}
+
+		effects = {
+			Party_1_click = {
+				set_country_flag = SFR_workers_and_peasants_congress_selected_1
+			}
+		}
+
+		properties = {
+			Party_5 = { y = SFR_WAPC_party_5_y }
+			Party_6 = { y = SFR_WAPC_party_6_y }
+			Party_7 = { y = SFR_WAPC_party_7_y }
+			Party_8 = { y = SFR_WAPC_party_8_y }
+		}
 	}
 
 	SFR_land_reform_decisions_ui = {

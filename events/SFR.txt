@@ -4426,6 +4426,19 @@ country_event = {	#人生几十年？
 	}
 }
 
+country_event = {	#
+	id = SFR.500
+	title = SFR.500.t
+	desc = SFR.500.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.500.a
+	}
+}
+
 ###工农代表大会###
 
 country_event = {	#参与的人选

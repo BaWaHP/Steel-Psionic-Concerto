@@ -28,17 +28,86 @@ guiTypes = {
 	containerWindowType = {
 		name = "SFR_workers_and_peasants_congress_window"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 100 }
+		size = { width = 100% height = 130 }
 		
-		instantTextboxType = {
+		buttonType = {
 			name = "Party_1"	#强硬派
-			position = { x = 10 y = 0 }
-			font = "cg_16b"
-			maxWidth = 400
-			maxHeight = 30
+			position = { x = 10 y = -5 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
 			format = left
 			text = SFR_congress_Party_1_txt
 			pdx_tooltip = SFR_congress_Party_1_tt
+		}
+
+		buttonType = {
+			name = "Party_2"	#稳健派
+			position = { x = 10 y = 12 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_2_txt
+			pdx_tooltip = SFR_congress_Party_2_tt
+		}
+	
+		buttonType = {
+			name = "Party_3"	#平京派
+			position = { x = 10 y = 29 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_3_txt
+			pdx_tooltip = SFR_congress_Party_3_tt
+		}
+
+		buttonType = {
+			name = "Party_4"	#工农派
+			position = { x = 10 y = 46 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_4_txt
+			pdx_tooltip = SFR_congress_Party_4_tt
+		}
+
+		buttonType = {
+			name = "Party_5"	#自治派
+			position = { x = 10 y = 63 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_5_txt
+			pdx_tooltip = SFR_congress_Party_5_tt
+		}
+		
+		buttonType = {
+			name = "Party_6"	#改革派
+			position = { x = 10 y = 80 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_6_txt
+			pdx_tooltip = SFR_congress_Party_6_tt
+		}
+
+		buttonType = {
+			name = "Party_7"	#远乡社会党
+			position = { x = 10 y = 80 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_7_txt
+			pdx_tooltip = SFR_congress_Party_7_tt
+		}
+
+		buttonType = {
+			name = "Party_8"	#各地民主党派
+			position = { x = 10 y = 97 }
+			spriteType = "GFX_SPC_congress_empty"
+			font = "hoi_16mbs"
+			format = left
+			text = SFR_congress_Party_8_txt
+			pdx_tooltip = SFR_congress_Party_8_tt
 		}
 	}
 

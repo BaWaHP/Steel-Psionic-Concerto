@@ -1816,13 +1816,44 @@ SFR_infiltrate_state_7:0 "破坏该地区的设施"
 SFR_infiltrate_state_8:0 "破坏青天军内部的稳定"
 
 SFR_workers_and_peasants_congress:0 "远乡工农代表大会"
-SFR_workers_and_peasants_congress_desc:0 "代表大会可以表决决议与新法案，不同的决议有不同的通过需求，能否通过则是综合各派系的结果，即基于不同派系的选票权重乘以支持率的结果。各派系的支持是常驻的——他们可能因为反感法案而下降支持，但长期维持高支持度同样可以让派系支持我们的法案，即便他们心存芥蒂。"
+SFR_workers_and_peasants_congress_desc:0 "代表大会可以表决决议与新法案，不同的决议有不同的通过需求，能否通过则是综合各派系的结果，即基于不同派系的选票权重乘以支持率的结果。各派系的支持是常驻的——他们可能因为反感法案而下降支持，但长期维持高支持度同样可以让派系支持我们的法案，即便他们心存芥蒂。\n\n当前选中派系：[GET_SFR_workers_and_peasants_congress_selected]"
 SFR_workers_and_peasants_congress_aaa:0 "强硬派：[?SFR_red_star_over_capital_group_1_2|2Y%%]/[?SFR_red_star_over_capital_group_1_1|2Y%%]\n\n稳健派：[?SFR_red_star_over_capital_group_2_1]/[?SFR_red_star_over_capital_group_2_2]\n\n平京派：[?SFR_red_star_over_capital_group_3_1]/[?SFR_red_star_over_capital_group_3_2][GET_SFR_workers_and_peasants_congress_desc_1]\n\n自治派：[?SFR_red_star_over_capital_group_5_1]/[?SFR_red_star_over_capital_group_5_2]\n\n改革派：[?SFR_red_star_over_capital_group_6_1]/[?SFR_red_star_over_capital_group_6_2][GET_SFR_workers_and_peasants_congress_desc_2]\n\n各地民主党派：[?SFR_red_star_over_capital_group_8_1]/[?SFR_red_star_over_capital_group_8_2]"
 GET_SFR_workers_and_peasants_congress_desc_1_on:0 "\n\n工农派：[?SFR_red_star_over_capital_group_4_1]/[?SFR_red_star_over_capital_group_4_2]"
 GET_SFR_workers_and_peasants_congress_desc_2_on:0 "\n\n远乡社会党：[?SFR_red_star_over_capital_group_7_1]/[?SFR_red_star_over_capital_group_7_2]\n\n"
 
-SFR_congress_Party_1_txt:0 "UI未完工。\n【x小图标】§R强硬派§!\n §j支持度：§![?SFR_red_star_over_capital_group_1_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_1_1|2Y%%]"
+GET_SFR_workers_and_peasants_congress_selected_1_on:0 "§R强硬派§!"
+GET_SFR_workers_and_peasants_congress_selected_2_on:0 "§r稳健派§!"
+GET_SFR_workers_and_peasants_congress_selected_3_on:0 "§S平京派§!"
+GET_SFR_workers_and_peasants_congress_selected_4_on:0 "§t工农派§!"
+GET_SFR_workers_and_peasants_congress_selected_5_on:0 "§G自治派§!"
+GET_SFR_workers_and_peasants_congress_selected_6_on:0 "§1改革派§!"
+GET_SFR_workers_and_peasants_congress_selected_7_on:0 "§B远乡社会党§!"
+GET_SFR_workers_and_peasants_congress_selected_8_on:0 "§P各地民主党派§!"
+GET_SFR_workers_and_peasants_congress_selected_off:0 "§g未选择派系§!§Y（请点击下方各派系以选择）§!"
+
+SFR_congress_Party_1_txt:0 " §R强硬派§! §j支持度：§![?SFR_red_star_over_capital_group_1_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_1_1|2Y%%]"
 SFR_congress_Party_1_tt:0 "【插图】\n§R强硬派§!代表了远乡共产党内的高级军事干部，民族主义者，以及支持推行强硬内政，外交政策的各级干部。总体而言，强硬派代表支持资源侧重军事发展，推崇独立自主的外交理念，强调高度集中的中央集权与严密的计划经济体系，并且支持对反动派的进一步清算。由于成员特殊的出身和大多鹰派的理念，强硬派的支持有助于军事的发展，并在可能到来的武装冲突起到作用。在他们看来，软弱只会招致欺凌，唯有铁腕的党、钢铁般的军队与高度动员的国家机器，才能为革命事业砸出一条通往伟大胜利的道路。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_1_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_1_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_1_weight]"
+
+SFR_congress_Party_2_txt:0 " §r稳健派§! §j支持度：§![?SFR_red_star_over_capital_group_2_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_2_1|2Y%%]"
+SFR_congress_Party_2_tt:0 "【插图】\n§r稳健派§!是远乡共产党的中坚力量，其组成大多是自革命阵线转移至正泸根据地后，维持了革命存续，并参与了之后对南远乡以至于全国解放战争的各级党内人士，工农士兵，以及在远乡解放后的各级官僚，地方政府。稳健派严格来说并没有一个统一的“政治纲领”，其代表的意见主要是远乡解放后国内的建制力量，即“老革命们”，支持以稳妥的方式实现远乡的社会变革，从而修复各地战争造成的破坏。平京派的崛起极大地影响了稳健派的话语权，许多人开始担心党的政策受到平京派的影响，损害人民的利益，将新生的远乡进一步的激进化。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_2_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_2_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_2_weight]"
+
+SFR_congress_Party_3_txt:0 " §S平京派§! §j支持度：§![?SFR_red_star_over_capital_group_3_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_3_1|2Y%%]"
+SFR_congress_Party_3_tt:0 "【插图】\n§S平京派§!，或是“平京帮”，是远乡共产党解放平京后，由各地激进左翼知识分子，新生代学生，党内激进派，还有留守在平京的地下抵抗组织组成的新生派系，和稳健派一同团结在了主席赵永军的身后。平京派支持更为激进的社会革命政策，包括扩大人民对政府的监督权，激进的现代化，工业化，积极参与输出革命等。然而，权力的分享并不代表和平相处，平京派的领头人能看出稳健派对他们争夺权力的不满，可为了实现远乡真正的人民革命，他们还有很多工作要做…\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_3_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_3_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_3_weight]"
+
+SFR_congress_Party_4_txt:0 " §t工农派§! §j支持度：§![?SFR_red_star_over_capital_group_4_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_4_1|2Y%%]"
+SFR_congress_Party_4_tt:0 "【插图】\n随着中央命令下发，在代表大会组建过程中，加倍强调了各级工农代表的地位，而其中的不少成员则慢慢形成了所谓的§t工农派§!。除了各级工农代表，工农派还得到了一部分首都知识分子，以及中央科学机关部分技术人员的支持。总的来说，他们主张以计划引导大规模建设新式工厂与工业城市，把乡村人口有组织地转化为产业工人，同时在农村推行农业集体化与机械化，引入合作农庄与大型农机站，用技术和组织取代小农式的分散生产。工农派强调，工人阶级的先进技术与管理经验应当下沉到乡村，农村的粮食与人力则反哺城市工业，以此形成紧密的工农联盟。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_4_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_4_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_4_weight]"
+
+SFR_congress_Party_5_txt:0 " §G自治派§! §j支持度：§![?SFR_red_star_over_capital_group_5_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_5_1|2Y%%]"
+SFR_congress_Party_5_tt:0 "【插图】\n§G自治派§!的历史最早可以追溯到远乡共产党组建初期，以前往南巴斯蒂亚地区留学的各级干部为首，还有部分本土文人，温和社会主义者，革命党倒戈人员的支持，形成的特殊派系。自治派希望建立麟人传统文化提倡的一种理想社会，主张人人公平共享劳动成果，让所有人都能过上衣食无忧的生活，反对土改后强推集体化和城市化，而是鼓励下放各地权力，由当地公社自行决定经济发展方针，并且希望中央减少对地方的干涉，对外则维持友善，和平的外交政策。根据地整风时期，自治派曾遭受重创，全国解放后则得到平反，在大会的影响力一般。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_5_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_5_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_5_weight]"
+
+SFR_congress_Party_6_txt:0 " §1改革派§! §j支持度：§![?SFR_red_star_over_capital_group_6_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_6_1|2Y%%]"
+SFR_congress_Party_6_tt:0 "【插图】\n随着全国民生经济重建，关于各地经济方针的讨论也愈发激烈，§1改革派§!应运而生。改革派认为，要巩固革命成果并推动国家走出困局，就必须在坚持社会主义根本制度与党的领导前提下，进行谨慎而有控制的小范围经济改革。他们主张在部分地区和行业试行适度的市场机制，允许有限度的个体与合作经济发展，以调动基层生产积极性、缓解物资短缺与财政压力。同时，改革派强调要扩大代表大会的规模与职权，让更多来自社会各层的精英人士进入大会发声，通过更频繁、更实质性的会议讨论来改进决策、整顿官僚主义。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_6_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_6_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_6_weight]"
+
+SFR_congress_Party_7_txt:0 " §B远乡社会党§! §j支持度：§![?SFR_red_star_over_capital_group_7_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_7_1|2Y%%]"
+SFR_congress_Party_7_tt:0 "【插图】\n§B远乡社会党§!作为国民议会中规模较大的共产党外社会主义政党，自诞生之初便试图在激进革命与保守顽固之间寻求一条更为稳妥的道路，其前身是多个零散的地方社会主义政党组建的联盟。社会党主张以较为温和、循序渐进的方式推进社会主义改造，通过立法与协商来推动土地、工厂与基础设施的公有化与合作化，强调补偿、谈判与技术支持，而尽量避免大规模的冲击与社会撕裂。远乡社会党积极在工人、新兴技术人员、中下层公务员以及开明小业主之间开展组织工作，逐步在政府外赢得了相当程度的舆论支持。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_7_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_7_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_7_weight]"
+
+SFR_congress_Party_8_txt:0 " §P各地民主党派§! §j支持度：§![?SFR_red_star_over_capital_group_8_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_8_1|2Y%%]"
+SFR_congress_Party_8_tt:0 "【插图】\n§P各地民主党派§!在国民议会中汇聚成一支鱼龙混杂却不可忽视的力量，它们有的是地方左翼政党，有的是由知识分子、专业技术人员、工商界与地方名流组成的政治团体，在协商桌上以政治协商的模式参与国家大政讨论，建言献策。这些党派，地方有力人士中不乏真心支持社会主义改造、希望通过立法与协商推动社会进步的力量，然而，议会内部也不乏试图披上“民主”外衣混入其中的旧势力残余，企图拖慢改革步伐、维护既得利益。虽然不同于代表大会，国民议会对我国政府影响并没有那么大，然而，其也代表了相当一部分群众的意见，需要结合实际考虑其影响。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_8_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_8_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_8_weight]"
 
 SFR_party_cooling:0 "喧嚣过后..."
 SFR_party_cooling_tt:0 "§j飘风不终朝，骤雨不终日。§!\n每隔三个月，激进的浪潮便会退去，冷漠的坚冰亦将消融。各派系高于§Y50%§!的过剩§s影响力§!将随狂热的冷却而自然回落，而原本低于§Y50%§!的低迷§j支持度§!也会在妥协中逐渐回暖。"

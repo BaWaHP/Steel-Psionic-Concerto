@@ -1,7 +1,7 @@
 SPC_generic_debug_decision_category = {
 	NKM_debug_load_focus_0 = {		#读取初始国策
 		icon = GFX_decision_eng_trade_unions_support
-		visible = { is_debug = yes tag = SFR }
+		visible = { is_debug = yes tag = NKM }
 
 		fire_only_once = no
 

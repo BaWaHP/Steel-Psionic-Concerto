@@ -3,6 +3,19 @@ spriteTypes = {
 		name = "empty"
 		texturefile = "gfx/empty.png"
 	}
+	###UI###
+	spriteType = {
+		name = "GFX_constructions_bg5"
+		texturefile = "gfx//interface//constructions_bg5.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_mini_bg_2"
+		size= {x=32 y=32 }
+		textureFile = "gfx//interface//tiles//tiled_mini_dialog.dds"
+		borderSize = { x=12 y=12 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 	###news###
 	spriteType = {
 		name = "GFX_news_event_generic"

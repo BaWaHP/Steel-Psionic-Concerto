@@ -99,6 +99,45 @@ defined_text = {
 }
 
 defined_text = {
+	name = GET_SFR_workers_and_peasants_congress_selected
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_1 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_1_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_2 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_2_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_3 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_3_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_4 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_4_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_5 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_5_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_6 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_6_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_7 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_7_on
+	}
+	text = {
+		trigger = { has_country_flag = SFR_workers_and_peasants_congress_selected_8 }
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_8_on
+	}
+	text = {
+		localization_key = GET_SFR_workers_and_peasants_congress_selected_off
+	}
+}
+
+defined_text = {
 	name = GET_SFR_land_reform_btn_end
 	text = {
 		trigger = {
