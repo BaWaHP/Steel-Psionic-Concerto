@@ -1561,6 +1561,51 @@ SFR_commi_bop_decisions = {
 }
 
 SFR_workers_and_peasants_congress = {
+	SFR_WAPC_selected_1 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_2 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_3 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_4 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_5 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_6 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_7 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_8 = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
+	SFR_WAPC_selected_off = {
+		allowed = { tag = SFR }
+		visible = { always = no }
+		cost = 1
+	}
 	#派系支持度恢复
 	SFR_party_cooling = {
 		icon = GFX_decision_generic_political_discourse
@@ -1576,6 +1621,155 @@ SFR_workers_and_peasants_congress = {
 			custom_effect_tooltip = SFR_party_cooling_tt
 			hidden_effect = { SFR_party_cooling_effect = yes }
 			activate_mission = SFR_party_cooling
+		}
+	}
+	#收买某派系
+	SFR_WAPC_buyoff = {
+		icon = GFX_decision_generic_fundraising
+		allowed = { tag = SFR }
+		visible = { has_variable = SFR_WAPC_selected }
+
+		cost = 50
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = { set_variable = { SFR_WAPC_buyoff_title = SFR_WAPC_selected } }
+
+		remove_effect = {
+			add_stability = 0.02
+			if = {
+				limit = { has_variable = SFR_WAPC_buyoff_title }
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_buyoff_title
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_selected
+				}
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			clear_variable = SFR_WAPC_buyoff_title
+		}
+	}
+	#向某派系让步
+	SFR_WAPC_concession = {
+		icon = GFX_decision_generic_political_address
+		allowed = { tag = SFR }
+		visible = { has_variable = SFR_WAPC_selected }
+
+		cost = 10
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = { set_variable = { SFR_WAPC_concession_title = SFR_WAPC_selected } }
+
+		remove_effect = {
+			add_stability = -0.02
+			if = {
+				limit = { has_variable = SFR_WAPC_concession_title }
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_1
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_1_tt
+						}
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_concession_title
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_1
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_1_tt
+						}
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = 5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_selected
+				}
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			clear_variable = SFR_WAPC_concession_title
+		}
+	}
+	#打压某派系
+	SFR_WAPC_suppress = {
+		icon = GFX_decision_generic_speech
+		allowed = { tag = SFR }
+		visible = { has_variable = SFR_WAPC_selected }
+
+		cost = 30
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = { set_variable = { SFR_WAPC_suppress_title = SFR_WAPC_selected } }
+
+		remove_effect = {
+			add_stability = -0.02
+			if = {
+				limit = { has_variable = SFR_WAPC_suppress_title }
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_1
+							value = -10
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_1_tt
+						}
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = -5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_suppress_title
+				}
+			}
+			else = {
+				meta_effect = {
+					text = {
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_1
+							value = -10
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_1_tt
+						}
+						add_to_variable = {
+							var = SFR_red_star_over_capital_group_[INDEX]_2
+							value = -5
+							tooltip = SFR_red_star_over_capital_group_[INDEX]_2_tt
+						}
+					}
+					INDEX = SFR_WAPC_selected
+				}
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			clear_variable = SFR_WAPC_suppress_title
 		}
 	}
 	#正在表决
@@ -1611,7 +1805,7 @@ SFR_workers_and_peasants_congress = {
 		}
 	}
 	SFR_workers_and_peasants_congress_law_1 = {		#立宪会议
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
@@ -1628,7 +1822,7 @@ SFR_workers_and_peasants_congress = {
 		}
 	}
 	SFR_workers_and_peasants_congress_law_2 = {		#土地登记法
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_forestry
 		allowed = { tag = SFR }
 		available = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
@@ -1648,7 +1842,7 @@ SFR_workers_and_peasants_congress = {
 		}
 	}
 	SFR_workers_and_peasants_congress_law_3 = {		#铺开统筹委员会
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_generic_wreckers
 		allowed = { tag = SFR }
 		available = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }

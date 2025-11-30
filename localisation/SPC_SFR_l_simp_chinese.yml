@@ -1815,21 +1815,23 @@ SFR_infiltrate_state_6_tr:0 "我们在该地区的影响力至少为§Y5%§!"
 SFR_infiltrate_state_7:0 "破坏该地区的设施"
 SFR_infiltrate_state_8:0 "破坏青天军内部的稳定"
 
+SFR_infiltrate_state_9:0 "牛魔"
+
 SFR_workers_and_peasants_congress:0 "远乡工农代表大会"
-SFR_workers_and_peasants_congress_desc:0 "代表大会可以表决决议与新法案，不同的决议有不同的通过需求，能否通过则是综合各派系的结果，即基于不同派系的选票权重乘以支持率的结果。各派系的支持是常驻的——他们可能因为反感法案而下降支持，但长期维持高支持度同样可以让派系支持我们的法案，即便他们心存芥蒂。\n\n当前选中派系：[GET_SFR_workers_and_peasants_congress_selected]"
+SFR_workers_and_peasants_congress_desc:0 "代表大会可以表决决议与新法案，不同的决议有不同的通过需求，能否通过则是综合各派系的结果，即基于不同派系的选票权重乘以支持率的结果。各派系的支持是常驻的——他们可能因为反感法案而下降支持，但长期维持高支持度同样可以让派系支持我们的法案，即便他们心存芥蒂。\n\n当前选中派系：[GET_SFR_WAPC_selected]"
 SFR_workers_and_peasants_congress_aaa:0 "强硬派：[?SFR_red_star_over_capital_group_1_2|2Y%%]/[?SFR_red_star_over_capital_group_1_1|2Y%%]\n\n稳健派：[?SFR_red_star_over_capital_group_2_1]/[?SFR_red_star_over_capital_group_2_2]\n\n平京派：[?SFR_red_star_over_capital_group_3_1]/[?SFR_red_star_over_capital_group_3_2][GET_SFR_workers_and_peasants_congress_desc_1]\n\n自治派：[?SFR_red_star_over_capital_group_5_1]/[?SFR_red_star_over_capital_group_5_2]\n\n改革派：[?SFR_red_star_over_capital_group_6_1]/[?SFR_red_star_over_capital_group_6_2][GET_SFR_workers_and_peasants_congress_desc_2]\n\n各地民主党派：[?SFR_red_star_over_capital_group_8_1]/[?SFR_red_star_over_capital_group_8_2]"
 GET_SFR_workers_and_peasants_congress_desc_1_on:0 "\n\n工农派：[?SFR_red_star_over_capital_group_4_1]/[?SFR_red_star_over_capital_group_4_2]"
 GET_SFR_workers_and_peasants_congress_desc_2_on:0 "\n\n远乡社会党：[?SFR_red_star_over_capital_group_7_1]/[?SFR_red_star_over_capital_group_7_2]\n\n"
 
-GET_SFR_workers_and_peasants_congress_selected_1_on:0 "§R强硬派§!"
-GET_SFR_workers_and_peasants_congress_selected_2_on:0 "§r稳健派§!"
-GET_SFR_workers_and_peasants_congress_selected_3_on:0 "§S平京派§!"
-GET_SFR_workers_and_peasants_congress_selected_4_on:0 "§t工农派§!"
-GET_SFR_workers_and_peasants_congress_selected_5_on:0 "§G自治派§!"
-GET_SFR_workers_and_peasants_congress_selected_6_on:0 "§1改革派§!"
-GET_SFR_workers_and_peasants_congress_selected_7_on:0 "§B远乡社会党§!"
-GET_SFR_workers_and_peasants_congress_selected_8_on:0 "§P各地民主党派§!"
-GET_SFR_workers_and_peasants_congress_selected_off:0 "§g未选择派系§!§Y（请点击下方各派系以选择）§!"
+SFR_WAPC_selected_1:0 "§R强硬派§!"
+SFR_WAPC_selected_2:0 "§r稳健派§!"
+SFR_WAPC_selected_3:0 "§S平京派§!"
+SFR_WAPC_selected_4:0 "§t工农派§!"
+SFR_WAPC_selected_5:0 "§G自治派§!"
+SFR_WAPC_selected_6:0 "§1改革派§!"
+SFR_WAPC_selected_7:0 "§B远乡社会党§!"
+SFR_WAPC_selected_8:0 "§P各地民主党派§!"
+SFR_WAPC_selected_off:0 "§g未选择派系§!§Y（请点击下方各派系以选择）§!"
 
 SFR_congress_Party_1_txt:0 " §R强硬派§! §j支持度：§![?SFR_red_star_over_capital_group_1_2|2Y%%] §s影响力：§![?SFR_red_star_over_capital_group_1_1|2Y%%]"
 SFR_congress_Party_1_tt:0 "【插图】\n§R强硬派§!代表了远乡共产党内的高级军事干部，民族主义者，以及支持推行强硬内政，外交政策的各级干部。总体而言，强硬派代表支持资源侧重军事发展，推崇独立自主的外交理念，强调高度集中的中央集权与严密的计划经济体系，并且支持对反动派的进一步清算。由于成员特殊的出身和大多鹰派的理念，强硬派的支持有助于军事的发展，并在可能到来的武装冲突起到作用。在他们看来，软弱只会招致欺凌，唯有铁腕的党、钢铁般的军队与高度动员的国家机器，才能为革命事业砸出一条通往伟大胜利的道路。\n-------\n§j支持度：§![?SFR_red_star _over_capital_group_1_2|2Y%%]\n§s影响力：§![?SFR_red_star_over_capital_group_1_1|2Y%%]\n投票权重：[?SFR_red_star_over_capital_group_1_weight]"
@@ -1858,7 +1860,18 @@ SFR_congress_Party_8_tt:0 "【插图】\n§P各地民主党派§!在国民议会
 SFR_party_cooling:0 "喧嚣过后..."
 SFR_party_cooling_tt:0 "§j飘风不终朝，骤雨不终日。§!\n每隔三个月，激进的浪潮便会退去，冷漠的坚冰亦将消融。各派系高于§Y50%§!的过剩§s影响力§!将随狂热的冷却而自然回落，而原本低于§Y50%§!的低迷§j支持度§!也会在妥协中逐渐回暖。"
 
-SFR_workers_and_peasants_congress_voting:0 "§P代表大会正在投票！§!"
+SFR_WAPC_buyoff:0 "[GET_SFR_WAPC_buyoff]"
+GET_SFR_WAPC_buyoff_1:0 "收买[GET_SFR_WAPC_buyoff_title]的代表"
+GET_SFR_WAPC_buyoff_2:0 "收买[GET_SFR_WAPC_selected]的代表"
+
+SFR_WAPC_concession:0 "[GET_SFR_WAPC_concession]"
+GET_SFR_WAPC_concession_1:0 "向[GET_SFR_WAPC_concession_title]做出让步"
+GET_SFR_WAPC_concession_2:0 "向[GET_SFR_WAPC_selected]做出让步"
+
+SFR_WAPC_suppress:0 "[GET_SFR_WAPC_suppress]"
+GET_SFR_WAPC_suppress_1:0 "压制[GET_SFR_WAPC_suppress_title]的代表"
+GET_SFR_WAPC_suppress_2:0 "压制[GET_SFR_WAPC_selected]的代表"
+
 SFR_workers_and_peasants_congress_vote_preview_win:0 "从目前的结果来看，投票会以支持率§G$VOTE_COUNT$%§!对§R$VOTE_ABORT_COUNT$%§!，超过要求的§Y$VOTE_PASS_COUNT$%§!，得到§C通过§!。"
 SFR_workers_and_peasants_congress_vote_preview_lose:0 "从目前的结果来看，投票会以支持率§G$VOTE_COUNT$%§!对§R$VOTE_ABORT_COUNT$%§!，低于要求的§Y$VOTE_PASS_COUNT$%§!，遭到§P否决§!。"
 SFR_workers_and_peasants_congress_vote_preview_lose_but_retry:0 "尽管我们这一次§R失败§!了，但我们下次§C仍有机会§!§3重新表决§!该§Y法案§!。"
@@ -1869,7 +1882,7 @@ SFR_current_pass_tt:0 "[?SFR_current_pass|0]"
 
 SFR_workers_and_peasants_congress_vote_start_tt:0 "进入为期§Y$DAYS$日§!的§Y表决流程§!。"
 
-SFR_workers_and_peasants_congress_voting:0 "正在表决...当前议案：[?SFR_workers_and_peasants_congress_voting_title.GetTokenLocalizedKey]"
+SFR_workers_and_peasants_congress_voting:0 "§P代表大会正在投票！§!§Y当前议案：§![?SFR_workers_and_peasants_congress_voting_title.GetTokenLocalizedKey]"
 
 SFR_workers_and_peasants_congress_law_1:0 "§C制宪会议§!"
 SFR_workers_and_peasants_congress_law_1_desc:0 ""

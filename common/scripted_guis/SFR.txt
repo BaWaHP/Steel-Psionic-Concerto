@@ -19,9 +19,14 @@ scripted_gui = {
 		}
 
 		effects = {
-			Party_1_click = {
-				set_country_flag = SFR_workers_and_peasants_congress_selected_1
-			}
+			Party_1_click = { set_variable = { SFR_WAPC_selected = 1 } }
+			Party_2_click = { set_variable = { SFR_WAPC_selected = 2 } }
+			Party_3_click = { set_variable = { SFR_WAPC_selected = 3 } }
+			Party_4_click = { set_variable = { SFR_WAPC_selected = 4 } }
+			Party_5_click = { set_variable = { SFR_WAPC_selected = 5 } }
+			Party_6_click = { set_variable = { SFR_WAPC_selected = 6 } }
+			Party_7_click = { set_variable = { SFR_WAPC_selected = 7 } }
+			Party_8_click = { set_variable = { SFR_WAPC_selected = 8 } }
 		}
 
 		properties = {
