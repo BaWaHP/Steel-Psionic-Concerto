@@ -203,6 +203,12 @@ SPC_generic_region_trigger_100 = {	#提特兰任意政权
 SPC_generic_region_trigger_102 = {	#蒙特任意政权
 	OR = { 
 		tag = MTV tag = MCS tag = LCM
+		SPC_generic_region_trigger_103 = yes
+	}
+}
+
+SPC_generic_region_trigger_103 = {	#维尔德意政权
+	OR = { 
 		tag = WDR tag = WNS tag = WRF tag = TLA
 	}
 }

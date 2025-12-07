@@ -229,6 +229,8 @@ country_event = {
 			idea = RSU_compromise_product
 			days = 360
 		}
+		add_political_power = -150
+		add_stability = 0.05
 	}
 }
 
@@ -281,6 +283,7 @@ country_event = {
 	
 	option = {
 		name = RSU.17.a
+		add_stability = 0.05
 		custom_effect_tooltip = RSU.17.a.tt
 		add_to_variable = { RSU_gronissen_mining_disaster_lrf = 0.05 }
 		add_to_variable = { RSU_gronissen_mining_disaster_sf = 0.05 }
@@ -303,7 +306,13 @@ country_event = {
 country_event = {
 	id = RSU.19		#心有余而力......
 	title = RSU.19.t
-	desc = RSU.19.d
+	desc = {
+		text = RSU.19.d1
+		trigger = { RSB = { NOT = { has_country_leader = RSB_ortland_karasasin } } }
+	}
+	desc = {
+		text = RSU.19.d2
+	}
 	#picture = 
 	
 	is_triggered_only = yes
@@ -312,6 +321,14 @@ country_event = {
 		name = RSU.19.a
 		custom_effect_tooltip = RSU.19.a.tt
 		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
+		trigger = { RSB = { NOT = { has_country_leader = RSB_ortland_karasasin } } }
+	}
+
+	option = {
+		name = RSU.19.a
+		custom_effect_tooltip = RSU.19.a.tt
+		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
+		trigger = { RSB = { has_country_leader = RSB_ortland_karasasin } }
 	}
 }
 
@@ -381,6 +398,17 @@ country_event = {
 	
 	option = {
 		name = RSU.24.a
+		add_stability = -0.1
+		kill_country_leader = yes
+		add_country_leader_role = {
+			character = RSU_dekrit_amos
+			promote_leader = yes
+			country_leader = {
+				desc = RSU_dekrit_amos_desc
+				ideology = market_liberalism
+				expire = "2040.1.1.1"
+			}
+		}
 		country_event = { id = RSU.25 days = 5 }
 	}
 }
@@ -456,6 +484,34 @@ country_event = {
 		every_unit_leader = {
 			limit = { has_trait = RSU_left_wing_sympathisers }
 			set_nationality = RRF
+		}
+	}
+}
+
+country_event = {
+	id = RSU.29		#撤军
+	title = RSU.29.t
+	desc = RSU.29.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = RSU.29.a
+		delete_unit_template_and_units = {
+			division_template = "南巴骑兵师"
+		}
+		delete_unit_template_and_units = {
+			division_template = "南巴装甲师"
+		}
+		delete_unit_template_and_units = {
+			division_template = "南巴步兵师"
+		}
+		delete_unit_template_and_units = {
+			division_template = "南巴海军陆战队"
+		}
+		delete_unit_template_and_units = {
+			division_template = "南巴山地师"
 		}
 	}
 }

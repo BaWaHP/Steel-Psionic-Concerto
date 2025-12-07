@@ -92,5 +92,41 @@ news_event = {
 	
 	option = {
 		name = RRFNews.1.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+			}
+		}
+	}
+
+	option = {
+		name = RRFNews.1.b
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+				has_government = worldunion_democrat
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+			}
+		}
+	}
+
+	option = {
+		name = RRFNews.1.c
+		trigger = {
+			OR = {
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+			}
+		}
 	}
 }

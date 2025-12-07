@@ -4866,7 +4866,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.500
+				days = 1
+			}
 		}
 	}
 
