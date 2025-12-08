@@ -3,6 +3,10 @@ state={
 	id=330
 	name="STATE_330"
 
+	resources = {
+		coal = 8
+	}
+
 	history={
 		owner = RSB
 		add_core_of = RSB
@@ -11,6 +15,7 @@ state={
 			industrial_complex = 3
 			arms_factory = 1
 			dockyard = 2
+			industrial_infrastructure = 1
 			6483 = {
 				naval_base = 3
 				coastal_bunker = 1
