@@ -229,8 +229,6 @@ country_event = {
 			idea = RSU_compromise_product
 			days = 360
 		}
-		add_political_power = -150
-		add_stability = 0.05
 	}
 }
 
@@ -312,6 +310,7 @@ country_event = {
 	}
 	desc = {
 		text = RSU.19.d2
+		trigger = { RSB = { has_country_leader = RSB_ortland_karasasin } }
 	}
 	#picture = 
 	
@@ -325,7 +324,7 @@ country_event = {
 	}
 
 	option = {
-		name = RSU.19.a
+		name = RSU.19.b
 		custom_effect_tooltip = RSU.19.a.tt
 		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
 		trigger = { RSB = { has_country_leader = RSB_ortland_karasasin } }
@@ -368,6 +367,7 @@ country_event = {
 	
 	option = {
 		name = RSU.22.a
+		add_political_power = -150
 		custom_effect_tooltip = RSU.22.a.tt
 		add_to_variable = { RSU_cb_crisis_ppf = 0.05 }
 	}
