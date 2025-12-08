@@ -4426,7 +4426,7 @@ country_event = {	#人生几十年？
 	}
 }
 
-country_event = {	#
+country_event = {	#《关于当前远乡社会的考察报告》
 	id = SFR.500
 	title = SFR.500.t
 	desc = SFR.500.d
@@ -4436,6 +4436,20 @@ country_event = {	#
 	
 	option = {
 		name = SFR.500.a
+		unlock_decision_category_tooltip = SFR_social_reform_decisions
+	}
+}
+
+country_event = {	#
+	id = SFR.501
+	title = SFR.501.t
+	desc = SFR.501.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.501.a
 	}
 }
 

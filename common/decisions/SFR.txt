@@ -2340,3 +2340,16 @@ SFR_land_reform_decisions = {
 	}
 }
 
+SFR_social_reform_decisions = {
+	#daww
+	SFR_dawwddw = {
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = SFR }
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+	}
+}
+

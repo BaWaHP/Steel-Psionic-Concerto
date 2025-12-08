@@ -24,6 +24,7 @@ SFR_workers_and_peasants_congress = {
 	visible = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
 	visible_when_empty = yes
 	scripted_gui = SFR_workers_and_peasants_congress_ui
+	priority = 100
 }
 
 #全国土地改革
@@ -37,4 +38,11 @@ SFR_land_reform_decisions = {
 	visible_when_empty = yes
 	scripted_gui = SFR_land_reform_decisions_ui
 	priority = 9999
+}
+
+#远乡社会改革
+SFR_social_reform_decisions = {
+	icon = GFX_decision_category_generic_communism
+	allowed = { tag = SFR }
+	priority = 100
 }
