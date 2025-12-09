@@ -788,7 +788,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.08
 				monthly_living_standard_development_process = -4
 			}
-			traits = { industrial_concern }
+			traits = { SPC_industrial_concern }
 		}
 		NCD_great_mines_united_corp = {		#“伟大山脉”矿业联合公司
 			picture = generic_industrial_concern_2
@@ -801,7 +801,7 @@ ideas = {
 				local_resources_factor = 0.15
 				monthly_environment_development_process = -4
 			}
-			traits = { industrial_concern }
+			traits = { SPC_industrial_concern }
 		}
 	}
 }

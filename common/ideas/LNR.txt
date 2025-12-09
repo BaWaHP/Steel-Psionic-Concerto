@@ -611,6 +611,41 @@ ideas = {
 				factor = 1
 			}
 		}
+		#宝石电气公司
+		LNR_gem_electric_company = {
+			picture = generic_electronics_concern_3
+			allowed = { original_tag = LNR }
+			modifier = {
+				country_resource_coal = 6
+				factory_energy_consumption = -0.1
+				monthly_industrial_development_process = 2
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			traits = { SPC_industrial_concern }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		#特尼安电力建设集团
+		LNR_tenian_electric_construction_group = {
+			picture = PRC_nanjing_wireless_electronics_plant
+			allowed = { OR = { tag = LNR tag = RLN } }
+			modifier = {
+				global_building_slots_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_energy_infrastructure_factor = 0.15
+				production_speed_industrial_infrastructure_factor = 0.15
+			}
+			
+			traits = { SPC_industrial_concern }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
     }
 
 }

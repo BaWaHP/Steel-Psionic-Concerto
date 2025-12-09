@@ -983,7 +983,52 @@ ideas = {
 				industry = 0.1
 			}
 			
-			traits = { industrial_concern }
+			traits = { SPC_industrial_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		#范弗里特电力公司
+		ROT_van_fleet_electric_company = {
+			picture = PRC_nanjing_wireless_electronics_plant
+			allowed = { original_tag = ROT }
+			cost = 150
+
+			modifier = {
+				country_resource_coal = 6
+				factory_energy_consumption = -0.05
+				local_resources_coal_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.05
+			}
+			
+			traits = { SPC_industrial_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		#提特兰国家电网
+		ROT_teotland_national_grid = {
+			picture = AFG_electrification
+			allowed = { original_tag = ROT }
+			cost = 150
+
+			modifier = {
+				global_building_slots_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+				production_speed_energy_infrastructure_factor = 0.15
+				production_speed_industrial_infrastructure_factor = 0.15
+			}
+			
+			traits = { SPC_industrial_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 

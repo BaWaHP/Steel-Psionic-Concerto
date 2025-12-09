@@ -82,4 +82,24 @@ ideas = {
 		}
 
 	}
+
+	industrial_concern = {					#工业企业
+		#山岳化工精炼公司
+		FCR_mountain_chemical_refining_company = {
+			picture = generic_refining_concern_1
+			allowed = { tag = FCR }
+			modifier = {
+				fuel_gain_factor = 0.1
+			}
+			research_bonus = {
+				synth_resources = 0.1
+			}
+			
+			traits = { SPC_industrial_concern }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+    }
 }
