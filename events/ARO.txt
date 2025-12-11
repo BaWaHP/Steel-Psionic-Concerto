@@ -676,33 +676,6 @@ country_event = {	#
 }
 
 country_event = {	#
-	id = ARO.0122
-	title = ARO.0122.t
-	desc = ARO.0122.d
-	#picture = 
-	
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = ARO.0123
-				days = 21
-			}
-		}
-	}
-
-	is_triggered_only = yes
-	
-	option = {
-		name = ARO.0122.a
-		custom_effect_tooltip = ARO.0122.tt
-		add_popularity = {
-			ideology = religious_extremism
-			popularity = 0.01
-		}
-	}
-}
-
-country_event = {	#
 	id = ARO.0123
 	title = ARO.0123.t
 	desc = ARO.0123.d

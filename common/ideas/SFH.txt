@@ -2750,21 +2750,6 @@ ideas = {
 				research_speed_factor = 0.01
 			}
 		}
-
-		SFH_rebuild_farhome_navy_2_ll = {		#重建远乡海军
-			name = SFH_rebuild_farhome_navy
-			picture = generic_navy_bonus
-			allowed = { always = yes }
-			removal_cost = -1
-			modifier = {
-				experience_gain_navy = 0.01
-				experience_gain_navy_factor = 0.1
-				navy_org_factor = 0.15
-				navy_max_range_factor = 0.1
-				naval_damage_factor = 0.05
-				research_speed_factor = 0.01
-			}
-		}
 		
 		SFH_new_born_navy_l = {		#新生的远乡海军
 			name = SFH_new_born_navy

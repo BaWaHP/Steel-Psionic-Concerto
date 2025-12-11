@@ -135,6 +135,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "no_faction"
 					size = { width = 100%% height = 100% }
+					position = { x = -60 y = -5 }
 
 					buttonType = {
 						name = "new_faction_button"
@@ -147,20 +148,20 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "view_factions_text"
-						position = { x = 45 y = 5 }
+						position = { x = 33 y = 7 }
 						font = "hoi_18mbs"
 						text = "CREATE_FACTION"
 						maxWidth = 143
 						maxHeight = 20
 						fixedsize = yes
-						format = left
+						format = center
 						alwaystransparent = yes
 					}
 
 					iconType = {
 						name = "create_faction_icon"
 						spriteType = "GFX_tension_war_list_major"
-						position = { x = 4 y = -1}
+						position = { x = 2 y = 0 }
 						alwaystransparent = yes
 					}														
 				}
@@ -168,14 +169,14 @@ guiTypes = {
 				buttonType = {
 					name = "view_factions_button"
 					quadTextureSprite = "GFX_icon_button_32x32"
-					position = { x = 180 y = -1}
+					position = { x = 130 y = -4 }
 					pdx_tooltip = "VIEW_FACTION"
 				}
 				
 				iconType = {
 					name = "view_faction_icon"
 					spriteType = "GFX_relation_faction"
-					position = { x = 181 y = 1}
+					position = { x = 131 y = -2 } #1 2
 					alwaystransparent = yes
 				}	
 
@@ -208,11 +209,12 @@ guiTypes = {
 				containerWindowType = {
 					name = "in_faction"
 					size = { width = 100%% height = 100% }
+					position = { x = -55 y = 0 }
 
 					buttonType = {
 						name = "open_faction_button"
 						quadTextureSprite = "GFX_factions_button"
-						position = { x = -9 y = -13 }
+						position = { x = -14 y = -17 }
 						buttonFont = "hoi_16mbs"
 						Orientation = "UPPER_LEFT"
 						frame = 1
@@ -221,13 +223,13 @@ guiTypes = {
 					iconType = {
 						name = "faction_icon"
 						spriteType = "GFX_faction_logo_generic_democratic"
-						position = { x = 3 y = -1}
+						position = { x = -4 y = -5 }
 						alwaystransparent = yes
 					}
 
 					positionType = {
 						name = "faction_name_position" #position y will be - half the height to keep it centered
-						position = { x = 40 y = 14  }
+						position = { x = 30 y = 11 }
 					}
 
 					instantTextboxType = {
@@ -237,7 +239,7 @@ guiTypes = {
 						maxWidth = 138
 						maxHeight = 40
 						fixedsize = yes
-						format = left
+						format = center
 						alwaystransparent = yes
 					}
 				}

@@ -514,32 +514,6 @@ country_event = {	#戈尔维亚法西斯
 	}
 }
 
-country_event = {	#戈尔维亚法西斯
-	id = WOM_skeleton.2
-	title = WOM_skeleton.2.t
-	desc = WOM_skeleton.2.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = WOM_skeleton.2.a
-		add_popularity = {
-			ideology = national_socialist
-			popularity = 0.3
-		}
-	}
-
-	option = {
-		name = WOM_skeleton.2.b
-		add_popularity = {
-			ideology = authoritarian_nationalism
-			popularity = 0.3
-		}
-		set_politics = { ruling_party = authoritarian_nationalism }
-	}
-}
-
 country_event = {	#戈尔维亚反法西斯
 	id = WOM_skeleton.3
 	title = WOM_skeleton.3.t
