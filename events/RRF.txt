@@ -76,6 +76,44 @@ country_event = {	#全国大会
 	}
 }
 
+country_event = {	#德伦尔讷大起义
+	id = RRF.7
+	title = RRF.7.t
+	desc = RRF.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = RRF.7.a
+		effect_tooltip = {
+			division_template = {
+				name = "海军陆战队"
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+					marine = { x = 1 y = 0 }
+					marine = { x = 1 y = 1 }
+				}
+				priority = 1
+			}
+			313 = {
+				create_unit = {
+					division = "name = \"海军陆战队\" division_template = \"海军陆战队\" start_experience_factor = 0.3"
+					owner = RRF
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 4613
+				}
+				create_unit = {
+					division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1"
+					owner = RRF
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 4613
+				}
+			}	
+		}
+	}
+}
+
 ###新闻###
 
 add_namespace = RRFNews

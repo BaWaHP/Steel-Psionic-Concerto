@@ -56,6 +56,40 @@ ideas = {
 				industrial_capacity_factory = -0.1
 			}
 		}
+		AST_republicains = {		#议会叛匪
+			picture = POL_disjointed_industry
+			allowed = { tag = AST }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.5 
+			}
+		}
+		AST_evilnoble = {		#不忠贵族
+			picture = POL_disjointed_industry
+			allowed = { tag = AST }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.10			
+			}
+		}
+		AST_malaise = {		#社会动荡
+			picture = POL_disjointed_industry
+			allowed = { tag = AST }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.20
+			}
+		}
+		AST_royal_chemin_1 = {		#王家铁路公司
+			picture = POL_disjointed_industry
+			allowed = { tag = AST }
+			removal_cost = -1
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
 
 	}
 }

@@ -1,0 +1,856 @@
+focus_tree = {
+	id = AST_focus_generic
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AST
+		}
+	}
+	
+	continuous_focus_position = {
+		x = 6000
+		y = 0
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = AST_premier #新一年,新君主
+		icon = GFX_focus_generic_monarchy_2
+		x = 7
+		y = 0
+		cost = 0.15
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			play_song = "Marsch der Elisabether（伊丽莎白进行曲）"
+			hidden_effect ={
+				country_event = AST.1
+			}
+		}
+	}
+
+	
+	focus = {
+		id = AST_monarchiste #陛下可敬而忠诚的侍臣们
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_premier }
+		relative_position_id = AST_premier
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		    country_event = AST.2
+		}
+	}
+
+		
+	focus = {
+		id = AST_archeveque #在议会上下
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_monarchiste }
+		relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 50			
+		    country_event = AST.3
+		}
+	}
+
+	focus = {
+		id = AST_reine #在宫廷内外
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -2
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_monarchiste }
+		relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.05
+		    country_event = AST.4
+		}
+	}
+
+	focus = {
+		id = AST_chevalier #在军队之中
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 2
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_monarchiste }
+		relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			army_experience = 25
+		    country_event = AST.5				
+		}
+	}
+
+	focus = {
+		id = AST_commercant #在街头巷尾
+		icon = GFX_NCD_choice_of_people
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_archeveque }
+		prerequisite = { focus = AST_reine }
+		relative_position_id = AST_archeveque
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		    country_event = AST.6
+		}
+	}
+
+	focus = {
+		id = AST_socialist #在王国四境
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 1
+		y = 1
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_archeveque }
+		prerequisite = { focus = AST_chevalier }
+		relative_position_id = AST_archeveque
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		    country_event = AST.7
+		}
+	}
+
+	focus = {
+		id = AST_teatime #一次平凡的茶会
+		icon = GFX_focus_SWE_form_rfsu
+		x = 0
+		y = 3
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_commercant }
+		prerequisite = { focus = AST_socialist }
+		relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 10
+		    country_event = AST.8
+		}
+	}
+
+	focus = {
+		id = AST_stability #整顿王国局势
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 4
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_teatime }
+		relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 90
+			add_ideas = AST_republicains
+			add_ideas = AST_evilnoble
+			add_ideas = AST_malaise
+		}
+	}
+
+	focus = {
+		id = AST_timelimit #我们时间急迫
+		icon = GFX_focus_SWE_as_the_barometer_falls
+		x = 4
+		y = 5
+		cost = 1.43
+
+		available = {
+			always = no
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+			has_completed_focus = AST_stability
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = AST_monarchiste
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = AST_economy #经济难题
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = -1
+		y = 1
+		cost = 0.15
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_timelimit }
+		relative_position_id = AST_timelimit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		    country_event = AST.9
+		}
+	}
+
+
+	focus = {
+		id = AST_corporation #鼓励新兴企业
+		icon = GFX_focus_generic_industry_1
+		x = -1
+		y = 1
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_economy }
+		relative_position_id = AST_economy
+		mutually_exclusive = { focus = AST_international }
+
+		completion_reward = {
+			add_political_power = -150
+			376 = {
+		        add_extra_state_shared_building_slots = 1
+		        add_building_construction = {
+			    type = synthetic_refinery
+			    level = 1
+			    instant_build = yes 
+		        }
+	        }
+			357 = {
+		        add_extra_state_shared_building_slots = 1
+	        }
+		}
+	}
+
+	focus = {
+		id = AST_international #寻求国际合作
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		cost = 2.2
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_economy }
+		relative_position_id = AST_economy
+		mutually_exclusive = { focus = AST_corporation }
+
+		completion_reward = {
+			376 = {
+		        add_extra_state_shared_building_slots = 1
+		        add_building_construction = {
+			    type = arms_factory 
+			    level = 1
+			    instant_build = yes 
+		        }
+	        }
+		}
+	}
+
+	focus = {
+		id = AST_railway #王国铁路计划
+		icon = GFX_focus_generic_railroad
+		x = 0
+		y = 2
+		cost = 2.9
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_corporation focus = AST_international }
+
+		relative_position_id = AST_economy
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_ideas = AST_royal_chemin_1
+		}
+	}
+
+	focus = {
+		id = AST_politics #浆糊行政
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 2
+		y = 1
+		cost = 0.14
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_timelimit }
+		relative_position_id = AST_timelimit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+		    country_event = AST.10
+		}
+	}
+
+
+	focus = {
+		id = AST_loyalty #寻找忠诚者
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_politics }
+		relative_position_id = AST_politics
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 100
+		    country_event = AST.11			
+		}
+	}
+
+	focus = {
+		id = AST_deployment #调整军事部署
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 0.72
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_loyalty }
+		relative_position_id = AST_loyalty
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+                capital_scope = {
+					create_unit = { 
+						division = "name = \"101.BHS步兵师 \" division_template = \"BHS步兵师\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"102.BHS步兵师\" division_template = \"BHS步兵师\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"103.BHS步兵师\" division_template = \"BHS步兵师\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = AST_worst #做好最坏的打算
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		cost = 0.15
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = AST_railway focus = AST_deployment  }
+		relative_position_id = AST_deployment
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+				add_ideas = partial_economic_mobilisation 
+		}
+	}
+
+	focus = {
+		id = AST_tasks #我们任务众多
+		icon = GFX_focus_generic_improve_the_administration
+		x = 10
+		y = 5
+		cost = 0.15
+
+		available = {
+			always = no
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+			has_completed_focus = AST_stability
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = AST_
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = AST_disloyal #不忠的毒蛇
+		icon = GFX_focus_SOV_military_purge
+		x = -2
+		y = 1
+		cost = 0.5
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_tasks }
+		relative_position_id = AST_tasks
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			country_event = AST.12
+		}
+	}
+
+	focus = {
+		id = AST_noble #自大的勋贵
+		icon = GFX_focus_POL_end_the_regency
+		x = 0
+		y = 1
+		cost = 0.5
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_tasks }
+		relative_position_id = AST_tasks
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			country_event = AST.13
+		}
+	}
+
+	focus = {
+		id = AST_territory #动荡的领地
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		x = 2
+		y = 1
+		cost = 0.5
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_tasks }
+		relative_position_id = AST_tasks
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			country_event = AST.14
+		}
+	}
+
+	focus = {
+		id = AST_propaganda #开动宣传机器
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		cost = 1.43
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_disloyal }
+		relative_position_id = AST_disloyal
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = -0.05
+			country_event = AST.15
+		}
+	}
+
+	focus = {
+		id = AST_speech #在议会发言
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		cost = 0.15
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_noble }
+		relative_position_id = AST_noble
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = AST.16
+		}
+	}
+
+
+	focus = {
+		id = AST_security #部署治安部队
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 1
+		cost = 2.2
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_territory }
+		relative_position_id = AST_territory
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+                capital_scope = {
+					create_unit = { 
+						division = "name = \"女王陛下的猎鹰 \" division_template = \"机动步兵师\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"女王陛下的猎犬 \" division_template = \"机动步兵师\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+				}
+			add_stability = -0.03
+			add_war_support = -0.03
+		}
+	}
+
+	focus = {
+		id = AST_royalvisit #王室访问计划
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		cost = 2.9
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_propaganda  }
+		prerequisite = { focus = AST_speech  }
+		relative_position_id = AST_propaganda
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			country_event = AST.17
+		}
+	}
+
+	focus = {
+		id = AST_church #与教会会晤
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 1
+		cost = 1.5
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_security  }
+		prerequisite = { focus = AST_speech  }
+		relative_position_id = AST_security
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+
+	focus = {
+		id = AST_forever #雷斯科利恩家族万岁！
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 1
+		y = 1
+		cost = 4.2
+
+		available = {
+			NOT = { has_war = yes }
+		}
+		cancelable = no
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = AST_royalvisit }
+		prerequisite = { focus = AST_church }
+		relative_position_id = AST_royalvisit
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	
+
+
+
+
+}

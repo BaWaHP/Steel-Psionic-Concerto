@@ -305,12 +305,12 @@ country_event = {
 	id = RSU.19		#心有余而力......
 	title = RSU.19.t
 	desc = {
+		trigger = { RSB = { NOT = { has_country_leader = { character = RSB_ortland_karasasin } } } }
 		text = RSU.19.d1
-		trigger = { RSB = { NOT = { has_country_leader = RSB_ortland_karasasin } } }
 	}
 	desc = {
+		trigger = { RSB = { has_country_leader = { character = RSB_ortland_karasasin } } }
 		text = RSU.19.d2
-		trigger = { RSB = { has_country_leader = RSB_ortland_karasasin } }
 	}
 	#picture = 
 	
@@ -320,14 +320,14 @@ country_event = {
 		name = RSU.19.a
 		custom_effect_tooltip = RSU.19.a.tt
 		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
-		trigger = { RSB = { NOT = { has_country_leader = RSB_ortland_karasasin } } }
+		trigger = { RSB = { NOT = { has_country_leader = { character = RSB_ortland_karasasin } } } }
 	}
 
 	option = {
 		name = RSU.19.b
 		custom_effect_tooltip = RSU.19.a.tt
 		add_to_variable = { RSU_cb_crisis_cgf = -0.05 }
-		trigger = { RSB = { has_country_leader = RSB_ortland_karasasin } }
+		trigger = { RSB = { has_country_leader = { character = RSB_ortland_karasasin } } }
 	}
 }
 
@@ -512,6 +512,90 @@ country_event = {
 		}
 		delete_unit_template_and_units = {
 			division_template = "南巴山地师"
+		}
+	}
+}
+
+country_event = {
+	id = RSU.30		#变节的海军
+	title = RSU.30.t
+	desc = RSU.30.d
+	#picture = 
+	
+	trigger = {
+		tag = RSU
+		317 = { is_controlled_by = RRF }
+		317 = { is_owned_by = RRF }
+		has_war_with = RRF
+	}
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		hidden_effect = {
+			RRF = {
+				country_event = RRF.7
+				division_template = {
+					name = "海军陆战队"
+					regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+					}
+					priority = 1
+				}
+				313 = {
+					create_unit = {
+						division = "name = \"海军陆战队\" division_template = \"海军陆战队\" start_experience_factor = 0.3"
+						owner = RRF
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4613
+					}
+					create_unit = {
+						division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1"
+						owner = RRF
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4613
+					}
+				}	
+			}
+		}
+	}
+	
+	option = {
+		name = RSU.30.a
+		effect_tooltip = {
+			RRF = {
+				country_event = RRF.7
+				division_template = {
+					name = "海军陆战队"
+					regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+					}
+					priority = 1
+				}
+				313 = {
+					create_unit = {
+						division = "name = \"海军陆战队\" division_template = \"海军陆战队\" start_experience_factor = 0.3"
+						owner = RRF
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4613
+					}
+					create_unit = {
+						division = "name = \"赤卫军\" division_template = \"赤卫军\" start_experience_factor = 0.1"
+						owner = RRF
+						allow_spawning_on_enemy_provs = yes
+						prioritize_location = 4613
+					}
+				}	
+			}
 		}
 	}
 }

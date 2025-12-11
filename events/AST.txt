@@ -1,0 +1,256 @@
+﻿add_namespace = AST
+
+###日升###
+
+country_event = {	#日升
+	id = AST.1
+	title = AST.1.t
+	desc = AST.1.d
+	#picture = 
+	trigger = {
+		focus_progress = {
+		focus = AST_premier
+		progress > 0
+	    }
+	}
+	immediate = {
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.1.a
+	}
+}
+country_event = {	#旧时回忆
+	id = AST.2
+	title = AST.2.t
+	desc = AST.2.d
+	#picture = 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.2.a
+	}
+}
+country_event = {	#议会主教
+	id = AST.3
+	title = AST.3.t
+	desc = AST.3.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.3.a
+	}
+}
+country_event = {	#女王侍从
+	id = AST.4
+	title = AST.4.t
+	desc = AST.4.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.4.a
+	}
+}
+country_event = {	#骑士元帅
+	id = AST.5
+	title = AST.5.t
+	desc = AST.5.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.5.a
+	}
+}
+country_event = {	#林堡奇商
+	id = AST.6
+	title = AST.6.t
+	desc = AST.6.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.6.a
+	}
+}
+country_event = {	#社会党人
+	id = AST.7
+	title = AST.7.t
+	desc = AST.7.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.7.a
+	}
+}
+country_event = {	#茶会桌上的事务讨论
+	id = AST.8
+	title = AST.8.t
+	desc = AST.8.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.8.a
+	}
+}
+country_event = {	#生产报告
+	id = AST.9
+	title = AST.9.t
+	desc = AST.9.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.9.a
+	}
+}
+
+country_event = {	#请耐心等待
+	id = AST.10
+	title = AST.10.t
+	desc = AST.10.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.10.a
+	}
+}
+country_event = {	#见见你的新同事
+	id = AST.11
+	title = AST.11.t
+	desc = AST.11.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.11.a
+	}
+}
+country_event = {	#荣誉决斗
+	id = AST.12
+	title = AST.12.t
+	desc = AST.12.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.12.a
+	}
+}
+country_event = {	#午间闲谈
+	id = AST.13
+	title = AST.13.t
+	desc = AST.13.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.13.a
+	}
+}
+country_event = {	#街头哨兵
+	id = AST.14
+	title = AST.14.t
+	desc = AST.14.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.14.a
+	}
+}
+country_event = {	#打倒国贼政客！
+	id = AST.15
+	title = AST.15.t
+	desc = AST.15.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.15.a
+	}
+}
+
+country_event = {	#超然宣言
+	id = AST.16
+	title = AST.16.t
+	desc = AST.16.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.16.a
+	}
+}
+
+country_event = {	#下午1点，维恩火车站
+	id = AST.17
+	title = AST.17.t
+	desc = AST.17.d
+	#picture = 
+
+
+	is_triggered_only = yes
+	
+	option = {
+		name = AST.17.a
+	}
+}
+
+
+
+
+###新闻###
+
+add_namespace = ASTNews
+
+#news_event = {
+	id = ASTNews.1
+	title = ASTNews.1.t
+	desc = ASTNews.1.d
+	picture = GFX_news_event_generic
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ASTNews.1.a
+	}
+}

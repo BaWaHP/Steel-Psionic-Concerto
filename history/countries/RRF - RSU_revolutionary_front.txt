@@ -34,3 +34,28 @@ add_ideas = {
 }
 
 recruit_character = RRF_edilvan_hegobogen
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 500
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment
+	amount = 10
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment
+	amount = 100
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment
+	amount = 100
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment
+	amount = 50
+}
