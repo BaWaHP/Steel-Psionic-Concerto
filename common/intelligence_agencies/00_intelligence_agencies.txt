@@ -78,6 +78,26 @@ intelligence_agency = {
 	default = { original_tag = ROT } 
 }
 
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "革命保卫局" }
+	
+	available = { tag = CLD }
+	
+	default = { original_tag = CLD } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_9
+	names = { "远乡国家安全局" }
+	
+	available = { tag = SFR has_government = revolutionary_communism }
+	
+	default = { original_tag = SFR } 
+}
+
 ###原版###
 
 intelligence_agency = {

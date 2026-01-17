@@ -418,7 +418,8 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = CLD.1
-			add_political_power = 200
+			add_political_power = 250
+			army_experience = 25
 			add_command_power = 50
 			SPC_training_laws_up = yes
 			add_war_support = 0.05
@@ -895,6 +896,16 @@ focus_tree = {
 					instant_build = yes	
 				}
 			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 20
+				producer = CLD
+			}
+			build_railway = {
+				level = 1
+				start_province = 20284
+				target_province = 19989
+			}
 		}
 	}
 
@@ -1066,6 +1077,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
+			add_political_power = 100
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -1092,6 +1104,14 @@ focus_tree = {
 			}
 		}
 
+		bypass = {
+			has_war_with = NCD
+		}
+
+		cancel = {
+			has_war_with = NCD
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -1103,6 +1123,24 @@ focus_tree = {
 		prerequisite = { focus = CLD_democratic_progress_in_industry }
 		relative_position_id = CLD_and_we_are_ready_for_it
 		#mutually_exclusive = { focus =  }
+
+		bypass_effect = {
+			hidden_effect = {
+				add_war_support = 0.05
+				country_event = CLD.3
+				mark_focus_tree_layout_dirty = yes
+				NCD = { mark_focus_tree_layout_dirty = yes }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				add_war_support = 0.05
+				country_event = CLD.3
+				mark_focus_tree_layout_dirty = yes
+				NCD = { mark_focus_tree_layout_dirty = yes }
+			}
+		}
 
 		completion_reward = {
 			create_wargoal = {

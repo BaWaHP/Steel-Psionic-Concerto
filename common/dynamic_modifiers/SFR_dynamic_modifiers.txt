@@ -29,8 +29,14 @@ SFR_nation_of_people_dm = {
 	enable = { always = yes }
 	icon = GFX_idea_FIN_socialist_welfare
 	stability_factor = SFR_nation_of_people_dm_sf
+	war_support_factor = SFR_nation_of_people_dm_wsf
 	political_power_factor = SFR_nation_of_people_dm_ppf
+	research_speed_factor = SFR_nation_of_people_dm_rsf
 	monthly_population = SFR_nation_of_people_dm_mp
+	monthly_research_development_process = SFR_nation_of_people_dm_mrdp
+	monthly_living_standard_development_process = SFR_nation_of_people_dm_mlsdp
+	state_science_development_monthly = SFR_nation_of_people_dm_ssdm
+	state_magic_development_monthly = SFR_nation_of_people_dm_smdm
 }
 
 #红星照耀平京...
@@ -86,4 +92,19 @@ SFR_land_reform_in_progress = {
 	industrial_capacity_factory = SFR_land_reform_in_progress_icf
 	industrial_capacity_dockyard = SFR_land_reform_in_progress_icd
 	production_speed_buildings_factor = SFR_land_reform_in_progress_psbf
+}
+
+#新远乡教育体制
+SFR_new_farhome_education_system = {
+	enable = { always = yes }
+	icon = GFX_idea_jap_duplicate_research
+	
+	stability_factor = SFR_new_farhome_education_system_sf
+	political_power_factor = SFR_new_farhome_education_system_ppf
+	political_advisor_cost_factor = SFR_new_farhome_education_system_pacf
+	research_speed_factor = SFR_new_farhome_education_system_rsf
+	monthly_research_development_process = SFR_new_farhome_education_system_mrdp
+	monthly_living_standard_development_process = SFR_new_farhome_education_system_mlsdp
+	state_science_development_monthly = SFR_new_farhome_education_system_ssdm
+	state_magic_development_monthly = SFR_new_farhome_education_system_smdm
 }

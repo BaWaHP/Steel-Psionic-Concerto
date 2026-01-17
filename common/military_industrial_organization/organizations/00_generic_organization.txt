@@ -19,6 +19,7 @@ generic_tank_organization = {		#通用坦克
 			tag = SFH 
 			tag = SFR
 			tag = QTA
+			tag = CLD
 		}
 	}
 
@@ -2044,6 +2045,7 @@ generic_escort_ship_organization = {		#通用舰船
 		NOT = { 
 			OR = {
 				tag = SFH 
+				tag = CLD
 			}
 		}
 	}
@@ -3469,7 +3471,11 @@ generic_general_aircraft_organization = {		#通用飞机
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
-		always = yes
+		NOT = { 
+			OR = {
+				tag = CLD
+			}
+		}
 	}
 
 	equipment_type = {
@@ -7074,6 +7080,7 @@ generic_motorized_mechanized_organization = {		#通用摩托化
 			tag = SFH 
 			tag = SFR
 			tag = QTA
+			tag = CLD
 		}
 	}
 

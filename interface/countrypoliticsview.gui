@@ -169,14 +169,14 @@ guiTypes = {
 				buttonType = {
 					name = "view_factions_button"
 					quadTextureSprite = "GFX_icon_button_32x32"
-					position = { x = 130 y = -4 }
+					position = { x = 140 y = -4 }
 					pdx_tooltip = "VIEW_FACTION"
 				}
 				
 				iconType = {
 					name = "view_faction_icon"
 					spriteType = "GFX_relation_faction"
-					position = { x = 131 y = -2 } #1 2
+					position = { x = 141 y = -2 } #1 2
 					alwaystransparent = yes
 				}	
 
@@ -247,7 +247,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "power_balance_button"
-				position = { x = 55 y = 131 }
+				position = { x = 31 y = 145 }
 				clipping = no
 
 				buttonType = {

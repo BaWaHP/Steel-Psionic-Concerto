@@ -4878,7 +4878,7 @@ focus_tree = {
 		icon = GFX_Generic_Working_Class_Family
 		x = 0
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -4891,7 +4891,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -50
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_4
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_ppf = -0.05 }
+			add_to_variable = { monthly_population = 0.05 }
+			add_to_variable = { SFR_nation_of_people_dm_mlsdp = 1 }
+			force_update_dynamic_modifier = yes
+			country_event = {
+				id = SFR.501
+				days = 3
+			}
 		}
 	}
 
@@ -4900,7 +4914,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_refuge_from_war
 		x = -5
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -4913,7 +4927,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -50
+			add_ideas = SFR_protect_minority
+			country_event = {
+				id = SFR.502
+				days = 1
+			}
+			SPC_race_policy_up = yes
+			custom_effect_tooltip = {
+				localization_key = SFR_red_star_over_capital_group_all_2_tt
+				VAL = 5
+			}
+			set_temp_variable = { temp_val = 5 }
+			SFR_workers_and_peasants_congress_all_mod_2 = yes
 		}
 	}
 
@@ -4922,7 +4948,7 @@ focus_tree = {
 		icon = GFX_focus_generic_surrender
 		x = -2
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -4935,7 +4961,17 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_we_are_not_different }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = SFR_protect_minority
+				add_idea = SFR_protect_minority_2
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_5_1
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_5_1_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -4944,7 +4980,7 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -4957,7 +4993,9 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 100
+			SPC_race_policy_up = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_4
 		}
 	}
 
@@ -4966,7 +5004,7 @@ focus_tree = {
 		icon = GFX_Generic_War_Propaganda03
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -4979,7 +5017,17 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_defer_integration }
 
 		completion_reward = {
-			
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = SFR_protect_minority
+				add_idea = SFR_help_minority
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_1
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_2_1_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -4988,7 +5036,7 @@ focus_tree = {
 		icon = GFX_generic_Bookstack
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5001,7 +5049,9 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			SPC_race_policy_up = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_5
 		}
 	}
 
@@ -5010,7 +5060,14 @@ focus_tree = {
 		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
 		x = 1
 		y = 1
-		cost = 5
+		cost = 8
+
+		available = {
+			OR = {
+				has_idea = SFR_minority_autonomous_region
+				has_idea = SFR_hand_in_hand
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -5024,7 +5081,68 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				custom_effect_tooltip = {
+					localization_key = if_have_certain_idea_tooltip
+					IDEA_NAME = SFR_minority_autonomous_region
+				}
+				swap_ideas = {
+					remove_idea = SFR_minority_autonomous_region
+					add_idea = SFR_minority_autonomous_region_2
+				}
+				custom_effect_tooltip = {
+					localization_key = if_have_certain_idea_tooltip
+					IDEA_NAME = SFR_hand_in_hand
+				}
+				swap_ideas = {
+					remove_idea = SFR_hand_in_hand
+					add_idea = SFR_hand_in_hand_2
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = SFR_minority_autonomous_region }
+					swap_ideas = {
+						remove_idea = SFR_minority_autonomous_region
+						add_idea = SFR_minority_autonomous_region_2
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SFR_hand_in_hand
+						add_idea = SFR_hand_in_hand_2
+					}
+				}
+			}
+			7 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			21 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			23 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			25 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			SPC_race_policy_up = yes
 		}
 	}
 
@@ -5046,7 +5164,20 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = 50
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 4
+				tooltip = living_standard_development_mod_tt_up_2
+			}
+			SPC_subsidies_policy_up = yes
+			custom_effect_tooltip = {
+				localization_key = SFR_red_star_over_capital_group_all_2_tt
+				VAL = 5
+			}
+			set_temp_variable = { temp_val = 5 }
+			SFR_workers_and_peasants_congress_all_mod_2 = yes
 		}
 	}
 
@@ -5068,7 +5199,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = research_development_mod
+				value = 2
+				tooltip = research_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_5
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_mrdp = 1 }
+			add_to_variable = { SFR_nation_of_people_dm_ssdm = 0.02 }
+			force_update_dynamic_modifier = yes
+			SPC_education_policy_up = yes
+			custom_effect_tooltip = {
+				localization_key = SFR_red_star_over_capital_group_all_2_tt
+				VAL = 5
+			}
+			set_temp_variable = { temp_val = 5 }
+			SFR_workers_and_peasants_congress_all_mod_2 = yes
 		}
 	}
 
@@ -5090,7 +5241,39 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -100
+			capital_scope = {
+				add_to_variable = {
+					var = state_science_progress
+					value = 25
+					tooltip = state_science_dev_tt
+				}
+			}
+			random_owned_state = {
+				add_to_variable = {
+					var = state_science_progress
+					value = 25
+					tooltip = state_science_dev_tt
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_6
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_rsf = 0.05 }
+			add_to_variable = { SFR_nation_of_people_dm_ssdm = 0.02 }
+			add_to_variable = { SFR_nation_of_people_dm_smdm = 0.02 }
+			force_update_dynamic_modifier = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_6
+			SPC_education_policy_up = yes
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -5112,7 +5295,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = SFR_pilot_public_healthcare
+				days = 360
+			}
+			SPC_subsidies_policy_up = yes
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_1
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_1_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -5121,7 +5319,7 @@ focus_tree = {
 		icon = GFX_SOV_the_new_soviet_woman_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5134,7 +5332,11 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			SPC_female_policy_up = yes
+			country_event = {
+				id = SFR.503
+				days = 1
+			}
 		}
 	}
 
@@ -5143,7 +5345,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = -1
 		y = 1
-		cost = 5
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -5156,7 +5358,9 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_research_slot = 1
+			SPC_research_policy_up = yes
+			SPC_research_development_amount_up_3 = yes
 		}
 	}
 
@@ -5165,7 +5369,7 @@ focus_tree = {
 		icon = GFX_SOV_socialist_humanism_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -5178,7 +5382,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			SPC_research_development_amount_up_3 = yes
+			add_tech_bonus = {
+				name = SFR_magic_research
+				category = enchantment_magic
+				bonus = 1
+				uses = 2
+			}
+			capital_scope = {
+				add_to_variable = {
+					var = state_magic_progress
+					value = 50
+					tooltip = state_magic_dev_tt
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_to_variable = {
+					var = state_magic_progress
+					value = 50
+					tooltip = state_magic_dev_tt
+				}
+			}
 		}
 	}
 
@@ -5201,7 +5426,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 100
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_8
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_sf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_wsf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_ppf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_mp = 0.1 }
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 6
+				tooltip = living_standard_development_mod_tt_up_3
+			}
 		}
 	}
 
@@ -5210,7 +5450,7 @@ focus_tree = {
 		icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
 		x = 4
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5223,7 +5463,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_manpower = -841
+			add_stability = -0.1
+			add_political_power = 150
+			add_ideas = MP_only_our_voice
 		}
 	}
 

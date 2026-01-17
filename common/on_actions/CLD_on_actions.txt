@@ -1,0 +1,24 @@
+on_actions = {
+	on_declare_war = {
+		###FROM - 目标###
+		###ROOT - 攻击方###
+		effect = {
+			###西莉迪亚内战###
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { tag = CLD }
+							ROOT = { tag = NCD }		
+						}
+						AND = {
+							FROM = { tag = NCD }
+							ROOT = { tag = CLD }
+						}
+					}
+				}
+				news_event = CLDNews.2
+			}
+		}
+	}
+}

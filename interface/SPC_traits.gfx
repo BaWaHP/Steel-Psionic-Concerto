@@ -15,6 +15,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/traits/trait_defensive_doctrine.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_trait_promising_future"
+		texturefile = "gfx/interface/traits/personal/trait_brave.dds"
+		legacy_lazy_load = no
+	}
 	###特殊###
 	spriteType = {
 		name = "GFX_trait_blood_clan"

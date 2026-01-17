@@ -1451,4 +1451,82 @@ characters={
    			traits = { gallant_doctor SFR_battle_field_med_expert }
    		}
 	}
+	#张福根
+	SFR_ZhangFugen = {
+		name = SFR_ZhangFugen
+		portraits = {
+			civilian = {
+				large="GFX_SFR_ZhangFugen"
+				small="GFX_idea_SFR_ZhangFugen"
+			}
+			army = {
+				large="GFX_SFR_ZhangFugen"
+				small="GFX_idea_SFR_ZhangFugen"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { engineer_officer }
+		}
+	}
+	#何保生
+	SFR_HeBaosheng = {
+		name = SFR_HeBaosheng
+		portraits = {
+			civilian = {
+				large="GFX_SFR_HeBaosheng"
+				small="GFX_idea_SFR_HeBaosheng"
+			}
+			army = {
+				large="GFX_SFR_HeBaosheng"
+				small="GFX_idea_SFR_HeBaosheng"
+			}
+		}
+	}
+	#丁彩云
+	SFR_DingCaiyun = {
+		name = SFR_DingCaiyun
+		portraits = {
+			civilian = {
+				large="GFX_SFR_DingCaiyun"
+				small="GFX_idea_SFR_DingCaiyun"
+			}
+			army = {
+				large="GFX_SFR_DingCaiyun"
+				small="GFX_idea_SFR_DingCaiyun"
+			}
+		}
+	}
+	#蔡庆生
+	SFR_CaiQingsheng = {
+		name = SFR_CaiQingsheng
+		portraits = {
+			civilian = {
+				large="GFX_SFR_CaiQingsheng"
+				small="GFX_idea_SFR_CaiQingsheng"
+			}
+			army = {
+				large="GFX_SFR_CaiQingsheng"
+				small="GFX_idea_SFR_CaiQingsheng"
+			}
+		}
+	}
+	#李慧英
+	SFR_LiHuiying = {
+		name = SFR_LiHuiying
+		portraits = {
+			civilian = {
+				large="GFX_SFR_LiHuiying"
+				small="GFX_idea_SFR_LiHuiying"
+			}
+			army = {
+				large="GFX_SFR_LiHuiying"
+				small="GFX_idea_SFR_LiHuiying"
+			}
+		}
+	}
 }

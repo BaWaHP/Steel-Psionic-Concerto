@@ -39,10 +39,3 @@ SFR_land_reform_decisions = {
 	scripted_gui = SFR_land_reform_decisions_ui
 	priority = 9999
 }
-
-#远乡社会改革
-SFR_social_reform_decisions = {
-	icon = GFX_decision_category_generic_communism
-	allowed = { tag = SFR }
-	priority = 100
-}

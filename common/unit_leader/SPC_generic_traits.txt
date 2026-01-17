@@ -55,6 +55,23 @@ leader_traits = {
 		}
 	}
 
+	promising_future = {							#前途无量
+		type = land
+		trait_type = personality_trait
+		
+		gain_xp = {
+			always = no
+		}
+
+		field_marshal_modifier = {
+			experience_gain_factor = 0.2
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	###特殊###
 	
 	blood_clan = {								#血族

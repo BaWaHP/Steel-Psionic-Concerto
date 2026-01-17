@@ -1245,6 +1245,70 @@ ideas = {
 			}
 		}
 
+		#人民之国
+		SFR_nation_of_people_dm_tt_4 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				monthly_population = 0.05
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_5 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_research_development_process = 1
+				state_science_development_monthly = 0.02
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_6 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				state_science_development_monthly = 0.02
+				state_magic_development_monthly = 0.02
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_7 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_8 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+				monthly_population = 0.1
+			}
+		}
+
 		#政府公信力降低
 		SFR_declined_gov_credit = {
 			picture = anti_soviet_pact
@@ -1455,6 +1519,166 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				monthly_agricultural_development_process = 2
 				monthly_living_standard_development_process = 2
+			}
+		}
+
+		#保护少数种族
+		SFR_protect_minority = {
+			picture = ARG_social_welfare_fund_ns
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				monthly_population = 0.05
+			}
+		}
+
+		#保护少数种族
+		SFR_protect_minority_2 = {
+			name = SFR_protect_minority
+			picture = ARG_social_welfare_fund_ns
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+
+		#少数种族自治区
+		SFR_minority_autonomous_region = {
+			picture = generic_local_self_management
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.2
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#少数种族自治区
+		SFR_minority_autonomous_region_2 = {
+			name = SFR_minority_autonomous_region
+			picture = generic_local_self_management
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.1
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#帮助少数种族
+		SFR_help_minority = {
+			picture = ARG_social_welfare_fund_ns
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+				monthly_population = 0.1
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#携手共进
+		SFR_hand_in_hand = {
+			picture = PER_unification_initiative_idea
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+				monthly_population = 0.2
+				monthly_living_standard_development_process = 1
+				state_science_development_monthly = 0.005
+				state_magic_development_monthly = 0.005
+			}
+		}
+
+		#携手共进
+		SFR_hand_in_hand_2 = {
+			name = SFR_hand_in_hand
+			picture = PER_unification_initiative_idea
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+				monthly_population = 0.2
+				global_building_slots_factor = 0.1
+				monthly_living_standard_development_process = 1
+				state_science_development_monthly = 0.01
+				state_magic_development_monthly = 0.01
+			}
+		}
+
+		#试点公共医疗
+		SFR_pilot_public_healthcare = {
+			picture = PRC_urbanization_idea
+			allowed = { always = yes }
+			removal_cost = -1
+
+			on_remove = { add_ideas = SFR_incomplete_public_healthcare }
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.2
+				monthly_population = 0.1
+				custom_modifier_tooltip = SFR_pilot_public_healthcare_tt
+			}
+		}
+
+		#尚不完善的医疗保障
+		SFR_incomplete_public_healthcare = {
+			picture = PRC_urbanization_idea
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.1
+				monthly_population = 0.2
+				army_org_factor = 0.05
+				experience_loss_factor = -0.1
+			}
+		}
+
+		#完善的医疗保障
+		SFR_complete_public_healthcare = {
+			picture = PRC_urbanization_idea
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.3
+				army_org_factor = 0.1
+				experience_loss_factor = -0.2
+				monthly_living_standard_development_process = 1
 			}
 		}
 
@@ -1720,6 +1944,96 @@ ideas = {
 			}
 		}
 
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_0 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+		}
+
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_1 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				research_speed_factor = 0.05
+				monthly_research_development_process = 1
+				state_science_development_monthly = 0.02
+			}
+		}
+
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_2 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				political_advisor_cost_factor = -0.2
+				research_speed_factor = 0.1
+				monthly_research_development_process = 2
+				state_science_development_monthly = 0.02
+				state_magic_development_monthly = 0.02
+			}
+		}
+
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_3 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				political_advisor_cost_factor = -0.3
+				research_speed_factor = 0.1
+				monthly_research_development_process = 3
+				monthly_living_standard_development_process = 1
+				state_science_development_monthly = 0.04
+				state_magic_development_monthly = 0.04
+			}
+		}
+
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_4 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.025
+				political_power_factor = -0.025
+				political_advisor_cost_factor = 0.1
+				state_science_development_monthly = 0.005
+				state_magic_development_monthly = 0.005
+			}
+		}
+	
+		#新远乡教育体制
+		SFR_new_farhome_education_system_tt_5 = {
+			name = SFR_new_farhome_education_system
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				political_advisor_cost_factor = 0.2
+				research_speed_factor = -0.05
+				state_science_development_monthly = 0.01
+				state_magic_development_monthly = 0.01
+				monthly_living_standard_development_process = 1
+			}
+		}
+
 		#全国统筹委员会
 		SFR_national_coordination_committee_1 = {
 			name = SFR_national_coordination_committee
@@ -1775,6 +2089,37 @@ ideas = {
 			}
 			
 			traits = { SPC_industrial_concern }
+		}
+	}
+
+	female_policy = {
+		law = yes
+		use_list_view = yes
+	
+		SFR_new_gen_females = {	#FP - female_policy
+			picture = ARG_women_in_industry
+			level = 5
+			visible = { has_idea = SFR_new_gen_females }
+			available = { always = no }
+			allowed_to_remove = { always = no }
+	
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				monthly_population = 0.2
+				conscription_factor = 0.3
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				monthly_living_standard_development_process = 2
+			}
+	
+			cancel_if_invalid = no
+	
+			default = yes
+	
+			ai_will_do = {
+				factor = 0
+			}
 		}
 	}
 }

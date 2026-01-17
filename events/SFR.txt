@@ -4436,11 +4436,11 @@ country_event = {	#《关于当前远乡社会的考察报告》
 	
 	option = {
 		name = SFR.500.a
-		unlock_decision_category_tooltip = SFR_social_reform_decisions
+		add_political_power = 100
 	}
 }
 
-country_event = {	#
+country_event = {	#焕然一新
 	id = SFR.501
 	title = SFR.501.t
 	desc = SFR.501.d
@@ -4450,6 +4450,107 @@ country_event = {	#
 	
 	option = {
 		name = SFR.501.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {	#被遗忘的同志
+	id = SFR.502
+	title = SFR.502.t
+	desc = SFR.502.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.502.a
+		SFR_HeBaosheng = {
+			add_corps_commander_role = {
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+				traits = { infantry_officer promising_future }
+			}
+		}
+		SFR_DingCaiyun = {
+			add_corps_commander_role = {
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+				traits = { brilliant_strategist promising_future }
+			}
+		}
+		SFR_CaiQingsheng = {
+			add_advisor_role = {
+				advisor = {
+					slot = political_advisor
+					cost = 150
+					can_be_fired = yes
+					idea_token = SFR_CaiQingsheng_idea
+					traits = { fraternal_gentleman }
+				}
+				activate = no
+			}
+		}
+		SFR_LiHuiying = {
+			add_advisor_role = {
+				advisor = {
+					slot = political_advisor
+					cost = 150
+					can_be_fired = yes
+					idea_token = SFR_LiHuiying_idea
+					traits = { main_editor }
+				}
+				activate = no
+			}
+		}
+	}
+}
+
+country_event = {	#妇女能顶半边天！
+	id = SFR.503
+	title = SFR.503.t
+	desc = SFR.503.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.503.a
+		add_political_power = -100
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_national_assembly_proposal }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_7_2
+				value = -10
+				tooltip = SFR_red_star_over_capital_group_7_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {
+		name = SFR.503.b
+		add_political_power = 10
 	}
 }
 
@@ -5093,6 +5194,206 @@ country_event = {	#
 	
 	option = {
 		name = SFR.2005.a
+	}
+}
+
+country_event = {	#新教育体制提案
+	id = SFR.2010
+	title = SFR.2010.t
+	desc = SFR.2010.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2010.a
+		set_country_flag = SFR_2010_a
+		add_to_variable = { SFR_vote_6_pass = 50 }
+		custom_effect_tooltip = SFR_education_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_new_farhome_education_system_tt_0
+				add_idea = SFR_new_farhome_education_system_tt_1
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_red_star_over_capital_group_all_2_tt
+			VAL = 5
+		}
+		set_temp_variable = { temp_val = 5 }
+		SFR_workers_and_peasants_congress_all_mod_2 = yes
+	}
+
+	option = {
+		name = SFR.2010.b
+		set_country_flag = SFR_2010_b
+		add_to_variable = { SFR_vote_6_pass = 65 }
+		custom_effect_tooltip = SFR.2010.b.tt
+		custom_effect_tooltip = SFR_education_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_new_farhome_education_system_tt_0
+				add_idea = SFR_new_farhome_education_system_tt_2
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {
+		name = SFR.2010.c
+		set_country_flag = SFR_2010_c
+		add_to_variable = { SFR_vote_6_pass = 80 }
+		custom_effect_tooltip = SFR.2010.c.tt
+		custom_effect_tooltip = SFR_education_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_new_farhome_education_system_tt_0
+				add_idea = SFR_new_farhome_education_system_tt_3
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		if = {
+			limit = { has_completed_focus = SFR_national_assembly_proposal }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_7_2
+				value = -10
+				tooltip = SFR_red_star_over_capital_group_7_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+}
+
+country_event = {	#偏远地区考试加分？
+	id = SFR.2011
+	title = SFR.2011.t
+	desc = SFR.2011.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2011.a
+		custom_effect_tooltip = {
+			localization_key = SFR_red_star_over_capital_group_all_2_tt
+			VAL = 5
+		}
+		set_temp_variable = { temp_val = 5 }
+		SFR_workers_and_peasants_congress_all_mod_2 = yes
+	}
+
+	option = {
+		name = SFR.2011.b
+		set_country_flag = SFR_2011_b
+		custom_effect_tooltip = SFR.2011.b.tt
+		add_to_variable = { SFR_vote_6_pass = -5 }
+		custom_effect_tooltip = SFR_education_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_new_farhome_education_system_tt_0
+				add_idea = SFR_new_farhome_education_system_tt_4
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+
+	option = {
+		name = SFR.2011.c
+		set_country_flag = SFR_2011_c
+		custom_effect_tooltip = SFR.2011.c.tt
+		add_to_variable = { SFR_vote_6_pass = -10 }
+		custom_effect_tooltip = SFR_education_generic_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_new_farhome_education_system_tt_0
+				add_idea = SFR_new_farhome_education_system_tt_5
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_8_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_8_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+	}
+}
+
+country_event = {	#新教育设想递交表决！
+	id = SFR.2012
+	title = SFR.2012.t
+	desc = SFR.2012.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.2012.a
+		set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_6 }
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+		hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 6 }	}
+		effect_tooltip = { SFR_workers_and_peasants_congress_vote_6 = yes }
 	}
 }
 

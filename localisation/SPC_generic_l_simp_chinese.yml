@@ -249,6 +249,7 @@ complete_certain_focus_effect_tooltip:0 "由于完成国策§Y$FOCUS_NAME$§!，
 focus_effect_reinforced_tooltip:0 "这会§C强化§!国策§Y$FOCUS_NAME$§!的效果。"
 due_to_pass_certain_laws_tooltip:0 "由于通过法案§Y$LAW_NAME$§!，"
 due_to_have_certain_idea_tooltip:0 "由于拥有民族精神§Y$IDEA_NAME$§!，"
+if_have_certain_idea_tooltip:0 "如果拥有民族精神§Y$IDEA_NAME$§!，"
 
 ###TR###
 SPC_unlock_through_event:0 "通过事件解锁"
@@ -521,12 +522,17 @@ compliance_40_core:0 "完全整合"
 ###外交###
 SPC_improve_relation_30:0 "改善关系"
 
+###事件###
+TST.1.t:0 "事件"
+TST.1.d:0 "啊[?SFH_LiGuan.character_token.GetTokenKey]啊"
+TST.1.a:0 "选项"
+
 ###新闻###
 TSTNews.1.t:0 "新闻"
 TSTNews.1.d:0 "户山大吼一声，扑向新闻UI。"
 TSTNews.1.a:0 "选项"
 
 ###测试###
-GetFocusName_1:0 "[?FOCUS_NAME.getkoGetTokenKey]"
+GetFocusName_1:0 "[?FOCUS_NAME.GetTokenKey]"
 GetFocusName_2:0 "$SFR_all_power_to_workers_and_peasants$"
 

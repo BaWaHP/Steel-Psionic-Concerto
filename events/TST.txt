@@ -94,7 +94,34 @@ country_event = {
 	
 	option = {
 		name = TST.1.a
-		set_variable = { sdawdadaw = 10 }
+		random_character = {
+			limit = { is_character_slot = political_advisor }
+			meta_effect = {
+				text = {
+					ROOT = {
+						activate_advisor = [CHR_KEY]_idea
+					}
+				}
+				CHR_KEY = "[?THIS.character_token.GetTokenKey]"
+			}
+		}
+
+		for_loop_effect = {
+			start = token:SFH_ZhengJun		#文件顶上的角色
+			end = token:SFH_ZhengHong		#文件底下的角色
+			compare = less_than_or_equals
+			meta_effect = {
+				text = {
+					every_possible_country = {
+						limit = {
+							has_character = [CHARACTER]
+						}
+						[CHARACTER] = { set_variable = { character_token = token:[CHARACTER] } }
+					}
+				}
+				CHARACTER = "[?v.GetTokenKey]"
+			}
+		}
 	}
 }
 

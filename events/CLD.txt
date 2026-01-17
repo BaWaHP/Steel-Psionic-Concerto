@@ -118,7 +118,7 @@ country_event = {
 	}
 }
 
-#剧变（1）
+#腾笼换鸟
 country_event = {
 	id = CLD.9
 	title = CLD.9.t
@@ -129,6 +129,7 @@ country_event = {
 	
 	option = {
 		name = CLD.9.a
+		add_political_power = 40
 		country_event = {
 			id = CLD.10
 			days = 20
@@ -136,7 +137,7 @@ country_event = {
 	}
 }
 
-#剧变（2）
+#握握双手
 country_event = {
 	id = CLD.10
 	title = CLD.10.t
@@ -147,6 +148,7 @@ country_event = {
 	
 	option = {
 		name = CLD.10.a
+		add_political_power = 40
 		country_event = {
 			id = CLD.11
 			days = 20
@@ -154,7 +156,7 @@ country_event = {
 	}
 }
 
-#剧变（3）
+#危机
 country_event = {
 	id = CLD.11
 	title = CLD.11.t
@@ -165,6 +167,7 @@ country_event = {
 	
 	option = {
 		name = CLD.11.a
+		add_political_power = 40
 		country_event = {
 			id = CLD.12
 			days = 20
@@ -172,7 +175,7 @@ country_event = {
 	}
 }
 
-#剧变（4）
+#爆炸
 country_event = {
 	id = CLD.12
 	title = CLD.12.t
@@ -183,6 +186,7 @@ country_event = {
 	
 	option = {
 		name = CLD.12.a
+		add_political_power = -20
 		country_event = {
 			id = CLD.13
 			days = 20
@@ -190,7 +194,7 @@ country_event = {
 	}
 }
 
-#剧变（5）
+#事已至此
 country_event = {
 	id = CLD.13
 	title = CLD.13.t
@@ -201,6 +205,7 @@ country_event = {
 	
 	option = {
 		name = CLD.13.a
+		add_political_power = 50
 		country_event = {
 			id = CLD.14
 			days = 20
@@ -208,7 +213,7 @@ country_event = {
 	}
 }
 
-#剧变（6）
+#开端的结束
 country_event = {
 	id = CLD.14
 	title = CLD.14.t
@@ -219,6 +224,8 @@ country_event = {
 	
 	option = {
 		name = CLD.14.a
+		add_political_power = 40
+		custom_effect_tooltip = CLD.14.a.tt
 	}
 }
 
@@ -698,5 +705,20 @@ news_event = {
 				scoped_play_song = "SE_UK_reunification_CR_sound"
 			}
 		}
+	}
+}
+
+news_event = {		#西莉迪亚内战重燃
+	id = CLDNews.2
+	title = CLDNews.2.t
+	desc = CLDNews.2.d
+	picture = GFX_news_event_generic_75
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = CLDNews.2.a
 	}
 }

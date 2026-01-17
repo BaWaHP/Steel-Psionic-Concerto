@@ -3,9 +3,8 @@ generic_armament_enchantment_organization = {		#军火附魔研究组
 
 	allowed = {
 		NOT = { 
-			OR = {
-				tag = SFH 
-			}
+			tag = SFH 
+			tag = CLD
 		}
 	}
 
@@ -699,7 +698,10 @@ generic_caster_equipment_manufacturer_organization = {		#魔导装备制造商
 	icon = GFX_idea_generic_air_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = KDK } }
+		NOT = { 
+			tag = KDK
+			tag = CLD
+		}
 	}
 
 	equipment_type = { caster_equipment caster_attaker_equipment caster_recon_equipment caster_support_equipment }
