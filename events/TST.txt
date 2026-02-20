@@ -94,32 +94,18 @@ country_event = {
 	
 	option = {
 		name = TST.1.a
-		random_character = {
-			limit = { is_character_slot = political_advisor }
-			meta_effect = {
-				text = {
-					ROOT = {
-						activate_advisor = [CHR_KEY]_idea
-					}
+		every_country = {
+			limit = {
+				OR = {
+					SPC_generic_region_trigger_1 = yes
+					SPC_generic_region_trigger_2 = yes
+					SPC_generic_region_trigger_3 = yes	
 				}
-				CHR_KEY = "[?THIS.character_token.GetTokenKey]"
 			}
-		}
-
-		for_loop_effect = {
-			start = token:SFH_ZhengJun		#文件顶上的角色
-			end = token:SFH_ZhengHong		#文件底下的角色
-			compare = less_than_or_equals
-			meta_effect = {
-				text = {
-					every_possible_country = {
-						limit = {
-							has_character = [CHARACTER]
-						}
-						[CHARACTER] = { set_variable = { character_token = token:[CHARACTER] } }
-					}
+			ROOT = {
+				annex_country = {
+					target = PREV
 				}
-				CHARACTER = "[?v.GetTokenKey]"
 			}
 		}
 	}
@@ -135,7 +121,28 @@ country_event = {
 	
 	option = {
 		name = TST.2.a
-		set_country_flag = sadafaegfeag
+		if = {
+			limit = {
+				SPC_generic_region_trigger_1_control = yes
+				SPC_generic_region_trigger_2_control = yes
+				SPC_generic_region_trigger_3_control = yes
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_research_slot = 1
+			set_cosmetic_tag = SFR_unif_tag_3
+			custom_effect_tooltip = SFR_form_unified_union_tt
+			hidden_effect = {
+				every_subject_country = {
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_SPC_union_republic
+						}
+					}
+				}	
+			}
+		}
 	}
 }
 
@@ -149,7 +156,11 @@ country_event = {
 	
 	option = {
 		name = TST.3.a
-		clr_country_flag = sadafaegfeag
+		every_country = {
+			set_country_flag = superevent_show_flag
+			set_country_flag = SPC_SE_reunification_SFR_3_flag
+			scoped_play_song = "SE_reunification_SFR_3_sound"
+		}
 	}
 }
 

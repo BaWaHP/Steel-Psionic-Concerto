@@ -14,3 +14,19 @@ SFR_ShiMendong_military_factory = {		#石门洞兵工厂
 		}
 	}
 }
+
+#平京魔法研究所
+SFR_Pingjing_magic_research_institute = {
+	name = SFR_Pingjing_magic_research_institute
+	include = generic_caster_equipment_manufacturer_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	allowed = { tag = SFR }
+	visible = {
+		FROM = {
+			if = {
+				limit = { tag = SFR }
+				has_completed_focus = SFR_magic_research
+			}
+		}
+	}
+}

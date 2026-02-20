@@ -90,47 +90,47 @@ SPC_state_category_up_effect = {
 		limit = { has_state_category = wasteland }
 		set_state_category = pastoral
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = enclave }
 		set_state_category = pastoral
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = tiny_island }
 		set_state_category = small_island
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = pastoral }
 		set_state_category = rural
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = small_island }
 		set_state_category = rural
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = rural }
 		set_state_category = town
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = town }
 		set_state_category = large_town
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = large_town }
 		set_state_category = city
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = city }
 		set_state_category = large_city
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = large_city }
 		set_state_category = metropolis
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = metropolis }
 		set_state_category = megalopolis
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = megalopolis }
 		add_extra_state_shared_building_slots = 1
 	}
@@ -141,31 +141,31 @@ SPC_state_category_down_effect = {
 		limit = { has_state_category = megalopolis }
 		set_state_category = metropolis
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = metropolis }
 		set_state_category = large_city
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = large_city }
 		set_state_category = city
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = city }
 		set_state_category = large_town
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = large_town }
 		set_state_category = town
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = town }
 		set_state_category = rural
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = rural }
 		set_state_category = pastoral
 	}
-	if = {
+	else_if = {
 		limit = { has_state_category = pastoral }
 		set_state_category = wasteland
 	}

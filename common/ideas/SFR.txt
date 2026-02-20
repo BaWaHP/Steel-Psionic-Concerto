@@ -1202,11 +1202,6 @@ ideas = {
 			name = SFR_nation_of_people_dm
 			allowed = { always = yes }
 			removal_cost = -1
-
-			modifier = {
-				political_power_factor = 0.05
-				monthly_population = 0.05
-			}
 		}
 
 		#人民之国
@@ -1306,6 +1301,127 @@ ideas = {
 				war_support_factor = 0.1
 				political_power_factor = 0.1
 				monthly_population = 0.1
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_9 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.1
+				political_advisor_cost_factor = -0.2
+				compliance_gain = 0.1
+				resistance_activity = -0.1
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_10 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_11 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				state_science_development_monthly = 0.02
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_12 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.2
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_13 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_14 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				rulling_ideology_drift = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_15 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_16 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				drift_defence_factor = 0.2
+				conscription_factor = 0.1
+			}
+		}
+
+		#人民之国
+		SFR_nation_of_people_dm_tt_17 = {
+			name = SFR_nation_of_people_dm
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				intel_network_gain_factor = 0.1
+				civilian_intel_to_others = -0.1
+				intelligence_operation_speed = 0.2
 			}
 		}
 
@@ -1679,6 +1795,305 @@ ideas = {
 				army_org_factor = 0.1
 				experience_loss_factor = -0.2
 				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea = {
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				min_export = -0.2
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea_l = {
+			name = SFR_social_ownership_economy_idea
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				min_export = -0.25
+				monthly_industrial_development_process = 1
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea_r = {
+			name = SFR_social_ownership_economy_idea
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				min_export = -0.3
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea_l_2 = {
+			name = SFR_social_ownership_economy_idea
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.1
+				min_export = -0.35
+				monthly_industrial_development_process = 1
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea_r_2 = {
+			name = SFR_social_ownership_economy_idea
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				monthly_population = 0.1
+				min_export = -0.4
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#重振旗鼓
+		SFR_reinvigorate = {
+			picture = air_support_focus
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				army_org_regain = 0.1
+				breakthrough_factor = 0.1
+				command_power_gain_mult = 0.2
+			}
+		}
+
+		#革命新星
+		SFR_revolutionary_new_star = {
+			picture = home_of_the_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				army_org_regain = 0.025
+				drift_defence_factor = 0.1
+				master_ideology_drift = 0.01
+			}
+		}
+
+		#革命壁垒
+		SFR_revolutionary_barrier = {
+			picture = home_of_the_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				drift_defence_factor = 0.2
+				master_ideology_drift = 0.02
+			}
+		}
+
+		#革命壁垒
+		SFR_revolutionary_barrier_2 = {
+			name = SFR_revolutionary_barrier
+			picture = home_of_the_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				party_popularity_stability_factor = 0.2
+				drift_defence_factor = 0.5
+				master_ideology_drift = 0.05
+			}
+		}
+
+		#革命壁垒
+		SFR_revolutionary_barrier_3 = {
+			name = SFR_revolutionary_barrier
+			picture = home_of_the_revolution
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+				party_popularity_stability_factor = 0.2
+				drift_defence_factor = 0.5
+				master_ideology_drift = 0.05
+				command_power_gain_mult = 0.1
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		#协调军事行动
+		SFR_coordinate_military_operations = {
+			picture = ARG_military_government
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_org_regain = 0.05
+				army_speed_factor = 0.05
+				planning_speed = 0.1
+				command_power_gain_mult = 0.1
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		#协调经济行动
+		SFR_coordinate_economic_operations = {
+			picture = SOV_third_five_year_plan_military
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SFR
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+			}
+		}
+
+		#多边合作计划
+		SFR_multilateral_cooperation_plan = {
+			picture = SOV_third_five_year_plan_military
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#多边合作计划
+		SFR_multilateral_cooperation_plan_2 = {
+			name = SFR_multilateral_cooperation_plan
+			picture = SOV_third_five_year_plan_military
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#多边合作计划
+		SFR_multilateral_cooperation_plan_3 = {
+			name = SFR_multilateral_cooperation_plan
+			picture = SOV_third_five_year_plan_military
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				monthly_research_development_process = 1
+			}
+		}
+
+		#对外联络部
+		SFR_revolutionary_aid_bureau = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				intel_network_gain_factor = 0.1
+				civilian_intel_factor = 0.1
+				army_intel_factor = 0.1
+				navy_intel_factor = 0.1
+				airforce_intel_factor = 0.1
+				send_volunteer_size = 5
+				send_volunteer_factor = 0.2
+			}
+			rule = { can_send_volunteers = yes }
+		}
+
+		#聚焦内部
+		SFR_focus_inward = {
+			picture = generic_flexible_foreign_policy2
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				monthly_living_standard_development_process = 2
+				ai_focus_defense_factor = 0.5
 			}
 		}
 
@@ -2069,12 +2484,493 @@ ideas = {
 			}
 		}
 
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_0 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_1 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.2
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_2 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.025
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_3 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_4 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.1
+				local_resources_coal_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_5 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_oil_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.05
+				production_speed_fuel_silo_factor = 0.05
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_6 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_7 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_8 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_9 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_10 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				monthly_industrial_development_process = 1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_11 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_12 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_13 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_14 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_15 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+			}
+		}
+
+		#远乡革命工业
+		SFR_red_farhome_industrialization_tt_16 = {
+			name = SFR_red_farhome_industrialization
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_0 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_1 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.05
+				consumer_goods_factor = 0.1			
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_2 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_3 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_4 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.3
+				consumer_goods_factor = 0.3
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_5 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = -0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_6 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_7 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_8 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_9 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_10 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_11 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = 0.1
+				global_building_slots_factor = 0.05
+				monthly_living_standard_development_process = 1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_12 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				monthly_population = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_13 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_14 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_15 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_16 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_17 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_18 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#农村公社运动
+		SFR_rural_commune_movement_tt_19 = {
+			name = SFR_rural_commune_movement
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				monthly_population = 0.1
+			}
+		}
+
     }
 
 	industrial_concern = {
 		SFR_base_industrial_cooperative = {		#根据地工业合作社
 			picture = generic_industrial_concern_3
 
+			visible = { NOT = { has_completed_focus = SFR_restore_national_production } }
 			allowed = { original_tag = SFR }
 			
 			research_bonus = {
@@ -2089,6 +2985,84 @@ ideas = {
 			}
 			
 			traits = { SPC_industrial_concern }
+		}
+		#国家工业机械部
+		SFR_national_industrial_mechanical_department = {
+			picture = generic_industrial_concern_3
+
+			allowed = { original_tag = SFR }
+			visible = { has_completed_focus = SFR_restore_national_production }
+			
+			research_bonus = {
+				industry = 0.1
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+			
+			traits = { SPC_industrial_concern }
+		}
+		#资源生产总局
+		SFR_resource_production_bureau = {
+			picture = generic_energy_concern
+
+			allowed = { original_tag = SFR }
+			visible = { has_completed_focus = SFR_develop_mineral_resources }
+			
+			research_bonus = {
+				excavation_tech = 0.1
+			}
+
+			modifier = {
+				local_resources_factor = 0.1
+				energy_gain_factor = 0.1
+				factory_energy_consumption = -0.2
+				production_speed_fuel_silo_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				country_resource_coal = 6
+			}
+			
+			traits = { refinery_concern }
+		}
+		#铁道工业局
+		SFR_railway_industry_bureau = {
+			picture = generic_industrial_concern_2
+
+			allowed = { original_tag = SFR }
+			visible = { has_completed_focus = SFR_develop_mineral_resources }
+			
+			research_bonus = {
+				construction_tech = 0.1
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				supply_factor = 0.1
+			}
+			
+			traits = { railway_company }
+		}
+		#信息科技部
+		SFR_information_technology_department = {
+			picture = generic_industrial_concern_2
+
+			allowed = { original_tag = SFR }
+			visible = { has_completed_focus = SFR_establish_new_research_institute }
+			
+			research_bonus = {
+				electronics = 0.2
+				industry = 0.2
+			}
+
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			
+			traits = { electronics_concern }
 		}
 	}
 
@@ -2115,11 +3089,52 @@ ideas = {
 	
 			cancel_if_invalid = no
 	
-			default = yes
-	
 			ai_will_do = {
 				factor = 0
 			}
+		}
+	}
+
+	foreign_policy = {
+		law = yes
+		use_list_view = yes
+
+		#意识形态外交
+		SFR_ideological_foreign_policy = {
+			picture = socialist_science_focus
+			visible = { has_idea = SFR_ideological_foreign_policy }
+			available = { NOT = { has_country_flag = SPC_ban_foreign_policy } }
+			cost = 0
+			removal_cost = -1
+
+			level = 1
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				civilian_intel_to_others = -30.0
+				navy_intel_to_others = -30.0
+				offensive_war_stability_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.1
+				justify_war_goal_time = -0.2
+				trade_opinion_factor = -0.1
+				improve_relations_maintain_cost_factor = 0.1
+				conservative_republican_acceptance = -50
+				authoritarian_republican_acceptance = -50
+				national_socialist_acceptance = -100
+				authoritarian_nationalism_acceptance = -100
+				paternal_autocrat_acceptance = -50
+				wizard_rules_acceptance = -999
+				religious_extremism_acceptance = -999
+				anarchism_acceptance = -20
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
 		}
 	}
 }

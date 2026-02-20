@@ -39,3 +39,21 @@ SFR_land_reform_decisions = {
 	scripted_gui = SFR_land_reform_decisions_ui
 	priority = 9999
 }
+
+#远乡工业化
+SFR_industrialization_decisions = {
+	icon = GFX_decision_category_generic_industry
+	allowed = { tag = SFR }
+	visible = { has_country_flag = SFR_industrialization_decisions_flag }
+	priority = 50
+}
+
+#传播革命
+SFR_propagate_revolution_decisions = {
+	icon = GFX_decision_category_generic_communist_revolution
+	allowed = { tag = SFR }
+	visible = { has_completed_focus = SFR_final_revolutionary_bastion }
+	visible_when_empty = yes
+	priority = 50
+}
+

@@ -162,4 +162,16 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 
+	#军事管制
+	SFR_military_control = {
+		random = no
+
+		stability_factor = 0.1
+		army_core_defence_factor = 0.1
+		conscription_factor = 0.2
+		ai_focus_defense_factor = 0.5
+		
+		ai_will_do = { factor = 1 }
+	}
+
 }

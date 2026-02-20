@@ -54,7 +54,7 @@ SPC_SFR_startup_effect = {
 		###政府政策###
 		add_ideas = MP_funding_media
 		add_ideas = SP_sybolized_funds
-		add_ideas = MP_open_for_application
+		add_ideas = MP_research_only
 		add_ideas = SPP_no_secreat_police
 		add_ideas = FP_joining_the_army
 		add_ideas = EP_sharing_textbooks
@@ -1161,6 +1161,30 @@ SFR_workers_and_peasants_congress_all_mod_1 = {
 	SFR_red_star_over_capital_update = yes
 }
 
+SFR_workers_and_peasants_congress_all_mod_1_up_1 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_1_up_1_tt
+	set_temp_variable = { temp_val = 5 }
+	SFR_workers_and_peasants_congress_all_mod_1 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_1_up_2 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_1_up_2_tt
+	set_temp_variable = { temp_val = 10 }
+	SFR_workers_and_peasants_congress_all_mod_2 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_1_down_1 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_1_down_1_tt
+	set_temp_variable = { temp_val = -5 }
+	SFR_workers_and_peasants_congress_all_mod_1 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_1_down_2 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_1_down_2_tt
+	set_temp_variable = { temp_val = -10 }
+	SFR_workers_and_peasants_congress_all_mod_1 = yes
+}
+
 SFR_workers_and_peasants_congress_all_mod_2 = {
 	add_to_variable = { SFR_red_star_over_capital_group_1_2 = temp_val }
 	add_to_variable = { SFR_red_star_over_capital_group_2_2 = temp_val }
@@ -1171,6 +1195,30 @@ SFR_workers_and_peasants_congress_all_mod_2 = {
 	add_to_variable = { SFR_red_star_over_capital_group_7_2 = temp_val }
 	add_to_variable = { SFR_red_star_over_capital_group_8_2 = temp_val }
 	SFR_red_star_over_capital_update = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_2_up_1 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_2_up_1_tt
+	set_temp_variable = { temp_val = 5 }
+	SFR_workers_and_peasants_congress_all_mod_2 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_2_up_2 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_2_up_2_tt
+	set_temp_variable = { temp_val = 10 }
+	SFR_workers_and_peasants_congress_all_mod_2 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_2_down_1 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_2_down_1_tt
+	set_temp_variable = { temp_val = -5 }
+	SFR_workers_and_peasants_congress_all_mod_2 = yes
+}
+
+SFR_workers_and_peasants_congress_all_mod_2_down_2 = {
+	custom_effect_tooltip = SFR_workers_and_peasants_congress_all_mod_2_down_2_tt
+	set_temp_variable = { temp_val = -10 }
+	SFR_workers_and_peasants_congress_all_mod_2 = yes
 }
 
 SFR_party_cooling_effect = {
@@ -1446,6 +1494,38 @@ SFR_workers_and_peasants_congress_voting_result_effect = {
 	else_if = {
 		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 7 } }
 		SFR_workers_and_peasants_congress_vote_7 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 8 } }
+		SFR_workers_and_peasants_congress_vote_8 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 9 } }
+		SFR_workers_and_peasants_congress_vote_9 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 10 } }
+		SFR_workers_and_peasants_congress_vote_10 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 11 } }
+		SFR_workers_and_peasants_congress_vote_11 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 12 } }
+		SFR_workers_and_peasants_congress_vote_12 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 13 } }
+		SFR_workers_and_peasants_congress_vote_13 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 14 } }
+		SFR_workers_and_peasants_congress_vote_14 = yes
+	}
+	else_if = {
+		limit = { check_variable = { SFR_workers_and_peasants_congress_voting_index = 15 } }
+		SFR_workers_and_peasants_congress_vote_15 = yes
 	}
 }
 
@@ -1847,12 +1927,8 @@ SFR_workers_and_peasants_congress_vote_3 = {
 			remove_idea = SFR_national_coordination_committee_1
 			add_idea = SFR_national_coordination_committee_2
 		}
-		custom_effect_tooltip = {
-			localization_key = SFR_red_star_over_capital_group_all_2_tt
-			VAL = 10
-		}
-		set_temp_variable = { temp_val = 10 }
-		SFR_workers_and_peasants_congress_all_mod_2 = yes
+		SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_3_passed
 	}
 	else = {
 		custom_effect_tooltip = {
@@ -1864,12 +1940,7 @@ SFR_workers_and_peasants_congress_vote_3 = {
 		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry		
 		add_stability = -0.05
 		add_political_power = -50
-		custom_effect_tooltip = {
-			localization_key = SFR_red_star_over_capital_group_all_2_tt
-			VAL = -5
-		}
-		set_temp_variable = { temp_val = -5 }
-		SFR_workers_and_peasants_congress_all_mod_2 = yes
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
 	}
 }
 
@@ -1915,6 +1986,7 @@ SFR_workers_and_peasants_congress_vote_4 = {
 			tooltip = SFR_red_star_over_capital_group_5_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_4_passed
 	}
 	else = {
 		custom_effect_tooltip = {
@@ -1982,6 +2054,7 @@ SFR_workers_and_peasants_congress_vote_5 = {
 			tooltip = SFR_red_star_over_capital_group_8_1_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_5_passed
 	}
 	else = {
 		custom_effect_tooltip = {
@@ -2134,12 +2207,7 @@ SFR_workers_and_peasants_congress_vote_6 = {
 		}
 		add_dynamic_modifier = { modifier = SFR_new_farhome_education_system }
 		force_update_dynamic_modifier = yes
-		custom_effect_tooltip = {
-			localization_key = SFR_red_star_over_capital_group_all_2_tt
-			VAL = 10
-		}
-		set_temp_variable = { temp_val = 10 }
-		SFR_workers_and_peasants_congress_all_mod_2 = yes
+		SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
 	}
 	else = {
 		custom_effect_tooltip = {
@@ -2261,12 +2329,7 @@ SFR_workers_and_peasants_congress_vote_6 = {
 		}
 		add_dynamic_modifier = { modifier = SFR_new_farhome_education_system }
 		force_update_dynamic_modifier = yes
-		custom_effect_tooltip = {
-			localization_key = SFR_red_star_over_capital_group_all_2_tt
-			VAL = -10
-		}
-		set_temp_variable = { temp_val = -10 }
-		SFR_workers_and_peasants_congress_all_mod_2 = yes
+		SFR_workers_and_peasants_congress_all_mod_2_down_2 = yes
 	}
 }
 
@@ -2314,6 +2377,7 @@ SFR_workers_and_peasants_congress_vote_7 = {
 			tooltip = SFR_red_star_over_capital_group_6_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_7_passed
 	}
 	else = {
 		custom_effect_tooltip = {
@@ -2325,11 +2389,605 @@ SFR_workers_and_peasants_congress_vote_7 = {
 		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
 		add_stability = -0.1
 		add_political_power = -100
-		custom_effect_tooltip = {
-			localization_key = SFR_red_star_over_capital_group_all_2_tt
-			VAL = -5
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_8 = {
+	set_temp_variable = { SFR_current_pass = 60 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
 		}
-		set_temp_variable = { temp_val = -5 }
-		SFR_workers_and_peasants_congress_all_mod_2 = yes
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_15
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		add_to_variable = { SFR_nation_of_people_dm_sf = -0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ppf = -0.1 }
+		add_to_variable = { SFR_nation_of_people_dm_cgf = -0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_psbf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_pfmef = 0.05 }
+		force_update_dynamic_modifier = yes
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_win
+		add_stability = -0.1
+		add_political_power = -100
+		SFR_workers_and_peasants_congress_all_mod_2_down_2 = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_15
+			}
+		}
+		add_to_variable = { SFR_nation_of_people_dm_sf = -0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ppf = -0.1 }
+		add_to_variable = { SFR_nation_of_people_dm_cgf = -0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_psbf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_pfmef = 0.05 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_9 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_1
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_1_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_16
+			}
+		}
+		add_to_variable = { SFR_nation_of_people_dm_sf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ppf = 0.1 }
+		add_to_variable = { SFR_nation_of_people_dm_cgf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ddf = 0.2 }
+		add_to_variable = { SFR_nation_of_people_dm_cf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_win
+		add_stability = -0.1
+		add_political_power = -100
+		SFR_workers_and_peasants_congress_all_mod_2_down_2 = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_nation_of_people_dm_tt_0
+				add_idea = SFR_nation_of_people_dm_tt_16
+			}
+		}
+		add_to_variable = { SFR_nation_of_people_dm_sf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ppf = 0.1 }
+		add_to_variable = { SFR_nation_of_people_dm_cgf = 0.05 }
+		add_to_variable = { SFR_nation_of_people_dm_ddf = 0.2 }
+		add_to_variable = { SFR_nation_of_people_dm_cf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_10 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_industrialization_tt_0
+				add_idea = SFR_red_farhome_industrialization_tt_7
+			}
+		}
+		add_to_variable = { SFR_red_farhome_industrialization_psbf = 0.1 }
+		add_to_variable = { SFR_red_farhome_industrialization_pfegf = 0.2 }
+		add_to_variable = { SFR_red_farhome_industrialization_cgf = -0.1 }
+		force_update_dynamic_modifier = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_10_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.1
+		add_political_power = -100
+		SFR_workers_and_peasants_congress_all_mod_2_down_2 = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_11 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_industrialization_tt_0
+				add_idea = SFR_red_farhome_industrialization_tt_8
+			}
+		}
+		add_to_variable = { SFR_red_farhome_industrialization_pfmef = 0.1 }
+		add_to_variable = { SFR_red_farhome_industrialization_rsf = 0.05 }
+		add_to_variable = { SFR_red_farhome_industrialization_gbsf = 0.1 }
+		force_update_dynamic_modifier = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_11_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.1
+		add_political_power = -100
+		SFR_workers_and_peasants_congress_all_mod_2_down_2 = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_12 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_stability = 0.05
+		SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
+		add_to_variable = {
+			var = industrial_development_mod
+			value = 4
+			tooltip = industrial_development_mod_tt_up_2
+		}
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_industrialization_tt_0
+				add_idea = SFR_red_farhome_industrialization_tt_13
+			}
+		}
+		add_to_variable = { SFR_red_farhome_industrialization_icf = 0.1 }
+		add_to_variable = { SFR_red_farhome_industrialization_icd = 0.05 }
+		add_to_variable = { SFR_red_farhome_industrialization_pfegf = 0.1 }
+		force_update_dynamic_modifier = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_12_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.05
+		add_political_power = -50
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_13 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		add_political_power = 200
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 5
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		if = {
+			limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_4_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_4_2_tt
+			}
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 2
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		add_ideas = SFR_social_ownership_economy_idea
+		set_country_flag = SFR_workers_and_peasants_congress_vote_13_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.05
+		add_political_power = -50
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
+	}
+}
+
+SFR_organize_land_survey_effect = {
+	if = {
+		limit = { has_country_flag = SFR_651_a }
+		add_to_variable = { SFR_rural_commune_movement_sf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_ppf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_icf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_icd = 0.1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_651_a
+	}
+	if = {
+		limit = { has_country_flag = SFR_651_b }
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_pfegf = 0.1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_651_b
+	}
+	if = {
+		limit = { has_country_flag = SFR_651_c }
+		add_to_variable = { SFR_rural_commune_movement_sf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_psbf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_gbsf = 0.05 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_651_c
+	}
+	if = {
+		limit = { has_country_flag = SFR_652_a }
+		add_to_variable = { SFR_rural_commune_movement_sf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_ppf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_652_a
+	}
+	if = {
+		limit = { has_country_flag = SFR_652_b }
+		add_to_variable = { SFR_rural_commune_movement_sf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_ppf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_mlsdp = 1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_652_b
+	}
+	if = {
+		limit = { has_country_flag = SFR_652_c }
+		add_to_variable = { SFR_rural_commune_movement_sf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_mp = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_gbsf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_mlsdp = 1 }
+		add_to_variable = { SFR_rural_commune_movement_madp = 1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_652_c
+	}
+	if = {
+		limit = { has_country_flag = SFR_653_a }
+		add_to_variable = { SFR_rural_commune_movement_sf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_ppf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_mp = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_icf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_icd = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_madp = 1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_653_a
+	}
+	if = {
+		limit = { has_country_flag = SFR_653_b }
+		add_to_variable = { SFR_rural_commune_movement_mp = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_psbf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_gbsf = 0.05 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_653_b
+	}
+	if = {
+		limit = { has_country_flag = SFR_653_c }
+		add_to_variable = { SFR_rural_commune_movement_ppf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+		add_to_variable = { SFR_rural_commune_movement_pfmef = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_mlsdp = 1 }
+		force_update_dynamic_modifier = yes
+		clr_country_flag = SFR_653_c
+	}
+	custom_effect_tooltip = SFR_organize_land_survey_effect_tt
+}
+
+SFR_workers_and_peasants_congress_vote_14 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		SFR_organize_land_survey_effect = yes
+		add_political_power = 100
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_2_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_2_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_rural_commune_movement_tt_0
+				add_idea = SFR_rural_commune_movement_tt_15
+			}
+		}
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.05 }
+		add_to_variable = { SFR_rural_commune_movement_icf = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_icd = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_pfmef = 0.05 }
+		add_to_variable = { SFR_rural_commune_movement_pfegf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_madp = 1 }
+		force_update_dynamic_modifier = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_14_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.05
+		add_political_power = -50
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
+	}
+}
+
+SFR_workers_and_peasants_congress_vote_15 = {
+	set_temp_variable = { SFR_current_pass = 50 }
+	set_temp_variable = { SFR_current_vote = 0 }
+	SFR_workers_and_peasants_congress_vote_cal = yes
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SFR_current_vote > SFR_current_pass }
+				is_ai = yes
+			}
+		}
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_win
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		SFR_organize_land_survey_effect = yes
+		add_political_power = 100
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_1_2
+			value = -10
+			tooltip = SFR_red_star_over_capital_group_1_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_5_2
+			value = 20
+			tooltip = SFR_red_star_over_capital_group_5_2_tt
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_6_2
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_6_2_tt
+		}
+		SFR_workers_and_peasants_congress_update = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_rural_commune_movement_tt_0
+				add_idea = SFR_rural_commune_movement_tt_16
+			}
+		}
+		add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+		add_to_variable = { SFR_rural_commune_movement_psbf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_gbsf = 0.1 }
+		add_to_variable = { SFR_rural_commune_movement_mlsdp = 1 }
+		force_update_dynamic_modifier = yes
+		set_country_flag = SFR_workers_and_peasants_congress_vote_15_passed
+	}
+	else = {
+		custom_effect_tooltip = {
+			localization_key = SFR_workers_and_peasants_congress_vote_preview_lose
+			VOTE_COUNT = SFR_current_vote_tt
+			VOTE_ABORT_COUNT = SFR_current_vote_abort_tt
+			VOTE_PASS_COUNT = SFR_current_pass_tt
+		}
+		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_lose_but_retry
+		add_stability = -0.05
+		add_political_power = -50
+		SFR_workers_and_peasants_congress_all_mod_2_down_1 = yes
 	}
 }

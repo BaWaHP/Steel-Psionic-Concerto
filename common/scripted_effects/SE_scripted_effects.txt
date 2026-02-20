@@ -76,4 +76,8 @@ SE_flag_clr = {
 		limit = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		clr_country_flag = SPC_SE_reunification_SFR_2_flag
 	}
+	if = {
+		limit = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		clr_country_flag = SPC_SE_reunification_SFR_3_flag
+	}
 }

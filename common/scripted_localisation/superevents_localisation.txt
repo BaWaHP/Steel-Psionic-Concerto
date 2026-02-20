@@ -60,6 +60,10 @@ defined_text = { #底图
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = "GFX_SE_reunification_SFR_2"
 	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = "GFX_SE_reunification_SFR_3"
+	}
 }
 
 defined_text = { #按钮
@@ -123,6 +127,10 @@ defined_text = { #按钮
 	text = {
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = SPC_SE_reunification_SFR_2_btn
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = SPC_SE_reunification_SFR_3_btn
 	}
 }
 
@@ -206,6 +214,10 @@ defined_text = { #按钮tt
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = SPC_SE_reunification_SFR_2_btn_tt
 	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = SPC_SE_reunification_SFR_3_btn_tt
+	}
 }
 
 defined_text = { #标题
@@ -285,6 +297,10 @@ defined_text = { #标题
 	text = {
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = SPC_SE_reunification_SFR_2_title
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = SPC_SE_reunification_SFR_3_title
 	}
 }
 
@@ -368,6 +384,10 @@ defined_text = { #名言
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = SPC_SE_reunification_SFR_2_desc
 	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = SPC_SE_reunification_SFR_3_desc
+	}
 }
 
 defined_text = { #名人
@@ -449,5 +469,9 @@ defined_text = { #名人
 	text = {
 		trigger = { has_country_flag = SPC_SE_reunification_SFR_2_flag }
 		localization_key = SPC_SE_reunification_SFR_2_fm
+	}
+	text = {
+		trigger = { has_country_flag = SPC_SE_reunification_SFR_3_flag }
+		localization_key = SPC_SE_reunification_SFR_3_fm
 	}
 }

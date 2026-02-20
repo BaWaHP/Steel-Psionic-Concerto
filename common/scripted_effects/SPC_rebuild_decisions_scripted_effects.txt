@@ -1,7 +1,19 @@
+generic_territory_puppet_effect_special = {
+	if = {
+		limit = { ROOT = { tag = SFR has_government = revolutionary_communism } }
+		create_country_leader = {
+			name = SFR_puppet_leader_mil_gov
+			picture = "GFX_SFR_puppet_leader_mil_gov"
+			ideology = revolutionary_communism_subtype
+			traits = { SFR_military_control }
+		}
+	}
+}
+
 generic_territory_return_and_coring_effect = {
 	every_owned_state = {
 		if = {
-			limit = { OR = { is_core_of = ROOT is_claimed_by = ROOT }  }
+			limit = { OR = { is_core_of = ROOT is_claimed_by = ROOT } }
 			transfer_state_to = ROOT
 		}
 		if = {
@@ -28,6 +40,7 @@ generic_territory_puppet_effect = {
 		generic_territory_return_and_coring_effect = yes
 		generic_territory_add_popularty_effect = yes
 		set_country_flag = generic_territory_has_been_rebuilt
+		generic_territory_puppet_effect_special = yes
 	}
 }
 

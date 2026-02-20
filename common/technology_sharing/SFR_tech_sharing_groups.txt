@@ -1,0 +1,15 @@
+technology_sharing_group = {
+
+	id = SFR_technology_sharing_group_1
+	name = SFR_technology_sharing_group_1_name
+	desc = SFR_technology_sharing_group_1_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.1
+	is_faction_sharing = yes
+
+	available = {
+		is_in_faction = yes
+	}
+
+}

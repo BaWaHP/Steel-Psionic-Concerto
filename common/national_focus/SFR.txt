@@ -1692,7 +1692,7 @@ focus_tree = {
 		icon = GFX_focus_generic_workers
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -1719,12 +1719,12 @@ focus_tree = {
 		}
 	}
 
-	focus = {	#抗战到底！
+	focus = {	#抗争到底！
 		id = SFR_fight_til_the_end
 		icon = GFX_goal_Generic_Socialist_Revolution
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -1757,7 +1757,7 @@ focus_tree = {
 		icon = GFX_focus_generic_spur_communist_revolutions
 		x = 2
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -3158,7 +3158,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			SPC_generic_region_trigger_1_3_control = yes
+			SPC_generic_region_trigger_1_2_control = yes
 		}
 
 		available_if_capitulated = yes
@@ -3276,6 +3276,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+
+		available = {
+			has_country_flag = SFR_integrate_free_alliance_flag
+		}
 
 		bypass = {
 			FFH = { has_war = no }
@@ -3574,12 +3578,14 @@ focus_tree = {
 				limit = { NFH = { exists = yes } }
 				declare_war_on = {
 					target = NFH
+					type = annex_everything
 				}
 			}
 			if = {
 				limit = { AFH = { exists = yes } }
 				declare_war_on = {
 					target = AFH
+					type = annex_everything
 				}
 			}
 		}
@@ -3776,6 +3782,13 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		available = {
+			MSA = { exists = no }
+			owns_state = 20
+			owns_state = 31
+			owns_state = 410
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -3817,6 +3830,30 @@ focus_tree = {
 				value = 2
 				tooltip = environment_development_mod_tt_up_1
 			}
+			set_province_name = {
+				id = 20469
+				name = VICTORY_POINTS_20469_1
+			}
+			set_province_name = {
+				id = 20506
+				name = VICTORY_POINTS_20506_1
+			}
+			set_province_name = {
+				id = 20369
+				name = VICTORY_POINTS_20369_1
+			}
+			set_province_name = {
+				id = 7923
+				name = VICTORY_POINTS_7923_1
+			}
+			set_province_name = {
+				id = 16115
+				name = VICTORY_POINTS_16115_1
+			}
+			set_province_name = {
+				id = 2842
+				name = VICTORY_POINTS_2842_1
+			}
 			country_event = {
 				id = SFR.327
 				days = 1
@@ -3832,7 +3869,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			SPC_generic_region_trigger_1_2_control = yes
+			SPC_generic_region_trigger_1_3_control = yes
 		}
 
 		available_if_capitulated = yes
@@ -3937,6 +3974,7 @@ focus_tree = {
 					}
 				}
 			}
+			set_global_flag = SPC_region_unified_global_1
 		}
 	}
 
@@ -4099,6 +4137,7 @@ focus_tree = {
 			add_political_power = 100
 			custom_effect_tooltip = SFR_raise_the_flag_tt
 			set_cosmetic_tag = SFR_unif_tag_2
+			SFH_generic_reclaim_effect = yes
 			country_event = {
 				id = SFR.335
 				days = 1
@@ -4934,12 +4973,7 @@ focus_tree = {
 				days = 1
 			}
 			SPC_race_policy_up = yes
-			custom_effect_tooltip = {
-				localization_key = SFR_red_star_over_capital_group_all_2_tt
-				VAL = 5
-			}
-			set_temp_variable = { temp_val = 5 }
-			SFR_workers_and_peasants_congress_all_mod_2 = yes
+			SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
 		}
 	}
 
@@ -5172,12 +5206,7 @@ focus_tree = {
 				tooltip = living_standard_development_mod_tt_up_2
 			}
 			SPC_subsidies_policy_up = yes
-			custom_effect_tooltip = {
-				localization_key = SFR_red_star_over_capital_group_all_2_tt
-				VAL = 5
-			}
-			set_temp_variable = { temp_val = 5 }
-			SFR_workers_and_peasants_congress_all_mod_2 = yes
+			SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
 		}
 	}
 
@@ -5214,12 +5243,7 @@ focus_tree = {
 			add_to_variable = { SFR_nation_of_people_dm_ssdm = 0.02 }
 			force_update_dynamic_modifier = yes
 			SPC_education_policy_up = yes
-			custom_effect_tooltip = {
-				localization_key = SFR_red_star_over_capital_group_all_2_tt
-				VAL = 5
-			}
-			set_temp_variable = { temp_val = 5 }
-			SFR_workers_and_peasants_congress_all_mod_2 = yes
+			SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
 		}
 	}
 
@@ -5337,6 +5361,25 @@ focus_tree = {
 				id = SFR.503
 				days = 1
 			}
+			if = {
+				limit = { has_completed_focus = SFR_national_assembly_proposal }
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_7_2
+					value = 10
+					tooltip = SFR_red_star_over_capital_group_7_2_tt
+				}
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_5_2
+				value = -10
+				tooltip = SFR_red_star_over_capital_group_5_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -5361,6 +5404,8 @@ focus_tree = {
 			add_research_slot = 1
 			SPC_research_policy_up = yes
 			SPC_research_development_amount_up_3 = yes
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SFR_information_technology_department
 		}
 	}
 
@@ -5404,6 +5449,7 @@ focus_tree = {
 					tooltip = state_magic_dev_tt
 				}
 			}
+			unlock_military_industrial_organization_tooltip = mio:SFR_Pingjing_magic_research_institute
 		}
 	}
 
@@ -5442,6 +5488,7 @@ focus_tree = {
 				value = 6
 				tooltip = living_standard_development_mod_tt_up_3
 			}
+			SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
 		}
 	}
 
@@ -5467,6 +5514,20 @@ focus_tree = {
 			add_stability = -0.1
 			add_political_power = 150
 			add_ideas = MP_only_our_voice
+			if = {
+				limit = { has_completed_focus = SFR_national_assembly_proposal }
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_7_2
+					value = -10
+					tooltip = SFR_red_star_over_capital_group_7_2_tt
+				}
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_8_2
+				value = -10
+				tooltip = SFR_red_star_over_capital_group_8_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
 		}
 	}
 
@@ -5475,7 +5536,7 @@ focus_tree = {
 		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -5488,7 +5549,20 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.550
+				days = 1
+			}
+			effect_tooltip = {
+				add_ideas = SFR_red_farhome_industrialization_tt_1
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = SFR_red_farhome_industrialization }
+				add_to_variable = { SFR_red_farhome_industrialization_ppf = -0.2 }
+				add_to_variable = { SFR_red_farhome_industrialization_icf = 0.05 }
+				add_to_variable = { SFR_red_farhome_industrialization_icd = 0.05 }
+				add_to_variable = { SFR_red_farhome_industrialization_psbf = 0.05 }
+			}
 		}
 	}
 
@@ -5511,7 +5585,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 100
+			add_to_variable = { SFR_nation_of_people_dm_ddf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_pacf = -0.2 }
+			add_to_variable = { SFR_nation_of_people_dm_cg = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_ra = -0.1 }
+			force_update_dynamic_modifier = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_9
+				}
+			}
+			SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
 		}
 	}
 
@@ -5520,7 +5606,7 @@ focus_tree = {
 		icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5533,7 +5619,51 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			if = {
+				limit = { capital_scope = { infrastructure < 5 } }
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = { is_core_of = ROOT infrastructure < 5 }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT infrastructure < 5 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT infrastructure < 5 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT infrastructure < 5 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			custom_effect_tooltip = SFR_public_infrastructure_construction_tt
 		}
 	}
 
@@ -5542,7 +5672,7 @@ focus_tree = {
 		icon = GFX_goal_CLD_new_beginning
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5556,7 +5686,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -50
+			add_to_variable = {
+				var = research_development_mod
+				value = 1
+				tooltip = research_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_10
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_rsf = 0.05 }
+			add_to_variable = { SFR_nation_of_people_dm_pfegf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_lcpef = 0.1 }
+			force_update_dynamic_modifier = yes
+			SPC_magician_policy_up = yes
 		}
 	}
 
@@ -5565,7 +5716,7 @@ focus_tree = {
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5578,7 +5729,43 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_manpower = -50000
+			random_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_11
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_ssdm = 0.02 }
+			add_to_variable = { SFR_nation_of_people_dm_psbf = 0.05 }
+			force_update_dynamic_modifier = yes
+			SPC_industry_policy_up = yes
 		}
 	}
 
@@ -5587,7 +5774,7 @@ focus_tree = {
 		icon = GFX_focus_generic_soviet_politics
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5600,7 +5787,24 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 100
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_12
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_ppf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_pacf = -0.2 }
+			force_update_dynamic_modifier = yes
+			SPC_subsidies_policy_up = yes
 		}
 	}
 
@@ -5609,7 +5813,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Secret_Police
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5622,16 +5826,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.1
+			if = {	
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+				gain_random_agency_upgrade = yes
+			}
+			else = {
+				gain_random_agency_upgrade = yes
+				gain_random_agency_upgrade = yes
+				gain_random_agency_upgrade = yes
+			}
+			SPC_secret_police_policy_up = yes
 		}
 	}
 
-	focus = {	#落实基层民主
+	focus = {	#落实群众自治
 		id = SFR_implement_grassroots_democracy
 		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
 		x = 1
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5645,16 +5860,34 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_prioritize_party_democracy }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = -5
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_8
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_15
+				}
+			}
 		}
 	}
 
-	focus = {	#优先党内民主
+	focus = {	#加强党的基层组织
 		id = SFR_prioritize_party_democracy
 		icon = GFX_focus_generic_social_democracy
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5668,7 +5901,25 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_implement_grassroots_democracy }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = -5
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_9
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_16
+				}
+			}
 		}
 	}
 
@@ -5692,7 +5943,23 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -100
+			add_stability = 0.05
+			add_war_support = 0.05
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_nation_of_people_dm_tt_0
+					add_idea = SFR_nation_of_people_dm_tt_17
+				}
+			}
+			add_to_variable = { SFR_nation_of_people_dm_sf = 0.05 }
+			add_to_variable = { SFR_nation_of_people_dm_wsf = 0.05 }
+			add_to_variable = { SFR_nation_of_people_dm_ingf = 0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_cito = -0.1 }
+			add_to_variable = { SFR_nation_of_people_dm_ios = 0.2 }
+			force_update_dynamic_modifier = yes
+			gain_random_agency_upgrade = yes
+			SPC_secret_police_policy_up = yes
 		}
 	}
 
@@ -5714,7 +5981,34 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			custom_effect_tooltip = SFR_restore_national_production_tt
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_industrialization_tt_0
+				add_idea = SFR_red_farhome_industrialization_tt_3
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_pfegf = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_lcpef = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SFR_national_industrial_mechanical_department
 		}
 	}
 
@@ -5736,7 +6030,25 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			custom_effect_tooltip = SFR_develop_mineral_resources_tt
+			add_tech_bonus = {
+				name = SFR_develop_mineral_resources
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+			SPC_resource_policy_up = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_4
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_lrf = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_lrcf = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SFR_resource_production_bureau
 		}
 	}
 
@@ -5758,7 +6070,44 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = SFR_develop_refining_industry
+				uses = 2
+				bonus = 0.5
+				category = synth_resources
+			}
+			capital = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			every_owned_state = {
+				random_select_amount = 2
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_5
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_pof = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_pssrf = 0.05 }
+			add_to_variable = { SFR_red_farhome_industrialization_psfsf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -5767,7 +6116,7 @@ focus_tree = {
 		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5780,7 +6129,38 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = SFR_develop_heavy_industry
+				uses = 2
+				bonus = 0.5
+				category = industry
+			}
+			every_owned_state = {
+				random_select_amount = 3
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_industry_policy_up = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_6
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_psicf = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_psaff = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_psdf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -5789,7 +6169,7 @@ focus_tree = {
 		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -5802,7 +6182,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.600
+				days = 1
+			}
 		}
 	}
 
@@ -5811,7 +6194,7 @@ focus_tree = {
 		icon = GFX_focus_generic_communist
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5824,7 +6207,20 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_centralized_planned_economy }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_10
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_7
+				}
+			}
 		}
 	}
 
@@ -5833,7 +6229,7 @@ focus_tree = {
 		icon = GFX_focus_generic_central_planning
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5846,11 +6242,24 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_empower_local_cooperatives }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_11
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_8
+				}
+			}
 		}
 	}
 
-	focus = {	#一五计划
+	focus = {	#准备定期工业计划
 		id = SFR_five_year_plan
 		icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
 		x = 1
@@ -5869,7 +6278,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_12
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_cgf = -0.05 }
+			add_to_variable = { SFR_red_farhome_industrialization_icf = 0.05 }
+			add_to_variable = { SFR_red_farhome_industrialization_icd = 0.05 }
+			force_update_dynamic_modifier = yes
+			country_event = {
+				id = SFR.601
+				days = 1
+			}
+			SPC_industry_policy_up = yes
 		}
 	}
 
@@ -5878,7 +6301,7 @@ focus_tree = {
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		x = 4
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -5891,7 +6314,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -100
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_12
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_13
+				}
+			}
+			SPC_working_policy_up = yes
 		}
 	}
 
@@ -5913,7 +6350,32 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			every_owned_state = {
+				random_select_amount = 4
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_tech_bonus = {
+				name = SFR_develop_refining_industry
+				uses = 2
+				bonus = 0.5
+				category = construction_tech
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_14
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_psif = 0.1 }
+			force_update_dynamic_modifier = yes
+			SPC_industry_policy_up = yes
 		}
 	}
 
@@ -5935,7 +6397,17 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_15
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_psrw = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_pssnf = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SFR_railway_industry_bureau
 		}
 	}
 
@@ -5944,7 +6416,7 @@ focus_tree = {
 		icon = GFX_Generic_Industry02
 		x = 0
 		y = 1
-		cost = 5
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -5959,7 +6431,37 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			capital_scope = { SPC_state_category_up_effect = yes }
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 6
+				tooltip = industrial_development_mod_tt_up_3
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 4
+				tooltip = living_standard_development_mod_tt_up_2
+			}
+			add_to_variable = {
+				var = environment_development_mod
+				value = -2
+				tooltip = environment_development_mod_tt_down_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_16
+				}
+			}
+			add_to_variable = { SFR_red_farhome_industrialization_cgf = -0.05 }
+			add_to_variable = { SFR_red_farhome_industrialization_pfmef = 0.05 }
+			add_to_variable = { SFR_red_farhome_industrialization_psbf = 0.05 }
+			force_update_dynamic_modifier = yes
+			SPC_industry_policy_up = yes
+			country_event = {
+				id = SFR.602
+				days = 1
+			}
 		}
 	}
 
@@ -5968,7 +6470,7 @@ focus_tree = {
 		icon = GFX_focus_prc_agrarian_socialism
 		x = 14
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -5981,7 +6483,34 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 5
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_5_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_5_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			effect_tooltip = {
+				add_ideas = SFR_rural_commune_movement_tt_1
+			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = SFR_rural_commune_movement
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_sf = 0.05 }
+			add_to_variable = { SFR_rural_commune_movement_mp = 0.05 }
+			add_to_variable = { SFR_rural_commune_movement_cgf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -5990,7 +6519,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_employment
 		x = 8
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -6004,7 +6533,26 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_2
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_icf = 0.05 }
+			add_to_variable = { SFR_rural_commune_movement_icd = 0.05 }
+			add_to_variable = { SFR_rural_commune_movement_mp = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6013,7 +6561,7 @@ focus_tree = {
 		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		cost = 5
+		cost = 6
 
 		available_if_capitulated = yes
 
@@ -6026,7 +6574,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			every_owned_state = {
+				random_select_amount = 6
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+						has_state_category = large_town
+					}
+					infrastructure < 5
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			SPC_agricultural_policy_up = yes
 		}
 	}
 
@@ -6035,7 +6604,7 @@ focus_tree = {
 		icon = GFX_focus_BEL_dam_the_consequences
 		x = 1
 		y = 1
-		cost = 5
+		cost = 6
 
 		available_if_capitulated = yes
 
@@ -6048,7 +6617,37 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = -100
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 2
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			every_owned_state = {
+				random_select_amount = 3
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = town
+						has_state_category = large_town
+					}
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_3
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_mp = 0.1 }
+			add_to_variable = { SFR_rural_commune_movement_psbf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6071,7 +6670,17 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_13
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = { add_ideas = SFR_social_ownership_economy_idea }
 		}
 	}
 
@@ -6080,7 +6689,9 @@ focus_tree = {
 		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		cost = 5
+		cost = 6
+
+		available = { has_idea = SFR_social_ownership_economy_idea }
 
 		available_if_capitulated = yes
 
@@ -6093,7 +6704,52 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_develop_local_industries }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_2_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_2_2_tt
+			}
+			if = {
+				limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+				add_to_variable = {
+					var = SFR_red_star_over_capital_group_4_2
+					value = 10
+					tooltip = SFR_red_star_over_capital_group_4_2_tt
+				}
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_6_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_6_2_tt
+			}
+			SFR_workers_and_peasants_congress_update = yes
+			swap_ideas = {
+				remove_idea = SFR_social_ownership_economy_idea
+				add_idea = SFR_social_ownership_economy_idea_l
+			}
+			every_owned_state = {
+				random_select_amount = 3
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_industry_policy_up = yes
 		}
 	}
 
@@ -6102,7 +6758,9 @@ focus_tree = {
 		icon = GFX_focus_ARG_women_in_industry
 		x = 1
 		y = 1
-		cost = 5
+		cost = 6
+
+		available = { has_idea = SFR_social_ownership_economy_idea }
 
 		available_if_capitulated = yes
 
@@ -6115,7 +6773,39 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_expand_industrial_urban_areas }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_3_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_3_2_tt
+			}
+			add_to_variable = {
+				var = SFR_red_star_over_capital_group_5_2
+				value = 10
+				tooltip = SFR_red_star_over_capital_group_5_2_tt
+			}
+			swap_ideas = {
+				remove_idea = SFR_social_ownership_economy_idea
+				add_idea = SFR_social_ownership_economy_idea_r
+			}
+			every_owned_state = {
+				random_select_amount = 4
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						has_state_category = enclave
+						has_state_category = rural
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			SPC_agricultural_policy_up = yes
 		}
 	}
 
@@ -6138,7 +6828,39 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 100
+			SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
+			if = {
+				limit = { has_idea = SFR_social_ownership_economy_idea_l }
+				swap_ideas = {
+					remove_idea = SFR_social_ownership_economy_idea_l
+					add_idea = SFR_social_ownership_economy_idea_l_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SFR_social_ownership_economy_idea_r
+					add_idea = SFR_social_ownership_economy_idea_r_2
+				}
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 4
+				tooltip = agricultural_development_mod_tt_up_2
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 4
+				tooltip = industrial_development_mod_tt_up_2
+			}
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_to_variable = {
+					var = state_science_progress
+					value = 20
+					tooltip = state_science_dev_tt
+				}
+			}
 		}
 	}
 
@@ -6147,7 +6869,7 @@ focus_tree = {
 		icon = GFX_focus_generic_farmland
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -6160,7 +6882,25 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			SPC_agricultural_development_amount_up_2 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_4
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_ppc = 0.3 }
+			add_to_variable = { SFR_rural_commune_movement_cgf = 0.3 }
+			force_update_dynamic_modifier = yes
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+			}
+			country_event = {
+				id = SFR.650
+				days = 1
+			}
+			custom_effect_tooltip = SFR_organize_land_survey_tt
 		}
 	}
 
@@ -6169,7 +6909,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Land_Reform
 		x = -2
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -6182,16 +6922,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.651
+				days = 1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_5
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_ppc = -0.1 }
+			add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
-	focus = {	#农村集市贸易？
+	focus = {	#农村集市贸易问题
 		id = SFR_rural_market_trade
 		icon = GFX_Generic_Market_Socialism
 		x = 0
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -6204,7 +6956,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.652
+				days = 1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_5
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_ppc = -0.1 }
+			add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6213,7 +6977,7 @@ focus_tree = {
 		icon = GFX_union_agreement
 		x = 2
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -6226,7 +6990,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			country_event = {
+				id = SFR.653
+				days = 1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_5
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_ppc = -0.1 }
+			add_to_variable = { SFR_rural_commune_movement_cgf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6235,7 +7011,14 @@ focus_tree = {
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
+
+		available = {
+			custom_trigger_tooltip = {
+				trigger = { check_variable = { SFR_organize_land_survey_balance < 1 } }
+				tooltip = SFR_organize_land_survey_tr
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -6250,7 +7033,15 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_tillers_have_their_fields }
 
 		completion_reward = {
-			
+			clear_variable = SFR_organize_land_survey_balance
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_14
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_15
+				}
+			}
 		}
 	}
 
@@ -6272,7 +7063,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_17
+				}
+			}
+			add_to_variable = {  SFR_rural_commune_movement_sf = 0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_cgf = -0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_icf = 0.1 }
+			add_to_variable = {  SFR_rural_commune_movement_icd = 0.1 }
+			add_to_variable = {  SFR_rural_commune_movement_pfmef = 0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_mp = 0.1 }
+			add_to_variable = {  SFR_rural_commune_movement_madp = 1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6281,7 +7086,14 @@ focus_tree = {
 		icon = GFX_focus_GER_autarky_achieved
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
+
+		available = {
+			custom_trigger_tooltip = {
+				trigger = { check_variable = { SFR_organize_land_survey_balance > -1 } }
+				tooltip = SFR_organize_land_survey_tr
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -6296,7 +7108,15 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_establish_production_teams }
 
 		completion_reward = {
-			
+			clear_variable = SFR_organize_land_survey_balance
+			unlock_decision_tooltip = SFR_workers_and_peasants_congress_law_15
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_preview_effect_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_16
+				}
+			}
 		}
 	}
 
@@ -6318,7 +7138,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_political_power = 50
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_18
+				}
+			}
+			add_to_variable = {  SFR_rural_commune_movement_cgf = -0.1 }
+			add_to_variable = {  SFR_rural_commune_movement_pfegf = 0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_pfmef = 0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_gbsf = 0.05 }
+			add_to_variable = {  SFR_rural_commune_movement_mlsdp = 1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -6341,7 +7173,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_rural_commune_movement_tt_0
+					add_idea = SFR_rural_commune_movement_tt_19
+				}
+			}
+			add_to_variable = { SFR_rural_commune_movement_cgf = -0.05 }
+			add_to_variable = { SFR_rural_commune_movement_psbf = 0.05 }
+			add_to_variable = { SFR_rural_commune_movement_pfegf = 0.1 }
+			add_to_variable = { SFR_rural_commune_movement_mp = 0.1 }
+			force_update_dynamic_modifier = yes
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 4
+				tooltip = agricultural_development_mod_tt_up_2
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 4
+				tooltip = living_standard_development_mod_tt_up_2
+			}
+			SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
 		}
 	}
 
@@ -6367,7 +7220,44 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 1
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = agricultural_development_mod
+				value = 1
+				tooltip = agricultural_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 1
+				tooltip = military_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 1
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = environment_development_mod
+				value = 1
+				tooltip = environment_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = research_development_mod
+				value = 1
+				tooltip = research_development_mod_tt_up_1
+			}
+			SFR_workers_and_peasants_congress_all_mod_2_up_2 = yes
+			country_event = {
+				id = SFR.700
+				days = 1
+			}
 		}
 	}
 
@@ -6376,7 +7266,7 @@ focus_tree = {
 		icon = GFX_goal_Focus_Examine_Foreign_Laws
 		x = -6
 		y = 15
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -6394,7 +7284,12 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = 100
+			add_command_power = 200
+			country_event = {
+				id = SFR.750
+				days = 1
+			}
 		}
 	}
 
@@ -6416,7 +7311,11 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = SFR_reinvigorate
+				days = 365
+			}
 		}
 	}
 
@@ -6425,7 +7324,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Revolutionary_Women
 		x = -3
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -6438,16 +7337,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			add_command_power = 100
+			country_event = {
+				id = SFR.751
+				days = 1
+			}
 		}
 	}
 
-	focus = {	#准备西北战争
-		id = SFR_prepare_northwest_war
-		icon = GFX_Generic_Revanchism02
+	focus = {	#向西北发送最后通牒
+		id = SFR_send_ultimatum_to_the_northwest
+		icon = GFX_focus_generic_annex_country_2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
+
+		bypass = {
+			owns_state = 28
+			owns_state = 27
+			owns_state = 143
+		}
 
 		available_if_capitulated = yes
 
@@ -6460,29 +7370,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
-		}
-	}
-
-	focus = {	#向西北发送最后通牒
-		id = SFR_send_ultimatum_to_the_northwest
-		icon = GFX_focus_generic_annex_country_2
-		x = 0
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_prepare_northwest_war }
-		relative_position_id = SFR_prepare_northwest_war
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 28
+						owns_state = 27
+						owns_state = 143
+					}
+				}
+				country_event = {
+					id = SFR.753
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -6491,7 +7391,13 @@ focus_tree = {
 		icon = GFX_Generic_Socialist_Propaganda
 		x = -2
 		y = 1
-		cost = 5
+		cost = 3
+
+		available = {
+			owns_state = 28
+			owns_state = 27
+			owns_state = 143
+		}
 
 		available_if_capitulated = yes
 
@@ -6504,7 +7410,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			28 = { 
+				set_state_name = FH_STATE_28 
+				add_resistance = -10
+				add_compliance = 10
+			}
+			27 = { 
+				set_state_name = FH_STATE_27 
+				add_resistance = -10
+				add_compliance = 10
+			}
+			143 = { 
+				set_state_name = FH_STATE_143 
+				add_resistance = -10
+				add_compliance = 10
+			}
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -6515,6 +7443,12 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		available = {
+			owns_state = 28
+			owns_state = 27
+			owns_state = 143
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -6526,7 +7460,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = 100
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -6536,6 +7485,15 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
+
+		available = {
+			owns_state = 28
+			28 = { resistance < 30 compliance > 70 }
+			owns_state = 27
+			27 = { resistance < 30 compliance > 70 }
+			owns_state = 143
+			143 = { resistance < 30 compliance > 70 }
+		}
 
 		available_if_capitulated = yes
 
@@ -6549,7 +7507,18 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_political_power = -50
+			28 = { add_core_of = SFR }
+			27 = { add_core_of = SFR }
+			143 = { add_core_of = SFR }
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 100
+				}
+			}
 		}
 	}
 
@@ -6558,7 +7527,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Revolutionary_Republic
 		x = 3
 		y = 1
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -6571,16 +7540,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			add_command_power = 100
+			country_event = {
+				id = SFR.752
+				days = 1
+			}
 		}
 	}
 
-	focus = {	#准备西南战争
-		id = SFR_prepare_southwest_war
-		icon = GFX_Generic_Revanchism02
+	focus = {	#向西南发送最后通牒
+		id = SFR_send_ultimatum_to_the_southwest
+		icon = GFX_focus_generic_annex_country_2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
+
+		bypass = {
+			owns_state = 32
+			owns_state = 33
+			owns_state = 55
+		}
 
 		available_if_capitulated = yes
 
@@ -6593,29 +7573,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
-		}
-	}
-
-	focus = {	#向西南发送最后通牒
-		id = SFR_send_ultimatum_to_the_southwest
-		icon = GFX_focus_generic_annex_country_2
-		x = 0
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_prepare_southwest_war }
-		relative_position_id = SFR_prepare_southwest_war
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
+			every_country = {
+				limit = {
+					OR = {
+						owns_state = 32
+						owns_state = 33
+						owns_state = 55
+					}
+				}
+				country_event = {
+					id = SFR.753
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -6626,6 +7596,12 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		available = {
+			owns_state = 28
+			owns_state = 27
+			owns_state = 143
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -6637,7 +7613,30 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = 100
+			country_event = {
+				id = SFR.754
+				days = 1
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_offsite_building = {
+				type = dockyard
+				level = 1
+			}
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -6646,7 +7645,13 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 1
-		cost = 5
+		cost = 6
+
+		available = {
+			owns_state = 28
+			owns_state = 27
+			owns_state = 143
+		}
 
 		available_if_capitulated = yes
 
@@ -6659,7 +7664,64 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			55 = {
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_resistance = -10
+				add_compliance = 10
+				set_state_name = FH_STATE_55
+			}
+			33 = { 
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_resistance = -10
+				add_compliance = 10
+				set_state_name = FH_STATE_33
+			}
+			32 = { 
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_resistance = -10
+				add_compliance = 10
+				set_state_name = FH_STATE_32
+			}
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -6669,6 +7731,15 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
+
+		available = {
+			owns_state = 32
+			32 = { resistance < 30 compliance > 70 }
+			owns_state = 33
+			33 = { resistance < 30 compliance > 70 }
+			owns_state = 55
+			55 = { resistance < 30 compliance > 70 }
+		}
 
 		available_if_capitulated = yes
 
@@ -6682,7 +7753,18 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_stability = -0.05
+			add_political_power = -50
+			32 = { add_core_of = SFR }
+			33 = { add_core_of = SFR }
+			55 = { add_core_of = SFR }
+			if = {
+				limit = { has_idea = SFR_reinvigorate }
+				modify_timed_idea = {
+					idea = SFR_reinvigorate
+					days = 100
+				}
+			}
 		}
 	}
 
@@ -6691,7 +7773,7 @@ focus_tree = {
 		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
 		x = 3
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6705,7 +7787,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			add_ideas = SFR_revolutionary_new_star
+			country_event = {
+				id = SFR.800
+				days = 1
+			}
 		}
 	}
 
@@ -6727,7 +7823,19 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_we_are_not_alone }
 
 		completion_reward = {
-
+			add_war_support = 0.1
+			add_political_power = 100
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.1
+			}
+			unlock_decision_category_tooltip = SFR_propagate_revolution_decisions
+			unlock_decision_tooltip = SFR_expand_intervention_forces
+			unlock_decision_tooltip = SFR_war_propaganda
 		}
 	}
 
@@ -6737,6 +7845,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SFR_we_are_not_alone_tr
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -6749,7 +7864,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_final_revolutionary_bastion }
 
 		completion_reward = {
-
+			custom_effect_tooltip = SFR_we_are_not_alone_tt
 		}
 	}
 
@@ -6758,7 +7873,7 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_revolution_utmost
 		x = -3
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6766,13 +7881,25 @@ focus_tree = {
 			factor = 100
 		}
 
-		prerequisite = { focus = SFR_final_revolutionary_bastion
-						 focus = SFR_we_are_not_alone }
+		prerequisite = { focus = SFR_final_revolutionary_bastion }
 		relative_position_id = SFR_final_revolutionary_bastion
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = 100
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = SFR_revolutionary_new_star
+				add_idea = SFR_revolutionary_barrier
+			}
+			create_faction_from_template = faction_template_SFR_1
 		}
 	}
 
@@ -6781,7 +7908,7 @@ focus_tree = {
 		icon = GFX_goal_Focus_Examine_Foreign_Laws
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6794,7 +7921,20 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = worldunion_socialist
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = SFR_revolutionary_barrier
+				add_idea = SFR_revolutionary_barrier_2
+			}
 		}
 	}
 
@@ -6803,7 +7943,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_builder_of_the_red_army
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6816,7 +7956,17 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			army_experience = 30
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			swap_ideas = {
+				remove_idea = SFR_revolutionary_barrier_2
+				add_idea = SFR_revolutionary_barrier_3
+			}
+			unlock_decision_tooltip = SFR_coordinate_military_actions_with_allies
 		}
 	}
 
@@ -6825,7 +7975,7 @@ focus_tree = {
 		icon = GFX_focus_generic_diplomatic_treaty
 		x = 0
 		y = 1
-		cost = 5
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -6839,16 +7989,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			country_event = {
+				id = SFR.801
+				days = 1
+			}
 		}
 	}
 
-	focus = {	#解决贸易问题
+	focus = {	#成立对外联络部
 		id = SFR_solve_trade_issues
-		icon = GFX_goal_generic_positive_trade_relations
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6862,7 +8015,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = -100
+			add_war_support = 0.1
+			add_ideas = SFR_revolutionary_aid_bureau
+			gain_random_agency_upgrade = yes
 		}
 	}
 
@@ -6885,7 +8041,12 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = -100
+			random_list = {
+				20 = { country_event = SFR.802 }
+				40 = { country_event = SFR.802 }
+				40 = { country_event = SFR.802 }
+			}
 		}
 	}
 
@@ -6907,7 +8068,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_focus_on_domestic_construction }
 
 		completion_reward = {
-
+			add_war_support = 0.1
+			add_command_power = 100
+			set_country_flag = SPC_rebuild_decision_enable_flag
+			unlock_decision_category_tooltip = SPC_generic_rebuild_decision_category
+			custom_effect_tooltip = SFR_free_the_people_of_east_bastia_tt
 		}
 	}
 
@@ -6929,7 +8094,10 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_free_the_people_of_east_bastia }
 
 		completion_reward = {
-
+			add_political_power = 200
+			add_stability = 0.2
+			add_war_support = -0.1
+			add_ideas = SFR_focus_inward
 		}
 	}
 
@@ -6938,7 +8106,7 @@ focus_tree = {
 		icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility
 		x = 3
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6952,16 +8120,32 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_stability = 0.05
+			add_ideas = SFR_multilateral_cooperation_plan
+			every_owned_state = {
+				random_select_amount = 2
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 2
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			unlock_decision_tooltip = SFR_coordinate_economic_actions_with_allies
 		}
 	}
 
-	focus = {	#交换革命理论
+	focus = {	#意识形态交流
 		id = SFR_exchange_revolutionary_theories
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -6974,7 +8158,16 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = SFR_multilateral_cooperation_plan
+				add_idea = SFR_multilateral_cooperation_plan_2
+			}
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
 		}
 	}
 
@@ -6983,7 +8176,7 @@ focus_tree = {
 		icon = GFX_focus_generic_socialist_science
 		x = 0
 		y = 1
-		cost = 5
+		cost = 6
 
 		available_if_capitulated = yes
 
@@ -6996,7 +8189,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_to_tech_sharing_group = SFR_technology_sharing_group_1
+			unlock_decision_tooltip = SFR_coordinate_scientific_actions_with_allies
+			swap_ideas = {
+				remove_idea = SFR_multilateral_cooperation_plan_2
+				add_idea = SFR_multilateral_cooperation_plan_3
+			}
+			add_to_variable = {
+				var = research_development_mod
+				value = 2
+				tooltip = research_development_mod_tt_up_1
+			}
+			capital_scope = {
+				add_to_variable = {
+					var = state_science_progress
+					value = 20
+					tooltip = state_science_dev_tt
+				}
+				add_to_variable = {
+					var = state_magic_progress
+					value = 20
+					tooltip = state_magic_dev_tt
+				}
+			}
 		}
 	}
 

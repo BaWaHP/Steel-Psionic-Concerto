@@ -176,6 +176,10 @@ spriteTypes = {
 		name = "GFX_SFR_ZhouTiegui"
 		texturefile = "gfx/leaders/SFR/ZhouTiegui.png"
 	}
+	spriteType = {
+		name = "GFX_SFR_puppet_leader_mil_gov"
+		texturefile = "gfx/leaders/SFR/SFR_puppet_leader_mil_gov.png"
+	}
 	###小肖像###
 	spriteType = {
 		name = "GFX_idea_SFR_YeWenshi"
@@ -682,5 +686,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_SFR_land_reform_decisions"
 		texturefile = "gfx/interface/decisions/decision_category_SFR_land_reform_decisions.png"
+	}
+	###事件###
+	spriteType = {
+		name = "GFX_news_event_SFR_4"
+		texturefile = "gfx/event_pictures/news_event_SFR_4.dds"
 	}
 }

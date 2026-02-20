@@ -1517,3 +1517,12 @@ SFH_changing_the_past_var_initilization = {
 	set_variable = { SFH_changing_the_past_midp = 0 }
 	set_variable = { SFH_changing_the_past_mmdp = 0 }
 }
+
+SFH_generic_reclaim_effect = {
+	32 = { add_claim_by = ROOT }
+	33 = { add_claim_by = ROOT }
+	55 = { add_claim_by = ROOT }
+	28 = { add_claim_by = ROOT }
+	27 = { add_claim_by = ROOT }
+	143 = { add_claim_by = ROOT }
+}

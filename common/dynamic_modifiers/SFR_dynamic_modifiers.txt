@@ -37,6 +37,26 @@ SFR_nation_of_people_dm = {
 	monthly_living_standard_development_process = SFR_nation_of_people_dm_mlsdp
 	state_science_development_monthly = SFR_nation_of_people_dm_ssdm
 	state_magic_development_monthly = SFR_nation_of_people_dm_smdm
+
+	drift_defence_factor = SFR_nation_of_people_dm_ddf
+	political_advisor_cost_factor = SFR_nation_of_people_dm_pacf
+	compliance_gain = SFR_nation_of_people_dm_cg
+	resistance_activity = SFR_nation_of_people_dm_ra
+
+	production_factory_efficiency_gain_factor = SFR_nation_of_people_dm_pfegf
+	line_change_production_efficiency_factor = SFR_nation_of_people_dm_lcpef
+	industrial_capacity_factory = SFR_nation_of_people_dm_icf
+	industrial_capacity_dockyard = SFR_nation_of_people_dm_icd
+	production_speed_buildings_factor = SFR_nation_of_people_dm_psbf
+	monthly_industrial_development_process = SFR_nation_of_people_dm_midp
+
+	consumer_goods_factor = SFR_nation_of_people_dm_cgf
+	production_factory_max_efficiency_factor = SFR_nation_of_people_dm_pfmef
+	conscription_factor = SFR_nation_of_people_dm_cf
+
+	intel_network_gain_factor = SFR_nation_of_people_dm_ingf
+	civilian_intel_to_others = SFR_nation_of_people_dm_cito
+	intelligence_operation_speed = SFR_nation_of_people_dm_ios
 }
 
 #红星照耀平京...
@@ -108,3 +128,158 @@ SFR_new_farhome_education_system = {
 	state_science_development_monthly = SFR_new_farhome_education_system_ssdm
 	state_magic_development_monthly = SFR_new_farhome_education_system_smdm
 }
+
+#远乡革命工业
+SFR_red_farhome_industrialization = {
+	enable = { always = yes }
+	icon = GFX_idea_SOV_rebuild_the_nation_ccp_sov_compatibility
+	
+	political_power_factor = SFR_red_farhome_industrialization_ppf
+	industrial_capacity_factory = SFR_red_farhome_industrialization_icf
+	industrial_capacity_dockyard = SFR_red_farhome_industrialization_icd
+	production_speed_buildings_factor = SFR_red_farhome_industrialization_psbf
+	consumer_goods_factor = SFR_red_farhome_industrialization_cgf
+
+	production_factory_efficiency_gain_factor = SFR_red_farhome_industrialization_pfegf
+	line_change_production_efficiency_factor = SFR_red_farhome_industrialization_lcpef
+
+	local_resources_factor = SFR_red_farhome_industrialization_lrf
+	local_resources_coal_factor = SFR_red_farhome_industrialization_lrcf
+
+	production_oil_factor = SFR_red_farhome_industrialization_pof
+	production_speed_synthetic_refinery_factor = SFR_red_farhome_industrialization_pssrf
+	production_speed_fuel_silo_factor = SFR_red_farhome_industrialization_psfsf
+
+	production_speed_industrial_complex_factor = SFR_red_farhome_industrialization_psicf
+	production_speed_arms_factory_factor = SFR_red_farhome_industrialization_psaff
+	production_speed_dockyard_factor = SFR_red_farhome_industrialization_psdf
+
+	production_factory_max_efficiency_factor = SFR_red_farhome_industrialization_pfmef
+	research_speed_factor = SFR_red_farhome_industrialization_rsf
+	global_building_slots_factor = SFR_red_farhome_industrialization_gbsf
+
+	monthly_living_standard_development_process = SFR_red_farhome_industrialization_mlsdp
+	monthly_industrial_development_process = SFR_red_farhome_industrialization_midp
+
+	production_speed_infrastructure_factor = SFR_red_farhome_industrialization_psif
+	production_speed_rail_way_factor = SFR_red_farhome_industrialization_psrw
+	production_speed_supply_node_factor = SFR_red_farhome_industrialization_pssnf
+}
+
+#农村公社运动
+SFR_rural_commune_movement = {
+	enable = { always = yes }
+	icon = GFX_idea_gre_agricultural_communes
+
+	stability_factor = SFR_rural_commune_movement_sf
+	monthly_population = SFR_rural_commune_movement_mp
+	consumer_goods_factor = SFR_rural_commune_movement_cgf
+
+	industrial_capacity_factory = SFR_rural_commune_movement_icf
+	industrial_capacity_dockyard = SFR_rural_commune_movement_icd
+	production_speed_buildings_factor = SFR_rural_commune_movement_psbf
+
+	political_power_cost = SFR_rural_commune_movement_ppc
+
+	political_power_factor = SFR_rural_commune_movement_ppf
+	production_factory_efficiency_gain_factor = SFR_rural_commune_movement_pfegf
+	global_building_slots_factor = SFR_rural_commune_movement_gbsf
+
+	monthly_living_standard_development_process = SFR_rural_commune_movement_mlsdp
+	monthly_agricultural_development_process = SFR_rural_commune_movement_madp
+	production_factory_max_efficiency_factor = SFR_rural_commune_movement_pfmef
+}
+
+#建设新平京
+SFR_building_new_capital_farhome = {
+	enable = { always = yes }
+	icon = GFX_idea_man_five_year_plan_industry
+
+	local_factories = 0.1
+	local_magic_development_monthly = 0.02
+	local_science_development_monthly = 0.02
+	local_building_slots_factor = 0.2
+	local_manpower = -0.2
+	local_factory_energy_consumption = -0.1
+}
+
+#远乡茶乡
+SFR_farhome_tealand = {
+	enable = { always = yes }
+	icon = GFX_idea_LIT_invested_in_farms
+
+	local_manpower = 0.3
+	local_supplies = 0.3
+	state_resources_factor = 0.1
+	local_building_slots = 2
+}
+
+#远乡海运中心
+SFR_farhome_maritime_center = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_sea_focused_navy
+
+	local_manpower = -0.2
+	state_production_speed_buildings_factor = 0.2
+	local_building_slots = 2
+	local_factory_energy_consumption = -0.1
+}
+
+#西北工业枢纽
+SFR_northwest_industrial_hub = {
+	enable = { always = yes }
+	icon = GFX_idea_man_five_year_plan_industry
+
+	local_manpower = -0.3
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.1
+	state_resources_factor = 0.1
+	local_factory_energy_consumption = -0.2
+}
+
+#新白洋
+SFR_new_baiyang = {
+	enable = { always = yes }
+	icon = GFX_idea_PRC_urbanization_idea
+
+	local_manpower = 0.1
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.1
+	local_magic_development_monthly = 0.01
+	local_science_development_monthly = 0.01
+}
+
+#革命故乡
+SFR_revolution_hometown = {
+	enable = { always = yes }
+	icon = GFX_idea_home_of_revolution
+
+	local_manpower = 0.3
+	local_factories = 0.1
+	state_resources_factor = 0.1
+	local_org_regain = 0.3
+	mobilization_speed = 0.5
+}
+
+#人鱼自贸区
+SFR_mermaid_free_trade_zone = {
+	enable = { always = yes }
+	icon = GFX_idea_home_of_revolution
+
+	local_manpower = -0.3
+	local_factory_energy_consumption = -0.3
+	state_production_speed_buildings_factor = 0.1
+	local_building_slots_factor = 0.1
+	state_resource_magic_crystal = 12
+}
+
+#完善的地方基建
+SFR_well_established_local_infrastructure = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_build_infrastructure
+
+	state_production_speed_buildings_factor = 0.05
+	local_building_slots_factor = 0.05
+	army_speed_factor_for_controller = 0.1
+}
+

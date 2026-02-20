@@ -450,14 +450,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_left_opposition
 					has_completed_focus = SFR_unify_the_left
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -465,7 +465,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value > 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -534,14 +534,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_left_opposition
 					has_completed_focus = SFR_unify_the_left
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -549,7 +549,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value > 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -593,14 +593,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_left_opposition
 					has_completed_focus = SFR_unify_the_left
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -608,7 +608,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value > 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -652,14 +652,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_right_opposition
 					has_completed_focus = SFR_reinforce_leadership
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -667,7 +667,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value < 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -715,14 +715,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_right_opposition
 					has_completed_focus = SFR_reinforce_leadership
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -730,7 +730,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value < 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -790,14 +790,14 @@ SFR_opposition_bop_decisions = {
 					has_completed_focus = SFR_support_right_opposition
 					has_completed_focus = SFR_reinforce_leadership
 				}
-				add = 10
+				add = 1
 			}
 			modifier = {
 				power_balance_value = {
 					id = SFR_opposition_bop
 					value > 0.95
 				}
-				add = -10
+				add = -1
 			}
 			modifier = {
 				has_completed_focus = SFR_reinforce_leadership
@@ -805,7 +805,7 @@ SFR_opposition_bop_decisions = {
 					id = SFR_opposition_bop
 					value < 0.5
 				}
-				add = 5
+				add = 0.5
 			}
 		}
 	}
@@ -1620,6 +1620,10 @@ SFR_workers_and_peasants_congress = {
 		timeout_effect = {
 			custom_effect_tooltip = SFR_party_cooling_tt
 			hidden_effect = { SFR_party_cooling_effect = yes }
+			if = {
+				limit = { is_ai = yes }	#给ai加强
+				hidden_effect = { SFR_party_cooling_effect = yes }
+			}
 			activate_mission = SFR_party_cooling
 		}
 	}
@@ -1820,6 +1824,8 @@ SFR_workers_and_peasants_congress = {
 			country_event = SFR.2000
 			set_country_flag = SFR_workers_and_peasants_congress_voting
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_2 = {		#土地登记法
 		icon = GFX_decision_generic_forestry
@@ -1840,6 +1846,8 @@ SFR_workers_and_peasants_congress = {
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 2 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_2 = yes }
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_3 = {		#铺开统筹委员会
 		icon = GFX_decision_generic_wreckers
@@ -1848,7 +1856,10 @@ SFR_workers_and_peasants_congress = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
 			has_completed_focus = SFR_enact_land_reform_act
 		}
-		visible = { has_completed_focus = SFR_enact_land_reform_act }
+		visible = { 
+			has_completed_focus = SFR_enact_land_reform_act 
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_3_passed } 
+		}
 
 		cost = 50
 		fire_only_once = no
@@ -1860,6 +1871,8 @@ SFR_workers_and_peasants_congress = {
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 3 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_3 = yes }
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_4 = {		#设立少数种族自治区
 		icon = GFX_decision_CHL_mapuche_reorganize_the_bolivian_government
@@ -1868,7 +1881,10 @@ SFR_workers_and_peasants_congress = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
 			has_completed_focus = SFR_minority_autonomous_region
 		}
-		visible = { has_completed_focus = SFR_minority_autonomous_region }
+		visible = { 
+			has_completed_focus = SFR_minority_autonomous_region 
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_4_passed } 
+		}
 
 		cost = 50
 		fire_only_once = no
@@ -1880,6 +1896,8 @@ SFR_workers_and_peasants_congress = {
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 4 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_4 = yes }
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_5 = {		#推行少数物种教育
 		icon = GFX_decision_eng_propaganda_campaigns
@@ -1888,7 +1906,10 @@ SFR_workers_and_peasants_congress = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
 			has_completed_focus = SFR_implement_minority_education
 		}
-		visible = { has_completed_focus = SFR_implement_minority_education }
+		visible = { 
+			has_completed_focus = SFR_implement_minority_education
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_5_passed } 
+		}
 
 		cost = 50
 		fire_only_once = no
@@ -1900,6 +1921,8 @@ SFR_workers_and_peasants_congress = {
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 5 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_5 = yes }
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_6 = {		#规范全国教育系统
 		icon = GFX_decision_generic_brainwash
@@ -1917,6 +1940,8 @@ SFR_workers_and_peasants_congress = {
 			set_country_flag = SFR_workers_and_peasants_congress_voting
 			country_event = SFR.2010
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	SFR_workers_and_peasants_congress_law_7 = {		#推广全国医疗系统
 		icon = GFX_decision_generic_merge_plant_materiel
@@ -1925,7 +1950,10 @@ SFR_workers_and_peasants_congress = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
 			has_idea = SFR_incomplete_public_healthcare
 		}
-		visible = { has_idea = SFR_incomplete_public_healthcare }
+		visible = { 
+			has_idea = SFR_incomplete_public_healthcare 
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_7_passed }
+		}
 
 		cost = 50
 		fire_only_once = no
@@ -1937,6 +1965,202 @@ SFR_workers_and_peasants_congress = {
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 7 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_7 = yes }
 		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_8 = {		#落实群众自治
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_implement_grassroots_democracy
+		}
+		visible = { has_completed_focus = SFR_implement_grassroots_democracy }
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_8 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 8 }	}
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_8 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_9 = {		#落实群众自治
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_prioritize_party_democracy
+		}
+		visible = { has_completed_focus = SFR_prioritize_party_democracy }
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_9 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 9 }	}
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_9 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_10 = {		#赋权地方合作社
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_empower_local_cooperatives
+		}
+		visible = { 
+			has_completed_focus = SFR_empower_local_cooperatives
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_10_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_10 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 10 }	}
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_10 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_11 = {		#集权计划经济
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_centralized_planned_economy
+		}
+		visible = { 
+			has_completed_focus = SFR_centralized_planned_economy
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_11_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_11 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 11 } }
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_11 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_12 = {		#训练技术工人
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_train_technical_workers
+		}
+		visible = { 
+			has_completed_focus = SFR_train_technical_workers
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_12_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_12 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 12 } }
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_12 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_13 = {		#推行社会所有制经济
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_social_ownership_economy
+		}
+		visible = { 
+			has_completed_focus = SFR_social_ownership_economy
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_13_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_13 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 13 } }
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_13 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_14 = {		#组建生产大队
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_establish_production_teams
+		}
+		visible = { 
+			has_completed_focus = SFR_establish_production_teams
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_14_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_14 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 14 } }
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_14 = yes }
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	SFR_workers_and_peasants_congress_law_15 = {		#促进耕者有其田
+		icon = GFX_decision_generic_political_rally
+		allowed = { tag = SFR }
+		available = {
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			has_completed_focus = SFR_establish_production_teams
+		}
+		visible = { 
+			has_completed_focus = SFR_establish_production_teams
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_15_passed }
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		complete_effect = {
+			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_15 }
+			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 15 } }
+			effect_tooltip = { SFR_workers_and_peasants_congress_vote_15 = yes }
+		}
+
+		ai_will_do = { base = 1 }
 	}
 }
 
@@ -1987,6 +2211,8 @@ SFR_land_reform_decisions = {
 				country_event = { id = SFR.403 days = 1 }
 			}
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#月度改革推进
 	SFR_land_reform_monthly_check = {
@@ -2098,6 +2324,8 @@ SFR_land_reform_decisions = {
 			SFR_land_reform_decisions_progress_update = yes
 			activate_mission = SFR_land_reform_time_limit
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#发出全国丈量令
 	SFR_land_reform_nationwide_survey = {
@@ -2124,6 +2352,8 @@ SFR_land_reform_decisions = {
 			set_country_flag = SFR_land_reform_nationwide_survey_flag
 			custom_effect_tooltip = SFR_land_reform_monthly_check_tt
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#设立临时仲裁庭
 	SFR_land_reform_temporary_tribunal = {
@@ -2148,6 +2378,8 @@ SFR_land_reform_decisions = {
 			}
 			SFR_land_reform_decisions_progress_update = yes
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#下乡宣传队月
 	SFR_land_reform_propaganda_team = {
@@ -2191,6 +2423,8 @@ SFR_land_reform_decisions = {
 			}
 			SFR_land_reform_decisions_progress_update = yes
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#敲打反对派
 	SFR_land_reform_oppose_suppress = {
@@ -2245,6 +2479,8 @@ SFR_land_reform_decisions = {
 			}
 			SFR_land_reform_decisions_progress_update = yes
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#合作社试点
 	SFR_land_reform_cooperative_pilot = {
@@ -2304,6 +2540,8 @@ SFR_land_reform_decisions = {
 				days = 1
 			}
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#扩建集体农庄
 	SFR_land_reform_collective_farm = {
@@ -2352,6 +2590,8 @@ SFR_land_reform_decisions = {
 				}
 			}
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#培训农民
 	SFR_land_reform_train_peasants = {
@@ -2387,6 +2627,8 @@ SFR_land_reform_decisions = {
 			set_country_flag = SFR_land_reform_train_peasants_flag
 			custom_effect_tooltip = SFR_land_reform_monthly_check_tt
 		}
+
+		ai_will_do = { base = 1 }
 	}
 	#工作队下乡
 	SFR_land_reform_work_team = {
@@ -2413,6 +2655,1752 @@ SFR_land_reform_decisions = {
 				tooltip = SFR_land_reform_decisions_progress_tt
 			}
 			SFR_land_reform_decisions_progress_update = yes
+		}
+
+		ai_will_do = { base = 1 }
+	}
+}
+
+SFR_industrialization_decisions = {
+	#规划工业部门
+	SFR_industrial_planning = {
+		icon = GFX_decision_generic_industry
+		allowed = { tag = SFR }
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		remove_effect = {
+			add_to_variable = { political_power_factor = 0.1 }
+			add_to_variable = { SFR_red_farhome_industrialization_cgf = -0.025 }
+			force_update_dynamic_modifier = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_2
+				}
+			}
+			custom_effect_tooltip = SFR_industrial_planning_tt
+			set_country_flag = SFR_industrial_planning_flag
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#在平京地区扩建工厂
+	SFR_industrial_expand_pingjing = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		available = {
+			owns_state = 5
+			num_of_civilian_factories_available_for_projects > 6
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+
+		remove_effect = {
+			5 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_to_variable = {
+					var = state_science_progress
+					value = 30
+					tooltip = state_science_dev_tt
+				}
+				add_to_variable = {
+					var = state_magic_progress
+					value = 30
+					tooltip = state_magic_dev_tt
+				}
+				add_victory_points = {
+					province = 8314
+					value = 5
+				}
+				add_dynamic_modifier = {
+					modifier = SFR_building_new_capital_farhome
+				}
+				SPC_state_category_up_effect = yes
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#发展谷居地区农业
+	SFR_industrial_expand_guju = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		available = {
+			owns_state = 2
+			num_of_civilian_factories_available_for_projects > 4
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			2 = {
+				add_manpower = 100000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_victory_points = {
+					province = 19424
+					value = 7
+				}
+				add_victory_points = {
+					province = 7915
+					value = 5
+				}
+				add_dynamic_modifier = {
+					modifier = SFR_farhome_tealand
+				}
+				SPC_state_category_up_effect = yes
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#重振大港海运业
+	SFR_industrial_expand_dagang = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		available = {
+			owns_state = 174
+			num_of_civilian_factories_available_for_projects > 4
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 174
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			174 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+				add_victory_points = {
+					province = 18336
+					value = 5
+				}
+				add_dynamic_modifier = {
+					modifier = SFR_farhome_maritime_center
+				}
+				SPC_state_category_up_effect = yes
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#发掘海清的潜力
+	SFR_industrial_expand_haiqing = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_restore_national_production }
+
+		available = {
+			owns_state = 26
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_restore_national_production
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			26 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_victory_points = {
+					province = 3806
+					value = 10
+				}
+				add_dynamic_modifier = {
+					modifier = SFR_northwest_industrial_hub
+				}
+				SPC_state_category_up_effect = yes
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#振兴白洋地区
+	SFR_industrial_expand_baiyang = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_restore_national_production }
+
+		available = {
+			owns_state = 18
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_restore_national_production
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 18
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			18 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+				add_victory_points = {
+					province = 8673
+					value = 10
+				}
+				add_dynamic_modifier = {
+					modifier = SFR_new_baiyang
+				}
+				SPC_state_category_up_effect = yes
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#勿忘正泸根据地
+	SFR_industrial_expand_zhenglu = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_restore_national_production }
+
+		available = {
+			owns_state = 11
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_restore_national_production
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 11
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			18 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_victory_points = {
+					province = 18043
+					value = 7
+				}
+				set_province_name = { id = 18043 name = VICTORY_POINTS_18043_2 }
+				add_dynamic_modifier = { modifier = SFR_revolution_hometown }
+				SPC_state_category_up_effect = yes
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 6
+			}
+			add_resource = {
+				type = coal
+				amount = 24
+				state = 12
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#整顿人鱼特区
+	SFR_industrial_expand_mermaid = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_restore_national_production }
+
+		available = {
+			owns_state = 410
+			owns_state = 20
+			owns_state = 31
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_restore_national_production
+			has_country_flag = SFR_industrial_planning_flag
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 410
+				state = 20
+				state = 31
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			410 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_victory_points = {
+					province = 20469
+					value = 5
+				}
+				add_dynamic_modifier = { modifier = SFR_mermaid_free_trade_zone }
+				SPC_state_category_up_effect = yes
+			}
+			20 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			31 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#连通东西铁路
+	SFR_industrial_expand_east_west_rail = {
+		icon = GFX_decision_generic_construction
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_public_infrastructure_construction }
+
+		available = {
+			owns_state = 5
+			owns_state = 7
+			owns_state = 8
+			owns_state = 9
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+				state = 7
+				state = 8
+				state = 9
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			7 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			8 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			9 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				fallback = yes
+				start_province = 8314
+				target_province = 18082
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#新南方铁路
+	SFR_industrial_expand_southern_rail = {
+		icon = GFX_decision_generic_construction
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_public_infrastructure_construction }
+
+		available = {
+			owns_state = 5
+			owns_state = 6
+			owns_state = 7
+			num_of_civilian_factories_available_for_projects > 3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+				state = 6
+				state = 7
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			7 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			build_railway = {
+				level = 3
+				build_only_on_allied = yes
+				fallback = yes
+				start_province = 8314
+				target_province = 8897
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#大北方铁路
+	SFR_industrial_expand_northern_rail = {
+		icon = GFX_decision_generic_construction
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_public_infrastructure_construction }
+
+		available = {
+			owns_state = 26
+			owns_state = 25
+			owns_state = 24
+			owns_state = 144
+			owns_state = 22
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+				state = 25
+				state = 24
+				state = 144
+				state = 22
+			}
+		}
+
+		cost = 100
+		days_remove = 240
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			26 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			25 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			24 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			144 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			22 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				fallback = yes
+				start_province = 3806
+				target_province = 9896
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				fallback = yes
+				start_province = 9896
+				target_province = 15979
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#在[FROM.GETNAME]扩建基建
+	SFR_industrial_expand_infrastructure_generic = {
+		icon = GFX_decision_generic_construction
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_public_infrastructure_construction }
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_owned_by = ROOT
+				NOT = { has_dynamic_modifier = SFR_well_established_local_infrastructure }
+			}
+		}
+		on_map_mode = map_only
+
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = SFR_well_established_local_infrastructure
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = {
+						NOT = {
+							has_state_category = large_city
+							has_state_category = metropolis
+							has_state_category = megalopolis
+						}
+					}
+					SPC_state_category_up_effect = yes
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#平京炼钢厂
+	SFR_industrial_expand_pingjing_steel = {
+		icon = GFX_decision_steel
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 5
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation1
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 24
+				state = 5
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#新园炼钢厂
+	SFR_industrial_expand_xinyuan_steel = {
+		icon = GFX_decision_steel
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 8
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 8
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 24
+				state = 8
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建会泉的铁矿
+	SFR_industrial_expand_huiquan_steel = {
+		icon = GFX_decision_steel
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 121
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 121
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 30
+				state = 121
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#天台矿区复合体
+	SFR_industrial_expand_tiantai_mining = {
+		icon = GFX_decision_steel
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 7
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 7
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 7
+			}
+			add_resource = {
+				type = coal
+				amount = 24
+				state = 7
+			}
+			add_resource = {
+				type = magic_crystal
+				amount = 8
+				state = 7
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建上饶的铝矿
+	SFR_industrial_expand_shangrao_aluminium = {
+		icon = GFX_decision_aluminium
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 9
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation1
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 9
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = aluminium
+				amount = 24
+				state = 9
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建高贡的铝矿
+	SFR_industrial_expand_gaogong_aluminium = {
+		icon = GFX_decision_aluminium
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 14
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 14
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = aluminium
+				amount = 24
+				state = 9
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建平度矿脉
+	SFR_industrial_expand_pingdu_aluminium = {
+		icon = GFX_decision_aluminium
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 22
+			owns_state = 144
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 22
+				state = 144
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = aluminium
+				amount = 24
+				state = 22
+			}
+			add_resource = {
+				type = coal
+				amount = 12
+				state = 144
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#西北钨矿扩产
+	SFR_industrial_expand_northwest_tungsten = {
+		icon = GFX_decision_tungsten
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 26
+			owns_state = 142
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+				state = 142
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = tungsten
+				amount = 36
+				state = 26
+			}
+			add_resource = {
+				type = coal
+				amount = 16
+				state = 142
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#发掘岱岚岛的钨矿
+	SFR_industrial_expand_dailan_tungsten = {
+		icon = GFX_decision_tungsten
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 410
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 410
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = tungsten
+				amount = 48
+				state = 410
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#安庄铬矿扩产
+	SFR_industrial_expand_anzhuang_chromium = {
+		icon = GFX_decision_chromium
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 23
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 23
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = chromium
+				amount = 24
+				state = 23
+			}
+			add_resource = {
+				type = coal
+				amount = 6
+				state = 23
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#发掘[28.GetName]的潜力
+	SFR_industrial_expand_28_chromium = {
+		icon = GFX_decision_chromium
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 28
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 28
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = chromium
+				amount = 20
+				state = 28
+			}
+			add_resource = {
+				type = magic_crystal
+				amount = 6
+				state = 23
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#进一步挖掘方山大矿脉
+	SFR_industrial_expand_fangshan_chromium = {
+		icon = GFX_decision_oil
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 21
+			num_of_civilian_factories_available_for_projects > 4
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 21
+			}
+		}
+
+		cost = 50
+		days_remove = 360
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 48
+				state = 21
+			}
+			add_resource = {
+				type = magic_crystal
+				amount = 24
+				state = 21
+			}
+			add_resource = {
+				type = coal
+				amount = 64
+				state = 21
+			}
+			add_resource = {
+				type = oil
+				amount = 24
+				state = 21
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建龙游地区的油矿
+	SFR_industrial_expand_longyou_oil = {
+		icon = GFX_decision_oil
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 160
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation2
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 160
+			}
+		}
+
+		cost = 25
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 36
+				state = 160
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#尝试在谷居修建橡胶产业
+	SFR_industrial_expand_guju_rubber = {
+		icon = GFX_decision_rubber
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 2
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation3
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+
+		cost = 25
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = rubber
+				amount = 24
+				state = 2
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 2
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#尝试在六安修建橡胶产业
+	SFR_industrial_expand_liuan_rubber = {
+		icon = GFX_decision_rubber
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 172
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation4
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 172
+			}
+		}
+
+		cost = 25
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = rubber
+				amount = 12
+				state = 172
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+	#扩建正泸煤矿
+	SFR_industrial_expand_zhenglu_coal = {
+		icon = GFX_decision_coal
+		allowed = { tag = SFR }
+
+		visible = { has_completed_focus = SFR_develop_mineral_resources }
+
+		available = {
+			owns_state = 11
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = SFR_develop_mineral_resources
+			has_tech = excavation1
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 11
+			}
+		}
+
+		cost = 25
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = coal
+				amount = 36
+				state = 11
+			}
+		}
+
+		ai_will_do = { base = 1 }
+	}
+}
+
+SFR_propagate_revolution_decisions = {
+	#扩编干预部队
+	SFR_expand_intervention_forces = {
+		icon = GFX_decision_SWE_set_army_budget
+		allowed = { tag = SFR }
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 180
+		days_re_enable = 180
+		fire_only_once = no
+
+		modifier = {
+			stability_factor = -0.1
+			industrial_capacity_factory = 0.1
+			training_time_army_factor = -0.3
+		}
+
+		ai_will_do = { 
+			base = 0.5
+			modifier = {
+				has_war = yes
+				add = 1.5
+			}
+		}
+	}
+	#战争宣传
+	SFR_war_propaganda = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { tag = SFR }
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 180
+		days_re_enable = 180
+		fire_only_once = no
+
+		modifier = {
+			conscription_factor = 0.1
+			army_org_factor = 0.05
+			army_org_regain = 0.05
+			war_support_weekly = 0.002
+			stability_weekly = -0.001
+		}
+
+		complete_effect = {
+			add_war_support = 0.1
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = { 
+			base = 0.5
+			modifier = {
+				has_war = yes
+				add = 10
+			}
+			modifier = {
+				has_war_support < 0.2
+				add = 10
+			}
+			modifier = {
+				has_war_support < 0.5
+				add = 0.5
+			}
+		}
+	}
+	#和盟国协调军事行动
+	SFR_coordinate_military_actions_with_allies = {
+		icon = GFX_decision_generic_military
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_unify_military_operations }
+
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { has_idea = SFR_coordinate_military_operations }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 60
+		fire_only_once = no
+
+		modifier = {
+			command_power_gain_mult = -0.1
+		}
+
+		remove_effect = {
+			army_experience = 10
+			FROM = {
+				add_ideas = SFR_coordinate_military_operations
+				army_experience = 30
+				add_to_variable = {
+					var = military_development_mod
+					value = 2
+					tooltip = military_development_mod_tt_up_1
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+	}
+	#和盟国开展经济合作
+	SFR_coordinate_economic_actions_with_allies = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_promote_multilateral_cooperation }
+
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { has_idea = SFR_coordinate_economic_operations }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 50
+		days_remove = 120
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.02
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			FROM = {
+				add_stability = 0.05
+				add_to_variable = {
+					var = industrial_development_mod
+					value = 2
+					tooltip = industrial_development_mod_tt_up_1
+				}
+				every_owned_state = {
+					random_select_amount = 2
+					limit = { is_core_of = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_ideas = SFR_coordinate_economic_operations
+			}
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+	}
+	#邀请盟国加入科技合作
+	SFR_coordinate_scientific_actions_with_allies = {
+		icon = GFX_decision_generic_research
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_scientific_cooperation_treaty }
+
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { is_in_tech_sharing_group = SFR_technology_sharing_group_1 }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = no
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+
+		remove_effect = {
+			FROM = {
+				add_to_tech_sharing_group = SFR_technology_sharing_group_1
+				add_to_variable = {
+					var = research_development_mod
+					value = 2
+					tooltip = research_development_mod_tt_up_1
+				}
+				capital_scope = {
+					add_to_variable = {
+						var = state_science_progress
+						value = 20
+						tooltip = state_science_dev_tt
+					}
+				}
+				capital_scope = {
+					add_to_variable = {
+						var = state_magic_progress
+						value = 20
+						tooltip = state_magic_dev_tt
+					}
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 10
+		}
+	}
+	#解放国家
+	SFR_liberate_nation = {
+		icon = GFX_decision_hol_war_on_pacifism
+		allowed = { tag = SFR }
+		visible = { has_completed_focus = SFR_free_the_people_of_east_bastia }
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				OR = {
+					SPC_generic_region_trigger_1 = yes
+					SPC_generic_region_trigger_2 = yes
+					SPC_generic_region_trigger_3 = yes
+				}
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 25
+		days_remove = 30
+		fire_only_once = no
+
+		modifier = {
+			command_power_gain_mult = -0.1
+		}
+
+		remove_effect = {
+			FROM = {
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 0.5
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.2
+				}
+				add = -0.5
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.7
+				}
+				add = 0.5
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+				add = 9
+			}
+		}
+	}
+	#成立东巴社会主义联盟
+	SFR_form_unified_union = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { tag = SFR }
+		visible = {
+			SPC_generic_region_trigger_1_control = yes
+			SPC_generic_region_trigger_2_control = yes
+			SPC_generic_region_trigger_3_control = yes
+		}
+
+		available = {
+			SPC_generic_region_trigger_1_control = yes
+			SPC_generic_region_trigger_2_control = yes
+			SPC_generic_region_trigger_3_control = yes
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_research_slot = 1
+			set_cosmetic_tag = SFR_unif_tag_3
+			custom_effect_tooltip = SFR_form_unified_union_tt
+			hidden_effect = {
+				every_subject_country = {
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_SPC_union_republic
+						}
+					}
+				}
+				every_country = {
+					set_country_flag = superevent_show_flag
+					set_country_flag = SPC_SE_reunification_SFR_3_flag
+					scoped_play_song = "SE_reunification_SFR_3_sound"
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 999
+		}
+	}
+	#将属国转换为加盟共和国
+	SFR_convert_subjects_to_union_republics = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { tag = SFR }
+		visible = { 
+			has_cosmetic_tag = SFR_unif_tag_3
+			any_subject_country = { NOT = { has_autonomy_state = autonomy_SPC_union_republic } } 
+		}
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_autonomy_state = autonomy_SPC_union_republic }
+			}
+		}
+		on_map_mode = map_and_decisions_view
+
+		cost = 50
+		days_remove = 30
+		fire_only_once = no
+
+		remove_effect = {
+			FROM = {
+				ROOT = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_SPC_union_republic
+					}
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 999
 		}
 	}
 }
