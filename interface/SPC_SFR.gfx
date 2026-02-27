@@ -692,4 +692,17 @@ spriteTypes = {
 		name = "GFX_news_event_SFR_4"
 		texturefile = "gfx/event_pictures/news_event_SFR_4.dds"
 	}
+	###军官团###
+	spriteType = {
+		name = "GFX_idea_SFR_military_democracy_idea"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_intercommand_rivalries.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_people_officer_corps_idea"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_upbeat_command.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SFR_people_soldiers_idea"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_nepotism.dds"
+	}
 }

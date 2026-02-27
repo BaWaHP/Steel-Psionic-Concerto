@@ -1,5 +1,4 @@
-focus_tree = {
-	id = SFR_focus_1
+focus_tree = { 	id = SFR_focus_1
 	#SFR_focus_1_* 革命阵线
 	#SFR_focus_1_1 * 阵线国策1 战前
 	#SFR_focus_1_2 * 阵线国策2 内战
@@ -8220,7 +8219,7 @@ focus_tree = {
 		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
 		x = 25
 		y = 0
-		cost = 5
+		cost = 2
 
 		offset = {
 			x = -15
@@ -8249,7 +8248,10 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			country_event = {
+				id = SFR.900
+				days = 1
+			}
 		}
 	}
 
@@ -8258,7 +8260,7 @@ focus_tree = {
 		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8271,7 +8273,15 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			effect_tooltip = {
+				add_ideas = SFR_red_farhome_army_tt_1
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = SFR_red_farhome_army }
+				add_to_variable = { SFR_red_farhome_army_aof = 0.05 }
+				add_to_variable = { SFR_red_farhome_army_egaf = 0.05 }
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 
@@ -8280,7 +8290,7 @@ focus_tree = {
 		icon = GFX_focus_generic_license_production
 		x = -5
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8293,7 +8303,24 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_2
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_pfegf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_lcpef = 0.1 }
+			force_update_dynamic_modifier = yes
+			every_owned_state = {
+				random_select_amount = 1
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -8315,7 +8342,13 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_shift_to_magic_equipment }
 
 		completion_reward = {
-
+			army_experience = 30
+			add_tech_bonus = {
+				name = SFR_revival_of_armor_research
+				category = armor
+				bonus = 0.5
+				uses = 3
+			}
 		}
 	}
 
@@ -8337,7 +8370,13 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_revival_of_armor_research }
 
 		completion_reward = {
-
+			army_experience = 30
+			add_tech_bonus = {
+				name = SFR_revival_of_armor_research
+				category = caster_equipments
+				bonus = 0.5
+				uses = 3
+			}
 		}
 	}
 
@@ -8346,7 +8385,7 @@ focus_tree = {
 		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8360,7 +8399,13 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			army_experience = 30
+			add_tech_bonus = {
+				name = SFR_revival_of_armor_research
+				category = artillery
+				bonus = 0.5
+				uses = 3
+			}
 		}
 	}
 
@@ -8369,7 +8414,7 @@ focus_tree = {
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8383,7 +8428,13 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			army_experience = 30
+			add_tech_bonus = {
+				name = SFR_revival_of_armor_research
+				category = infantry_tech
+				bonus = 0.5
+				uses = 3
+			}
 		}
 	}
 
@@ -8406,7 +8457,23 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_3
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_psaff = 0.1 }
+			force_update_dynamic_modifier = yes
+			every_owned_state = {
+				random_select_amount = 3
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -8428,7 +8495,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_4
+				}	
+			}
+			add_to_variable = { SFR_red_farhome_army_aaaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aadf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_uabdcf = -1 }
+			add_to_variable = { SFR_red_farhome_army_uadcf = -1 }
+			force_update_dynamic_modifier = yes
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
 		}
 	}
 
@@ -8451,7 +8533,20 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_war_support = 0.05
+			SPC_military_development_amount_up_3 = yes
+			SPC_training_laws_up = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_5
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aof = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aor = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_ttaf = 0.2 }
+			add_to_variable = { SFR_red_farhome_army_mmdp = 1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8460,7 +8555,7 @@ focus_tree = {
 		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8473,7 +8568,17 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_political_power = 100
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_6
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aor = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_ddf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8495,7 +8600,19 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_large_formation_concentration_command }
 
 		completion_reward = {
-			
+			army_experience = 30
+			SPC_military_development_amount_up_3 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_6
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_bf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_ps = 0.2 }
+			add_to_variable = { SFR_red_farhome_army_lrr = 0.02 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 	
@@ -8517,7 +8634,18 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_task_based_command_mode }
 
 		completion_reward = {
-			
+			army_experience = 30
+			SPC_military_development_amount_up_3 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_7
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mpf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cwf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 	
@@ -8540,7 +8668,13 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 30
+			add_ideas = SFR_people_officer_corps_idea
+			add_to_variable = {
+				var	= military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
 		}
 	}
 
@@ -8562,7 +8696,8 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_ideas = SFR_military_democracy_idea
 		}
 	}
 
@@ -8585,7 +8720,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_8
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_rf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_lrr = 0.01 }
+			add_to_variable = { SFR_red_farhome_army_tpr = 0.1 }
+			force_update_dynamic_modifier = yes
+			add_tech_bonus = {
+				name = SFR_elite_reconnaissance_units
+				category = recon_tech
+				uses = 1
+				bonus = 1
+			}
 		}
 	}
 
@@ -8607,7 +8757,9 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = 50
+			add_ideas = SFR_people_soldiers_idea
 		}
 	}
 
@@ -8629,7 +8781,18 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_to_variable = {
+				var	= military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_learn_from_past_experience
+				folder = land
+			}
 		}
 	}
 
@@ -8651,7 +8814,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_9
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_sl = -0.2 }
+			add_to_variable = { SFR_red_farhome_army_c = 0.001 }
+			add_to_variable = { SFR_red_farhome_army_cacf = -0.5 }
+			add_to_variable = { SFR_red_farhome_army_ddf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8670,16 +8847,29 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_ideological_propaganda }
 		relative_position_id = SFR_ideological_propaganda
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_gradual_return_to_normalcy }
 
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_manpower = 50000
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_10
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_caaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_cdaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_cf = 0.3 }
+			add_to_variable = { SFR_red_farhome_army_ms = 0.2 }
+			add_to_variable = { SFR_red_farhome_army_cwf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
-	focus = {	#逐步恢复常态
+	focus = {	#专注精锐部队
 		id = SFR_gradual_return_to_normalcy
-		icon = GFX_Generic_Medicine02
+		icon = GFX_focus_eng_special_air_service
 		x = 1
 		y = 1
 		cost = 5
@@ -8692,10 +8882,28 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_ideological_propaganda }
 		relative_position_id = SFR_ideological_propaganda
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_national_military_training }
 
 		completion_reward = {
-			
+			army_experience = 30
+			add_to_variable = {
+				var	= military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_11
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_egaf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cf = -0.3 }
+			add_to_variable = { SFR_red_farhome_army_ms = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8718,7 +8926,11 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 10
+			country_event = {
+				id = SFR.901
+				days = 1
+			}
 		}
 	}
 
@@ -8727,7 +8939,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8740,7 +8952,24 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 100
+			add_to_variable = {
+				var	= military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_25
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_alcf = -0.2 }
+			add_to_variable = { SFR_red_farhome_army_alalcf = 1 }
+			add_to_variable = { SFR_red_farhome_army_aldcf = 1 }
+			add_to_variable = { SFR_red_farhome_army_alsl = 1 }
+			add_to_variable = { SFR_red_farhome_army_alplcf = 1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8762,7 +8991,14 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_ideas = SFR_people_logistics_units_idea
+			add_tech_bonus = {
+				name = SFR_people_logistics_units
+				uses = 2
+				bonus = 1
+				category = logistics_tech
+				category = motorized_equipment
+			}
 		}
 	}
 
@@ -8786,7 +9022,23 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_utilize_our_advantages }
 
 		completion_reward = {
-			
+			add_mastery_bonus = {
+				name = SFR_consolidate_our_strength
+				bonus = 0.15
+				days = 180
+				grand_doctrine = superior_firepower
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_15
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaaf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_aadf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_bf = 0.2 }
+			add_to_variable = { SFR_red_farhome_army_csfpccf = -0.2 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8810,7 +9062,24 @@ focus_tree = {
 		mutually_exclusive = { focus = SFR_consolidate_our_strength }
 
 		completion_reward = {
-			
+			add_mastery_bonus = {
+				name = wuw_HUN_an_airforce_to_be_reckoned_with
+				bonus = 0.15
+				days = 180
+				grand_doctrine = mass_assault
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_16
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aof = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_macf = -0.2 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8832,7 +9101,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = SFR_artillery_strike
+				uses = 2
+				bonus = 0.5
+				category = artillery
+			}
+			add_mastery_bonus = {
+				name = SFR_artillery_strike
+				bonus = 0.15
+				days = 180
+				sub_doctrine = fire_concentration
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_17
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aadf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_suaorcf = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8854,7 +9144,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			add_mastery_bonus = {
+				name = SFR_full_speed_breakthrough
+				bonus = 0.15
+				days = 180
+				sub_doctrine = rapid_domination
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_18
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_asf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_bf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_tpr = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8876,7 +9187,23 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_command_power = 100
+			add_mastery_bonus = {
+				name = SFR_small_unit_tactics
+				bonus = 0.15
+				days = 180
+				sub_doctrine = commandos
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_19
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_cpgm = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_egaf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_lrr = 0.02 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 	
@@ -8898,7 +9225,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = SFR_heavy_units_clear_the_way
+				category = armor
+				uses = 2
+				bonus = 0.5
+			}
+			add_mastery_bonus = {
+				name = SFR_heavy_units_clear_the_way
+				bonus = 0.15
+				days = 180
+				sub_doctrine = armored_spearhead
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_20
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aadf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_bf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_asf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8921,7 +9270,31 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_mastery_bonus = {
+				name = wuw_HUN_an_airforce_to_be_reckoned_with
+				bonus = 0.3
+				days = 180
+				grand_doctrine = superior_firepower
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 6
+				tooltip = military_development_mod_tt_up_3
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_21
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_bf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_asf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_ps = 0.2 }
+			add_to_variable = { SFR_red_farhome_army_snr = 0.2 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8944,7 +9317,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_summarize_light_infantry_tactics
+				folder = land
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_22
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aof = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aor = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_mcp = 20 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -8966,7 +9360,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_tech_bonus = {
+				name = SFR_specialized_engineer_corps
+				category = engineers_tech
+				category = maintenance_company_tech
+				uses = 2
+				bonus = 1
+			}
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_army_tt_0
+				add_idea = SFR_red_farhome_army_tt_23
+			}
+			add_to_variable = { SFR_red_farhome_army_disf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mdif = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 	
@@ -8988,7 +9396,24 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 50
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_24
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aof = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_caaf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cdaf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cf = 0.1 }
 		}
 	}
 
@@ -9010,7 +9435,43 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_tech_bonus = {
+				name = SFR_specialized_engineer_corps
+				category = support_tech
+				uses = 2
+				bonus = 0.5
+			}
+			if = {
+				limit = {
+					has_doctrine = field_engineering
+				}
+				add_mastery_bonus = {
+					name = SFR_battlefield_is_full_of_changes
+					bonus = 0.25
+					days = 365
+					sub_doctrine = field_engineering
+				}
+			}
+			else = {
+				add_mastery_bonus = {
+					name = SFR_battlefield_is_full_of_changes
+					bonus = 0.1
+					days = 365
+					track = combat_support
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_26
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aof = 0.05 }
+			add_to_variable = { command_power_gain_mult = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_lrr = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -9032,7 +9493,49 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = SFR_specialized_engineer_corps
+				category = armor
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				name = SFR_specialized_engineer_corps
+				category = infantry_uniforms
+				uses = 1
+				bonus = 1
+			}
+			if = {
+				limit = {
+					has_doctrine = mobile_defense
+				}
+				add_mastery_bonus = {
+					name = SFR_we_are_already_prepared
+					bonus = 0.25
+					days = 365
+					sub_doctrine = mobile_defense
+				}
+			}
+			else = {
+				add_mastery_bonus = {
+					name = SFR_we_are_already_prepared
+					bonus = 0.1
+					days = 365
+					track = armor
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_27
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aor = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_disf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mdif = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_ps = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mpf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -9054,7 +9557,42 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			add_command_power = 100
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			if = {
+				limit = {
+					has_doctrine = large_unit_tactics
+				}
+				add_mastery_bonus = {
+					name = SFR_expand_high_command
+					bonus = 0.25
+					days = 365
+					sub_doctrine = large_unit_tactics
+				}
+			}
+			else = {
+				add_mastery_bonus = {
+					name = SFR_expand_high_command
+					bonus = 0.1
+					days = 365
+					track = infantry
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_28
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_mpf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cpgm = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mcp = 50 }
+			add_to_variable = { SFR_red_farhome_army_cwf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -9076,7 +9614,38 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_doctrine = deep_battle
+				}
+				add_mastery_bonus = {
+					name = SFR_prepare_for_depth_and_protracted_warfare
+					bonus = 0.25
+					days = 365
+					sub_doctrine = deep_battle
+				}
+			}
+			else = {
+				add_mastery_bonus = {
+					name = SFR_prepare_for_depth_and_protracted_warfare
+					bonus = 0.1
+					days = 365
+					track = operations
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_29
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aof = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_disf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_mdif = 0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -9099,7 +9668,31 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			
+			army_experience = 50
+			add_mastery_bonus = {
+				name = SFR_people_war_defense
+				bonus = 0.3
+				days = 180
+				grand_doctrine = mass_assault
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 6
+				tooltip = military_development_mod_tt_up_3
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_30
+				}
+			}
+			add_to_variable = { SFR_red_farhome_army_aaf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+			add_to_variable = { SFR_red_farhome_army_aof = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cwf = -0.1 }
+			add_to_variable = { SFR_red_farhome_army_cf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_scf = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -9121,7 +9714,14 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			air_experience = 100
+			add_ideas = SFR_farhome_airforce
+			add_tech_bonus = {
+				name = SFR_rebuild_air_force
+				uses = 2
+				bonus = 0.5
+				category = air_equipment
+			}
 		}
 	}
 
@@ -9143,7 +9743,11 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			air_experience = 100
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce
+				add_idea = SFR_farhome_airforce_2
+			}
 		}
 	}
 
@@ -9165,7 +9769,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = SFR_expand_airforce_related_facilities
+				days = 365
+			}
+			every_owned_state = {
+				random_select_amount = 2
+				limit = {
+					is_core_of = ROOT
+					air_base < 7
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
 		}
 	}
 
@@ -9187,7 +9812,12 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_establish_air_force_research_institute
+				category = air_equipment
+				uses = 4
+				bonus = 1
+			}
 		}
 	}
 
@@ -9211,7 +9841,17 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			air_experience = 50
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_2
+				add_idea = SFR_farhome_airforce_3
+			}
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				name = SFR_new_air_force_theory
+				folder = air
+			}
 		}
 	}
 
@@ -9230,10 +9870,19 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_new_air_force_theory }
 		relative_position_id = SFR_new_air_force_theory
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_prepare_ground_support }
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_3
+				add_idea = SFR_farhome_airforce_l
+			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_focus_on_air_superiority
+				grand_doctrine = new_operational_integrity
+			}
 		}
 	}
 
@@ -9252,10 +9901,19 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_new_air_force_theory }
 		relative_position_id = SFR_new_air_force_theory
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_focus_on_air_superiority }
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_3
+				add_idea = SFR_farhome_airforce_r
+			}
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_focus_on_air_superiority
+				grand_doctrine = new_battlefield_support
+			}
 		}
 	}
 
@@ -9277,13 +9935,25 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_heavy_fighters
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_bomber_interception
+			}
+			add_tech_bonus = {
+				name = SFR_develop_heavy_fighters
+				uses = 2
+				bonus = 0.5
+				category = heavy_air
+			}
+			add_ideas = SFR_airforce_development
 		}
 	}
 
-	focus = {	#修建防空设施
+	focus = {	#注重国土防御
 		id = SFR_construct_air_defense_facilities
-		icon = GFX_Generic_Air_Defense
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
 		x = 0
 		y = 1
 		cost = 5
@@ -9299,7 +9969,26 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_mastery_bonus = {
+				name = SFR_develop_heavy_fighters
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_fighter_homeland_defense
+			}
+			every_owned_state = {
+				random_select_amount = 4
+				limit = { is_core_of = ROOT anti_air_building < 4 }
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+				}
+			}
+			swap_ideas = {
+				remove_idea = SFR_airforce_development
+				add_idea = SFR_airforce_development_2
+			}
 		}
 	}
 
@@ -9321,7 +10010,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_multirole_bombers
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_flexible_fire_support
+			}
+			add_tech_bonus = {
+				name = SFR_develop_multirole_bombers
+				uses = 2
+				bonus = 0.5
+				category = tactical_bomber
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_l
+				add_idea = SFR_farhome_airforce_l_2
+			}
 		}
 	}
 
@@ -9343,7 +10047,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_death_from_above
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_carpet_bombing
+			}
+			add_tech_bonus = {
+				name = SFR_death_from_above
+				uses = 2
+				bonus = 0.5
+				category = cat_strategic_bomber
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_l_2
+				add_idea = SFR_farhome_airforce_l_3
+			}
 		}
 	}
 
@@ -9366,7 +10085,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			air_experience = 50
+			add_mastery_bonus = {
+				name = SFR_defend_the_homeland_s_airspace
+				bonus = 0.3
+				days = 180
+				grand_doctrine = new_operational_integrity
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_l_3
+				add_idea = SFR_farhome_airforce_l_4
+			}
 		}
 	}
 
@@ -9389,7 +10123,21 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_expand_aircraft_industry
+				category = air_equipment
+				uses = 2
+				bonus = 0.5
+			}
+			every_owned_state = {
+				random_select_amount = 2
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -9411,7 +10159,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			every_owned_state = {
+				random_select_amount = 4
+				limit = {
+					is_core_of = ROOT
+					air_base < 7
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
 		}
 	}
 
@@ -9433,7 +10203,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_air_ground_integration
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_dive_bombers
+			}
+			add_tech_bonus = {
+				name = SFR_air_ground_integration
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_r
+				add_idea = SFR_farhome_airforce_r_2
+			}
 		}
 	}
 
@@ -9455,7 +10240,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_air_ground_integration
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_theater_interdiction
+			}
+			add_tech_bonus = {
+				name = SFR_disrupt_enemy_logistics
+				uses = 1
+				bonus = 1
+				category = cat_air_bombs
+			}
+			add_tech_bonus = {
+				name = SFR_disrupt_enemy_logistics
+				uses = 1
+				bonus = 0.5
+				ahead_reduction = 2
+				category = cat_air_bombs
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_r_2
+				add_idea = SFR_farhome_airforce_r_3
+			}
 		}
 	}
 
@@ -9477,7 +10284,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_air_ground_integration
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_dogfighting_mastery
+			}
+			add_tech_bonus = {
+				name = SFR_light_combat_squadrons
+				uses = 2
+				bonus = 0.5
+				category = light_air
+			}
+			add_ideas = SFR_special_airforce_division
 		}
 	}
 
@@ -9499,14 +10318,36 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_light_combat_squadrons
+				uses = 1
+				bonus = 1
+				category = cat_air_engine
+			}
+			add_tech_bonus = {
+				name = SFR_light_combat_squadrons
+				uses = 1
+				bonus = 0.5
+				ahead_reduction = 2
+				category = cat_air_engine
+			}
+			add_mastery_bonus = {
+				name = SFR_air_ground_integration
+				bonus = 0.15
+				days = 180
+				sub_doctrine = air_subdoctrine_deep_air_raids
+			}
+			swap_ideas = {
+				remove_idea = SFR_special_airforce_division
+				add_idea = SFR_special_airforce_division_2
+			}
 		}
 	}
 
 	focus = {	#现代空地一体化作战
 		id = SFR_modern_air_ground_integration
 		icon = GFX_focus_generic_air_defense
-		x = 1
+		x = 0
 		y = 1
 		cost = 5
 
@@ -9522,14 +10363,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			air_experience = 50
+			add_mastery_bonus = {
+				name = SFR_defend_the_homeland_s_airspace
+				bonus = 0.3
+				days = 180
+				grand_doctrine = new_battlefield_support
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_airforce_r_3
+				add_idea = SFR_farhome_airforce_r_4
+			}
 		}
 	}
 
 	focus = {	#复兴海军
 		id = SFR_revival_of_navy
 		icon = GFX_focus_PER_the_peoples_navy
-		x = 24
+		x = 22
 		y = 1
 		cost = 5
 
@@ -9544,120 +10400,14 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
-		}
-	}
-
-	focus = {	#组建海军航空部队
-		id = SFR_establish_naval_air_force
-		icon = GFX_goal_generic_navy_carrier
-		x = 6
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_rebuild_air_force }
-		prerequisite = { focus = SFR_revival_of_navy }
-		relative_position_id = SFR_rebuild_air_force
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {	#海军轰炸机
-		id = SFR_naval_bombers
-		icon = GFX_focus_generic_multi_role_aircraft
-		x = -2
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_establish_naval_air_force }
-		relative_position_id = SFR_establish_naval_air_force
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {	#为远航做准备
-		id = SFR_prepare_for_long_voyages
-		icon = GFX_goal_generic_navy_cruiser
-		x = 0
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_establish_naval_air_force }
-		relative_position_id = SFR_establish_naval_air_force
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {	#开发舰载机
-		id = SFR_develop_carrier_based_aircraft
-		icon = GFX_focus_generic_air_carrier
-		x = 2
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_establish_naval_air_force }
-		relative_position_id = SFR_establish_naval_air_force
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {	#海军步兵
-		id = SFR_naval_infantry
-		icon = GFX_focus_generic_naval_invasion
-		x = 0
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = SFR_naval_bombers }
-		prerequisite = { focus = SFR_prepare_for_long_voyages }
-		prerequisite = { focus = SFR_develop_carrier_based_aircraft }
-		relative_position_id = SFR_prepare_for_long_voyages
-		#mutually_exclusive = { focus = }
-
-		completion_reward = {
-
+			navy_experience = 100
+			add_ideas = SFR_farhome_navy
+			add_tech_bonus = {
+				name = SFR_revival_of_navy
+				uses = 2
+				bonus = 0.5
+				category = naval_equipment
+			}
 		}
 	}
 
@@ -9679,7 +10429,11 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			navy_experience = 100
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy
+				add_idea = SFR_farhome_navy_2
+			}
 		}
 	}
 
@@ -9701,7 +10455,29 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = SFR_expand_navy_related_facilities
+				days = 365
+			}
+			every_owned_state = {
+				random_select_amount = 2
+				limit = {
+					is_core_of = ROOT
+					naval_base < 7
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
 		}
 	}
 
@@ -9723,7 +10499,18 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_establish_naval_research_institute
+				category = naval_equipment
+				uses = 3
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				name = SFR_establish_naval_research_institute
+				category = ship_modules_tech
+				uses = 3
+				bonus = 0.5
+			}
 		}
 	}
 
@@ -9747,7 +10534,23 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			navy_experience = 50
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				name = SFR_return_to_the_ocean
+				folder = naval
+			}
+			add_tech_bonus = {
+				name = SFR_establish_naval_research_institute
+				category = ship_modules_tech
+				uses = 2
+				bonus = 0.5
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_2
+				add_idea = SFR_farhome_navy_3
+			}
 		}
 	}
 
@@ -9766,10 +10569,19 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_return_to_the_ocean }
 		relative_position_id = SFR_return_to_the_ocean
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_new_era_new_tactics }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_emphasize_surface_warfare
+				grand_doctrine = new_base_strike
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_3
+				add_idea = SFR_farhome_navy_l
+			}
 		}
 	}
 
@@ -9788,10 +10600,19 @@ focus_tree = {
 
 		prerequisite = { focus = SFR_return_to_the_ocean }
 		relative_position_id = SFR_return_to_the_ocean
-		#mutually_exclusive = { focus = }
+		mutually_exclusive = { focus = SFR_emphasize_surface_warfare }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = SFR_new_era_new_tactics
+				grand_doctrine = new_convoy_raiding
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_3
+				add_idea = SFR_farhome_navy_r
+			}
 		}
 	}
 
@@ -9813,7 +10634,19 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_develop_aircraft_carriers
+				uses = 2
+				bonus = 0.5
+				category = mio_cat_tech_all_carrier_and_modules
+			}
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = carriers
+			}
+			add_ideas = SFR_carrier_fleet
 		}
 	}
 
@@ -9835,7 +10668,28 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				name = SFR_develop_aircraft_carriers
+				uses = 2
+				bonus = 0.5
+				category = naval_air
+			}
+			add_tech_bonus = {
+				name = SFR_develop_aircraft_carriers
+				uses = 2
+				bonus = 0.5
+				category = cat_anti_air
+			}
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = carriers
+			}
+			swap_ideas = {
+				remove_idea = SFR_carrier_fleet
+				add_idea = SFR_carrier_fleet_2
+			}
 		}
 	}
 
@@ -9857,7 +10711,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = screens
+			}
+			add_tech_bonus = {
+				name = SFR_large_convoy_formation
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_screen_ship_and_modules
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_l
+				add_idea = SFR_farhome_navy_l_2
+			}
 		}
 	}
 
@@ -9879,7 +10748,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = capital_ships
+			}
+			add_tech_bonus = {
+				name = SFR_fleet_vanguard
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_screen_ship_and_modules
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_l_2
+				add_idea = SFR_farhome_navy_l_3
+			}
 		}
 	}
 	
@@ -9902,7 +10786,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			navy_experience = 50
+			add_mastery_bonus = {
+				name = SFR_red_flag_flies_on_the_sea
+				bonus = 0.3
+				days = 180
+				grand_doctrine = new_base_strike
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_l_3
+				add_idea = SFR_farhome_navy_l_4
+			}
 		}
 	}
 	
@@ -9925,7 +10824,15 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			every_owned_state = {
+				random_select_amount = 4
+				limit = { is_core_of = ROOT is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -9947,7 +10854,35 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 2
+				tooltip = industrial_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			every_owned_state = {
+				random_select_amount = 4
+				limit = {
+					is_core_of = ROOT
+					naval_base < 7
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+				}
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
 		}
 	}
 
@@ -9969,7 +10904,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				sub_doctrine = coastal_defence_fleet
+			}
+			add_tech_bonus = {
+				name = SFR_patrol_boat_program
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_cruiser_and_modules
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_r
+				add_idea = SFR_farhome_navy_r_2
+			}
 		}
 	}
 
@@ -9991,7 +10941,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = screens
+			}
+			add_tech_bonus = {
+				name = SFR_destroyer_fleet
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_destroyer_and_modules
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_r_2
+				add_idea = SFR_farhome_navy_r_3
+			}
 		}
 	}
 
@@ -10013,7 +10978,20 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = submarines
+			}
+			add_tech_bonus = {
+				name = SFR_build_submarines
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_submarine_and_modules
+				category = naval_mines
+			}
+			add_ideas = SFR_submarine_fleet
 		}
 	}
 
@@ -10035,11 +11013,27 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			add_mastery_bonus = {
+				name = SFR_develop_aircraft_carriers
+				bonus = 0.15
+				days = 180
+				track = submarines
+			}
+			add_tech_bonus = {
+				name = SFR_build_submarines
+				bonus = 0.5
+				uses = 2
+				category = mio_cat_tech_all_submarine_and_modules
+				category = naval_mines
+			}
+			swap_ideas = {
+				remove_idea = SFR_submarine_fleet
+				add_idea = SFR_submarine_fleet_2
+			}
 		}
 	}
 
-	focus = {	#保卫祖国的海岸
+	focus = {	#人民海军的水下力量
 		id = SFR_defend_the_homeland_s_coast
 		icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
 		x = 0
@@ -10058,7 +11052,22 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-
+			navy_experience = 50
+			add_mastery_bonus = {
+				name = SFR_red_flag_flies_on_the_sea
+				bonus = 0.3
+				days = 180
+				grand_doctrine = new_convoy_raiding
+			}
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+			swap_ideas = {
+				remove_idea = SFR_farhome_navy_r_3
+				add_idea = SFR_farhome_navy_r_4
+			}
 		}
 	}
 

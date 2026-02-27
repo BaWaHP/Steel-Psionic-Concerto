@@ -3,6 +3,10 @@ state={
 	id=86
 	name="STATE_86"
 
+	resources = {
+		coal = 2
+	}
+
 	history={
 		owner = ARO
 		add_core_of = LTH

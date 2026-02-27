@@ -3330,6 +3330,12 @@ SFR_industrialization_decisions = {
 		}
 		on_map_mode = map_only
 
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = SFR
+			}
+		}
+
 		cost = 50
 		days_remove = 90
 		fire_only_once = yes

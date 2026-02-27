@@ -5454,6 +5454,85 @@ country_event = {	#理想终将实现
 	}
 }
 
+country_event = {	#军队现状报告
+	id = SFR.900
+	title = SFR.900.t
+	desc = SFR.900.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.900.a
+		army_experience = 10
+		air_experience = 10
+		navy_experience = 10
+		SPC_military_development_amount_up_2 = yes
+	}
+}
+
+country_event = {	#武装民兵问题
+	id = SFR.901
+	title = SFR.901.t
+	desc = SFR.901.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.901.a
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_army_tt_0
+				add_idea = SFR_red_farhome_army_tt_12
+			}
+		}
+		add_to_variable = { SFR_red_farhome_army_aaf = 0.05 }
+		add_to_variable = { SFR_red_farhome_army_adf = 0.05 }
+		add_to_variable = { SFR_red_farhome_army_cf = -0.1 }
+		add_to_variable = { SFR_red_farhome_army_egaf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+
+	option = {
+		name = SFR.901.b
+		add_political_power = -50
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_army_tt_0
+				add_idea = SFR_red_farhome_army_tt_13
+			}
+		}
+		add_to_variable = { SFR_red_farhome_army_suiaaf = 0.05 }
+		add_to_variable = { SFR_red_farhome_army_suidf = 0.05 }
+		add_to_variable = { SFR_red_farhome_army_uirdcf = -0.5 }
+		add_to_variable = { SFR_red_farhome_army_egaf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+
+	option = {
+		name = SFR.901.c
+		add_political_power = -100
+		add_mastery_bonus = {
+			bonus = 0.25
+			days = 365
+			name = SFR_militia_issue
+			sub_doctrine = irregulars
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SFR_red_farhome_army_tt_0
+				add_idea = SFR_red_farhome_army_tt_14
+			}
+		}
+		add_to_variable = { SFR_red_farhome_army_suiaaf = 0.1 }
+		add_to_variable = { SFR_red_farhome_army_suidf = 0.1 }
+		add_to_variable = { SFR_red_farhome_army_uirdcf = 1 }
+		add_to_variable = { SFR_red_farhome_army_cf = 0.1 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
 ###工农代表大会###
 
 country_event = {	#参与的人选

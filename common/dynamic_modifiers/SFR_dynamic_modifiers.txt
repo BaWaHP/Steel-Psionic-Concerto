@@ -190,6 +190,78 @@ SFR_rural_commune_movement = {
 	production_factory_max_efficiency_factor = SFR_rural_commune_movement_pfmef
 }
 
+#远乡红军
+SFR_red_farhome_army = {
+	enable = { always = yes }
+	icon = GFX_idea_gre_agricultural_communes
+
+	army_org_factor = SFR_red_farhome_army_aof
+	experience_gain_army_factor = SFR_red_farhome_army_egaf
+
+	production_factory_efficiency_gain_factor = SFR_red_farhome_army_pfegf
+	line_change_production_efficiency_factor = SFR_red_farhome_army_lcpef
+	production_speed_arms_factory_factor = SFR_red_farhome_army_psaff
+
+	army_artillery_attack_factor = SFR_red_farhome_army_aaaf
+	army_artillery_defence_factor = SFR_red_farhome_army_aadf
+	unit_artillery_brigade_design_cost_factor = SFR_red_farhome_army_uabdcf
+	unit_artillery_design_cost_factor = SFR_red_farhome_army_uadcf
+
+	army_org_regain = SFR_red_farhome_army_aor
+	training_time_army_factor = SFR_red_farhome_army_ttaf
+	monthly_military_development_process = SFR_red_farhome_army_mmdp
+
+	drift_defence_factor = SFR_red_farhome_army_ddf
+
+	breakthrough_factor = SFR_red_farhome_army_bf
+	planning_speed = SFR_red_farhome_army_ps
+	land_reinforce_rate = SFR_red_farhome_army_lrr
+	max_planning_factor = SFR_red_farhome_army_mpf
+	combat_width_factor = SFR_red_farhome_army_cwf
+
+	recon_factor = SFR_red_farhome_army_rf
+	terrain_penalty_reduction = SFR_red_farhome_army_tpr
+
+	conscription = SFR_red_farhome_army_c
+	surrender_limit = SFR_red_farhome_army_sl
+	command_abilities_cost_factor = SFR_red_farhome_army_cacf
+
+	army_core_attack_factor = SFR_red_farhome_army_caaf
+	army_core_defence_factor = SFR_red_farhome_army_cdaf
+	conscription_factor = SFR_red_farhome_army_cf
+	mobilization_speed = SFR_red_farhome_army_ms
+
+	army_attack_factor = SFR_red_farhome_army_aaf
+	army_defence_factor = SFR_red_farhome_army_adf
+	experience_gain_army_factor = SFR_red_farhome_army_egaf
+
+	modifier_army_sub_unit_irregular_infantry_attack_factor = SFR_red_farhome_army_suiaaf
+	modifier_army_sub_unit_irregular_infantry_defence_factor = SFR_red_farhome_army_suidf
+	unit_irregular_infantry_design_cost_factor = SFR_red_farhome_army_uirdcf
+
+	cat_superior_firepower_cost_factor = SFR_red_farhome_army_csfpccf
+	cat_mass_assault_cost_factor = SFR_red_farhome_army_macf
+
+	modifier_army_sub_unit_artillery_org_recovery_cap_factor = SFR_red_farhome_army_suaorcf
+	army_speed_factor = SFR_red_farhome_army_asf
+	command_power_gain_mult = SFR_red_farhome_army_cpgm
+	army_armor_attack_factor = SFR_red_farhome_army_aaaf
+	army_armor_defence_factor = SFR_red_farhome_army_aadf
+	supply_node_range = SFR_red_farhome_army_snr
+
+	max_command_power = SFR_red_farhome_army_mcp
+	dig_in_speed_factor = SFR_red_farhome_army_disf
+	max_dig_in_factor = SFR_red_farhome_army_mdif
+
+	army_leader_cost_factor = SFR_red_farhome_army_alcf
+	army_leader_start_attack_level = SFR_red_farhome_army_alalcf
+	army_leader_start_defense_level = SFR_red_farhome_army_aldcf
+	army_leader_start_logistics_level = SFR_red_farhome_army_alsl
+	army_leader_start_planning_level = SFR_red_farhome_army_alplcf
+
+	supply_consumption_factor = SFR_red_farhome_army_scf
+}
+
 #建设新平京
 SFR_building_new_capital_farhome = {
 	enable = { always = yes }
