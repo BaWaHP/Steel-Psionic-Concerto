@@ -32,27 +32,15 @@ ideas = {
 			visible = { has_idea = SM_crystal_secret_code }
 			available = { always = no }
 
-			modifier = { }
-
-			research_bonus = {
-				electronics = -0.05
-				industry = -0.05
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				coordination_bonus = 0.02
+				initiative_factor = 0.02
 			}
 
 			equipment_bonus = {
-				infantry_equipment = {
-					breakthrough = 0.05
-					ap_attack = 0.05
-					instant = yes
-				}
-				mechanized_equipment = {
-					breakthrough = 0.05
-					ap_attack = 0.05
-					instant = yes
-				}
 				caster_equipment = {
-					breakthrough = 0.05
-					ap_attack = 0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 			}
@@ -758,28 +746,11 @@ ideas = {
 			available = { always = no }
 			
 			modifier = {
-				stability_factor = -0.1
-				army_attack_factor = 0.08
-				breakthrough_factor = 0.08
-				supply_consumption_factor = 0.08
-			}
-
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.05
-					soft_attack = 0.05
-					instant = yes	
-				}
-				caster_equipment = {
-					build_cost_ic = -0.05
-					soft_attack = 0.05
-					instant = yes	
-				}
-			}
-
-			research_bonus = {
-				industry = -0.03
-				electronics = -0.03
+				supply_consumption_factor = 0.1
+				industrial_capacity_factory = 0.05
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				army_org_regain = 0.1
 			}
 
 			allowed_to_remove = { always = no }

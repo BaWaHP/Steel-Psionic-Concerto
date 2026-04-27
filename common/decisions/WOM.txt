@@ -7,7 +7,8 @@ SPC_generic_sekeleton_decision_category = {
 			date > 2003.1.1
 			ARZ = { exists = no }
 			has_war = no
-			FROM = { is_neighbor_of = ROOT }
+			FROM = { is_neighbor_of = ROOT NOT = { is_subject_of = ROOT } }
+			is_subject = no
 		}
 
 		targets_dynamic = yes

@@ -1,117 +1,82 @@
 defined_text = {
-	name = PEO_get_congress_status
+	name = GET_PEO_national_control_commission_seat
 	text = {
-		trigger = {
-			check_variable = { PEO_congress_status_var = 0 }
+		trigger = {  
+			set_temp_variable = { TEMP_SEAT = 12 }
+			subtract_from_temp_variable = { TEMP_SEAT = PEO_national_control_commission_seat }
 		}
-		localization_key = PEO_get_congress_status_1
-	}
-	text = {
-		trigger = {
-			check_variable = { PEO_congress_status_var = 1 }
-		}
-		localization_key = PEO_get_congress_status_2
-	}
-	text = {
-		trigger = {
-			check_variable = { PEO_congress_status_var = 2 }
-		}
-		localization_key = PEO_get_congress_status_3
+		localization_key = "[?TEMP_SEAT]"
 	}
 }
 
 defined_text = {
-	name = PEO_get_nationalism_emotions
+	name = GET_PEO_national_control_commission_group_1_status
 	text = {
-		trigger = {
-			check_variable = { PEO_nationalism_emotions_var = 0 }
-		}
-		localization_key = PEO_get_nationalism_emotions_1
+		trigger = { check_variable = { PEO_national_control_commission_group_1_status = 1 } }
+		localization_key = PEO_national_control_commission_group_1_status_1
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_nationalism_emotions_var = 1 }
-		}
-		localization_key = PEO_get_nationalism_emotions_2
+		trigger = { check_variable = { PEO_national_control_commission_group_1_status = 2 } }
+		localization_key = PEO_national_control_commission_group_1_status_2
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_nationalism_emotions_var = 2 }
-		}
-		localization_key = PEO_get_nationalism_emotions_3
+		trigger = { check_variable = { PEO_national_control_commission_group_1_status = 3 } }
+		localization_key = PEO_national_control_commission_group_1_status_3
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_nationalism_emotions_var = 3 }
-		}
-		localization_key = PEO_get_nationalism_emotions_4
+		trigger = { check_variable = { PEO_national_control_commission_group_1_status = 4 } }
+		localization_key = PEO_national_control_commission_group_1_status_4
+	}
+	text = {
+		trigger = { check_variable = { PEO_national_control_commission_group_1_status = 5 } }
+		localization_key = PEO_national_control_commission_group_1_status_5
 	}
 }
 
 defined_text = {
-	name = PEO_get_palace_of_republic_status
+	name = GET_PEO_national_control_commission_group_2_status
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 0 }
-		}
-		localization_key = PEO_get_palace_of_republic_status_1
+		trigger = { check_variable = { PEO_national_control_commission_group_2_status = 1 } }
+		localization_key = PEO_national_control_commission_group_2_status_1
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 1 }
-		}
-		localization_key = PEO_get_palace_of_republic_status_2
+		trigger = { check_variable = { PEO_national_control_commission_group_2_status = 2 } }
+		localization_key = PEO_national_control_commission_group_2_status_2
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 2 }
-		}
-		localization_key = PEO_get_palace_of_republic_status_3
+		trigger = { check_variable = { PEO_national_control_commission_group_2_status = 3 } }
+		localization_key = PEO_national_control_commission_group_2_status_3
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 3 }
-		}
-		localization_key = PEO_get_palace_of_republic_status_4
+		trigger = { check_variable = { PEO_national_control_commission_group_2_status = 4 } }
+		localization_key = PEO_national_control_commission_group_2_status_4
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 4 }
-		}
-		localization_key = PEO_get_palace_of_republic_status_5
+		trigger = { check_variable = { PEO_national_control_commission_group_2_status = 5 } }
+		localization_key = PEO_national_control_commission_group_2_status_5
 	}
 }
 
 defined_text = {
-	name = PEO_get_other_departments_unhappy
+	name = GET_PEO_national_control_commission_group_3_status
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 0 }
-		}
-		localization_key = PEO_get_other_departments_unhappy_1
+		trigger = { check_variable = { PEO_national_control_commission_group_3_status = 1 } }
+		localization_key = PEO_national_control_commission_group_3_status_1
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 1 }
-		}
-		localization_key = PEO_get_other_departments_unhappy_2
+		trigger = { check_variable = { PEO_national_control_commission_group_3_status = 2 } }
+		localization_key = PEO_national_control_commission_group_3_status_2
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 2 }
-		}
-		localization_key = PEO_get_other_departments_unhappy_3
+		trigger = { check_variable = { PEO_national_control_commission_group_3_status = 3 } }
+		localization_key = PEO_national_control_commission_group_3_status_3
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 3 }
-		}
-		localization_key = PEO_get_other_departments_unhappy_4
+		trigger = { check_variable = { PEO_national_control_commission_group_3_status = 4 } }
+		localization_key = PEO_national_control_commission_group_3_status_4
 	}
 	text = {
-		trigger = {
-			check_variable = { PEO_palace_of_republic_status_var = 4 }
-		}
-		localization_key = PEO_get_other_departments_unhappy_5
+		trigger = { check_variable = { PEO_national_control_commission_group_3_status = 5 } }
+		localization_key = PEO_national_control_commission_group_3_status_5
 	}
 }

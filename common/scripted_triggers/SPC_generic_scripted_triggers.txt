@@ -1,3 +1,9 @@
+SPC_has_mio_trigger = {
+	OR = {
+		tag = TPG
+	}
+}
+
 can_core_nation_through_compliance = {	#可核心化占领
 	any_of_scopes = {
 		array = potential_cores
@@ -117,7 +123,7 @@ SPC_generic_region_trigger_3 = {	#沃姆任意吃鸡政权
 		#斯布里奇
 		tag = SBG tag = HCB tag = HLD
 		#大公国
-		tag = TPG
+		SPC_generic_region_trigger_3_4 = yes
 	}
 }
 
@@ -145,13 +151,13 @@ SPC_generic_region_trigger_3_3 = {	#斯布里奇任意吃鸡政权
 SPC_generic_region_trigger_3_4 = {	#大公国任意吃鸡政权
 	OR = {
 		#大公国
-		tag = TPG
+		tag = TPG tag = ROG
 	}
 }
 
 SPC_generic_region_trigger_3_5 = {	#阿瑞萨任意吃鸡政权
 	OR = {
-		#大公国
+		#阿瑞萨
 		tag = ARZ
 	}
 }

@@ -1,0 +1,86 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#新解放区
+CLD_new_liberated_zone_tt = {
+	enable = { owner = { tag = CLD } }
+	icon = GFX_idea_FRA_liberte_egalite_solidarite
+
+	local_manpower = -0.2
+	local_resources_factor = -0.3
+	local_factories = -0.3
+	local_building_slots_factor = -0.2
+	local_factory_energy_consumption = 0.4
+	state_production_speed_buildings_factor = -0.2
+	state_production_speed_infrastructure_factor = -0.25
+}
+
+#新解放区
+CLD_new_liberated_zone = {
+	enable = { owner = { tag = CLD } }
+	icon = GFX_idea_FRA_liberte_egalite_solidarite
+
+	local_manpower = CLD_new_liberated_zone_lm
+	local_resources_factor = CLD_new_liberated_zone_lrf
+	local_factories = CLD_new_liberated_zone_lf
+	local_building_slots_factor = CLD_new_liberated_zone_lbsf
+	local_factory_energy_consumption = CLD_new_liberated_zone_lfec
+	state_production_speed_buildings_factor = CLD_new_liberated_zone_spsbf
+	state_production_speed_infrastructure_factor = CLD_new_liberated_zone_spsif
+}
+
+#解放区
+CLD_liberated_zone = {
+	enable = { owner = { tag = CLD } }
+	icon = GFX_idea_tur_kemalism_with_socialist_characteristics
+
+	local_manpower = 0.04
+	local_resources_factor = 0.08
+	local_factories = 0.05
+	local_building_slots_factor = 0.1
+	local_factory_energy_consumption = -0.25
+	state_production_speed_buildings_factor = 0.05
+	state_production_speed_infrastructure_factor = 0.15
+}
+
+#红军北部特别军区
+CLD_red_army_north_special_military_district = {
+	enable = { owner = { tag = CLD } }
+	icon = GFX_idea_MEX_revolutionary_army
+
+	local_supplies = 0.3
+	out_of_supply_factor = -0.5
+	army_core_attack_factor = 0.15
+	army_core_defence_factor = 0.15
+	pocket_penalty = -0.25
+	equipment_capture_factor = 0.25
+	breakthrough_factor = -0.2
+	enemy_army_speed_factor = -0.15
+	supply_factor = 0.15
+	attrition_for_controller = -0.1
+	enemy_attrition = 0.1
+	state_production_speed_bunker_factor = 0.25
+}

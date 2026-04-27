@@ -5,16 +5,20 @@ state={
 	provinces={
 		3657 5364 7065 7920 8040 9052 16880 17022 17149 17284 17370 17449 17496 
 	}
+	resources = {
+		steel = 16
+		tungsten = 16
+	}
 	history = {
 		owner = TPG
 		add_core_of = TPG
 		add_claim_by = SFH
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
+			industrial_complex = 1
 		}
 		victory_points = {
-			17284 3
+			17284 5
 		}
 	}
 	manpower=1550000

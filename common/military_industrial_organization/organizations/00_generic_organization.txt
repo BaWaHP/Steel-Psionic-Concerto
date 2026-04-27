@@ -21,6 +21,9 @@ generic_tank_organization = {		#通用坦克
 			tag = QTA
 			tag = CLD
 		}
+		OR = {
+			SPC_has_mio_trigger = no
+		}
 	}
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
@@ -2043,10 +2046,11 @@ generic_escort_ship_organization = {		#通用舰船
 
 	allowed = {
 		NOT = { 
-			OR = {
-				tag = SFH 
-				tag = CLD
-			}
+			tag = SFH 
+			tag = CLD
+		}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 
@@ -3472,9 +3476,10 @@ generic_general_aircraft_organization = {		#通用飞机
 
 	allowed = {
 		NOT = { 
-			OR = {
-				tag = CLD
-			}
+			tag = CLD
+		}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 
@@ -6201,6 +6206,9 @@ generic_artillery_organization = {		#通用火炮
 			tag = SFR
 			tag = QTA
 		}
+		OR = {
+			SPC_has_mio_trigger = no
+		}
 	}
 
 	equipment_type = {
@@ -6512,13 +6520,14 @@ generic_infantry_equipment_organization = {		#通用步枪
 
 	allowed = {
 		NOT = { 
-			OR = {
-				tag = SFH 
-				tag = CLD
-				tag = MGC
-				tag = SFR
-				tag = QTA
-			}
+			tag = SFH 
+			tag = CLD
+			tag = MGC
+			tag = SFR
+			tag = QTA
+		}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 
@@ -7081,6 +7090,9 @@ generic_motorized_mechanized_organization = {		#通用摩托化
 			tag = SFR
 			tag = QTA
 			tag = CLD
+		}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 

@@ -57,4 +57,13 @@ leader_traits = {
 		}
 	}
 
+	#资深魔法教授
+	TPG_senior_magic_professor = {
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }

@@ -6,15 +6,16 @@ state={
 		3745 4572 6053 6309 8272 10140 19329 19452 19466 19503 19617 
 	}
 	resources = {
-		magic_crystal = 12
-		chromium = 4
 		steel = 30
+		magic_crystal = 12
+		coal = 4
+		chromium = 4
 	}
 	history = {
 		owner = KDK
 		add_core_of = KDK
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 			industrial_complex = 1
 		}
 		victory_points = {

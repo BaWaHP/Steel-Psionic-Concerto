@@ -806,7 +806,7 @@ country_event = {	#清洗国际派？
 		add_stability = -0.05
 		add_war_support = -0.05
 		add_political_power = -50
-		SFR_front_unity_up_3 = yes
+		SFR_front_unity_down_2 = yes
 		add_power_balance_value = {
 			id = SFR_opposition_bop
 			value = -0.05
@@ -825,7 +825,7 @@ country_event = {	#清洗国际派？
 		name = SFR.24.b
 		add_stability = 0.05
 		add_political_power = 50
-		SFR_front_unity_down_1 = yes
+		SFR_front_unity_up_1 = yes
 	}
 }
 
@@ -1030,7 +1030,7 @@ country_event = {	#喝茶
 	}
 }
 
-country_event = {	#多方会谈
+country_event = {	#多方会谈（1）
 	id = SFR.33
 	title = SFR.33.t
 	desc = SFR.33.d
@@ -1040,6 +1040,20 @@ country_event = {	#多方会谈
 	
 	option = {
 		name = SFR.33.a
+		country_event = SFR.34
+	}
+}
+
+country_event = {	#多方会谈（2）
+	id = SFR.34
+	title = SFR.34.t
+	desc = SFR.34.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.34.a
 		add_stability = 0.05
 		SFR_front_unity_up_3 = yes
 	}
@@ -1437,6 +1451,7 @@ country_event = {	#新世界的曙光
 	
 	option = {
 		name = SFR.200.a
+		add_research_slot = 1
 		effect_tooltip = {
 			add_ideas = {
 				SFR_roving_army
@@ -1586,13 +1601,14 @@ country_event = {	#政府军将领
 	option = {
 		name = SFR.205.a
 		add_stability = 0.05
+		add_war_support = 0.05
 		add_political_power = 50
 		custom_effect_tooltip = SFR_left_stronger_tt
 		add_to_variable = { SFR_left_right_influence = 1 }
 		add_to_variable = {
 			var = military_development_mod
-			value = 2
-			tooltip = military_development_mod_tt_up_1
+			value = 4
+			tooltip = military_development_mod_tt_up_2
 		}
 		army_experience = 30
 	}
@@ -1601,8 +1617,11 @@ country_event = {	#政府军将领
 		name = SFR.205.b
 		add_stability = -0.05
 		add_manpower = -21
-		SFH_GanPan = { set_nationality = ROOT }
-		SFH_LuZhan = { set_nationality = ROOT }
+		SFH = {
+			SFH_GanPan = { set_nationality = SFR }
+			SFH_LuZhan = { set_nationality = SFR }
+		}
+		SPC_military_development_amount_up_1 = yes
 	}
 
 	option = {
@@ -1610,11 +1629,19 @@ country_event = {	#政府军将领
 		add_stability = -0.1
 		add_political_power = -50
 		add_manpower = -7
-		SFH_GanPan = { set_nationality = ROOT }
-		SFH_LuZhan = { set_nationality = ROOT }
-		SFH_ZhangHuawu = { set_nationality = ROOT }
-		SFH_YingQichen = { set_nationality = ROOT }
-		SFH_ZhuChen = { set_nationality = ROOT }
+		SFH = {
+			SFH_GanPan = { set_nationality = SFR }
+			SFH_LuZhan = { set_nationality = SFR }
+			SFH_ZhangHuawu = { set_nationality = SFR }
+			SFH_YingQichen = { set_nationality = SFR }
+			SFH_ZhuChen = { set_nationality = SFR }
+		}
+		add_to_variable = {
+			var = military_development_mod
+			value = 2
+			tooltip = military_development_mod_tt_up_1
+		}
+		army_experience = 10
 		custom_effect_tooltip = SFR_right_stronger_tt
 		add_to_variable = { SFR_left_right_influence = -1 }
 	}
@@ -2058,12 +2085,20 @@ country_event = {	#恶徒的命运
 		name = SFR.220.a
 		add_stability = 0.02
 		add_political_power = 10
+		country_event = {
+			id = SFR.226
+			days = 1
+		}
 	}
 
 	option = {
 		name = SFR.220.b
 		add_manpower = -4
 		add_political_power = 50
+		country_event = {
+			id = SFR.227
+			days = 1
+		}
 	}
 }
 
@@ -2151,6 +2186,7 @@ country_event = {	#报应
 	
 	option = {
 		name = SFR.226.a
+		add_manpower = -4
 	}
 }
 
@@ -2164,6 +2200,7 @@ country_event = {	#结束
 	
 	option = {
 		name = SFR.227.a
+		add_manpower = -4
 	}
 }
 
@@ -2813,13 +2850,13 @@ country_event = {	#红旗高悬
 	
 	option = {
 		name = SFR.335.a
-		#if = {
-		#	limit = { has_country_flag = SFR_focus_1_3 }
-		#	clr_country_flag = SFR_focus_1_4
-		#	set_country_flag = SFR_focus_1_5
-		#}
+		if = {
+			limit = { has_country_flag = SFR_focus_1_4 }
+			clr_country_flag = SFR_focus_1_4
+			set_country_flag = SFR_focus_1_5
+		}
+		else = { load_focus_tree = generic_focus }
 		mark_focus_tree_layout_dirty = yes
-		load_focus_tree = generic_focus
 		custom_effect_tooltip = unlock_new_focus_tree_tt
 	}
 }
@@ -2864,10 +2901,10 @@ country_event = {	#远乡共产党的未来？
 			popularity = 0.05
 		}
 		custom_effect_tooltip = SFR.351.a.tt
-		set_power_balance = {
-			id = SFR_commi_bop
-			set_value = 0
-		}
+		#set_power_balance = {
+		#	id = SFR_commi_bop
+		#	set_value = 0
+		#}
 	}
 }
 
@@ -3052,7 +3089,7 @@ country_event = {	#苦口婆心
 	}
 
 	option = {
-		name = SFR.358.a
+		name = SFR.358.b
 		add_war_support = -0.05
 		add_political_power = -200
 		country_event = {
@@ -3325,10 +3362,10 @@ country_event = {	#收紧栓绳
 			ideology = revolutionary_communism
 			popularity = 0.1
 		}
-		add_power_balance_value = {
-			id = SFR_commi_bop
-			value = -0.1
-		}
+		#add_power_balance_value = {
+		#	id = SFR_commi_bop
+		#	value = -0.1
+		#}
 		add_to_variable = { SFR_pol_reform_left_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 		add_to_variable = { SFR_pol_reform_right_anger = -1 }
@@ -3352,10 +3389,10 @@ country_event = {	#互相报告
 			ideology = revolutionary_communism
 			popularity = 0.05
 		}
-		add_power_balance_value = {
-			id = SFR_commi_bop
-			value = 0.1
-		}
+		#add_power_balance_value = {
+		#	id = SFR_commi_bop
+		#	value = 0.1
+		#}
 		add_to_variable = { SFR_pol_reform_left_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 	}
@@ -3460,10 +3497,10 @@ country_event = {	#抓捕
 		name = SFR.373.a
 		add_stability = 0.05
 		add_political_power = -20
-		add_power_balance_value = {
-			id = SFR_commi_bop
-			value = 0.05
-		}
+		#add_power_balance_value = {
+		#	id = SFR_commi_bop
+		#	value = 0.05
+		#}
 		add_to_variable = { SFR_pol_reform_left_anger = -1 }
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_1
 		add_to_variable = { SFR_pol_reform_right_anger = 1 }
@@ -3496,10 +3533,10 @@ country_event = {	#借机清算
 			ideology = revolutionary_communism
 			popularity = 0.1
 		}
-		add_power_balance_value = {
-			id = SFR_commi_bop
-			value = -0.1
-		}
+		#add_power_balance_value = {
+		#	id = SFR_commi_bop
+		#	value = -0.1
+		#}
 		add_to_variable = { SFR_pol_reform_right_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
 	}
@@ -3803,6 +3840,33 @@ country_event = {	#政治局势缓和
 	#picture = 
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					OR = {
+						has_idea = SFR_anti_rightist_movement
+						has_idea = SFR_anti_rightist_movement_2
+						has_idea = SFR_anti_rightist_movement_3
+						has_idea = SFR_anti_rightist_movement_4
+						has_idea = SFR_anti_counter_revolution
+						has_idea = SFR_anti_counter_revolution_2
+						has_idea = SFR_anti_counter_revolution_3
+						has_idea = SFR_anti_counter_revolution_4
+						has_idea = SFR_left_right_unsatisfied
+						has_idea = SFR_left_right_unsatisfied_2
+						has_idea = SFR_left_right_unsatisfied_3
+						has_idea = SFR_left_right_unsatisfied_4
+					}
+				}
+				country_event = {
+					id = SFR.389
+					days = 90
+				}
+			}
+		}
+	}
 	
 	option = {
 		name = SFR.389.a
@@ -3915,6 +3979,9 @@ country_event = {	#全国土改圆满成功！
 			value = 5
 			tooltip = living_standard_development_mod_tt_up_2
 		}
+		remove_dynamic_modifier = {
+			modifier = SFR_land_reform_in_progress
+		}
 	}
 }
 
@@ -3978,6 +4045,9 @@ country_event = {	#全国土改正常收尾
 			value = 2
 			tooltip = living_standard_development_mod_tt_up_1
 		}
+		remove_dynamic_modifier = {
+			modifier = SFR_land_reform_in_progress
+		}
 	}
 }
 
@@ -4040,6 +4110,9 @@ country_event = {	#全国土改草草收尾
 			var = living_standard_development_mod
 			value = 1
 			tooltip = living_standard_development_mod_tt_up_1
+		}
+		remove_dynamic_modifier = {
+			modifier = SFR_land_reform_in_progress
 		}
 	}
 }
@@ -4253,7 +4326,7 @@ country_event = {	#最后抉择
 	}
 
 	option = {
-		name = SFR.409.a
+		name = SFR.409.b
 		effect_tooltip = { unlock_national_focus = SFR_land_requisition }
 		set_country_flag = SFR_land_requisition_flag
 	}
@@ -5152,6 +5225,12 @@ country_event = {	#远乡向我们索取土地！
 	option = {
 		name = SFR.753.b
 		add_war_support = 0.05
+		SFR = {
+			create_wargoal = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
 		ai_chance = {
 			base = 50
 		}
@@ -6151,13 +6230,7 @@ country_event = {	#开始表决！
 	
 	option = {
 		name = SFR.2004.a
-		set_country_flag = SFR_workers_and_peasants_congress_voting
-		set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
-		custom_effect_tooltip = {
-			localization_key = SFR_workers_and_peasants_congress_vote_start_tt
-			DAYS = 7
-		}
-		set_variable = { SFR_workers_and_peasants_congress_voting_days = 7 }
+		custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 		hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 1 }	}
 		effect_tooltip = { SFR_workers_and_peasants_congress_vote_1 = yes }
 	}
@@ -6346,7 +6419,6 @@ country_event = {	#新教育设想递交表决！
 	
 	option = {
 		name = SFR.2012.a
-		set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_6 }
 		custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
 		hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 6 }	}
 		effect_tooltip = { SFR_workers_and_peasants_congress_vote_6 = yes }

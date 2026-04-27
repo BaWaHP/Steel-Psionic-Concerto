@@ -7,12 +7,14 @@ state={
 	}
 	resources = {
 		magic_crystal = 15
+		coal = 5
 	}
 	history = {
 		owner = VLF
 		add_core_of = VLF
 		buildings = {
 			infrastructure = 1
+			arms_factory = 1
 		}
 		victory_points = {
 			18266 8

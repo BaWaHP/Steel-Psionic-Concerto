@@ -148,15 +148,6 @@ defined_text = { # Country
 	text = {
 		trigger = { 
 			AND = {
-				tag = TPG
-				check_variable = { SPC_intro_screen = 5 } 
-			}
-		}
-		localization_key = SPC_IS_TPG_national_desc_2
-	}
-	text = {
-		trigger = { 
-			AND = {
 				tag = ROK
 				check_variable = { SPC_intro_screen = 1 } 
 			}

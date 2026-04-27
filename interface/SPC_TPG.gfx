@@ -97,6 +97,66 @@ spriteTypes = {
 		name = "GFX_TPG_william_anderson"
 		texturefile = "gfx/leaders/TPG/william_anderson.png"
 	}
+	spriteType = {
+		name = "GFX_TPG_leopold"
+		texturefile = "gfx/leaders/TPG/leopold.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_astorian"
+		texturefile = "gfx/leaders/TPG/astorian.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_liam_simos"
+		texturefile = "gfx/leaders/TPG/liam_simos.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_godric"
+		texturefile = "gfx/leaders/TPG/godric.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_isabella_sterling"
+		texturefile = "gfx/leaders/TPG/isabella_sterling.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_penelope_lavensk"
+		texturefile = "gfx/leaders/TPG/penelope_lavensk.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_elliot_clement"
+		texturefile = "gfx/leaders/TPG/elliot_clement.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_olivier_basselomue"
+		texturefile = "gfx/leaders/TPG/olivier_basselomue.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_leonard_dreik"
+		texturefile = "gfx/leaders/TPG/leonard_dreik.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_gavin_riddle"
+		texturefile = "gfx/leaders/TPG/gavin_riddle.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_ellinor_valentine"
+		texturefile = "gfx/leaders/TPG/ellinor_valentine.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_avery_montefort"
+		texturefile = "gfx/leaders/TPG/avery_montefort.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_mark_albert"
+		texturefile = "gfx/leaders/TPG/mark_albert.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_lionel_stern"
+		texturefile = "gfx/leaders/TPG/lionel_stern.png"
+	}
+	spriteType = {
+		name = "GFX_TPG_elsenbo"
+		texturefile = "gfx/leaders/TPG/elsenbo.png"
+	}
 	###小肖像###
 	spriteType = {
 		name = "GFX_idea_TPG_Gilania_Alphonse_III"
@@ -149,6 +209,66 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TPG_william_anderson"
 		texturefile = "gfx/advisors/TPG/william_anderson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_leopold"
+		texturefile = "gfx/advisors/TPG/leopold.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_astorian"
+		texturefile = "gfx/advisors/TPG/astorian.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_liam_simosn"
+		texturefile = "gfx/advisors/TPG/liam_simosn.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_godric"
+		texturefile = "gfx/advisors/TPG/godric.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_isabella_sterling"
+		texturefile = "gfx/advisors/TPG/isabella_sterling.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_penelope_lavensk"
+		texturefile = "gfx/advisors/TPG/penelope_lavensk.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_elliot_clement"
+		texturefile = "gfx/advisors/TPG/elliot_clement.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_olivier_basselomue"
+		texturefile = "gfx/advisors/TPG/olivier_basselomue.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_leonard_dreik"
+		texturefile = "gfx/advisors/TPG/leonard_dreik.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_gavin_riddle"
+		texturefile = "gfx/advisors/TPG/gavin_riddle.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_ellinor_valentine"
+		texturefile = "gfx/advisors/TPG/ellinor_valentine.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_avery_montefort"
+		texturefile = "gfx/advisors/TPG/avery_montefort.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_lionel_stern"
+		texturefile = "gfx/advisors/TPG/lionel_stern.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_mark_albert"
+		texturefile = "gfx/advisors/TPG/mark_albert.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TPG_elsenbo"
+		texturefile = "gfx/advisors/TPG/elsenbo.png"
 	}
 	###特质###
 	spriteType = {
@@ -345,5 +465,41 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 		transparencecheck = yes
+	}
+	###TextIcon###
+	spriteType = {
+		name = "GFX_texticons_TPG_1"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_2"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_3"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_4"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_4.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_5"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_5.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_6"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_6.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_TPG_7"
+		texturefile = "gfx/interface/texticons/TPG/texticons_TPG_7.png"
+		legacy_lazy_load = no
 	}
 }

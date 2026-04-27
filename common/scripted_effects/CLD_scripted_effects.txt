@@ -64,6 +64,7 @@ SPC_CLD_startup_effect = {
 		set_variable = { CLD_enemy_sabotage_mission_days = 14 }
 		set_variable = { CLD_enemy_sabotage_mission_level = 0 }
 		activate_mission = CLD_enemy_sabotage_mission
+		country_lock_all_division_template = yes
 		###控制省份对应普及度###
 		107 = {
 			set_variable = { state_magic_progress = 0 }
@@ -113,5 +114,404 @@ SPC_CLD_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 3 }		
 		}
+	}
+}
+
+CLD_new_liberated_zone_init = {
+	effect_tooltip = { add_dynamic_modifier = { modifier = CLD_new_liberated_zone_tt } }
+	hidden_effect = { add_dynamic_modifier = { modifier = CLD_new_liberated_zone } }
+	add_to_variable = { CLD_new_liberated_zone_lm = -0.2 }
+	add_to_variable = { CLD_new_liberated_zone_lrf = -0.3 }
+	add_to_variable = { CLD_new_liberated_zone_lf = -0.3 }
+	add_to_variable = { CLD_new_liberated_zone_lbsf = -0.2 }
+	add_to_variable = { CLD_new_liberated_zone_lfec = 0.4 }
+	add_to_variable = { CLD_new_liberated_zone_spsbf = -0.2 }
+	add_to_variable = { CLD_new_liberated_zone_spsif = -0.25 }
+	set_variable = { CLD_new_liberated_zone_level_1 = 0 }	#治安
+	set_variable = { CLD_new_liberated_zone_level_2 = 0 }	#经济
+	set_variable = { CLD_new_liberated_zone_level_3 = 0 }	#医疗卫生
+}
+
+CLD_new_liberated_zone_1_up = {
+	if = {
+		limit = { check_variable = { CLD_new_liberated_zone_level_1 < 10 } }
+		add_to_variable = { 
+			var = CLD_new_liberated_zone_level_1
+			value = 1 
+			tooltip = CLD_new_liberated_zone_1_tt
+		}
+		add_to_variable = { CLD_new_liberated_zone_lm = 0.01 }
+		add_to_variable = { CLD_new_liberated_zone_lrf = 0.02 }
+		add_to_variable = { CLD_new_liberated_zone_lf = 0.01 }
+		add_to_variable = { CLD_new_liberated_zone_lbsf = 0.01 }
+		add_to_variable = { CLD_new_liberated_zone_spsbf = 0.02 }
+		add_to_variable = { CLD_new_liberated_zone_spsif = 0.02 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = CLD_new_liberated_zone_tt_0
+				add_idea = CLD_new_liberated_zone_tt_1
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					has_state_category = rural
+					has_state_category = town
+					has_state_category = large_town
+				} 
+			}
+			CLD = {
+				add_to_variable = {
+					var = agricultural_development_amount
+					value = 1
+					tooltip = agricultural_development_amount_tt
+				}
+			}
+		}
+		else = {
+			CLD = {
+				add_to_variable = {
+					var = industrial_development_amount
+					value = 1
+					tooltip = industrial_development_amount_tt
+				}
+				add_to_variable = {
+					var = research_development_amount
+					value = 1
+					tooltip = research_development_amount_tt
+				}
+			}
+		}
+	}
+}
+
+CLD_new_liberated_zone_2_up = {
+	if = {
+		limit = { check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+		add_to_variable = { 
+			var = CLD_new_liberated_zone_level_2
+			value = 1 
+			tooltip = CLD_new_liberated_zone_2_tt
+		}
+		add_to_variable = { CLD_new_liberated_zone_lrf = 0.02 }
+		add_to_variable = { CLD_new_liberated_zone_lf = 0.02 }
+		add_to_variable = { CLD_new_liberated_zone_lbsf = 0.01 }
+		add_to_variable = { CLD_new_liberated_zone_lfec = -0.04 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = CLD_new_liberated_zone_tt_0
+				add_idea = CLD_new_liberated_zone_tt_2
+			}
+		}
+		if = {
+			limit = { 
+				OR = { 
+					has_state_category = rural
+					has_state_category = town
+					has_state_category = large_town
+				} 
+			}
+			CLD = {
+				add_to_variable = {
+					var = agricultural_development_amount
+					value = 1
+					tooltip = agricultural_development_amount_tt
+				}
+			}
+		}
+		else = {
+			CLD = {
+				add_to_variable = {
+					var = industrial_development_amount
+					value = 1
+					tooltip = industrial_development_amount_tt
+				}
+			}
+		}
+	}
+}
+
+CLD_new_liberated_zone_3_up = {
+	if = {
+		limit = { check_variable = { CLD_new_liberated_zone_level_3 < 5 } }
+		add_to_variable = { 
+			var = CLD_new_liberated_zone_level_3
+			value = 1 
+			tooltip = CLD_new_liberated_zone_3_tt
+		}
+		add_to_variable = { CLD_new_liberated_zone_lm = 0.02 }
+		add_to_variable = { CLD_new_liberated_zone_lf = 0.01 }
+		add_to_variable = { CLD_new_liberated_zone_lbsf = 0.01 }
+		force_update_dynamic_modifier = yes
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = CLD_new_liberated_zone_tt_0
+				add_idea = CLD_new_liberated_zone_tt_3
+			}
+		}
+		CLD = {
+			add_to_variable = {
+				var = living_standard_development_amount
+				value = 3
+				tooltip = living_standard_development_amount_tt
+			}
+		}
+	}
+}
+
+CLD_central_people_committe_decisions_init = {
+	unlock_decision_category_tooltip = CLD_central_people_committe_decisions
+	set_country_flag = CLD_central_people_committe_decisions_flag
+
+	set_variable = { CLD_central_people_committe_1_1 = 20 }
+	set_variable = { CLD_central_people_committe_1_2 = 90 }
+	set_variable = { CLD_central_people_committe_2_1 = 50 }
+	set_variable = { CLD_central_people_committe_2_2 = 90 }
+	set_variable = { CLD_central_people_committe_3_1 = 20 }
+	set_variable = { CLD_central_people_committe_3_2 = 80 }
+	set_variable = { CLD_central_people_committe_4_1 = 10 }
+	set_variable = { CLD_central_people_committe_4_2 = 85 }
+
+	set_temp_variable = { CLD_central_people_committe_1_buff = CLD_communist_group_trait_1 }
+	multiply_temp_variable = { CLD_central_people_committe_1_buff = 3 }
+	add_to_variable = { CLD_central_people_committe_1_1 = CLD_central_people_committe_1_buff }
+	subtract_from_variable = { CLD_central_people_committe_2_1 = CLD_communist_group_trait_1 }
+	subtract_from_variable = { CLD_central_people_committe_3_1 = CLD_communist_group_trait_1 }
+	subtract_from_variable = { CLD_central_people_committe_4_1 = CLD_communist_group_trait_1 }
+
+	set_temp_variable = { CLD_central_people_committe_2_buff = CLD_communist_group_trait_2 }
+	multiply_temp_variable = { CLD_central_people_committe_2_buff = 3 }
+	add_to_variable = { CLD_central_people_committe_2_1 = CLD_central_people_committe_2_buff }
+	subtract_from_variable = { CLD_central_people_committe_2_1 = CLD_communist_group_trait_2 }
+	subtract_from_variable = { CLD_central_people_committe_3_1 = CLD_communist_group_trait_2 }
+	subtract_from_variable = { CLD_central_people_committe_4_1 = CLD_communist_group_trait_2 }
+
+	CLD_central_people_committe_update = yes
+
+	clear_variable = CLD_communist_group_trait_1
+	clear_variable = CLD_communist_group_trait_2
+}
+
+CLD_central_people_committe_update = {
+	clamp_variable = {
+		var = CLD_central_people_committe_1_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_2_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_3_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_4_1
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_1_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_2_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_3_2
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = CLD_central_people_committe_4_2
+		min = 0
+		max = 100
+	}
+	CLD_central_people_committe_5_cal = yes
+}
+
+CLD_central_people_committe_mod = {
+	#set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 10 }
+	#CLD_central_people_committe_mod = yes
+	set_temp_variable = { current_tol = 100 }
+
+	if = {
+		limit = { check_variable = { temp_index = 1 } }
+		add_to_variable = {
+			var = CLD_central_people_committe_1_1
+			value = temp_val
+			tooltip = CLD_central_people_committe_1_1_tt 
+		}
+		subtract_from_temp_variable = { current_tol = CLD_central_people_committe_1_1 }
+	}
+	else_if = {
+		limit = { check_variable = { temp_index = 2 } }
+		add_to_variable = {
+			var = CLD_central_people_committe_2_1
+			value = temp_val
+			tooltip = CLD_central_people_committe_2_1_tt 
+		}
+		subtract_from_temp_variable = { current_tol = CLD_central_people_committe_2_1 }
+	}
+	else_if = {
+		limit = { check_variable = { temp_index = 3 } }
+		add_to_variable = {
+			var = CLD_central_people_committe_3_1
+			value = temp_val
+			tooltip = CLD_central_people_committe_3_1_tt 
+		}
+		subtract_from_temp_variable = { current_tol = CLD_central_people_committe_3_1 }
+	}
+	else_if = {
+		limit = { check_variable = { temp_index = 4 } }
+		add_to_variable = {
+			var = CLD_central_people_committe_4_1
+			value = temp_val
+			tooltip = CLD_central_people_committe_4_1_tt 
+		}
+		subtract_from_temp_variable = { current_tol = CLD_central_people_committe_4_1 }
+	}
+
+	if = {
+		limit = { NOT = { check_variable = { temp_index = 1 } } }
+		set_temp_variable = { group_1_ratio = CLD_central_people_committe_1_1 }
+		divide_temp_variable = { group_1_ratio = current_tol }
+		set_temp_variable = { group_1_mod = temp_val }
+		multiply_temp_variable = { group_1_mod = -1 }
+		multiply_temp_variable = { group_1_mod = group_1_ratio }
+		add_to_variable = { CLD_central_people_committe_1_1 = group_1_mod }
+	}
+
+	if = {
+		limit = { NOT = { check_variable = { temp_index = 2 } } }
+		set_temp_variable = { group_2_ratio = CLD_central_people_committe_2_1 }
+		divide_temp_variable = { group_2_ratio = current_tol }
+		set_temp_variable = { group_2_mod = temp_val }
+		multiply_temp_variable = { group_2_mod = -1 }
+		multiply_temp_variable = { group_2_mod = group_2_ratio }
+		add_to_variable = { CLD_central_people_committe_2_1 = group_2_mod }
+	}
+
+	if = {
+		limit = { NOT = { check_variable = { temp_index = 3 } } }
+		set_temp_variable = { group_3_ratio = CLD_central_people_committe_3_1 }
+		divide_temp_variable = { group_3_ratio = current_tol }
+		set_temp_variable = { group_3_mod = temp_val }
+		multiply_temp_variable = { group_3_mod = -1 }
+		multiply_temp_variable = { group_3_mod = group_3_ratio }
+		add_to_variable = { CLD_central_people_committe_3_1 = group_3_mod }
+	}
+
+	if = {
+		limit = { NOT = { check_variable = { temp_index = 4 } } }
+		set_temp_variable = { group_4_ratio = CLD_central_people_committe_4_1 }
+		divide_temp_variable = { group_4_ratio = current_tol }
+		set_temp_variable = { group_4_mod = temp_val }
+		multiply_temp_variable = { group_4_mod = -1 }
+		multiply_temp_variable = { group_4_mod = group_4_ratio }
+		add_to_variable = { CLD_central_people_committe_4_1 = group_4_mod }
+	}
+
+	CLD_central_people_committe_update = yes
+	CLD_central_people_committe_mod_extra_handler = yes
+}
+
+CLD_central_people_committe_mod_extra_handler = {
+	hidden_effect = {
+		set_temp_variable = { extra = 100 }
+		subtract_from_temp_variable = { extra = CLD_central_people_committe_1_1 }
+		subtract_from_temp_variable = { extra = CLD_central_people_committe_2_1 }
+		subtract_from_temp_variable = { extra = CLD_central_people_committe_3_1 }
+		subtract_from_temp_variable = { extra = CLD_central_people_committe_4_1 }
+	
+		if = {
+			limit = { 
+				check_variable = {
+					var = extra
+					value = 0
+					compare = not_equals
+				}
+				check_variable = {
+					var = extra
+					value = 100
+					compare = not_equals
+				}
+			}
+			if = {
+				limit = { check_variable = { temp_index = 1 } }
+				random_list = {
+					33 = { add_to_variable = { CLD_central_people_committe_2_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_3_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_4_1 = extra } }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { temp_index = 2 } }
+				random_list = {
+					33 = { add_to_variable = { CLD_central_people_committe_1_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_3_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_4_1 = extra } }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { temp_index = 3 } }
+				random_list = {
+					33 = { add_to_variable = { CLD_central_people_committe_1_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_2_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_4_1 = extra } }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { temp_index = 4 } }
+				random_list = {
+					33 = { add_to_variable = { CLD_central_people_committe_1_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_2_1 = extra } }
+					33 = { add_to_variable = { CLD_central_people_committe_3_1 = extra } }
+				}
+			}
+			else = {
+				33 = { add_to_variable = { CLD_central_people_committe_1_1 = extra } }
+				33 = { add_to_variable = { CLD_central_people_committe_2_1 = extra } }
+				33 = { add_to_variable = { CLD_central_people_committe_3_1 = extra } }
+				33 = { add_to_variable = { CLD_central_people_committe_4_1 = extra } }
+			}
+			CLD_central_people_committe_update = yes
+			CLD_central_people_committe_mod_extra_handler = yes
+		}
+	}
+}
+
+CLD_central_people_committe_5_cal = {
+	set_variable = { CLD_central_people_committe_5 = 0 }
+
+	set_temp_variable = { cal_1 = CLD_central_people_committe_1_1 }
+	multiply_temp_variable = { cal_1 = CLD_central_people_committe_1_2 }
+	add_to_variable = { CLD_central_people_committe_5 = cal_1 }
+
+	set_temp_variable = { cal_2 = CLD_central_people_committe_2_1 }
+	multiply_temp_variable = { cal_2 = CLD_central_people_committe_2_2 }
+	add_to_variable = { CLD_central_people_committe_5 = cal_2 }
+
+	set_temp_variable = { cal_3 = CLD_central_people_committe_3_1 }
+	multiply_temp_variable = { cal_3 = CLD_central_people_committe_3_2 }
+	add_to_variable = { CLD_central_people_committe_5 = cal_3 }
+
+	set_temp_variable = { cal_4 = CLD_central_people_committe_4_1 }
+	multiply_temp_variable = { cal_4 = CLD_central_people_committe_4_2 }
+	add_to_variable = { CLD_central_people_committe_5 = cal_4 }
+
+	divide_temp_variable = { CLD_central_people_committe_5 = 100 }
+	clamp_variable = {
+		var = CLD_central_people_committe_5
+		min = 0
+		max = 100
 	}
 }

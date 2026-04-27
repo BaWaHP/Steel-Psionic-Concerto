@@ -1788,8 +1788,9 @@ SFR_workers_and_peasants_congress = {
 		days_mission_timeout = var:SFR_workers_and_peasants_congress_voting_days
 
 		timeout_effect = {
-			clr_country_flag = SFR_workers_and_peasants_congress_voting
+			clr_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			SFR_workers_and_peasants_congress_voting_result_effect = yes
+			clear_variable = SFR_workers_and_peasants_congress_voting_title
 		}
 	}
 	SFR_workers_and_peasants_congress_debug_law = {
@@ -1801,9 +1802,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 0 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_0 = yes }
 		}
@@ -1812,7 +1813,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_establish_workers_and_peasants_congress
 		}
 		visible = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
@@ -1822,7 +1823,8 @@ SFR_workers_and_peasants_congress = {
 
 		complete_effect = {
 			country_event = SFR.2000
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_1 }
 		}
 
 		ai_will_do = { base = 1 }
@@ -1831,7 +1833,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_forestry
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_enact_land_reform_act
 		}
 		visible = { has_completed_focus = SFR_enact_land_reform_act }
@@ -1840,9 +1842,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_2 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 2 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_2 = yes }
 		}
@@ -1853,7 +1855,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_wreckers
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_enact_land_reform_act
 		}
 		visible = { 
@@ -1865,9 +1867,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_3 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 3 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_3 = yes }
 		}
@@ -1878,7 +1880,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_CHL_mapuche_reorganize_the_bolivian_government
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_minority_autonomous_region
 		}
 		visible = { 
@@ -1890,9 +1892,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_4 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 4 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_4 = yes }
 		}
@@ -1903,7 +1905,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_eng_propaganda_campaigns
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_implement_minority_education
 		}
 		visible = { 
@@ -1915,9 +1917,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_5 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 5 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_5 = yes }
 		}
@@ -1928,7 +1930,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_brainwash
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_promote_compulsory_education
 		}
 		visible = { has_completed_focus = SFR_promote_compulsory_education }
@@ -1937,8 +1939,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			country_event = SFR.2010
+			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_6 }
 		}
 
 		ai_will_do = { base = 1 }
@@ -1947,7 +1950,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_merge_plant_materiel
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_idea = SFR_incomplete_public_healthcare
 		}
 		visible = { 
@@ -1959,9 +1962,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_7 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 7 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_7 = yes }
 		}
@@ -1972,7 +1975,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_implement_grassroots_democracy
 		}
 		visible = { has_completed_focus = SFR_implement_grassroots_democracy }
@@ -1981,20 +1984,20 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_8 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 8 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_8 = yes }
 		}
 
 		ai_will_do = { base = 1 }
 	}
-	SFR_workers_and_peasants_congress_law_9 = {		#落实群众自治
+	SFR_workers_and_peasants_congress_law_9 = {		#加强党的基层组织
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_prioritize_party_democracy
 		}
 		visible = { has_completed_focus = SFR_prioritize_party_democracy }
@@ -2003,9 +2006,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = yes
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_9 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 9 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_9 = yes }
 		}
@@ -2016,7 +2019,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_empower_local_cooperatives
 		}
 		visible = { 
@@ -2028,9 +2031,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_10 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 10 }	}
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_10 = yes }
 		}
@@ -2041,7 +2044,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_centralized_planned_economy
 		}
 		visible = { 
@@ -2053,9 +2056,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_11 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 11 } }
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_11 = yes }
 		}
@@ -2066,7 +2069,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_train_technical_workers
 		}
 		visible = { 
@@ -2078,9 +2081,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_12 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 12 } }
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_12 = yes }
 		}
@@ -2091,7 +2094,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_social_ownership_economy
 		}
 		visible = { 
@@ -2103,9 +2106,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_13 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 13 } }
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_13 = yes }
 		}
@@ -2116,7 +2119,7 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
 			has_completed_focus = SFR_establish_production_teams
 		}
 		visible = { 
@@ -2128,9 +2131,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_14 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 14 } }
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_14 = yes }
 		}
@@ -2141,11 +2144,11 @@ SFR_workers_and_peasants_congress = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { tag = SFR }
 		available = {
-			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting }
-			has_completed_focus = SFR_establish_production_teams
+			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
+			has_completed_focus = SFR_tillers_have_their_fields
 		}
 		visible = { 
-			has_completed_focus = SFR_establish_production_teams
+			has_completed_focus = SFR_tillers_have_their_fields
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_15_passed }
 		}
 
@@ -2153,9 +2156,9 @@ SFR_workers_and_peasants_congress = {
 		fire_only_once = no
 
 		complete_effect = {
-			set_country_flag = SFR_workers_and_peasants_congress_voting
+			set_country_flag = SFR_workers_and_peasants_congress_voting_flag
 			set_variable = { SFR_workers_and_peasants_congress_voting_title = token:SFR_workers_and_peasants_congress_law_15 }
-			custom_effect_tooltip = SFR_workers_and_peasants_congress_vote_start_tt
+			custom_effect_tooltip = { localization_key = SFR_workers_and_peasants_congress_vote_start_tt DAYS = 7 }
 			hidden_effect = { activate_mission = SFR_workers_and_peasants_congress_voting set_variable = { SFR_workers_and_peasants_congress_voting_index = 15 } }
 			effect_tooltip = { SFR_workers_and_peasants_congress_vote_15 = yes }
 		}
@@ -4273,7 +4276,7 @@ SFR_propagate_revolution_decisions = {
 
 		target_trigger = {
 			FROM = {
-				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_in_faction_with = ROOT is_subject_of = ROOT }
 				OR = {
 					SPC_generic_region_trigger_1 = yes
 					SPC_generic_region_trigger_2 = yes

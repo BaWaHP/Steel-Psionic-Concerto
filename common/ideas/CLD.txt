@@ -57,6 +57,21 @@ ideas = {
 			}
 		}
 
+		#西莉迪亚-皮奥瑞亚贸易总公司
+		CLD_trade_treaty_with_peo_2 = {
+			picture = CLD_trade_treaty_with_peo
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = 0.15
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
 		CLD_weak_army = {		#弱小的军队
 			picture = CLD_weak_army
 			allowed = { always = yes }
@@ -373,14 +388,15 @@ ideas = {
 			}
 		}
 
-		CLD_restarting_the_production = {		#重新开始的生产
+		CLD_restarting_the_production = {		#改善生产秩序
 			picture = generic_production_bonus
 			allowed = { always = yes }
 			removal_cost = -1
 			modifier = {
-				industrial_capacity_factory = -0.1
-				production_factory_efficiency_gain_factor = 0.5
-				production_factory_max_efficiency_factor = -0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+				line_change_production_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -646,7 +662,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_cost = 0.1
-				stability_factor = -0.05
+				stability_factor = -0.3
 				war_support_factor = -0.05
 				industrial_capacity_factory = -0.05
 				production_speed_buildings_factor = -0.05
@@ -815,6 +831,9 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 			allowed = { always = yes }
 			removal_cost = -1
+
+			cancel = { has_completed_focus = CLD_victory }
+
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
@@ -822,59 +841,348 @@ ideas = {
 			}
 		}
 
-	}
-	tank_manufacturer = {
-		CLD_revolutionary_armor_bureau = {				#革命装甲局
-			picture = GFX_idea_generic_tank_manufacturer_2
-			allowed = { original_tag = CLD }
-			visible = { has_completed_focus = CLD_establish_armor_research_bureau }
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.1
-					reliability_factor = 0.1
-					instant = yes
-				}
-			}
-			research_bonus = {
-				armor = 0.1
-			}
-			traits = { 
-				tank_manufacturer 
-			}
-			ai_will_do = {
-				factor = 1
+		#南北产业协同：基本崩溃
+		CLD_industrial_synergy_north_south_1 = {
+			picture = generic_economic_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				line_change_production_efficiency_factor = -0.4
 			}
 		}
-	}
-	materiel_manufacturer = {				#军备制造商
-		CLD_peace_design_bureau = {				#“和平”设计局
-			picture = GFX_idea_generic_motorized_equipment_manufacturer_2
-			allowed = {
-				original_tag = CLD
-			}
-			equipment_bonus = {
-				artillery_equipment = {
-					build_cost_ic = -0.1
-				}
-			}
-			
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1
-				}
-			}
-			
-			research_bonus = {
-				artillery = 0.15
-			}
-			traits = { 
-				artillery_manufacturer 
-			}
-			ai_will_do = {
-				factor = 1
+
+		#南北产业协同：货币统一
+		CLD_industrial_synergy_north_south_2 = {
+			picture = generic_economic_recovery
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				line_change_production_efficiency_factor = -0.3
 			}
 		}
-    }
+
+		#南北产业协同：交通铁通
+		CLD_industrial_synergy_north_south_3 = {
+			picture = generic_mild_economic_recovery
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+
+		#北方治安崩溃
+		CLD_northern_security_collapse = {
+			picture = JAP_collapsing_government
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.05
+				war_support_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				army_org_factor = -0.05
+				army_org_regain = -0.05
+			}
+		}
+
+		#北方经济崩溃
+		CLD_northern_economic_collapse = {
+			picture = generic_economic_crisis
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.1
+				war_support_factor = -0.05
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+
+		#北方疾病肆虐
+		CLD_diseases_raging_in_north = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.2
+				stability_factor = -0.15
+				army_org_factor = -0.1
+				army_org_regain = -0.1
+				conscription_factor = -0.005
+			}
+		}
+
+		#正在解除的紧急状态法
+		CLD_emergency_law_relief = {
+			picture = JAP_free_asia_pacific
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		#正在解除的紧急状态法
+		CLD_emergency_law_relief_2 = {
+			name = CLD_emergency_law_relief
+			picture = JAP_free_asia_pacific
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		#正在解除的紧急状态法
+		CLD_emergency_law_relief_3 = {
+			name = CLD_emergency_law_relief
+			picture = JAP_free_asia_pacific
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				monthly_living_standard_development_process = -1
+			}
+		}
+
+		#暂时缓和的矛盾
+		CLD_eased_contradictions = {
+			picture = generic_disjointed_gov
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.15
+				encryption_factor = -0.15
+			}
+		}
+
+		#留用旧政权人员
+		CLD_retained_old_regime_staff = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+				monthly_living_standard_development_process = -2
+			}
+		}
+
+		#甄别人员
+		CLD_distinguishing_personnel = {
+			picture = generic_disjointed_gov
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.01
+				production_factory_max_efficiency_factor = 0.01
+				monthly_living_standard_development_process = 1
+			}
+		}
+
+		#全面清洗
+		CLD_comprehensive_purge = {
+			picture = generic_purge
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.03
+				production_factory_efficiency_gain_factor = -0.03
+				production_factory_max_efficiency_factor = -0.03
+			}
+		}
+
+		#科学化教育
+		CLD_scientific_education = {
+			picture = jap_duplicate_research
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				state_science_development_monthly = 0.03
+				monthly_research_development_process = 2
+				stability_weekly = -0.005
+			}
+		}
+
+		#教育全面社会化
+		CLD_education_comprehensive_socialization = {
+			picture = jap_duplicate_research
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				state_science_development_monthly = 0.04
+				monthly_research_development_process = 3
+				stability_weekly = -0.01
+			}
+		}
+
+		#国有化医疗机构
+		CLD_nationalize_medical_institutions = {
+			picture = SOV_third_five_year_plan
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_living_standard_development_process = 4
+				monthly_population = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		#稳定医疗机构
+		CLD_stabilize_medical_institutions = {
+			picture = SOV_third_five_year_plan
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.1
+				monthly_living_standard_development_process = -3
+			}
+		}
+
+		#多数国有化医疗机构
+		CLD_nationalize_most_medical_institutions = {
+			picture = SOV_third_five_year_plan
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_living_standard_development_process = 2
+				monthly_population = 0.15
+				industrial_capacity_factory = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				line_change_production_efficiency_factor = 0.03
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		#正在接管的教育机构
+		CLD_taking_over_education_institutions = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				monthly_research_development_process = 5
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		#正在稳定的金融秩序
+		CLD_stabilizing_financial_order = {
+			picture = generic_economic_increase
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				political_power_gain = 0.02
+				monthly_living_standard_development_process = 2
+			}
+		}
+
+		#新解放区
+		CLD_new_liberated_zone_tt_0 = {
+			name = CLD_new_liberated_zone
+			allowed = { always = yes }
+			removal_cost = -1
+		}
+
+		#新解放区
+		CLD_new_liberated_zone_tt_1 = {
+			name = CLD_new_liberated_zone
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				local_manpower = 0.01
+				local_resources_factor = 0.01
+				local_factories = 0.01
+				local_building_slots_factor = 0.01
+				state_production_speed_buildings_factor = 0.02
+				state_production_speed_infrastructure_factor = 0.02
+			}
+		}
+
+		#新解放区
+		CLD_new_liberated_zone_tt_2 = {
+			name = CLD_new_liberated_zone
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.02
+				local_factories = 0.02
+				local_building_slots_factor = 0.01
+				local_factory_energy_consumption = -0.04
+			}
+		}
+
+		#新解放区
+		CLD_new_liberated_zone_tt_3 = {
+			name = CLD_new_liberated_zone
+			allowed = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				local_manpower = 0.02
+				local_factories = 0.01
+				local_building_slots_factor = 0.01
+			}
+		}
+
+	}
 	industrial_concern = {						#工业制造商
 		mine_prospecting_mining_bureau = {		#矿产勘探与开采总局
 			#picture = 
@@ -909,4 +1217,143 @@ ideas = {
 			}
 		}
     }
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+
+		#国家垄断外贸
+		CLD_national_monopoly_foreign_trade = {
+			picture = can_wartime_prices_and_trade_board
+			level = 1
+			cost = 0
+			removal_cost = -1
+			visible = { has_idea = CLD_national_monopoly_foreign_trade }
+
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				civilian_intel_to_others = 10
+				consumer_goods_expected_value = -0.1
+				trade_opinion_factor = 0.3
+				political_power_cost = 0.1
+				min_export = 0.2
+				resource_trade_cost_bonus_per_factory = -2
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+
+		#国家垄断外贸
+		CLD_national_monopoly_foreign_trade_2 = {
+			name = CLD_national_monopoly_foreign_trade
+			picture = can_wartime_prices_and_trade_board
+			level = 1
+			cost = 0
+			removal_cost = -1
+			visible = { has_idea = CLD_national_monopoly_foreign_trade_2 }
+
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				civilian_intel_to_others = 10
+				consumer_goods_expected_value = -0.1
+				trade_opinion_factor = 0.4
+				political_power_cost = 0.1
+				min_export = 0.25
+				resource_trade_cost_bonus_per_factory = -1
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+   			}
+		}
+	}
+	industry_policy = {
+		law = yes
+		use_list_view = yes
+
+		#革命过渡式经济
+		CLD_revolutionary_transition_economy_1 = {
+			name = CLD_revolutionary_transition_economy
+			picture = FIN_socialist_welfare
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			visible = { has_idea = CLD_revolutionary_transition_economy_1 }
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				line_change_production_efficiency_factor = 0.05
+				monthly_industrial_development_process = 2
+				consumer_goods_factor = 0.05
+			}
+
+			cost = 0
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		#革命过渡式经济
+		CLD_revolutionary_transition_economy_2 = {
+			name = CLD_revolutionary_transition_economy
+			picture = FIN_socialist_welfare
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			visible = { has_idea = CLD_revolutionary_transition_economy_2 }
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.05
+				monthly_industrial_development_process = 4
+				consumer_goods_factor = 0.1
+			}
+
+			cost = 0
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		#革命过渡式经济
+		CLD_revolutionary_transition_economy_3 = {
+			name = CLD_revolutionary_transition_economy
+			picture = FIN_socialist_welfare
+			available = { always = no }
+			allowed_to_remove = { always = no }
+
+			visible = { has_idea = CLD_revolutionary_transition_economy_3 }
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.15
+				monthly_industrial_development_process = 2
+				consumer_goods_factor = 0.15
+			}
+
+			cost = 0
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+	}
 }

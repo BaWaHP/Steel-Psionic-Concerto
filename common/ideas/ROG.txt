@@ -1,0 +1,87 @@
+ideas = {
+	country = {
+
+		#准备不足的革命
+		ROG_unprepared_revolution = {
+			picture = FRA_matignon_agreements
+			allowed = { original_tag = ROG }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.2
+				war_support_factor = 0.1
+				research_speed_factor = -0.5
+				production_speed_buildings_factor = -0.5
+				production_factory_max_efficiency_factor = -0.3
+			}
+		}
+
+		#远乡物资输送
+		ROG_farhome_supply = {
+			picture = chi_chinese_support
+			allowed = { original_tag = ROG }
+			removal_cost = -1
+			modifier = {
+				offsite_mil_building = 1
+				out_of_supply_factor = -0.3
+				weekly_manpower = 50
+				consumer_goods_factor = -0.1
+				paternal_autocrat_drift = 0.01
+			}
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			on_remove = {
+				add_offsite_building = {
+					type = arms_factory
+					level = -1
+				}
+			}
+		}
+
+		#东巴斯蒂亚大战的遗产
+		ROG_bastille_legacy = {
+			picture = BEL_legacy_of_the_great_war
+			allowed = { original_tag = ROG }
+			removal_cost = -1
+			modifier = {
+				planning_speed = -0.1
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				army_speed_factor = 0.05
+				land_reinforce_rate = -0.02
+			}
+		}
+
+		#拂晓序曲
+		ROG_dawn_prelude = {
+			picture = MEX_revolutionary_army
+			allowed = { original_tag = ROG }
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 300
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+			}
+		}
+
+		#“西维利尔”装置
+		ROG_siville_device = {
+			picture = air_war_plans_division_focus
+			allowed = { original_tag = TPG }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.075
+			}
+		}
+
+	}
+
+	
+}
+

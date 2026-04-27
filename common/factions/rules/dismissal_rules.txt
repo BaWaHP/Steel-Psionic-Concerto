@@ -1,0 +1,180 @@
+
+ ##   ##  ### ###  ##  #  #  ## 
+#  # #  #  #   #  #  # ## # #   
+#### #     #   #  #  # # ##  #  
+#  # #  #  #   #  #  # #  #   # 
+#  #  ##   #  ###  ##  #  # ##  
+
+
+dismissal_rule_world_tension = {
+	type = dismissal_rules
+	ai_will_do = {
+		base = 0
+		modifier = {  
+			add = 1
+			OR = {
+				has_government = worldunion_democrat
+				has_government = liberal_republican
+			}
+			is_faction_leader = yes 
+		}
+	}
+	dismiss_member_trigger = {
+		has_added_tension_amount > 0.1
+	}
+}
+
+dismissal_rule_offensive_war = {
+	type = dismissal_rules
+	ai_will_do = {
+		base = 0
+		modifier = {  
+			add = 1
+			OR = {
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+			}
+			is_faction_leader = yes 
+		}
+	}
+	dismiss_member_trigger = {
+		has_offensive_war_without_friend = FROM
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+### ###  ###  ##  #    ##   ##  #   # 
+ #  #  # #   #  # #   #  # #     # #  
+ #  #  # ##  #  # #   #  # # ##   #   
+ #  #  # #   #  # #   #  # #  #   #   
+### ###  ###  ##  ###  ##   ##    #   
+
+
+dismissal_rule_ideology_not_democratic = {
+	type = dismissal_rules
+	visible = {
+		OR = {
+			has_government = worldunion_democrat
+			has_government = liberal_republican
+			has_government = conservative_republican
+			has_government = authoritarian_republican
+		}
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		NOT = {
+			has_government = worldunion_democrat
+			has_government = liberal_republican
+			has_government = conservative_republican
+			has_government = authoritarian_republican 
+		}
+	}
+}
+
+dismissal_rule_ideology_not_communism = {
+	type = dismissal_rules
+	visible = {
+		OR = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist 
+		}
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		NOT = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist 
+		}
+	}
+}
+
+dismissal_rule_ideology_communist = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist 
+		}
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		OR = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist 
+		}
+	}
+}
+
+dismissal_rule_ideology_fascist = {
+	type = dismissal_rules
+	visible = { NOT = { has_government = national_socialist } }
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		has_government = national_socialist
+	}
+}
+
+dismissal_rule_ideology_democratic = {
+	type = dismissal_rules
+	visible = { 
+		NOT = {
+			has_government = worldunion_democrat
+			has_government = liberal_republican
+			has_government = conservative_republican
+			has_government = authoritarian_republican
+		}
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		OR = {
+			has_government = worldunion_democrat
+			has_government = liberal_republican
+			has_government = conservative_republican
+			has_government = authoritarian_republican
+		}
+	}
+}
+
+dismissal_rule_ideology_conservative = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_nationalism
+			has_government = religious_extremism
+		}
+	}
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		OR = {
+			has_government = paternal_autocrat
+			has_government = authoritarian_nationalism
+			has_government = religious_extremism
+		}
+	}
+}

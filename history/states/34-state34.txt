@@ -6,15 +6,16 @@ state={
 		2799 4351 5846 8598 17888 17996 18081 18096 18112 18211 18295 18335 18445 
 	}
 	resources = {
-		magic_crystal = 20
+		magic_crystal = 60
 		steel = 12
+		oil = 48
 	}
 	history = {
 		owner = TPG
 		add_core_of = TPG
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
+			industrial_complex = 2
 			arms_factory = 2
 			dockyard = 1
 			18295 = {
@@ -24,8 +25,9 @@ state={
 		victory_points = {
 			18335 30
 		}
+		add_dynamic_modifier = { modifier = TPG_test_magic_network }
 	}
-	manpower=7470000
+	manpower=9520000
 	state_category = large_city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

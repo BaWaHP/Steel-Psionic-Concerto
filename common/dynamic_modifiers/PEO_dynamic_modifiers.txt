@@ -1,0 +1,58 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#新国家宪法
+PEO_new_national_constitution = {
+	enable = { always = yes }
+
+	icon = GFX_idea_DEN_occupation_laws
+
+	monthly_military_development_process = PEO_new_national_constitution_mmdp
+	army_org_regain = PEO_new_national_constitution_aor
+	consumer_goods_factor = PEO_new_national_constitution_cgf
+	stability_factor = PEO_new_national_constitution_sf
+	research_speed_factor = PEO_new_national_constitution_rsf
+	production_speed_buildings_factor = PEO_new_national_constitution_psbf
+	political_power_gain = PEO_new_national_constitution_ppg
+	
+	monthly_research_development_process = PEO_new_national_constitution_mrdp
+
+	state_science_development_monthly = PEO_new_national_constitution_ssdm
+	monthly_living_standard_development_process = PEO_new_national_constitution_mlsdp
+
+	political_power_factor = PEO_new_national_constitution_ppf
+}
+
+#大湾区之心
+PEO_heart_of_greater_bay = {
+	enable = { always = yes }
+
+	icon = GFX_idea_man_five_year_plan_industry
+
+	local_building_slots_factor = 0.2
+	state_production_speed_buildings_factor = 0.1
+	local_manpower = -0.2
+}

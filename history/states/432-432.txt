@@ -8,14 +8,17 @@ state={
 	resources = {
 		steel = 25
 		tungsten = 15
-		magic_crystal = 30
+		magic_crystal = 15
+		coal = 15
+		chromium = 5
 	}
 	history = {
 		owner = IMC
 		add_core_of = IMC
 		buildings = {
 			infrastructure = 3
-			arms_factory = 5
+			arms_factory = 2
+			air_base = 1
 		}
 		victory_points = {
 			20244 2

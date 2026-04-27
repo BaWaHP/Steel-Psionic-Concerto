@@ -187,7 +187,8 @@ characters={
 			id = -1
 		}
 	}
-	PEO_LuGuiyue = {	#卢桂月
+	#温莱特·马维克斯
+	PEO_wainwright_mavericks = {
 		name = PEO_LuGuiyue
 		portraits = {
 			civilian = {
@@ -200,9 +201,7 @@ characters={
 			}
 		}
 		country_leader = {
-			desc = PEO_LuGuiyue_desc
-			ideology = absolute_monarchy
-			traits = { }
+			ideology = military_dictatorship
 			expire = "3000.1.1.1"
 			id = -1
 		}

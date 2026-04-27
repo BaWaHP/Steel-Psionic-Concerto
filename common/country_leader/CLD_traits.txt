@@ -1,0 +1,50 @@
+leader_traits = {
+
+	#党务秘书
+	CLD_party_secretary = {
+		random = no
+		
+		political_power_factor = 0.3
+		pioneer_communism_drift = 0.01
+		stability_factor = 0.1
+		drift_defence_factor = 0.3
+		political_advisor_cost_factor = -0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#行政委员
+	CLD_administrative_commissioner = {
+		random = no
+		
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		stability_weekly = 0.015
+		political_advisor_cost_factor = -0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	#外交人民委员
+	CLD_foreign_commissioner = {
+		random = no
+		
+		political_power_gain = 0.1
+		political_power_factor = 0.02
+		subversive_activites_upkeep = -0.05
+		improve_relations_maintain_cost_factor = -0.5
+		trade_opinion_factor = 0.1
+		guarantee_cost = -0.15
+
+		ai_will_do = { factor = 1 }
+	}
+
+	CLD_communist_group_trait_EL = { random = no }
+	CLD_communist_group_trait_JT = { random = no }
+	CLD_communist_group_trait_RS = { random = no }
+	CLD_communist_group_trait_SV = { random = no }
+	CLD_communist_group_trait_PH = { random = no }
+	CLD_communist_group_trait_OG = { random = no }
+	CLD_communist_group_trait_VP = { random = no }
+
+}

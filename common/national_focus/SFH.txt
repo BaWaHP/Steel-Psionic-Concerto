@@ -15135,7 +15135,7 @@ focus_tree = {
 			}
 			OR = {
 				MSA = { exists = no }
-				MSA = { is_puppet_of = SFH }
+				MSA = { is_subject_of = SFH }
 			}
 		}
 
@@ -17133,6 +17133,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_political_power = 100
+			add_research_slot = 1
 			country_event = SFH.1540
 			set_cosmetic_tag = SFH_unified_nation_tag_2
 			custom_effect_tooltip = SFH_declare_complete_reunification_tt

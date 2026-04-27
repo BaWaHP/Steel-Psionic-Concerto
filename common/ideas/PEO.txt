@@ -1,66 +1,25 @@
 ideas = {
-	hidden_ideas = {
-		PEO_flourished_ocean_trade_var_idea = {		#海上贸易繁荣度
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				PEO_flourished_ocean_trade_var_mod = -0.05
-			}
-		}
-		PEO_flourished_ocean_trade_var_idea_2 = {		#海上贸易繁荣度
-			name = PEO_flourished_ocean_trade_var_idea
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				PEO_flourished_ocean_trade_var_mod = 2
-			}
-		}
-	}
-
 	country = {
 
-		PEO_why_nobody_talking = {		#怎么没人说话呢？
+		#怎么没人说话呢？
+		PEO_why_nobody_talking = {
 			picture = generic_intel_bonus
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.05
+				political_power_gain = 0.02
 				stability_factor = -0.1
 				research_speed_factor = -0.15
 			}
 		}
 
-		PEO_new_national_constitution = {		#新国家宪法
-			picture = generic_economic_increase
+		#与西莉迪亚公社的贸易
+		PEO_deal_with_CLD = {
+			picture = can_wartime_prices_and_trade_board
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.1
-				consumer_goods_factor = 0.1
-				stability_factor = 0.1
-				monthly_military_development_process = 1
-			}
-		}
-
-		PEO_army_under_politics = {		#“政治下的军队”
-			picture = SOV_purged_junior_army_officers
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				war_support_factor = -0.1
-				army_org_factor = -0.1
-				experience_gain_army_factor = -0.1
-				training_time_army_factor = 0.2
-				army_leader_cost_factor = 0.1
-				custom_modifier_tooltip = lock_all_troops_tt
-			}
-		}
-
-		PEO_deal_with_CLD = {		#与西莉迪亚公社的贸易
-			picture = generic_disjointed_gov
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
+				monthly_industrial_development_process = 2
 				research_speed_factor = 0.05
 				consumer_goods_factor = -0.1
 				political_power_cost = 0.01
@@ -71,541 +30,119 @@ ideas = {
 			}
 		}
 
-		PEO_united_opposition = {		#联合反对派
+		#联合反对派
+		PEO_united_opposition = {
 			picture = generic_volunteer_expedition_bonus
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				worldunion_democrat_drift = 0.01
-				liberal_republican_drift = 0.01
+				worldunion_socialist_drift = 0.01
+				worldunion_democrat_drift = 0.02
+				liberal_republican_drift = 0.02
+				conservative_republican_drift = 0.01
 				stability_factor = -0.1
 				political_power_cost = 0.02
 			}
 		}
 
-		PEO_flourished_ocean_trade_1 = {		#海上贸易繁荣度：全面崩溃
-			picture = eng_a_change_in_course
+		#臃肿的行政机构
+		PEO_bloated_administration = {
+			picture = generic_disjointed_gov
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				stability_factor = -0.1
-				industrial_capacity_dockyard = -0.5
-				production_speed_infrastructure_factor = -0.2
-				production_speed_dockyard_factor = -0.2
-				production_factory_efficiency_gain_factor = -0.2
-				production_factory_max_efficiency_factor = -0.1
-				consumer_goods_factor = 0.1
-				political_power_cost = 0.3
-				monthly_industrial_development_process = -6
-				monthly_agricultural_development_process = -4
-				monthly_living_standard_development_process = -4
-			}
-		}
-
-		PEO_flourished_ocean_trade_2 = {		#海上贸易繁荣度：正在恢复
-			picture = eng_a_change_in_course
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				production_speed_infrastructure_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.1
-				production_factory_max_efficiency_factor = -0.05
-				consumer_goods_factor = 0.05
-				political_power_cost = 0.1
-				monthly_industrial_development_process = -4
-				monthly_agricultural_development_process = -2
+				production_factory_max_efficiency_factor = -0.15
 				monthly_living_standard_development_process = -2
+				political_power_gain = -0.2
+				consumer_goods_factor = 0.05
+				production_speed_infrastructure_factor = -0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
 			}
 		}
 
-		PEO_flourished_ocean_trade_3 = {		#海上贸易繁荣度：正常运转
-			picture = eng_a_change_in_course
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				production_speed_dockyard_factor = 0.1
-				production_speed_naval_base_factor = 0.1
-				research_speed_factor = 0.05
-				consumer_goods_factor = -0.05
-				political_power_cost = 0.05
-			}
-		}
-
-		PEO_flourished_ocean_trade_4 = {		#海上贸易繁荣度：较为繁荣
-			picture = eng_a_change_in_course
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_dockyard_factor = 0.1
-				production_speed_naval_base_factor = 0.2
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_max_efficiency_factor = 0.05
-				research_speed_factor = 0.05
-				political_power_cost = 0.15
-				monthly_industrial_development_process = 2
-			}
-		}
-
-		PEO_flourished_ocean_trade_5 = {		#海上贸易繁荣度：繁荣鼎盛
-			picture = eng_a_change_in_course
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.1
-				production_speed_dockyard_factor = 0.1
-				production_speed_naval_base_factor = 0.3
-				production_factory_efficiency_gain_factor = 0.2
-				production_factory_max_efficiency_factor = 0.1
-				research_speed_factor = 0.05
-				political_power_cost = 0.3
-				monthly_industrial_development_process = 4
-				monthly_agricultural_development_process = 2
-				monthly_living_standard_development_process = 2
-				monthly_research_development_process = 2
-			}
-		}
-
-		PEO_nation_revive_plan_1 = {		#国家复兴计划
-			name = PEO_nation_revive_plan
-			picture = generic_economic_increase
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.05
-				global_building_slots_factor = 0.15
-				production_factory_max_efficiency_factor = 0.05
-				production_speed_infrastructure_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		PEO_nation_revive_plan_2 = {		#国家复兴计划
-			name = PEO_nation_revive_plan
-			picture = generic_economic_increase
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				stability_factor = 0.05
-				industrial_capacity_factory = 0.1
-				global_building_slots_factor = 0.2
-				production_factory_max_efficiency_factor = 0.1
-				production_speed_infrastructure_factor = 0.2
-				production_speed_industrial_complex_factor = 0.1
-				consumer_goods_factor = -0.1
-				min_export = 0.1
-			}
-		}
-
-		PEO_rebuilding_financial_sys = {		#重建中的共和国金融体系
-			picture = generic_economic_increase
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			on_remove = {
-				add_ideas = PEO_new_central_bank
-			}
-			modifier = {
-				consumer_goods_factor = 0.15
-				political_power_factor = -0.1
-			}
-		}
-
-		PEO_new_central_bank = {		#崭新的共和国中央银行
-			picture = tur_balkan_central_bank_wealthy_greece
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.1
-				monthly_industrial_development_process = 1
-				monthly_agricultural_development_process = 1
-			}
-		}
-
-		PEO_new_central_bank_2 = {		#崭新的共和国中央银行
-			name = PEO_new_central_bank
-			picture = tur_balkan_central_bank_wealthy_greece
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.05
-				industrial_capacity_factory = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-				line_change_production_efficiency_factor = 0.1
-				monthly_industrial_development_process = 1
-				monthly_agricultural_development_process = 1
-			}
-		}
-
-		PEO_rebuilding_army = {		#重建中的军队
-			picture = generic_intel_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			on_remove = { add_ideas = PEO_new_army }
-			modifier = {
-				army_defence_factor = -0.1
-				army_org_factor = -0.1
-				army_org_regain = -0.2
-				land_reinforce_rate = -0.02
-				experience_gain_army_factor = -0.5
-			}
-		}
-
-		PEO_new_army = {		#共和国国防军—有限国家化
-			picture = generic_infantry_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = -0.05
-				army_defence_factor = -0.05
-				political_power_gain = 0.01
-				stability_factor = -0.1
-				war_support_factor = -0.05
-				monthly_military_development_process = 1
-			}
-		}
-
-		PEO_cultural_bloom = {		#百花齐放，百家争鸣
+		#百花齐放，百家争鸣
+		PEO_blooming_of_flowers = {
 			picture = EST_democratic_opposition
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
-				political_power_factor = 0.2
-				production_factory_efficiency_gain_factor = -0.1
+				political_power_factor = 0.25
 				monthly_research_development_process = 4
-			}
-		}
-
-		PEO_battered_financial_order = {		#受打击的金融秩序
-			picture = FRA_matignon_agreements
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.05
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_infrastructure_factor = -0.05
-				PEO_flourished_ocean_trade_var_mod = -4
-				political_power_gain = 0.05
-				custom_modifier_tooltip = PEO_battered_financial_order_tt
-			}
-			on_remove = {
-				add_ideas = PEO_controlled_financial_market
 			}
 		}
 
-		PEO_controlled_financial_market = {		#受监管的有序金融市场
-			picture = tur_balkan_central_bank_wealthy_greece
+		#21世纪教育改革
+		PEO_education_reform = {
+			picture = jap_duplicate_research
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.1
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_infrastructure_factor = 0.05
-				political_power_gain = 0.02
-				PEO_econ_reform_var_mod = 4
+				political_power_gain = 0.3
+				stability_factor = 0.05
+				state_science_development_monthly = 0.02
+				monthly_research_development_process = 1
 			}
 		}
 
-		PEO_miracle_under_land = {		#地层下的奇迹
-			picture = generic_exploit_mines
+		#指导，执行，监督
+		PEO_guidance_execution_supervision = {
+			picture = ARG_military_government
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				global_building_slots_factor = 0.05
-				local_resources_factor = 0.1
-				monthly_industrial_development_process = 2
-				monthly_environment_development_process = -1
-				political_power_gain = 0.01
-			}
-		}
-
-		PEO_national_emergency_act = {		#皮奥瑞亚共和国紧急状态法
-			picture = generic_intel_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				army_core_defence_factor = 0.15
-				army_core_attack_factor = 0.1
-				stability_factor = 0.2
-				no_supply_grace = 48
-			}
-		}
-
-		PEO_republic_constitutional_crisis = {		#第三共和国宪政危机
-			picture = generic_democratic_opposition
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				production_factory_efficiency_gain_factor = -0.2
-				industrial_capacity_factory = -0.2
-				production_factory_max_efficiency_factor = -0.15
-				stability_factor = -0.2
-				research_speed_factor = -0.2
-				war_support_factor = -0.2
-				consumer_goods_factor = 0.2
-			}
-		}
-
-		PEO_strong_federal_gov_1 = {		#强势联邦政府
-			name = PEO_strong_federal_gov
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_advisor_cost_factor = -0.2
-				consumer_goods_factor = -0.05
-				political_power_gain = -0.02
-				production_factory_efficiency_gain_factor = 0.1
-				global_building_slots_factor = 0.05
-			}
-		}
-
-		PEO_strong_federal_gov_2 = {		#强势联邦政府
-			name = PEO_strong_federal_gov
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = -0.04
-				production_factory_efficiency_gain_factor = 0.05
-				global_building_slots_factor = 0.05
-			}
-		}
-
-		PEO_parliament_power_expanstion_1 = {		#国民议会权力扩张
-			name = PEO_parliament_power_expanstion
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.01
-				production_factory_max_efficiency_factor = 0.1
-				production_speed_buildings_factor = 0.05
-			}
-		}
-
-		PEO_parliament_power_expanstion_2 = {		#国民议会权力扩张
-			name = PEO_parliament_power_expanstion
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
-
-		PEO_judiciary_first_1 = {		#司法机构优先处置
-			name = PEO_judiciary_first
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				stability_weekly = 0.001
 				political_power_gain = 0.2
-			}
-		}
-
-		PEO_judiciary_first_2 = {		#司法机构优先处置
-			name = PEO_judiciary_first
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				stability_weekly = -0.001
-				production_factory_efficiency_gain_factor = -0.05
-			}
-		}
-
-		PEO_military_force_first_1 = {		#国防军优先
-			name = PEO_military_force_first
-			picture = generic_infantry_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				army_core_defence_factor = 0.05
-				war_support_factor = 0.1
-			}
-		}
-
-		PEO_military_force_first_2 = {		#国防军优先
-			name = PEO_military_force_first
-			picture = generic_infantry_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = -0.2
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				stability_factor = -0.1
-				war_support_factor = 0.05
-			}
-		}
-
-		PEO_third_republic_constitution_mid_left = {		#第三共和国宪法—中左派主导
-			picture = generic_victors_of_ww1
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.1
-				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.1
+				monthly_agricultural_development_process = 1
+				monthly_industrial_development_process = 1
+			}
+		}
+	}
+	hidden_ideas = {
+		#新国家宪法
+		PEO_new_national_constitution_tt_0 = {
+			name = PEO_new_national_constitution
+			allowed = { original_tag = PEO }
+			removal_cost = -1
+		}
+		PEO_new_national_constitution_tt_1 = {
+			name = PEO_new_national_constitution
+			allowed = { original_tag = PEO }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = -0.05
+			}
+		}
+		PEO_new_national_constitution_tt_2 = {
+			name = PEO_new_national_constitution
+			allowed = { original_tag = PEO }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.025
+				monthly_research_development_process = 2
+			}
+		}
+		PEO_new_national_constitution_tt_3 = {
+			name = PEO_new_national_constitution
+			allowed = { original_tag = PEO }
+			removal_cost = -1
+			modifier = {
+				state_science_development_monthly = 0.02
 				monthly_living_standard_development_process = 2
-			}
-		}
-
-		PEO_third_republic_constitution_mid_left_2 = {		#第三共和国宪法—中左派主导
-			name = PEO_third_republic_constitution_mid_left
-			picture = generic_victors_of_ww1
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.05
-				stability_factor = -0.05
-				research_speed_factor = 0.05
-				industrial_capacity_factory = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-				monthly_living_standard_development_process = 4
-			}
-		}
-
-		PEO_third_republic_constitution_mid_left_3 = {		#第三共和国宪法—中左派主导
-			name = PEO_third_republic_constitution_mid_left
-			picture = generic_victors_of_ww1
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.05
-				stability_factor = -0.05
-				research_speed_factor = 0.05
-				industrial_capacity_factory = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-				monthly_living_standard_development_process = 4
-				new_operative_slot_bonus = 1
-				drift_defence_factor = 0.2
-			}
-		}
-
-		PEO_stabalized_army = {		#共和国国防军—暂时稳定
-			picture = generic_infantry_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				army_attack_factor = 0.05
-				breakthrough_factor = 0.05
-				army_defence_factor = -0.05
-				political_power_gain = 0.1
-				war_support_factor = -0.05
-				monthly_military_development_process = 2
-			}
-		}
-
-		PEO_political_reconstructed_army = {		#共和国国防军——政治性重建
-			picture = generic_purge
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			on_remove = { add_ideas = PEO_republican_army }
-			modifier = {
-				army_attack_factor = -0.1
-				army_defence_factor = -0.05
-				army_org_regain = -0.1
-				army_org_factor = -0.1
-				political_power_gain = -0.1
-				land_doctrine_cost_factor = 0.1
-				naval_doctrine_cost_factor = 0.1
-				air_doctrine_cost_factor = 0.1
-				experience_gain_army_factor = -0.5
-				stability_factor = -0.1
-				war_support_factor = -0.05
-				monthly_military_development_process = 4
-			}
-		}
-
-		PEO_republican_army = {		#共和国国防军——国家化进程中
-			picture = generic_democratic_drift_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				breakthrough_factor = 0.05
-				army_attack_factor = 0.05
-				army_org_factor = 0.05
-				land_reinforce_rate = 0.02
-				experience_gain_army_factor = 0.15
-				land_doctrine_cost_factor = -0.05
-				naval_doctrine_cost_factor = -0.05
-			}
-		}
-
-		PEO_defense_force_officer_corps = {		#国防军军官团
-			picture = generic_manpower_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				experience_gain_army_factor = 0.05
-				experience_gain_navy_factor = 0.05
-				experience_gain_air_factor = 0.05
-				command_power_gain_mult = 0.1
-			}
-		}
-
-		PEO_foreign_service = {		#国防军对外行动署
-			picture = ast_volunteer_defence_corps
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			modifier = {
-				send_volunteer_size = 1
-				command_power_gain_mult = 0.1
-				send_volunteers_tension = -0.25
-			}
-		}
-
-		PEO_gov_funded_surveys = {		#公费调查
-			picture = generic_goods_red_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			on_remove = {
-				if = {
-					limit = { NOT = { has_completed_focus = NKE_independent_industrialization } }
-					add_ideas = PEO_peo_permanent_econ_representative
-				}
-			}
-			modifier = {
-				political_power_gain = -0.02
 				consumer_goods_factor = 0.025
 			}
 		}
-
-		PEO_peo_permanent_econ_representative = {		#皮奥瑞亚常驻经济代表处
-			picture = generic_goods_red_bonus
-			allowed = { original_tag = PEO }
-			removal_cost = -1
-			cancel = { has_idea = NKE_Peoria_cooperation_pact_refused }
-			modifier = {
-				global_building_slots_factor = 0.1
-				monthly_agricultural_development_process = 2
-				monthly_industrial_development_process = 2
-				political_power_gain = -0.05
-			}
-		}
-
-		PEO_peo_military_representative = {		#皮奥瑞亚驻左汀原军事代表团
-			picture = generic_goods_red_bonus
+		PEO_new_national_constitution_tt_4 = {
+			name = PEO_new_national_constitution
 			allowed = { original_tag = PEO }
 			removal_cost = -1
 			modifier = {
-				breakthrough_factor = 0.05
-				terrain_penalty_reduction = 0.1
-				command_power_gain_mult = 0.05
-				experience_gain_army_factor = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.1
 			}
 		}
 	}

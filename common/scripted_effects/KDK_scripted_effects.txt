@@ -58,21 +58,19 @@ SPC_KDK_startup_effect = {
 		add_ideas = SXP_recessing_policy
 		###其它开局设置###
 		give_resource_rights = {
-			receiver = LNR
+			receiver = RSB
 			state = 446
-			resources = { aluminium }
+			resources = { coal }
 		}
-		
-		give_resource_rights = {
-			receiver = RSU
-			state = 451
-			resources = { steel }
-		}
-		
 		give_resource_rights = {
 			receiver = RSB
 			state = 450
 			resources = { aluminium }
+		}
+		give_resource_rights = {
+			receiver = RSU
+			state = 451
+			resources = { steel }
 		}
 		###控制省份对应普及度##
 		445 = {

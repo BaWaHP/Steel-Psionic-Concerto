@@ -7,6 +7,9 @@ generic_armament_enchantment_organization = {		#军火附魔研究组
 			tag = CLD
 			tag = SFR
 		}
+		OR = {
+			SPC_has_mio_trigger = no
+		}
 	}
 
 	equipment_type = { infantry_equipment melee_equipment }
@@ -376,10 +379,8 @@ generic_uniform_manufacturer_organization = {		#步兵装具制造商
 	icon = GFX_idea_generic_air_manufacturer_3
 
 	allowed = {
-		NOT = { 
-			OR = {
-				#tag = SFH 
-			}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 
@@ -702,6 +703,9 @@ generic_caster_equipment_manufacturer_organization = {		#魔导装备制造商
 		NOT = { 
 			tag = KDK
 			tag = CLD
+		}
+		OR = {
+			SPC_has_mio_trigger = no
 		}
 	}
 

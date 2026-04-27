@@ -683,6 +683,906 @@ country_event = {
 	}
 }
 
+#北方局
+country_event = {
+	id = CLD.50
+	title = CLD.50.t
+	desc = CLD.50.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.50.a
+		unlock_decision_category_tooltip = CLD_north_bureau_decisions
+		activate_mission = CLD_security_collapse
+		activate_mission = CLD_economic_collapse
+		activate_mission = CLD_plague_outbreak
+		set_country_flag = CLD_north_bureau_decisions_flag
+		add_ideas = NP_medium_nationalization
+		country_event = CLD.66
+	}
+}
+
+#蒙斯市军管会一号令
+country_event = {
+	id = CLD.51
+	title = CLD.51.t
+	desc = CLD.51.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.51.a
+	}
+
+	option = {
+		name = CLD.51.b
+	}
+
+	option = {
+		name = CLD.51.c
+	}
+}
+
+#方案
+country_event = {
+	id = CLD.52
+	title = CLD.52.t
+	desc = CLD.52.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.52.a
+		country_event = {
+			id = CLD.53
+			days = 3
+		}
+	}
+}
+
+#虎落平阳（1）
+country_event = {
+	id = CLD.53
+	title = CLD.53.t
+	desc = CLD.53.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.53.a
+		country_event = CLD.54
+	}
+}
+
+#虎落平阳（2）
+country_event = {
+	id = CLD.54
+	title = CLD.54.t
+	desc = CLD.54.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.54.a
+		115 = { CLD_new_liberated_zone_1_up = yes }
+		116 = { CLD_new_liberated_zone_1_up = yes }
+		117 = { CLD_new_liberated_zone_1_up = yes }
+		118 = { CLD_new_liberated_zone_1_up = yes }
+		119 = { CLD_new_liberated_zone_1_up = yes }
+		477 = { CLD_new_liberated_zone_1_up = yes }
+	}
+}
+
+#行政机关讨论
+country_event = {
+	id = CLD.55
+	title = CLD.55.t
+	desc = CLD.55.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.55.a
+		custom_effect_tooltip = CLD.55.a.tt
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = -5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.03
+		}
+		add_stability = 0.03
+		add_war_support = -0.03
+		add_days_mission_timeout = {
+			mission = CLD_security_collapse
+			days = 45
+		}
+		add_timed_idea = {
+			idea = CLD_retained_old_regime_staff
+			days = 180
+		}
+	}
+
+	option = {
+		name = CLD.55.b
+		custom_effect_tooltip = CLD.55.b.tt
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		set_temp_variable = { temp_index = 4 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = 5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_stability = -0.03
+		add_war_support = 0.03
+		add_days_mission_timeout = {
+			mission = CLD_security_collapse
+			days = 30
+		}
+		add_timed_idea = {
+			idea = CLD_distinguishing_personnel
+			days = 180
+		}
+	}
+
+	option = {
+		name = CLD.55.c
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 5 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.08
+		}
+		add_stability = -0.08
+		add_war_support = 0.08
+		add_days_mission_timeout = {
+			mission = CLD_security_collapse
+			days = -45
+		}
+		add_timed_idea = {
+			idea = CLD_comprehensive_purge
+			days = 180
+		}
+	}
+}
+
+#媒体政策
+country_event = {
+	id = CLD.56
+	title = CLD.56.t
+	desc = CLD.56.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.56.a
+		custom_effect_tooltip = CLD.56.a.tt
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 3
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 5 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_ideas = MP_freedom_speech
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.03
+		}
+	}
+
+	option = {
+		name = CLD.56.b
+		custom_effect_tooltip = CLD.56.b.tt
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		set_temp_variable = { temp_index = 4 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = 5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.01
+		}
+		add_ideas = MP_mixed_media
+	}
+
+	option = {
+		name = CLD.56.c
+		custom_effect_tooltip = CLD.56.c.tt
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_ideas = MP_funding_media
+	}
+}
+
+#教育机构政策
+country_event = {
+	id = CLD.57
+	title = CLD.57.t
+	desc = CLD.57.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.57.a
+		custom_effect_tooltip = CLD.57.a.tt
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = -5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.03
+		}
+		add_timed_idea = {
+			idea = CLD_scientific_education
+			days = 180
+		}
+	}
+	
+	option = {
+		name = CLD.57.b
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.03
+		}
+		add_timed_idea = {
+			idea = CLD_education_comprehensive_socialization
+			days = 180
+		}
+		add_political_power = 50
+	}
+}
+
+#医疗机构政策
+country_event = {
+	id = CLD.58
+	title = CLD.58.t
+	desc = CLD.58.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.58.a
+		custom_effect_tooltip = CLD.58.a.tt
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		add_days_mission_timeout = {
+			mission = CLD_plague_outbreak
+			days = 20
+		}
+		CLD_central_people_committe_update = yes
+		add_timed_idea = {
+			idea = CLD_nationalize_medical_institutions
+			days = 180
+		}
+		country_event = CLD.59
+	}
+	
+	option = {
+		name = CLD.58.b
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_timed_idea = {
+			idea = CLD_stabilize_medical_institutions
+			days = 180
+		}
+		country_event = CLD.59
+	}
+
+	option = {
+		name = CLD.58.c
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_timed_idea = {
+			idea = CLD_nationalize_most_medical_institutions
+			days = 180
+		}
+		country_event = CLD.59
+	}
+}
+
+#那么医学院呢……
+country_event = {
+	id = CLD.59
+	title = CLD.59.t
+	desc = CLD.59.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.59.a
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_days_mission_timeout = {
+			mission = CLD_plague_outbreak
+			days = 20
+		}
+	}
+
+	option = {
+		name = CLD.59.b
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		set_temp_variable = { temp_index = 4 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_days_mission_timeout = {
+			mission = CLD_plague_outbreak
+			days = -30
+		}
+	}
+
+	option = {
+		name = CLD.59.c
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_days_mission_timeout = {
+			mission = CLD_plague_outbreak
+			days = 20
+		}
+	}
+}
+
+#审判
+country_event = {
+	id = CLD.60
+	title = CLD.60.t
+	desc = CLD.60.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.60.a
+		add_political_power = 100
+		add_war_support = 0.03
+	}
+
+	option = {
+		name = CLD.60.b
+		add_political_power = 50
+		add_stability = 0.03
+	}
+
+	option = {
+		name = CLD.60.c
+		add_political_power = 20
+	}
+
+	option = {
+		name = CLD.60.dd
+		add_stability = 0.05
+	}
+}
+
+#工商业政策
+country_event = {
+	id = CLD.61
+	title = CLD.61.t
+	desc = CLD.61.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.61.a
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = -5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = -5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		set_temp_variable = { temp_index = 3 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = 5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		set_temp_variable = { temp_index = 4 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = 5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_ideas = CLD_revolutionary_transition_economy_1
+		add_days_mission_timeout = {
+			mission = CLD_economic_collapse
+			days = 30
+		}
+	}
+
+	option = {
+		name = CLD.61.b
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 1 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = -5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_ideas = CLD_revolutionary_transition_economy_2
+		add_days_mission_timeout = {
+			mission = CLD_economic_collapse
+			days = -30
+		}
+	}
+
+	option = {
+		name = CLD.61.c
+		set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 2 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 5
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+		CLD_central_people_committe_mod = yes
+		add_to_variable = {
+			var = CLD_central_people_committe_2_2
+			value = 5
+			tooltip = CLD_central_people_committe_2_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_3_2
+			value = -5
+			tooltip = CLD_central_people_committe_3_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = -5
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+		add_ideas = CLD_revolutionary_transition_economy_3
+		add_days_mission_timeout = {
+			mission = CLD_economic_collapse
+			days = -45
+		}
+	}
+}
+
+#问路
+country_event = {
+	id = CLD.62
+	title = CLD.62.t
+	desc = CLD.62.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.62.a
+		add_to_variable = {
+			var = CLD_central_people_committe_1_2
+			value = 3
+			tooltip = CLD_central_people_committe_1_2_tt
+		}
+		add_to_variable = {
+			var = CLD_central_people_committe_4_2
+			value = 3
+			tooltip = CLD_central_people_committe_4_2_tt
+		}
+		CLD_central_people_committe_update = yes
+	}
+}
+
+#旧钱包，新谢尔
+country_event = {
+	id = CLD.63
+	title = CLD.63.t
+	desc = CLD.63.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.63.a
+		118 = { CLD_new_liberated_zone_2_up = yes }
+		116 = { CLD_new_liberated_zone_2_up = yes }
+		119 = { CLD_new_liberated_zone_2_up = yes }
+		477 = { CLD_new_liberated_zone_2_up = yes }
+	}
+}
+
+#地图
+country_event = {
+	id = CLD.64
+	title = CLD.64.t
+	desc = CLD.64.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.64.a
+	}
+}
+
+#共和港观光
+country_event = {
+	id = CLD.65
+	title = CLD.65.t
+	desc = CLD.65.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.65.a
+		if = {
+			limit = { tag = PEO }
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.01
+			}
+		}
+		else = {
+			effect_tooltip = {
+				PEO = {
+					add_popularity = {
+						ideology = pioneer_communism
+						popularity = 0.01
+					}
+					add_popularity = {
+						ideology = revolutionary_communism
+						popularity = 0.01
+					}
+				}
+			}	
+		}
+	}
+}
+
+#选人
+country_event = {
+	id = CLD.66
+	title = CLD.66.t
+	desc = CLD.66.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.66.a
+		set_country_flag = CLD_66_a_flag
+		add_to_variable = { CLD_communist_group_trait_1 = 1 }
+		effect_tooltip = {
+			set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+			CLD_central_people_committe_mod = yes
+		}
+		if = {
+			limit = { CLD_human_Lorvin = { is_hired_as_advisor = yes } }
+			deactivate_advisor = CLD_human_Lorvin_idea
+		}
+		CLD_human_Lorvin = { set_character_flag = CLD_advisor_banned }
+		custom_effect_tooltip = {
+			localization_key = ban_certain_advisor_tooltip
+			ADVISOR_NAME = CLD_human_Lorvin
+		}
+	}
+
+	option = {
+		name = CLD.66.b
+		set_country_flag = CLD_66_b_flag
+		add_to_variable = { CLD_communist_group_trait_2 = 1 }
+		effect_tooltip = {
+			set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+			CLD_central_people_committe_mod = yes
+		}
+		if = {
+			limit = { CLD_human_Lorvin = { is_hired_as_advisor = yes } }
+			deactivate_advisor = CLD_pugel_hofmann_idea
+		}
+		CLD_pugel_hofmann = { set_character_flag = CLD_advisor_banned }
+		custom_effect_tooltip = {
+			localization_key = ban_certain_advisor_tooltip
+			ADVISOR_NAME = CLD_pugel_hofmann
+		}
+	}
+}
+
 ###新闻###
 
 add_namespace = CLDNews
@@ -721,5 +1621,20 @@ news_event = {		#西莉迪亚内战重燃
 	
 	option = {
 		name = CLDNews.2.a
+	}
+}
+
+news_event = {		#西莉迪亚统一
+	id = CLDNews.3
+	title = CLDNews.3.t
+	desc = CLDNews.3.d
+	picture = GFX_news_event_generic_40
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = CLDNews.3.a
 	}
 }

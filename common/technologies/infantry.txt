@@ -852,7 +852,7 @@ technologies = {
 		category_army = {
 			defense = 0.05
 			breakthrough = 0.05
-			experience_loss_factor = -0.05
+			experience_loss_factor = -0.01
 		}
 
 		path = {
@@ -1827,10 +1827,11 @@ technologies = {
 	#进攻优先
 	aggressive_doctrine = {
 
-		land_night_attack = 0.2
+		land_night_attack = 0.1
 
 		category_all_infantry = {
-			defense = -0.1
+			defense = -0.05
+			breakthrough = 0.1
 		}
 
 		path = {

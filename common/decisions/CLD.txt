@@ -1,134 +1,13 @@
-CLD_government_bop_decisions = {
-	CLD_proletarian_cultural_propaganda = {		#无产阶级文化宣传
-		icon = GFX_decision_eng_propaganda_campaigns
-		allowed = { tag = CLD }
-		available = {}
+SPC_generic_debug_decision_category = {
+	SFR_debug_load_focus_3 = {		#三阶段国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = CLD }
 
-		cost = 100
-
-		days_re_enable = 0
-		days_remove = 150
 		fire_only_once = no
 
-		modifier = {
-			monthly_research_development_process = 1
-		}
-
 		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = -0.05
-			}
-		}
-	}
-	CLD_push_for_industrialization = {		#推进工业建设
-		icon = GFX_decision_generic_construction
-		allowed = { tag = CLD }
-		available = {}
-
-		cost = 100
-
-		days_re_enable = 90
-		days_remove = 90
-		fire_only_once = no
-
-		modifier = {
-			production_speed_buildings_factor = 0.1
-		}
-
-		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = -0.05
-			}
-		}
-	}
-	CLD_industry_academia_integration = {		#鼓励产学结合
-		icon = GFX_decision_generic_political_address
-		allowed = { tag = CLD }
-		available = {}
-
-		cost = 50
-
-		days_re_enable = 90
-		days_remove = 60
-		fire_only_once = no
-
-		modifier = {
-			research_speed_factor = 0.1	
-		}
-
-		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = -0.05
-			}
-		}
-	}
-	CLD_push_for_academic_independence = {		#宣扬学界独立
-		icon = GFX_decision_generic_nationalism
-		allowed = { tag = CLD }
-		available = {}
-
-		cost = 100
-
-		days_re_enable = 0
-		days_remove = 150
-		fire_only_once = no
-
-		modifier = {
-			monthly_research_development_process = 1
-		}
-
-		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = 0.05
-			}
-		}
-	}
-	CLD_promote_individual_business = {		#促进个体工商业
-		icon = GFX_decision_generic_fundraising
-		allowed = { tag = CLD }
-		available = {}
-
-		cost = 100
-
-		days_re_enable = 90
-		days_remove = 90
-		fire_only_once = no
-
-		modifier = {
-			consumer_goods_factor = -0.05
-		}
-
-		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = 0.05
-			}
-		}
-	}
-	CLD_nationalist_propaganda = {		#民族主义宣传
-		icon = GFX_decision_generic_speech
-		allowed = { tag = CLD }
-		available = {}
-
-		cost = 50
-
-		days_re_enable = 0
-		days_remove = 90
-		fire_only_once = no
-
-		modifier = {
-			national_socialist_drift = 0.01
-		}
-
-		complete_effect = {
-			add_power_balance_value = {
-				id = CLD_government_bop
-				value = 0.05
-			}
+			complete_national_focus = CLD_victory
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 }
@@ -144,6 +23,10 @@ CLD_forming_emergency_committe_decisions = {
 
 		complete_effect = {
 			set_country_flag = CLD_check_mil_structure_flag
+		}
+
+		ai_will_do = {
+			base = 10
 		}
 	}
 	#加强军民联防体系
@@ -166,17 +49,23 @@ CLD_forming_emergency_committe_decisions = {
 
 		remove_effect = {
 			add_manpower = 1000
-			division_template = {
-				name = "地方民兵"
-			
-				regiments = {
-					light_infantry = { x = 0 y = 0 }
-					light_infantry = { x = 0 y = 1 }
-					light_infantry = { x = 1 y = 0 }
+			if = {
+				limit = { NOT = { has_template = "地方民兵" } }
+				division_template = {
+					name = "地方民兵"
+	
+					regiments = {
+						light_infantry = { x = 0 y = 0 }
+						light_infantry = { x = 0 y = 1 }
+						light_infantry = { x = 0 y = 2 }
+						light_infantry = { x = 1 y = 0 }
+						light_infantry = { x = 1 y = 1 }
+						light_infantry = { x = 1 y = 2 }
+					}
+					priority = 0
+				
+					division_names_group = CLD_GEN_03
 				}
-				priority = 0
-			
-				division_names_group = CLD_GEN_03
 			}
 			108 = {
 				create_unit = {
@@ -229,6 +118,10 @@ CLD_forming_emergency_committe_decisions = {
 				add_ideas = CLD_perfect_civil_military_defense_system
 			}
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#落实《紧急状态法》
 	CLD_emergency_state_law = {
@@ -237,6 +130,7 @@ CLD_forming_emergency_committe_decisions = {
 		visible = { 
 			has_completed_focus = CLD_emergency_laws
 			check_variable = { CLD_emergency_state_law_count < 3 }
+			NOT = { has_idea = CLD_emergency_law_relief }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -285,6 +179,10 @@ CLD_forming_emergency_committe_decisions = {
 			}
 			add_to_variable = { CLD_emergency_state_law_count = 1 }
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#整合情报侦察组织
 	CLD_intelligence_integration = {
@@ -306,6 +204,10 @@ CLD_forming_emergency_committe_decisions = {
 			gain_random_agency_upgrade = yes
 			gain_random_agency_upgrade = yes
 			gain_random_agency_upgrade = yes
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#审查情报机构安全调查报告
@@ -336,6 +238,10 @@ CLD_forming_emergency_committe_decisions = {
 
 		modifier = {
 			political_power_gain = -0.01
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#选拔基层年轻干部
@@ -386,6 +292,10 @@ CLD_forming_emergency_committe_decisions = {
 				remove_ideas = CLD_uncomplete_managing_system_3
 			}
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#开展舆论宣传工作
 	CLD_propaganda_campaign = {
@@ -423,17 +333,23 @@ CLD_forming_emergency_committe_decisions = {
 				ideology = worldunion_democrat
 				popularity = 0.01
 			}
-			division_template = {
-				name = "地方民兵"
-			
-				regiments = {
-					light_infantry = { x = 0 y = 0 }
-					light_infantry = { x = 0 y = 1 }
-					light_infantry = { x = 1 y = 0 }
+			if = {
+				limit = { NOT = { has_template = "地方民兵" } }
+				division_template = {
+					name = "地方民兵"
+	
+					regiments = {
+						light_infantry = { x = 0 y = 0 }
+						light_infantry = { x = 0 y = 1 }
+						light_infantry = { x = 0 y = 2 }
+						light_infantry = { x = 1 y = 0 }
+						light_infantry = { x = 1 y = 1 }
+						light_infantry = { x = 1 y = 2 }
+					}
+					priority = 0
+				
+					division_names_group = CLD_GEN_03
 				}
-				priority = 0
-			
-				division_names_group = CLD_GEN_03
 			}
 			108 = {
 				create_unit = {
@@ -444,6 +360,10 @@ CLD_forming_emergency_committe_decisions = {
 			}
 			add_war_support = 0.03
 			add_to_variable = { CLD_propaganda_campaign_count = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#恢复学术建设
@@ -474,6 +394,10 @@ CLD_forming_emergency_committe_decisions = {
 			SPC_research_development_amount_up_2 = yes
 			add_to_variable = { CLD_academic_reconstruction_count = 1 }
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 }
 
@@ -495,6 +419,10 @@ CLD_military_committe_decisions = {
 				value = 10
 				tooltip = CLD_mil_commitee_prep_var_tt
 			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#推进“扩红”工作
@@ -520,12 +448,27 @@ CLD_military_committe_decisions = {
 				value = 10
 				tooltip = CLD_mil_commitee_prep_var_tt
 			}
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			109 = {
@@ -537,6 +480,10 @@ CLD_military_committe_decisions = {
 			}
 			set_country_flag = CLD_promote_red_army_flag
 			unlock_decision_tooltip = CLD_enrich_red_army
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#充实红军基层力量
@@ -573,6 +520,10 @@ CLD_military_committe_decisions = {
 			}
 			add_to_variable = { CLD_enrich_red_army_count = 1 }
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#组织开展部队思想教育工作
 	CLD_military_education = {
@@ -602,6 +553,10 @@ CLD_military_committe_decisions = {
 			}
 			set_country_flag = CLD_military_education_flag
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#扩充红军大学
 	CLD_enrich_red_army_university = {
@@ -627,6 +582,10 @@ CLD_military_committe_decisions = {
 			}
 			set_country_flag = CLD_enrich_red_army_university_flag
 			unlock_decision_tooltip = CLD_general_training_for_mil_officials
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#扩大参谋军官培训
@@ -667,6 +626,10 @@ CLD_military_committe_decisions = {
 				bonus = 0.5
 				uses = 1
 			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#增加军工订单
@@ -718,6 +681,469 @@ CLD_military_committe_decisions = {
 			}
 			add_to_variable = { CLD_increase_military_orders_count = 1 }
 		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#开展两国联合演习
+	CLD_joint_military_exercise = {
+		icon = GFX_decision_generic_police_action
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_joint_military_exercise_tr
+				check_variable = { CLD_joint_military_exercise_count < 2 }
+			}
+		}
+
+		targets = { PEO }
+
+		cost = 20
+		days_remove = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = { CLD_joint_military_exercise_count = 1 }
+		}
+
+		remove_effect = {
+			army_experience = 20
+			PEO = { army_experience = 20 }
+			SPC_military_development_amount_up_1 = yes
+			random_unit_leader = {
+				add_skill_level = 1
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#分享军事科技
+	CLD_share_military_technology = {
+		icon = GFX_decision_generic_research
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+
+		targets = { PEO }
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		remove_effect = {
+			add_tech_bonus = {
+				name = CLD_share_military_technology
+				uses = 2
+				bonus = 2
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = CLD_share_military_technology
+				uses = 2
+				bonus = 2
+				category = armor
+			}
+			add_tech_bonus = {
+				name = CLD_share_military_technology
+				uses = 2
+				bonus = 1.5
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#购置空军装备
+	CLD_purchase_air_equipment = {
+		icon = GFX_decision_SWE_set_air_budget
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			custom_trigger_tooltip = {
+				tooltip = CLD_purchase_air_equipment_tr
+				check_variable = { CLD_purchase_air_equipment_count < 4 }
+			}
+		}
+
+		targets = { PEO }
+
+		cost = 30
+		days_remove = 45
+		fire_only_once = no
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				CLD_purchase_air_equipment_count = 1
+			}
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 30
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_cas_airframe
+				amount = 20
+			}
+			if = {
+				limit = { check_variable = { CLD_purchase_air_equipment_count = 1 } }
+				add_tech_bonus = {
+					name = CLD_purchase_air_equipment
+					category = air_equipment
+					uses = 1
+					bonus = 1.5
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#增设航空兵场站
+	CLD_add_airfield = {
+		icon = GFX_decision_generic_air
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+
+		targets = { PEO }
+
+		cost = 30
+		days_remove = 90
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			118 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+			477 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+				}
+			}
+			air_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#考察皮奥瑞亚海军
+	CLD_visit_peoria_navy = {
+		icon = GFX_decision_generic_police_action
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+
+		targets = { PEO }
+
+		cost = 30
+		days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			navy_experience = 30
+			SPC_military_development_amount_up_1 = yes
+			country_event = CLD.65
+			PEO = { country_event = CLD.65 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#寻求购置舰艇与蓝图
+	CLD_purchase_ships_and_blueprints = {
+		icon = GFX_decision_generic_merge_plant_ship
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_deepen_mutual_trust }
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+
+		targets = { PEO }
+
+		cost = 50
+		days_remove = 210
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_tech = early_ship_hull_light }
+				add_tech_bonus = {
+					name = CLD_purchase_ships_and_blueprints
+					uses = 1
+					bonus = 1
+					category = naval_equipment
+				}
+			}
+			else = {
+				set_technology = {
+					early_ship_hull_light = 1
+				}
+			}
+			if = {
+				limit = { has_tech = early_ship_hull_cruiser }
+				add_tech_bonus = {
+					name = CLD_purchase_ships_and_blueprints
+					uses = 1
+					bonus = 1
+					category = naval_equipment
+				}
+			}
+			else = {
+				set_technology = {
+					early_ship_hull_cruiser = 1
+				}
+			}
+			create_equipment_variant = {
+				name = "共和级"
+				type = ship_hull_light_1
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = empty
+					fixed_ship_fire_control_system_slot = empty
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					fixed_ship_torpedo_slot = ship_torpedo_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			create_equipment_variant = {
+				name = "先驱级"
+				type = ship_hull_light_2
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_2
+					fixed_ship_torpedo_slot = ship_torpedo_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_light_battery_2
+				}
+			}
+			create_equipment_variant = {
+				name = "和平级"
+				type = ship_hull_cruiser_1
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = empty
+					fixed_ship_armor_slot = empty
+					mid_1_custom_slot = ship_airplane_launcher_1
+					mid_2_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = empty
+				}
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "共和级"
+				name = "共和级"
+				creator = PEO
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "共和级"
+				name = "共和级"
+				creator = PEO
+			}
+			create_ship = {
+				type = ship_hull_light_2
+				equipment_variant = "先驱级"
+				name = "先驱级"
+				creator = PEO
+			}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "和平级"
+				name = "和平级"
+				creator = PEO
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#组建北部特别军区
+	CLD_define_north_guard_zone_decision = {
+		icon = GFX_decision_JAP_army_faction
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_define_north_guard_zone }
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+
+		cost = 0
+		days_remove = 360
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 3
+			political_power_gain = -0.05
+			command_power_gain = -0.25
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = { OR = { state = 118 state = 477 state = 119 state = 116 } }
+				add_dynamic_modifier = { modifier = CLD_red_army_north_special_military_district }
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#边境侦察
+	CLD_border_recon = {
+		icon = GFX_decision_SWE_set_army_budget
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_north_intel_work }
+
+		ai_hint_pp_cost = 25
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25_pp_25
+
+		days_remove = 21
+		fire_only_once = yes
+
+		remove_effect = {
+			add_command_power = -25
+			add_intel = {
+				target = ARO
+				civilian_intel = 15
+			}
+			SPC_military_development_amount_up_1 = yes
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -20
+			}
+			army_experience = 5
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#修筑北部军事防线
+	CLD_build_north_military_defense = {
+		icon = GFX_RAJ_decision_investment_defenses_icon
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_north_mil_construction }
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+
+		ai_hint_pp_cost = 50
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		custom_cost_text = decision_cost_CP_25_pp_50
+
+		days_remove = 180
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_command_power = -25
+			add_manpower = -12000
+			118  ={
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 1576
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 19347
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6709
+				}
+			}
+			477 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9327 
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9036  
+				}
+			}
+			119 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 19534   
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 19481    
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 19519    
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 }
 
@@ -758,6 +1184,10 @@ CLD_economic_committe_decisions = {
 				remove_ideas = CLD_chaotic_nationalization_4
 			}
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#推进渔业合作社发展
 	CLD_promote_fisheries_cooperative = {
@@ -776,6 +1206,10 @@ CLD_economic_committe_decisions = {
 				days = 1
 			}
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#组织基础资源开发工作
 	CLD_org_basic_resource_dev_work = {
@@ -783,17 +1217,17 @@ CLD_economic_committe_decisions = {
 		allowed = { tag = CLD }
 		visible = { 
 			has_completed_focus = CLD_back_shield_plan 
-			check_variable = { CLD_org_basic_resource_dev_work_count < 2 }
+			check_variable = { CLD_org_basic_resource_dev_work_count < 3 }
 		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_org_basic_resource_dev_work_tr
-				check_variable = { CLD_org_basic_resource_dev_work_count < 2 }
+				check_variable = { CLD_org_basic_resource_dev_work_count < 3 }
 			}
 		}
 
 		cost = 40
-		days_remove = 50
+		days_remove = 40
 		days_re_enable = 80
 		fire_only_once = no
 
@@ -829,7 +1263,17 @@ CLD_economic_committe_decisions = {
 					}
 				}
 			}
+			107 = {
+				add_resource = {
+					type = coal
+					amount = 5
+				}
+			}
 			add_to_variable = { CLD_org_basic_resource_dev_work_count = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#组织开展农业开垦规划
@@ -869,6 +1313,10 @@ CLD_economic_committe_decisions = {
 			}
 			SPC_agricultural_development_amount_up_2 = yes
 			add_to_variable = { CLD_org_agriculture_development_plan_count = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 }
@@ -943,6 +1391,10 @@ CLD_enemy_sabotage_decisions = {
 				}
 			}
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#协调公共安全部门
 	CLD_coord_public_security_dept = {
@@ -962,12 +1414,27 @@ CLD_enemy_sabotage_decisions = {
 			hidden_effect = { SPC_living_standard_development_amount_up_2 = yes }
 			custom_effect_tooltip = industrial_development_mod_tt_up_1
 			add_manpower = 1000
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			108 = {
@@ -992,6 +1459,10 @@ CLD_enemy_sabotage_decisions = {
 			}
 			set_country_flag = CLD_coord_public_security_dept_flag
 			add_to_variable = { CLD_enemy_sabotage_mission_level = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#调整民兵管理体系
@@ -1018,12 +1489,27 @@ CLD_enemy_sabotage_decisions = {
 
 		remove_effect = {
 			add_manpower = 1000
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			108 = {
@@ -1049,6 +1535,10 @@ CLD_enemy_sabotage_decisions = {
 				mission = CLD_enemy_sabotage_mission
 				days = 7
 			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#扩大民兵训练
@@ -1084,12 +1574,27 @@ CLD_enemy_sabotage_decisions = {
 				days = 7
 			}
 			add_manpower = 1000
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			108 = {
@@ -1109,6 +1614,10 @@ CLD_enemy_sabotage_decisions = {
 				amount = 400
 			}
 			set_country_flag = CLD_expand_militia_training_flag
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 	#加强反间谍宣传
@@ -1132,12 +1641,27 @@ CLD_enemy_sabotage_decisions = {
 
 		remove_effect = {
 			add_manpower = 1000
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			108 = {
@@ -1164,6 +1688,10 @@ CLD_enemy_sabotage_decisions = {
 			}
 			set_country_flag = CLD_strengthen_counter_espionage_propaganda_flag
 		}
+
+		ai_will_do = {
+			base = 1
+		}
 	}
 	#建立完善的军民联防体系
 	CLD_establish_complete_civil_military_defense_system = {
@@ -1189,12 +1717,27 @@ CLD_enemy_sabotage_decisions = {
 
 		remove_effect = {
 			add_manpower = 1000
-			division_template = {
-				name = "工人阶级战斗队"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
+			if = {
+				limit = { NOT = { has_template = "工人阶级战斗队" } }
+				division_template = {
+					name = "工人阶级战斗队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						melee_support = { x = 0 y = 1 }
+					}
+								
+					priority = 0
+				
+					division_names_group = CLD_GEN_02
 				}
 			}
 			108 = {
@@ -1214,6 +1757,924 @@ CLD_enemy_sabotage_decisions = {
 				amount = 400
 			}
 			add_ideas = CLD_perfect_civil_military_defense_system	
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+CLD_north_bureau_decisions = {
+	#治安崩溃
+	CLD_security_collapse = {
+		icon = GFX_decision_category_generic_crisis
+		allowed = { tag = CLD }
+		available = {
+			count_triggers = {
+				amount = 5
+				115 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+				117 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+				116 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+				119 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+				477 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+				118 = { CLD_new_liberated_zone_1_trigger_1 = yes }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			set_country_flag = CLD_security_collapse_flag
+			add_ideas = CLD_northern_security_collapse
+		}
+	}
+	#经济崩溃
+	CLD_economic_collapse = {
+		icon = GFX_decision_category_generic_crisis
+		allowed = { tag = CLD }
+		available = {
+			count_triggers = {
+				amount = 5
+				115 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+				117 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+				116 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+				119 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+				477 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+				118 = { CLD_new_liberated_zone_2_trigger_1 = yes }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			set_country_flag = CLD_economic_collapse_flag
+			add_ideas = CLD_northern_economic_collapse
+		}
+	}
+	#瘟疫肆虐
+	CLD_plague_outbreak = {
+		icon = GFX_decision_category_generic_crisis
+		allowed = { tag = CLD }
+		available = {
+			count_triggers = {
+				amount = 5
+				115 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+				117 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+				116 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+				119 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+				477 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+				118 = { CLD_new_liberated_zone_3_trigger_1 = yes }
+			}
+		}
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 365
+
+		timeout_effect = {
+			set_country_flag = CLD_plague_outbreak_flag
+			add_ideas = CLD_diseases_raging_in_north
+		}
+	}
+	#颁布《城市军事管制条例》
+	CLD_issue_military_control_regulation = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_stabilize_social_order }
+
+		cost = 50
+		days_remove = 14
+		fire_only_once = yes
+
+		remove_effect = {
+			118 = { CLD_new_liberated_zone_1_up = yes }
+			country_event = CLD.51
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#恢复城市生产
+	CLD_recover_urban_production = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_stabilize_social_order }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_recover_urban_production_tr
+				check_variable = { CLD_recover_urban_production_count < 3 }
+			}
+		}
+
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+
+		complete_effect = {
+			add_to_variable = {
+				CLD_recover_urban_production_count = 1
+			}
+		}
+
+		remove_effect = {
+			118 = { CLD_new_liberated_zone_2_up = yes }
+			116 = { CLD_new_liberated_zone_2_up = yes }
+			119 = { CLD_new_liberated_zone_2_up = yes }
+			477 = { CLD_new_liberated_zone_2_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#派遣乡村工作队
+	CLD_dispatch_countryside_working_team = {
+		icon = GFX_decision_JAP_army_faction
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_go_to_countryside }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_dispatch_countryside_working_team_tr
+				check_variable = { FROM.CLD_dispatch_countryside_working_team_count < 3 }
+			}
+		}
+
+		state_target = yes
+		targets = { 115 117 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_1 < 10 } } }
+
+		cost = 30
+		days_remove = 21
+		fire_only_once = no		
+
+		modifier = {
+			stability_weekly = 0.005
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_dispatch_countryside_working_team_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			FROM = { CLD_new_liberated_zone_1_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#乡村医疗队
+	CLD_rural_medical_teams = {
+		icon = GFX_decision_JAP_army_faction
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_medical }
+
+		state_target = yes
+		targets = { 115 117 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_3 < 5 } } }
+
+		cost = 30
+		days_remove = 14
+		fire_only_once = no		
+
+		remove_effect = {
+			add_manpower = 5000
+			FROM = { CLD_new_liberated_zone_3_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#打击地区投机倒把
+	CLD_combat_regional_profiteering = {
+		icon = GFX_decision_generic_speech
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_strike_usury }
+
+		state_target = yes
+		targets = { 115 116 117 118 119 477 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_2 < 10 } } }
+
+		cost = 15
+		days_remove = 21
+		fire_only_once = no		
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			FROM = { CLD_new_liberated_zone_2_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#整顿城市医疗系统
+	CLD_rectify_urban_medical_system = {
+		icon = GFX_decision_generic_wreckers
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_medical }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_rectify_urban_medical_system_tr
+				check_variable = { FROM.CLD_rectify_urban_medical_system_count < 2 }
+			}
+		}
+
+		state_target = yes
+		targets = { 116 119 477 118 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_3 < 5 } } }
+
+		cost = 30
+		days_remove = 45
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_factor = -0.05
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_rectify_urban_medical_system_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			FROM = { CLD_new_liberated_zone_3_up = yes add_manpower = 500 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#扩大地区医疗供给
+	CLD_expand_regional_medical_supply = {
+		icon = GFX_decision_generic_wreckers
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_medical }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_expand_regional_medical_supply_tr
+				check_variable = { FROM.CLD_expand_regional_medical_supply_count < 3 }
+			}
+		}
+
+		state_target = yes
+		targets = { 115 116 117 118 119 477 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_3 < 5 } } }
+
+		cost = 30
+		days_remove = 45
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			political_power_factor = -0.1
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_expand_regional_medical_supply_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			FROM = { CLD_new_liberated_zone_3_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#严打刑事犯罪
+	CLD_strictly_crack_down_on_criminal_activities = {
+		icon = GFX_decision_generic_arrest
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_administration }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_strictly_crack_down_on_criminal_activities_tr
+				check_variable = { FROM.CLD_strictly_crack_down_on_criminal_activities_count < 3 }
+			}
+		}
+
+		state_target = yes
+		targets = { 116 119 477 118 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_1 < 10 } } }
+
+		cost = 30
+		days_remove = 45
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.15
+			political_power_factor = -0.1
+			stability_weekly = 0.01
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_strictly_crack_down_on_criminal_activities_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			FROM = { CLD_new_liberated_zone_1_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#打击土匪路霸
+	CLD_combat_bandits_and_road_hogs = {
+		icon = GFX_decision_generic_arrest
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_administration }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_combat_bandits_and_road_hogs_tr
+				check_variable = { FROM.CLD_combat_bandits_and_road_hogs_count < 3 }
+			}
+		}
+
+		state_target = yes
+		targets = { 116 119 477 118 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_1 < 10 } } }
+
+		cost = 30
+		days_remove = 45
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.15
+			political_power_factor = -0.1
+			stability_weekly = 0.01
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_combat_bandits_and_road_hogs_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_1 = yes
+			FROM = { CLD_new_liberated_zone_1_up = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#重建乡村商业网络
+	CLD_rebuild_countryside_commercial_network = {
+		icon = GFX_decision_generic_motorized
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_establish_central_economic_commitee }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_rebuild_countryside_commercial_network_tr
+				check_variable = { FROM.CLD_rebuild_countryside_commercial_network_count < 3 }
+			}
+		}
+
+		state_target = yes
+		targets = { 115 115 }
+		target_trigger = { FROM = { check_variable = { CLD_new_liberated_zone_level_2 < 10 } } }
+
+		cost = 45
+		days_remove = 30
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+		}
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_rebuild_countryside_commercial_network_count = 1
+				}
+			}
+		}
+
+		remove_effect = {
+			FROM = { 
+				CLD_new_liberated_zone_1_up = yes 
+				random_list = {
+					5 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+					95 = {}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+CLD_central_people_committe_decisions = {
+	#行政机关接管
+	CLD_taking_over_administration = {
+		icon = GFX_decision_generic_colonial_administration
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_administration }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.55
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#敲定媒体政策
+	CLD_finalizing_media_policy = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_media_policy }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.56
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#教育机构政策
+	CLD_education_institution_policy = {
+		icon = GFX_decision_generic_research
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_education }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.57
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#医疗机构政策
+	CLD_medical_institution_policy = {
+		icon = GFX_decision_generic_consumer_goods
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_take_over_medical }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.58
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#审判
+	CLD_judicial_policy = {
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_judge_war_criminals }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.60
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#工商业政策
+	CLD_industrial_commercial_policy = {
+		icon = GFX_decision_generic_fundraising
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_industrial_policy }
+		available = { NOT = { has_country_flag = CLD_central_people_committe_working } }
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = CLD_central_people_committe_working
+			country_event = CLD.61
+		}
+
+		remove_effect = {
+			clr_country_flag = CLD_central_people_committe_working
+			custom_effect_tooltip = CLD_central_people_committe_working_over_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+CLD_central_economic_committe_decisions = {
+	#投资南方解放区工业
+	CLD_invest_southern_industry = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = CLD }
+		visible = { tag = CLD }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_invest_southern_industry_tr
+				check_variable = { CLD_invest_southern_industry_count < 3 }
+			}
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_gain = -0.02
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				CLD_invest_southern_industry_count = 1
+			}
+		}
+
+		remove_effect = {
+			random_list = {
+				30 = {
+					108 = {
+						add_extra_state_shared_building_slots = 4
+						add_building_construction = {
+							type = industrial_complex
+							level = 4
+						}
+					}
+				}
+				40 = {
+					109 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+				}
+				5 = {
+					107 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 1
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+				25 = {
+					110 = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+				}
+			}
+			SPC_industrial_development_amount_up_1 = yes
+			add_to_variable = {
+				var = CLD_central_people_committe_1_2
+				value = 5
+				tooltip = CLD_central_people_committe_1_2_tt
+			}
+			add_to_variable = {
+				var = CLD_central_people_committe_2_2
+				value = 5
+				tooltip = CLD_central_people_committe_2_2_tt
+			}
+			CLD_central_people_committe_update = yes
+			custom_effect_tooltip = CLD_invest_southern_industry_tt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#落实工商业刺激计划
+	CLD_implement_industrial_commercial_stimulus_plan = {
+		icon = GFX_decision_generic_factory
+		allowed = { tag = CLD }
+		visible = { tag = CLD }
+
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+
+		remove_effect = {
+			116 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			477 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			115 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_ideas = normal_taxes
+			add_to_variable = {
+				var = CLD_central_people_committe_3_2
+				value = 3
+				tooltip = CLD_central_people_committe_3_2_tt
+			}
+			add_to_variable = {
+				var = CLD_central_people_committe_4_2
+				value = 3
+				tooltip = CLD_central_people_committe_4_2_tt
+			}
+			CLD_central_people_committe_update = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#推广新货币
+	CLD_promote_new_currency = {
+		icon = GFX_decision_gre_investment_decisions
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_issue_new_currency }
+
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			political_power_gain = -0.05
+			monthly_living_standard_development_process = 3
+			monthly_industrial_development_process = 3
+		}
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = CLD_industrial_synergy_north_south_1
+				add_idea = CLD_industrial_synergy_north_south_2
+			}
+			country_event = CLD.63
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#铁路提档升级
+	CLD_railway_upgrade = {
+		icon = GFX_decision_generic_construction
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_rebuild_north }
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = { 
+			civilian_factory_use = 3
+			supply_node_range = 0.1
+			production_speed_supply_node_factor = 0.2
+			production_speed_rail_way_factor = 0.2
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 80
+			}
+			118 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			116 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			114 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			108 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			swap_ideas = {
+				remove_idea = CLD_industrial_synergy_north_south_2
+				add_idea = CLD_industrial_synergy_north_south_3
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#建立贸易公司
+	CLD_establish_trading_company = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_increase_cooperation }
+
+		cost = 0
+		days_remove = 21
+		fire_only_once = yes
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = CLD_trade_treaty_with_peo
+				add_idea = CLD_trade_treaty_with_peo_2
+			}
+			swap_ideas = {
+				remove_idea = CLD_national_monopoly_foreign_trade
+				add_idea = CLD_national_monopoly_foreign_trade_2
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#资源换粮食
+	CLD_resource_for_food = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_increase_cooperation }
+
+		cost = 0
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			monthly_population = 0.05
+			stability_weekly = 0.005
+		}
+
+		remove_effect = {
+			SPC_living_standard_development_amount_up_3 = yes
+			SPC_agricultural_development_amount_down_1 = yes
+			add_resource = {
+				type = coal
+				amount = 2
+				state = 34
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#进口工业机床
+	CLD_import_industrial_machine_tools = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { tag = CLD }
+		visible = { has_completed_focus = CLD_increase_cooperation }
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+
+		cost = 0
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			SPC_industrial_development_amount_up_1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

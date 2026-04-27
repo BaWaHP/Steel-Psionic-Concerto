@@ -116,6 +116,10 @@ defined_text = {
 		trigger = { has_country_leader_ideology = self_governing_communism }
 		localization_key = self_governing_communism
 	}
+	text = {
+		trigger = { has_country_leader_ideology = council_socialism }
+		localization_key = council_socialism
+	}
 }
 
 defined_text = {

@@ -304,4 +304,431 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
+	#埃里克·卡尔森
+	TPG_eric_carlson = {
+		name = TPG_eric_carlson
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	#何川
+	TPG_he_chuan = {
+		name = TPG_he_chuan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+	
+	#利奥波德
+	TPG_leopold = {
+		name = TPG_leopold
+		portraits = {
+			civilian = {
+				large="GFX_TPG_leopold"
+				small="GFX_idea_TPG_leopold"
+			}
+			army = {
+				large="GFX_TPG_leopold"
+				small="GFX_idea_TPG_leopold"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = TPG_leopold_idea
+   			traits = { air_chief_ground_support_2 }
+   		}
+	}
+
+	#阿斯托里安
+	TPG_astorian = {
+		name = TPG_astorian
+		portraits = {
+			civilian = {
+				large="GFX_TPG_astorian"
+				small="GFX_idea_TPG_astorian"
+			}
+			army = {
+				large="GFX_TPG_astorian"
+				small="GFX_idea_TPG_astorian"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = navy_chief
+			idea_token = TPG_astorian_idea
+   			traits = { navy_chief_decisive_battle_2 }
+   		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+			traits = {
+				bold
+				battleship_adherent
+				gunnery_expert
+			}
+		}
+	}
+
+	#利亚姆·希摩斯
+	TPG_liam_simos = {
+		name = TPG_liam_simos
+		portraits = {
+			civilian = {
+				large="GFX_TPG_liam_simos"
+				small="GFX_idea_TPG_liam_simosn"
+			}
+			army = {
+				large="GFX_TPG_liam_simos"
+				small="GFX_idea_TPG_liam_simosn"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = TPG_liam_simos_idea
+   			traits = { army_chief_organizational_2 }
+   		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				inflexible_strategist
+				expert_delegator
+				TPG_crystal
+			}
+		}
+	}
+	
+	#戈德里克
+	TPG_godric = {
+		name = TPG_godric
+		portraits = {
+			civilian = {
+				large="GFX_TPG_godric"
+				small="GFX_idea_TPG_godric"
+			}
+			army = {
+				large="GFX_TPG_godric"
+				small="GFX_idea_TPG_godric"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = TPG_godric_idea
+   			traits = { army_infantry_2 }
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				TPG_crystal
+				infantry_leader
+			}
+		}
+	}
+
+	#伊莎贝拉·斯特林
+	TPG_isabella_sterling = {
+		name = TPG_isabella_sterling
+		portraits = {
+			civilian = {
+				large="GFX_TPG_isabella_sterling"
+				small="GFX_idea_TPG_isabella_sterling"
+			}
+			army = {
+				large="GFX_TPG_isabella_sterling"
+				small="GFX_idea_TPG_isabella_sterling"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = high_command
+			idea_token = TPG_godric_idea
+   			traits = { army_chief_offensive_3 }
+   		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				panzer_leader
+				TPG_crystal
+				brilliant_strategist
+			}
+		}
+	}
+
+	#佩内洛普·拉文斯克
+	TPG_penelope_lavensk = {
+		name = TPG_penelope_lavensk
+		portraits = {
+			civilian = {
+				large="GFX_TPG_penelope_lavensk"
+				small="GFX_idea_TPG_penelope_lavensk"
+			}
+			army = {
+				large="GFX_TPG_penelope_lavensk"
+				small="GFX_idea_TPG_penelope_lavensk"
+			}
+		}
+		advisor = {
+			cost = 200
+			slot = high_command
+			idea_token = TPG_penelope_lavensk_idea
+   			traits = { army_artillery_3 }
+   		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				TPG_crystal
+				bearer_of_artillery
+			}
+		}
+	}
+
+	#埃利奥特·克莱蒙
+	TPG_elliot_clement = {
+		name = TPG_elliot_clement
+		portraits = {
+			civilian = {
+				large="GFX_TPG_elliot_clement"
+				small="GFX_idea_TPG_elliot_clement"
+			}
+			army = {
+				large="GFX_TPG_elliot_clement"
+				small="GFX_idea_TPG_elliot_clement"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = TPG_elliot_clement_idea
+   			traits = { navy_capital_ship_2 }
+   		}
+	}
+
+	#奥利弗·巴塞洛缪
+	TPG_olivier_basselomue = {
+		name = TPG_olivier_basselomue
+		portraits = {
+			civilian = {
+				large="GFX_TPG_olivier_basselomue"
+				small="GFX_idea_TPG_olivier_basselomue"
+			}
+			army = {
+				large="GFX_TPG_olivier_basselomue"
+				small="GFX_idea_TPG_olivier_basselomue"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = TPG_olivier_basselomue_idea
+   			traits = { navy_fleet_logistics_2 }
+   		}
+	}
+
+	#伦纳德·德瑞克
+	TPG_leonard_dreik = {
+		name = TPG_leonard_dreik
+		portraits = {
+			civilian = {
+				large="GFX_TPG_leonard_dreik"
+				small="GFX_idea_TPG_leonard_dreik"
+			}
+			army = {
+				large="GFX_TPG_leonard_dreik"
+				small="GFX_idea_TPG_leonard_dreik"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = TPG_leonard_dreik_idea
+   			traits = { air_tactical_bombing_2 }
+   		}
+	}
+
+	#加文·里德尔
+	TPG_gavin_riddle = {
+		name = TPG_gavin_riddle
+		portraits = {
+			civilian = {
+				large="GFX_TPG_gavin_riddle"
+				small="GFX_idea_TPG_gavin_riddle"
+			}
+			army = {
+				large="GFX_TPG_gavin_riddle"
+				small="GFX_idea_TPG_gavin_riddle"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = TPG_gavin_riddle_idea
+   			traits = { air_bomber_interception_2 }
+   		}
+	}
+
+	#艾莉诺·瓦伦丁
+	TPG_ellinor_valentine = {
+		name = TPG_ellinor_valentine
+		portraits = {
+			civilian = {
+				large="GFX_TPG_ellinor_valentine"
+				small="GFX_idea_TPG_ellinor_valentine"
+			}
+			army = {
+				large="GFX_TPG_ellinor_valentine"
+				small="GFX_idea_TPG_ellinor_valentine"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				infantry_leader
+				TPG_crystal
+			}
+		}
+	}
+
+	#艾弗里·蒙特福特
+	TPG_avery_montefort = {
+		name = TPG_avery_montefort
+		portraits = {
+			civilian = {
+				large="GFX_TPG_avery_montefort"
+				small="GFX_idea_TPG_avery_montefort"
+			}
+			army = {
+				large="GFX_TPG_avery_montefort"
+				small="GFX_idea_TPG_avery_montefort"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				TPG_crystal
+			}
+		}
+	}
+
+	#利昂内尔·斯特恩
+	TPG_lionel_stern = {
+		name = TPG_lionel_stern
+		portraits = {
+			civilian = {
+				large="GFX_TPG_lionel_stern"
+				small="GFX_idea_TPG_lionel_stern"
+			}
+			army = {
+				large="GFX_TPG_lionel_stern"
+				small="GFX_idea_TPG_lionel_stern"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				brilliant_strategist
+				TPG_crystal
+			}
+		}
+	}
+
+	#马克·艾伯特
+	TPG_mark_albert = {
+		name = TPG_mark_albert
+		portraits = {
+			civilian = {
+				large="GFX_TPG_mark_albert"
+				small="GFX_idea_TPG_mark_albert"
+			}
+			army = {
+				large="GFX_TPG_mark_albert"
+				small="GFX_idea_TPG_mark_albert"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = TPG_mark_albert_idea
+			traits = { superior_firepower_expert }
+		}
+	}
+
+	#艾尔森博
+	TPG_elsenbo = {
+		name = TPG_elsenbo
+		portraits = {
+			civilian = {
+				large="GFX_TPG_elsenbo"
+				small="GFX_idea_TPG_elsenbo"
+			}
+			army = {
+				large="GFX_TPG_elsenbo"
+				small="GFX_idea_TPG_elsenbo"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = TPG_elsenbo_idea
+			traits = { grand_battle_plan_expert }
+		}
+	}
 }

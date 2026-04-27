@@ -24,96 +24,12 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
-#人类抵抗组织-鹰派
-TPG_HRE_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_SPR_political_violence
-
-	stability_weekly = TPG_HRE_stability_weekly_modifier
-	industrial_capacity_factory = TPG_HRE_industrial_capacity_factory_modifier
-	production_factory_efficiency_gain_factor = TPG_HRE_production_factory_efficiency_gain_factor_modifier
-	production_speed_buildings_factor = TPG_HRE_production_speed_buildings_factor_modifier
-	army_org_regain = TPG_HRE_army_org_regain_modifier
-	monthly_industrial_development_process = TPG_HRE_monthly_industrial_development_process_modifier
-	monthly_agricultural_development_process = TPG_HRE_monthly_agricultural_development_process_modifier
-}
-#人类抵抗组织-鸽派
-TPG_HRP_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_generic_volunteer_expedition_bonus
-
-	production_factory_max_efficiency_factor  = TPG_HRP_production_factory_max_efficiency_factor_modifier
-	production_speed_buildings_factor  =  TPG_HRP_production_speed_buildings_factor_modifier
-	war_support_factor  = TPG_HRP_war_support_factor_modifier
-	local_resources_factor  = TPG_HRP_local_resources_factor_modifier
-}
-#水晶优先
-TPG_crystal_priority_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_TPG_crystal_priority
-
-	consumer_goods_factor = TPG_crystal_priority_consumer_goods_factor_modifier
-	research_speed_factor = TPG_crystal_priority_research_speed_factor_modifier
-	industrial_capacity_factory = TPG_crystal_priority_industrial_capacity_factory_modifier
-	industrial_capacity_dockyard = TPG_crystal_priority_industrial_capacity_dockyard_modifier
-	production_factory_max_efficiency_factor = TPG_crystal_priority_production_factory_max_efficiency_factor_modifier
-	production_speed_buildings_factor = TPG_crystal_priority_production_speed_buildings_factor_modifier
-	conscription_factor = TPG_crystal_priority_conscription_factor_modifier
-	monthly_living_standard_development_process = TPG_crystal_priority_monthly_living_standard_development_process_modifier
-
-}
-#初步改革
-TPG_initial_reform_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_generic_constitutional_guarantees
-
-	political_power_gain = TPG_initial_reform_political_power_gain_modifier
-	monthly_living_standard_development_process = TPG_initial_reform_monthly_living_standard_development_process_modifier
-	production_factory_max_efficiency_factor = TPG_initial_reform_production_factory_max_efficiency_factor_modifier
-	production_factory_efficiency_gain_factor = TPG_initial_reform_production_factory_efficiency_gain_factor_modifier
-	war_support_factor = TPG_initial_reform_war_support_factor_modifier
-	stability_factor = TPG_initial_reform_stability_factor_modifier
-
-
-}
-
-#贵族不满
-TPG_ND_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_chi_war_of_resistance
-
-	war_support_factor = TPG_ND_war_support_factor_modifier
-	war_support_weekly = TPG_ND_war_support_weekly_modifier
-	political_power_factor = TPG_ND_political_power_factor_modifier
-	political_advisor_cost_factor = TPG_ND_political_advisor_cost_factor_modifier
-	disabled_ideas = TPG_ND_disabled_ideas_modifier
-}
-
-#落魄的胜利者
-TPG_DV_dynamic_modifier = {
-	enable = { always = yes }
-
-	icon = GFX_idea_generic_victors_of_ww1
-
-	army_org_factor = TPG_DV_army_org_factor_modifier
-	army_org_regain = TPG_DV_army_org_regain_modifier
-	land_reinforce_rate = TPG_DV_land_reinforce_rate_modifier
-	army_attack_factor = TPG_DV_army_attack_factor_modifier
-	army_defence_factor = TPG_DV_army_defence_factor_modifier
-	land_doctrine_cost_factor = TPG_DV_land_doctrine_cost_factor_modifier
-	war_support_factor = TPG_DV_war_support_factor_modifier
-}
-
-#首都建设规划
-TPG_34_dynamic_modifier = {
+#试验性魔网
+TPG_test_magic_network = {
     enable = { always = yes }
 	
-    icon = GFX_idea_chi_war_of_resistance
+    icon = GFX_idea_man_five_year_plan_industry
 	
-	state_production_speed_industrial_complex_factor = 0.15
+	local_building_slots_factor = 0.25
+	state_production_speed_buildings_factor = 0.25
 }

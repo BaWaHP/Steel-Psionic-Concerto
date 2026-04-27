@@ -60,10 +60,12 @@ SPC_VLF_startup_effect = {
 		give_resource_rights = {
 			receiver = ZHE
 			state = 455
+			resources = { oil steel magic_crystal }
 		}
 		give_resource_rights = {
 			receiver = ZHE
 			state = 456
+			resources = { aluminium magic_crystal coal }
 		}
 		###控制省份对应普及度##
 		455 = {

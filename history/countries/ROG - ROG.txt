@@ -1,0 +1,44 @@
+﻿capital = 33
+set_convoys = 0
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = authoritarian_republican
+	last_election = "3000.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	pioneer_communism = 0
+	revolutionary_communism = 0
+	worldunion_socialist = 0
+	worldunion_democrat = 5
+	liberal_republican = 0
+	conservative_republican = 20
+	authoritarian_republican = 30
+	national_socialist = 0
+	authoritarian_nationalism = 0
+	paternal_autocrat = 30
+	wizard_rules = 10
+	religious_extremism = 5
+	anarchism = 0
+}
+
+recruit_character = ROG_eric_carlson
+recruit_character = ROG_he_chuan
+
+add_ideas = {
+	ROG_unprepared_revolution
+	ROG_farhome_supply
+	ROG_bastille_legacy
+	ROG_dawn_prelude
+	ROG_siville_device
+}
+
+SPC_party_alliance_conservative_republican = yes
+SPC_party_alliance_paternal_autocrat = yes
+SPC_party_alliance_worldunion_democrat = yes
+

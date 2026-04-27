@@ -1,0 +1,147 @@
+#	Example:
+# 
+#	example_effect = {
+#		add_political_power = 66
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.33
+#		}
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+###开局政策添加###
+SPC_ZLD_startup_effect = {
+	###控制省份对应普及度###
+	563 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 5 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 4 }
+	}
+
+	566 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 2 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	567 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 3 }
+	}
+
+	565 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	564 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 4 }
+	}
+
+	561 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 2 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 3 }
+	}
+
+	562 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	568 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	569 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 0 }
+	}
+
+	478 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 2 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 4 }
+	}
+
+	560 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 5 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 6 }
+	}
+
+	559 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	555 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 3 }
+	}
+
+	554 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 0 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	556 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 2 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 4 }
+	}
+
+	558 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 0 }
+	}
+
+	551 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 1 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 1 }
+	}
+
+	553 = {
+		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_level = 2 }
+		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_level = 3 }
+	}
+}

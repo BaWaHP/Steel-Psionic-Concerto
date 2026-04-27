@@ -4,12 +4,18 @@ state={
 	history = {
 		owner = ZLD
 		add_core_of = ZLD
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			13761 6
+		}
 	}
 	provinces={
 		1796 3277 7568 8884 10579 13531 13598 13663 13676 13761 
 	}
-	manpower=1
+	manpower=241000
 	buildings_max_level_factor=1.000
-	state_category = town
+	state_category = pastoral
 	local_supplies=0.000
 }

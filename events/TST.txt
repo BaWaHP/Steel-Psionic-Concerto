@@ -121,28 +121,7 @@ country_event = {
 	
 	option = {
 		name = TST.2.a
-		if = {
-			limit = {
-				SPC_generic_region_trigger_1_control = yes
-				SPC_generic_region_trigger_2_control = yes
-				SPC_generic_region_trigger_3_control = yes
-			}
-			add_stability = 0.1
-			add_war_support = 0.1
-			add_research_slot = 1
-			set_cosmetic_tag = SFR_unif_tag_3
-			custom_effect_tooltip = SFR_form_unified_union_tt
-			hidden_effect = {
-				every_subject_country = {
-					ROOT = {
-						set_autonomy = {
-							target = PREV
-							autonomy_state = autonomy_SPC_union_republic
-						}
-					}
-				}	
-			}
-		}
+		activate_advisor = CLD_otto_grotivo_idea
 	}
 }
 

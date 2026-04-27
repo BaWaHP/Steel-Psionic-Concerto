@@ -59,6 +59,31 @@ SPC_MGC_startup_effect = {
 		###其它开局内容###
 		set_country_flag = MGC_focus_1
 		mark_focus_tree_layout_dirty = yes
+		give_resource_rights = {
+			receiver = ZHE
+			state = 466
+			resources = { rubber }
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 467
+			resources = { rubber }
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 469
+			resources = { rubber }
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 470
+			resources = { rubber coal }
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 476
+			resources = { rubber coal }
+		}
 		###控制省份对应普及度###
 		466 = {
 			set_variable = { state_magic_progress = 0 }

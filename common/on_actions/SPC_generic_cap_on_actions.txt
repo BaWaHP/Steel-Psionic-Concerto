@@ -116,10 +116,22 @@ on_actions = {
 						transfer_state = 174
 						transfer_state = 170
 						transfer_state = 5
-						country_event = SFR.152
 					}
 					news_event = SFHNews.4
 					set_global_flag = skip_default_capitulation
+				}
+				#王国亖了且叛军一方赢了#
+				if = {
+					limit = {
+						FROM = { OR = { tag = SFR tag = QTA } }
+						ROOT = { OR = { tag = SFR tag = QTA } }
+					}
+					FROM = {
+						if = {
+							limit = { tag = SFR }
+							country_event = SFR.152
+						}
+					}
 				}
 				#叛军赢了且另一方亖了#
 				if = {
@@ -243,6 +255,15 @@ on_actions = {
 							days = 7
 						}
 					}
+				}
+
+				###西莉迪亚内战###
+				if = {
+					limit = {
+						FROM = { tag = CLD }
+						ROOT = { tag = NCD }
+					}
+					news_event = CLDNews.3
 				}
 
 				###############

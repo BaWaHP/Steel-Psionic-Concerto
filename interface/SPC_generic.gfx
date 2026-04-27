@@ -16,6 +16,18 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	spriteType = {
+		name = "GFX_button_148x34_SPC"
+		texturefile = "gfx//interface//button_148x34_SPC.dds"
+	}
+	spriteType = {
+		name = "GFX_play_button_SPC"
+		texturefile = "gfx//interface//play_button_SPC.dds"
+	}
+	spriteType = {
+		name = "GFX_generic_bg_SPC"
+		texturefile = "gfx//interface//generic_bg_SPC.dds"
+	}
 	###news###
 	spriteType = {
 		name = "GFX_news_event_generic"

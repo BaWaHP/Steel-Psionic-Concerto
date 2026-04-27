@@ -4,12 +4,18 @@ state={
 	history = {
 		owner = ZLD
 		add_core_of = ZLD
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			11049 4
+		}
 	}
 	provinces={
 		1566 1572 5737 9596 10164 11049 11193 13429 13468 13516 13547 13585 13592 13654 
 	}
-	manpower=1
+	manpower=139000
 	buildings_max_level_factor=1.000
-	state_category = town
+	state_category = wasteland
 	local_supplies=0.000
 }

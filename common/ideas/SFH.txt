@@ -1475,7 +1475,7 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -1626,6 +1626,7 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 
@@ -3145,7 +3146,7 @@ ideas = {
 				political_power_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				monthly_industrial_development_process = 2
 				monthly_agricultural_development_process = 2
 			}
@@ -3160,6 +3161,7 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				war_stability_factor = 0.3
+				consumer_goods_factor = -0.05
 				command_power_gain_mult = 0.2
 			}
 		}
@@ -3456,6 +3458,7 @@ ideas = {
 			}
 
 			modifier = {
+				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.05
 			}
 			

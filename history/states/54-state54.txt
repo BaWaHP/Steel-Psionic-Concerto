@@ -5,8 +5,9 @@ state={
 
 	resources = {
 		magic_crystal = 10
-		steel = 8
+		steel = 34
 		oil = 42
+		coal = 17
 	}
 
 	history={
@@ -26,6 +27,6 @@ state={
 	}
 	manpower=3130000
 	buildings_max_level_factor=1.000
-	state_category=large_town
+	state_category=city
 	local_supplies=0.000
 }

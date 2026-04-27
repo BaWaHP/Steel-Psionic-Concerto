@@ -1,0 +1,10 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+        name = "GFX_frontend_bg_SPC_load_1"
+        textureFile = "gfx/loadingscreens/SPC_load_1.dds"
+		noOfFrames = 24
+		animation_rate_fps = 36
+		looping = yes
+		play_on_show = yes
+    }
+}

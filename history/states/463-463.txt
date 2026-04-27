@@ -5,12 +5,16 @@ state={
 	provinces={
 		2780 4582 5527 6607 6743 6926 7491 9172 9195 18108 18197 18285 18317 18556 18654 
 	}
+	resources = {
+		oil = 8
+	}
 	history = {
 		owner = MTV
 		add_core_of = MTV
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 2
+			industrial_complex = 3
+			air_base = 1
 		}
 		victory_points = {
 			5527 8

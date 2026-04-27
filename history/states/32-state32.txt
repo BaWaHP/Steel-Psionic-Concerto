@@ -11,6 +11,7 @@ state={
 		add_claim_by = SFH
 		buildings = {
 			infrastructure = 2
+			arms_factory = 1
 			dockyard = 1
 			18042 = {
 				naval_base = 1
@@ -20,8 +21,8 @@ state={
 			4201 3
 		}
 	}
-	manpower=2120000
-	state_category = town
+	manpower=3130000
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

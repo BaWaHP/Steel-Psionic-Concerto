@@ -1,0 +1,87 @@
+division_template = {
+	name = "共和国民兵"
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+division_template = {
+	name = "共和国陆军"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0
+}
+
+division_template = {
+	name = "远乡抵抗部队"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 0
+}
+
+units = {
+	division = {
+		name = "共和国民兵1师"
+		location = 7286
+		division_template = "共和国民兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "共和国民兵2师"
+		location = 3993
+		division_template = "共和国民兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "共和国陆军1师"
+		location = 4862
+		division_template = "共和国民兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "共和国陆军2师"
+		location = 6736
+		division_template = "共和国民兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+	division = {
+		name = "远乡抵抗部队1师"
+		location = 4201
+		division_template = "共和国民兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "远乡抵抗部队2师"
+		location = 4201
+		division_template = "共和国民兵"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+}

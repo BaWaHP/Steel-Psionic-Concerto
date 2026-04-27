@@ -5,6 +5,10 @@ state={
 	provinces={
 		5242 6229 6757 8982 10550 11574 12053 17911 18120 18146 18147 18236 18237 18327 
 	}
+	resources = {
+		magic_crystal = 14
+		oil = 30
+	}
 	history = {
 		owner = TPG
 		add_core_of = TPG
@@ -14,6 +18,9 @@ state={
 		}
 		victory_points = {
 			10550 3
+		}
+		victory_points = {
+			18120 10
 		}
 	}
 	manpower=3120000

@@ -59,7 +59,7 @@ recruit_character = CLD_human_Jacques_Toles
 recruit_character = CLD_human_Rickelsang
 recruit_character = CLD_human_Velja_Childs
 recruit_character = CLD_wings_Timparnov 
-recruit_character = CLD_Mayakolonova
+#recruit_character = CLD_Mayakolonova
 recruit_character = CLD_human_Anshitvia 
 recruit_character = CLD_human_Strovell 
 recruit_character = CLD_human_Chelviotro
@@ -78,6 +78,10 @@ recruit_character = CLD_bob_burns
 recruit_character = CLD_jane_grek
 recruit_character = CLD_west_cain
 
+recruit_character = CLD_pugel_hofmann
+recruit_character = CLD_otto_grotivo
+recruit_character = CLD_viachev_pavflo
+
 add_ideas = CLD_wound_of_betrayal
 add_ideas = CLD_uncomplete_managing_system
 add_ideas = CLD_trade_treaty_with_peo
@@ -86,6 +90,10 @@ add_ideas = CLD_commue_in_conflicts
 add_ideas = CLD_scientific_boundary
 add_ideas = CLD_chaotic_nationalization
 
+add_equipment_to_stockpile = {
+	type = melee_equipment
+	amount = 3000
+}
 add_equipment_to_stockpile = {
 	type = artillery_equipment
 	amount = 300

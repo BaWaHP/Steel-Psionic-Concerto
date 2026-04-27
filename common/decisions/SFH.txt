@@ -1320,7 +1320,7 @@ SFH_expansion_decisions = {
 					SPC_generic_region_trigger_3 = yes
 				}
 				exists = yes
-				NOT = { is_puppet_of = ROOT }
+				NOT = { is_subject_of = ROOT }
 			}
 		}
 		on_map_mode = map_and_decisions_view

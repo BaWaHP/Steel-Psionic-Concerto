@@ -281,7 +281,7 @@ scripted_gui = {
 
 		properties = {
 			bar_1 = {
-				frame = industrial_development_amount
+				frame = industrial_development_frame
 			}
 			level_1_1 = {
 				image = "[GET_counrty_development_icon_1_1]"
@@ -302,7 +302,7 @@ scripted_gui = {
 				image = "[GET_counrty_development_icon_1_6]"
 			}
 			bar_2 = {
-				frame = agricultural_development_amount
+				frame = agricultural_development_frame
 			}
 			level_2_1 = {
 				image = "[GET_counrty_development_icon_2_1]"
@@ -323,7 +323,7 @@ scripted_gui = {
 				image = "[GET_counrty_development_icon_2_6]"
 			}
 			bar_3 = {
-				frame = military_development_amount
+				frame = military_development_frame
 			}
 			level_3_1 = {
 				image = "[GET_counrty_development_icon_3_1]"
@@ -344,7 +344,7 @@ scripted_gui = {
 				image = "[GET_counrty_development_icon_3_6]"
 			}
 			bar_4 = {
-				frame = living_standard_development_amount
+				frame = living_standard_development_frame
 			}
 			level_4_1 = {
 				image = "[GET_counrty_development_icon_4_1]"
@@ -365,7 +365,7 @@ scripted_gui = {
 				image = "[GET_counrty_development_icon_4_6]"
 			}
 			bar_5 = {
-				frame = environment_development_amount
+				frame = environment_development_frame
 			}
 			level_5_1 = {
 				image = "[GET_counrty_development_icon_5_1]"
@@ -386,7 +386,7 @@ scripted_gui = {
 				image = "[GET_counrty_development_icon_5_6]"
 			}
 			bar_6 = {
-				frame = research_development_amount
+				frame = research_development_frame
 			}
 			level_6_1 = {
 				image = "[GET_counrty_development_icon_6_1]"

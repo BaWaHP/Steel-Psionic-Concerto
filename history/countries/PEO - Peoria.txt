@@ -340,7 +340,7 @@ recruit_character = PEO_barry_kimyao
 recruit_character = PEO_KongSinian
 recruit_character = PEO_BianYimin
 recruit_character = PEO_unknown_1
-recruit_character = PEO_LuGuiyue
+recruit_character = PEO_wainwright_mavericks
 recruit_character = PEO_unknown_2
 recruit_character = PEO_taoyuan_conference
 recruit_character = PEO_alliance_council
@@ -367,11 +367,16 @@ recruit_character = PEO_Huang_Xizhong
 recruit_character = PEO_moncrean_lisbon
 recruit_character = PEO_kankanid_sowodnyu
 
-add_ideas = PEO_why_nobody_talking
-add_ideas = PEO_new_national_constitution
-add_ideas = PEO_army_under_politics
-add_ideas = PEO_deal_with_CLD
-add_ideas = PEO_united_opposition
-add_ideas = PEO_flourished_ocean_trade_3
+add_ideas = {
+	PEO_why_nobody_talking
+	PEO_deal_with_CLD
+	PEO_united_opposition
+	PEO_bloated_administration
+}
+
 #顾问
-add_ideas = PEO_Suer_idea
+activate_advisor = PEO_Suer_idea
+
+SPC_party_alliance_paternal_autocrat = yes
+
+create_intelligence_agency = yes

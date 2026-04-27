@@ -5,11 +5,16 @@ state={
 	provinces={
 		2081 5856 10322 11180 11835 12168 18632 18685 18724 18966 19030 19057 
 	}
+	resources = {
+		magic_crystal = 10
+		coal = 5
+	}
 	history = {
 		owner = MTV
 		add_core_of = MTV
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
 		}
 		victory_points = {
 			19057 10

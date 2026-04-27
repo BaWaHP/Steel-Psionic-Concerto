@@ -8,13 +8,16 @@ state={
 	resources = {
 		magic_crystal = 20
 		steel = 5
+		rubber = 2
+		tungsten = 5
+		coal = 14
 	}
 	history = {
 		owner = MTV
 		add_core_of = MTV
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
+			industrial_complex = 1
 		}
 		victory_points = {
 			11024 10

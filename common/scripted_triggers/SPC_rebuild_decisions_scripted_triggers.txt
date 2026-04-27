@@ -841,7 +841,6 @@ SPC_generic_rebuild_decision_category_enable_trigger = {
 	OR = {
 		has_country_flag = SPC_rebuild_decision_enable_flag
 		tag = SFH
-		tag = SFR
 	}
 }
 

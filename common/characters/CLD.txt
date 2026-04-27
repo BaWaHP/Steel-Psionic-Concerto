@@ -13,7 +13,7 @@ characters={
    			}
    		}
    		country_leader = {
-   			ideology = self_governing_communism
+   			ideology = council_socialism
 			desc = CLD_Arle_Scherrer_desc
    			traits = {
    				union_leader
@@ -58,7 +58,7 @@ characters={
 		}
 	}
 	
-	CLD_human_Lorvin = {		#人类-洛尔文
+	CLD_human_Lorvin = {		#艾森贝格·洛尔文
 		name = CLD_human_Lorvin
 		portraits = {
 			civilian = {
@@ -79,6 +79,26 @@ characters={
 			}
 			traits = {
 				union_manager
+				CLD_communist_group_trait_EL
+			}
+			available = {
+				NOT = { has_character_flag = CLD_advisor_banned }
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_2 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_2 = -1 }
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -87,7 +107,7 @@ characters={
 		}
 	}
 	
-	CLD_human_Siatovia = {		#人类-思亚托维雅
+	CLD_human_Siatovia = {		#思亚托·维雅
 		name = CLD_human_Siatovia
 		portraits = {
 			civilian = {
@@ -107,14 +127,26 @@ characters={
 			}
 			traits = {
 				secretary_education
+				CLD_communist_group_trait_SV
 			}
-			on_add = {
-				add_to_variable = { research_development_process = 2 }
-				add_to_variable = { science_development_monthly_buff = 2 }
+			modifier = {
+				monthly_research_development_process = 2
 			}
-			on_remove = {
-				add_to_variable = { research_development_process = -2 }
-				add_to_variable = { science_development_monthly_buff = -2 }
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_2 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_2 = -1 }
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -123,7 +155,7 @@ characters={
 		}
 	}
 	
-	CLD_human_Jacques_Toles = {		#人类-雅克托尔斯
+	CLD_human_Jacques_Toles = {		#雅克·托尔斯
 		name = CLD_human_Jacques_Toles
 		portraits = {
 			civilian = {
@@ -143,6 +175,23 @@ characters={
 			}
 			traits = {
 				worker_representative
+				CLD_communist_group_trait_JT
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_2 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_2 = -1 }
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -151,7 +200,7 @@ characters={
 		}
 	}
 	
-	CLD_human_Rickelsang = {		#人类-里克尔桑
+	CLD_human_Rickelsang = {		#里克尔·桑
 		name = CLD_human_Rickelsang
 		portraits = {
 			civilian = {
@@ -171,6 +220,26 @@ characters={
 			}
 			traits = {
 				military_civilian_representative
+				CLD_communist_group_trait_RS
+			}
+			modifier = {
+				monthly_military_development_process = 2
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_1 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_1 = -1 }
+				}
 			}
 			cost = 150
 			ai_will_do = {
@@ -314,8 +383,6 @@ characters={
 			allowed = {
 				original_tag = CLD
 			}
-			modifier = {
-			}
 			traits = {
 				army_chief_drill_2
 			}
@@ -343,8 +410,6 @@ characters={
 			idea_token = CLD_human_Chelviotro
 			allowed = {
 				original_tag = CLD
-			}
-			modifier = {
 			}
 			traits = {
 				army_chief_defensive_2
@@ -374,8 +439,6 @@ characters={
 			allowed = {
 				original_tag = CLD
 			}
-			modifier = {
-			}
 			traits = {
 				army_regrouping_2
 			}
@@ -404,8 +467,6 @@ characters={
 			allowed = {
 				original_tag = CLD
 			}
-			modifier = {
-			}
 			traits = {
 				army_logistics_2
 			}
@@ -433,8 +494,6 @@ characters={
 			idea_token = CLD_human_Moniz
 			allowed = {
 				original_tag = CLD
-			}
-			modifier = {
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -649,5 +708,143 @@ characters={
    			expire = "3000.1.1.1"
    			id = -1
    		}
+	}
+
+	#普格尔·霍夫曼
+	CLD_pugel_hofmann = {
+   		name = CLD_pugel_hofmann
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_pugel_hofmann"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_pugel_hofmann"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_pugel_hofmann_idea
+			allowed = { original_tag = CLD }
+			traits = {
+				CLD_party_secretary
+				CLD_communist_group_trait_PH
+			}
+			available = {
+				NOT = { has_character_flag = CLD_advisor_banned }
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_1 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_1 = -1 }
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#奥托·格罗蒂沃
+	CLD_otto_grotivo = {
+   		name = CLD_otto_grotivo
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_otto_grotivo"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_otto_grotivo"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_otto_grotivo_idea
+			allowed = { original_tag = CLD }
+			traits = {
+				CLD_administrative_commissioner
+				CLD_communist_group_trait_OG
+			}
+			available = {
+				NOT = { has_character_flag = CLD_advisor_banned }
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_1 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_1 = -1 }
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	#维亚切夫·帕弗洛
+	CLD_viachev_pavflo = {
+   		name = CLD_viachev_pavflo
+   		portraits = {
+   			civilian = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_viachev_pavflo"
+   			}
+   			army = {
+   				large="GFX_unknown"
+   				small="GFX_idea_CLD_viachev_pavflo"
+   			}
+   		}
+		advisor={
+			slot = political_advisor
+			idea_token = CLD_viachev_pavflo_idea
+			allowed = { original_tag = CLD }
+			traits = {
+				CLD_foreign_commissioner
+				CLD_communist_group_trait_VP
+			}
+			on_add = { 
+				if = {
+					limit = { has_country_flag = CLD_central_people_committe_decisions_flag }
+					set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 3 }
+					CLD_central_people_committe_mod = yes
+				}
+				else = {
+					add_to_variable = { CLD_communist_group_trait_2 = 1 }
+				}
+			}
+			on_remove = { 
+				if = {
+					limit = { NOT = { has_country_flag = CLD_central_people_committe_decisions_flag } }
+					add_to_variable = { CLD_communist_group_trait_2 = -1 }
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 }

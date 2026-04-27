@@ -1,549 +1,222 @@
 ideas = {
 	country = {
 
-		TPG_wom_research_team = {		#沃姆科研团队
+		#晶裔时代
+		TPG_crystal_priority = {
+			allowed = { original_tag = TPG }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				research_speed_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				war_support_factor = 0.15
+			}
+		}
+
+		#桂冠之下
+		TPG_crown_below = {
+			picture = generic_victors_of_ww1
+			allowed = { original_tag = TPG }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				army_org_regain = -0.2
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				land_doctrine_cost_factor = 1
+			}
+		}
+
+		#抵抗阵线
+		TPG_resistance_front = {
+			picture = SPR_political_violence
+			allowed = { original_tag = TPG }
+			removal_cost = -1
+			modifier = {
+				army_org_regain = -0.15
+				stability_weekly = -0.005
+				production_factory_efficiency_gain_factor = -0.15
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+				local_resources_factor = -0.1
+			}
+		}
+
+		#沃姆-吉拉尼亚发展合作协定
+		TPG_wom_girania_development_cooperation_agreement = {
 			picture = TPG_wom_research_team
 			allowed = { original_tag = TPG }
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.08
-				political_power_gain = -0.25
-				consumer_goods_expected_value = 0.02
-			}
-			targeted_modifier = {
-				tag = WOM
-				trade_opinion_factor = 0.3
-			}
-		}
-		
-		
-		TPG_reduce_departments = {		#极限优化
-			picture = SPR_seize_the_gold_reserves
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				political_power_factor = 0.05
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		TPG_vase_nobles = {		#花瓶贵族
-			picture = TPG_vase_nobles
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				global_building_slots_factor = 0.1
-				stability_factor = -0.1
-			}
-		}
-		
-		TPG_preliminary_reforms = {		#初步改革
-			picture = TPG_preliminary_reforms
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				political_power_factor = 0.05
-				monthly_living_standard_development_process = 1
-			}
-		}
-		
-		TPG_industrial_development_degree_1_i = {		#公国工业发展度：孱弱
-			picture = man_five_year_plan_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = -0.4
-				research_speed_factor = -0.1
-				local_resources_factor = -0.3
-			}
-		}
-		
-		TPG_industrial_development_degree_2_i = {		#公国工业发展度：初生
-			picture = man_five_year_plan_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = -0.2
-				research_speed_factor = -0.05
-				local_resources_factor = -0.15
-			}
-		}
-		
-		TPG_industrial_development_degree_3_i = {		#公国工业发展度：化形
-			picture = man_five_year_plan_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = -0.1
-				research_speed_factor = -0.025
-				local_resources_factor = -0.075
-			}
-		}
-		
-		TPG_industrial_development_degree_4_i = {		#公国工业发展度：凤首
-			picture = man_five_year_plan_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = -0.05
-				research_speed_factor = 0.025
-				local_resources_factor = 0.025
-			}
-		}
-		
-		TPG_industrial_development_degree_5_i = {		#公国工业发展度：龙头
-			picture = man_five_year_plan_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.05
-				research_speed_factor = 0.05
-				local_resources_factor = 0.05
-			}
-		}
-		
-		TPG_corporate_influence_1_i = {		#沃姆企业影响力：微乎其微
-			picture = generic_goods_red_bonus
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				production_speed_buildings_factor = 0.03
-				production_factory_max_efficiency_factor = 0.03
-				targeted_modifier = {
-				    tag = WOM
-				    cic_to_target_factor = 0.05
-				    mic_to_target_factor = 0.05
-			    }
-			}
-		}
-		
-		TPG_corporate_influence_2_i = {		#沃姆企业影响力：些许影响
-			picture = generic_goods_red_bonus
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				production_speed_buildings_factor = 0.06
-				production_factory_max_efficiency_factor = 0.06
-			}
-			targeted_modifier = {
-				tag = WOM
-				cic_to_target_factor = 0.1
-				mic_to_target_factor = 0.1
-			}
-		}
-		
-		TPG_corporate_influence_3_i = {		#沃姆企业影响力：相当部分
-			picture = generic_goods_red_bonus
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				trade_opinion_factor = 0.5
 			}
 			targeted_modifier = {
 				tag = WOM
 				cic_to_target_factor = 0.2
-				mic_to_target_factor = 0.2
+				trade_cost_for_target_factor = -0.2
 			}
 		}
-		
-		TPG_corporate_influence_4_i = {		#沃姆企业影响力：确立霸权
-			picture = generic_goods_red_bonus
+
+		#国教
+		TPG_state_religion = {
+			picture = MEX_church_power_5
 			allowed = { original_tag = TPG }
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.15
-				production_factory_max_efficiency_factor = 0.15
-			}
-			targeted_modifier = {
-				tag = WOM
-				cic_to_target_factor = 0.3
-				mic_to_target_factor = 0.3
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+				drift_defence_factor = 0.5
 			}
 		}
-		
-		TPG_corporate_influence_5_i = {		#沃姆企业影响力：确立霸权
-			picture = generic_goods_red_bonus
+
+		#皇前议会
+		TPG_court_parliament = {
+			picture = AFG_parliament_building
 			allowed = { original_tag = TPG }
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.2
-				production_factory_max_efficiency_factor = 0.2
-			}
-			targeted_modifier = {
-				tag = WOM
-				cic_to_target_factor = 0.4
-				mic_to_target_factor = 0.4
-			}
-		}
-		
-		TPG_worm_sanctions = {		#沃姆制裁
-			picture = chi_hyper_inflation2
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.4
-				research_speed_factor = -0.4
-				industrial_capacity_factory = -0.4
-			}
-		}
-		
-		TPG_united_crystal_group = {		#联合科晶集团
-			picture = TPG_united_crystal_group
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.1
-				local_resources_factor = 0.05
-				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.075
-				production_factory_max_efficiency_factor = 0.075
-				consumer_goods_factor = -0.075
-				monthly_industrial_development_process = 2
-				monthly_agricultural_development_process = 2
-				conscription = -0.005
-			}
-		}
-		
-		TPG_united_crystal_group_2 = {		#联合科晶集团
-			picture = TPG_united_crystal_group
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				industrial_capacity_factory = 0.1
-				local_resources_factor = 0.05
-				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.075
-				production_factory_max_efficiency_factor = 0.075
-				consumer_goods_factor = -0.075
-				monthly_industrial_development_process = 2
-				monthly_agricultural_development_process = 2
-				conscription = -0.005
-				research_speed_factor = 0.05
-				stability_factor = 0.05
-			}
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				mechanized = {
-					build_cost_ic = -0.05 instant = yes
-				}
-			}
-		}
-		
-		TPG_purchase_production_materials = {		#购买沃姆生产资料
-			picture = SPR_seize_the_gold_reserves
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
+				political_power_factor = 0.1
 				consumer_goods_factor = 0.05
 			}
 		}
 
-		TPG_back_to_work = {		#复工
-			picture = generic_production_bonus
+		#“西维利尔”装置
+		TPG_siville_device = {
+			picture = air_war_plans_division_focus
 			allowed = { original_tag = TPG }
 			removal_cost = -1
 			modifier = {
-				monthly_industrial_development_process = 2
-				monthly_agricultural_development_process = 2
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.05
+				research_speed_factor = 0.01
 			}
 		}
-		
-		TPG_erfa_railway = {		#埃尔法铁路
-			picture = generic_railroads
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.025
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-			}
-		}
-		
-		TPG_hydropower_stations = {		#埃克塞尔特水电站
-			picture = TPG_hydropower_stations
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    local_resources_factor = 0.05
-				monthly_agricultural_development_process = 1
-			}
-		}
-		
-		TPG_innovating_military_theory = {		#革新军事理论
-			picture = generic_war_preparation
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    army_org_factor = -0.15
-				army_attack_factor = -0.15
-				army_defence_factor = -0.15
-				experience_gain_army = 0.2
-			}
-		}
-		
-		TPG_army_human = {		#吉拉尼亚陆军—人类
-			picture = TPG_army_human
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    conscription = 0.01
-				army_org_factor = 0.05
-				army_org_regain = -0.05
-			}
-		}
-		
-		TPG_army_human_2 = {		#吉拉尼亚陆军—人类
-			picture = TPG_army_human
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    conscription = 0.01
-				army_org_factor = 0.05
-				army_org_regain = -0.05
-				combat_width_factor = -0.1
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					soft_attack = 0.05
-				}
-			}
-		}
-		
-		TPG_army_human_3 = {		#吉拉尼亚陆军—人类
-			picture = TPG_army_human
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    conscription = 0.02
-				army_org_factor = 0.05
-				army_org_regain = -0.05
-				combat_width_factor = -0.1
-				army_defence_factor = 0.05
-				breakthrough_factor = 0.05
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					soft_attack = 0.05
-				}
-			}
-		}
-		
-		TPG_army_human_4 = {		#吉拉尼亚陆军—人类
-			picture = TPG_army_human
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    conscription = 0.02
-				army_org_factor = 0.05
-				army_org_regain = -0.05
-				combat_width_factor = -0.1
-				army_defence_factor = 0.05
-				breakthrough_factor = 0.05
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					soft_attack = 0.05
-				}
-				artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
-					soft_attack = 0.05
-					hard_attack = 0.05
-				}
-			}
-		}
-		
-		TPG_army_crystal = {		#吉拉尼亚陆军-晶裔
-			picture = TPG_army_crystal
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    training_time_factor = 0.1
-				army_org_factor = 0.05
-				conscription_factor = -0.2
-			}
-		}
-		
-		TPG_army_crystal_2 = {		#吉拉尼亚陆军-晶裔
-			picture = TPG_army_crystal
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    training_time_factor = 0.2
-				army_org_factor = 0.05
-				conscription_factor = -0.2
-				army_attack_factor = 0.05
-			}
-		}
-		
-		TPG_army_crystal_3 = {		#吉拉尼亚陆军-晶裔
-			picture = TPG_army_crystal
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    training_time_factor = 0.3
-				army_org_factor = 0.05
-				conscription_factor = -0.2
-				army_attack_factor = 0.05
-				breakthrough_factor = 0.05
-				TERRAIN_PENALTY_REDUCTION = 0.1
-			}
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-					ap_attack = 0.05
-				}
-				mechanized = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-					breakthrough = 0.05
-					ap_attack = 0.05
-				}
-				infantry_equipment = {
-					ap_attack = 0.05
-				}
-				artillery_equipment = {
-					ap_attack = 0.05
-				}
-			}
-		}
-		
-		TPG_occupation_of_army_funds = {		#陆军经费占用
-			picture = SPR_seize_the_gold_reserves
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    consumer_goods_factor = 0.2
-			}
-		}
-		
-		TPG_small_mounted_eyepiec = {		#小范围列装目镜
-			picture = generic_central_management
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    land_night_attack = 0.05
-			}
-		}
-		
-		TPG_army_priority = {		#陆军优先
-			picture = ast_volunteer_defence_corps
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    industrial_capacity_dockyard = -0.15
-				industrial_capacity_factory = 0.075
-			}
-		}
-		
-		TPG_mobile_force_i = {		#公国机动部队
-			picture = FRA_motorized_focus
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    
-			}
-			equipment_bonus = {
-				armor = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-				}
-				mechanized = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-					breakthrough = 0.05
-				}
-			}
-		}
-		
-		TPG_tight_policies_i = {		#紧缩政策
-			picture = great_depression
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    consumer_goods_factor = -0.05
-				stability_factor = -0.1
-			}
-		}
-		
-		TPG_develope_heavy_industry = {		#重视重工业
-			picture = TPG_develope_heavy_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    consumer_goods_factor = 0.05
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_mil_to_civ_factor = 0.5
-			}
-		}
-		
-		TPG_centralize_production_i = {		#集中生产
-			picture = TPG_develope_heavy_industry
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    consumer_goods_factor = 0.05
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_mil_to_civ_factor = 0.5
-				global_building_slots_factor = 0.1
-				INDUSTRY_AIR_DAMAGE_FACTOR = 0.1
-			}
-		}
-		
-		TPG_balanced_development_i = {		#均衡工业
-			picture = TPG_balanced_development_i
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				conversion_cost_civ_to_mil_factor = -0.25
-				production_speed_buildings_factor = 0.05
-			}
-		}
-		
-		TPG_balanced_development_i_2 = {		#均衡工业
-			picture = TPG_balanced_development_i
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-				conversion_cost_civ_to_mil_factor = -0.25
-				production_speed_buildings_factor = 0.05
-				INDUSTRY_AIR_DAMAGE_FACTOR = -0.15
-				monthly_agricultural_development_process = 2
-			}
-		}
-		TPG_national_martail_law = {		#全国戒严
-			picture = generic_war_preparation
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    stability_weekly = 0.002
-				political_power_gain = -0.05
-				industrial_capacity_factory = -0.05
-			}
-		}
-        TPG_noble_collapse = {		#瓦解贵族
-			picture = ARO_winner_of_a_failure
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    stability_factor = -0.1
-				war_support_factor = -0.1
-			}
-		}
-		TPG_powerful_central_government = { #强力中央政府
-			picture = generic_pp_unity_bonus
-			allowed = { original_tag = TPG }
-			removal_cost = -1
-			modifier = {
-			    production_factory_max_efficiency_factor = 0.05
-				political_power_factor = -0.1
-			}
-		}
-
-
 	}
+
+	industrial_concern = {
+		#彭布罗克家族企业
+		TPG_pembroke_industrial_concern = {
+			picture = generic_industrial_concern_1
+			allowed = { original_tag = TPG }
+			
+			research_bonus = {
+				industry = 0.15
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+			
+			traits = { SPC_industrial_concern }
+		}
+		#纳什维德皇家学会
+		TPG_nashwade_royal_society = {
+			picture = generic_industrial_concern_2
+			allowed = { original_tag = TPG }
+			
+			research_bonus = {
+				industry = 0.1
+				caster_equipments = 0.1
+			}
+
+			equipment_bonus = {
+				caster_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			
+			traits = { SPC_magician_concern }
+		}
+	}
+
+	mobilization_laws = {
+		law = yes
+		use_list_view = yes
+
+		#晶裔普遍服役
+		TPG_crystal_conscription = {
+			picture = eng_imperial_conscription
+			cost = 0
+			removal_cost = -1
+			level = 0
+
+			visible = { tag = TPG }
+			available = { tag = TPG }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				conscription = 0.05
+				conscription_factor = -0.2
+				army_strength_factor = 0.05
+				initiative_factor = -0.01
+				coordination_bonus = -0.01
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	magician_policy = {
+		law = yes
+		use_list_view = yes
+
+		#吉拉尼亚魔法政策
+		TPG_magician_policy = {
+			picture = generic_research_bonus
+			cost = 0
+			removal_cost = -1
+			level = 0
+
+			visible = { tag = TPG }
+			available = { tag = TPG }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				monthly_research_development_process = 2
+				state_magic_development_monthly = 0.04
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	education_policy = {
+		law = yes
+		use_list_view = yes
+
+		#二元教育体系
+		TPG_binary_education_system = {
+			picture = saf_history_of_segregation
+			cost = 0
+			removal_cost = -1
+			level = 0
+
+			visible = { tag = TPG }
+			available = { tag = TPG }
+			allowed_to_remove = { always = no }
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				research_speed_factor = 0.1
+				monthly_research_development_process = 3
+				stability_factor = -0.25
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+
+	
 }
+

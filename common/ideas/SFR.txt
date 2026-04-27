@@ -1820,6 +1820,8 @@ ideas = {
 			allowed = { always = yes }
 			removal_cost = -1
 
+			cancel = { has_idea = SFR_social_ownership_economy_idea_l_2 }
+
 			modifier = {
 				stability_factor = 0.1
 				consumer_goods_factor = 0.1
@@ -1828,24 +1830,6 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				min_export = -0.25
 				monthly_industrial_development_process = 1
-			}
-		}
-
-		#社会所有制经济
-		SFR_social_ownership_economy_idea_r = {
-			name = SFR_social_ownership_economy_idea
-			picture = new_economic_policy
-			allowed = { always = yes }
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = 0.1
-				consumer_goods_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_max_efficiency_factor = 0.05
-				global_building_slots_factor = 0.05
-				min_export = -0.3
-				monthly_agricultural_development_process = 1
 			}
 		}
 
@@ -1867,6 +1851,26 @@ ideas = {
 				monthly_population = 0.1
 				min_export = -0.35
 				monthly_industrial_development_process = 1
+			}
+		}
+
+		#社会所有制经济
+		SFR_social_ownership_economy_idea_r = {
+			name = SFR_social_ownership_economy_idea
+			picture = new_economic_policy
+			allowed = { always = yes }
+			removal_cost = -1
+
+			cancel = { has_idea = SFR_social_ownership_economy_idea_r_2 }
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				min_export = -0.3
+				monthly_agricultural_development_process = 1
 			}
 		}
 
@@ -1909,7 +1913,7 @@ ideas = {
 
 		#革命新星
 		SFR_revolutionary_new_star = {
-			picture = home_of_the_revolution
+			picture = home_of_revolution
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -1923,7 +1927,7 @@ ideas = {
 
 		#革命壁垒
 		SFR_revolutionary_barrier = {
-			picture = home_of_the_revolution
+			picture = home_of_revolution
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -1941,7 +1945,7 @@ ideas = {
 		#革命壁垒
 		SFR_revolutionary_barrier_2 = {
 			name = SFR_revolutionary_barrier
-			picture = home_of_the_revolution
+			picture = home_of_revolution
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -1960,7 +1964,7 @@ ideas = {
 		#革命壁垒
 		SFR_revolutionary_barrier_3 = {
 			name = SFR_revolutionary_barrier
-			picture = home_of_the_revolution
+			picture = home_of_revolution
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -3757,7 +3761,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				surrender_limit = -0.2
+				surrender_limit = 0.1
 				conscription = 0.001
 				command_abilities_cost_factor = -0.5
 				drift_defence_factor = 0.1
@@ -3816,9 +3820,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.05
-				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.05
-				unit_irregular_infantry_design_cost_factor = -0.5
+				modifier_army_sub_unit_light_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_light_infantry_defence_factor = 0.05
+				unit_light_infantry_design_cost_factor = -0.5
 				experience_gain_army_factor = 0.1
 			}
 		}
@@ -3830,9 +3834,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.1
-				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.1
-				unit_irregular_infantry_design_cost_factor = 1
+				modifier_army_sub_unit_light_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_light_infantry_defence_factor = 0.1
+				unit_light_infantry_design_cost_factor = 1
 				conscription_factor = 0.1
 			}
 		}

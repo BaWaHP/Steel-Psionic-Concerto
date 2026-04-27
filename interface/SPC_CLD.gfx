@@ -49,6 +49,18 @@ spriteTypes = {
 		name = "GFX_idea_CLD_Blood_Opteil"
 		texturefile = "gfx/advisors/CLD/Opteil.png"
 	}
+	spriteType = {
+		name = "GFX_idea_CLD_pugel_hofmann"
+		texturefile = "gfx/advisors/CLD/pugel_hofmann.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_otto_grotivo"
+		texturefile = "gfx/advisors/CLD/otto_grotivo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CLD_viachev_pavflo"
+		texturefile = "gfx/advisors/CLD/viachev_pavflo.png"
+	}
 	###民族精神###
 	spriteType = {
 		name = "GFX_idea_CLD_revolutionary_industrialization"
@@ -243,6 +255,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_texticons_CLD_7"
 		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_7.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticons_CLD_8"
+		texturefile = "gfx/interface/texticons/CLD/texticons_CLD_8.png"
 		legacy_lazy_load = no
 	}
 	###事件###

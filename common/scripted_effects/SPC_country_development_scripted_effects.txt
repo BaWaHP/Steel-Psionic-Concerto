@@ -94,6 +94,19 @@ SPC_country_development_upgrade = {
 		if = { limit = { NOT = { has_idea = fuck_the_science } } country_event = CD.12 }
 		set_variable = { research_development_amount = 199 }
 	}
+
+	set_variable = { industrial_development_frame = industrial_development_amount }
+	multiply_variable = { industrial_development_frame = 0.5 }
+	set_variable = { agricultural_development_frame = agricultural_development_amount }
+	multiply_variable = { agricultural_development_frame = 0.5 }
+	set_variable = { military_development_frame = military_development_amount }
+	multiply_variable = { military_development_frame = 0.5 }
+	set_variable = { living_standard_development_frame = living_standard_development_amount }
+	multiply_variable = { living_standard_development_frame = 0.5 }
+	set_variable = { environment_development_frame = environment_development_amount }
+	multiply_variable = { environment_development_frame = 0.5 }
+	set_variable = { research_development_frame = research_development_amount }
+	multiply_variable = { research_development_frame = 0.5 }
 }
 
 SPC_country_development_ideas_change_industry_up = {

@@ -90,10 +90,20 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_generic_9
+	picture = GFX_intelligence_agency_logo_generic_1
 	names = { "远乡国家安全局" }
 	
 	available = { tag = SFR has_government = revolutionary_communism }
+	
+	default = { original_tag = SFR } 
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_1
+	names = { "联邦宪法保卫局" }
+	
+	available = { tag = PEO }
 	
 	default = { original_tag = SFR } 
 }

@@ -1,0 +1,27 @@
+CLD_new_liberated_zone_1_trigger_1 = {
+	custom_override_tooltip = {
+		tooltip = CLD_new_liberated_zone_1_tr1
+		check_variable = { CLD_new_liberated_zone_level_1 > 5 }
+	}
+}
+
+CLD_new_liberated_zone_2_trigger_1 = {
+	custom_override_tooltip = {
+		tooltip = CLD_new_liberated_zone_2_tr1
+		check_variable = { CLD_new_liberated_zone_level_2 > 5 }
+	}
+}
+
+CLD_new_liberated_zone_3_trigger_1 = {
+	custom_override_tooltip = {
+		tooltip = CLD_new_liberated_zone_3_tr1
+		check_variable = { CLD_new_liberated_zone_level_3 > 1 }
+	}
+}
+
+CLD_new_liberated_zone_3_trigger_2 = {
+	custom_override_tooltip = {
+		tooltip = CLD_new_liberated_zone_3_tr2
+		check_variable = { CLD_new_liberated_zone_level_3 > 2 }
+	}
+}

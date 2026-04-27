@@ -1,0 +1,47 @@
+characters={
+
+	#埃里克·卡尔森
+	ROG_eric_carlson = {
+		name = ROG_eric_carlson
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = directed_democracy
+			expire = "3000.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservative_republican_subtype
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+
+	#何川
+	ROG_he_chuan = {
+		name = ROG_he_chuan
+		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		country_leader = {
+			ideology = military_dictatorship
+			expire = "3000.1.1.1"
+			id = -1
+		}
+	}
+}

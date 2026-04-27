@@ -2235,8 +2235,8 @@ focus_tree = {
 			army_experience = 30
 			add_to_variable = {
 				var = military_development_mod
-				value = 4
-				tooltip = military_development_mod_tt_up_2
+				value = 2
+				tooltip = military_development_mod_tt_up_1
 			}
 			add_manpower = 5000
 			SPC_training_laws_up = yes
@@ -2286,7 +2286,12 @@ focus_tree = {
 			army_experience = 50
 			add_stability = 0.1
 			add_war_support = 0.1
-			SPC_military_development_amount_down_3 = yes
+			SPC_military_development_amount_up_3 = yes
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
 			custom_effect_tooltip = SFR_right_stronger_tt
 			add_to_variable = { SFR_left_right_influence = -1 }
 		}
@@ -2407,6 +2412,17 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = -4381
 			add_stability = -0.1
+			add_political_power = 50
+			add_to_variable = {
+				var = living_standard_development_mod
+				value = 2
+				tooltip = living_standard_development_mod_tt_up_1
+			}
+			add_to_variable = {
+				var = industrial_development_mod
+				value = 4
+				tooltip = industrial_development_mod_tt_up_2
+			}
 			5 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2416,7 +2432,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SFR_left_stronger_tt
 			add_to_variable = { SFR_left_right_influence = 1 }
-			custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
+			#custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
 		}
 	}
 
@@ -2566,7 +2582,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = -0.1
-			add_political_power = -50
+			add_political_power = 50
 			add_manpower = -6318
 			add_to_variable = {
 				var = living_standard_development_mod
@@ -2578,6 +2594,10 @@ focus_tree = {
 				value = 4
 				tooltip = agricultural_development_mod_tt_up_2
 			}
+			every_owned_state = {
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+			}
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2587,7 +2607,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SFR_left_stronger_tt
 			add_to_variable = { SFR_left_right_influence = 1 }
-			custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
+			#custom_effect_tooltip = SFR_liquidation_of_the_reactionaries_tt
 		}
 	}
 
@@ -3449,6 +3469,22 @@ focus_tree = {
 				target = FFH
 				transfer_troops = yes
 			}
+			hidden_effect = {
+				if = {
+					limit = { has_template = "农民起义军" }
+					set_division_template_lock = {
+						division_template = "农民起义军"
+						is_locked = no
+					}
+				}
+				if = {
+					limit = { has_template = "革命游击队" }
+					set_division_template_lock = {
+						division_template = "革命游击队"
+						is_locked = no
+					}
+				}
+			}
 			country_event = {
 				id = SFR.319
 				days = 1
@@ -3749,7 +3785,10 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-			MSA = { exists = no }
+			OR = {
+				MSA = { is_subject_of = ROOT }
+				MSA = { exists = no }
+			}
 		}
 
 		available_if_capitulated = yes
@@ -5562,6 +5601,7 @@ focus_tree = {
 				add_to_variable = { SFR_red_farhome_industrialization_icf = 0.05 }
 				add_to_variable = { SFR_red_farhome_industrialization_icd = 0.05 }
 				add_to_variable = { SFR_red_farhome_industrialization_psbf = 0.05 }
+				force_update_dynamic_modifier = yes
 			}
 		}
 	}
@@ -6000,9 +6040,11 @@ focus_tree = {
 					}
 				}
 			}
-			swap_ideas = {
-				remove_idea = SFR_red_farhome_industrialization_tt_0
-				add_idea = SFR_red_farhome_industrialization_tt_3
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_industrialization_tt_0
+					add_idea = SFR_red_farhome_industrialization_tt_3
+				}
 			}
 			add_to_variable = { SFR_red_farhome_industrialization_pfegf = 0.1 }
 			add_to_variable = { SFR_red_farhome_industrialization_lcpef = 0.1 }
@@ -7900,6 +7942,11 @@ focus_tree = {
 				add_idea = SFR_revolutionary_barrier
 			}
 			create_faction_from_template = faction_template_SFR_1
+			hidden_effect = {
+				every_subject_country = {
+					SFR = { add_to_faction = PREV }
+				}
+			}
 		}
 	}
 
@@ -8044,8 +8091,8 @@ focus_tree = {
 			add_political_power = -100
 			random_list = {
 				20 = { country_event = SFR.802 }
-				40 = { country_event = SFR.802 }
-				40 = { country_event = SFR.802 }
+				40 = { country_event = SFR.803 }
+				40 = { country_event = SFR.804 }
 			}
 		}
 	}
@@ -8098,6 +8145,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = -0.1
 			add_ideas = SFR_focus_inward
+			set_country_flag = SPC_rebuild_decision_enable_flag
 		}
 	}
 
@@ -8825,7 +8873,7 @@ focus_tree = {
 					add_idea = SFR_red_farhome_army_tt_9
 				}
 			}
-			add_to_variable = { SFR_red_farhome_army_sl = -0.2 }
+			add_to_variable = { SFR_red_farhome_army_sl = 0.1 }
 			add_to_variable = { SFR_red_farhome_army_c = 0.001 }
 			add_to_variable = { SFR_red_farhome_army_cacf = -0.5 }
 			add_to_variable = { SFR_red_farhome_army_ddf = 0.1 }
@@ -9369,9 +9417,11 @@ focus_tree = {
 				uses = 2
 				bonus = 1
 			}
-			swap_ideas = {
-				remove_idea = SFR_red_farhome_army_tt_0
-				add_idea = SFR_red_farhome_army_tt_23
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SFR_red_farhome_army_tt_0
+					add_idea = SFR_red_farhome_army_tt_23
+				}
 			}
 			add_to_variable = { SFR_red_farhome_army_disf = 0.1 }
 			add_to_variable = { SFR_red_farhome_army_mdif = 0.1 }
@@ -10808,7 +10858,7 @@ focus_tree = {
 	
 	focus = {	#重建海军船坞
 		id = SFR_rebuild_naval_docks
-		icon = GFX_GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
+		icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
 		x = 2
 		y = 1
 		cost = 5

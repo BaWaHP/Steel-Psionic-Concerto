@@ -1,0 +1,15 @@
+defined_text = {
+	name = GET_CLD_central_people_committe_1_and_2
+	text = {
+		trigger = {
+            set_temp_variable = { CLD_central_people_committe_1_and_2_val = 0 }
+			add_to_temp_variable = { CLD_central_people_committe_1_and_2_val = CLD_central_people_committe_1_1 }
+			add_to_temp_variable = { CLD_central_people_committe_1_and_2_val = CLD_central_people_committe_2_1 }
+			round_temp_variable = CLD_central_people_committe_1_and_2_val
+		}
+		localization_key = "[?CLD_central_people_committe_1_and_2_val]"
+	}
+	text = {
+		localization_key = "100.00"
+	}
+}

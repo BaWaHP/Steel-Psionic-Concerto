@@ -1,0 +1,79 @@
+#伊索尔维拉皇家汽车厂
+TPG_isorvila_royal_automobile_factory = {
+	name = TPG_isorvila_royal_automobile_factory
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+	allowed = { tag = TPG }
+}
+
+#法伦梅尔
+TPG_farenmeyer = {
+	name = TPG_farenmeyer
+	include = generic_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	allowed = { tag = TPG }
+}
+
+#埃斯卡隆舰船开发局
+TPG_escalon_ship_development_bureau = {
+	name = TPG_escalon_ship_development_bureau
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	allowed = { tag = TPG }
+}
+
+#吉拉尼亚航空
+TPG_gilania_aerospace = {
+	name = TPG_gilania_aerospace
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	allowed = { tag = TPG }
+}
+
+#西里安—索斯特
+TPG_sirian_soster = {
+	name = TPG_sirian_soster
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	allowed = { tag = TPG }
+}
+
+#弗洛里安兵工厂
+TPG_florian_arsenal = {
+	name = TPG_florian_arsenal
+	include = generic_armament_enchantment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	allowed = { tag = TPG }
+}
+
+#阿特拉斯火炮开发局
+TPG_atlas_artillery_development_bureau = {
+	name = TPG_atlas_artillery_development_bureau
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { tag = TPG }
+}
+
+#赫溥
+TPG_hepu = {
+	name = TPG_hepu
+	include = generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+	allowed = { tag = TPG }
+}
+
+#彭布罗克家族企业
+TPG_pembroke_family_enterprise = {
+	name = TPG_pembroke_family_enterprise
+	include = generic_uniform_manufacturer_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	allowed = { tag = TPG }
+}
+
+#弗德里斯魔法开发局
+TPG_fudelis_magic_development_bureau = {
+	name = TPG_fudelis_magic_development_bureau
+	include = generic_caster_equipment_manufacturer_organization
+	icon = GFX_idea_generic_artillery_manufacturer_2
+	allowed = { tag = TPG }
+}

@@ -63,12 +63,34 @@ SPC_MTV_startup_effect = {
 			days = 29
 		}
 		give_resource_rights = {
-			receiver = RSB
-			state = 427
+			receiver = ZHE
+			state = 459
+			resources = { magic_crystal }
+		}
+		give_resource_rights = {
+			receiver = ZHE
+			state = 463
+			resources = { oil }
 		}
 		give_resource_rights = {
 			receiver = RSB
 			state = 423
+			resources = { magic_crystal }
+		}
+		give_resource_rights = {
+			receiver = RSU
+			state = 423
+			resources = { coal }
+		}
+		give_resource_rights = {
+			receiver = RSB
+			state = 427
+			resources = { magic_crystal coal }
+		}
+		give_resource_rights = {
+			receiver = CBL
+			state = 462
+			resources = { chromium }
 		}
 		###控制省份对应普及度##
 		427 = {
