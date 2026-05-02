@@ -1405,13 +1405,12 @@ country_event = {	#内战之终...？
 	option = {
 		name = SFR.152.a
 		trigger = { QTA = { exists = no } }
-		#if = {
-		#	limit = { has_country_flag = SFR_focus_1_2 }
-		#	clr_country_flag = SFR_focus_1_2
-		#	set_country_flag = SFR_focus_1_3
-		#}
-		#mark_focus_tree_layout_dirty = yes
-		load_focus_tree = generic_focus
+		if = {
+			limit = { has_country_flag = SFR_focus_1_2 }
+			clr_country_flag = SFR_focus_1_2
+			set_country_flag = SFR_focus_1_3
+		}
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	option = {
@@ -1421,13 +1420,6 @@ country_event = {	#内战之终...？
 			target = QTA
 			type = annex_everything
 		}
-		if = {
-			limit = { has_country_flag = SFR_focus_1_2 }
-			clr_country_flag = SFR_focus_1_2
-			set_country_flag = SFR_focus_1_3
-		}
-		mark_focus_tree_layout_dirty = yes
-		#load_focus_tree = generic_focus
 	}
 }
 
@@ -2347,6 +2339,7 @@ country_event = {	#同意
 	
 	option = {
 		name = SFR.305.a
+		set_country_flag = SFR_integrate_northwest_gov_flag
 		effect_tooltip = { unlock_national_focus = SFR_integrate_northwest_gov }
 	}
 }

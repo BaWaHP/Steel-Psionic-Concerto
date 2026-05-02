@@ -2101,6 +2101,8 @@ focus_tree = {
 				id = SFR.200
 				days = 1
 			}
+			set_capital = { state = 5 }
+			5 = { add_core_of = SFR }
 			set_cosmetic_tag = SFR_unif_tag
 		}
 	}
@@ -3036,7 +3038,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			always = no
+			has_country_flag = SFR_integrate_northwest_gov_flag
 		}
 
 		available_if_capitulated = yes
