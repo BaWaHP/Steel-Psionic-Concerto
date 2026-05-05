@@ -1,4 +1,4 @@
-version="1.18.*"
+version="0.0.1"
 tags={
 	"Alternative History"
 }
@@ -38,5 +38,5 @@ replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 picture="thumbnail.png"
 name="SPCTest"
-supported_version="1.16.*"
+supported_version="1.18.*"
 remote_file_id="2860787685"
