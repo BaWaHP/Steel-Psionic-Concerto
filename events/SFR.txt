@@ -1404,22 +1404,12 @@ country_event = {	#内战之终...？
 	
 	option = {
 		name = SFR.152.a
-		trigger = { QTA = { exists = no } }
 		if = {
 			limit = { has_country_flag = SFR_focus_1_2 }
 			clr_country_flag = SFR_focus_1_2
 			set_country_flag = SFR_focus_1_3
 		}
 		mark_focus_tree_layout_dirty = yes
-	}
-
-	option = {
-		name = SFR.152.b
-		trigger = { QTA = { exists = yes } }
-		declare_war_on = {
-			target = QTA
-			type = annex_everything
-		}
 	}
 }
 

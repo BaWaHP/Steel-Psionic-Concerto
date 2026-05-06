@@ -25,7 +25,7 @@ SPC_generic_sekeleton_decision_category = {
 
 		complete_effect = {
 			if = {
-				limit = { FROM = { NOT = { tag = TPG } } }
+				limit = { FROM = { NOT = { tag = TPG tag = ROG } } }
 				FROM = {
 					add_to_ROOT_potential_cores = yes
 				}

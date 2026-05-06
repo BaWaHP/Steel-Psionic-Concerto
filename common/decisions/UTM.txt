@@ -1,10 +1,29 @@
 SPC_generic_sekeleton_decision_category = {
-	UTM_generic_war_decision = {		#北中巴通用吃鸡决议
+	UTM_magic_supply_change = { 		#随机魔力储备变化
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { tag = UTM }
+		available = { always = no }
+		activation = { always = no }
+		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+
+		timeout_effect = {
+			random_list = {
+				40 = { UTM_magic_supply_up = yes }
+				40 = { UTM_magic_supply_down = yes }
+				20 = { add_stability = 0.01 add_political_power = 1 }
+			}
+			activate_mission = UTM_magic_supply_change
+		}
+	}
+	UTM_generic_war_decision = {		#北中巴东部通用吃鸡决议
 		icon = GFX_decision_eng_trade_unions_support
-		visible = { SPC_generic_region_trigger_250 = yes }
+		visible = { SPC_generic_region_trigger_252 = yes }
 
 		available = {
-			date > 1999.6.1
+			date > 2000.6.1
 			has_war = no
 			FROM = { is_neighbor_of = ROOT }
 		}
@@ -12,7 +31,7 @@ SPC_generic_sekeleton_decision_category = {
 		targets_dynamic = yes
 		target_trigger = {
 			FROM = {
-				SPC_generic_region_trigger_250 = yes
+				SPC_generic_region_trigger_252 = yes
 				NOT = { tag = ROOT }
 				NOT = { is_subject_of = ROOT }
 			}
@@ -35,50 +54,68 @@ SPC_generic_sekeleton_decision_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = { SPC_generic_region_trigger_250 = yes }
 
-		visible = {
-			date < 2002.1.1
-		}
-
 		fire_only_once = no
 		days_remove = 30
 
 		remove_effect = {
-			add_manpower = 2000
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
+			if = {
+				limit = { date > 2001.6.1 }
+				add_manpower = 2000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 300
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 300
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 30
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 30
+				}
 			}
-			add_equipment_to_stockpile = {
-				type = uniform_equipment
-				amount = 1000
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 400
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 200
-			}
-			add_equipment_to_stockpile = {
-				type = caster_attaker_equipment
-				amount = 50
+			else = {
+				add_manpower = 5000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+				}
+				add_equipment_to_stockpile = {
+					type = uniform_equipment
+					amount = 500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 100
+				}
+				add_equipment_to_stockpile = {
+					type = caster_attaker_equipment
+					amount = 30
+				}
 			}
 		}
 
 		ai_will_do = {
-			base = 50
+			base = 999999
 		}
 	}
 }
 
 SPC_generic_national_reunification_decision_category = {
-	UTM_reunification_decision = {		#奥提摩统一决议
+	UTM_reunification_decision = {		#北中巴东部通用统一决议
 		icon = GFX_decision_eng_trade_unions_support
-		visible = { SPC_generic_region_trigger_250 = yes }
+		visible = { SPC_generic_region_trigger_252 = yes }
 
 		available = {
-			SPC_generic_region_trigger_250_control = yes
+			SPC_generic_region_trigger_252_control = yes
 		}
 
 		fire_only_once = yes
@@ -88,20 +125,28 @@ SPC_generic_national_reunification_decision_category = {
 			add_war_support = 0.1
 			add_political_power = 200
 			for_each_scope_loop = {
-				array = global.SPC_generic_region_states_250
+				array = global.SPC_generic_region_states_252
 				if = {
 					limit = { NOT = { is_core_of = ROOT } }
 					add_core_of = ROOT
 				}
 			}
-			set_global_flag = SPC_region_unified_global_250
+			set_global_flag = SPC_region_unified_global_252
 			if = {
 				limit = { tag = UTM }
 				news_event = UTMNews.1
+				swap_ideas = {
+					remove_idea = UTM_last_empire_legion_2
+					add_idea = UTM_last_empire_legion_3
+				}
 			}
 			if = {
 				limit = { tag = EOM }
-				OAS = { add_to_faction = EOM }
+				OAS = { 
+					add_to_faction = EOM 
+					OAS_weak_republic_down = yes
+					OAS_nothing_but_brace_down = yes
+				}
 			}
 		}
 

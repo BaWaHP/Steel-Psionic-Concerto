@@ -58,13 +58,13 @@ ideas = {
 			allowed = {  original_tag = KOA }
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				war_support_factor = -0.5
-				experience_gain_army_factor = -1
+				consumer_goods_factor = -0.25
+				war_support_factor = -0.25
+				experience_gain_army_factor = -0.5
 				training_time_army_factor = 1
-				army_defence_factor = -0.3
-				army_org_factor = -0.3
-				monthly_military_development_process = -2
+				army_defence_factor = -0.25
+				army_org_factor = -0.25
+				monthly_military_development_process = -1
 			}
 		}
 

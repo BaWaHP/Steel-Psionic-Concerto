@@ -5,11 +5,6 @@ SPC_generic_sekeleton_decision_category = {
 
 		available = {
 			date > 1999.6.1
-			NOT = {
-				any_enemy_country = {
-					SPC_generic_region_trigger_251 = yes
-				}
-			}
 			any_country = {
 				exists = yes
 				SPC_generic_region_trigger_251 = yes
@@ -28,6 +23,28 @@ SPC_generic_sekeleton_decision_category = {
 					}
 				}
 			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	NOH_integrate_WCH = {		#整合乌骓
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { SPC_generic_region_trigger_251 = yes }
+
+		available = {
+			WCH = { exists = no }
+			owns_state = 296
+			owns_state = 297
+			owns_state = 299
+			owns_state = 300
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			WCH = { add_to_ROOT_potential_cores = yes }
 		}
 
 		ai_will_do = {
@@ -61,7 +78,11 @@ SPC_generic_national_reunification_decision_category = {
 			set_global_flag = SPC_region_unified_global_251
 			if = {
 				limit = { tag = NOH }
-				OAS = { add_to_faction = NOH }
+				OAS = { 
+					add_to_faction = NOH 
+					OAS_weak_republic_down = yes
+					OAS_nothing_but_brace_down = yes
+				}
 			}
 		}
 

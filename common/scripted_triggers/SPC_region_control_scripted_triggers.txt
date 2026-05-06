@@ -283,3 +283,16 @@ SPC_generic_region_trigger_251_control = {	#控制全雀鸟
 		}
 	}
 }
+
+SPC_generic_region_trigger_252_control = {	#控制北中巴东部
+	custom_trigger_tooltip = {
+		tooltip = SPC_generic_region_trigger_252_control_tr
+		all_of_scopes = {
+			array = global.SPC_generic_region_states_252
+			OR = {
+				is_owned_by = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+		}
+	}
+}

@@ -10,10 +10,33 @@ country_event = {	#南！下！
 	
 	option = {
 		name = UTM.1.a
+		swap_ideas = {
+			remove_idea = UTM_last_empire_legion
+			add_idea = UTM_last_empire_legion_2
+		}
+		swap_ideas = {
+			remove_idea = UTM_soul_in_void
+			add_idea = UTM_chasing_past
+		}
 		declare_war_on = {
 			target = NLL
 			type = annex_everything
 		}
+	}
+}
+
+country_event = {	#野生魔晶羊灭绝
+	id = UTM.2
+	title = UTM.2.t
+	desc = UTM.2.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UTM.2.a
+		UTM_magic_supply_down = yes
+		news_event = GlobalNews.5
 	}
 }
 

@@ -847,7 +847,7 @@ SPC_generic_rebuild_decision_category_enable_trigger = {
 #吉拉尼亚
 SPC_generic_rebuild_TPG_trigger = {
 	TPG = { NOT = { has_country_flag = generic_territory_has_been_rebuilt } }
-	NOT = { tag = TPG }
+	NOT = { SPC_generic_region_trigger_3 = yes }
 }
 
 #沃姆

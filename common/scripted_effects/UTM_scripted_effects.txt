@@ -56,6 +56,12 @@ SPC_UTM_startup_effect = {
 		add_ideas = RAP_discrimination
 		add_ideas = RLP_moralism
 		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		country_event = {
+			id = UTM.2
+			days = 100
+		}
+		activate_mission = UTM_magic_supply_change
 		###控制省份对应普及度###
 		184 = {
 			set_variable = { state_magic_progress = 0 }
@@ -93,5 +99,105 @@ SPC_UTM_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 1 }
 		}
+	}
+}
+
+UTM_magic_supply_up = {
+	if = {
+		limit = { has_idea = UTM_magic_supply_0 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_0
+			add_idea = UTM_magic_supply_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_1 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_1
+			add_idea = UTM_magic_supply_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_2 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_2
+			add_idea = UTM_magic_supply_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_3 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_3
+			add_idea = UTM_magic_supply_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_4 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_4
+			add_idea = UTM_magic_supply_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_5 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_5
+			add_idea = UTM_magic_supply_6
+		}
+	}
+	else = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 50
+	}
+}
+
+UTM_magic_supply_down = {
+	if = {
+		limit = { has_idea = UTM_magic_supply_6 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_6
+			add_idea = UTM_magic_supply_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_5 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_5
+			add_idea = UTM_magic_supply_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_4 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_4
+			add_idea = UTM_magic_supply_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_3 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_3
+			add_idea = UTM_magic_supply_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_2 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_2
+			add_idea = UTM_magic_supply_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = UTM_magic_supply_1 }
+		swap_ideas = {
+			remove_idea = UTM_magic_supply_1
+			add_idea = UTM_magic_supply_0
+		}
+	}
+	else = {
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
 	}
 }

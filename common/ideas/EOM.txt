@@ -43,6 +43,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			allowed = { original_tag = EOM }
 			removal_cost = -1
+			cancel = { UTM = { exists = no } }
 			modifier = {
 				stability_factor = -0.1
 				monthly_population = -0.2

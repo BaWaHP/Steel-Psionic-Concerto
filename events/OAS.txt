@@ -1,0 +1,87 @@
+﻿#事件
+add_namespace = OAS
+
+country_event = {		#绿洲协定签署
+	id = OAS.1
+	title = OAS.1.t
+	desc = OAS.1.d
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = OAS.21.a
+		news_event = OASNews.1
+		OAS = {
+			#add_to_faction = EOM
+			#add_to_faction = SOT
+			#add_to_faction = DIF
+			#add_to_faction = NOH
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+			swap_ideas = {
+				remove_idea = OAS_ethical_dilemma
+				add_idea = OAS_ethical_dilemma_2
+			}
+		}
+		EOM = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		SOT = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		NOH = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+		DIF = {
+			swap_ideas = {
+				remove_idea = OAS_oasis_cooperation_agreement
+				add_idea = OAS_oasis_agreement
+			}
+		}
+	}
+}
+
+#新闻#
+add_namespace = OASNews
+
+news_event = {
+	id = OASNews.1		#绿洲协定签署
+	title = OASNews.1.t
+	desc = OASNews.1.d
+	picture = GFX_news_event_generic_40
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OASNews.1.a
+	}
+}
+
+news_event = {
+	id = OASNews.2		#绿洲联邦成立
+	title = OASNews.2.t
+	desc = OASNews.2.d
+	picture = GFX_news_event_generic_23
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OASNews.2.a
+	}
+}

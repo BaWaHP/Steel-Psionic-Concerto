@@ -89,81 +89,18 @@ on_actions = {
 					}
 					SFH = {	country_event = SFH.1000 }
 				}
-				#叛军赢了且双方均存在#
+				#叛军赢了#
 				if = {
 					limit = {
 						FROM = { OR = { tag = SFR tag = QTA } }
-						ROOT = { tag = SFH }
-						SFR = { exists = yes }
-						QTA = { exists = yes }
-					}
-					QTA = {
-						transfer_state = 3
-						transfer_state = 4
-						transfer_state = 171
-						transfer_state = 172
-						transfer_state = 2
-						transfer_state = 173
-						transfer_state = 7
-						transfer_state = 8
-						transfer_state = 30
-					}
-					SFR = {
-						transfer_state = 13
-						transfer_state = 121
-						transfer_state = 9
-						transfer_state = 10
-						transfer_state = 174
-						transfer_state = 170
-						transfer_state = 5
-						country_event = SFR.152
-					}
-					news_event = SFHNews.4
-					set_global_flag = skip_default_capitulation
-				}
-				#王国亖了且叛军一方赢了#
-				if = {
-					limit = {
-						SFH = { exists = no }
-						FROM = { OR = { tag = SFR tag = QTA } }
-						ROOT = { OR = { tag = SFR tag = QTA } }
+						ROOT = { OR = { tag = SFR tag = QTA tag = SFH } }
 					}
 					FROM = {
-						if = {
-							limit = { tag = SFR }
+						if = { 
+							limit = { tag = SFR QTA = { exists = no } SFH = { exists = no } } 
 							country_event = SFR.152
 						}
 					}
-				}
-				#叛军赢了且另一方亖了#
-				if = {
-					limit = {
-						FROM = { OR = { tag = SFR tag = QTA } }
-						ROOT = { tag = SFH }
-						OR = {
-							QTA = { exists = no }
-							SFR = { exists = no }
-						}
-					}
-					if = {
-						limit = { QTA = { exists = no } }
-						SFR = {
-							annex_country = { target = SFH }
-							annex_country = { target = QTA }
-							country_event = SFR.152
-						}
-						news_event = SFHNews.16
-					}
-					else_if = {
-						limit = { SFR = { exists = no } }
-						QTA = {
-							annex_country = { target = SFH }
-							annex_country = { target = SFR }
-							#TODO
-						}
-						news_event = SFHNews.17
-					}
-					set_global_flag = skip_default_capitulation
 				}
 
 				###南远乡vs西北特别行政区###
@@ -491,6 +428,56 @@ on_actions = {
 						}
 						set_global_flag = SPC_region_unified_global_11
 					}
+				}
+
+				###奥提摩拿下防御同盟###
+				if = {
+					limit = {
+						FROM = { tag = UTM }
+						ROOT = { tag = NLL }
+					}
+					FROM = {
+						swap_ideas = {
+							remove_idea = UTM_rule_of_ignorance
+							add_idea = UTM_rule_of_ignorance_2
+						}
+						UTM_magic_supply_up = yes
+					}
+				}
+
+				###绿洲救队友###
+				if = {
+					limit = {
+						FROM = { tag = OAS }
+						ROOT = { OR = { tag = WCH SPC_generic_region_trigger_251 = yes } }
+					}
+					annex_country = { target = ROOT }
+					if = {
+						limit = { NOH = { exists = no } }
+						release = NOH
+					}
+					every_owned_state = {
+						limit = { is_core_of = ROOT }
+						transfer_state_to = NOH
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				if = {
+					limit = {
+						FROM = { tag = OAS }
+						ROOT = { SPC_generic_region_trigger_252 = yes }
+					}
+					annex_country = { target = ROOT }
+					if = {
+						limit = { EOM = { exists = no } }
+						release = EOM
+					}
+					every_owned_state = {
+						limit = { is_core_of = ROOT }
+						transfer_state_to = EOM
+					}
+					set_global_flag = skip_default_capitulation
 				}
 
 				###默认情况下直接吞###

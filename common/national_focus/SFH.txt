@@ -8793,7 +8793,7 @@ focus_tree = {
 		icon = GFX_goal_skull_treaty
 		x = 0
 		y = 2
-		cost = 4.4
+		cost = 2.2
 
 		available = {
 			has_country_flag = SFH_mermaid_crisis_on
@@ -8821,7 +8821,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Secret_Police
 		x = 0
 		y = 1
-		cost = 4.4
+		cost = 2.2
 
 		available = {
 			has_country_flag = SFH_mermaid_crisis_on
@@ -8860,7 +8860,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Meeting
 		x = -1
 		y = 1
-		cost = 4.4
+		cost = 2.2
 
 		available = {
 			has_country_flag = SFH_mermaid_crisis_on
@@ -8897,7 +8897,7 @@ focus_tree = {
 		icon = GFX_Generic_Pass_Legislation
 		x = 1
 		y = 1
-		cost = 4.4
+		cost = 2.2
 
 		available = {
 			has_country_flag = SFH_mermaid_crisis_on
@@ -8934,7 +8934,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Executions
 		x = 0
 		y = 2
-		cost = 4.4
+		cost = 2.2
 
 		available = {
 			has_country_flag = SFH_mermaid_crisis_on
@@ -15280,6 +15280,11 @@ focus_tree = {
 			OR = {
 				has_completed_focus = SFH_but_equal_this_time
 				has_completed_focus = SFH_but_coop_goes_on
+			}
+			OR = {
+				has_completed_focus = SFH_looking_for_the_future
+				has_completed_focus = SFH_sail_peacefully
+				has_completed_focus = SFH_now_we_are_safe
 			}
 		}
 

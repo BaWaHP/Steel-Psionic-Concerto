@@ -21,6 +21,100 @@ SPC_generic_sekeleton_decision_category = {
 				target = SOT
 				transfer_troops = yes
 			}
+			SOT = { add_to_ROOT_potential_cores = yes }
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	OAS_coop_NOH = {		#和NOH联合
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = OAS }
+
+		available = {
+			NOH = { exists = yes }
+			OR = {
+				NOH = { surrender_progress > 0.5 }
+				date > 2002.6.1
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 5
+
+		remove_effect = {
+			add_to_faction = NOH
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	OAS_coop_EOM = {		#和EOM联合
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = OAS }
+
+		available = {
+			EOM = { exists = yes }
+			OR = {
+				EOM = { surrender_progress > 0.5 }
+				date > 2002.6.1
+			}
+		}
+
+		fire_only_once = yes
+		days_remove = 5
+
+		remove_effect = {
+			add_to_faction = EOM
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+	OAS_unification = {		#绿洲，合体！
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = OAS }
+
+		available = {
+			NOH = { SPC_generic_region_trigger_251_control = yes }
+			EOM = { 
+				SPC_generic_region_trigger_252_control = yes 
+				owns_state = 296
+				owns_state = 297
+				owns_state = 299
+				owns_state = 300
+			}
+			SOT = { exists = no }
+		}
+
+		fire_only_once = yes
+		days_remove = 5
+
+		remove_effect = {
+			annex_country = {
+				target = NOH
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = EOM
+				transfer_troops = yes
+			}
+			every_owned_state = { add_core_of = ROOT }
+			swap_ideas = {
+				remove_idea = OAS_idealism
+				add_idea = OAS_idealism_lighthouse
+			}
+			swap_ideas = {
+				remove_idea = OAS_ethical_dilemma_2
+				add_idea = OAS_light_from_the_moon
+			}
+			OAS_weak_republic_down = yes
+			OAS_nothing_but_brace_down = yes
+			set_cosmetic_tag = OAS_unified_tag_1
+			news_event = OASNews.2
 		}
 
 		ai_will_do = {

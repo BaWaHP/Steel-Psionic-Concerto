@@ -27,54 +27,6 @@ country_event = {		#中巴联盟内战（无需文本）
 	}
 }
 
-country_event = {		#绿洲协定签署（无需文本）
-	id = Global.2
-	title = Global.2.t
-	desc = Global.2d
-	#picture = 
-
-	is_triggered_only = yes
-
-	option = {
-		name = Global.2.a
-		news_event = GlobalNews.4
-		OAS = {
-			#add_to_faction = EOM
-			#add_to_faction = SOT
-			#add_to_faction = DIF
-			#add_to_faction = NOH
-			swap_ideas = {
-				remove_idea = OAS_oasis_cooperation_agreement
-				add_idea = OAS_oasis_agreement
-			}
-		}
-		EOM = {
-			swap_ideas = {
-				remove_idea = OAS_oasis_cooperation_agreement
-				add_idea = OAS_oasis_agreement
-			}
-		}
-		SOT = {
-			swap_ideas = {
-				remove_idea = OAS_oasis_cooperation_agreement
-				add_idea = OAS_oasis_agreement
-			}
-		}
-		NOH = {
-			swap_ideas = {
-				remove_idea = OAS_oasis_cooperation_agreement
-				add_idea = OAS_oasis_agreement
-			}
-		}
-		DIF = {
-			swap_ideas = {
-				remove_idea = OAS_oasis_cooperation_agreement
-				add_idea = OAS_oasis_agreement
-			}
-		}
-	}
-}
-
 #新闻
 
 add_namespace = GlobalNews
@@ -106,21 +58,6 @@ news_event = {
 	
 	option = {
 		name = GlobalNews.2.a
-	}
-}
-
-news_event = {
-	id = GlobalNews.4		#绿洲协定签署
-	title = GlobalNews.4.t
-	desc = GlobalNews.4.d
-	picture = GFX_news_event_generic_40
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = GlobalNews.4.a
 	}
 }
 

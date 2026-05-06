@@ -6,6 +6,10 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			allowed = { always = yes }
 			removal_cost = -1
+			cancel = {
+				NOT = { WUN = { has_government = authoritarian_nationalism } }
+				NOT = { WUN = { has_government = wizard_rules } }
+			}
 			modifier = {
 				stability_factor = -0.1
 				monthly_population = -0.2
@@ -30,9 +34,9 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
 				consumer_goods_factor = -0.05
-				ai_join_ally_desire_factor = -9999
-				ai_call_ally_desire_factor = -9999
+				ai_focus_aggressive_factor = 0.5
 			}
 		}
 
@@ -47,7 +51,25 @@ ideas = {
 				army_org_regain = 0.05
 				weekly_manpower = 200
 				consumer_goods_factor = 0.1
+				send_volunteer_size = 4
+				worldunion_democrat_drift = 0.02
 			}
+			rule = { can_send_volunteers = yes }
+		}
+
+		OAS_idealism_lighthouse = {		#理想主义灯塔
+			picture = generic_democratic_drift_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				war_stability_factor = 0.1
+				war_support_factor = 0.2
+				political_power_factor = 0.1
+				army_org_regain = 0.1
+				send_volunteer_size = 8
+				worldunion_democrat_drift = 0.04
+			}
+			rule = { can_send_volunteers = yes }
 		}
 
 		OAS_ethical_dilemma = {		#道德困境
@@ -62,6 +84,40 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.1
 				research_speed_factor = 0.01
+			}
+		}
+
+		OAS_ethical_dilemma_2 = {		#道德困境
+			name = OAS_ethical_dilemma
+			picture = generic_purge
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				research_speed_factor = 0.05
+			}
+		}
+
+		#光自辉月之城来
+		OAS_light_from_the_moon = {
+			picture = ARG_civilian_economy_boost
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.1
+				monthly_living_standard_development_process = 2
+				monthly_research_development_process = 2
 			}
 		}
 
@@ -80,6 +136,34 @@ ideas = {
 			}
 		}
 
+		OAS_weak_republic_2 = {		#脆弱的共和国
+			name = OAS_weak_republic
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				monthly_living_standard_development_process = -1
+				state_science_development_monthly = -0.01
+				state_magic_development_monthly = -0.01
+			}
+		}
+
+		OAS_weak_republic_3 = {		#脆弱的共和国
+			name = OAS_weak_republic
+			picture = POL_disjointed_industry
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.05
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
 		OAS_nothing_but_brace = {		#满腔热血，而一无所有
 			picture = hol_expand_the_colonial_army
 			allowed = { always = yes }
@@ -87,13 +171,49 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.3
 				army_attack_factor = -0.2
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.1
 				breakthrough_factor = -0.2
 				army_org_factor = -0.2
 				experience_gain_army_factor = -0.5
 				land_doctrine_cost_factor = 0.75
 				air_doctrine_cost_factor = 0.75
 				naval_doctrine_cost_factor = 0.75
+			}
+		}
+
+		OAS_nothing_but_brace_2 = {		#满腔热血，而一无所有
+			name = OAS_nothing_but_brace
+			picture = hol_expand_the_colonial_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.3
+				army_attack_factor = -0.1
+				army_core_defence_factor = 0.1
+				breakthrough_factor = -0.1
+				army_org_factor = -0.1
+				experience_gain_army_factor = -0.25
+				land_doctrine_cost_factor = 0.5
+				air_doctrine_cost_factor = 0.5
+				naval_doctrine_cost_factor = 0.5
+			}
+		}
+
+		OAS_nothing_but_brace_3 = {		#满腔热血，而一无所有
+			name = OAS_nothing_but_brace
+			picture = hol_expand_the_colonial_army
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.3
+				army_attack_factor = -0.05
+				army_core_defence_factor = 0.1
+				breakthrough_factor = -0.05
+				army_org_factor = -0.05
+				experience_gain_army_factor = -0.1
+				land_doctrine_cost_factor = 0.25
+				air_doctrine_cost_factor = 0.25
+				naval_doctrine_cost_factor = 0.25
 			}
 		}
 

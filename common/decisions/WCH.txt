@@ -1,0 +1,46 @@
+SPC_generic_sekeleton_decision_category = {
+	WCH_invade_birds = {		#大吼一声扑向雀鸟
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = WCH }
+
+		available = {
+			date > 2001.6.1
+			OR = {
+				OHL = { exists = yes }
+				OLA = { exists = yes }
+				NOH = { exists = yes }
+			}
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { OHL = { exists = yes } }
+				declare_war_on = {
+					target = OHL
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { OLA = { exists = yes } }
+				declare_war_on = {
+					target = OLA
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { NOH = { exists = yes } }
+				declare_war_on = {
+					target = NOH
+					type = annex_everything
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
+}
+

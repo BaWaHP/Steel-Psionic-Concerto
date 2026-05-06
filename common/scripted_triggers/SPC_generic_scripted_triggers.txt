@@ -241,12 +241,21 @@ SPC_generic_region_trigger_200 = {	#中巴任意政权
 
 SPC_generic_region_trigger_250 = {	#北中巴任意政权
 	OR = {
-		tag = UTM tag = IPK tag = TCL tag = BCC tag = NLL tag = EOM
+		SPC_generic_region_trigger_251 = yes
+		SPC_generic_region_trigger_252 = yes
+		tag = OAS
+		tag = WCH
 	}
 }
 
 SPC_generic_region_trigger_251 = {	#雀鸟任意政权
 	OR = {
 		tag = NOH tag = OLA tag = OHL
+	}
+}
+
+SPC_generic_region_trigger_252 = {	#北中巴殖民地地区任意政权
+	OR = {
+		tag = UTM tag = IPK tag = TCL tag = BCC tag = NLL tag = EOM
 	}
 }

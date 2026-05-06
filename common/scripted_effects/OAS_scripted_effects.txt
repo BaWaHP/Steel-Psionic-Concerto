@@ -56,6 +56,10 @@ SPC_OAS_startup_effect = {
 		add_ideas = RAP_legally_equality
 		add_ideas = RLP_moralism
 		add_ideas = SXP_traditional_policy
+		###其它开局设置###
+		country_event = {
+			id = OAS.1 days = 120
+		}
 		###控制省份对应普及度###
 		267 = {
 			set_variable = { state_magic_progress = 0 }
@@ -87,5 +91,45 @@ SPC_OAS_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 1 }
 		}
+	}
+}
+
+OAS_weak_republic_down = {
+	if = {
+		limit = { has_idea = OAS_weak_republic }
+		swap_ideas = {
+			remove_idea = OAS_weak_republic
+			add_idea = OAS_weak_republic_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = OAS_weak_republic_2 }
+		swap_ideas = {
+			remove_idea = OAS_weak_republic_2
+			add_idea = OAS_weak_republic_3
+		}
+	}
+	else = {
+		remove_ideas = OAS_weak_republic_3
+	}
+}
+
+OAS_nothing_but_brace_down = {
+	if = {
+		limit = { has_idea = OAS_nothing_but_brace }
+		swap_ideas = {
+			remove_idea = OAS_nothing_but_brace
+			add_idea = OAS_nothing_but_brace_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = OAS_nothing_but_brace_2 }
+		swap_ideas = {
+			remove_idea = OAS_nothing_but_brace_2
+			add_idea = OAS_nothing_but_brace_3
+		}
+	}
+	else = {
+		remove_ideas = OAS_nothing_but_brace_3
 	}
 }

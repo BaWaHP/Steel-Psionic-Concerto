@@ -78,15 +78,6 @@ on_actions = {
 				news_event = { 
 					id = GlobalNews.2 days = 200
 				}
-				#news_event = { 
-				#	id = GlobalNews.3 days = 100
-				#}
-				country_event = {
-					id = Global.2 days = 30
-				}
-				news_event = { 
-					id = GlobalNews.5 days = 60
-				}
 			}
 			###地区数组设置###
 			every_country = {
@@ -235,6 +226,12 @@ on_actions = {
 					limit = { SPC_generic_region_trigger_251 = yes }	
 					every_owned_state = {
 						add_to_array = { global.SPC_generic_region_states_251 = THIS.id }
+					}
+				}
+				if = {
+					limit = { SPC_generic_region_trigger_252 = yes }	
+					every_owned_state = {
+						add_to_array = { global.SPC_generic_region_states_252 = THIS.id }
 					}
 				}
 			}

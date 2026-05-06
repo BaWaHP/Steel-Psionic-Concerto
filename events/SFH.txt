@@ -2426,7 +2426,6 @@ country_event = {		#山雨欲来
 					transfer_state_to = QTA
 				}
 			}
-
 			clr_state_flag = SFH_state_influence_under_control
 			clr_state_flag = SFH_state_influence_not_under_control
 			clr_state_flag = SFH_state_influence_lock
@@ -2439,6 +2438,10 @@ country_event = {		#山雨欲来
 			}
 			declare_war_on = {
 				target = SFH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = QTA
 				type = annex_everything
 			}
 			if = {
@@ -2468,6 +2471,10 @@ country_event = {		#山雨欲来
 			}
 			declare_war_on = {
 				target = SFH
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SFR
 				type = annex_everything
 			}
 			if = {

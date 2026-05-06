@@ -1,5 +1,9 @@
 OAS_support_all_allies = {
-	allowed = { tag = OAS }
+	allowed = {
+		OR = {
+			tag = OAS tag = NOH tag = EOM
+		}
+	}
 	enable = { always = yes }
 	abort = { always = no }
 
@@ -7,6 +11,24 @@ OAS_support_all_allies = {
         type = force_build_armies
         value = 20
     }
+
+	ai_strategy = {
+		type = support
+		id = NOH
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = CBI
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = EOM
+		value = 100
+	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
@@ -17,13 +39,31 @@ OAS_support_all_allies = {
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CBI
-		value = 50
+		value = 100
 	}
 
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = EOM
 		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = OAS
+		value = 200
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NOH
+		value = 200
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = EOM
+		value = 200
 	}
 }
 

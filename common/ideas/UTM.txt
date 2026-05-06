@@ -6,7 +6,7 @@ ideas = {
 			allowed = { original_tag = UTM }
 			removal_cost = -1
 			modifier = {
-				conscription_factor = -0.1
+				conscription_factor = -0.2
 				war_support_factor = 0.05
 				army_attack_factor = 0.05
 				army_defence_factor = -0.2
@@ -20,6 +20,44 @@ ideas = {
 			}
 		}
 
+		UTM_last_empire_legion_2 = {		#最后的帝国军团
+			name = UTM_last_empire_legion
+			picture = chi_incompetent_officers
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.1
+				war_support_factor = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+				command_power_gain_mult = -0.25
+				experience_gain_army_factor = -0.5
+				experience_gain_air_factor = -0.5
+				land_doctrine_cost_factor = 0.5
+				air_doctrine_cost_factor = 0.5
+				monthly_military_development_process = -1
+			}
+		}
+
+		UTM_last_empire_legion_3 = {		#最后的帝国军团
+			name = UTM_last_empire_legion
+			picture = chi_incompetent_officers
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.3
+				army_attack_factor = 0.1
+				army_defence_factor = -0.05
+				army_org_factor = -0.05
+				command_power_gain_mult = -0.1
+				experience_gain_army_factor = -0.25
+				experience_gain_air_factor = -0.25
+				land_doctrine_cost_factor = 0.25
+				air_doctrine_cost_factor = 0.25
+			}
+		}
+
 		UTM_soul_in_void = {		#虚无的灵魂
 			picture = anti_soviet_pact
 			allowed = { original_tag = UTM }
@@ -29,6 +67,20 @@ ideas = {
 				war_support_factor = -0.2
 				drift_defence_factor = -0.5
 				surrender_limit = -0.5
+			}
+		}
+
+		#追寻往日之影
+		UTM_chasing_past = {
+			picture = anti_soviet_pact
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				army_org_regain = 0.1
+				breakthrough_factor = 0.1
+				war_support_factor = 0.1
+				drift_defence_factor = 0.5
+				surrender_limit = 0.5
 			}
 		}
 
@@ -50,6 +102,21 @@ ideas = {
 			}
 		}
 
+		UTM_rule_of_ignorance_2 = {		#愚昧之治
+			name = UTM_rule_of_ignorance
+			picture = POL_disjointed_industry
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				research_speed_factor = -0.25
+				monthly_research_development_process = -1
+			}
+		}
+
 		UTM_indigenous_resistance_groups = {		#土著反抗团体
 			picture = FRA_matignon_agreements
 			allowed = { original_tag = UTM }
@@ -60,6 +127,65 @@ ideas = {
 			}
 		}
 
+		UTM_magic_supply_0 = {		#魔力供给 – 全面崩溃
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				army_org_factor = -0.25
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				research_speed_factor = -0.25
+				monthly_living_standard_development_process = -2
+				monthly_agricultural_development_process = -2
+				monthly_industrial_development_process = -2
+				monthly_research_development_process = -2
+				monthly_military_development_process = -2
+			}
+		}
+
+		UTM_magic_supply_1 = {		#魔力供给 – 高度缺失
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.2
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				research_speed_factor = -0.1
+				monthly_living_standard_development_process = -1
+				monthly_agricultural_development_process = -1
+				monthly_industrial_development_process = -1
+				monthly_research_development_process = -1
+				monthly_military_development_process = -1
+			}
+		}
+
+		UTM_magic_supply_2 = {		#魔力供给 – 轻度缺失
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				army_org_factor = -0.1
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+
 		UTM_magic_supply_3 = {		#魔力供给 – 尚可维持
 			picture = generic_goods_red_bonus
 			allowed = { original_tag = UTM }
@@ -67,6 +193,55 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.01
 				stability_factor = -0.01
+			}
+		}
+
+		UTM_magic_supply_4 = {		#魔力供给 – 尚有余裕
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_org_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		UTM_magic_supply_5 = {		#魔力供给 – 额外储备
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+
+		UTM_magic_supply_6 = {		#魔力供给 – 大量储备
+			picture = generic_goods_red_bonus
+			allowed = { original_tag = UTM }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				army_org_factor = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.1
+				monthly_living_standard_development_process = 1
+				monthly_industrial_development_process = 1
+				monthly_agricultural_development_process = 1
 			}
 		}
 
