@@ -77,5 +77,17 @@ ideas = {
 			}
 		}
 
+		#士气低落
+		NLL_low_morale = {
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.5
+				army_core_attack_factor = -0.5
+				army_core_defence_factor = -0.5
+			}
+		}
+
 	}
 }

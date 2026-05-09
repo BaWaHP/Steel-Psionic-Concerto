@@ -1,0 +1,44 @@
+﻿#事件
+add_namespace = WCH
+
+country_event = {
+	id = WCH.1
+	title = WCH.1.t
+	desc = WCH.1.d
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = WCH.1.a
+	}
+}
+
+#新闻#
+add_namespace = WCHNews
+
+news_event = {
+	id = WCHNews.1		#乌骓南下！
+	title = WCHNews.1.t
+	desc = WCHNews.1.d
+	picture = GFX_news_event_WCH_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NOHNews.1.a
+		trigger = { SPC_generic_region_trigger_251 = yes }
+	}
+
+	option = {
+		name = NOHNews.1.b
+		trigger = { SPC_generic_region_trigger_251 = no has_idea = OAS_oasis_agreement }
+	}
+
+	option = {
+		name = NOHNews.1.c
+		trigger = { SPC_generic_region_trigger_251 = no NOT = { has_idea = OAS_oasis_agreement } }
+	}
+}

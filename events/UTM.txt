@@ -10,6 +10,7 @@ country_event = {	#南！下！
 	
 	option = {
 		name = UTM.1.a
+		news_event = UTMNews.2
 		swap_ideas = {
 			remove_idea = UTM_last_empire_legion
 			add_idea = UTM_last_empire_legion_2
@@ -17,6 +18,12 @@ country_event = {	#南！下！
 		swap_ideas = {
 			remove_idea = UTM_soul_in_void
 			add_idea = UTM_chasing_past
+		}
+		NLL = {
+			swap_ideas = {
+				remove_idea = NLL_legion_harassment
+				add_idea = NLL_low_morale
+			}
 		}
 		declare_war_on = {
 			target = NLL
@@ -46,7 +53,7 @@ news_event = {
 	id = UTMNews.1		#魔兽横行于中巴边疆
 	title = UTMNews.1.t
 	desc = UTMNews.1.d
-	picture = GFX_news_event_generic_51
+	picture = GFX_news_event_UTM_1
 	
 	major = yes
 
@@ -60,5 +67,73 @@ news_event = {
 	option = {
 		name = UTMNews.1.b
 		trigger = { NOT = { tag = UTM } }
+	}
+}
+
+news_event = {
+	id = UTMNews.2		#魔兽军团入侵人类殖民地
+	title = UTMNews.2.t
+	desc = UTMNews.2.d
+	picture = GFX_news_event_UTM_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UTMNews.2.a
+		trigger = { tag = UTM }
+	}
+
+	option = {
+		name = UTMNews.2.b
+		trigger = { NOT = { tag = UTM } }
+	}
+}
+
+news_event = {
+	id = UTMNews.3		#东绿洲军区击退魔兽军团
+	title = UTMNews.3.t
+	desc = UTMNews.3.d
+	picture = GFX_news_event_UTM_3
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UTMNews.3.a
+		trigger = { tag = EOM }
+	}
+
+	option = {
+		name = UTMNews.3.b
+		trigger = { NOT = { tag = EOM } has_idea = OAS_oasis_agreement }
+	}
+
+	option = {
+		name = UTMNews.3.c
+		trigger = { NOT = { tag = EOM } NOT = { has_idea = OAS_oasis_agreement } }
+	}
+}
+
+news_event = {
+	id = UTMNews.4		#中巴防御协定击退魔兽军团
+	title = UTMNews.4.t
+	desc = UTMNews.4.d
+	picture = GFX_news_event_UTM_4
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = UTMNews.4.a
+		trigger = { OR = { tag = IPK tag = TCL tag = BCC } }
+	}
+
+	option = {
+		name = UTMNews.4.b
+		trigger = { NOT = { tag = IPK tag = TCL tag = BCC } }
 	}
 }

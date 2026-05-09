@@ -1,0 +1,140 @@
+﻿#事件
+add_namespace = NOH
+
+country_event = {
+	id = NOH.1
+	title = NOH.1.t
+	desc = NOH.1.d
+	#picture = 
+
+	is_triggered_only = yes
+
+	option = {
+		name = NOH.1.a
+	}
+}
+
+#新闻#
+add_namespace = NOHNews
+
+news_event = {
+	id = NOHNews.1		#雀鸟内战爆发
+	title = NOHNews.1.t
+	desc = NOHNews.1.d
+	picture = GFX_news_event_NOH_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NOHNews.1.a
+		trigger = { SPC_generic_region_trigger_251 = yes }
+	}
+
+	option = {
+		name = NOHNews.1.b
+		trigger = { SPC_generic_region_trigger_251 = no NOT = { has_idea = OAS_oasis_agreement } }
+	}
+
+	option = {
+		name = NOHNews.1.c
+		trigger = { SPC_generic_region_trigger_251 = no has_idea = OAS_oasis_agreement }
+	}
+}
+
+news_event = {
+	id = NOHNews.2		#雀鸟内战结束（共和国赢）
+	title = NOHNews.2.t
+	desc = NOHNews.2.d
+	picture = GFX_news_event_NOH_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NOHNews.2.a
+		trigger = { tag = NOH }
+	}
+
+	option = {
+		name = NOHNews.2.b
+		trigger = {
+			NOT = { tag = NOH }
+			has_idea = OAS_oasis_agreement
+		}
+	}
+
+	option = {
+		name = NOHNews.2.c
+		trigger = {
+			NOT = { tag = NOH }
+			NOT = { has_idea = OAS_oasis_agreement }
+		}
+	}
+}
+
+news_event = {
+	id = NOHNews.3		#雀鸟内战结束（解放军赢）
+	title = NOHNews.3.t
+	desc = NOHNews.3.d
+	picture = GFX_news_event_NOH_3
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NOHNews.3.a
+		trigger = { tag = OLA }
+	}
+
+	option = {
+		name = NOHNews.3.b
+		trigger = {
+			NOT = { tag = OLA }
+			has_idea = OAS_oasis_agreement
+		}
+	}
+
+	option = {
+		name = NOHNews.3.c
+		trigger = {
+			NOT = { tag = OLA }
+			NOT = { has_idea = OAS_oasis_agreement }
+		}
+	}
+}
+
+news_event = {
+	id = NOHNews.4		#雀鸟内战结束（王国赢）
+	title = NOHNews.4.t
+	desc = NOHNews.4.d
+	picture = GFX_news_event_NOH_4
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = NOHNews.4.a
+		trigger = { tag = OHL }
+	}
+
+	option = {
+		name = NOHNews.4.b
+		trigger = {
+			NOT = { tag = OHL }
+			has_idea = OAS_oasis_agreement
+		}
+	}
+
+	option = {
+		name = NOHNews.4.c
+		trigger = {
+			NOT = { tag = OHL }
+			NOT = { has_idea = OAS_oasis_agreement }
+		}
+	}
+}

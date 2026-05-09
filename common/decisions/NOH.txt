@@ -1,27 +1,23 @@
 SPC_generic_sekeleton_decision_category = {
 	NOH_start_civil_war = {		#雀鸟内战
 		icon = GFX_decision_eng_trade_unions_support
-		visible = { SPC_generic_region_trigger_251 = yes }
+		visible = { tag = NOH }
 
 		available = {
 			date > 1999.6.1
-			any_country = {
-				exists = yes
-				SPC_generic_region_trigger_251 = yes
-			}
 		}
 
 		fire_only_once = yes
 
 		complete_effect = {
-			every_country = {
-				limit = { SPC_generic_region_trigger_251 = yes }
-				ROOT = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
+			news_event = NOHNews.1
+			declare_war_on = {
+				target = OHL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = OLA
+				type = annex_everything
 			}
 		}
 
@@ -63,8 +59,9 @@ SPC_generic_national_reunification_decision_category = {
 		}
 
 		fire_only_once = yes
-
-		complete_effect = {
+		days_remove = 10
+	
+		remove_effect = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			add_political_power = 200
@@ -78,11 +75,24 @@ SPC_generic_national_reunification_decision_category = {
 			set_global_flag = SPC_region_unified_global_251
 			if = {
 				limit = { tag = NOH }
+				news_event = NOHNews.2
+				news_event = {
+					id = OASNews.3
+					days = 7
+				}
 				OAS = { 
 					add_to_faction = NOH 
 					OAS_weak_republic_down = yes
 					OAS_nothing_but_brace_down = yes
 				}
+			}
+			if = {
+				limit = { tag = OLA }
+				news_event = NOHNews.3
+			}
+			if = {
+				limit = { tag = OHL }
+				news_event = NOHNews.4
 			}
 		}
 

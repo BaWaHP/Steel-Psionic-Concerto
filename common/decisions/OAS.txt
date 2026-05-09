@@ -91,7 +91,7 @@ SPC_generic_sekeleton_decision_category = {
 		}
 
 		fire_only_once = yes
-		days_remove = 5
+		days_remove = 30
 
 		remove_effect = {
 			annex_country = {

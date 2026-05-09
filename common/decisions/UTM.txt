@@ -26,6 +26,7 @@ SPC_generic_sekeleton_decision_category = {
 			date > 2000.6.1
 			has_war = no
 			FROM = { is_neighbor_of = ROOT }
+			NLL = { exists = no }
 		}
 
 		targets_dynamic = yes
@@ -119,8 +120,9 @@ SPC_generic_national_reunification_decision_category = {
 		}
 
 		fire_only_once = yes
+		days_remove = 10
 
-		complete_effect = {
+		remove_effect = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			add_political_power = 200
@@ -142,11 +144,21 @@ SPC_generic_national_reunification_decision_category = {
 			}
 			if = {
 				limit = { tag = EOM }
+				set_cosmetic_tag = EOM_unified_tag_1
+				news_event = UTMNews.3
+				news_event = {
+					id = OASNews.4
+					days = 7
+				}
 				OAS = { 
 					add_to_faction = EOM 
 					OAS_weak_republic_down = yes
 					OAS_nothing_but_brace_down = yes
 				}
+			}
+			if = {
+				limit = { OR = { tag = IPK tag = TCL tag = BCC } }
+				news_event = UTMNews.4
 			}
 		}
 

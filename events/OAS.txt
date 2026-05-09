@@ -85,3 +85,33 @@ news_event = {
 		name = OASNews.2.a
 	}
 }
+
+news_event = {
+	id = OASNews.3		#兽乡共和国正式加入绿洲协定
+	title = OASNews.3.t
+	desc = OASNews.3.d
+	picture = GFX_news_event_OAS_3
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OASNews.3.a
+	}
+}
+
+news_event = {
+	id = OASNews.4		#东绿洲军区正式加入绿洲协定
+	title = OASNews.4.t
+	desc = OASNews.4.d
+	picture = GFX_news_event_OAS_4
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OASNews.4.a
+	}
+}

@@ -2748,7 +2748,11 @@ country_event = {	#祖国新生
 	
 	is_triggered_only = yes
 
-	immediate = { add_ideas = SFR_bureaucratic_overload }
+	immediate = {
+		hidden_effect = {
+			add_ideas = SFR_bureaucratic_overload
+		}
+	}
 	
 	option = {
 		name = SFR.329.a
