@@ -97,7 +97,17 @@ on_actions = {
 					}
 					FROM = {
 						if = { 
-							limit = { tag = SFR QTA = { exists = no } SFH = { exists = no } } 
+							limit = { 
+								tag = SFR 
+								if = {
+									limit = { ROOT = { tag = QTA } }
+									SFH = { exists = no }
+								}
+								if = {
+									limit = { ROOT = { tag = SFH } }
+									QTA = { exists = no }
+								}
+							} 
 							country_event = SFR.152
 						}
 					}

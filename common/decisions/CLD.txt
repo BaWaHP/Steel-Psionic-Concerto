@@ -10,6 +10,18 @@ SPC_generic_debug_decision_category = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+	SFR_debug_load_focus_3_plus = {		#三阶段国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = CLD }
+
+		fire_only_once = no
+
+		complete_effect = {
+			complete_national_focus = CLD_victory
+			complete_national_focus = CLD_establish_central_people_commitee
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 }
 
 CLD_forming_emergency_committe_decisions = {

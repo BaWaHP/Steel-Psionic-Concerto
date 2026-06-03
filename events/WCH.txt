@@ -28,17 +28,17 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = NOHNews.1.a
+		name = WCHNews.1.a
 		trigger = { SPC_generic_region_trigger_251 = yes }
 	}
 
 	option = {
-		name = NOHNews.1.b
+		name = WCHNews.1.b
 		trigger = { SPC_generic_region_trigger_251 = no has_idea = OAS_oasis_agreement }
 	}
 
 	option = {
-		name = NOHNews.1.c
+		name = WCHNews.1.c
 		trigger = { SPC_generic_region_trigger_251 = no NOT = { has_idea = OAS_oasis_agreement } }
 	}
 }

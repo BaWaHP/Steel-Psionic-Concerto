@@ -515,3 +515,34 @@ CLD_central_people_committe_5_cal = {
 		max = 100
 	}
 }
+
+CLD_defense_industry_situation_init = {
+	effect_tooltip = { add_ideas = CLD_defense_industry_situation_tt_1 }
+	hidden_effect = {
+		add_ideas = CLD_defense_industry_situation
+		add_dynamic_modifier = { modifier = CLD_defense_industry_situation_dm }
+		add_ideas = CLD_defense_industry_situation_1_1
+		add_ideas = CLD_defense_industry_situation_2_1
+		add_ideas = CLD_defense_industry_situation_3_1
+	}
+	set_variable = { CLD_defense_industry_situation_dm_cfu = 2 }
+	set_variable = { CLD_defense_industry_situation_dm_icf = -0.1 }
+	set_variable = { CLD_defense_industry_situation_dm_pfmef = -0.1 }
+	set_variable = { CLD_defense_industry_situation_dm_pfegf = -0.05 }
+	set_variable = { CLD_defense_industry_situation_dm_plorp = 0.1 }
+	set_variable = { CLD_defense_industry_situation_dm_ppf = 0.05 }
+	set_variable = { CLD_defense_industry_situation_dm_rsf = 0 }
+	set_variable = { CLD_defense_industry_situation_dm_mrdp = 0 }
+}
+
+CLD_defense_industry_situation_1_mod = {
+	
+}
+
+CLD_defense_industry_situation_2_mod = {
+	
+}
+
+CLD_defense_industry_situation_3_mod = {
+	
+}

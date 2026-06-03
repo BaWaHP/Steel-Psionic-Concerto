@@ -51,6 +51,28 @@ SPC_generic_sekeleton_decision_category = {
 			base = 50
 		}
 	}
+	OAS_closer_coop_NOH = {		#更深层和NOH联合
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = NOH }
+
+		available = {
+			SPC_generic_region_trigger_251_control = yes
+			owns_state = 296
+			owns_state = 297
+			owns_state = 299
+			owns_state = 300
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = OAS_closer_coop_NOH_flag
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
 	OAS_coop_EOM = {		#和EOM联合
 		icon = GFX_decision_eng_trade_unions_support
 		visible = { tag = OAS }
@@ -74,18 +96,38 @@ SPC_generic_sekeleton_decision_category = {
 			base = 50
 		}
 	}
+	OAS_closer_coop_EOM = {		#更深层和EOM联合
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { tag = EOM }
+
+		available = { SPC_generic_region_trigger_252_control = yes }
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = OAS_closer_coop_EOM_flag
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+	}
 	OAS_unification = {		#绿洲，合体！
 		icon = GFX_decision_eng_trade_unions_support
 		visible = { tag = OAS }
 
 		available = {
-			NOH = { SPC_generic_region_trigger_251_control = yes }
-			EOM = { 
-				SPC_generic_region_trigger_252_control = yes 
-				owns_state = 296
-				owns_state = 297
-				owns_state = 299
-				owns_state = 300
+			NOH = { 
+				custom_trigger_tooltip = {
+					tooltip = SPC_generic_region_trigger_251_control_tr
+					has_country_flag = OAS_closer_coop_NOH_flag
+				}
+			}
+			EOM = {
+				custom_trigger_tooltip = {
+					tooltip = SPC_generic_region_trigger_252_control_tr
+					has_country_flag = OAS_closer_coop_EOM_flag
+				}
 			}
 			SOT = { exists = no }
 		}

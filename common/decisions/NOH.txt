@@ -19,6 +19,12 @@ SPC_generic_sekeleton_decision_category = {
 				target = OLA
 				type = annex_everything
 			}
+			OLA = {
+				declare_war_on = {
+					target = OHL
+					type = annex_everything
+				}
+			}
 		}
 
 		ai_will_do = {

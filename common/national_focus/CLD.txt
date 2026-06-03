@@ -1653,8 +1653,9 @@ focus_tree = {
 					add_idea = CLD_emergency_law_relief
 				}
 			}
+			custom_effect_tooltip = CLD_establish_central_people_commitee_tt
 			mark_focus_tree_layout_dirty = yes
-			custom_effect_tooltip = unlock_new_focus_tree_tt
+			#custom_effect_tooltip = unlock_new_focus_tree_tt
 		}
 	}
 
@@ -1678,12 +1679,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			CLD_central_people_committe_decisions_init = yes
-			115 = { CLD_new_liberated_zone_1_up = yes }
-			116 = { CLD_new_liberated_zone_1_up = yes }
-			117 = { CLD_new_liberated_zone_1_up = yes }
-			118 = { CLD_new_liberated_zone_1_up = yes }
-			119 = { CLD_new_liberated_zone_1_up = yes }
-			477 = { CLD_new_liberated_zone_1_up = yes }
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+				CLD_new_liberated_zone_1_up = yes
+			}
 			swap_ideas = {
 				remove_idea = CLD_commue_in_conflicts
 				add_idea = CLD_eased_contradictions
@@ -2423,6 +2422,7 @@ focus_tree = {
 				has_country_flag = CLD_plague_outbreak_flag
 				tooltip = CLD_take_next_step_tr
 			}
+			has_completed_focus = CLD_central_military_commitee_meeting
 		}
 		
 		available_if_capitulated = yes
@@ -2441,6 +2441,843 @@ focus_tree = {
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = unlock_new_focus_tree_tt
+		}
+	}
+
+	focus = {	#胜利之军……
+		id = CLD_victorious_army
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		x = 28
+		y = 0
+		cost = 1
+		
+		available = {
+			NOT = {
+				custom_trigger_tooltip = {
+					tooltip = CLD_no_war_interrupt_mil_reform
+					has_war = no
+				}
+			}
+		}
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = CLD_lift_emergency_law
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			army_experience = 20
+			add_war_support = -0.03
+			remove_ideas = CLD_army_of_the_people_4
+		}
+	}
+
+	focus = {	#.....已是疲敝之势师
+		id = CLD_exhausted_army
+		icon = GFX_focus_generic_army_attack
+		x = -1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_victorious_army }
+		relative_position_id = CLD_victorious_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#......亦不可居功而自傲
+		id = CLD_no_complacency
+		icon = GFX_focus_PRC_hundred_regiments_offensive
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_victorious_army }
+		relative_position_id = CLD_victorious_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#中央军委工作会议
+		id = CLD_central_military_commitee_meeting
+		icon = GFX_focus_SWE_socialist_reforms
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_exhausted_army }
+		prerequisite = { focus = CLD_no_complacency }
+		relative_position_id = CLD_exhausted_army
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#工农红军航空兵部队
+		id = CLD_red_air_force
+		icon = GFX_focus_PER_the_peoples_airforce
+		x = -5
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_central_military_commitee_meeting }
+		relative_position_id = CLD_central_military_commitee_meeting
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建航空学校
+		id = CLD_establish_air_school
+		icon = GFX_focus_CHI_formalise_training_regime
+		x = -1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_air_force }
+		relative_position_id = CLD_red_air_force
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#求购飞机蓝图
+		id = CLD_purchase_air_blueprints
+		icon = GFX_focus_generic_copy_plane_designs
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_establish_air_school }
+		relative_position_id = CLD_establish_air_school
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#成立中央气体流体空气研究院
+		id = CLD_establish_air_research_institute
+		icon = GFX_focus_generic_air_research_boost
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_air_force }
+		relative_position_id = CLD_red_air_force
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#筹备风洞建设计划
+		id = CLD_prepare_wind_tunnel
+		icon = GFX_focus_generic_aircraft_production
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_establish_air_research_institute }
+		relative_position_id = CLD_establish_air_research_institute
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#投资航空工业
+		id = CLD_invest_air_industry
+		icon = GFX_focus_SMB_purchase_aircraft
+		x = 1
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_purchase_air_blueprints }
+		prerequisite = { focus = CLD_prepare_wind_tunnel }
+		relative_position_id = CLD_purchase_air_blueprints
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建红军国土防空军
+		id = CLD_red_air_defense_force
+		icon = GFX_focus_generic_air_defense
+		x = -1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_invest_air_industry }
+		relative_position_id = CLD_invest_air_industry
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建雷达科研所
+		id = CLD_establish_radar_research_institute
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_invest_air_industry }
+		relative_position_id = CLD_invest_air_industry
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#红色铁翼
+		id = CLD_red_iron_wing
+		icon = GFX_focus_eng_special_air_service
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_air_defense_force }
+		prerequisite = { focus = CLD_establish_radar_research_institute }
+		relative_position_id = CLD_red_air_defense_force
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#军队正规化
+		id = CLD_military_regularization
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_central_military_commitee_meeting }
+		relative_position_id = CLD_central_military_commitee_meeting
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#军事主官能力考核
+		id = CLD_military_responsibility_system
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_military_regularization }
+		relative_position_id = CLD_military_regularization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#加速军队职业化
+		id = CLD_accelerate_mil_professionalization
+		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_military_responsibility_system }
+		relative_position_id = CLD_military_responsibility_system
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩充红军党组织
+		id = CLD_expand_party_organization
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_military_regularization }
+		relative_position_id = CLD_military_regularization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#向“一长制”过渡
+		id = CLD_transition_to_one_leader_system
+		icon = GFX_focus_PRC_army_command
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_party_organization }
+		relative_position_id = CLD_expand_party_organization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#红军军队调整规划
+		id = CLD_red_army_reorganization
+		icon = GFX_SOV_military_reorganization_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_accelerate_mil_professionalization }
+		prerequisite = { focus = CLD_transition_to_one_leader_system }
+		relative_position_id = CLD_accelerate_mil_professionalization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#筹建国防科工委
+		id = CLD_establish_defense_industry_commitee
+		icon = GFX_focus_research
+		x = -2
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_army_reorganization }
+		relative_position_id = CLD_red_army_reorganization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩建陆军军事院校
+		id = CLD_expand_military_academies
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_establish_defense_industry_commitee }
+		relative_position_id = CLD_establish_defense_industry_commitee
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新兵种培训体系
+		id = CLD_new_units_training_sys
+		icon = GFX_focus_JAP_implement_army_reforms
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_military_academies }
+		relative_position_id = CLD_expand_military_academies
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#退伍军人安置方案
+		id = CLD_veteran_resettlement_plan
+		icon = GFX_focus_generic_immigration
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_army_reorganization }
+		relative_position_id = CLD_red_army_reorganization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#部队整编
+		id = CLD_troop_reorganization
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_veteran_resettlement_plan }
+		relative_position_id = CLD_veteran_resettlement_plan
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#尝试建立动员体系
+		id = CLD_try_establish_mobilization_sys
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_troop_reorganization }
+		relative_position_id = CLD_troop_reorganization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#组建总政治部
+		id = CLD_establish_general_political_department
+		icon = GFX_focus_generic_soviet_politics
+		x = 2
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_army_reorganization }
+		relative_position_id = CLD_red_army_reorganization
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#新训条例
+		id = CLD_new_training_regulations
+		icon = GFX_SOV_cohesion_first_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_establish_general_political_department }
+		relative_position_id = CLD_establish_general_political_department
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#精简总部机关
+		id = CLD_streamline_headquarters
+		icon = GFX_focus_generic_flight_instructors
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_new_training_regulations }
+		relative_position_id = CLD_new_training_regulations
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#和平在我们的刺刀上！
+		id = CLD_peace_on_our_bayonets
+		icon = GFX_focus_generic_swooping_falcon
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_new_units_training_sys }
+		prerequisite = { focus = CLD_try_establish_mobilization_sys }
+		prerequisite = { focus = CLD_streamline_headquarters }
+		relative_position_id = CLD_try_establish_mobilization_sys
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#红色海军
+		id = CLD_red_navy
+		icon = GFX_focus_PER_the_peoples_navy
+		x = 5
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_central_military_commitee_meeting }
+		relative_position_id = CLD_central_military_commitee_meeting
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#重建海军指挥学院
+		id = CLD_rebuild_naval_command_college
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -1
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_navy }
+		relative_position_id = CLD_red_navy
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#扩建海军船坞
+		id = CLD_expand_naval_docks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 0
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_rebuild_naval_command_college }
+		relative_position_id = CLD_rebuild_naval_command_college
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#海军设计局
+		id = CLD_naval_design_bureau
+		icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+		x = 1
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_navy }
+		relative_position_id = CLD_red_navy
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {	#建设海军指挥中心
+		id = CLD_build_naval_command_center
+		icon = GFX_goal_navy_hat_ships
+		x = 0
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_naval_design_bureau }
+		relative_position_id = CLD_naval_design_bureau
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#民用造船业扩张
+		id = CLD_expand_civilian_shipbuilding
+		icon = GFX_goal_navy_decision
+		x = 1
+		y = 2
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_naval_docks }
+		prerequisite = { focus = CLD_build_naval_command_center }
+		relative_position_id = CLD_expand_naval_docks
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#国防工业整合计划
+		id = CLD_defense_industry_integration
+		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_red_iron_wing }
+		prerequisite = { focus = CLD_peace_on_our_bayonets }
+		prerequisite = { focus = CLD_expand_civilian_shipbuilding }
+		relative_position_id = CLD_peace_on_our_bayonets
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#工农红军的第一个十年
+		id = CLD_red_army_first_decade
+		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_defense_industry_integration }
+		relative_position_id = CLD_defense_industry_integration
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
 		}
 	}
 

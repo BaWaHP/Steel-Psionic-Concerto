@@ -1089,6 +1089,8 @@ country_event = {	#黎明之后
 	option = {
 		name = SFR.51.a
 		SFR_maintain_the_front_ban = yes
+		retire_character = SFR_ChenJian
+		retire_character = SFR_ZhangYixin
 		custom_effect_tooltip = unlock_new_focus_tree_tt
 		###联合政府###
 		set_country_flag = SFR_focus_1
@@ -1321,7 +1323,7 @@ country_event = {	#风暴已至
 		name = SFR.150.a
 		hidden_effect = {
 			if = {
-				limit = { has_completed_focus = SFR_united_front }
+				limit = { has_completed_focus = SFR_enhance_unite_work }
 				country_event = {
 					id = SFR.151
 					days = 1
@@ -2388,6 +2390,12 @@ country_event = {	#致我们共同的未来
 	
 	option = {
 		name = SFR.309.a
+		hidden_effect = {
+			country_event = {
+				id = SFR.336
+				days = 180
+			}
+		}
 	}
 }
 
@@ -2845,6 +2853,19 @@ country_event = {	#红旗高悬
 		else = { load_focus_tree = generic_focus }
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = unlock_new_focus_tree_tt
+	}
+}
+
+country_event = {	#复苏的土地
+	id = SFR.336
+	title = SFR.336.t
+	desc = SFR.336.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.336.a
 	}
 }
 

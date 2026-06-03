@@ -7641,9 +7641,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			owns_state = 28
-			owns_state = 27
-			owns_state = 143
+			owns_state = 32
+			owns_state = 33
+			owns_state = 55
 		}
 
 		available_if_capitulated = yes
@@ -7692,9 +7692,9 @@ focus_tree = {
 		cost = 6
 
 		available = {
-			owns_state = 28
-			owns_state = 27
-			owns_state = 143
+			owns_state = 32
+			owns_state = 33
+			owns_state = 55
 		}
 
 		available_if_capitulated = yes
@@ -8380,7 +8380,7 @@ focus_tree = {
 		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8398,7 +8398,7 @@ focus_tree = {
 				name = SFR_revival_of_armor_research
 				category = armor
 				bonus = 0.5
-				uses = 3
+				uses = 2
 			}
 		}
 	}
@@ -8408,7 +8408,7 @@ focus_tree = {
 		icon = GFX_ARO_Borwisch_legion
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8426,7 +8426,7 @@ focus_tree = {
 				name = SFR_revival_of_armor_research
 				category = caster_equipments
 				bonus = 0.5
-				uses = 3
+				uses = 2
 			}
 		}
 	}
@@ -8453,9 +8453,9 @@ focus_tree = {
 			army_experience = 30
 			add_tech_bonus = {
 				name = SFR_revival_of_armor_research
-				category = artillery
+				category = mio_cat_all_artillery_equipment
 				bonus = 0.5
-				uses = 3
+				uses = 2
 			}
 		}
 	}
@@ -8484,7 +8484,7 @@ focus_tree = {
 				name = SFR_revival_of_armor_research
 				category = infantry_tech
 				bonus = 0.5
-				uses = 3
+				uses = 2
 			}
 		}
 	}
@@ -8795,7 +8795,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_union_busting
 		x = 1
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 
@@ -8819,7 +8819,7 @@ focus_tree = {
 		icon = GFX_Generic_Invasion2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 
 		available_if_capitulated = yes
 
@@ -9323,7 +9323,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 50
 			add_mastery_bonus = {
-				name = wuw_HUN_an_airforce_to_be_reckoned_with
+				name = SFR_modern_maneuver_warfare
 				bonus = 0.3
 				days = 180
 				grand_doctrine = superior_firepower
@@ -9415,9 +9415,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SFR_specialized_engineer_corps
 				category = engineers_tech
-				category = maintenance_company_tech
 				uses = 2
 				bonus = 1
+			}
+			add_tech_bonus = {
+				name = SFR_specialized_engineer_corps
+				category = support_tech
+				uses = 2
+				bonus = 0.5
 			}
 			effect_tooltip = {
 				swap_ideas = {

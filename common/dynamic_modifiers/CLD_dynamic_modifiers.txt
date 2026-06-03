@@ -84,3 +84,31 @@ CLD_red_army_north_special_military_district = {
 	enemy_attrition = 0.1
 	state_production_speed_bunker_factor = 0.25
 }
+
+#新解放区
+CLD_new_liberated_zone = {
+	enable = { owner = { tag = CLD } }
+	icon = GFX_idea_FRA_liberte_egalite_solidarite
+
+	local_manpower = CLD_new_liberated_zone_lm
+	local_resources_factor = CLD_new_liberated_zone_lrf
+	local_factories = CLD_new_liberated_zone_lf
+	local_building_slots_factor = CLD_new_liberated_zone_lbsf
+	local_factory_energy_consumption = CLD_new_liberated_zone_lfec
+	state_production_speed_buildings_factor = CLD_new_liberated_zone_spsbf
+	state_production_speed_infrastructure_factor = CLD_new_liberated_zone_spsif
+}
+
+#国防工业现状
+CLD_defense_industry_situation_dm = {
+	enable = { always = yes }
+
+	civilian_factory_use = CLD_defense_industry_situation_dm_cfu
+	industrial_capacity_factory = CLD_defense_industry_situation_dm_icf
+	production_factory_max_efficiency_factor = CLD_defense_industry_situation_dm_pfmef
+	production_factory_efficiency_gain_factor = CLD_defense_industry_situation_dm_pfegf
+	production_lack_of_resource_penalty_factor = CLD_defense_industry_situation_dm_plorp
+	political_power_factor = CLD_defense_industry_situation_dm_ppf
+	research_speed_factor = CLD_defense_industry_situation_dm_rsf
+	monthly_research_development_process = CLD_defense_industry_situation_dm_mrdp
+}

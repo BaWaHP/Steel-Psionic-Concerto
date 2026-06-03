@@ -53,7 +53,10 @@ SPC_generic_sekeleton_decision_category = {
 	}
 	UTM_generic_production_decision = {		#北中巴通用生产
 		icon = GFX_decision_eng_trade_unions_support
-		visible = { SPC_generic_region_trigger_250 = yes }
+		visible = { 
+			SPC_generic_region_trigger_250 = yes 
+			date < 2004.1.1
+		}
 
 		fire_only_once = no
 		days_remove = 30
