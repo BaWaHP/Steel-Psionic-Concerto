@@ -1,0 +1,90 @@
+technologies = {
+	CLD_defense_industry_situation_1_1_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_1_1
+			}
+		}
+	}
+	CLD_defense_industry_situation_1_2_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_1_2
+			}
+		}
+	}
+	CLD_defense_industry_situation_1_3_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_1_3
+			}
+		}
+	}
+	CLD_defense_industry_situation_2_1_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_2_1
+			}
+		}
+	}
+	CLD_defense_industry_situation_2_2_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_2_2
+			}
+		}
+	}
+	CLD_defense_industry_situation_2_3_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_2_3
+			}
+		}
+	}
+	CLD_defense_industry_situation_2_4_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_2_4
+			}
+		}
+	}
+	CLD_defense_industry_situation_2_5_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_2_5
+			}
+		}
+	}
+	CLD_defense_industry_situation_3_1_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_3_1
+			}
+		}
+	}
+	CLD_defense_industry_situation_3_2_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_3_2
+			}
+		}
+	}
+	CLD_defense_industry_situation_3_3_tt = {
+		allow = { always = no }
+		on_research_complete = {
+			effect_tooltip = {
+				add_ideas = CLD_defense_industry_situation_3_3
+			}
+		}
+	}
+}

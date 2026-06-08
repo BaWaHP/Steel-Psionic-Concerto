@@ -18,7 +18,20 @@ SPC_generic_debug_decision_category = {
 
 		complete_effect = {
 			complete_national_focus = CLD_victory
-			complete_national_focus = CLD_establish_central_people_commitee
+			complete_national_focus = CLD_lift_emergency_law
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	SFR_debug_load_focus_3_plus_1 = {		#三阶段国策
+		icon = GFX_decision_eng_trade_unions_support
+		visible = { is_debug = yes tag = CLD }
+
+		fire_only_once = no
+
+		complete_effect = {
+			complete_national_focus = CLD_victory
+			complete_national_focus = CLD_lift_emergency_law
+			complete_national_focus = CLD_take_next_step
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -434,7 +447,7 @@ CLD_military_committe_decisions = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 999
 		}
 	}
 	#推进“扩红”工作
@@ -567,7 +580,7 @@ CLD_military_committe_decisions = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 999
 		}
 	}
 	#扩充红军大学
@@ -1151,6 +1164,124 @@ CLD_military_committe_decisions = {
 					province = 19519    
 				}
 			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	#动员地方部队
+	CLD_mobilize_local_forces = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = { tag = CLD }
+		visible = { 
+			has_completed_focus = CLD_try_establish_mobilization_sys 
+			has_war = yes
+			FROM = { check_variable = { CLD_mobilize_local_forces_count < 3 } }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CLD_mobilize_local_forces_tr
+				check_variable = { CLD_mobilize_local_forces_count < 3 }
+			}
+			has_equipment = { infantry_equipment > 800 }
+			has_equipment = { support_equipment > 30 }
+			has_manpower > 5600
+		}
+
+		state_target = yes
+		target_trigger = { FROM = { check_variable = { CLD_mobilize_local_forces_count < 3 } } }
+		on_map_mode = map_only
+
+		cost = 30
+		days_remove = 30
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			FROM = {
+				add_to_variable = {
+					CLD_mobilize_local_forces_count = 1
+				}
+			}
+			add_manpower = -5600
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -800
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -30
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = { NOT = { has_template = "地方部队" } }
+				division_template = {
+					name = "地方部队"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}
+			}
+			FROM = {
+				create_unit = {
+					division = "name = \"地方部队\" division_template = \"地方部队\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = CLD
+					count = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#加强政工干部培训
+	CLD_strengthen_political_commissar_training = {
+		icon = GFX_decision_JAP_army_faction
+		allowed = { tag = CLD }
+		visible = { has_country_flag = CLD_establish_general_political_department_flag }
+
+		ai_hint_pp_cost = 35
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 34
+		}
+		custom_cost_text = decision_cost_CP_20_pp_35
+
+		days_remove = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = -35
+			add_command_power = -20
+		}
+
+		remove_effect = {
+			SPC_military_development_amount_up_1 = yes
+			set_country_flag = CLD_strengthen_political_commissar_training_flag
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_12
+				}
+			}
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_olwm = -0.03 }
+			add_to_variable = { CLD_red_army_scf = -0.02 }
+			add_to_variable = { CLD_red_army_cpg = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 
 		ai_will_do = {
@@ -1879,7 +2010,10 @@ CLD_north_bureau_decisions = {
 	CLD_recover_urban_production = {
 		icon = GFX_decision_generic_factory
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_stabilize_social_order }
+		visible = { 
+			has_completed_focus = CLD_stabilize_social_order 
+			check_variable = { CLD_recover_urban_production_count < 3 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_recover_urban_production_tr
@@ -1912,7 +2046,10 @@ CLD_north_bureau_decisions = {
 	CLD_dispatch_countryside_working_team = {
 		icon = GFX_decision_JAP_army_faction
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_go_to_countryside }
+		visible = { 
+			has_completed_focus = CLD_go_to_countryside 
+			check_variable = { FROM.CLD_dispatch_countryside_working_team_count < 3 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_dispatch_countryside_working_team_tr
@@ -1952,7 +2089,10 @@ CLD_north_bureau_decisions = {
 	CLD_rural_medical_teams = {
 		icon = GFX_decision_JAP_army_faction
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_take_over_medical }
+		visible = { 
+			has_completed_focus = CLD_take_over_medical 
+			check_variable = { FROM.CLD_new_liberated_zone_level_3 < 5 }
+		}
 
 		state_target = yes
 		targets = { 115 117 }
@@ -1975,7 +2115,10 @@ CLD_north_bureau_decisions = {
 	CLD_combat_regional_profiteering = {
 		icon = GFX_decision_generic_speech
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_strike_usury }
+		visible = { 
+			has_completed_focus = CLD_strike_usury 
+			check_variable = { FROM.CLD_new_liberated_zone_level_2 < 10 }
+		}
 
 		state_target = yes
 		targets = { 115 116 117 118 119 477 }
@@ -1998,7 +2141,10 @@ CLD_north_bureau_decisions = {
 	CLD_rectify_urban_medical_system = {
 		icon = GFX_decision_generic_wreckers
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_take_over_medical }
+		visible = { 
+			has_completed_focus = CLD_take_over_medical 
+			check_variable = { FROM.CLD_rectify_urban_medical_system_count < 2 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_rectify_urban_medical_system_tr
@@ -2039,7 +2185,10 @@ CLD_north_bureau_decisions = {
 	CLD_expand_regional_medical_supply = {
 		icon = GFX_decision_generic_wreckers
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_take_over_medical }
+		visible = { 
+			has_completed_focus = CLD_take_over_medical 
+			check_variable = { FROM.CLD_expand_regional_medical_supply_count < 3 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_expand_regional_medical_supply_tr
@@ -2081,7 +2230,10 @@ CLD_north_bureau_decisions = {
 	CLD_strictly_crack_down_on_criminal_activities = {
 		icon = GFX_decision_generic_arrest
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_take_over_administration }
+		visible = { 
+			has_completed_focus = CLD_take_over_administration 
+			check_variable = { FROM.CLD_strictly_crack_down_on_criminal_activities_count < 3 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_strictly_crack_down_on_criminal_activities_tr
@@ -2124,7 +2276,10 @@ CLD_north_bureau_decisions = {
 	CLD_combat_bandits_and_road_hogs = {
 		icon = GFX_decision_generic_arrest
 		allowed = { tag = CLD }
-		visible = { has_completed_focus = CLD_take_over_administration }
+		visible = { 
+			has_completed_focus = CLD_take_over_administration 
+			check_variable = { FROM.CLD_combat_bandits_and_road_hogs_count < 3 }
+		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_combat_bandits_and_road_hogs_tr
@@ -2168,6 +2323,7 @@ CLD_north_bureau_decisions = {
 		icon = GFX_decision_generic_motorized
 		allowed = { tag = CLD }
 		visible = { has_completed_focus = CLD_establish_central_economic_commitee }
+		visible = { check_variable = { FROM.CLD_rebuild_countryside_commercial_network_count < 3 } }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CLD_rebuild_countryside_commercial_network_tr

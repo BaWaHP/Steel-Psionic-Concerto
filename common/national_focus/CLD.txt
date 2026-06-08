@@ -1492,6 +1492,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = CLD_victory
+			NOT = { has_completed_focus = CLD_take_next_step }
 		}
 
 		ai_will_do = {
@@ -1517,6 +1518,12 @@ focus_tree = {
 				}	
 			}
 			country_event = CLD.50
+			hidden_effect = {
+				country_event = {
+					id = CLD.106
+					days = 7
+				}
+			}
 		}
 	}
 
@@ -1653,6 +1660,7 @@ focus_tree = {
 					add_idea = CLD_emergency_law_relief
 				}
 			}
+			CLD_army_reform_init = yes
 			custom_effect_tooltip = CLD_establish_central_people_commitee_tt
 			mark_focus_tree_layout_dirty = yes
 			#custom_effect_tooltip = unlock_new_focus_tree_tt
@@ -2475,8 +2483,13 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 20
+			SPC_military_development_amount_down_1 = yes
 			add_war_support = -0.03
 			remove_ideas = CLD_army_of_the_people_4
+			country_event = {
+				id = CLD.100
+				days = 1
+			}
 		}
 	}
 
@@ -2498,7 +2511,13 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_war_support = -0.05
+			remove_ideas = CLD_enriching_staff
+			add_manpower = -576
+			country_event = {
+				id = CLD.101
+				days = 1
+			}
 		}
 	}
 
@@ -2520,7 +2539,10 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = {
+				id = CLD.102
+				days = 1
+			}
 		}
 	}
 
@@ -2529,7 +2551,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_socialist_reforms
 		x = 1
 		y = 1
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
 
@@ -2543,7 +2565,18 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			army_experience = 30
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 180
+				name = CLD_central_military_commitee_meeting
+				folder = land
+			}
 		}
 	}
 
@@ -2552,9 +2585,13 @@ focus_tree = {
 		icon = GFX_focus_PER_the_peoples_airforce
 		x = -5
 		y = 2
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = CLD_red_army_reorganization
+		}
 
 		ai_will_do = {
 			factor = 100
@@ -2565,7 +2602,19 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			air_experience = 20
+			add_tech_bonus = {
+				name = CLD_red_air_force
+				category = air_equipment
+				uses = 2
+				bonus = 0.5
+			}
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 180
+				name = CLD_red_air_force
+				folder = air
+			}
 		}
 	}
 
@@ -2574,7 +2623,7 @@ focus_tree = {
 		icon = GFX_focus_CHI_formalise_training_regime
 		x = -1
 		y = 1
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2587,7 +2636,24 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			air_experience = 15
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_airforce_tt_0
+					add_idea = CLD_red_airforce_tt_2
+				}
+			}
+			add_to_variable = { CLD_red_airforce_aaf = -0.05 }
+			add_to_variable = { CLD_red_airforce_ase = 0.05 }
+			add_to_variable = { CLD_red_airforce_ace = 0.05 }
+			add_to_variable = { CLD_red_airforce_gaf = 0.05 }
+			add_to_variable = { CLD_red_airforce_nsaf = 0.05 }
+			add_to_variable = { CLD_red_airforce_aagcf = 0.03 }
+			add_to_variable = { CLD_red_airforce_awxlwkf = -0.02 }
+			add_to_variable = { CLD_red_airforce_anp = -0.05 }
+			force_update_dynamic_modifier = yes
+			add_manpower = 150
+			SPC_military_development_amount_up_1 = yes
 		}
 	}
 
@@ -2596,7 +2662,7 @@ focus_tree = {
 		icon = GFX_focus_generic_copy_plane_designs
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
 
@@ -2609,7 +2675,25 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = CLD_purchase_air_blueprints
+				category = light_air
+				uses = 2
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				name = CLD_purchase_air_blueprints
+				category = medium_air
+				uses = 2
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				name = CLD_purchase_air_blueprints
+				category = plane_modules_tech
+				uses = 2
+				bonus = 0.5
+			}
+			CLD_defense_industry_situation_2_up = yes
 		}
 	}
 
@@ -2618,7 +2702,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_research_boost
 		x = 1
 		y = 1
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2631,7 +2715,30 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = CLD_purchase_air_blueprints
+				category = cat_air_engine
+				uses = 2
+				bonus = 1
+			}
+			110 = {
+				add_building_construction = {
+					type = air_facility
+					level = 1
+					instant_build = yes
+					province = { id = 862 }
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_airforce_tt_0
+					add_idea = CLD_red_airforce_tt_3
+				}
+			}
+			add_to_variable = { CLD_red_airforce_aaf = -0.02 }
+			add_to_variable = { CLD_red_airforce_arf = 0.02 }
+			force_update_dynamic_modifier = yes
+			CLD_defense_industry_situation_2_up = yes
 		}
 	}
 
@@ -2640,7 +2747,7 @@ focus_tree = {
 		icon = GFX_focus_generic_aircraft_production
 		x = 0
 		y = 1
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2653,7 +2760,18 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = {
+				id = CLD.103
+				days = 1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_airforce_tt_0
+					add_idea = CLD_red_airforce_tt_4
+				}
+			}
+			add_to_variable = { CLD_red_airforce_aaf = -0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2662,7 +2780,7 @@ focus_tree = {
 		icon = GFX_focus_SMB_purchase_aircraft
 		x = 1
 		y = 2
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2676,7 +2794,21 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			CLD_defense_industry_situation_2_up = yes
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			108 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -2685,7 +2817,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_defense
 		x = -1
 		y = 1
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2698,7 +2830,31 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			capital_scope = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+				}
+				add_state_modifier = {
+					modifier = {
+						enemy_army_bonus_air_superiority_factor = -0.1
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = CLD_red_air_defense_force
+				category = cat_anti_air
+				uses = 2
+				bonus = 0.5
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_2
+				}
+			}
+			add_to_variable = { CLD_red_army_cdr = 0.15 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2707,7 +2863,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		x = 1
 		y = 1
-		cost = 1
+		cost = 3
 		
 		available_if_capitulated = yes
 
@@ -2720,7 +2876,26 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = CLD_establish_radar_research_institute
+				category = electronics
+				uses = 1
+				bonus = 1
+			}
+			sp:sp_air_radar = {
+				add_project_progress_ratio = 0.2
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_airforce_tt_0
+					add_idea = CLD_red_airforce_tt_5
+				}
+			}
+			add_to_variable = { CLD_red_airforce_ase = 0.03 }
+			add_to_variable = { CLD_red_airforce_gaf = 0.03 }
+			add_to_variable = { CLD_red_airforce_nsaf = 0.03 }
+			add_to_variable = { CLD_red_airforce_ace = 0.03 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2743,7 +2918,34 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 200
+				producer = PEO
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_airforce_tt_0
+					add_idea = CLD_red_airforce_tt_6
+				}
+			}
+			add_to_variable = { CLD_red_airforce_aaf = -0.05 }
+			add_to_variable = { CLD_red_airforce_arf = 0.03 }
+			add_to_variable = { CLD_red_airforce_ase = 0.05 }
+			add_to_variable = { CLD_red_airforce_gaf = 0.03 }
+			add_to_variable = { CLD_red_airforce_nsaf = 0.03 }
+			add_to_variable = { CLD_red_airforce_ace = 0.03 }
+			add_to_variable = { CLD_red_airforce_aagcf = 0.05 }
+			add_to_variable = { CLD_red_airforce_awxlwkf = -0.03 }
+			add_to_variable = { CLD_red_airforce_anp = -0.05 }
+			add_to_variable = { CLD_red_airforce_awp = -0.05 }
+			force_update_dynamic_modifier = yes
+			CLD_defense_industry_situation_2_up = yes
+			SPC_military_development_amount_up_1 = yes
+			country_event = {
+				id = CLD.104
+				days = 1
+			}
 		}
 	}
 
@@ -2765,7 +2967,17 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_3
+				}
+			}
+			add_to_variable = { CLD_red_army_mmdp = 2 }
+			add_to_variable = { CLD_red_army_c = 0.005 }
+			force_update_dynamic_modifier = yes
+			add_war_support = 0.03
+			add_ideas = limited_conscription
 		}
 	}
 
@@ -2774,7 +2986,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		x = -1
 		y = 1
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
 
@@ -2787,7 +2999,30 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_4
+				}
+			}
+			add_to_variable = { CLD_red_army_mmdp = 1 }
+			add_to_variable = { CLD_red_army_egaf = 0.1 }
+			add_to_variable = { CLD_red_army_asf = 0.05 }
+			add_to_variable = { CLD_red_army_ao = -3 }
+			add_to_variable = { CLD_red_army_aaf = 0.05 }
+			add_to_variable = { CLD_red_army_adf = 0.05 }
+			add_to_variable = { CLD_red_army_disf = 0.1 }
+			add_to_variable = { CLD_red_army_olwm = -0.05 }
+			add_to_variable = { CLD_red_army_amf = 0.05 }
+			add_to_variable = { CLD_red_army_mcp = 10 }
+			add_to_variable = { CLD_red_army_cpg = 0.5 }
+			add_to_variable = { CLD_red_army_cacf = -0.2 }
+			add_to_variable = { CLD_red_army_hccf = 0.1 }
+			add_to_variable = { CLD_red_army_accf = 0.1 }
+			add_to_variable = { CLD_red_army_cb = -0.1 }
+			force_update_dynamic_modifier = yes
+			army_experience = 20
+			SPC_military_development_amount_up_2 = yes
 		}
 	}
 
@@ -2796,7 +3031,11 @@ focus_tree = {
 		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
+
+		bypass = {
+			command_power > 30
+		}
 		
 		available_if_capitulated = yes
 
@@ -2809,7 +3048,50 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_5
+				}
+			}
+			add_to_variable = { CLD_red_army_cgf = 0.03 }
+			add_to_variable = { CLD_red_army_mmdp = 1 }
+			add_to_variable = { CLD_red_army_astf = 0.03 }
+			add_to_variable = { CLD_red_army_if = 0.1 }
+			add_to_variable = { CLD_red_army_cf = 0.05 }
+			add_to_variable = { CLD_red_army_ms = -0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.05 }
+			add_to_variable = { CLD_red_army_ttf = 0.03 }
+			add_to_variable = { CLD_red_army_lmgf = 0.15 }
+			add_to_variable = { CLD_red_army_ldcf = -0.1 }
+			add_to_variable = { CLD_red_army_cpgm = 0.1 }
+			add_to_variable = { CLD_red_army_aalcc = 5 }
+			force_update_dynamic_modifier = yes
+			army_experience = 10
+		}
+
+		bypass_effect = {
+			add_command_power = -30
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_5
+				}
+			}
+			add_to_variable = { CLD_red_army_cgf = 0.03 }
+			add_to_variable = { CLD_red_army_mmdp = 1 }
+			add_to_variable = { CLD_red_army_astf = 0.03 }
+			add_to_variable = { CLD_red_army_if = 0.1 }
+			add_to_variable = { CLD_red_army_cf = 0.05 }
+			add_to_variable = { CLD_red_army_ms = -0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.05 }
+			add_to_variable = { CLD_red_army_ttf = 0.03 }
+			add_to_variable = { CLD_red_army_lmgf = 0.15 }
+			add_to_variable = { CLD_red_army_ldcf = -0.1 }
+			add_to_variable = { CLD_red_army_cpgm = 0.1 }
+			add_to_variable = { CLD_red_army_aalcc = 5 }
+			force_update_dynamic_modifier = yes
+			army_experience = 10
 		}
 	}
 
@@ -2818,7 +3100,11 @@ focus_tree = {
 		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		x = 1
 		y = 1
-		cost = 1
+		cost = 2
+
+		bypass = {
+			command_power > 30
+		}
 		
 		available_if_capitulated = yes
 
@@ -2831,7 +3117,70 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 5 }
+			CLD_central_people_committe_mod = yes
+			set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 5 }
+			CLD_central_people_committe_mod = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_6
+				}
+			}
+			add_to_variable = { CLD_red_army_ms = 0.1 }
+			add_to_variable = { CLD_red_army_acaf = 0.15 }
+			add_to_variable = { CLD_red_army_acdf = 0.15 }
+			add_to_variable = { CLD_red_army_aaf = -0.05 }
+			add_to_variable = { CLD_red_army_adf = -0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_mt = -0.1 }
+			add_to_variable = { CLD_red_army_cpg = -0.05 }
+			add_to_variable = { CLD_red_army_ps = -0.1 }
+			add_to_variable = { CLD_red_army_mpf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = -0.05 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -30
+			add_popularity = {
+				ideology = pioneer_communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_communism
+				popularity = 0.05
+			}
+			set_temp_variable = { temp_index = 1 } set_temp_variable = { temp_val = 5 }
+			CLD_central_people_committe_mod = yes
+			set_temp_variable = { temp_index = 2 } set_temp_variable = { temp_val = 5 }
+			CLD_central_people_committe_mod = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_6
+				}
+			}
+			add_to_variable = { CLD_red_army_ms = 0.1 }
+			add_to_variable = { CLD_red_army_acaf = 0.15 }
+			add_to_variable = { CLD_red_army_acdf = 0.15 }
+			add_to_variable = { CLD_red_army_aaf = -0.05 }
+			add_to_variable = { CLD_red_army_adf = -0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_mt = -0.1 }
+			add_to_variable = { CLD_red_army_cpg = -0.5 }
+			add_to_variable = { CLD_red_army_ps = -0.1 }
+			add_to_variable = { CLD_red_army_mpf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = -0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2840,7 +3189,11 @@ focus_tree = {
 		icon = GFX_focus_PRC_army_command
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
+
+		bypass = {
+			command_power > 30
+		}
 		
 		available_if_capitulated = yes
 
@@ -2853,7 +3206,58 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_7
+				}
+			}
+			add_to_variable = { CLD_red_army_mmdp = 1 }
+			add_to_variable = { CLD_red_army_pp = -0.03 }
+			add_to_variable = { CLD_red_army_egaf = 0.05 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_scpocf = -0.05 }
+			add_to_variable = { CLD_red_army_astf = 0.03 }
+			add_to_variable = { CLD_red_army_a = -0.08 }
+			add_to_variable = { CLD_red_army_mcp = -10 }
+			add_to_variable = { CLD_red_army_cpg = -0.5 }
+			add_to_variable = { CLD_red_army_cacf = 0.2 }
+			add_to_variable = { CLD_red_army_olwm = -0.06 }
+			add_to_variable = { CLD_red_army_amf = 0.06 }
+			add_to_variable = { CLD_red_army_elf = 0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_if = -0.1 }
+			force_update_dynamic_modifier = yes
+			army_experience = 5
+			SPC_military_development_amount_up_1 = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -30
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_7
+				}
+			}
+			add_to_variable = { CLD_red_army_mmdp = 1 }
+			add_to_variable = { CLD_red_army_pp = -0.03 }
+			add_to_variable = { CLD_red_army_egaf = 0.05 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_scpocf = -0.05 }
+			add_to_variable = { CLD_red_army_astf = 0.03 }
+			add_to_variable = { CLD_red_army_a = -0.08 }
+			add_to_variable = { CLD_red_army_mcp = -10 }
+			add_to_variable = { CLD_red_army_cpg = -0.5 }
+			add_to_variable = { CLD_red_army_cacf = 0.2 }
+			add_to_variable = { CLD_red_army_olwm = -0.06 }
+			add_to_variable = { CLD_red_army_amf = 0.06 }
+			add_to_variable = { CLD_red_army_elf = 0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_if = -0.1 }
+			force_update_dynamic_modifier = yes
+			army_experience = 5
+			SPC_military_development_amount_up_1 = yes
 		}
 	}
 
@@ -2876,7 +3280,16 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_political_power = 100
+
+			set_variable = { CLD_red_army_pol_control = 80 }
+			CLD_red_army_pol_control_update = yes
+
+			custom_effect_tooltip = CLD_red_army_reorganization_tt1
+
+			SPC_military_development_amount_up_1 = yes
+			custom_effect_tooltip = CLD_red_army_reorganization_tt2
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -2885,7 +3298,11 @@ focus_tree = {
 		icon = GFX_focus_research
 		x = -2
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -2898,7 +3315,14 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			CLD_defense_industry_situation_1_up = yes
+			SPC_research_development_amount_up_1 = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			CLD_defense_industry_situation_1_up = yes
+			SPC_research_development_amount_up_1 = yes
 		}
 	}
 
@@ -2907,7 +3331,11 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -2920,7 +3348,64 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_8
+				}
+			}
+			add_to_variable = { CLD_red_army_rf = 0.03 }
+			add_to_variable = { CLD_red_army_aaraf = 0.05 }
+			add_to_variable = { CLD_red_army_aardf = 0.05 }
+			add_to_variable = { CLD_red_army_ao = 1 }
+			add_to_variable = { CLD_red_army_egaf = 0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.1 }
+			add_to_variable = { CLD_red_army_mcp = 5 }
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_cacf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = 0.03 }
+			add_to_variable = { CLD_red_army_ps = 0.05 }
+			add_to_variable = { CLD_red_army_mpf = 0.05 }
+			add_to_variable = { CLD_red_army_lna = 0.05 }
+			add_to_variable = { CLD_red_army_cgf = 0.02 }
+			force_update_dynamic_modifier = yes
+			add_to_variable = {
+				var = CLD_red_army_max_battalions
+				value = 50
+				tooltip = CLD_red_army_max_battalions_tt
+			}
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_8
+				}
+			}
+			add_to_variable = { CLD_red_army_rf = 0.03 }
+			add_to_variable = { CLD_red_army_aaraf = 0.05 }
+			add_to_variable = { CLD_red_army_aardf = 0.05 }
+			add_to_variable = { CLD_red_army_ao = 1 }
+			add_to_variable = { CLD_red_army_egaf = 0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.1 }
+			add_to_variable = { CLD_red_army_mcp = 5 }
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_cacf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = 0.03 }
+			add_to_variable = { CLD_red_army_ps = 0.05 }
+			add_to_variable = { CLD_red_army_mpf = 0.05 }
+			add_to_variable = { CLD_red_army_lna = 0.05 }
+			add_to_variable = { CLD_red_army_cgf = 0.02 }
+			force_update_dynamic_modifier = yes
+			add_to_variable = {
+				var = CLD_red_army_max_battalions
+				value = 50
+				tooltip = CLD_red_army_max_battalions_tt
+			}
 		}
 	}
 
@@ -2929,7 +3414,11 @@ focus_tree = {
 		icon = GFX_focus_JAP_implement_army_reforms
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -2942,7 +3431,48 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_9
+				}
+			}
+			add_to_variable = { CLD_red_army_aaaf = 0.05 }
+			add_to_variable = { CLD_red_army_aadf = 0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_disf = 0.05 }
+			add_to_variable = { CLD_red_army_rf = 0.03 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_cb = 0.05 }
+			add_to_variable = { CLD_red_army_mcp = 20 }
+			add_to_variable = { CLD_red_army_cpg = 0.2 }
+			add_to_variable = { CLD_red_army_nsg = 3 }
+			add_to_variable = { CLD_red_army_cgf = 0.02 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_9
+				}
+			}
+			add_to_variable = { CLD_red_army_aaaf = 0.05 }
+			add_to_variable = { CLD_red_army_aadf = 0.05 }
+			add_to_variable = { CLD_red_army_lrr = 0.05 }
+			add_to_variable = { CLD_red_army_disf = 0.05 }
+			add_to_variable = { CLD_red_army_rf = 0.03 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_cb = 0.05 }
+			add_to_variable = { CLD_red_army_mcp = 20 }
+			add_to_variable = { CLD_red_army_cpg = 0.2 }
+			add_to_variable = { CLD_red_army_nsg = 3 }
+			add_to_variable = { CLD_red_army_cgf = 0.02 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2951,7 +3481,11 @@ focus_tree = {
 		icon = GFX_focus_generic_immigration
 		x = 0
 		y = 1
-		cost = 1
+		cost = 3
+
+		bypass = {
+			command_power > 30
+		}
 		
 		available_if_capitulated = yes
 
@@ -2964,7 +3498,84 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_manpower = -30000
+			add_stability = 0.03
+			custom_effect_tooltip = CLD_veteran_resettlement_plan_tt1
+			effect_tooltip = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = CLD_new_liberated_zone_tt_0
+						add_idea = CLD_new_liberated_zone_tt_4
+					}
+				}
+				every_owned_state = {
+					limit = { has_dynamic_modifier = CLD_new_liberated_zone }
+					add_to_variable = { CLD_new_liberated_zone_lm = 0.005 }
+					add_to_variable = { CLD_new_liberated_zone_lf = 0.02 }
+					add_to_variable = { CLD_new_liberated_zone_lbsf = 0.02 }
+					force_update_dynamic_modifier = yes
+				}	
+			}
+			custom_effect_tooltip = CLD_veteran_resettlement_plan_tt2
+			effect_tooltip = {
+				custom_effect_tooltip = CLD_veteran_resettlement_plan_tt3
+			}
+			hidden_effect = {
+				if = {
+					limit = { any_owned_state = { has_dynamic_modifier = CLD_new_liberated_zone } }
+					every_owned_state = {
+						limit = { has_dynamic_modifier = CLD_new_liberated_zone }
+						add_to_variable = { CLD_new_liberated_zone_lm = 0.005 }
+						add_to_variable = { CLD_new_liberated_zone_lf = 0.02 }
+						add_to_variable = { CLD_new_liberated_zone_lbsf = 0.02 }
+						force_update_dynamic_modifier = yes
+					}	
+				}
+				else = {
+					custom_effect_tooltip = CLD_veteran_resettlement_plan_tt3
+				}
+			}
+		}
+
+		bypass_effect = {
+			add_command_power = -30
+			add_manpower = -30000
+			add_stability = 0.03
+			custom_effect_tooltip = CLD_veteran_resettlement_plan_tt1
+			effect_tooltip = {
+				every_owned_state = {
+					limit = { has_dynamic_modifier = CLD_new_liberated_zone }
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = CLD_new_liberated_zone_tt_0
+							add_idea = CLD_new_liberated_zone_tt_4
+						}	
+					}
+					add_to_variable = { CLD_new_liberated_zone_lm = 0.005 }
+					add_to_variable = { CLD_new_liberated_zone_lf = 0.02 }
+					add_to_variable = { CLD_new_liberated_zone_lbsf = 0.02 }
+					force_update_dynamic_modifier = yes
+				}	
+			}
+			custom_effect_tooltip = CLD_veteran_resettlement_plan_tt2
+			effect_tooltip = {
+				custom_effect_tooltip = CLD_veteran_resettlement_plan_tt3
+			}
+			hidden_effect = {
+				if = {
+					limit = { any_owned_state = { has_dynamic_modifier = CLD_new_liberated_zone } }
+					every_owned_state = {
+						limit = { has_dynamic_modifier = CLD_new_liberated_zone }
+						add_to_variable = { CLD_new_liberated_zone_lm = 0.005 }
+						add_to_variable = { CLD_new_liberated_zone_lf = 0.02 }
+						add_to_variable = { CLD_new_liberated_zone_lbsf = 0.02 }
+						force_update_dynamic_modifier = yes
+					}	
+				}
+				else = {
+					custom_effect_tooltip = CLD_veteran_resettlement_plan_tt3
+				}
+			}
 		}
 	}
 
@@ -2973,7 +3584,11 @@ focus_tree = {
 		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -2986,7 +3601,132 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			delete_unit_template_and_units = {
+				division_template = "地方民兵"
+			}
+			division_template = {
+				name = "红军整编步兵师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 2 y = 3 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					anti_air_brigade = { x = 4 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					light_tank_recon = { x = 0 y = 2 }
+					logistics_company = { x = 0 y = 3 }
+					field_hospital = { x = 0 y = 4 }
+				}
+			}
+			108 = {
+				create_unit = {
+					division = "name = \"红军整编第101师\" division_template = \"红军整编步兵师\" start_experience_factor = 0.3"
+					owner = CLD
+					count = 1
+				}
+				create_unit = {
+					division = "name = \"红军整编第102师\" division_template = \"红军整编步兵师\" start_experience_factor = 0.3"
+					owner = CLD
+					count = 2
+				}
+			}
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_10
+				}
+			}
+			add_to_variable = { CLD_red_army_cf = 0.02 }
+			add_to_variable = { CLD_red_army_ao = 3 }
+			add_to_variable = { CLD_red_army_olwm = -0.03 }
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_ldcf = -0.05 }
+			add_to_variable = { CLD_red_army_cpgm = 0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.05 }
+			add_to_variable = { CLD_red_army_aor = 0.05 }
+			add_to_variable = { CLD_red_army_cgf = -0.03 }
+			add_to_variable = { CLD_red_army_ps = 0.05 }
+			add_to_variable = { CLD_red_army_mpf = 0.05 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			delete_unit_template_and_units = {
+				division_template = "地方民兵"
+			}
+			division_template = {
+				name = "红军整编步兵师"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 2 y = 3 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					anti_air_brigade = { x = 4 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					light_tank_recon = { x = 0 y = 2 }
+					logistics_company = { x = 0 y = 3 }
+					field_hospital = { x = 0 y = 4 }
+				}
+			}
+			108 = {
+				create_unit = {
+					division = "name = \"红军整编第101师\" division_template = \"红军整编步兵师\" start_experience_factor = 0.3"
+					owner = CLD
+					count = 1
+				}
+				create_unit = {
+					division = "name = \"红军整编第102师\" division_template = \"红军整编步兵师\" start_experience_factor = 0.3"
+					owner = CLD
+					count = 2
+				}
+			}
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_10
+				}
+			}
+			add_to_variable = { CLD_red_army_cf = 0.02 }
+			add_to_variable = { CLD_red_army_ao = 3 }
+			add_to_variable = { CLD_red_army_olwm = -0.03 }
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_ldcf = -0.05 }
+			add_to_variable = { CLD_red_army_cpgm = 0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.05 }
+			add_to_variable = { CLD_red_army_aor = 0.05 }
+			add_to_variable = { CLD_red_army_cgf = -0.03 }
+			add_to_variable = { CLD_red_army_ps = 0.05 }
+			add_to_variable = { CLD_red_army_mpf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -2995,7 +3735,11 @@ focus_tree = {
 		icon = GFX_focus_generic_limited_social_mobilization
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3008,7 +3752,42 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = {
+				id = CLD.105
+				days = 1
+			}
+			unlock_decision_tooltip = CLD_mobilize_local_forces
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_11
+				}
+			}
+			add_to_variable = { CLD_red_army_ms = 0.1 }
+			add_to_variable = { CLD_red_army_amf = 0.05 }
+			add_to_variable = { CLD_red_army_ao = 1 }
+			add_to_variable = { CLD_red_army_cgf = -0.01 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			country_event = {
+				id = CLD.105
+				days = 1
+			}
+			unlock_decision_tooltip = CLD_mobilize_local_forces
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_11
+				}
+			}
+			add_to_variable = { CLD_red_army_ms = 0.1 }
+			add_to_variable = { CLD_red_army_amf = 0.05 }
+			add_to_variable = { CLD_red_army_ao = 1 }
+			add_to_variable = { CLD_red_army_cgf = -0.01 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -3017,7 +3796,11 @@ focus_tree = {
 		icon = GFX_focus_generic_soviet_politics
 		x = 2
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3030,7 +3813,24 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = CLD_red_army_pol_control
+				value = 5
+				tooltip = CLD_red_army_pol_control_tt
+			}
+			set_country_flag = CLD_establish_general_political_department_flag
+			unlock_decision_tooltip = CLD_strengthen_political_commissar_training
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			add_to_variable = {
+				var = CLD_red_army_pol_control
+				value = 5
+				tooltip = CLD_red_army_pol_control_tt
+			}
+			set_country_flag = CLD_establish_general_political_department_flag
+			unlock_decision_tooltip = CLD_strengthen_political_commissar_training
 		}
 	}
 
@@ -3039,7 +3839,11 @@ focus_tree = {
 		icon = GFX_SOV_cohesion_first_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3052,7 +3856,48 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_13
+				}
+			}
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_olwm = -0.03 }
+			add_to_variable = { CLD_red_army_aiaf = 0.03 }
+			add_to_variable = { CLD_red_army_aidf = 0.03 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.03 }
+			add_to_variable = { CLD_red_army_ttf = -0.05 }
+			add_to_variable = { CLD_red_army_lmgf = 0.15 }
+			add_to_variable = { CLD_red_army_ldcf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = 0.03 }
+			add_to_variable = { CLD_red_army_lrr = 0.03 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			SPC_military_development_amount_up_1 = yes
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_13
+				}
+			}
+			add_to_variable = { CLD_red_army_amf = 0.03 }
+			add_to_variable = { CLD_red_army_olwm = -0.03 }
+			add_to_variable = { CLD_red_army_aiaf = 0.03 }
+			add_to_variable = { CLD_red_army_aidf = 0.03 }
+			add_to_variable = { CLD_red_army_scf = -0.05 }
+			add_to_variable = { CLD_red_army_mt = 0.03 }
+			add_to_variable = { CLD_red_army_ttf = -0.05 }
+			add_to_variable = { CLD_red_army_lmgf = 0.15 }
+			add_to_variable = { CLD_red_army_ldcf = -0.1 }
+			add_to_variable = { CLD_red_army_cb = 0.03 }
+			add_to_variable = { CLD_red_army_lrr = 0.03 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -3061,7 +3906,11 @@ focus_tree = {
 		icon = GFX_focus_generic_flight_instructors
 		x = 0
 		y = 1
-		cost = 1
+		cost = 3
+
+		bypass = {
+			command_power > 20
+		}
 		
 		available_if_capitulated = yes
 
@@ -3074,7 +3923,44 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			SPC_military_development_amount_up_1 = yes
+			add_to_variable = {
+				var = CLD_red_army_pol_control
+				value = 5
+				tooltip = CLD_red_army_pol_control_tt
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_14
+				}
+			}
+			add_to_variable = { CLD_red_army_ps = 0.1 }
+			add_to_variable = { CLD_red_army_mpf = 0.1 }
+			add_to_variable = { CLD_red_army_ttf = -0.05 }
+			add_to_variable = { CLD_red_army_a = -0.03 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -20
+			SPC_military_development_amount_up_1 = yes
+			add_to_variable = {
+				var = CLD_red_army_pol_control
+				value = 5
+				tooltip = CLD_red_army_pol_control_tt
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_14
+				}
+			}
+			add_to_variable = { CLD_red_army_ps = 0.1 }
+			add_to_variable = { CLD_red_army_mpf = 0.1 }
+			add_to_variable = { CLD_red_army_ttf = -0.05 }
+			add_to_variable = { CLD_red_army_a = -0.03 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -3083,7 +3969,7 @@ focus_tree = {
 		icon = GFX_focus_generic_swooping_falcon
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
 
@@ -3098,16 +3984,36 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_to_variable = {
+				var = military_development_mod
+				value = 2
+				tooltip = military_development_mod_tt_up_1
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_army_tt_0
+					add_idea = CLD_red_army_tt_15
+				}
+			}
+			add_to_variable = { CLD_red_army_acaf = 0.05 }
+			add_to_variable = { CLD_red_army_acdf = 0.05 }
+			add_to_variable = { CLD_red_army_cf = 0.02 }
+			add_to_variable = { CLD_red_army_ppg = 0.05 }
+			add_to_variable = { CLD_red_army_ttf = -0.03 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
 	focus = {	#红色海军
-		id = CLD_red_navy
+		id = CLD_red_navy_focus
 		icon = GFX_focus_PER_the_peoples_navy
 		x = 5
 		y = 2
-		cost = 1
+		cost = 2
+
+		allow_branch = {
+			has_completed_focus = CLD_red_army_reorganization
+		}
 		
 		available_if_capitulated = yes
 
@@ -3120,7 +4026,19 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			navy_experience = 20
+			add_tech_bonus = {
+				name = CLD_red_navy_focus
+				category = naval_equipment
+				uses = 2
+				bonus = 0.5
+			}
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 180
+				name = CLD_red_navy_focus
+				folder = naval
+			}
 		}
 	}
 
@@ -3129,7 +4047,11 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = -1
 		y = 2
-		cost = 1
+		cost = 3
+
+		bypass = {
+			command_power > 35
+		}
 		
 		available_if_capitulated = yes
 
@@ -3137,12 +4059,45 @@ focus_tree = {
 			factor = 100
 		}
 
-		prerequisite = { focus = CLD_red_navy }
-		relative_position_id = CLD_red_navy
+		prerequisite = { focus = CLD_red_navy_focus }
+		relative_position_id = CLD_red_navy_focus
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_manpower = 2000
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_navy_tt_0
+					add_idea = CLD_red_navy_tt_2
+				}
+			}
+			add_to_variable = { CLD_red_navy_no = 1 }
+			add_to_variable = { CLD_red_navy_nc = 0.03 }
+			add_to_variable = { CLD_red_navy_sc = 0.02 }
+			add_to_variable = { CLD_red_navy_se = 0.03 }
+			add_to_variable = { CLD_red_navy_p = 0.05 }
+			add_to_variable = { CLD_red_navy_nrs = 0.05 }
+			add_to_variable = { CLD_red_navy_nmf = 0.05 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -35
+			add_manpower = 2000
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_navy_tt_0
+					add_idea = CLD_red_navy_tt_2
+				}
+			}
+			add_to_variable = { CLD_red_navy_no = 1 }
+			add_to_variable = { CLD_red_navy_nc = 0.03 }
+			add_to_variable = { CLD_red_navy_sc = 0.02 }
+			add_to_variable = { CLD_red_navy_se = 0.03 }
+			add_to_variable = { CLD_red_navy_p = 0.05 }
+			add_to_variable = { CLD_red_navy_nrs = 0.05 }
+			add_to_variable = { CLD_red_navy_nmf = 0.05 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 
@@ -3151,7 +4106,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 0
 		y = 2
-		cost = 1
+		cost = 4.4
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3164,7 +4123,38 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			108 = {
+				add_building_construction = {
+					type = naval_base
+					level = 10
+					instant_build = yes
+					province = 20239
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
+			CLD_defense_industry_situation_3_up = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			108 = {
+				add_building_construction = {
+					type = naval_base
+					level = 10
+					instant_build = yes
+					province = 20239
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+				}
+			}
+			CLD_defense_industry_situation_3_up = yes
 		}
 	}
 
@@ -3173,7 +4163,11 @@ focus_tree = {
 		icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
 		x = 1
 		y = 2
-		cost = 1
+		cost = 3
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3181,12 +4175,51 @@ focus_tree = {
 			factor = 100
 		}
 
-		prerequisite = { focus = CLD_red_navy }
-		relative_position_id = CLD_red_navy
+		prerequisite = { focus = CLD_red_navy_focus }
+		relative_position_id = CLD_red_navy_focus
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			108 = {
+				add_building_construction = {
+					type = naval_facility
+					level = 1
+					instant_build = yes
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_navy_tt_0
+					add_idea = CLD_red_navy_tt_3
+				}
+			}
+			add_to_variable = { CLD_red_navy_usdcf = -0.1 }
+			add_to_variable = { CLD_red_navy_uddcf = -0.1 }
+			add_to_variable = { CLD_red_navy_ulcdc = -0.1 }
+			add_to_variable = { CLD_red_navy_uhcdc = -0.1 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
+			108 = {
+				add_building_construction = {
+					type = naval_facility
+					level = 1
+					instant_build = yes
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_navy_tt_0
+					add_idea = CLD_red_navy_tt_3
+				}
+			}
+			add_to_variable = { CLD_red_navy_usdcf = -0.1 }
+			add_to_variable = { CLD_red_navy_uddcf = -0.1 }
+			add_to_variable = { CLD_red_navy_ulcdc = -0.1 }
+			add_to_variable = { CLD_red_navy_uhcdc = -0.1 }
+			force_update_dynamic_modifier = yes
 		}
 	}
 	
@@ -3195,7 +4228,11 @@ focus_tree = {
 		icon = GFX_goal_navy_hat_ships
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
+
+		bypass = {
+			command_power > 50
+		}
 		
 		available_if_capitulated = yes
 
@@ -3208,7 +4245,31 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			navy_experience = 30
+			add_mastery_bonus = {
+				bonus = 0.15
+				days = 180
+				name = CLD_build_naval_command_center
+				folder = naval
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CLD_red_navy_tt_0
+					add_idea = CLD_red_navy_tt_4
+				}
+			}
+			add_to_variable = { CLD_red_navy_no = 1 }
+			add_to_variable = { CLD_red_navy_nc = 0.05 }
+			add_to_variable = { CLD_red_navy_sc = 0.02 }
+			add_to_variable = { CLD_red_navy_se = 0.05 }
+			add_to_variable = { CLD_red_navy_p = 0.05 }
+			add_to_variable = { CLD_red_navy_nrs = 0.05 }
+			add_to_variable = { CLD_red_navy_nmf = 0.05 }
+			force_update_dynamic_modifier = yes
+		}
+
+		bypass_effect = {
+			add_command_power = -50
 		}
 	}
 
@@ -3217,7 +4278,7 @@ focus_tree = {
 		icon = GFX_goal_navy_decision
 		x = 1
 		y = 2
-		cost = 1
+		cost = 5
 		
 		available_if_capitulated = yes
 
@@ -3231,7 +4292,22 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			107 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 20
+			}
+			CLD_defense_industry_situation_3_up = yes
 		}
 	}
 
@@ -3240,7 +4316,7 @@ focus_tree = {
 		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
-		cost = 1
+		cost = 5
 		
 		available_if_capitulated = yes
 
@@ -3255,16 +4331,16 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			CLD_defense_industry_situation_1_up = yes
 		}
 	}
 
-	focus = {	#工农红军的第一个十年
+	focus = {	#告一段落
 		id = CLD_red_army_first_decade
-		icon = GFX_SOV_socialist_realism_ccp_2d_sov_compatibility
+		icon = GFX_focus_AUS_danubian_socialist_communes
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 		
 		available_if_capitulated = yes
 
@@ -3274,6 +4350,353 @@ focus_tree = {
 
 		prerequisite = { focus = CLD_defense_industry_integration }
 		relative_position_id = CLD_defense_industry_integration
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
+		}
+	}
+
+	focus = {	#辉煌的胜利
+		id = CLD_glorious_victory
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 10
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = CLD_take_next_step
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#协商的艺术
+		id = CLD_art_of_negotiation
+		icon = GFX_focus_generic_social_democracy
+		x = -2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_glorious_victory }
+		relative_position_id = CLD_glorious_victory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#人民的愿望
+		id = CLD_wishes_of_the_people
+		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_glorious_victory }
+		relative_position_id = CLD_glorious_victory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#党的呼声
+		id = CLD_call_of_the_party
+		icon = GFX_focus_ITA_communist_leadership
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_glorious_victory }
+		relative_position_id = CLD_glorious_victory
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#准备民主选举
+		id = CLD_prepare_for_democratic_elections
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_art_of_negotiation }
+		prerequisite = { focus = CLD_wishes_of_the_people }
+		prerequisite = { focus = CLD_call_of_the_party }
+		relative_position_id = CLD_wishes_of_the_people
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#登记选民人数
+		id = CLD_register_voters
+		icon = GFX_focus_AFG_promote_the_counter_elite
+		x = -4
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_prepare_for_democratic_elections }
+		relative_position_id = CLD_prepare_for_democratic_elections
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#划分选区
+		id = CLD_divide_electoral_districts
+		icon = GFX_Land_Reform
+		x = -2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_prepare_for_democratic_elections }
+		relative_position_id = CLD_prepare_for_democratic_elections
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#允许参与的政党？
+		id = CLD_allow_parties_to_join
+		icon = GFX_focus_CHI_demonstrate_our_resolve
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_prepare_for_democratic_elections }
+		relative_position_id = CLD_prepare_for_democratic_elections
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#代表层级问题
+		id = CLD_representative_level
+		icon = GFX_goal_Generic_Workers_Democracy
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_prepare_for_democratic_elections }
+		relative_position_id = CLD_prepare_for_democratic_elections
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#所有报社的职责
+		id = CLD_responsibilities_of_newspapers
+		icon = GFX_goal_generic_media_controls
+		x = 4
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_prepare_for_democratic_elections }
+		relative_position_id = CLD_prepare_for_democratic_elections
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#北方参与问题
+		id = CLD_northern_participation
+		icon = GFX_focus_generic_communism_anti_fascism
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_register_voters }
+		prerequisite = { focus = CLD_divide_electoral_districts }
+		relative_position_id = CLD_register_voters
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#各党派的宣传
+		id = CLD_propaganda_of_parties
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_divide_electoral_districts }
+		prerequisite = { focus = CLD_allow_parties_to_join }
+		relative_position_id = CLD_divide_electoral_districts
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#候选人资格审查
+		id = CLD_candidate_qualification_review
+		icon = GFX_focus_generic_secret_service_agency
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_allow_parties_to_join }
+		prerequisite = { focus = CLD_representative_level }
+		relative_position_id = CLD_allow_parties_to_join
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#严防政治暴力
+		id = CLD_prevent_political_violence
+		icon = GFX_Socialist_Law
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_representative_level }
+		prerequisite = { focus = CLD_responsibilities_of_newspapers }
+		relative_position_id = CLD_representative_level
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {	#人民的选择
+		id = CLD_choice_of_the_people
+		icon = GFX_Generic_Liberatian_Socialism
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_northern_participation }
+		prerequisite = { focus = CLD_propaganda_of_parties }
+		prerequisite = { focus = CLD_candidate_qualification_review }
+		prerequisite = { focus = CLD_prevent_political_violence }
+		relative_position_id = CLD_propaganda_of_parties
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {

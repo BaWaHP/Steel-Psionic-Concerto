@@ -15,10 +15,18 @@ defined_text = {
 }
 
 defined_text = {
-	name = CLD_DIS_MARKER_1
+	name = GET_CLD_defense_industry_situation_1_1
 	text = {
-		trigger = { check_variable = { CLD_defense_industry_situation_dm_ppf > 0 } }
-		localization_key = CLD_DIS_MARKER_tt1
+		trigger = { has_idea = CLD_defense_industry_situation_1_1 }
+		localization_key = tech_effect|CLD_defense_industry_situation_1_1_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_1_2 }
+		localization_key = tech_effect|CLD_defense_industry_situation_1_2_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_1_3 }
+		localization_key = tech_effect|CLD_defense_industry_situation_1_3_tt
 	}
 	text = {
 		localization_key = ""
@@ -26,13 +34,70 @@ defined_text = {
 }
 
 defined_text = {
-	name = CLD_DIS_MARKER_2
+	name = GET_CLD_defense_industry_situation_2_1
 	text = {
-		trigger = { check_variable = { CLD_defense_industry_situation_dm_pfmef > 0 } }
-		localization_key = CLD_DIS_MARKER_tt1
+		trigger = { has_idea = CLD_defense_industry_situation_2_1 }
+		localization_key = tech_effect|CLD_defense_industry_situation_2_1_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_2_2 }
+		localization_key = tech_effect|CLD_defense_industry_situation_2_2_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_2_3 }
+		localization_key = tech_effect|CLD_defense_industry_situation_2_3_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_2_4 }
+		localization_key = tech_effect|CLD_defense_industry_situation_2_4_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_2_5 }
+		localization_key = tech_effect|CLD_defense_industry_situation_2_5_tt
 	}
 	text = {
 		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GET_CLD_defense_industry_situation_3_1
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_3_1 }
+		localization_key = tech_effect|CLD_defense_industry_situation_3_1_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_3_2 }
+		localization_key = tech_effect|CLD_defense_industry_situation_3_2_tt
+	}
+	text = {
+		trigger = { has_idea = CLD_defense_industry_situation_3_3 }
+		localization_key = tech_effect|CLD_defense_industry_situation_3_3_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GET_CLD_defense_industry_situation_status
+	text = {
+		trigger = { has_completed_focus = CLD_try_establish_mobilization_sys }
+		localization_key = "CLD_defense_industry_situation_status_1"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GET_CLD_battalions_status
+	text = {
+		trigger = { check_variable = { current_battalions > CLD_red_army_max_battalions } }
+		localization_key = "GET_CLD_battalions_status_1"
+	}
+	text = {
+		localization_key = "GET_CLD_battalions_status_2"
 	}
 }
 

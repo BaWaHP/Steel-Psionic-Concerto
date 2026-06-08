@@ -516,33 +516,471 @@ CLD_central_people_committe_5_cal = {
 	}
 }
 
+CLD_army_reform_init = {
+	CLD_defense_industry_situation_init = yes
+	CLD_red_army_init = yes
+	CLD_red_airforce_init = yes
+	CLD_red_navy_init = yes
+}
+
 CLD_defense_industry_situation_init = {
-	effect_tooltip = { add_ideas = CLD_defense_industry_situation_tt_1 }
-	hidden_effect = {
-		add_ideas = CLD_defense_industry_situation
-		add_dynamic_modifier = { modifier = CLD_defense_industry_situation_dm }
-		add_ideas = CLD_defense_industry_situation_1_1
-		add_ideas = CLD_defense_industry_situation_2_1
-		add_ideas = CLD_defense_industry_situation_3_1
+	set_country_flag = CLD_defense_industry_committe_decisions_flag
+	unlock_decision_category_tooltip = CLD_defense_industry_committe_decisions
+	add_ideas = CLD_defense_industry_situation_1_1
+	add_ideas = CLD_defense_industry_situation_2_1
+	add_ideas = CLD_defense_industry_situation_3_1
+}
+
+CLD_defense_industry_situation_1_up = {
+	if = {
+		limit = { has_idea = CLD_defense_industry_situation_1_1 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_1_1
+			add_idea = CLD_defense_industry_situation_1_2
+		}
 	}
-	set_variable = { CLD_defense_industry_situation_dm_cfu = 2 }
-	set_variable = { CLD_defense_industry_situation_dm_icf = -0.1 }
-	set_variable = { CLD_defense_industry_situation_dm_pfmef = -0.1 }
-	set_variable = { CLD_defense_industry_situation_dm_pfegf = -0.05 }
-	set_variable = { CLD_defense_industry_situation_dm_plorp = 0.1 }
-	set_variable = { CLD_defense_industry_situation_dm_ppf = 0.05 }
-	set_variable = { CLD_defense_industry_situation_dm_rsf = 0 }
-	set_variable = { CLD_defense_industry_situation_dm_mrdp = 0 }
+	else_if = {
+		limit = { has_idea = CLD_defense_industry_situation_1_2 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_1_2
+			add_idea = CLD_defense_industry_situation_1_3
+		}
+	}
 }
 
-CLD_defense_industry_situation_1_mod = {
-	
+CLD_defense_industry_situation_2_up = {
+	if = {
+		limit = { has_idea = CLD_defense_industry_situation_2_1 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_2_1
+			add_idea = CLD_defense_industry_situation_2_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_defense_industry_situation_2_2 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_2_2
+			add_idea = CLD_defense_industry_situation_2_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_defense_industry_situation_2_3 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_2_3
+			add_idea = CLD_defense_industry_situation_2_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_defense_industry_situation_2_4 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_2_4
+			add_idea = CLD_defense_industry_situation_2_5
+		}
+	}
 }
 
-CLD_defense_industry_situation_2_mod = {
-	
+CLD_defense_industry_situation_3_up = {
+	if = {
+		limit = { has_idea = CLD_defense_industry_situation_3_1 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_3_1
+			add_idea = CLD_defense_industry_situation_3_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_defense_industry_situation_3_2 }
+		swap_ideas = {
+			remove_idea = CLD_defense_industry_situation_3_2
+			add_idea = CLD_defense_industry_situation_3_3
+		}
+	}
 }
 
-CLD_defense_industry_situation_3_mod = {
+CLD_red_army_init = {
+	effect_tooltip = { add_ideas = CLD_red_army_tt_1 }
+	hidden_effect = { add_dynamic_modifier = { modifier = CLD_red_army } }
+	set_variable = { CLD_red_army_max_battalions = 350 }
 	
+	CLD_red_army_var_refresh = yes
+}
+
+CLD_red_army_var_refresh = {
+	#哎呀AI太好用了你知道吗
+	set_variable = { CLD_red_army_cgf = 0.05 }
+	set_variable = { CLD_red_army_asf = -0.1 }
+	set_variable = { CLD_red_army_ms = -0.35 }
+	set_variable = { CLD_red_army_aof = 0 }
+	set_variable = { CLD_red_army_aor = -0.15 }
+	set_variable = { CLD_red_army_amf = 0.05 }
+	set_variable = { CLD_red_army_olwm = -0.05 }
+	set_variable = { CLD_red_army_a = 0.08 }
+	set_variable = { CLD_red_army_rf = 0.05 }
+	set_variable = { CLD_red_army_scf = 0.2 }
+	set_variable = { CLD_red_army_ttf = 0.1 }
+	set_variable = { CLD_red_army_aaf = 0 }
+	set_variable = { CLD_red_army_adf = 0 }
+	set_variable = { CLD_red_army_acaf = 0.15 }
+	set_variable = { CLD_red_army_acdf = 0.15 }
+	set_variable = { CLD_red_army_aiaf = 0.1 }
+	set_variable = { CLD_red_army_aidf = 0.1 }
+	set_variable = { CLD_red_army_aaraf = -0.1 }
+	set_variable = { CLD_red_army_aardf = -0.1 }
+	set_variable = { CLD_red_army_aaaf = -0.2 }
+	set_variable = { CLD_red_army_aadf = -0.2 }
+	set_variable = { CLD_red_army_disf = -0.1 }
+	set_variable = { CLD_red_army_bf = -0.1 }
+	set_variable = { CLD_red_army_lna = 0.1 }
+	set_variable = { CLD_red_army_mt = -0.2 }
+	set_variable = { CLD_red_army_pp = 0.2 }
+	set_variable = { CLD_red_army_aasf = -0.1 }
+	set_variable = { CLD_red_army_cdr = -0.25 }
+	set_variable = { CLD_red_army_tpr = -0.1 }
+	set_variable = { CLD_red_army_if = 0.1 }
+	set_variable = { CLD_red_army_cb = -0.1 }
+	set_variable = { CLD_red_army_mff = -0.15 }
+	set_variable = { CLD_red_army_ps = -0.3 }
+	set_variable = { CLD_red_army_mpf = -0.3 }
+	set_variable = { CLD_red_army_ldcf = 0 }
+	set_variable = { CLD_red_army_lrr = 0 }
+	set_variable = { CLD_red_army_astf = 0 }
+	set_variable = { CLD_red_army_mmdp = 0 }
+	set_variable = { CLD_red_army_c = 0 }
+	set_variable = { CLD_red_army_egaf = 0 }
+	set_variable = { CLD_red_army_ao = 0 }
+	set_variable = { CLD_red_army_mcp = 0 }
+	set_variable = { CLD_red_army_cpg = 0 }
+	set_variable = { CLD_red_army_cacf = 0 }
+	set_variable = { CLD_red_army_hccf = 0 }
+	set_variable = { CLD_red_army_accf = 0 }
+	set_variable = { CLD_red_army_cf = 0 }
+	set_variable = { CLD_red_army_lmgf = 0 }
+	set_variable = { CLD_red_army_cpgm = 0 }
+	set_variable = { CLD_red_army_aalcc = 0 }
+	set_variable = { CLD_red_army_scpocf = 0 }
+	set_variable = { CLD_red_army_elf = 0 }
+	set_variable = { CLD_red_army_aacf = 0 }
+	set_variable = { CLD_red_army_aiacf = 0 }
+	set_variable = { CLD_red_army_nacf = 0 }
+	set_variable = { CLD_red_army_ppg = 0 }
+	set_variable = { CLD_red_army_nsg = 0 }
+
+	if = {
+		limit = { has_completed_focus = CLD_red_air_defense_force }
+		add_to_variable = { CLD_red_army_cdr = 0.15 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_military_regularization }
+		add_to_variable = { CLD_red_army_mmdp = 2 }
+		add_to_variable = { CLD_red_army_c = 0.005 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_military_responsibility_system }
+		add_to_variable = { CLD_red_army_mmdp = 1 }
+		add_to_variable = { CLD_red_army_egaf = 0.1 }
+		add_to_variable = { CLD_red_army_asf = 0.05 }
+		add_to_variable = { CLD_red_army_ao = -3 }
+		add_to_variable = { CLD_red_army_aaf = 0.05 }
+		add_to_variable = { CLD_red_army_adf = 0.05 }
+		add_to_variable = { CLD_red_army_disf = 0.1 }
+		add_to_variable = { CLD_red_army_olwm = -0.05 }
+		add_to_variable = { CLD_red_army_amf = 0.05 }
+		add_to_variable = { CLD_red_army_mcp = 10 }
+		add_to_variable = { CLD_red_army_cpg = 0.5 }
+		add_to_variable = { CLD_red_army_cacf = -0.2 }
+		add_to_variable = { CLD_red_army_hccf = 0.1 }
+		add_to_variable = { CLD_red_army_accf = 0.1 }
+		add_to_variable = { CLD_red_army_cb = -0.1 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_accelerate_mil_professionalization }
+		add_to_variable = { CLD_red_army_cgf = 0.03 }
+		add_to_variable = { CLD_red_army_mmdp = 1 }
+		add_to_variable = { CLD_red_army_astf = 0.03 }
+		add_to_variable = { CLD_red_army_if = 0.1 }
+		add_to_variable = { CLD_red_army_cf = 0.05 }
+		add_to_variable = { CLD_red_army_ms = -0.05 }
+		add_to_variable = { CLD_red_army_mt = 0.05 }
+		add_to_variable = { CLD_red_army_ttf = 0.03 }
+		add_to_variable = { CLD_red_army_lmgf = 0.15 }
+		add_to_variable = { CLD_red_army_ldcf = -0.1 }
+		add_to_variable = { CLD_red_army_cpgm = 0.1 }
+		add_to_variable = { CLD_red_army_aalcc = 5 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_expand_party_organization }
+		add_to_variable = { CLD_red_army_ms = 0.1 }
+		add_to_variable = { CLD_red_army_acaf = 0.15 }
+		add_to_variable = { CLD_red_army_acdf = 0.15 }
+		add_to_variable = { CLD_red_army_aaf = -0.05 }
+		add_to_variable = { CLD_red_army_adf = -0.05 }
+		add_to_variable = { CLD_red_army_lrr = 0.05 }
+		add_to_variable = { CLD_red_army_mt = -0.1 }
+		add_to_variable = { CLD_red_army_cpg = -0.5 }
+		add_to_variable = { CLD_red_army_ps = -0.1 }
+		add_to_variable = { CLD_red_army_mpf = -0.1 }
+		add_to_variable = { CLD_red_army_cb = -0.05 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_transition_to_one_leader_system }
+		add_to_variable = { CLD_red_army_mmdp = 1 }
+		add_to_variable = { CLD_red_army_pp = -0.03 }
+		add_to_variable = { CLD_red_army_egaf = 0.05 }
+		add_to_variable = { CLD_red_army_scf = -0.05 }
+		add_to_variable = { CLD_red_army_scpocf = -0.05 }
+		add_to_variable = { CLD_red_army_astf = 0.03 }
+		add_to_variable = { CLD_red_army_a = -0.08 }
+		add_to_variable = { CLD_red_army_mcp = -10 }
+		add_to_variable = { CLD_red_army_cpg = -0.5 }
+		add_to_variable = { CLD_red_army_cacf = 0.2 }
+		add_to_variable = { CLD_red_army_olwm = -0.06 }
+		add_to_variable = { CLD_red_army_amf = 0.06 }
+		add_to_variable = { CLD_red_army_elf = 0.05 }
+		add_to_variable = { CLD_red_army_lrr = 0.05 }
+		add_to_variable = { CLD_red_army_if = -0.1 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_expand_military_academies }
+		add_to_variable = { CLD_red_army_rf = 0.03 }
+		add_to_variable = { CLD_red_army_aaraf = 0.05 }
+		add_to_variable = { CLD_red_army_aardf = 0.05 }
+		add_to_variable = { CLD_red_army_ao = 1 }
+		add_to_variable = { CLD_red_army_egaf = 0.05 }
+		add_to_variable = { CLD_red_army_mt = 0.1 }
+		add_to_variable = { CLD_red_army_mcp = 5 }
+		add_to_variable = { CLD_red_army_amf = 0.03 }
+		add_to_variable = { CLD_red_army_cacf = -0.1 }
+		add_to_variable = { CLD_red_army_cb = 0.03 }
+		add_to_variable = { CLD_red_army_ps = 0.05 }
+		add_to_variable = { CLD_red_army_mpf = 0.05 }
+		add_to_variable = { CLD_red_army_lna = 0.05 }
+		add_to_variable = { CLD_red_army_cgf = 0.02 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_new_units_training_sys }
+		add_to_variable = { CLD_red_army_aaaf = 0.05 }
+		add_to_variable = { CLD_red_army_aadf = 0.05 }
+		add_to_variable = { CLD_red_army_lrr = 0.05 }
+		add_to_variable = { CLD_red_army_disf = 0.05 }
+		add_to_variable = { CLD_red_army_rf = 0.03 }
+		add_to_variable = { CLD_red_army_scf = -0.05 }
+		add_to_variable = { CLD_red_army_cb = 0.05 }
+		add_to_variable = { CLD_red_army_mcp = 20 }
+		add_to_variable = { CLD_red_army_cpg = 0.2 }
+		add_to_variable = { CLD_red_army_nsg = 3 }
+		add_to_variable = { CLD_red_army_cgf = 0.02 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_troop_reorganization }
+		add_to_variable = { CLD_red_army_cf = 0.02 }
+		add_to_variable = { CLD_red_army_ao = 3 }
+		add_to_variable = { CLD_red_army_olwm = -0.03 }
+		add_to_variable = { CLD_red_army_amf = 0.03 }
+		add_to_variable = { CLD_red_army_ldcf = -0.05 }
+		add_to_variable = { CLD_red_army_cpgm = 0.05 }
+		add_to_variable = { CLD_red_army_mt = 0.05 }
+		add_to_variable = { CLD_red_army_aor = 0.05 }
+		add_to_variable = { CLD_red_army_cgf = -0.03 }
+		add_to_variable = { CLD_red_army_ps = 0.05 }
+		add_to_variable = { CLD_red_army_mpf = 0.05 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_try_establish_mobilization_sys }
+		add_to_variable = { CLD_red_army_ms = 0.1 }
+		add_to_variable = { CLD_red_army_amf = 0.05 }
+		add_to_variable = { CLD_red_army_ao = 1 }
+		add_to_variable = { CLD_red_army_cgf = -0.01 }
+	}
+
+	if = {
+		limit = { has_country_flag = CLD_strengthen_political_commissar_training_flag }
+		add_to_variable = { CLD_red_army_amf = 0.03 }
+		add_to_variable = { CLD_red_army_olwm = -0.03 }
+		add_to_variable = { CLD_red_army_scf = -0.02 }
+		add_to_variable = { CLD_red_army_cpg = 0.05 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_new_training_regulations }
+		add_to_variable = { CLD_red_army_amf = 0.03 }
+		add_to_variable = { CLD_red_army_olwm = -0.03 }
+		add_to_variable = { CLD_red_army_aiaf = 0.03 }
+		add_to_variable = { CLD_red_army_aidf = 0.03 }
+		add_to_variable = { CLD_red_army_scf = -0.05 }
+		add_to_variable = { CLD_red_army_mt = 0.03 }
+		add_to_variable = { CLD_red_army_ttf = -0.05 }
+		add_to_variable = { CLD_red_army_lmgf = 0.15 }
+		add_to_variable = { CLD_red_army_ldcf = -0.1 }
+		add_to_variable = { CLD_red_army_cb = 0.03 }
+		add_to_variable = { CLD_red_army_lrr = 0.03 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_streamline_headquarters }
+		add_to_variable = { CLD_red_army_ps = 0.1 }
+		add_to_variable = { CLD_red_army_mpf = 0.1 }
+		add_to_variable = { CLD_red_army_ttf = -0.05 }
+		add_to_variable = { CLD_red_army_a = -0.03 }
+	}
+
+	if = {
+		limit = { has_completed_focus = CLD_peace_on_our_bayonets }
+		add_to_variable = { CLD_red_army_acaf = 0.05 }
+		add_to_variable = { CLD_red_army_acdf = 0.05 }
+		add_to_variable = { CLD_red_army_cf = 0.02 }
+		add_to_variable = { CLD_red_army_ppg = 0.05 }
+		add_to_variable = { CLD_red_army_ttf = -0.03 }
+	}
+
+	CLD_red_army_pol_control_update = yes
+
+	force_update_dynamic_modifier = yes
+}
+
+CLD_red_army_update = {
+	set_temp_variable = { current_battalions = num_battalions }
+	CLD_red_army_var_refresh = yes
+	if = {
+		limit = { check_variable = { current_battalions > CLD_red_army_max_battalions } }
+		set_temp_variable = { battalions_dif = current_battalions }
+		subtract_from_temp_variable = { battalions_dif = CLD_red_army_max_battalions }
+		divide_temp_variable = { battalions_dif = 20 }
+		round_variable = battalions_dif
+
+		set_temp_variable = { CLD_red_army_ms_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_ms_mod = -0.02 }
+		add_to_variable = { CLD_red_army_ms = CLD_red_army_ms_mod }
+
+		set_temp_variable = { CLD_red_army_aof_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_aof_mod = -0.02 }
+		add_to_variable = { CLD_red_army_aof = CLD_red_army_aof_mod }
+
+		set_temp_variable = { CLD_red_army_ttf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_ttf_mod = 0.02 }
+		add_to_variable = { CLD_red_army_ttf = CLD_red_army_ttf_mod }
+
+		set_temp_variable = { CLD_red_army_aaf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_aaf_mod = -0.02 }
+		add_to_variable = { CLD_red_army_aaf = CLD_red_army_aaf_mod }
+
+		set_temp_variable = { CLD_red_army_adf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_adf_mod = -0.02 }
+		add_to_variable = { CLD_red_army_adf = CLD_red_army_adf_mod }
+
+		set_temp_variable = { CLD_red_army_ldcf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_ldcf_mod = 0.05 }
+		add_to_variable = { CLD_red_army_ldcf = CLD_red_army_ldcf_mod }
+
+		set_temp_variable = { CLD_red_army_mt_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_mt_mod = -0.02 }
+		add_to_variable = { CLD_red_army_mt = CLD_red_army_mt_mod }
+
+		set_temp_variable = { CLD_red_army_lrr_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_lrr_mod = -0.005 }
+		add_to_variable = { CLD_red_army_lrr = CLD_red_army_lrr_mod }
+
+		set_temp_variable = { CLD_red_army_astf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_astf_mod = -0.01 }
+		add_to_variable = { CLD_red_army_astf = CLD_red_army_astf_mod }
+
+		set_temp_variable = { CLD_red_army_cgf_mod = battalions_dif }
+		multiply_temp_variable = { CLD_red_army_cgf_mod = 0.01 }
+		add_to_variable = { CLD_red_army_cgf = CLD_red_army_cgf_mod }
+	}
+	force_update_dynamic_modifier = yes	
+}
+
+CLD_red_army_pol_control_update = {
+	clamp_variable = {
+		var = CLD_red_army_pol_control
+		min = 0
+		max = 100
+	}
+	set_temp_variable = { TEMP_INDEX = CLD_red_army_pol_control }
+	subtract_from_temp_variable = { TEMP_INDEX = 50 }
+	
+	set_temp_variable = { CLD_red_army_aacf_mod = TEMP_INDEX }
+	multiply_temp_variable = { CLD_red_army_aacf_mod = -0.005 }
+	add_to_variable = { CLD_red_army_aacf = CLD_red_army_aacf_mod }
+
+	set_temp_variable = { CLD_red_army_aiacf_mod = TEMP_INDEX }
+	multiply_temp_variable = { CLD_red_army_aiacf_mod = -0.005 }
+	add_to_variable = { CLD_red_army_aiacf = CLD_red_army_aiacf_mod }
+
+	set_temp_variable = { CLD_red_army_nacf_mod = TEMP_INDEX }
+	multiply_temp_variable = { CLD_red_army_nacf_mod = -0.005 }
+	add_to_variable = { CLD_red_army_nacf = CLD_red_army_nacf_mod }
+
+	set_temp_variable = { CLD_red_army_ppg_mod = TEMP_INDEX }
+	multiply_temp_variable = { CLD_red_army_ppg_mod = 0.01 }
+	add_to_variable = { CLD_red_army_ppg = CLD_red_army_ppg_mod }
+
+	divide_temp_variable = { TEMP_INDEX = 10 }
+	set_temp_variable = { test_var_decimal = TEMP_INDEX }
+	modulo_temp_variable = { test_var_decimal = 1 }
+	subtract_from_variable = { TEMP_INDEX = test_var_decimal }
+
+	set_temp_variable = { CLD_red_army_aalcc_mod = TEMP_INDEX }
+	multiply_temp_variable = { CLD_red_army_aalcc_mod = -3 }
+	add_to_variable = { CLD_red_army_aalcc = CLD_red_army_aalcc_mod }
+
+}
+
+CLD_red_airforce_init = {
+	effect_tooltip = { add_ideas = CLD_red_airforce_tt_1 }
+	hidden_effect = {
+		add_dynamic_modifier = {
+			modifier = CLD_red_airforce
+		}
+	}
+	#大家好啊我是AI
+	set_variable = { CLD_red_airforce_aaf = 0.2 }
+	set_variable = { CLD_red_airforce_arf = -0.1 }
+	set_variable = { CLD_red_airforce_ase = -0.2 }
+	set_variable = { CLD_red_airforce_gaf = -0.2 }
+	set_variable = { CLD_red_airforce_nsaf = -0.2 }
+	set_variable = { CLD_red_airforce_ace = -0.25 }
+	set_variable = { CLD_red_airforce_aagcf = -0.3 }
+	set_variable = { CLD_red_airforce_awxlwkf = 0.2 }
+	set_variable = { CLD_red_airforce_anp = 0.3 }
+	set_variable = { CLD_red_airforce_awp = 0.2 }
+	force_update_dynamic_modifier = yes
+}
+
+CLD_red_navy_init = {
+	effect_tooltip = { add_ideas = CLD_red_navy_tt_1 }
+	hidden_effect = {
+		add_dynamic_modifier = {
+			modifier = CLD_red_navy
+		}
+	}
+	set_variable = { CLD_red_navy_nc = -0.3 }
+	set_variable = { CLD_red_navy_nips = -0.3 }
+	set_variable = { CLD_red_navy_nsf = -0.25 }
+	set_variable = { CLD_red_navy_no = -10 }
+	set_variable = { CLD_red_navy_sc = -0.1 }
+	set_variable = { CLD_red_navy_nrs = -0.2 }
+	set_variable = { CLD_red_navy_nrf = -0.25 }
+	set_variable = { CLD_red_navy_nsaf = 0.05 }
+	set_variable = { CLD_red_navy_nsdf = 0.05 }
+	set_variable = { CLD_red_navy_ncaf = -0.2 }
+	set_variable = { CLD_red_navy_ncdf = -0.2 }
+	set_variable = { CLD_red_navy_nscaf = -0.1 }
+	set_variable = { CLD_red_navy_nscdf = -0.1 }
+	set_variable = { CLD_red_navy_se = -0.15 }
+	set_variable = { CLD_red_navy_p = -0.3 }
+	set_variable = { CLD_red_navy_nmf = 0 }
+	set_variable = { CLD_red_navy_usdcf = 0 }
+	set_variable = { CLD_red_navy_uddcf = 0 }
+	set_variable = { CLD_red_navy_ulcdc = 0 }
+	set_variable = { CLD_red_navy_uhcdc = 0 }
+	force_update_dynamic_modifier = yes
 }

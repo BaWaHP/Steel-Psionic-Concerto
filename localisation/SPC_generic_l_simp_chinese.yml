@@ -299,6 +299,10 @@ decision_cost_ST_2:0 "£stability_texticon §Y2§!"
 decision_cost_ST_2_blocked:0 "£stability_texticon §R2§!"
 decision_cost_ST_2_tooltip:0 "执行此决议需要£stability_texticon §Y2§!"
 
+decision_cost_CP_20_pp_35:0 "£command_power §Y20§! £pol_power §Y35§!"
+decision_cost_CP_20_pp_35_blocked:0 "£command_power §R20§! £pol_power §R35§!"
+decision_cost_CP_20_pp_35_tooltip:0 "执行此决议需要£command_power §Y20§! £pol_power §Y35§!"
+
 ###effects###
 EFFECT_REMOVE_IDEA: "移除$NAME$"
 
@@ -420,6 +424,10 @@ generic_mio_trait_unified_development_specifications:0 "统一开发规格"
 generic_mio_trait_better_ore_processing_tech:0 "改进魔矿加工技艺"
 generic_mio_trait_massive_production_line:0 "大规模产线"
 generic_mio_trait_advanced_forging_technology:0 "先进锻造技术"
+
+###装备分类###
+mio_cat_eq_all_titan_equipment:0 "所有泰坦装备"
+mio_cat_eq_all_caster_equipment:0 "所有魔导装备"
 
 ###投降页面###
 SPC_peace_popup_title_txt:0 "外交提示"

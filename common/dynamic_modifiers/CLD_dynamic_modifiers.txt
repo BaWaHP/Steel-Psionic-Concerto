@@ -99,16 +99,116 @@ CLD_new_liberated_zone = {
 	state_production_speed_infrastructure_factor = CLD_new_liberated_zone_spsif
 }
 
-#国防工业现状
-CLD_defense_industry_situation_dm = {
-	enable = { always = yes }
+#西莉迪亚红军
+CLD_red_army = {
+	enable = { tag = CLD }
+	icon = GFX_idea_CLD_army_of_the_people
 
-	civilian_factory_use = CLD_defense_industry_situation_dm_cfu
-	industrial_capacity_factory = CLD_defense_industry_situation_dm_icf
-	production_factory_max_efficiency_factor = CLD_defense_industry_situation_dm_pfmef
-	production_factory_efficiency_gain_factor = CLD_defense_industry_situation_dm_pfegf
-	production_lack_of_resource_penalty_factor = CLD_defense_industry_situation_dm_plorp
-	political_power_factor = CLD_defense_industry_situation_dm_ppf
-	research_speed_factor = CLD_defense_industry_situation_dm_rsf
-	monthly_research_development_process = CLD_defense_industry_situation_dm_mrdp
+	consumer_goods_factor = CLD_red_army_cgf
+	army_speed_factor = CLD_red_army_asf
+	mobilization_speed = CLD_red_army_ms
+	army_org_factor = CLD_red_army_aof
+	army_org_regain = CLD_red_army_aor
+	army_morale_factor = CLD_red_army_amf
+	org_loss_when_moving = CLD_red_army_olwm
+	attrition = CLD_red_army_a
+	recon_factor = CLD_red_army_rf
+	supply_consumption_factor = CLD_red_army_scf
+	training_time_factor = CLD_red_army_ttf
+	army_attack_factor = CLD_red_army_aaf
+	army_defence_factor = CLD_red_army_adf
+	army_core_attack_factor = CLD_red_army_acaf
+	army_core_defence_factor = CLD_red_army_acdf
+	army_infantry_attack_factor = CLD_red_army_aiaf
+	army_infantry_defence_factor = CLD_red_army_aidf
+	army_artillery_attack_factor = CLD_red_army_aaraf
+	army_artillery_defence_factor = CLD_red_army_aardf
+	army_armor_attack_factor = CLD_red_army_aaaf
+	army_armor_defence_factor = CLD_red_army_aadf
+	dig_in_speed_factor = CLD_red_army_disf
+	breakthrough_factor = CLD_red_army_bf
+	land_night_attack = CLD_red_army_lna
+	max_training = CLD_red_army_mt
+	pocket_penalty = CLD_red_army_pp
+	army_attack_speed_factor = CLD_red_army_aasf
+	cas_damage_reduction = CLD_red_army_cdr
+	terrain_penalty_reduction = CLD_red_army_tpr
+	initiative_factor = CLD_red_army_if
+	coordination_bonus = CLD_red_army_cb
+	max_fuel_factor = CLD_red_army_mff
+	planning_speed = CLD_red_army_ps
+	max_planning_factor = CLD_red_army_mpf
+	land_doctrine_cost_factor = CLD_red_army_ldcf
+	land_reinforce_rate = CLD_red_army_lrr
+	army_strength_factor = CLD_red_army_astf
+
+	monthly_military_development_process = CLD_red_army_mmdp
+	conscription = CLD_red_army_c
+	experience_gain_army_factor = CLD_red_army_egaf
+	army_org = CLD_red_army_ao
+	max_command_power = CLD_red_army_mcp
+	command_power_gain = CLD_red_army_cpg
+	command_abilities_cost_factor = CLD_red_army_cacf
+	high_command_cost_factor = CLD_red_army_hccf
+	army_chief_cost_factor = CLD_red_army_accf
+	conscription_factor = CLD_red_army_cf
+	land_mastery_gain_factor = CLD_red_army_lmgf
+	command_power_gain_mult = CLD_red_army_cpgm
+	assign_army_leader_cp_cost = CLD_red_army_aalcc
+	supply_combat_penalties_on_core_factor = CLD_red_army_scpocf
+	experience_loss_factor = CLD_red_army_elf
+
+	army_advisor_cost_factor = CLD_red_army_aacf
+	air_advisor_cost_factor = CLD_red_army_aiacf
+	navy_advisor_cost_factor = CLD_red_army_nacf
+	political_power_gain = CLD_red_army_ppg
+
+	no_supply_grace = CLD_red_army_nsg
 }
+
+#红色空军
+CLD_red_airforce = {
+	enable = { tag = CLD }
+	icon = GFX_idea_SOV_red_airforce_ccp_2d_sov_compatibility
+
+	air_accidents_factor = CLD_red_airforce_aaf
+	air_range_factor = CLD_red_airforce_arf
+	air_superiority_efficiency = CLD_red_airforce_ase
+	ground_attack_factor = CLD_red_airforce_gaf
+	naval_strike_attack_factor = CLD_red_airforce_nsaf
+	air_cas_efficiency = CLD_red_airforce_ace
+	air_ace_generation_chance_factor = CLD_red_airforce_aagcf
+	air_wing_xp_loss_when_killed_factor = CLD_red_airforce_awxlwkf
+	air_night_penalty = CLD_red_airforce_anp
+	air_weather_penalty = CLD_red_airforce_awp
+}
+
+#红色海军
+CLD_red_navy = {
+	enable = { tag = CLD }
+	icon = GFX_idea_SOV_red_navy_ccp_2d_sov_compatibility
+
+	naval_coordination = CLD_red_navy_nc
+	naval_invasion_prep_speed = CLD_red_navy_nips
+	naval_speed_factor = CLD_red_navy_nsf
+	navy_org = CLD_red_navy_no
+	spotting_chance = CLD_red_navy_sc
+	naval_retreat_speed = CLD_red_navy_nrs
+	navy_max_range_factor = CLD_red_navy_nrf
+	navy_submarine_attack_factor = CLD_red_navy_nsaf
+	navy_submarine_defence_factor = CLD_red_navy_nsdf
+	navy_capital_ship_attack_factor = CLD_red_navy_ncaf
+	navy_capital_ship_defence_factor = CLD_red_navy_ncdf
+	navy_screen_attack_factor = CLD_red_navy_nscaf 
+	navy_screen_defence_factor = CLD_red_navy_nscdf
+	screening_efficiency = CLD_red_navy_se
+	positioning = CLD_red_navy_p
+
+	naval_morale_factor = CLD_red_navy_nmf
+
+	unit_submarine_design_cost_factor = CLD_red_navy_usdcf
+	unit_destroyer_design_cost_factor = CLD_red_navy_uddcf
+	unit_light_cruiser_design_cost_factor = CLD_red_navy_ulcdc
+	unit_heavy_cruiser_design_cost_factor = CLD_red_navy_uhcdc
+}
+

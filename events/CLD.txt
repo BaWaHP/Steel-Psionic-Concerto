@@ -1583,6 +1583,122 @@ country_event = {
 	}
 }
 
+#调查报告
+country_event = {
+	id = CLD.100
+	title = CLD.100.t
+	desc = CLD.100.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.100.a
+	}
+}
+
+#写信
+country_event = {
+	id = CLD.101
+	title = CLD.101.t
+	desc = CLD.101.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.101.a
+	}
+}
+
+#《关于军队现状的进一步报告（节选）》
+country_event = {
+	id = CLD.102
+	title = CLD.102.t
+	desc = CLD.102.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.102.a
+		SPC_military_development_amount_down_1 = yes
+		army_experience = -10
+	}
+}
+
+#关于M-135垂直风洞的可行性论证报告（摘要）
+country_event = {
+	id = CLD.103
+	title = CLD.103.t
+	desc = CLD.103.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.103.a
+	}
+}
+
+#飞行
+country_event = {
+	id = CLD.104
+	title = CLD.104.t
+	desc = CLD.104.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.104.a
+	}
+}
+
+#《关于建立动员体系的建议》
+country_event = {
+	id = CLD.105
+	title = CLD.105.t
+	desc = CLD.105.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.105.a
+	}
+}
+
+#你的宁静
+country_event = {
+	id = CLD.106
+	title = CLD.106.t
+	desc = CLD.106.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CLD.106.a
+		custom_effect_tooltip = CLD.106.a.tt
+		add_political_power = 1000
+		add_ideas = CLD_husky_gift
+	}
+
+	option = {
+		name = CLD.106.b
+		custom_effect_tooltip = CLD.106.b.tt
+		add_political_power = 200
+	}
+
+	option = {
+		name = CLD.106.c
+		custom_effect_tooltip = CLD.106.c.tt1
+		add_ideas = CLD_husky_gift
+		custom_effect_tooltip = CLD.106.c.tt2
+	}
+}
+
 ###新闻###
 
 add_namespace = CLDNews

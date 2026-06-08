@@ -21,4 +21,12 @@ on_actions = {
 			}
 		}
 	}
+	on_daily_CLD = {
+		effect = {
+			if = {
+				limit = { has_dynamic_modifier = CLD_red_army }
+				CLD_red_army_update = yes
+			}
+		}
+	}
 }
