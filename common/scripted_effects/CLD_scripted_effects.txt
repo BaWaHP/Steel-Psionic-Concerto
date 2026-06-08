@@ -839,15 +839,88 @@ CLD_red_army_var_refresh = {
 		add_to_variable = { CLD_red_army_ppg = 0.05 }
 		add_to_variable = { CLD_red_army_ttf = -0.03 }
 	}
+	force_update_dynamic_modifier = yes
+}
 
-	CLD_red_army_pol_control_update = yes
+CLD_red_army_var_refresh_2 = {
+	set_variable = { CLD_red_army_cgf = 0.08 }
+	set_variable = { CLD_red_army_asf = -0.05 }
+	set_variable = { CLD_red_army_ms = -0.2 }
+	set_variable = { CLD_red_army_aof = 0 }
+	set_variable = { CLD_red_army_aor = -0.1 }
+	set_variable = { CLD_red_army_amf = 0.3 }
+	set_variable = { CLD_red_army_olwm = -0.22 }
+	set_variable = { CLD_red_army_a = -0.03 }
+	set_variable = { CLD_red_army_rf = 0.11 }
+	set_variable = { CLD_red_army_scf = 0.05 }
+	set_variable = { CLD_red_army_ttf = 0 }
+	set_variable = { CLD_red_army_aaf = 0 }
+	set_variable = { CLD_red_army_adf = 0 }
+	set_variable = { CLD_red_army_acaf = 0.35 }
+	set_variable = { CLD_red_army_acdf = 0.35 }
+	set_variable = { CLD_red_army_aiaf = 0.13 }
+	set_variable = { CLD_red_army_aidf = 0.13 }
+	set_variable = { CLD_red_army_aaraf = -0.05 }
+	set_variable = { CLD_red_army_aardf = -0.05 }
+	set_variable = { CLD_red_army_aaaf = -0.15 }
+	set_variable = { CLD_red_army_aadf = -0.15 }
+	set_variable = { CLD_red_army_disf = 0.05 }
+	set_variable = { CLD_red_army_bf = -0.1 }
+	set_variable = { CLD_red_army_lna = 0.15 }
+	set_variable = { CLD_red_army_mt = -0.07 }
+	set_variable = { CLD_red_army_pp = 0.17 }
+	set_variable = { CLD_red_army_aasf = -0.1 }
+	set_variable = { CLD_red_army_cdr = -0.1 }
+	set_variable = { CLD_red_army_tpr = -0.1 }
+	set_variable = { CLD_red_army_if = 0.1 }
+	set_variable = { CLD_red_army_cb = -0.14 }
+	set_variable = { CLD_red_army_mff = -0.15 }
+	set_variable = { CLD_red_army_ps = -0.2 }
+	set_variable = { CLD_red_army_mpf = -0.2 }
+	set_variable = { CLD_red_army_ldcf = -0.25 }
+	set_variable = { CLD_red_army_lrr = 0.18 }
+	set_variable = { CLD_red_army_astf = 0.06 }
+	set_variable = { CLD_red_army_mmdp = 5 }
+	set_variable = { CLD_red_army_c = 0.005 }
+	set_variable = { CLD_red_army_egaf = 0.2 }
+	set_variable = { CLD_red_army_ao = 2 }
+	set_variable = { CLD_red_army_mcp = 25 }
+	set_variable = { CLD_red_army_cpg = -0.3 }
+	set_variable = { CLD_red_army_cacf = -0.1 }
+	set_variable = { CLD_red_army_hccf = 0.1 }
+	set_variable = { CLD_red_army_accf = 0.1 }
+	set_variable = { CLD_red_army_cf = 0.09 }
+	set_variable = { CLD_red_army_lmgf = 0.3 }
+	set_variable = { CLD_red_army_cpgm = 0.15 }
+	set_variable = { CLD_red_army_aalcc = 5 }
+	set_variable = { CLD_red_army_scpocf = -0.05 }
+	set_variable = { CLD_red_army_elf = 0.05 }
+	set_variable = { CLD_red_army_aacf = 0 }
+	set_variable = { CLD_red_army_aiacf = 0 }
+	set_variable = { CLD_red_army_nacf = 0 }
+	set_variable = { CLD_red_army_ppg = 0.05 }
+	set_variable = { CLD_red_army_nsg = 3 }
+
+	if = {
+		limit = { has_country_flag = CLD_strengthen_political_commissar_training_flag }
+		add_to_variable = { CLD_red_army_amf = 0.03 }
+		add_to_variable = { CLD_red_army_olwm = -0.03 }
+		add_to_variable = { CLD_red_army_scf = -0.02 }
+		add_to_variable = { CLD_red_army_cpg = 0.05 }
+	}
 
 	force_update_dynamic_modifier = yes
 }
 
 CLD_red_army_update = {
 	set_temp_variable = { current_battalions = num_battalions }
-	CLD_red_army_var_refresh = yes
+	if = {
+		limit = { has_completed_focus = CLD_red_army_first_decade }
+		CLD_red_army_var_refresh_2 = yes
+	}
+	else = {
+		CLD_red_army_var_refresh = yes
+	}
 	if = {
 		limit = { check_variable = { current_battalions > CLD_red_army_max_battalions } }
 		set_temp_variable = { battalions_dif = current_battalions }
@@ -895,6 +968,7 @@ CLD_red_army_update = {
 		multiply_temp_variable = { CLD_red_army_cgf_mod = 0.01 }
 		add_to_variable = { CLD_red_army_cgf = CLD_red_army_cgf_mod }
 	}
+	CLD_red_army_pol_control_update = yes
 	force_update_dynamic_modifier = yes	
 }
 
