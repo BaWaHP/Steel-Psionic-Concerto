@@ -85,20 +85,6 @@ CLD_red_army_north_special_military_district = {
 	state_production_speed_bunker_factor = 0.25
 }
 
-#新解放区
-CLD_new_liberated_zone = {
-	enable = { owner = { tag = CLD } }
-	icon = GFX_idea_FRA_liberte_egalite_solidarite
-
-	local_manpower = CLD_new_liberated_zone_lm
-	local_resources_factor = CLD_new_liberated_zone_lrf
-	local_factories = CLD_new_liberated_zone_lf
-	local_building_slots_factor = CLD_new_liberated_zone_lbsf
-	local_factory_energy_consumption = CLD_new_liberated_zone_lfec
-	state_production_speed_buildings_factor = CLD_new_liberated_zone_spsbf
-	state_production_speed_infrastructure_factor = CLD_new_liberated_zone_spsif
-}
-
 #西莉迪亚红军
 CLD_red_army = {
 	enable = { tag = CLD }
