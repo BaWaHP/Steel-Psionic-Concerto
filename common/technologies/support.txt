@@ -16,6 +16,7 @@ technologies = {
 	@logistic_x = 11 #it is actually Y :D
 	@signal_x = 14 #it is actually Y :D
 
+
 	tech_support = {
 
 		enable_equipments = {
@@ -65,7 +66,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			base = 2
 						
 			modifier = {
 				factor = 4
@@ -89,6 +90,10 @@ technologies = {
 
 		enable_subunits = {
 			engineer
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_engineer
 		}
 		
 		path = {
@@ -158,39 +163,10 @@ technologies = {
 			}
 		}
 	}
-
-	tech_engineers_flamethrower = {
-
-		category_engineer = {
-			soft_attack = 0.05
-			breakthrough = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = {
-			always = no
-		}
-		
-		categories = {
-			support_tech
-			engineers_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
 	
 	tech_engineers2 = {
 
-		category_engineer = {
+		engineer = {
 			entrenchment = 0.50
 			fort = {
 				defence = 0.10
@@ -198,16 +174,37 @@ technologies = {
 			}
 		}
 
-		enable_equipment_modules = {
-			dozer_blade
-			flamethrower
+		assault_engineer = {
+			breakthrough = 0.1
+			fort = {
+				attack = 0.15
+			}
 		}
 
-		enable_subunits = {
-			light_flame_tank
-			medium_flame_tank
-			heavy_flame_tank
+		armored_engineer = {
+			entrenchment = 1
+			fort = {
+				defence = 0.15
+			}
 		}
+
+		caster_engineer = {
+			entrenchment = 1
+			fort = {
+				defence = 0.15
+			}
+		}
+
+		enable_equipment_modules = {
+			dozer_blade
+			#flamethrower #MM: Moved to Special Project sp_land_flamethrower_tank
+		}
+
+		#enable_subunits = { #MM: Moved to Special Project sp_land_flamethrower_tank
+		#	light_flame_tank
+		#	medium_flame_tank
+		#	heavy_flame_tank
+		#}
 		
 		
 		path = {
@@ -228,7 +225,12 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			base = 4
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 
 			modifier = {
 				factor = 1.2
@@ -246,38 +248,42 @@ technologies = {
 			}
 		}
 	}
-
-	tech_engineers2_explosive_mag = {
-
-		category_engineer = {
-			entrenchment = 0.25
-			soft_attack = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = {
-			always = no
-		}
-		
-		categories = {
-			support_tech
-			engineers_tech
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
 	
 	tech_engineers3 = {
 
-		category_engineer = {
+		enable_equipment_modules = {
+			lc_obstacle_clearance_gear #Module for Land Cruiser
+		}
+
+		engineer = {
 			entrenchment = 0.50
 			river = {
 				attack = 0.1	
 				defence = 0.10
+			}
+		}
+
+		caster_engineer = {
+			entrenchment = 0.50
+			river = {
+				attack = 0.1	
+				defence = 0.10
+			}
+		}
+
+		assault_engineer = {
+			breakthrough = 0.1
+			river = {
+				attack = 0.1
+			}
+		}
+
+		armored_engineer = {
+			entrenchment = 1
+			river = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.15
 			}
 		}
 
@@ -286,7 +292,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		medium_flame_tank = {
@@ -294,7 +300,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		heavy_flame_tank = {
@@ -302,7 +308,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		path = {
@@ -323,7 +329,12 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			base = 4
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 
 			modifier = {
 				factor = 1.2
@@ -341,46 +352,46 @@ technologies = {
 			}
 		}
 	}
-
-	tech_engineers3_tools_improvement = {
-
-		category_engineer = {
-			entrenchment = 0.25
-			defense = 0.05
-		}
-
-		research_cost = 1.5
-		start_year = 2008
-
-		allow = {
-			always = no
-		}
-		
-		categories = {
-			support_tech
-			engineers_tech
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
 	
 	tech_engineers4 = {
 
-		category_engineer = {
+		engineer = {
 			entrenchment = 0.50
 			urban = {
 				attack = 0.1	
 				defence = 0.1
 			}
 		}
+
+		caster_engineer = {
+			entrenchment = 0.50
+			urban = {
+				attack = 0.1	
+				defence = 0.1
+			}
+		}
+
+		assault_engineer = {
+			breakthrough = 0.1
+			urban = {
+				attack = 0.15
+			}
+		}
+
+		armored_engineer = {
+			entrenchment = 1
+			urban = {
+				defence = 0.15
+				movement = 0.15
+			}
+		}
+
 		light_flame_tank = {
 			urban = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		medium_flame_tank = {
@@ -388,7 +399,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		heavy_flame_tank = {
@@ -396,7 +407,7 @@ technologies = {
 				attack = 0.1
 			}
 			fort = {
-				attack = 0.10
+				attack = 0.1
 			}
 		}
 		path = {
@@ -417,7 +428,12 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			base = 4
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 			
 			modifier = {
 				factor = 1.2
@@ -436,35 +452,59 @@ technologies = {
 		}
 	}	
 
-	tech_engineers4_construction_mag = {
-
-		category_engineer = {
-			entrenchment = 0.25
-			max_organisation = 5
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			engineers_tech
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}	
-
 	tech_engineers5 = {
 
-		category_engineer = {
+		engineer = {
 			entrenchment = 0.5
 			soft_attack = 0.05
 			breakthrough = 0.05
 			max_organisation = 10
+		}
+
+		caster_engineer = {
+			entrenchment = 0.5
+			soft_attack = 0.05
+			breakthrough = 0.05
+			max_organisation = 10
+		}
+
+		assault_engineer = {
+			entrenchment = 0.5
+			soft_attack = 0.05
+			breakthrough = 0.05
+			max_organisation = 10
+		}
+
+		armored_engineer = {
+			entrenchment = 0.5
+			soft_attack = 0.05
+			breakthrough = 0.05
+			max_organisation = 10
+		}
+
+		light_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.1
+			}
+		}
+		medium_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.1
+			}
+		}
+		heavy_flame_tank = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.1
+			}
 		}
 
 		research_cost = 1
@@ -491,6 +531,11 @@ technologies = {
 			mot_recon
 			armored_car_recon
 			light_tank_recon
+
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_recon
 		}
 		
 		path = {
@@ -516,7 +561,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				factor = 2
@@ -543,38 +588,15 @@ technologies = {
 			}
 		}
 	}
-
-	tech_recon_military_scopes = {
-
-		category_recon = {
-			recon = 0.5
-			max_strength = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			recon_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
 	
 	tech_recon2 = {
 
 		category_recon = {
 			recon = 2
+		}
+
+		helicopter_recon = {
+			recon = 1
 		}
 		
 		path = {
@@ -595,7 +617,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -613,34 +635,21 @@ technologies = {
 			}
 		}
 	}
-
-	tech_recon2_heat_detection_mag = {
-
-		category_recon = {
-			recon = 0.5
-			max_organisation = 5
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			recon_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_recon3 = {
 
 		category_recon = {
 			recon = 2
 		}
+
+		helicopter_recon = {
+			recon = 1
+		}
+
+		helicopter_brigade = {
+			recon = 2
+		}
+
 		path = {
 			leads_to_tech = tech_recon4
 			research_cost_coeff = 1
@@ -659,7 +668,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -677,32 +686,13 @@ technologies = {
 			}
 		}
 	}
-
-	tech_recon3_invisible_mag = {
-
-		category_recon = {
-			recon = 0.5
-			max_strength = 0.1
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			recon_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_recon4 = {
 
 		category_recon = {
+			recon = 2
+		}
+
+		helicopter_recon = {
 			recon = 2
 		}
 
@@ -724,7 +714,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -743,29 +733,14 @@ technologies = {
 		}
 	}
 
-	tech_recon4_short_distance_flying_mag = {
-
-		category_recon = {
-			recon = 0.5
-			soft_attack = 0.05
-		}
-
-		research_cost = 1.5
-		start_year = 2012
-		
-		categories = {
-			support_tech
-			recon_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_recon5 = {
 
 		category_recon = {
+			recon = 3
+			defense = 0.1
+		}
+
+		helicopter_recon = {
 			recon = 3
 			defense = 0.1
 		}
@@ -806,6 +781,10 @@ technologies = {
 		enable_subunits = {
 			maintenance_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_maintenance
+		}
 		
 		path = {
 			leads_to_tech = tech_maintenance_company2
@@ -830,7 +809,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 						
 			modifier = {
 				factor = 1.2
@@ -848,35 +827,25 @@ technologies = {
 			}
 		}
 	}
-
-	tech_maintenance_company_toolbox = {
-
-		category_maintenance = {
-			reliability_factor = 0.0125
-			defense = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			maintenance_company_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_maintenance_company2 = {
 
-		category_maintenance = {
+		maintenance_company = {
 			reliability_factor = 0.05
 			equipment_capture_factor = 0.05
 		}
+
+		caster_engineer = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+		}
+
+		armored_maintenance = {
+			reliability_factor = 0.02
+			recovery = 0.03
+			equipment_capture_factor = 0.1
+		}
+
 		enable_equipment_modules = {
 			easy_maintenance
 		}
@@ -900,7 +869,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -918,47 +887,43 @@ technologies = {
 			}
 		}
 	}
-
-	tech_maintenance_company2_storage_mag = {
-		category_maintenance = {
-			equipment_capture_factor = 0.0125
-			soft_attack = 0.05
-		}		
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-
-		categories = {
-			support_tech
-			maintenance_company_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_maintenance_company3 = {
 
-		category_maintenance = {
+		maintenance_company = {
 			reliability_factor = 0.05
+
+			battalion_mult = {
+				category = category_all_armor
+				equipment_capture_factor = 0.01
+				add = yes
+				display_as_percentage = yes
+			}
 		}
 
-		maintenance_company = {
+		caster_engineer = {
+			reliability_factor = 0.05
+			recovery = 0.05
+
 			battalion_mult = {
 				category = category_all_armor
 				equipment_capture_factor = 0.01
 				add = yes
+				display_as_percentage = yes
 			}
 		}
-		caster_engineer = {
+
+		armored_maintenance = {
+			reliability_factor = 0.02
+			recovery = 0.03
+
 			battalion_mult = {
 				category = category_all_armor
-				equipment_capture_factor = 0.01
+				equipment_capture_factor = 0.02
 				add = yes
+				display_as_percentage = yes
 			}
+
 		}
 
 		path = {
@@ -979,7 +944,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -997,34 +962,23 @@ technologies = {
 			}
 		}
 	}
-
-	tech_maintenance_company3_new_sets_of_tools = {
-
-		category_maintenance = {
-			reliability_factor = 0.0125
-			equipment_capture_factor = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			maintenance_company_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_maintenance_company4 = {
 
-		category_maintenance = {
+		maintenance_company = {
 			reliability_factor = 0.05
 			equipment_capture_factor = 0.05
+		}
+
+		caster_engineer = {
+			reliability_factor = 0.02
+			recovery = 0.03
+			equipment_capture_factor = 0.1
+		}
+
+		armored_maintenance = {
+			reliability_factor = 0.02
+			recovery = 0.03
+			equipment_capture_factor = 0.1
 		}
 
 		research_cost = 1.25
@@ -1045,7 +999,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1064,31 +1018,21 @@ technologies = {
 		}
 	}
 
-	tech_maintenance_company4_automatic_enchantment = {
-
-		category_maintenance = {
-			reliability_factor = 0.0125
-			equipment_capture_factor = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			maintenance_company_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_maintenance_company5 = {
 
-		category_maintenance = {
+		maintenance_company = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+			max_organisation = 10
+		}
+
+		caster_engineer = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+			max_organisation = 10
+		}
+
+		armored_maintenance = {
 			reliability_factor = 0.05
 			equipment_capture_factor = 0.05
 			max_organisation = 10
@@ -1203,29 +1147,6 @@ technologies = {
 			factor = 1
 		}
 	}
-	
-	tech_monster_tamer2_explosive_remould = {
-
-		monster_tamer = {
-			soft_attack = 0.1
-			hard_attack = 0.1
-			max_strength = -0.05
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			monster_tamer_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	tech_monster_tamer3 = {
 
@@ -1258,29 +1179,6 @@ technologies = {
 		}
 	}
 
-	tech_monster_tamer3_commanding_mag = {
-
-		monster_tamer = {
-			max_organisation = 10
-			defense = 0.05
-			breakthrough = 0.05
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			monster_tamer_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_monster_tamer4 = {
 
 		monster_tamer = {
@@ -1301,32 +1199,6 @@ technologies = {
 			leads_to_tech = tech_monster_tamer5
 			research_cost_coeff = 1
 		}
-		
-		categories = {
-			support_tech
-			monster_tamer_tech
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	tech_monster_tamer4_suicidal_reinforcement_mag = {
-
-		monster_tamer = {
-			soft_attack = 0.05
-			defense = 0.1
-			breakthrough = 0.1
-			hard_attack = 0.05
-			max_organisation = -5
-			max_strength = -0.05
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
 		
 		categories = {
 			support_tech
@@ -1370,6 +1242,10 @@ technologies = {
 		enable_subunits = {
 			field_hospital
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_field_hospital
+		}
 		
 		path = {
 			leads_to_tech = tech_field_hospital2
@@ -1396,10 +1272,11 @@ technologies = {
 			support_tech
 			hospital_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1417,35 +1294,32 @@ technologies = {
 			}
 		}
 	}
-
-	tech_field_hospital_disinfectant = {
-
-		category_field_hospital = {
-			casualty_trickleback = 0.025
-			experience_loss_factor = -0.05
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			hospital_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_field_hospital2 = {
 
-		category_field_hospital = {
+		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
+		}
+
+		caster_logistics = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.15
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
+		}
+
+		helicopter_field_hospital = {
+			casualty_trickleback = 0.12
+			experience_loss_factor = -0.08
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
 		}
 		
 		path = {
@@ -1464,10 +1338,11 @@ technologies = {
 			support_tech
 			hospital_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1485,38 +1360,44 @@ technologies = {
 			}
 		}
 	}
-
-	tech_field_hospital2_individual_healing_mag = {
-
-		category_field_hospital = {
-			casualty_trickleback = 0.025
-			experience_loss_factor = -0.05
-			breakthrough = 0.1
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			hospital_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-
-	}
 	
 	tech_field_hospital3 = {
 
-		category_field_hospital = {
+		field_hospital = {
 			casualty_trickleback = 0.1
 			experience_loss_factor = -0.10
 		}
+
+		caster_logistics = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.1
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
+		}
+
+		helicopter_field_hospital = {
+			casualty_trickleback = 0.12
+			experience_loss_factor = -0.08
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
+		}
+
+		helicopter_brigade = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.1
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
+		}
+
 		path = {
 			leads_to_tech = tech_field_hospital4
 			research_cost_coeff = 1
@@ -1533,10 +1414,11 @@ technologies = {
 			support_tech
 			hospital_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1555,34 +1437,31 @@ technologies = {
 		}
 	}
 
-	tech_field_hospital3_bodies_restoration = {
-
-		category_field_hospital = {
-			casualty_trickleback = 0.025
-			experience_loss_factor = -0.05
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			hospital_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_field_hospital4 = {
 
-		category_field_hospital = {
+		field_hospital = {
 			casualty_trickleback = 0.1
 			experience_loss_factor = -0.10
+		}
+
+		caster_logistics = {
+			casualty_trickleback = 0.15
+			experience_loss_factor = -0.1
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
+		}
+
+		helicopter_field_hospital = {
+			casualty_trickleback = 0.12
+			experience_loss_factor = -0.08
+
+			battalion_mult = {
+				category = category_all_infantry
+				default_morale = 0.05
+			}
 		}
 
 		research_cost = 2.0
@@ -1601,10 +1480,11 @@ technologies = {
 			support_tech
 			hospital_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1637,36 +1517,27 @@ technologies = {
 		category_support_battalions = {
 			max_organisation = 10
 			soft_attack = 0.25
-			experience_loss_factor = 0.05
-		}
-	}
-	
-	tech_field_hospital4_group_healing_mag = {
-		category_field_hospital = {
-			casualty_trickleback = 0.025
 			experience_loss_factor = -0.05
-			breakthrough = 0.1
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			hospital_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
 		}
 	}
 
 	tech_field_hospital5 = {
 
-		category_field_hospital = {
+		field_hospital = {
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1
+			max_organisation = 10
+			max_strength = 0.2
+		}
+
+		caster_logistics = {
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1
+			max_organisation = 10
+			max_strength = 0.2
+		}
+
+		helicopter_field_hospital = {
 			casualty_trickleback = 0.1
 			experience_loss_factor = -0.1
 			max_organisation = 10
@@ -1696,6 +1567,10 @@ technologies = {
 		enable_subunits = {
 			logistics_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_logistics
+		}
 		
 		path = {
 			leads_to_tech = tech_logistics_company2
@@ -1722,10 +1597,11 @@ technologies = {
 			support_tech
 			logistics_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1747,39 +1623,23 @@ technologies = {
 			}
 		}
 	}
-
-	tech_logistics_company_compressed_rations = {
-
-		no_supply_grace = 24
-
-		category_logistics = {
-			supply_consumption_factor = -0.025
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			logistics_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_logistics_company2 = {
 
-		category_logistics = {
+		logistics_company = {
 			supply_consumption_factor = -0.1
 			fuel_consumption_factor = -0.05
 		}
 
+		caster_logistics = {
+			supply_consumption_factor = -0.1
+			fuel_consumption_factor = -0.05
+		}
 		
+		helicopter_transport = {
+			supply_consumption_factor = -0.12
+		}
+
 		path = {
 			leads_to_tech = tech_logistics_company3
 			research_cost_coeff = 1
@@ -1796,10 +1656,11 @@ technologies = {
 			support_tech
 			logistics_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1817,36 +1678,27 @@ technologies = {
 			}
 		}
 	}
-
-	tech_logistics_company2_adding_dopes = {
-
-		category_logistics = {
-			max_organisation = 10
-			max_strength = 0.2
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			logistics_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_logistics_company3 = {
 
-		category_logistics = {
+		logistics_company = {
 			supply_consumption_factor = -0.1
 			fuel_consumption_factor = -0.05
 		}
+
+		caster_logistics = {
+			supply_consumption_factor = -0.1
+			fuel_consumption_factor = -0.05
+		}
+
+		helicopter_transport = {
+			supply_consumption_factor = -0.12
+		}
+
+		helicopter_brigade = {
+			supply_consumption_factor = -0.12
+		}
+
 		path = {
 			leads_to_tech = tech_logistics_company4
 			research_cost_coeff = 1
@@ -1863,6 +1715,7 @@ technologies = {
 			support_tech
 			logistics_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1884,36 +1737,20 @@ technologies = {
 			}
 		}
 	}
-
-	tech_logistics_company3_carrying_mag = {
-
-		no_supply_grace = 48
-
-		category_logistics = {
-			default_morale = 0.1
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			logistics_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_logistics_company4 = {
 
-		category_logistics = {
+		logistics_company = {
 			supply_consumption_factor = -0.1
 			fuel_consumption_factor = -0.05
+		}
+
+		caster_logistics = {
+			supply_consumption_factor = -0.15
+			fuel_consumption_factor = -0.05
+		}
+
+		helicopter_transport = {
+			supply_consumption_factor = -0.15
 		}
 
 		research_cost = 2.0
@@ -1932,10 +1769,11 @@ technologies = {
 			support_tech
 			logistics_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -1954,36 +1792,22 @@ technologies = {
 		}
 	}
 
-	tech_logistics_company4_food_improvement = {
-
-		category_logistics = {
-			supply_consumption_factor = -0.025
-			max_organisation = 5
-			max_strength = 0.1
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			logistics_tech
-			motorized_equipment
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_logistics_company5 = {
 
-		category_logistics = {
+		logistics_company = {
 			supply_consumption_factor = -0.1
 			fuel_consumption_factor = -0.05
 			max_organisation = 5
+		}
+
+		caster_logistics = {
+			supply_consumption_factor = -0.1
+			fuel_consumption_factor = -0.05
+			max_organisation = 5
+		}
+
+		helicopter_transport = {
+			supply_consumption_factor = -0.15
 		}
 
 		research_cost = 1.5
@@ -1997,6 +1821,7 @@ technologies = {
 			support_tech
 			logistics_tech
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -2008,6 +1833,10 @@ technologies = {
 
 		enable_subunits = {
 			signal_company
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_signal
 		}
 		
 		path = {
@@ -2039,7 +1868,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 5
@@ -2048,35 +1877,24 @@ technologies = {
 			}
 		}
 	}
-
-	tech_signal_company_telepathy = {
-
-		category_signal = {
-			initiative = 0.06
-		}
-
-		research_cost = 1
-		start_year = 2000
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_signal_company2 = {
 
-		category_signal = {
+		signal_company = {
 			initiative = 0.12
 		}
 
+		caster_recon = {
+			initiative = 0.12
+		}
+
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
 		
 		path = {
 			leads_to_tech = tech_signal_company3
@@ -2097,7 +1915,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -2115,35 +1933,25 @@ technologies = {
 			}
 		}
 	}
-
-	tech_signal_company2_mobile_radio = {
-
-		category_signal = {
-			initiative = 0.03
-			max_organisation = 5
-		}
-
-		research_cost = 1
-		start_year = 2004
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	tech_signal_company3 = {
 
-		category_signal = {
+		signal_company = {
 			initiative = 0.12
 		}
+
+		caster_recon = {
+			initiative = 0.12
+		}
+
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
+
 		path = {
 			leads_to_tech = tech_signal_company4
 			research_cost_coeff = 1
@@ -2163,7 +1971,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 
 			modifier = {
 				factor = 1.2
@@ -2181,35 +1989,28 @@ technologies = {
 			}
 		}
 	}
-
-	tech_signal_company3_locate_and_communicate_mag = {
-
-		category_signal = {
-			initiative = 0.03
-			max_organisation = 5
-		}
-
-		research_cost = 1
-		start_year = 2008
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_signal_company4 = {
 
-		category_signal = {
+		signal_company = {
 			initiative = 0.12
 		}
+
+		caster_recon = {
+			initiative = 0.12
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.03
+			}
+		}
+
+		armored_signal = {
+			initiative = 0.08
+			battalion_mult = {
+				category = category_all_armor
+				breakthrough = 0.01
+			}
+		}
+
 
 		research_cost = 2.0
 		start_year = 2010
@@ -2249,32 +2050,20 @@ technologies = {
 		}
 	}
 
-	tech_signal_company4_lr_ptelepathy = {
-
-		category_signal = {
-			initiative = 0.06
-		}
-
-		research_cost = 1
-		start_year = 2012
-
-		allow = { always = no }
-		
-		categories = {
-			support_tech
-			signal_company_tech
-			electronics
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	tech_signal_company5 = {
 
-		category_signal = {
+		signal_company = {
 			initiative = 0.12
+			max_organisation = 10
+		}
+
+		caster_recon = {
+			initiative = 0.15
+			max_organisation = 15
+		}
+
+		armored_signal = {
+			initiative = 0.15
 			max_organisation = 10
 		}
 
@@ -2323,7 +2112,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
 				num_of_factories > 25
 				factor = 100 #might wanna get on that
@@ -2350,6 +2139,17 @@ technologies = {
 			railway_gun_equipment_1
 		}
 
+		enable_equipment_modules = {
+			lc_hull_mounted_railway_gun #Module for Land Cruiser
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_super_heavy_railway_gun
+			}
+		}
+
 		research_cost = 1.5
 		start_year = 1998
 		folder = {
@@ -2363,7 +2163,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 0.5
+			base = 0.5
 			
 			modifier = {
 				is_major = yes
@@ -2426,10 +2226,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		allow_branch = {
-			has_dlc = "No Step Back"
-		}
-		
 		research_cost = 1.5
 		start_year = 1998
 		folder = {
@@ -2442,7 +2238,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1
+			base = 1
 			
 			modifier = {
 				has_war = yes
@@ -2466,6 +2262,25 @@ technologies = {
 				factor = 1.2
 				date > "2002.1.1"
 			}
+		}
+	}
+
+	tech_recon_focus_bonus = { #gained from Help from the Nagas
+
+		allow = {
+			always = no
+		}
+		category_recon = {
+			recon = 2
+		}
+
+		categories = {
+			support_tech
+			recon_tech
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
@@ -2606,7 +2421,7 @@ technologies = {
 			armored_signal
 		}
 
-		enable_equipment_modules = { #TODO_Manu: This shouldn't show up without NSB OR GOT
+		enable_equipment_modules = { #This shouldn't show up without NSB OR GOT
 			lc_command_center #Module for Land Cruiser
 		}
 
@@ -2786,6 +2601,76 @@ technologies = {
 				factor = 1.5
 				date > "2006.1.1"
 			}
+		}
+	}
+
+	sp_armored_motorized_military_police_tech = {
+		allow_branch = {
+			 has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+	 		ROOT = {
+				is_special_project_completed = sp:sp_land_military_engineering_vehicles
+			}
+		}
+
+		is_special_project_tech = yes
+
+		force_use_small_tech_layout = yes
+		show_equipment_icon = yes
+
+		research_cost = 2.0
+		start_year = 1938
+		folder = {
+			name = support_folder
+			position = { x = 5 y = @1938 }
+		}
+
+		categories = {
+			support_tech
+			military_police_tech
+		}
+
+		enable_subunits = {
+			motorized_military_police
+		}
+
+		enable_equipments = {
+			motorbike_equipment_1
+		}
+
+		ai_will_do = {
+			base = 2
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+	}
+
+	AST_war_carriers_tech = { #hidden tech to boost logistics companies
+
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		logistics_company = {
+			supply_consumption_factor = -0.15
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		categories = {
+			support_tech
+			logistics_tech
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 		}
 	}
 

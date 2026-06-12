@@ -2067,22 +2067,7 @@ country_event = {	#恶徒的命运
 	
 	option = {
 		name = SFR.220.a
-		add_stability = 0.02
-		add_political_power = 10
-		country_event = {
-			id = SFR.226
-			days = 1
-		}
-	}
-
-	option = {
-		name = SFR.220.b
-		add_manpower = -4
-		add_political_power = 50
-		country_event = {
-			id = SFR.227
-			days = 1
-		}
+		country_event = SFR.228
 	}
 }
 
@@ -2185,6 +2170,35 @@ country_event = {	#结束
 	option = {
 		name = SFR.227.a
 		add_manpower = -4
+	}
+}
+
+country_event = {	#恶徒的命运（2）
+	id = SFR.228
+	title = SFR.228.t
+	desc = SFR.228.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.228.a
+		add_stability = 0.02
+		add_political_power = 10
+		country_event = {
+			id = SFR.226
+			days = 1
+		}
+	}
+
+	option = {
+		name = SFR.228.b
+		add_manpower = -4
+		add_political_power = 50
+		country_event = {
+			id = SFR.227
+			days = 1
+		}
 	}
 }
 

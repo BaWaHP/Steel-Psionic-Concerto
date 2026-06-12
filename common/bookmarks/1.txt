@@ -6,10 +6,12 @@ bookmarks = {
 		picture = "GFX_bookmark_bastia_1"
 		default_country = "TCW"
 		default = yes
+		filters = { }
 
 		"TCW"={
 			history = "TCW_BASTIA_DESC"
 			ideology = authoritarian_republican
+			version = base_game
 			ideas = {
 				TCW_ethnicity_and_racism
 				TCW_army_of_ambition
@@ -25,6 +27,7 @@ bookmarks = {
 		"ROK"={
 			history = "ROK_BASTIA_DESC"
 			ideology = liberal_republican
+			version = base_game
 			ideas = {
 				ROK_stabiliy_based_on_one
 				ROK_memory_of_donvodsk
@@ -40,6 +43,7 @@ bookmarks = {
 		"UPV"={
 			history = "UPV_BASTIA_DESC"
 			ideology = authoritarian_republican
+			version = base_game
 			ideas = {
 				UPV_corruption_everywhere
 				UPV_deeply_rooted_aristocracy
@@ -55,6 +59,7 @@ bookmarks = {
 		"KOA"={
 			history = "KOA_BASTIA_DESC"
 			ideology = authoritarian_republican
+			version = base_game
 			ideas = {
 
 			}
@@ -66,6 +71,7 @@ bookmarks = {
 		"LNR"={
 			history = "LNR_BASTIA_DESC"
 			ideology = conservative_republican
+			version = base_game
 			ideas = {
 				LNR_chaotic_political_situation
 				LNR_mountain_horror
@@ -81,6 +87,7 @@ bookmarks = {
 		"RSU"={
 			history = "RSU_BASTIA_DESC"
 			ideology = liberal_republican
+			version = base_game
 			ideas = {
 				RSU_transport_key_of_south_bastia
 				RSU_perfect_market_econ
