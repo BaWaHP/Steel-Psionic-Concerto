@@ -411,28 +411,14 @@ country_event = {	#陈坚的日记
 		name = SFR.11.a
 		custom_effect_tooltip = SFR.11.tt
 		add_stability = -0.02
-		if = {
-			limit = { has_completed_focus = SFR_support_right_opposition }
-			add_popularity = {
-				ideology = pioneer_communism
-				popularity = 0.05
-			}
-			add_power_balance_value = {
-				id = SFR_opposition_bop
-				value = -0.05
-			}
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
 		}
-		else = {
-			add_popularity = {
-				ideology = pioneer_communism
-				popularity = 0.01
-			}
-			add_power_balance_value = {
-				id = SFR_opposition_bop
-				value = -0.01
-			}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = -0.05
 		}
-		hidden_effect = { country_event = { id = SFR.12 days = 14 } }
 	}
 }
 
@@ -448,26 +434,13 @@ country_event = {	#张一心的信
 		name = SFR.12.a
 		custom_effect_tooltip = SFR.12.tt
 		add_stability = -0.02
-		if = {
-			limit = { has_completed_focus = SFR_support_right_opposition }
-			add_popularity = {
-				ideology = pioneer_communism
-				popularity = 0.05
-			}
-			add_power_balance_value = {
-				id = SFR_opposition_bop
-				value = -0.05
-			}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.05
 		}
-		else = {
-			add_popularity = {
-				ideology = pioneer_communism
-				popularity = 0.01
-			}
-			add_power_balance_value = {
-				id = SFR_opposition_bop
-				value = -0.01
-			}
+		add_power_balance_value = {
+			id = SFR_opposition_bop
+			value = 0.05
 		}
 	}
 }
@@ -1030,7 +1003,7 @@ country_event = {	#喝茶
 	}
 }
 
-country_event = {	#多方会谈（1）
+country_event = {	#希望之火
 	id = SFR.33
 	title = SFR.33.t
 	desc = SFR.33.d
@@ -1040,20 +1013,6 @@ country_event = {	#多方会谈（1）
 	
 	option = {
 		name = SFR.33.a
-		country_event = SFR.34
-	}
-}
-
-country_event = {	#多方会谈（2）
-	id = SFR.34
-	title = SFR.34.t
-	desc = SFR.34.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.34.a
 		add_stability = 0.05
 		SFR_front_unity_up_3 = yes
 	}
@@ -2071,7 +2030,7 @@ country_event = {	#恶徒的命运
 	}
 }
 
-country_event = {	#新的开始
+country_event = {	#新的开始（1）
 	id = SFR.221
 	title = SFR.221.t
 	desc = SFR.221.d
@@ -2082,13 +2041,13 @@ country_event = {	#新的开始
 	option = {
 		name = SFR.221.a
 		country_event = {
-			id = SFR.222
+			id = SFR.235
 			days = 1
 		}
 	}
 }
 
-country_event = {	#往日之影
+country_event = {	#往日之影（1）
 	id = SFR.222
 	title = SFR.222.t
 	desc = SFR.222.d
@@ -2101,7 +2060,7 @@ country_event = {	#往日之影
 	}
 }
 
-country_event = {	#海风
+country_event = {	#海风（1）
 	id = SFR.223
 	title = SFR.223.t
 	desc = SFR.223.d
@@ -2111,10 +2070,11 @@ country_event = {	#海风
 	
 	option = {
 		name = SFR.223.a
+		country_event = SFR.229
 	}
 }
 
-country_event = {	#审判
+country_event = {	#审判（1）
 	id = SFR.224
 	title = SFR.224.t
 	desc = SFR.224.d
@@ -2124,14 +2084,11 @@ country_event = {	#审判
 	
 	option = {
 		name = SFR.224.a
-		country_event = {
-			id = SFR.225
-			days = 1
-		}
+		country_event = SFR.230
 	}
 }
 
-country_event = {	#命定之日
+country_event = {	#命定之日（1）
 	id = SFR.225
 	title = SFR.225.t
 	desc = SFR.225.d
@@ -2141,11 +2098,11 @@ country_event = {	#命定之日
 	
 	option = {
 		name = SFR.225.a
-		add_manpower = -1
+		country_event = SFR.231
 	}
 }
 
-country_event = {	#报应
+country_event = {	#报应（1）
 	id = SFR.226
 	title = SFR.226.t
 	desc = SFR.226.d
@@ -2155,11 +2112,11 @@ country_event = {	#报应
 	
 	option = {
 		name = SFR.226.a
-		add_manpower = -4
+		country_event = SFR.233
 	}
 }
 
-country_event = {	#结束
+country_event = {	#曲终（1）
 	id = SFR.227
 	title = SFR.227.t
 	desc = SFR.227.d
@@ -2169,7 +2126,7 @@ country_event = {	#结束
 	
 	option = {
 		name = SFR.227.a
-		add_manpower = -4
+		country_event = SFR.234
 	}
 }
 
@@ -2202,7 +2159,139 @@ country_event = {	#恶徒的命运（2）
 	}
 }
 
-country_event = {	#大会闭幕！
+country_event = {	#海风（2）
+	id = SFR.229
+	title = SFR.229.t
+	desc = SFR.229.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.229.a
+	}
+}
+
+country_event = {	#审判（2）
+	id = SFR.230
+	title = SFR.230.t
+	desc = SFR.230.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.230.a
+		country_event = {
+			id = SFR.225
+			days = 1
+		}
+	}
+}
+
+country_event = {	#命定之日（2）
+	id = SFR.231
+	title = SFR.231.t
+	desc = SFR.231.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.231.a
+		country_event = SFR.232
+	}
+}
+
+country_event = {	#命定之日（3）
+	id = SFR.232
+	title = SFR.232.t
+	desc = SFR.232.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.232.a
+		add_manpower = -1
+	}
+}
+
+country_event = {	#报应（2）
+	id = SFR.233
+	title = SFR.233.t
+	desc = SFR.233.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.233.a
+		add_manpower = -4
+	}
+}
+
+country_event = {	#曲终（2）
+	id = SFR.234
+	title = SFR.234.t
+	desc = SFR.234.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.234.a
+		add_manpower = -4
+	}
+}
+
+country_event = {	#新的开始（2）
+	id = SFR.235
+	title = SFR.235.t
+	desc = SFR.235.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.235.a
+		hidden_effect = {
+			country_event = {
+				id = SFR.222
+				days = 180
+			}
+		}
+	}
+}
+
+country_event = {	#往日之影（2）
+	id = SFR.236
+	title = SFR.236.t
+	desc = SFR.236.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.236.a
+		country_event = SFR.237
+	}
+}
+
+country_event = {	#往日之影（3）
+	id = SFR.237
+	title = SFR.237.t
+	desc = SFR.237.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.237.a
+	}
+}
+
+country_event = {	#疲惫之人（1）
 	id = SFR.250
 	title = SFR.250.t
 	desc = SFR.250.d
@@ -2212,6 +2301,121 @@ country_event = {	#大会闭幕！
 	
 	option = {
 		name = SFR.250.a
+		country_event = SFR.251
+	}
+}
+
+country_event = {	#疲惫之人（2）
+	id = SFR.251
+	title = SFR.251.t
+	desc = SFR.251.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.251.a
+		country_event = SFR.252
+	}
+}
+
+country_event = {	#疲惫之人（3）
+	id = SFR.252
+	title = SFR.252.t
+	desc = SFR.252.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.252.a
+		country_event = SFR.253
+	}
+}
+
+country_event = {	#疲惫之人（4）
+	id = SFR.253
+	title = SFR.253.t
+	desc = SFR.253.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.253.a
+		country_event = {
+			id = SFR.254
+			days = 7
+		}
+	}
+}
+
+country_event = {	#后来者（1）
+	id = SFR.254
+	title = SFR.254.t
+	desc = SFR.254.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.254.a
+		country_event = SFR.255
+	}
+}
+
+country_event = {	#后来者（2）
+	id = SFR.255
+	title = SFR.255.t
+	desc = SFR.255.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.255.a
+	}
+}
+
+country_event = {	#后来者（3）
+	id = SFR.256
+	title = SFR.256.t
+	desc = SFR.256.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.256.a
+		custom_effect_tooltip = SFR.256.a.tt
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { SFR_left_right_influence > -1 } }
+				country_event = {
+					id = SFR.257
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = SFR.258
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#后来者（4）
+	id = SFR.257
+	title = SFR.257.t
+	desc = SFR.257.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.257.a
 		add_political_power = 100
 		add_stability = 0.1
 		add_war_support = 0.1
@@ -2231,9 +2435,18 @@ country_event = {	#大会闭幕！
 		hidden_effect = { SPC_party_clear_revolutionary_communism = yes }
 		set_politics = { ruling_party = revolutionary_communism }
 	}
+}
+
+country_event = {	#后来者（4）
+	id = SFR.258
+	title = SFR.258.t
+	desc = SFR.258.d
+	#picture = 
+	
+	is_triggered_only = yes
 
 	option = {
-		name = SFR.250.b
+		name = SFR.258.a
 		add_political_power = 100
 		add_stability = 0.1
 		add_war_support = 0.1
@@ -2940,15 +3153,7 @@ country_event = {	#又一次会议
 	
 	option = {
 		name = SFR.352.a
-		custom_effect_tooltip = SFR.352.a.tt
-		add_stability = -0.1
-		add_political_power = -50
-		set_variable = { SFR_pol_reform_left_anger = 1 }
-		set_variable = { SFR_pol_reform_right_anger = 1 }
-		country_event = {
-			id = SFR.380
-			days = 7
-		}
+		country_event = SFR.357
 	}
 }
 
@@ -3013,20 +3218,11 @@ country_event = {	#杀鸡儆猴
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.357
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.355.a
-		add_stability = -0.1
-		add_political_power = 100
+		add_stability = -0.05
+		add_political_power = -50
 		add_to_variable = {
 			var = living_standard_development_mod
 			value = -1
@@ -3046,15 +3242,6 @@ country_event = {	#下地干活
 	#picture = 
 	
 	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.357
-				days = 7
-			}
-		}
-	}
 
 	option = {
 		name = SFR.356.a
@@ -3062,8 +3249,8 @@ country_event = {	#下地干活
 		SPC_agricultural_development_amount_up_1 = yes
 		add_to_variable = {
 			var = agricultural_development_mod
-			value = 1
-			tooltip = agricultural_development_mod_tt_up_1
+			value = -1
+			tooltip = agricultural_development_mod_tt_down_1
 		}
 		add_to_variable = {
 			var = industrial_development_mod
@@ -3075,19 +3262,27 @@ country_event = {	#下地干活
 	}
 }
 
-country_event = {	#滋生的不满
+country_event = {	#千百万人之命运...
 	id = SFR.357
 	title = SFR.357.t
 	desc = SFR.357.d
 	#picture = 
 	
 	is_triggered_only = yes
-	
+
 	option = {
 		name = SFR.357.a
+		custom_effect_tooltip = SFR.357.a.tt
 		add_stability = -0.1
-		add_to_variable = { SFR_pol_reform_right_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
+		add_political_power = -50
+		set_variable = { SFR_pol_reform_left_anger = 1 }
+		set_variable = { SFR_pol_reform_right_anger = 1 }
+		#hidden_effect = {
+		#	country_event = {
+		#		id = SFR.380
+		#		days = 7
+		#	}	
+		#}
 	}
 }
 
@@ -3128,15 +3323,6 @@ country_event = {	#闲的可以
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.361
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.359.a
@@ -3158,19 +3344,11 @@ country_event = {	#照顾后事
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.361
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.360.a
-		add_stability = 0.1
+		add_stability = 0.05
+		add_political_power = 50
 		add_to_variable = {
 			var = research_development_mod
 			value = -2
@@ -3185,22 +3363,6 @@ country_event = {	#照顾后事
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 		add_to_variable = { SFR_pol_reform_right_anger = -1 }
 		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_1
-	}
-}
-
-country_event = {	#滋生的不安
-	id = SFR.361
-	title = SFR.361.t
-	desc = SFR.361.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.361.a
-		add_political_power = -100
-		add_to_variable = { SFR_pol_reform_left_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 	}
 }
 
@@ -3267,15 +3429,6 @@ country_event = {	#选择性监督
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.366
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.364.a
@@ -3297,15 +3450,6 @@ country_event = {	#选择性发声
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.366
-				days = 7
-			}
-		}
-	}
-	
 	option = {
 		name = SFR.365.a
 		add_stability = -0.05
@@ -3313,22 +3457,6 @@ country_event = {	#选择性发声
 			ideology = revolutionary_communism
 			popularity = 0.1
 		}
-		add_to_variable = { SFR_pol_reform_right_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
-	}
-}
-
-country_event = {	#谁来发声？
-	id = SFR.366
-	title = SFR.366.t
-	desc = SFR.366.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.366.a
-		SPC_living_standard_development_amount_down_2 = yes
 		add_to_variable = { SFR_pol_reform_right_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
 	}
@@ -3384,10 +3512,6 @@ country_event = {	#收紧栓绳
 			ideology = revolutionary_communism
 			popularity = 0.1
 		}
-		#add_power_balance_value = {
-		#	id = SFR_commi_bop
-		#	value = -0.1
-		#}
 		add_to_variable = { SFR_pol_reform_left_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 		add_to_variable = { SFR_pol_reform_right_anger = -1 }
@@ -3410,30 +3534,6 @@ country_event = {	#互相报告
 		add_popularity = {
 			ideology = revolutionary_communism
 			popularity = 0.05
-		}
-		#add_power_balance_value = {
-		#	id = SFR_commi_bop
-		#	value = 0.1
-		#}
-		add_to_variable = { SFR_pol_reform_left_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
-	}
-}
-
-country_event = {	#新的担忧
-	id = SFR.370
-	title = SFR.370.t
-	desc = SFR.370.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.370.a
-		add_to_variable = {
-			var = living_standard_development_mod
-			value = -1
-			tooltip = living_standard_development_mod_tt_down_1
 		}
 		add_to_variable = { SFR_pol_reform_left_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
@@ -3505,15 +3605,6 @@ country_event = {	#抓捕
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.375
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.373.a
@@ -3537,15 +3628,6 @@ country_event = {	#借机清算
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.375
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.374.a
@@ -3559,22 +3641,6 @@ country_event = {	#借机清算
 		#	id = SFR_commi_bop
 		#	value = -0.1
 		#}
-		add_to_variable = { SFR_pol_reform_right_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
-	}
-}
-
-country_event = {	#越过雷池
-	id = SFR.375
-	title = SFR.375.t
-	desc = SFR.375.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.375.a
-		add_stability = -0.05
 		add_to_variable = { SFR_pol_reform_right_anger = 1 }
 		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_2
 	}
@@ -3615,15 +3681,6 @@ country_event = {	#威胁
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.379
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.377.a
@@ -3642,15 +3699,6 @@ country_event = {	#招安
 	#picture = 
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = SFR.379
-				days = 7
-			}
-		}
-	}
 	
 	option = {
 		name = SFR.378.a
@@ -3665,22 +3713,6 @@ country_event = {	#招安
 		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 		add_to_variable = { SFR_pol_reform_right_anger = -1 }
 		custom_effect_tooltip = SFR_pol_reform_right_anger_tt_1
-	}
-}
-
-country_event = {	#未能根除的问题
-	id = SFR.379
-	title = SFR.379.t
-	desc = SFR.379.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.379.a
-		add_political_power = -50
-		add_to_variable = { SFR_pol_reform_left_anger = 1 }
-		custom_effect_tooltip = SFR_pol_reform_left_anger_tt_2
 	}
 }
 
@@ -3721,22 +3753,20 @@ country_event = {	#最后一次会议
 	#picture = 
 	
 	is_triggered_only = yes
-	
-	option = {
-		name = SFR.382.a
-		custom_effect_tooltip = SFR.382.a.tt
+
+	immediate = {
 		hidden_effect = {
 			set_temp_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_left_anger }
 			subtract_from_variable = { SFR_pol_reform_anger_diff = SFR_pol_reform_right_anger }
 			if = {
-				limit = { check_variable = { SFR_pol_reform_anger_diff > 2 } }
+				limit = { check_variable = { SFR_pol_reform_anger_diff > 1 } }
 				country_event = {
 					id = SFR.384
 					days = 1
 				}
 			}
 			else_if = {
-				limit = { check_variable = { SFR_pol_reform_anger_diff < -2 } }
+				limit = { check_variable = { SFR_pol_reform_anger_diff < -1 } }
 				country_event = {
 					id = SFR.383
 					days = 1
@@ -3750,6 +3780,11 @@ country_event = {	#最后一次会议
 			}
 		}
 	}
+	
+	option = {
+		name = SFR.382.a
+		custom_effect_tooltip = SFR.382.a.tt
+	}
 }
 
 country_event = {	#党内左翼的怒火
@@ -3759,13 +3794,25 @@ country_event = {	#党内左翼的怒火
 	#picture = 
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_ideas = SFR_anti_rightist_movement
+			country_event = {
+				id = SFR.386
+				days = 1
+			}
+		}
+	}
 	
 	option = {
 		name = SFR.383.a
-		add_ideas = SFR_anti_rightist_movement
-		country_event = {
-			id = SFR.386
-			days = 1
+		effect_tooltip = {
+			add_ideas = SFR_anti_rightist_movement
+			country_event = {
+				id = SFR.386
+				days = 1
+			}
 		}
 	}
 }
@@ -3777,13 +3824,25 @@ country_event = {	#党内右翼的怒火
 	#picture = 
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_ideas = SFR_anti_counter_revolution
+			country_event = {
+				id = SFR.387
+				days = 1
+			}
+		}
+	}
 	
 	option = {
 		name = SFR.384.a
-		add_ideas = SFR_anti_counter_revolution
-		country_event = {
-			id = SFR.387
-			days = 1
+		effect_tooltip = {
+			add_ideas = SFR_anti_counter_revolution
+			country_event = {
+				id = SFR.387
+				days = 1
+			}
 		}
 	}
 }
@@ -3811,6 +3870,12 @@ country_event = {	#党内左翼的威胁
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SFR_national_assembly_proposal_ban
+		}
+	}
+
 	option = {
 		name = SFR.386.a
 		effect_tooltip = { unlock_national_focus = SFR_all_power_to_workers_and_peasants }
@@ -3818,7 +3883,7 @@ country_event = {	#党内左翼的威胁
 			localization_key = ban_certain_focus_from_selecting
 			FOCUS_NAME = SFR_national_assembly_proposal
 		}
-		set_country_flag = SFR_all_power_to_workers_and_peasants_ban
+		#set_country_flag = SFR_national_assembly_proposal_ban
 	}
 }
 
@@ -3829,6 +3894,12 @@ country_event = {	#党内右翼的威胁
 	#picture = 
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SFR_all_power_to_workers_and_peasants_ban
+		}
+	}
 	
 	option = {
 		name = SFR.387.a
@@ -3837,21 +3908,7 @@ country_event = {	#党内右翼的威胁
 			localization_key = ban_certain_focus_from_selecting
 			FOCUS_NAME = SFR_all_power_to_workers_and_peasants
 		}
-		set_country_flag = SFR_national_assembly_proposal_ban
-	}
-}
-
-country_event = {	#鸡飞狗跳
-	id = SFR.388
-	title = SFR.388.t
-	desc = SFR.388.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.388.a
-		set_country_flag = SFR_temp_ban_pol_reform
+		#set_country_flag = SFR_all_power_to_workers_and_peasants_ban
 	}
 }
 
@@ -3907,19 +3964,24 @@ country_event = {	#革命的新一阶段
 	
 	option = {
 		name = SFR.390.a
-	}
-}
-
-country_event = {	#国民议会
-	id = SFR.391
-	title = SFR.391.t
-	desc = SFR.391.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = SFR.391.a
+		add_stability = 0.1
+		add_political_power = 100
+		add_popularity = {
+			ideology = pioneer_communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = revolutionary_communism
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = worldunion_democrat
+			popularity = 0.05
+		}
 	}
 }
 
@@ -4685,7 +4747,7 @@ country_event = {	#全国工会问题
 		add_political_power = 100
 		add_to_variable = {
 			var = industrial_development_mod
-			value = 2
+			value = 4
 			tooltip = industrial_development_mod_tt_up_2
 		}
 		add_popularity = {
@@ -4706,12 +4768,12 @@ country_event = {	#全国工会问题
 		add_political_power = 50
 		add_to_variable = {
 			var = industrial_development_mod
-			value = 1
+			value = 2
 			tooltip = industrial_development_mod_tt_up_1
 		}
 		add_to_variable = {
 			var = living_standard_development_mod
-			value = 1
+			value = 2
 			tooltip = living_standard_development_mod_tt_up_1
 		}
 		add_popularity = {
@@ -4732,7 +4794,7 @@ country_event = {	#全国工会问题
 		add_political_power = -50
 		add_to_variable = {
 			var = living_standard_development_mod
-			value = 2
+			value = 4
 			tooltip = living_standard_development_mod_tt_up_2
 		}
 		add_popularity = {
@@ -5841,7 +5903,14 @@ country_event = {	#参与的人选
 country_event = {	#权力与平衡
 	id = SFR.2001
 	title = SFR.2001.t
-	desc = SFR.2001.d
+	desc = {
+		text = SFR.2001.d.a
+		trigger = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
+	}
+	desc = {
+		text = SFR.2001.d.b
+		trigger = { has_completed_focus = SFR_national_assembly_proposal }
+	}
 	#picture = 
 	
 	is_triggered_only = yes

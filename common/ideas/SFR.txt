@@ -943,7 +943,7 @@ ideas = {
 
 		#特别补助金
 		SFR_special_fund = {
-			name = generic_goods_red_bonus
+			picture = generic_goods_red_bonus
 			allowed = { always = yes }
 			removal_cost = -1
 
@@ -4285,13 +4285,12 @@ ideas = {
 			visible = { tag = SFR has_completed_focus = SFR_strict_military_standards }
 			available = { has_completed_focus = SFR_strict_military_standards }
 			modifier = {
-				stability_factor = 0.1
-				war_stability_factor = 0.1
-				political_power_factor = 0.1
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+				war_stability_factor = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 				mobilization_speed = 0.1
-				conscription = 0.001
+				conscription = 0.01
 			}
 			ai_will_do = {
 				factor = 999
