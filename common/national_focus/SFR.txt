@@ -3409,6 +3409,7 @@ focus_tree = {
 
 		available = {
 			is_neighbor_of = FFH
+			NOT = { has_country_flag = SFR_integrate_free_alliance_flag }
 		}
 
 		bypass = {

@@ -327,7 +327,10 @@ CBL_civil_war_begin_effect = {
 					id = CBL.1
 					days = 90
 				}
-				news_event = CBLNews.2
+				news_event = {
+					id = CBLNews.2
+					days = 3
+				}
 			}
 		}
 	}
@@ -420,9 +423,7 @@ CBL_civilwar_war_start_effect = {
 				target = CBI
 				type = annex_everything
 			}
-			set_major = yes
 		}
-		set_major = yes
 	}
 	CLA = { 
 		create_faction = CBL_civilwar_fac_name_2
@@ -463,9 +464,7 @@ CBL_civilwar_war_start_effect = {
 				target = CBI
 				type = annex_everything
 			}
-			set_major = yes
 		}
-		set_major = yes
 	}
 	RCC = { 
 		create_faction = CBL_civilwar_fac_name_3
@@ -510,9 +509,7 @@ CBL_civilwar_war_start_effect = {
 				target = CBI
 				type = annex_everything
 			}
-			set_major = yes
 		}
-		set_major = yes
 	}
 	CBI = {
 		declare_war_on = {
@@ -526,13 +523,11 @@ CBL_civilwar_end_effect = {
 	#内战结束新闻#
 	if = {
 		limit = { FROM = { tag = MNT } }
-		news_event = CBLNews.3
-		CBI = { every_owned_state = { add_core_of = MNT } }
+		MNT = { every_owned_state = { add_core_of = MNT } news_event = CBLNews.3 }
 	}
 	if = {
 		limit = { FROM = { tag = CBI } }
-		news_event = CBLNews.4
-		CBI = { every_owned_state = { add_core_of = VGI } }
+		CBI = { every_owned_state = { add_core_of = CBI } news_event = CBLNews.4 }
 	}
 
 	#中巴解放同盟胜利#
@@ -576,6 +571,9 @@ CBL_civilwar_end_effect = {
 	if = {
 		limit = { FROM = { OR = { tag = OPH tag = DMT tag = AYL } } }
 		#OPH#
+		211 = { transfer_state_to = OPH }
+		212 = { transfer_state_to = OPH }
+		282 = { transfer_state_to = OPH }
 		209 = { transfer_state_to = OPH }
 		153 = { transfer_state_to = OPH }
 		208 = { transfer_state_to = OPH }
@@ -583,6 +581,8 @@ CBL_civilwar_end_effect = {
 		204 = { transfer_state_to = OPH }
 
 		#DMT#
+		273 = { transfer_state_to = DMT }
+		207 = { transfer_state_to = DMT }
 		210 = { transfer_state_to = DMT }
 		203 = { transfer_state_to = DMT }
 		202 = { transfer_state_to = DMT }
@@ -594,6 +594,9 @@ CBL_civilwar_end_effect = {
 		132 = { transfer_state_to = DMT }
 
 		#AYL#
+		192 = { transfer_state_to = AYL }
+		191 = { transfer_state_to = AYL }
+		177 = { transfer_state_to = AYL }
 		89 = { transfer_state_to = AYL }
 		87 = { transfer_state_to = AYL }
 		198 = { transfer_state_to = AYL }
@@ -612,6 +615,9 @@ CBL_civilwar_end_effect = {
 			FROM = { OR = { tag = FWJ tag = RCC tag = FEJ } }
 		}
 		#FWJ#
+		209 = { transfer_state_to = FWJ }
+		153 = { transfer_state_to = FWJ }
+		208 = { transfer_state_to = FWJ }
 		211 = { transfer_state_to = FWJ }
 		212 = { transfer_state_to = FWJ }
 		282 = { transfer_state_to = FWJ }
@@ -619,6 +625,9 @@ CBL_civilwar_end_effect = {
 		207 = { transfer_state_to = FWJ }
 
 		#RCC#
+		210 = { transfer_state_to = RCC }
+		213 = { transfer_state_to = RCC }
+		204 = { transfer_state_to = RCC }
 		203 = { transfer_state_to = RCC }
 		201 = { transfer_state_to = RCC }
 		202 = { transfer_state_to = RCC }
@@ -629,6 +638,9 @@ CBL_civilwar_end_effect = {
 		132 = { transfer_state_to = RCC }
 
 		#FEJ#
+		194 = { transfer_state_to = FEJ }
+		195 = { transfer_state_to = FEJ }
+		190 = { transfer_state_to = FEJ }
 		197 = { transfer_state_to = FEJ }
 		196 = { transfer_state_to = FEJ }
 		192 = { transfer_state_to = FEJ }
@@ -644,6 +656,10 @@ CBL_civilwar_end_effect = {
 	if = {
 		limit = { FROM = { OR = { tag = CLA tag = VGI } } }
 		#CLA#
+		193 = { transfer_state_to = CLA }
+		198 = { transfer_state_to = CLA }
+		87 = { transfer_state_to = CLA }
+		89 = { transfer_state_to = CLA }
 		177 = { transfer_state_to = CLA }
 		191 = { transfer_state_to = CLA }
 		192 = { transfer_state_to = CLA }
@@ -659,6 +675,7 @@ CBL_civilwar_end_effect = {
 		214 = { transfer_state_to = CLA }
 
 		#VGI#
+		202 = { transfer_state_to = VGI }
 		201 = { transfer_state_to = VGI }
 		203 = { transfer_state_to = VGI }
 		204 = { transfer_state_to = VGI }

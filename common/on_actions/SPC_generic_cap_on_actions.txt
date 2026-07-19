@@ -48,21 +48,22 @@ on_actions = {
 				set_global_flag = winning_country_multiple
 			}
 
+			###传火###
+			if = {
+				limit = { ROOT = { is_faction_leader = yes } }
+				ROOT = {
+					random_allied_country = {
+						limit = { NOT = { is_subject_of = ROOT } }
+						set_faction_leader = yes
+					}
+				}
+			}
+
 			if = {
 				limit = {
 					OR = {
 						ROOT = { is_in_faction = no }
-						ROOT = {
-							all_allied_country = {
-								if = {
-									limit = {
-										has_war_with = FROM
-										has_country_flag = COUNTRY_PREWAR_MAJOR_FLAG
-									}
-									has_capitulated = yes
-								}
-							}
-						}
+						ROOT = { is_faction_leader = yes }
 					}
 				}
 				set_global_flag = war_won
@@ -440,8 +441,11 @@ on_actions = {
 							NOT = {
 								any_country = {
 									SPC_generic_region_trigger_200 = yes
-									NOT = { tag = FROM }
-									NOT = { is_in_faction_with = FROM }
+									NOT = {
+										FROM = { tag = PREV }
+										FROM = { is_in_faction_with = PREV }
+										ROOT = { tag = PREV }
+									}
 									exists = yes
 								}
 							}

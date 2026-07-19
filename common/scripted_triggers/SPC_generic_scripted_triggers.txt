@@ -235,7 +235,21 @@ SPC_generic_region_trigger_150 = {	#七河任意政权
 SPC_generic_region_trigger_200 = {	#中巴任意政权
 	OR = {
 		#中巴联盟
-		tag = CBL tag = OPH tag = FWJ tag = RCC tag = MNT tag = CBI tag = FEJ tag = VGI tag = AYL tag = CLA
+		tag = CBL
+
+		tag = OPH
+		tag = AYL
+
+		tag = FWJ
+		tag = RCC
+		tag = FEJ
+		
+		tag = MNT
+		
+		tag = CBI
+		
+		tag = VGI
+		tag = CLA
 	}
 }
 

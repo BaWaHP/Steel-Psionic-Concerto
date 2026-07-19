@@ -2161,7 +2161,6 @@ country_event = {	#恶徒的命运（2）
 
 	option = {
 		name = SFR.228.b
-		add_manpower = -4
 		add_political_power = 50
 		country_event = {
 			id = SFR.227
@@ -6766,9 +6765,11 @@ news_event = {
 				tag = NFH
 				tag = SFR
 			}
-			has_government = pioneer_communism
-			has_government = revolutionary_communism
-			has_government = worldunion_socialist
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
 		}
 	}
 
@@ -6813,9 +6814,11 @@ news_event = {
 	option = {
 		name = SFRNews.7.a
 		trigger = {
-			has_government = pioneer_communism
-			has_government = revolutionary_communism
-			has_government = worldunion_socialist
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
 		}
 	}
 
@@ -6852,9 +6855,11 @@ news_event = {
 	option = {
 		name = SFRNews.8.a
 		trigger = {
-			has_government = pioneer_communism
-			has_government = revolutionary_communism
-			has_government = worldunion_socialist
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
 		}
 	}
 

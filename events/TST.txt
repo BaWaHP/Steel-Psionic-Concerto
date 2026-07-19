@@ -94,19 +94,18 @@ country_event = {
 	
 	option = {
 		name = TST.1.a
-		every_country = {
+		if = {
 			limit = {
-				OR = {
-					SPC_generic_region_trigger_1 = yes
-					SPC_generic_region_trigger_2 = yes
-					SPC_generic_region_trigger_3 = yes
+				NOT = {
+					any_country = {
+						SPC_generic_region_trigger_200 = yes
+						NOT = { tag = FROM is_in_faction_with = FROM tag = ROOT }
+						exists = yes
+					}
 				}
 			}
-			PREV = {
-				annex_country = {
-					target = PREV
-				}
-			}
+			set_global_flag = SPC_region_unified_global_11
+			CBL_civilwar_end_effect = yes
 		}
 	}
 }

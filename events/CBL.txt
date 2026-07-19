@@ -36,7 +36,8 @@ country_event = {
 	id = CBL.2		#中巴解放同盟和平统一
 	is_triggered_only = yes
 
-	immediate = {
+	option = {
+		name = CBL.2.a
 		random_list = {
 			50 = {
 				CLA = {
@@ -66,7 +67,8 @@ country_event = {
 	id = CBL.3		#神圣同盟和平统一
 	is_triggered_only = yes
 
-	immediate = {
+	option = {
+		name = CBL.3.a
 		random_list = {
 			1 = {
 				DMT = {
@@ -119,6 +121,13 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		FEJ = { dismantle_faction = yes }
+		RCC = { dismantle_faction = yes }
+		FWJ = { dismantle_faction = yes }
+	}
+
+	option = {
+		name = CBL.4.a
 		random_list = {
 			50 = {
 				FEJ = {
@@ -138,7 +147,6 @@ country_event = {
 				set_global_flag = CBL_federal_second_civil_war_global_flag
 				clr_global_flag = SPC_region_unified_global_11
 				RCC = {
-					dismantle_faction = yes
 					declare_war_on = {
 						target = FWJ
 						type = annex_everything

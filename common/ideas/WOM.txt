@@ -96,7 +96,7 @@ ideas = {
 			picture = generic_economic_crisis
 			allowed = { original_tag = WOM }
 			removal_cost = -1
-			on_add = { WOM_black_frost_crisis_effect = yes }
+
 			modifier = {
 				consumer_goods_factor = 0.4
 				research_speed_factor = -0.2
@@ -114,6 +114,7 @@ ideas = {
 			picture = MEX_revolutionary_army
 			allowed = { original_tag = WOM }
 			removal_cost = -1
+
 			modifier = {
 				stability_factor = -0.3
 				consumer_goods_factor = 0.2
