@@ -4334,11 +4334,7 @@ SFR_propagate_revolution_decisions = {
 	SFR_form_unified_union = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = { tag = SFR }
-		visible = {
-			SPC_generic_region_trigger_1_control = yes
-			SPC_generic_region_trigger_2_control = yes
-			SPC_generic_region_trigger_3_control = yes
-		}
+		visible = { has_completed_focus = SFR_final_revolutionary_bastion }
 
 		available = {
 			SPC_generic_region_trigger_1_control = yes

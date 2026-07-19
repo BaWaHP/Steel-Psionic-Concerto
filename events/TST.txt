@@ -94,8 +94,20 @@ country_event = {
 	
 	option = {
 		name = TST.1.a
-		complete_national_focus = SFR_all_power_to_workers_and_peasants
-		complete_national_focus = SFR_national_assembly_proposal
+		every_country = {
+			limit = {
+				OR = {
+					SPC_generic_region_trigger_1 = yes
+					SPC_generic_region_trigger_2 = yes
+					SPC_generic_region_trigger_3 = yes
+				}
+			}
+			PREV = {
+				annex_country = {
+					target = PREV
+				}
+			}
+		}
 	}
 }
 

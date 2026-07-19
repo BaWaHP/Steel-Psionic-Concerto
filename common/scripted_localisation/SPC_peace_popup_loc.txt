@@ -186,6 +186,84 @@ defined_text = {
 		localization_key = "GET_peace_popup_speech_txt_WDR"
 	}
 
+	###############
+	###中巴斯蒂亚###
+	###############
+
+	#############
+	###中巴联盟###
+	#############
+
+	text = {
+		trigger = { 
+			event_target:losing_country = { original_tag = VGI } 
+		}
+		localization_key = "GET_peace_popup_speech_txt_VGI"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = CLA }
+		}
+		localization_key = "GET_peace_popup_speech_txt_CLA"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = CBI }
+		}
+		localization_key = "GET_peace_popup_speech_txt_CBI"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = MNT }
+		}
+		localization_key = "GET_peace_popup_speech_txt_MNT"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = FWJ }
+		}
+		localization_key = "GET_peace_popup_speech_txt_FWJ"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = RCC }
+		}
+		localization_key = "GET_peace_popup_speech_txt_RCC"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = FEJ }
+		}
+		localization_key = "GET_peace_popup_speech_txt_FEJ"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = DMT }
+		}
+		localization_key = "GET_peace_popup_speech_txt_DMT"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = OPH }
+		}
+		localization_key = "GET_peace_popup_speech_txt_OPH"
+	}
+
+	text = {
+		trigger = {
+			event_target:losing_country = { original_tag = AYL }
+		}
+		localization_key = "GET_peace_popup_speech_txt_AYL"
+	}
+
 	text = {
 		localization_key = "SPC_peace_popup_speech_txt_generic"
 	}

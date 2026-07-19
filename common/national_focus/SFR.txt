@@ -448,6 +448,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = SFR.21
+			SFR_front_unity_up_2 = yes
 			custom_effect_tooltip = SFR_unify_the_left_tt
 		}
 	}
@@ -474,6 +475,7 @@ focus_tree = {
 
 		completion_reward = {
 			SFR_front_unity_up_2 = yes
+			add_political_power = 50
 			add_popularity = {
 				ideology = revolutionary_communism
 				popularity = 0.05
@@ -601,6 +603,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = SFR.26
+			SFR_front_unity_up_2 = yes
 			custom_effect_tooltip = SFR_reinforce_leadership_tt
 		}
 	}
@@ -627,6 +630,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+			add_political_power = 20
 			SFR_front_unity_up_3 = yes
 			country_event = SFR.27
 		}
@@ -739,6 +743,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = SFR.31
+			SFR_front_unity_up_2 = yes
 			custom_effect_tooltip = SFR_re_enable_front_parliament_tt
 		}
 	}
@@ -764,6 +769,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
+			add_political_power = 50
 			SFR_front_unity_up_2 = yes
 			add_popularity = {
 				ideology = worldunion_socialist
@@ -7850,6 +7856,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = SFR_propagate_revolution_decisions
 			unlock_decision_tooltip = SFR_expand_intervention_forces
 			unlock_decision_tooltip = SFR_war_propaganda
+			unlock_decision_tooltip = SFR_form_unified_union
 		}
 	}
 

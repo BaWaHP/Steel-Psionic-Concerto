@@ -327,6 +327,7 @@ CBL_civil_war_begin_effect = {
 					id = CBL.1
 					days = 90
 				}
+				news_event = CBLNews.2
 			}
 		}
 	}
@@ -518,5 +519,168 @@ CBL_civilwar_war_start_effect = {
 			target = MNT
 			type = annex_everything
 		}
+	}
+}
+
+CBL_civilwar_end_effect = {
+	#内战结束新闻#
+	if = {
+		limit = { FROM = { tag = MNT } }
+		news_event = CBLNews.3
+		CBI = { every_owned_state = { add_core_of = MNT } }
+	}
+	if = {
+		limit = { FROM = { tag = CBI } }
+		news_event = CBLNews.4
+		CBI = { every_owned_state = { add_core_of = VGI } }
+	}
+
+	#中巴解放同盟胜利#
+	if = {
+		limit = { FROM = { OR = { tag = CLA tag = VGI } } }
+		FROM = {
+			country_event = {
+				id = CBL.2
+				days = 30
+			}
+		}
+	}
+
+	#神圣同盟胜利#
+	if = {
+		limit = { FROM = { OR = { tag = DMT tag = OPH tag = AYL } } }
+		FROM = {
+			country_event = {
+				id = CBL.3
+				days = 30
+			}
+		}
+	}
+
+	#联邦防卫组织胜利#
+	if = {
+		limit = {
+			NOT = { has_global_flag = CBL_federal_second_civil_war_global_flag }
+			FROM = { OR = { tag = FWJ tag = RCC tag = FEJ } }
+		}
+		news_event = CBLNews.10
+		FROM = {
+			country_event = {
+				id = CBL.4
+				days = 30
+			}
+		}
+	}
+
+	#神圣同盟胜利#
+	if = {
+		limit = { FROM = { OR = { tag = OPH tag = DMT tag = AYL } } }
+		#OPH#
+		209 = { transfer_state_to = OPH }
+		153 = { transfer_state_to = OPH }
+		208 = { transfer_state_to = OPH }
+		213 = { transfer_state_to = OPH }
+		204 = { transfer_state_to = OPH }
+
+		#DMT#
+		210 = { transfer_state_to = DMT }
+		203 = { transfer_state_to = DMT }
+		202 = { transfer_state_to = DMT }
+		201 = { transfer_state_to = DMT }
+		214 = { transfer_state_to = DMT }
+		205 = { transfer_state_to = DMT }
+		200 = { transfer_state_to = DMT }
+		199 = { transfer_state_to = DMT }
+		132 = { transfer_state_to = DMT }
+
+		#AYL#
+		89 = { transfer_state_to = AYL }
+		87 = { transfer_state_to = AYL }
+		198 = { transfer_state_to = AYL }
+		193 = { transfer_state_to = AYL }
+		194 = { transfer_state_to = AYL }
+		195 = { transfer_state_to = AYL }
+		190 = { transfer_state_to = AYL }
+		196 = { transfer_state_to = AYL }
+		197 = { transfer_state_to = AYL }
+	}
+
+	#联邦防卫组织胜利#
+	if = {
+		limit = {
+			NOT = { has_global_flag = CBL_federal_second_civil_war_global_flag }
+			FROM = { OR = { tag = FWJ tag = RCC tag = FEJ } }
+		}
+		#FWJ#
+		211 = { transfer_state_to = FWJ }
+		212 = { transfer_state_to = FWJ }
+		282 = { transfer_state_to = FWJ }
+		273 = { transfer_state_to = FWJ }
+		207 = { transfer_state_to = FWJ }
+
+		#RCC#
+		203 = { transfer_state_to = RCC }
+		201 = { transfer_state_to = RCC }
+		202 = { transfer_state_to = RCC }
+		205 = { transfer_state_to = RCC }
+		214 = { transfer_state_to = RCC }
+		200 = { transfer_state_to = RCC }
+		199 = { transfer_state_to = RCC }
+		132 = { transfer_state_to = RCC }
+
+		#FEJ#
+		197 = { transfer_state_to = FEJ }
+		196 = { transfer_state_to = FEJ }
+		192 = { transfer_state_to = FEJ }
+		191 = { transfer_state_to = FEJ }
+		177 = { transfer_state_to = FEJ }
+		193 = { transfer_state_to = FEJ }
+		198 = { transfer_state_to = FEJ }
+		89 = { transfer_state_to = FEJ }
+		87 = { transfer_state_to = FEJ }
+	}
+
+	#中巴解放同盟胜利#
+	if = {
+		limit = { FROM = { OR = { tag = CLA tag = VGI } } }
+		#CLA#
+		177 = { transfer_state_to = CLA }
+		191 = { transfer_state_to = CLA }
+		192 = { transfer_state_to = CLA }
+		194 = { transfer_state_to = CLA }
+		195 = { transfer_state_to = CLA }
+		190 = { transfer_state_to = CLA }
+		196 = { transfer_state_to = CLA }
+		197 = { transfer_state_to = CLA }
+		132 = { transfer_state_to = CLA }
+		199 = { transfer_state_to = CLA }
+		200 = { transfer_state_to = CLA }
+		205 = { transfer_state_to = CLA }
+		214 = { transfer_state_to = CLA }
+
+		#VGI#
+		201 = { transfer_state_to = VGI }
+		203 = { transfer_state_to = VGI }
+		204 = { transfer_state_to = VGI }
+		210 = { transfer_state_to = VGI }
+		213 = { transfer_state_to = VGI }
+		207 = { transfer_state_to = VGI }
+		273 = { transfer_state_to = VGI }
+		153 = { transfer_state_to = VGI }
+		208 = { transfer_state_to = VGI }
+		209 = { transfer_state_to = VGI }
+		211 = { transfer_state_to = VGI }
+		212 = { transfer_state_to = VGI }
+		282 = { transfer_state_to = VGI }
+	}
+
+	#第二次中巴内战结束后只恢复地区统一状态，不重复首次结算#
+	if = {
+		limit = {
+			has_global_flag = CBL_federal_second_civil_war_global_flag
+			FROM = { OR = { tag = FWJ tag = RCC tag = FEJ } }
+		}
+		clr_global_flag = CBL_federal_second_civil_war_global_flag
+		set_global_flag = SPC_region_unified_global_11
 	}
 }

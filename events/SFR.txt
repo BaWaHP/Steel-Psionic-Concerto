@@ -673,16 +673,19 @@ country_event = {	#支持革命阵线
 	
 	option = {
 		name = SFR.20.a
+		SFR_front_unity_up_2 = yes
 		complete_national_focus = SFR_unify_the_left
 	}
 
 	option = {
 		name = SFR.20.b
+		SFR_front_unity_up_3 = yes
 		complete_national_focus = SFR_reinforce_leadership
 	}
 
 	option = {
 		name = SFR.20.c
+		SFR_front_unity_up_2 = yes
 		complete_national_focus = SFR_re_enable_front_parliament
 	}
 }
@@ -723,6 +726,7 @@ country_event = {	#会面
 			id = SFR_opposition_bop
 			value = 0.02
 		}
+		SFR_front_unity_up_1 = yes
 	}
 }
 
@@ -737,6 +741,7 @@ country_event = {	#我们的根基所在
 	option = {
 		name = SFR.22.a
 		add_stability = 0.02
+		SFR_front_unity_up_1 = yes
 		SPC_agricultural_development_amount_up_2 = yes
 		SPC_living_standard_development_amount_up_2 = yes
 	}
@@ -762,7 +767,7 @@ country_event = {	#一顿饱饭
 			id = SFR_opposition_bop
 			value = -0.03
 		}
-		SFR_front_unity_up_1 = yes
+		SFR_front_unity_up_2 = yes
 	}
 }
 
@@ -834,7 +839,7 @@ country_event = {	#关于境外与本土派系的辩论
 		name = SFR.25.b
 		add_stability = 0.05
 		add_political_power = 50
-		SFR_front_unity_down_1 = yes
+		SFR_front_unity_up_1 = yes
 	}
 }
 
@@ -849,7 +854,7 @@ country_event = {	#大局为重
 	option = {
 		name = SFR.26.a
 		add_political_power = -100
-		SFR_front_unity_up_1 = yes
+		SFR_front_unity_up_2 = yes
 		add_popularity = {
 			ideology = revolutionary_communism
 			popularity = 0.05
@@ -872,7 +877,7 @@ country_event = {	#会议上的演讲
 	option = {
 		name = SFR.27.a
 		add_political_power = 10
-		SFR_front_unity_up_1 = yes
+		SFR_front_unity_up_2 = yes
 	}
 }
 
@@ -908,6 +913,7 @@ country_event = {	#叛逆的军队
 			idea = SFR_purge_army
 			days = 50
 		}
+		SFR_front_unity_up_1 = yes
 	}
 
 	option = {
@@ -915,6 +921,7 @@ country_event = {	#叛逆的军队
 		add_war_support = 0.05
 		army_experience = 10
 		SPC_military_development_amount_up_1 = yes
+		SFR_front_unity_up_2 = yes
 	}
 }
 
@@ -999,7 +1006,7 @@ country_event = {	#喝茶
 	option = {
 		name = SFR.32.a
 		add_political_power = 10
-		SFR_front_unity_up_1 = yes
+		SFR_front_unity_up_2 = yes
 	}
 }
 
@@ -1371,6 +1378,7 @@ country_event = {	#内战之终...？
 			set_country_flag = SFR_focus_1_3
 		}
 		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = SFR.152.a
 	}
 }
 
@@ -3936,15 +3944,15 @@ country_event = {	#政治局势缓和
 						has_idea = SFR_anti_rightist_movement
 						has_idea = SFR_anti_rightist_movement_2
 						has_idea = SFR_anti_rightist_movement_3
-						has_idea = SFR_anti_rightist_movement_4
+						#has_idea = SFR_anti_rightist_movement_4
 						has_idea = SFR_anti_counter_revolution
 						has_idea = SFR_anti_counter_revolution_2
 						has_idea = SFR_anti_counter_revolution_3
-						has_idea = SFR_anti_counter_revolution_4
+						#has_idea = SFR_anti_counter_revolution_4
 						has_idea = SFR_left_right_unsatisfied
 						has_idea = SFR_left_right_unsatisfied_2
 						has_idea = SFR_left_right_unsatisfied_3
-						has_idea = SFR_left_right_unsatisfied_4
+						#has_idea = SFR_left_right_unsatisfied_4
 					}
 				}
 				country_event = {
@@ -3990,6 +3998,7 @@ country_event = {	#革命的新一阶段
 			ideology = worldunion_democrat
 			popularity = 0.05
 		}
+		remove_power_balance = { id = SFR_opposition_bop }
 		news_event = SFRNews.8
 	}
 }
@@ -6416,6 +6425,10 @@ country_event = {	#新教育体制提案
 			}
 		}
 		SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
+		country_event = {
+			id = SFR.2011
+			days = 1
+		}
 	}
 
 	option = {
@@ -6441,6 +6454,10 @@ country_event = {	#新教育体制提案
 			tooltip = SFR_red_star_over_capital_group_3_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2011
+			days = 1
+		}
 	}
 
 	option = {
@@ -6492,6 +6509,10 @@ country_event = {	#新教育体制提案
 			tooltip = SFR_red_star_over_capital_group_8_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2011
+			days = 1
+		}
 	}
 }
 
@@ -6506,6 +6527,10 @@ country_event = {	#偏远地区考试加分？
 	option = {
 		name = SFR.2011.a
 		SFR_workers_and_peasants_congress_all_mod_2_up_1 = yes
+		country_event = {
+			id = SFR.2012
+			days = 1
+		}
 	}
 
 	option = {
@@ -6531,6 +6556,10 @@ country_event = {	#偏远地区考试加分？
 			tooltip = SFR_red_star_over_capital_group_8_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2012
+			days = 1
+		}
 	}
 
 	option = {
@@ -6566,6 +6595,10 @@ country_event = {	#偏远地区考试加分？
 			tooltip = SFR_red_star_over_capital_group_8_2_tt
 		}
 		SFR_workers_and_peasants_congress_update = yes
+		country_event = {
+			id = SFR.2012
+			days = 1
+		}
 	}
 }
 

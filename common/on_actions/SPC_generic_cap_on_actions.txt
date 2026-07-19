@@ -95,6 +95,7 @@ on_actions = {
 						FROM = { OR = { tag = SFR tag = QTA } }
 						ROOT = { OR = { tag = SFR tag = QTA tag = SFH } }
 					}
+					ROOT = { transfer_navy = { target = FROM } }
 					FROM = {
 						if = { 
 							limit = { 
@@ -107,11 +108,19 @@ on_actions = {
 									limit = { ROOT = { tag = SFH } }
 									QTA = { exists = no }
 								}
-							} 
+							}
 							country_event = SFR.152
 							news_event = SFRNews.1
 						}
 					}
+				}
+				#叛军打叛军#
+				if = {
+					limit = {
+						FROM = { OR = { tag = SFR tag = QTA } }
+						ROOT = { OR = { tag = SFR tag = QTA } }
+					}
+					ROOT = { transfer_navy = { target = FROM } }
 				}
 
 				###南远乡vs西北特别行政区###
@@ -438,6 +447,7 @@ on_actions = {
 							}
 						}
 						set_global_flag = SPC_region_unified_global_11
+						CBL_civilwar_end_effect = yes
 					}
 				}
 

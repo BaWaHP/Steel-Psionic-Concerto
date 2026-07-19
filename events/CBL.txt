@@ -32,6 +32,133 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = CBL.2		#中巴解放同盟和平统一
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				CLA = {
+					annex_country = {
+						target = VGI
+						transfer_troops = yes
+					}
+					news_event = CBLNews.6
+					every_owned_state = { add_core_of = CLA }
+				}
+			}
+			50 = {
+				VGI = {
+					annex_country = {
+						target = CLA
+						transfer_troops = yes
+					}
+					news_event = CBLNews.5
+					every_owned_state = { add_core_of = VGI }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = CBL.3		#神圣同盟和平统一
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = {
+				DMT = {
+					annex_country = {
+						target = OPH
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = AYL
+						transfer_troops = yes
+					}
+					news_event = CBLNews.7
+					every_owned_state = { add_core_of = DMT }
+				}
+			}
+			1 = {
+				OPH = {
+					annex_country = {
+						target = DMT
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = AYL
+						transfer_troops = yes
+					}
+					news_event = CBLNews.8
+					every_owned_state = { add_core_of = OPH }
+				}
+			}
+			1 = {
+				AYL = {
+					annex_country = {
+						target = DMT
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = OPH
+						transfer_troops = yes
+					}
+					news_event = CBLNews.9
+					every_owned_state = { add_core_of = AYL }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = CBL.4		#联邦防卫组织战后结局
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = {
+				FEJ = {
+					annex_country = {
+						target = FWJ
+						transfer_troops = yes
+					}
+					annex_country = {
+						target = RCC
+						transfer_troops = yes
+					}
+					news_event = CBLNews.11
+					every_owned_state = { add_core_of = FEJ }
+				}
+			}
+			50 = {
+				set_global_flag = CBL_federal_second_civil_war_global_flag
+				clr_global_flag = SPC_region_unified_global_11
+				RCC = {
+					dismantle_faction = yes
+					declare_war_on = {
+						target = FWJ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FEJ
+						type = annex_everything
+					}
+				}
+				FWJ = {
+					declare_war_on = {
+						target = FEJ
+						type = annex_everything
+					}
+				}
+				news_event = CBLNews.12
+			}
+		}
+	}
+}
 
 add_namespace = CBLNews
 
@@ -75,6 +202,434 @@ news_event = {
 				is_in_faction_with = RSB
 			}
 			SPC_generic_region_trigger_200 = no
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.2		#中巴陷入动荡，南巴呼吁各方冷静
+	title = CBLNews.2.t
+	desc = CBLNews.2.d
+	picture = GFX_news_event_generic_87
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.2.a
+		trigger = {
+			SPC_generic_region_trigger_51 = yes
+		}
+	}
+
+	option = {
+		name = CBLNews.2.b
+		trigger = {
+			SPC_generic_region_trigger_51 = no
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.3		#山国征服中巴斯蒂亚
+	title = CBLNews.3.t
+	desc = CBLNews.3.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.3.a
+		trigger = {
+			tag = MNT
+		}
+	}
+
+	option = {
+		name = CBLNews.3.b
+		trigger = {
+			NOT = { tag = MNT }
+			has_idea = LR_humans
+			OR = {
+				AND = {
+					SPC_generic_region_trigger_51 = yes
+					NOT = {
+						has_government = pioneer_communism
+						has_government = revolutionary_communism
+						has_government = worldunion_socialist
+					}
+				}
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+				has_government = wizard_rules
+				has_government = religious_extremism
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.3.c
+		trigger = {
+			NOT = { tag = MNT }
+			NOT = {
+				has_idea = LR_humans
+				AND = {
+					SPC_generic_region_trigger_51 = yes
+					NOT = {
+						has_government = pioneer_communism
+						has_government = revolutionary_communism
+						has_government = worldunion_socialist
+					}
+				}
+				has_government = conservative_republican
+				has_government = authoritarian_republican
+				has_government = national_socialist
+				has_government = authoritarian_nationalism
+				has_government = paternal_autocrat
+				has_government = wizard_rules
+				has_government = religious_extremism
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.4		#中巴斯蒂亚独立同盟的胜利
+	title = CBLNews.4.t
+	desc = CBLNews.4.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.4.a
+		trigger = {
+			OR = {
+				SPC_generic_region_trigger_51 = no
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.4.b
+		trigger = {
+			SPC_generic_region_trigger_51 = yes
+			NOT = {
+				OR = {
+					has_government = pioneer_communism
+					has_government = revolutionary_communism
+					has_government = worldunion_socialist
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.5		#大陆中心升起的红旗
+	title = CBLNews.5.t
+	desc = CBLNews.5.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.5.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.5.b
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = pioneer_communism
+					has_government = revolutionary_communism
+					has_government = worldunion_socialist
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.6		#中巴斯蒂亚社会主义者的胜利
+	title = CBLNews.6.t
+	desc = CBLNews.6.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.6.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.6.b
+		trigger = {
+			SPC_generic_region_trigger_51 = yes
+			NOT = {
+				OR = {
+					has_government = pioneer_communism
+					has_government = revolutionary_communism
+					has_government = worldunion_socialist
+				}
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.6.c
+		trigger = {
+			SPC_generic_region_trigger_51 = no
+			NOT = {
+				OR = {
+					has_government = pioneer_communism
+					has_government = revolutionary_communism
+					has_government = worldunion_socialist
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.7		#谦逊之国一统中巴斯蒂亚
+	title = CBLNews.7.t
+	desc = CBLNews.7.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.7.a
+		trigger = {
+			has_idea = LR_humans
+			OR = {
+				AND = {
+					SPC_generic_region_trigger_51 = yes
+					NOT = {
+						OR = {
+							has_government = pioneer_communism
+							has_government = revolutionary_communism
+							has_government = worldunion_socialist
+						}
+					}
+				}
+				OR = {
+					has_government = conservative_republican
+					has_government = authoritarian_republican
+					has_government = national_socialist
+					has_government = authoritarian_nationalism
+					has_government = paternal_autocrat
+					has_government = wizard_rules
+					has_government = religious_extremism
+				}
+			}
+		}
+		custom_effect_tooltip = CBLNews.7.a.tt
+	}
+
+	option = {
+		name = CBLNews.7.b
+		trigger = {
+			NOT = {
+				has_idea = LR_humans
+				OR = {
+					AND = {
+						SPC_generic_region_trigger_51 = yes
+						NOT = {
+							OR = {
+								has_government = pioneer_communism
+								has_government = revolutionary_communism
+								has_government = worldunion_socialist
+							}
+						}
+					}
+					OR = {
+						has_government = conservative_republican
+						has_government = authoritarian_republican
+						has_government = national_socialist
+						has_government = authoritarian_nationalism
+						has_government = paternal_autocrat
+						has_government = wizard_rules
+						has_government = religious_extremism
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.8		#奥普菲尔骑士团接管中巴斯蒂亚
+	title = CBLNews.8.t
+	desc = CBLNews.8.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.8.a
+		trigger = {
+			tag = OPH
+		}
+	}
+
+	option = {
+		name = CBLNews.8.b
+		trigger = {
+			NOT = { tag = OPH }
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.9		#新十字军国统一中巴斯蒂亚
+	title = CBLNews.9.t
+	desc = CBLNews.9.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.9.a
+		trigger = {
+			tag = AYL
+		}
+	}
+
+	option = {
+		name = CBLNews.9.b
+		trigger = {
+			NOT = { tag = AYL }
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.10		#共和国中巴司令部平定中巴叛乱
+	title = CBLNews.10.t
+	desc = CBLNews.10.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.10.a
+		trigger = {
+			OR = {
+				tag = RCC
+				SPC_generic_region_trigger_51 = yes
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.10.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = RCC
+					SPC_generic_region_trigger_51 = yes
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.11		#迪特里希·蒂·林茨掌握中巴大局
+	title = CBLNews.11.t
+	desc = CBLNews.11.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.11.a
+		trigger = {
+			tag = FEJ
+		}
+	}
+
+	option = {
+		name = CBLNews.11.b
+		trigger = {
+			NOT = { tag = FEJ }
+		}
+	}
+}
+
+news_event = {
+	id = CBLNews.12		#第二次中巴内战
+	title = CBLNews.12.t
+	desc = CBLNews.12.d
+	picture = GFX_news_event_generic_66
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CBLNews.12.a
+		trigger = {
+			OR = {
+				tag = RCC
+				tag = FWJ
+				tag = FEJ
+			}
+		}
+	}
+
+	option = {
+		name = CBLNews.12.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = RCC
+					tag = FWJ
+					tag = FEJ
+				}
+			}
 		}
 	}
 }
