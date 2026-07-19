@@ -1,0 +1,30 @@
+CLD_support_CBI_commi = {
+	allowed = { tag = CLD }
+	enable = { CLA = { exists = yes } VGI = { exists = yes } }
+	abort = { CLA = { exists = no } VGI = { exists = no } }
+
+	ai_strategy = {
+		type = support
+		id = CLA
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CLA
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = VGI
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = VGI
+		value = 1000
+	}
+}
+

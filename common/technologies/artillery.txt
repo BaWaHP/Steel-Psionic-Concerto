@@ -131,7 +131,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-			
+
 			modifier = { #This is needed for a lot of tank designs
 				factor = 6.0
 				is_major = yes
@@ -151,6 +151,7 @@ technologies = {
 				factor = 5
 				date > "2001.1.1"
 			}
+
 		}
 	}
 
@@ -175,7 +176,7 @@ technologies = {
 			leads_to_tech = artillery2
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = sp_artillery_rocket_assisted_projectiles_tech
 			research_cost_coeff = 1
@@ -504,6 +505,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
 		}
 
 		categories = {
@@ -539,6 +541,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
 		}
 
 		categories = {
@@ -573,6 +576,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
 		}
 
 		categories = {
@@ -604,6 +608,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
 		}
 
 		categories = {
@@ -656,6 +661,7 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+
 			modifier = {
 				factor = 2
 				date > "1999.1.1"
@@ -1066,7 +1072,7 @@ technologies = {
 		}
 		armored_car = {
 			ap_attack = 0.1
-		}	
+		}
 		enable_equipments = {
 			anti_tank_equipment_2
 		}
@@ -1128,7 +1134,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_medium_cannon_2
 		}
-		
+
 		category_anti_tank = {
 			hard_attack = 0.1
 			ap_attack = 0.1
@@ -1143,6 +1149,7 @@ technologies = {
 			leads_to_tech = antitank4
 			research_cost_coeff = 1
 		}
+
 		path = { #Pfot
 			leads_to_tech = sp_advance_sabot_shells
 			research_cost_coeff = 1
@@ -1199,7 +1206,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_2
 		}
-		
+
 		category_anti_tank = {
 			hard_attack = 0.1
 			ap_attack = 0.1
@@ -1263,7 +1270,7 @@ technologies = {
 		}
 		armored_car = {
 			ap_attack = 0.1
-		}	
+		}
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3
@@ -1321,7 +1328,7 @@ technologies = {
 
 		research_cost = 1
 
-		# only from focus!!! Bofors anti tank gun ##### 
+		# only from focus!!! Bofors anti tank gun #####
 		allow = {
 			always = no
 		}
@@ -1366,7 +1373,6 @@ technologies = {
 		}
 	}
 
-
 	### SPECIAL PROJECTS ###
 
 	sp_artillery_rocket_assisted_projectiles_tech = {
@@ -1394,7 +1400,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 2002 #TODO_Manu: Adjust if necessary
+		start_year = 2002
 
 		folder = {
 			name = artillery_folder
@@ -1421,9 +1427,8 @@ technologies = {
 		}
 	}
 
-
 	sp_artillery_purpose_built_gun_motor_carriages_tech = {
-		
+
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
 		}
@@ -1448,7 +1453,7 @@ technologies = {
 
 		research_cost = 1.5
 
-		start_year = 2002 #TODO_Manu: Adjust if necessary
+		start_year = 2002
 
 		folder = {
 			name = artillery_folder
@@ -1476,7 +1481,7 @@ technologies = {
 	}
 
 	sp_shock_hardening_techniques = {
-		
+
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
 		}
@@ -1488,15 +1493,15 @@ technologies = {
 		}
 
 		static_anti_air_damage_factor = 0.15
-		static_anti_air_hit_chance_factor = 0.3 
+		static_anti_air_hit_chance_factor = 0.3
 
 		path = {
 			leads_to_tech = sp_variable_time_fuze_shells
 			research_cost_coeff = 1
 		}
-        
-        force_use_small_tech_layout = yes		
-		is_special_project_tech = yes	
+
+        force_use_small_tech_layout = yes
+		is_special_project_tech = yes
 		research_cost = 1.5
 		start_year = 2003
 		folder = {
@@ -1523,7 +1528,7 @@ technologies = {
 				is_special_project_completed = sp:sp_naval_proximity_fuze
 			}
 		}
-		
+
 		artillery = {
 			soft_attack = 0.1
 		}
@@ -1541,7 +1546,7 @@ technologies = {
 		research_cost = 1.5
 		start_year = 2004
 		is_special_project_tech = yes
-			
+
 		folder = {
 			name = artillery_folder
 			position = { x = -9 y = 10 }
@@ -1555,7 +1560,7 @@ technologies = {
 
 		special_project_specialization = { specialization_land specialization_air }
 	}
-	
+
 	#TAOG
 	the_thunder_at_our_gates_artillery = {
 
@@ -1566,12 +1571,11 @@ technologies = {
 	}
 	#End TAOG
 
-
 	#Project Wolfdog
 	#Pfot
 	sp_land_large_caliber_kinetic_energy_sabot_gd_tech = {
-		#HIDDEN EFFECT FOR THE LARGE CALIBER KINETIC ENERGY PENETRATOR 
-		
+		#HIDDEN EFFECT FOR THE LARGE CALIBER KINETIC ENERGY PENETRATOR
+
 		research_cost = 1
 		start_year = 1936
 
@@ -1618,7 +1622,7 @@ technologies = {
 		field_guns = {
 			ap_attack = 0.1
 		}
-		
+
 		allow = {
 			always = no
 		}
@@ -1626,7 +1630,7 @@ technologies = {
 
 	sp_land_large_caliber_kinetic_energy_sabot_no_gd_tech = {
 		#HIDDEN EFFECT FOR THE LARGE CALIBER KINETIC ENERGY PENETRATOR
-		
+
 		research_cost = 1
 		start_year = 1936
 
@@ -1660,13 +1664,13 @@ technologies = {
 		field_guns = {
 			ap_attack = 0.1
 		}
-		
+
 		allow = {
 			always = no
 		}
 	}
 
-	sp_advance_sabot_shells = { 
+	sp_advance_sabot_shells = {
 		allow_branch = {
 			has_dlc = "Peace For Our Time"
 		}
@@ -1699,7 +1703,7 @@ technologies = {
 		research_cost = 1.5
 		start_year = 1942
 		is_special_project_tech = yes
-			
+
 		folder = {
 			name = artillery_folder
 			position = { x = 5 y = 10 }

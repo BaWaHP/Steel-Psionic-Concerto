@@ -786,6 +786,10 @@ focus_tree = {
 		cost = 1.43
 		available_if_capitulated = yes
 
+		available = {
+			date > 1998.7.10
+		}
+
 		ai_will_do = { factor = 100 }
 
 		prerequisite = { focus = RSU_negotiations }

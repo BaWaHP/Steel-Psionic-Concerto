@@ -687,10 +687,18 @@ spriteTypes = {
 		name = "GFX_decision_category_SFR_land_reform_decisions"
 		texturefile = "gfx/interface/decisions/decision_category_SFR_land_reform_decisions.png"
 	}
-	###事件###
+	###新闻###
+	spriteType = {
+		name = "GFX_news_event_SFR_2"
+		texturefile = "gfx/event_pictures/news_event_SFR_2.dds"
+	}
 	spriteType = {
 		name = "GFX_news_event_SFR_4"
 		texturefile = "gfx/event_pictures/news_event_SFR_4.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_SFR_8"
+		texturefile = "gfx/event_pictures/news_event_SFR_8.dds"
 	}
 	###军官团###
 	spriteType = {

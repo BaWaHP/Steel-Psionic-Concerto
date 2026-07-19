@@ -26,13 +26,14 @@ sub_units = {
 			category_army
 			category_special_forces
 			category_caster
+			category_caster_infantry
 		}
 		
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 30
-		max_organisation = 50
+		max_strength = 40
+		max_organisation = 80
 		default_morale = 0.4
 		manpower = 1000
 
@@ -47,12 +48,12 @@ sub_units = {
 		need = { caster_equipment = 60 }
 
 		plains = {
-			attack = 0.05
+			attack = 0.1
 			defense = -0.1
 		}
 
 		urban = {
-			attack = 0.1
+			attack = 0.2
 		}
 
 		can_be_parachuted = yes

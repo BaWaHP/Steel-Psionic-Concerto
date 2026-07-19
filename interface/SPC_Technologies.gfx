@@ -492,6 +492,222 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
+	#魔导步兵总部警卫
+	spriteType = { 
+		name = "GFX_unit_hq_caster_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_caster_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#游侠级泰坦总部警卫
+	spriteType = { 
+		name = "GFX_unit_hq_light_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_light_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_light_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_light_titan_icon_small"
+		texturefile = "gfx/texticons/unit_light_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#天图级泰坦总部警卫
+	spriteType = { 
+		name = "GFX_unit_hq_medium_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_medium_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_medium_titan_icon_small"
+		texturefile = "gfx/texticons/unit_medium_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	
+	#巨妖级泰坦总部警卫
+	spriteType = { 
+		name = "GFX_unit_hq_heavy_titan_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_heavy_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_heavy_titan_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_heavy_titan_icon_small"
+		texturefile = "gfx/texticons/unit_heavy_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#近战步兵总部警卫
+	spriteType = { 
+		name = "GFX_unit_hq_melee_infantry_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_melee_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_melee_infantry_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_melee_infantry_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_melee_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_melee_infantry_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导参谋
+	spriteType = { 
+		name = "GFX_unit_hq_caster_support_company_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_support_company_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_support_company_icon_small"
+		texturefile = "gfx/texticons/unit_caster_support_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#参谋部魔导战斗大队
+	spriteType = { 
+		name = "GFX_unit_hq_caster_attacker_company_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_attacker_company_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_caster_attacker_company_icon_small"
+		texturefile = "gfx/texticons/unit_caster_attacker_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#泰坦参谋
+	spriteType = { 
+		name = "GFX_unit_hq_titan_company_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_titan_company_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_medium_titan_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_titan_company_icon_small"
+		texturefile = "gfx/texticons/unit_medium_titan_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#近战步兵参谋
+	spriteType = { 
+		name = "GFX_unit_hq_melee_infantry_company_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_melee_infantry_company_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_melee_infantry_company_icon_small"
+		texturefile = "gfx/texticons/unit_melee_support_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#驯兽师参谋
+	spriteType = { 
+		name = "GFX_unit_hq_monster_tamer_company_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_monster_tamer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_monster_tamer_company_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_monster_tamer_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_hq_monster_tamer_company_icon_small"
+		texturefile = "gfx/texticons/unit_monster_tamer_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#近战突击小组
+	spriteType = { 
+		name = "GFX_unit_field_melee_support_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_field_melee_support_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_melee_support_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_field_melee_support_icon_small"
+		texturefile = "gfx/texticons/unit_melee_support_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#魔导攻击支援连
+	spriteType = { 
+		name = "GFX_unit_field_caster_support_icon_medium"									
+		textureFile = "gfx/interface/counters/divisions_large/unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_field_caster_support_icon_medium_white"								
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_caster_attacker_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = {
+		name = "GFX_unit_field_caster_support_icon_small"
+		texturefile = "gfx/texticons/unit_caster_attacker_icon_small.png"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
 	###分类###
 
 	spriteType = {

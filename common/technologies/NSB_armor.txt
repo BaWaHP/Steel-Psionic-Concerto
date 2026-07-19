@@ -19,7 +19,7 @@ technologies = {
 	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
 	gwtank_chassis = { #Leichttraktor
 
-	show_equipment_icon = yes
+		show_equipment_icon = yes
 
 		enable_equipments = {
 			light_tank_chassis_0
@@ -133,17 +133,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.2
-				date > "1999.1.1"
+				date > 1999.1.1
 			}
 
 			modifier = {
 				factor = 1.2
-				date > "2000.1.1"
+				date > 2000.1.1
 			}
 
 			modifier = {
 				factor = 1.2
-				date > "2001.1.1"
+				date > 2001.1.1
 			}
 		}
 
@@ -189,6 +189,7 @@ technologies = {
 
 					load_oob = "unlock_tanks"
 				}
+
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
@@ -216,17 +217,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
+				date > 1999.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2000.1.1"
+				date > 2000.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2001.1.1"
+				date > 2001.1.1
 			}
 		}
 
@@ -252,7 +253,7 @@ technologies = {
 			leads_to_tech = advanced_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		
+
 		path = {
 			leads_to_tech = amphibious_tank_chassis
 			research_cost_coeff = 1
@@ -273,22 +274,28 @@ technologies = {
 				factor = 2
 				is_major = yes
 			}
-
 			modifier = {
-				factor = 1.1
-				date > "1999.1.1"
+				is_major = yes
+				has_war = yes
+				factor = 10 #you are embarassing yourself
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2000.1.1"
+				date > 1999.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2001.1.1"
+				date > 2000.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 2001.1.1
 			}
 		}
+
 
 		categories = {
 			armor
@@ -298,7 +305,6 @@ technologies = {
 		}
 		special_project_specialization = { specialization_land }
 	}
-
 
 
 	amphibious_tank_chassis = { #SchwimmPanzer II
@@ -436,17 +442,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "2004.1.1"
+				date > 2004.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2005.1.1"
+				date > 2005.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2006.1.1"
+				date > 2006.1.1
 			}
 		}
 
@@ -512,27 +518,35 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 2
 
 			modifier = {
-				factor = 2
+				factor = 1.1
+				date > 2001.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 2002.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 2003.1.1
+			}
+
+			modifier = {
+				factor = 1.1
+				date > 2004.1.1
+			}
+
+			modifier = {
+				factor = 3
 				is_major = yes
-				date > "2000.1.1"
-			}
-			modifier = {
-				factor = 1.1
-				date > "2002.1.1"
+				date > 2000.1.1
 			}
 
-			modifier = {
-				factor = 1.1
-				date > "2003.1.1"
-			}
 
-			modifier = {
-				factor = 1.1
-				date > "2004.1.1"
-			}
 		}
 
 		categories = {
@@ -567,34 +581,34 @@ technologies = {
 			position = { x = 2 y = @2002 }
 		}
 
+
 		ai_will_do = {
-			factor = 3
+			factor = 2
 
 			modifier = {
 				factor = 2
 				is_major = yes
-				NOT = {
-					num_of_military_factories < 50
-				}
 			}
+
+
 			modifier = {
-				date < "2003.1.1"
-				factor = 0.3
+				factor = 1.1
+				date > 2003.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2004.1.1"
+				date > 2004.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2005.1.1"
+				date > 2005.1.1
 			}
 
 			modifier = {
 				factor = 1.1
-				date > "2006.1.1"
+				date > 2006.1.1
 			}
 		}
 
@@ -629,6 +643,7 @@ technologies = {
 			position = { x = 2 y = @2005 }
 		}
 
+
 		ai_will_do = {
 			factor = 1
 
@@ -646,6 +661,7 @@ technologies = {
 				factor = 1.2
 				date > "2008.1.1"
 			}
+
 		}
 
 		categories = {
@@ -682,18 +698,19 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				date > "2008.1.1"
+				date > 2008.1.1
 			}
 
 			modifier = {
 				factor = 2
-				date > "2009.1.1"
+				date > 2009.1.1
 			}
 
 			modifier = {
 				factor = 2
-				date > "2010.1.1"
+				date > 2010.1.1
 			}
+
 		}
 
 		categories = {
@@ -813,6 +830,7 @@ technologies = {
 			position = { x = 5 y = @2002 }
 		}
 
+
 		ai_will_do = {
 			factor = 0.8
 			modifier = {
@@ -863,6 +881,7 @@ technologies = {
 			position = { x = 5 y = @2005 }
 		}
 
+
 		ai_will_do = {
 			factor = 0.8
 
@@ -880,6 +899,7 @@ technologies = {
 				factor = 1.2
 				date > "2008.1.1"
 			}
+
 		}
 
 		categories = {
@@ -908,13 +928,12 @@ technologies = {
 			tank_super_heavy_cannon
 		}
 
-		research_cost = 2.5
+		research_cost = 3
 		start_year = 2005
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = 8 }
 		}
-
 
 		path = {
 			leads_to_tech = sp_armored_lc_high_impact_obliterator_cannon_tech
@@ -937,19 +956,27 @@ technologies = {
 		}
 
 		on_research_complete = {
+
+
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_land_cruiser	
+					PROJECT = sp_land_land_cruiser
 				}
 			}
 		}
 
 		ai_will_do = {
-			factor = 0 # Hitler cries on the inside
+			base = 0
+			modifier = {
+				add = 1
+				date > 2005.9.1
+				NOT = { has_government = democratic }
+				num_of_military_factories > 150
+			}
 		}
 
 		categories = {
@@ -987,12 +1014,12 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
+				factor = 10
 				is_major = yes
 			}
 			modifier = {
 				has_war = yes
-				factor = 2
+				factor = 10
 			}
 
 			modifier = {
@@ -1001,12 +1028,12 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 1.5
 				date > "2000.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 2
 				date > "2001.1.1"
 			}
 		}
@@ -1047,7 +1074,7 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
+				factor = 4
 				is_major = yes
 			}
 			modifier = {
@@ -1057,17 +1084,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
 				date > "2000.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 1.5
 				date > "2001.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "2002.1.1"
 			}
 		}
 
@@ -1118,17 +1145,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
+				date > "2003.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2000.1.1"
+				factor = 1.5
+				date > "2004.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2001.1.1"
+				factor = 2
+				date > "2005.1.1"
 			}
 		}
 
@@ -1170,17 +1197,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
+				date > "2006.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2000.1.1"
+				factor = 1.5
+				date > "2007.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2001.1.1"
+				factor = 2
+				date > "2008.1.1"
 			}
 		}
 
@@ -1230,12 +1257,12 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 1.5
 				date > "2000.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 2
 				date > "2001.1.1"
 			}
 		}
@@ -1284,17 +1311,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
-			}
-
-			modifier = {
-				factor = 1.1
 				date > "2000.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
+				factor = 1.5
 				date > "2001.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "2002.1.1"
 			}
 		}
 
@@ -1340,17 +1367,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
+				date > "2003.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2000.1.1"
+				factor = 1.5
+				date > "2004.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2001.1.1"
+				factor = 2
+				date > "2005.1.1"
 			}
 		}
 
@@ -1390,17 +1417,17 @@ technologies = {
 
 			modifier = {
 				factor = 1.1
-				date > "1999.1.1"
+				date > "2006.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2000.1.1"
+				factor = 1.5
+				date > "2007.1.1"
 			}
 
 			modifier = {
-				factor = 1.1
-				date > "2001.1.1"
+				factor = 2
+				date > "2008.1.1"
 			}
 		}
 
@@ -1426,9 +1453,6 @@ technologies = {
 		path = {
 		}
 
-		on_research_complete = {
-		
-		}
 
 		show_effect_as_desc = no
 
@@ -1458,14 +1482,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2003
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 12 y = @2003 }
 		}
 
 		enable_equipment_modules = {
-			advanced_flamethrower			
+			advanced_flamethrower
 		}
 
 		light_flame_tank = {
@@ -1478,12 +1502,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		medium_flame_tank = {
@@ -1496,12 +1520,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		heavy_flame_tank = {
@@ -1514,12 +1538,12 @@ technologies = {
 			jungle = {
 				attack = 0.05
 			}
-			urban = {
-				attack = 0.05
-			}
-			fort = {
-				attack = 0.05
-			}
+			#urban = {
+			#	attack = 0.05
+			#}
+			#fort = {
+			#	attack = 0.05
+			#}
 		}
 
 		show_effect_as_desc = yes
@@ -1591,7 +1615,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2005
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 7 y = @2005 }
@@ -1678,12 +1702,6 @@ technologies = {
 			forest = {
 				movement = 0.2
 			}
-			hills = {
-				movement = 0.2
-			}
-			mountain = 	{
-				movement = 0.2
-			}
 			jungle = {
 				movement = 0.2
 			}
@@ -1691,7 +1709,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2005
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @2005 }
@@ -1761,7 +1779,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2005
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 11 y = @2005 }
@@ -1825,7 +1843,7 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2007
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 9 y = @2007 }
@@ -1884,14 +1902,14 @@ technologies = {
 
 		research_cost = 1
 		start_year = 2005
-		
+
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 13 y = @2005 }
 		}
 
 		enable_equipment_modules = {
-			lc_high_impact_obliterator_cannon			
+			lc_high_impact_obliterator_cannon
 		}
 
 		show_effect_as_desc = yes

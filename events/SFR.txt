@@ -1989,6 +1989,7 @@ country_event = {	#郑家的命运
 			id = SFR.221
 			days = 1
 		}
+		news_event = SFRNews.7
 	}
 		
 	option = {
@@ -2001,6 +2002,7 @@ country_event = {	#郑家的命运
 			id = SFR.223
 			days = 1
 		}
+		news_event = SFRNews.6
 	}
 		
 	option = {
@@ -2013,6 +2015,7 @@ country_event = {	#郑家的命运
 			id = SFR.224
 			days = 1
 		}
+		news_event = SFRNews.5
 	}
 }
 
@@ -2374,6 +2377,10 @@ country_event = {	#后来者（2）
 	
 	option = {
 		name = SFR.255.a
+		country_event = {
+			id = SFR.256
+			days = 1
+		}
 	}
 }
 
@@ -2451,14 +2458,14 @@ country_event = {	#后来者（4）
 		add_stability = 0.1
 		add_war_support = 0.1
 		retire_character = SFR_YeWenshi
+		add_popularity = {
+			ideology = worldunion_socialist
+			popularity = 0.3
+		}
 		set_party_name = {
 			ideology = worldunion_socialist
 			long_name = SFR_worldunion_socialist_party_3_long
 			name = SFR_worldunion_socialist_party_3
-		}
-		add_popularity = {
-			ideology = worldunion_socialist
-			popularity = 0.3
 		}
 		SPC_party_clear_revolutionary_communism = yes
 		promote_character = SFR_LinQinlan
@@ -3072,6 +3079,7 @@ country_event = {	#红旗高悬
 	
 	option = {
 		name = SFR.335.a
+		set_cosmetic_tag = SFR_unif_tag_2
 		if = {
 			limit = { has_country_flag = SFR_focus_1_4 }
 			clr_country_flag = SFR_focus_1_4
@@ -3982,6 +3990,7 @@ country_event = {	#革命的新一阶段
 			ideology = worldunion_democrat
 			popularity = 0.05
 		}
+		news_event = SFRNews.8
 	}
 }
 
@@ -4605,7 +4614,7 @@ country_event = {	#《关于当前远乡社会的考察报告》
 	}
 }
 
-country_event = {	#焕然一新
+country_event = {	#焕然一新（1）
 	id = SFR.501
 	title = SFR.501.t
 	desc = SFR.501.d
@@ -4616,6 +4625,13 @@ country_event = {	#焕然一新
 	option = {
 		name = SFR.501.a
 		add_stability = 0.01
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = SFR.504
+				days = 30
+			}
+		}
 	}
 }
 
@@ -4686,10 +4702,21 @@ country_event = {	#妇女能顶半边天！
 	
 	option = {
 		name = SFR.503.a
-		add_political_power = -100
+		add_stability = -0.05
+		add_political_power = -50
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 1
+			tooltip = living_standard_development_mod_tt_up_1
+		}
+		add_to_variable = {
+			var = SFR_red_star_over_capital_group_3_1
+			value = 10
+			tooltip = SFR_red_star_over_capital_group_3_1_tt
+		}
 		add_to_variable = {
 			var = SFR_red_star_over_capital_group_3_2
-			value = 10
+			value = 20
 			tooltip = SFR_red_star_over_capital_group_3_2_tt
 		}
 		add_to_variable = {
@@ -4715,7 +4742,48 @@ country_event = {	#妇女能顶半边天！
 
 	option = {
 		name = SFR.503.b
-		add_political_power = 10
+		add_stability = 0.02
+		add_political_power = 20
+	}
+}
+
+country_event = {	#焕然一新（2）
+	id = SFR.504
+	title = SFR.504.t
+	desc = SFR.504.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.504.a
+		add_stability = 0.01
+		SPC_living_standard_development_amount_up_1 = yes
+		hidden_effect = {
+			country_event = {
+				id = SFR.505
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {	#焕然一新（3）
+	id = SFR.505
+	title = SFR.505.t
+	desc = SFR.505.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SFR.505.a
+		add_stability = 0.05
+		add_to_variable = {
+			var = living_standard_development_mod
+			value = 1
+			tooltip = living_standard_development_mod_tt_up_1
+		}
 	}
 }
 
@@ -5614,6 +5682,7 @@ country_event = {	#理想终将实现
 	
 	option = {
 		name = SFR.850.a
+		custom_effect_tooltip = SFR.850.a.tt
 	}
 }
 
@@ -6532,6 +6601,30 @@ news_event = {
 	
 	option = {
 		name = SFRNews.1.a
+		trigger = {
+			tag = SFR
+		}
+	}
+
+	option = {
+		name = SFRNews.1.b
+		trigger = {
+			NOT = {
+				tag = SFR
+				tag = NFH
+				tag = NWF
+			}
+		}
+	}
+	
+	option = {
+		name = SFRNews.1.c
+		trigger = {
+			OR = {
+				tag = NFH
+				tag = NWF
+			}
+		}
 	}
 }
 
@@ -6539,7 +6632,7 @@ news_event = {
 	id = SFRNews.2		#远乡国再统一
 	title = SFRNews.2.t
 	desc = SFRNews.2.d
-	picture = GFX_news_event_generic_58
+	picture = GFX_news_event_SFR_2
 	
 	major = yes
 
@@ -6547,6 +6640,24 @@ news_event = {
 	
 	option = {
 		name = SFRNews.2.a
+		trigger = {
+			OR = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
+	}
+
+	option = {
+		name = SFRNews.2.b
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
 	}
 }
 
@@ -6577,43 +6688,151 @@ news_event = {
 	
 	option = {
 		name = SFRNews.4.a
+	}
+}
+
+news_event = {
+	id = SFRNews.5		#前远乡国王郑钧被革命者判处死刑！
+	title = SFRNews.5.t
+	desc = SFRNews.5.d
+	picture = GFX_news_event_generic_43
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.5.a
 		trigger = {
-			NOT = { tag = SFR }
-			OR = {
-				has_government = pioneer_communism
-				has_government = revolutionary_communism
-				has_government = worldunion_socialist
-			}
+			NOT = { tag = NFH }
 		}
 	}
 
 	option = {
-		name = SFRNews.4.b
+		name = SFRNews.5.b
 		trigger = {
-			NOT = { tag = SFR }
-			OR = {
-				has_government = worldunion_democrat
-				has_government = liberal_republican
-			}
+			tag = NFH
 		}
 	}
+}
 
+news_event = {
+	id = SFRNews.6		#前远乡国王郑钧被判处流放！
+	title = SFRNews.6.t
+	desc = SFRNews.6.d
+	picture = GFX_news_event_generic_2
+	
+	major = yes
+
+	is_triggered_only = yes
+	
 	option = {
-		name = SFRNews.4.c
+		name = SFRNews.6.a
 		trigger = {
 			NOT = {
+				tag = NFH
+				tag = SFR
+			}
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist
+		}
+	}
+
+	option = {
+		name = SFRNews.6.b
+		trigger = {
+			tag = NFH
+		}
+	}
+
+	option = {
+		name = SFRNews.6.c
+		trigger = {
+			tag = SFR
+		}
+	}
+
+	option = {
+		name = SFRNews.6.dd
+		trigger = {
+			NOT = {
+				tag = NFH
 				tag = SFR
 				has_government = pioneer_communism
 				has_government = revolutionary_communism
 				has_government = worldunion_socialist
-				has_government = worldunion_democrat
-				has_government = liberal_republican
+			}
+		}
+	}
+}
+
+news_event = {
+	id = SFRNews.7		#前远乡国王郑钧被判劳动改造
+	title = SFRNews.7.t
+	desc = SFRNews.7.d
+	picture = GFX_news_event_generic_1
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.7.a
+		trigger = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist
+		}
+	}
+
+	option = {
+		name = SFRNews.7.b
+		trigger = {
+			NOT = {
+				tag = NFH
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
 			}
 		}
 	}
 
 	option = {
-		name = SFRNews.4.dd
-		trigger = { tag = SFR }
+		name = SFRNews.7.c
+		trigger = {
+			tag = NFH
+		}
+	}
+}
+
+news_event = {
+	id = SFRNews.8		#远乡工农代表大会成立
+	title = SFRNews.8.t
+	desc = SFRNews.8.d
+	picture = GFX_news_event_SFR_8
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SFRNews.8.a
+		trigger = {
+			has_government = pioneer_communism
+			has_government = revolutionary_communism
+			has_government = worldunion_socialist
+		}
+	}
+
+	option = {
+		name = SFRNews.8.b
+		trigger = {
+			NOT = {
+				has_government = pioneer_communism
+				has_government = revolutionary_communism
+				has_government = worldunion_socialist
+			}
+		}
 	}
 }

@@ -36,6 +36,10 @@ technologies = {
 			light_titan
 		}
 
+		enable_subunits = {
+			hq_light_titan
+		}
+
 		enable_equipments = {
 			great_war_titan_equipment_0
 		}
@@ -104,7 +108,7 @@ technologies = {
 	#轻量化改造
 	lightweight_transformation = {
 
-		light_titan = {
+		category_light_titan = {
 			maximum_speed = 0.1
 			breakthrough = 0.1
 		}
@@ -172,7 +176,7 @@ technologies = {
 	#附魔巨剑
 	echanted_swords = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 			breakthrough = 0.05
@@ -208,7 +212,7 @@ technologies = {
 	#魔法回路破坏
 	echantment_destroyer = {
 
-		light_titan = {
+		category_light_titan = {
 			hard_attack = 0.1
 			breakthrough = 0.05
 			defense = -0.05
@@ -239,7 +243,7 @@ technologies = {
 	#霰弹弹射
 	shrapnel_ejection = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.1
 			breakthrough = 0.05
 			defense = -0.05
@@ -299,7 +303,7 @@ technologies = {
 	#短距瞬间移动
 	short_range_instantaneous_movement = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 			defense = 0.05
@@ -388,7 +392,7 @@ technologies = {
 	#手持舰炮
 	handheld_ship_guns = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.1
 			ap_attack = 0.2
@@ -428,7 +432,7 @@ technologies = {
 	#扩散导弹
 	proliferation_missiles = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.1
 			hard_attack = 0.05
 			defense = -0.05
@@ -460,7 +464,7 @@ technologies = {
 	#绊锁陷阱
 	trip_lock_trap = {
 
-		light_titan = {
+		category_light_titan = {
 			hard_attack = 0.05
 			defense = 0.05
 			breakthrough = -0.05
@@ -520,7 +524,7 @@ technologies = {
 	#短距飞行能力
 	short_range_flight_capability = {
 
-		light_titan = {
+		category_light_titan = {
 			soft_attack = 0.1
 			hard_attack = 0.1
 			breakthrough = 0.05
@@ -580,6 +584,14 @@ technologies = {
 			medium_titan
 		}
 
+		enable_subunits = {
+			hq_medium_titan
+		}
+
+		enable_subunits = {
+			hq_titan_company
+		}
+
 		enable_equipments = {
 			medium_titan_equipment_0
 		}
@@ -609,7 +621,7 @@ technologies = {
 	#适应性强化
 	adaptive_enhancement = {
 
-		medium_titan = {
+		category_medium_titan = {
 			reliability = 0.05
 			max_organisation = 10
 			max_strength = 0.1
@@ -678,7 +690,7 @@ technologies = {
 	#扩散魔力发射器
 	diffusion_magic_launcher = {
 
-		medium_titan = {
+		category_medium_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.1
 		}
@@ -713,7 +725,7 @@ technologies = {
 	#漩涡护盾
 	vortex_shield = {
 
-		medium_titan = {
+		category_medium_titan = {
 			defense = 0.1
 			breakthrough = 0.2
 			max_organisation = 5
@@ -744,7 +756,7 @@ technologies = {
 	#激光巨炮
 	laser_mega_cannon = {
 
-		medium_titan = {
+		category_medium_titan = {
 			hard_attack = 0.1
 			soft_attack = 0.05
 		}
@@ -803,7 +815,7 @@ technologies = {
 	#强化魔力储蓄装置
 	reinforced_magic_storation = {
 
-		medium_titan = {
+		category_medium_titan = {
 			defense = 0.05
 			breakthrough = 0.05
 			max_organisation = 5
@@ -892,7 +904,7 @@ technologies = {
 	#小型导弹发射器
 	small_missile_launcher = {
 
-		medium_titan = {
+		category_medium_titan = {
 			soft_attack = 0.1
 			hard_attack = 0.05
 		}
@@ -927,7 +939,7 @@ technologies = {
 	#追踪导弹
 	tracking_missiles = {
 
-		medium_titan = {
+		category_medium_titan = {
 			soft_attack = 0.1
 			hard_attack = 0.05
 		}
@@ -957,7 +969,7 @@ technologies = {
 	#能量护盾
 	energy_shield = {
 
-		medium_titan = {
+		category_medium_titan = {
 			defense = 0.2
 			breakthrough = 0.1
 			max_strength = 0.05
@@ -1017,7 +1029,7 @@ technologies = {
 	#敌对单位探测系统
 	hostile_unit_detection_system = {
 
-		medium_titan = {
+		category_medium_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 			defense = 0.1
@@ -1077,6 +1089,10 @@ technologies = {
 			heavy_titan
 		}
 
+		enable_subunits = {
+			hq_heavy_titan
+		}
+
 		enable_equipments = {
 			heavy_titan_equipment_0
 		}
@@ -1106,7 +1122,7 @@ technologies = {
 	#高效能武器
 	high_energy_weapons = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
@@ -1174,7 +1190,7 @@ technologies = {
 	#铝热剂发射器
 	aluminum_thermite_emitter = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			soft_attack = 0.2
 			hard_attack = 0.1
 			defense = 0.05
@@ -1211,7 +1227,7 @@ technologies = {
 	#铝热火墙
 	aluminum_thermite_wall = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			hard_attack = 0.05
 			defense = 0.1
 			breakthrough = 0.05
@@ -1242,7 +1258,7 @@ technologies = {
 	#热能护盾
 	heat_shield = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			soft_attack = 0.05
 			max_strength = 0.2
 			defense = 0.1
@@ -1302,7 +1318,7 @@ technologies = {
 	#烈焰陷阱
 	flame_trap = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			max_organisation = 10
 			max_strength = 0.1
 			defense = 0.2
@@ -1390,7 +1406,7 @@ technologies = {
 	#巨型转轮机枪
 	giant_rotary_machine_gun = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			soft_attack = 0.05
 			hard_attack = 0.1
 			defense = 0.05
@@ -1427,7 +1443,7 @@ technologies = {
 	#高效能弹药
 	high_performance_ammunition = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			hard_attack = 0.1
 			ap_attack = 0.2
 			breakthrough = 0.1
@@ -1458,7 +1474,7 @@ technologies = {
 	#爆破型弹药
 	blast_type_ammunition = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			soft_attack = 0.1
 			breakthrough = 0.1
 		}
@@ -1517,7 +1533,7 @@ technologies = {
 	#机枪护盾
 	machinegun_shield = {
 
-		heavy_titan = {
+		category_heavy_titan = {
 			max_organisation = 10
 			max_strength = 0.1
 			defense = 0.1

@@ -3303,11 +3303,6 @@ focus_tree = {
 			has_country_flag = SFR_integrate_free_alliance_flag
 		}
 
-		bypass = {
-			FFH = { has_war = no }
-			has_country_flag = SFR_integrate_free_alliance_flag
-		}
-
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -4177,7 +4172,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			custom_effect_tooltip = SFR_raise_the_flag_tt
-			set_cosmetic_tag = SFR_unif_tag_2
 			SFH_generic_reclaim_effect = yes
 			country_event = {
 				id = SFR.335
@@ -4535,7 +4529,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		available = { has_completed_focus = SFR_dissolve_front_parliament }
+		available = { has_completed_focus = SFR_establish_workers_and_peasants_congress }
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -7286,7 +7280,7 @@ focus_tree = {
 		icon = GFX_goal_Focus_Examine_Foreign_Laws
 		x = -6
 		y = 15
-		cost = 3
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -7304,8 +7298,8 @@ focus_tree = {
 		#mutually_exclusive = { focus = }
 
 		completion_reward = {
-			add_political_power = 100
-			add_command_power = 200
+			add_political_power = 50
+			add_command_power = 100
 			country_event = {
 				id = SFR.750
 				days = 1
@@ -7318,7 +7312,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Memories_of_the_War
 		x = 0
 		y = 1
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 

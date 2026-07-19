@@ -22,10 +22,7 @@ country_event = {		#吉拉尼亚地区的未来
 
 	option = {		#是时候决定吉拉尼亚的未来了。
 		name = generic_territory.100.a
-		country_event = {
-			id = generic_territory.101
-			days = 1
-		}
+		country_event = generic_territory.101
 	}
 
 	option = {		#我们将稍后再处理这个问题
@@ -58,26 +55,14 @@ country_event = {		#如何处理沃姆地区领土
 
 	option = {		#统一沃姆
 		name = generic_territory.200.a
-		country_event = {
-			id = generic_territory.201
-			days = 1
-		}
+		country_event = generic_territory.201
 	}
 
 	option = {		#最好分开讨论各地问题。
 		name = generic_territory.200.b
-		country_event = {
-			id = generic_territory.220
-			days = 1
-		}
-		country_event = {
-			id = generic_territory.240
-			days = 1
-		}
-		country_event = {
-			id = generic_territory.260
-			days = 1
-		}
+		country_event = generic_territory.220
+		country_event = generic_territory.240
+		country_event = generic_territory.260
 	}
 
 	option = {		#等会！最好不要太早下决定...
@@ -85,7 +70,7 @@ country_event = {		#如何处理沃姆地区领土
 	}
 }
 
-country_event = {		#沃姆的未来
+country_event = {		#大沃姆的未来
 	id = generic_territory.201
 	title = generic_territory.201.t
 	desc = generic_territory.201.d
@@ -97,6 +82,7 @@ country_event = {		#沃姆的未来
 		name = generic_territory.201.a
 		WOM = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_201_a_effect = yes }
+		clr_country_flag = is_SPC_generic_rebuild_large_WOM
 	}
 }
 
@@ -112,6 +98,11 @@ country_event = {		#戈尔维亚地区的未来
 		name = generic_territory.220.a
 		GLV = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_220_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_WOM
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+			clr_country_flag = is_SPC_generic_rebuild_large_WOM
+		}
 	}
 }
 
@@ -127,6 +118,11 @@ country_event = {		#沃姆的未来
 		name = generic_territory.240.a
 		WOM = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_240_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_WOM
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+			clr_country_flag = is_SPC_generic_rebuild_large_WOM
+		}
 	}
 }
 
@@ -142,6 +138,11 @@ country_event = {		#斯布里奇地区的未来
 		name = generic_territory.260.a
 		SBG = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_260_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_WOM
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_WOM }
+			clr_country_flag = is_SPC_generic_rebuild_large_WOM
+		}
 	}
 }
 
@@ -155,26 +156,14 @@ country_event = {		#联合王国地区的未来
 
 	option = {		#拆分联合王国地区，不要让他们太过强势。
 		name = generic_territory.300.a
-		country_event = {
-			id = generic_territory.320
-			days = 1
-		}
-		country_event = {
-			id = generic_territory.340
-			days = 1
-		}
-		country_event = {
-			id = generic_territory.360
-			days = 1
-		}
+		country_event = generic_territory.320
+		country_event = generic_territory.340
+		country_event = generic_territory.360
 	}
 
 	option = {		#成立统一的联合王国！
 		name = generic_territory.300.b
-		country_event = {
-			id = generic_territory.301
-			days = 1
-		}
+		country_event = generic_territory.301
 	}
 
 	option = {		#等会！最好不要太早下决定...
@@ -194,6 +183,7 @@ country_event = {		#联合王国地区的未来
 		name = generic_territory.301.a
 		ARO = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_301_a_effect = yes }
+		clr_country_flag = is_SPC_generic_rebuild_large_ARO
 	}
 }
 
@@ -209,6 +199,11 @@ country_event = {		#奥罗日亚的未来
 		name = generic_territory.320.a
 		ARO = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_320_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_ARO
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+			clr_country_flag = is_SPC_generic_rebuild_large_ARO
+		}
 	}
 }
 
@@ -224,6 +219,11 @@ country_event = {		#皮奥瑞亚的未来
 		name = generic_territory.340.a
 		PEO = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_340_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_ARO
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+			clr_country_flag = is_SPC_generic_rebuild_large_ARO
+		}
 	}
 }
 
@@ -239,6 +239,11 @@ country_event = {		#西莉迪亚的未来
 		name = generic_territory.360.a
 		CLD = { save_global_event_target_as = released_puppet_country }
 		hidden_effect = { generic_territory_360_a_effect = yes }
+		clr_country_flag = ban_SPC_generic_rebuild_large_ARO
+		if = {
+			limit = { has_country_flag = is_SPC_generic_rebuild_large_ARO }
+			clr_country_flag = is_SPC_generic_rebuild_large_ARO
+		}
 	}
 }
 
@@ -252,10 +257,7 @@ country_event = {		#远乡地区的未来
 
 	option = {		#成立统一的远乡！
 		name = generic_territory.400.a
-		country_event = {
-			id = generic_territory.401
-			days = 1
-		}
+		country_event = generic_territory.401
 	}
 
 	option = {		#等会！最好不要太早下决定...
@@ -270,7 +272,6 @@ country_event = {		#新远乡的未来
 	#picture = 
 	
 	is_triggered_only = yes
-	fire_only_once = no
 
 	option = {		#成立新生的合作政府。
 		name = generic_territory.401.a

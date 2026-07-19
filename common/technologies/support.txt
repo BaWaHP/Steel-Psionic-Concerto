@@ -1119,6 +1119,10 @@ technologies = {
 
 	tech_monster_tamer2 = {
 
+		enable_subunits = {
+			hq_monster_tamer_company
+		}
+
 		monster_tamer = {
 			max_organisation = 5
 			max_strength = 0.1

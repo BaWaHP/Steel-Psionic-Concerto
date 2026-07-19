@@ -34,35 +34,35 @@
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
-		has_country_flag = unlock_diplomacy
+		NOT = { has_country_flag = unlock_diplomacy }
 	}
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
-		has_country_flag = unlock_diplomacy
+		NOT = { has_country_flag = unlock_diplomacy }
 	}
 }
 
 DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
-		has_country_flag = unlock_diplomacy
+		NOT = { has_country_flag = unlock_diplomacy }
 	}
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
-		has_country_flag = unlock_diplomacy
+		NOT = { has_country_flag = unlock_diplomacy }
 	}
 }
 
 DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
-		has_country_flag = unlock_diplomacy
+		NOT = { has_country_flag = unlock_diplomacy }
 	}
 }
 
@@ -70,7 +70,7 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 	custom_trigger_tooltip = {
 		tooltip = lock_diplomacy
 		OR = {
-			has_country_flag = unlock_diplomacy
+			NOT = { has_country_flag = unlock_diplomacy }
 			is_debug = yes
 		}
 	}

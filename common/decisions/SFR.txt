@@ -896,13 +896,13 @@ SFH_battle_over_territory = {		#领土争夺战
 			command_power_gain_mult = -0.2
 		}
 
-		complete_effect = { add_political_power = -25 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { add_political_power = -25 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_2 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_2 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_2 = {
 						add_to_variable = { 
 							var = SFR_state_influence_var
 							value = 10
@@ -922,8 +922,8 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}	
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 10 } SFR_state_influence_var_up_effect = yes } }
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			hidden_effect = { var:SFH_bot_decision_pointer_2 = { set_variable = { SFR_state_influence_var_up_var = 10 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_2 = 0 }
 		}
 	}
 	SFR_infiltrate_state_3 = { 		#在[?SFH_bot_state_pointer:getName]发展组织
@@ -950,8 +950,8 @@ SFH_battle_over_territory = {		#领土争夺战
 
 		available = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
-				var:SFH_bot_decision_pointer_1 = {
+				limit = { check_variable = { SFH_bot_decision_pointer_3 > 0 } }
+				var:SFH_bot_decision_pointer_3 = {
 					custom_trigger_tooltip = {
 						tooltip = SFR_infiltrate_state_3_tr
 						check_variable = { SFR_state_influence_var < 50 }
@@ -982,13 +982,13 @@ SFH_battle_over_territory = {		#领土争夺战
 			command_power_gain_mult = -0.2
 		}
 
-		complete_effect = { add_political_power = -50 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { add_political_power = -50 add_command_power = -25 set_variable = { SFH_bot_decision_pointer_3 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_3 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_3 = {
 						add_to_variable = { 
 							var = SFR_state_influence_var
 							value = 8
@@ -1008,8 +1008,8 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}	
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 8 } SFR_state_influence_var_up_effect = yes } }
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			hidden_effect = { var:SFH_bot_decision_pointer_3 = { set_variable = { SFR_state_influence_var_up_var = 8 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_3 = 0 }
 		}
 	}
 	SFR_infiltrate_state_4 = { 		#在§Y[?SFH_bot_state_pointer:getName]§!维持根据地
@@ -1032,8 +1032,8 @@ SFH_battle_over_territory = {		#领土争夺战
 
 		available = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
-				var:SFH_bot_decision_pointer_1 = {
+				limit = { check_variable = { SFH_bot_decision_pointer_4 > 0 } }
+				var:SFH_bot_decision_pointer_4 = {
 					custom_trigger_tooltip = {
 						tooltip = SFR_infiltrate_state_4_tr
 						check_variable = { SFR_state_influence_var > 49 }
@@ -1055,13 +1055,13 @@ SFH_battle_over_territory = {		#领土争夺战
 		days_remove = 30
 		days_re_enable = 20
 
-		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_4 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_4 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_4 = {
 						add_to_variable = { 
 							var = SFR_state_influence_var
 							value = 6
@@ -1081,8 +1081,8 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}	
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_up_var = 6 } SFR_state_influence_var_up_effect = yes } }
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			hidden_effect = { var:SFH_bot_decision_pointer_4 = { set_variable = { SFR_state_influence_var_up_var = 6 } SFR_state_influence_var_up_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_4 = 0 }
 		}
 	}
 	SFR_infiltrate_state_5 = { 		#在§Y[?SFH_bot_state_pointer:getName]§!对抗青天军的影响
@@ -1108,8 +1108,8 @@ SFH_battle_over_territory = {		#领土争夺战
 
 		available = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
-				var:SFH_bot_decision_pointer_1 = {
+				limit = { check_variable = { SFH_bot_decision_pointer_5 > 0 } }
+				var:SFH_bot_decision_pointer_5 = {
 					custom_trigger_tooltip = {
 						tooltip = SFR_infiltrate_state_5_tr
 						check_variable = {
@@ -1135,13 +1135,13 @@ SFH_battle_over_territory = {		#领土争夺战
 		days_remove = 30
 		days_re_enable = 20
 
-		complete_effect = { set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { set_variable = { SFH_bot_decision_pointer_5 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_5 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_5 = {
 						add_to_variable = { 
 							var = QTA_state_influence_var
 							value = -4
@@ -1161,8 +1161,8 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}	
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { QTA_state_influence_var_down_var = 4 } QTA_state_influence_var_down_effect = yes } }
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			hidden_effect = { var:SFH_bot_decision_pointer_5 = { set_variable = { QTA_state_influence_var_down_var = 4 } QTA_state_influence_var_down_effect = yes } }
+			set_variable = { SFH_bot_decision_pointer_5 = 0 }
 		}
 	}
 	SFR_infiltrate_state_6 = { 		#从§Y[?SFH_bot_state_pointer:getName]§!盗取物资
@@ -1182,8 +1182,8 @@ SFH_battle_over_territory = {		#领土争夺战
 
 		available = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
-				var:SFH_bot_decision_pointer_1 = {
+				limit = { check_variable = { SFH_bot_decision_pointer_6 > 0 } }
+				var:SFH_bot_decision_pointer_6 = {
 					custom_trigger_tooltip = {
 						tooltip = SFR_infiltrate_state_6_tr
 						check_variable = {
@@ -1213,13 +1213,13 @@ SFH_battle_over_territory = {		#领土争夺战
 		days_remove = 30
 		days_re_enable = 60
 
-		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_6 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_6 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_6 = {
 						add_to_variable = { 
 							var = SFR_state_influence_var
 							value = -5
@@ -1321,8 +1321,8 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } owner = { add_stability = -0.02 } }
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			hidden_effect = { var:SFH_bot_decision_pointer_6 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } owner = { add_stability = -0.02 } }
+			set_variable = { SFH_bot_decision_pointer_6 = 0 }
 		}
 	}
 	SFR_infiltrate_state_7 = { 		#破坏§Y[?SFH_bot_state_pointer:getName]§!的设施
@@ -1349,13 +1349,13 @@ SFH_battle_over_territory = {		#领土争夺战
 		days_remove = 30
 		days_re_enable = 60
 
-		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_1 = SFH_bot_state_pointer } }
+		complete_effect = { add_command_power = -25 set_variable = { SFH_bot_decision_pointer_7 = SFH_bot_state_pointer } }
 
 		remove_effect = {
 			if = {
-				limit = { check_variable = { SFH_bot_decision_pointer_1 > 0 } }
+				limit = { check_variable = { SFH_bot_decision_pointer_7 > 0 } }
 				effect_tooltip = {
-					var:SFH_bot_decision_pointer_1 = {
+					var:SFH_bot_decision_pointer_7 = {
 						add_to_variable = { 
 							var = SFR_state_influence_var
 							value = -5
@@ -1417,9 +1417,9 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}	
 			}
-			hidden_effect = { var:SFH_bot_decision_pointer_1 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } }
+			hidden_effect = { var:SFH_bot_decision_pointer_7 = { set_variable = { SFR_state_influence_var_down_var = 5 } SFR_state_influence_var_down_effect = yes } }
 			hidden_effect = {
-				var:SFH_bot_decision_pointer_1 = {
+				var:SFH_bot_decision_pointer_7 = {
 					random_list = {
 						33 = {
 							damage_building = {
@@ -1443,7 +1443,7 @@ SFH_battle_over_territory = {		#领土争夺战
 					}
 				}
 			}
-			set_variable = { SFH_bot_decision_pointer_1 = 0 }
+			set_variable = { SFH_bot_decision_pointer_7 = 0 }
 		}
 	}
 
@@ -2199,9 +2199,9 @@ SFR_land_reform_decisions = {
 			if = {
 				limit = { NOT = { has_country_flag = SFR_land_reform_time_limit_late } }
 				activate_mission = SFR_land_reform_time_limit
-				add_stability = -0.2
-				add_war_support = -0.2
-				add_political_power = -200
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_political_power = -100
 				add_timed_idea = {
 					idea = SFR_declined_gov_credit
 					days = 180
@@ -4353,6 +4353,7 @@ SFR_propagate_revolution_decisions = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			add_research_slot = 1
+			country_event = SFR.850
 			set_cosmetic_tag = SFR_unif_tag_3
 			custom_effect_tooltip = SFR_form_unified_union_tt
 			hidden_effect = {

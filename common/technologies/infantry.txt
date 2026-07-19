@@ -142,6 +142,10 @@ technologies = {
 			military_police
 		}
 
+		enable_subunits = {
+			hq_military_police
+		}
+
 		military_police = {
 			need = {
 				support_equipment = -10
@@ -591,6 +595,7 @@ technologies = {
 		enable_subunits = {
 			melee_infantry
 			melee_support
+			hq_melee_infantry
 		}
 
 		path = {
@@ -948,6 +953,11 @@ technologies = {
 		
 		enable_equipments = {
 			melee_equipment_1
+		}
+
+		enable_subunits = {
+			hq_melee_infantry_company
+			field_melee_support
 		}
 
 		path = {
