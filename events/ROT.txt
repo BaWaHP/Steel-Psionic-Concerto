@@ -185,6 +185,10 @@ country_event = {	#圣城之子
 		name = ROT.9.a
 		add_manpower = -55
 		add_stability = -0.05
+		country_event = {
+			id = ROT.21
+			days = 1
+		}
 	}
 }
 
@@ -199,6 +203,10 @@ country_event = {	#经济萧条波及我国
 	option = {
 		name = ROT.10.a
 		add_ideas = ROT_econ_depression_1
+		country_event = {
+			id = ROT.22
+			days = 1
+		}
 	}
 }
 
@@ -357,6 +365,15 @@ country_event = {	#揭下伪装
 	
 	option = {
 		name = ROT.17.a
+		add_stability = -0.1
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.1
+		}
 		country_event = {
 			id = ROT.18
 			days = 1
@@ -374,8 +391,208 @@ country_event = {	#南巴驻军的进军
 	
 	option = {
 		name = ROT.18.a
+		custom_effect_tooltip = ROT.18.a.tt
 		ROT_kick_rsb_ass_on_setup = yes
 		hidden_effect = { SPC_UDT_startup_effect = yes }
+	}
+}
+
+country_event = {	#新调令
+	id = ROT.19
+	title = ROT.19.t
+	desc = ROT.19.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.19.a
+	}
+}
+
+country_event = {	#复仇骑士
+	id = ROT.20
+	title = ROT.20.t
+	desc = ROT.20.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.20.a
+	}
+}
+
+country_event = {	#一则汇报
+	id = ROT.21
+	title = ROT.21.t
+	desc = ROT.21.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.21.a
+		add_political_power = 50
+	}
+}
+
+country_event = {	#铁路工人罢工！
+	id = ROT.22
+	title = ROT.22.t
+	desc = ROT.22.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ROT.22.a
+		add_political_power = -50
+		add_timed_idea = {
+			idea = ROT_traffic_paralysis
+			days = 45
+		}
+	}
+
+	option = {
+		name = ROT.22.b
+		add_manpower = -5880
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = -0.05
+		}
+		add_timed_idea = {
+			idea = ROT_traffic_paralysis
+			days = 60
+		}
+	}
+}
+
+country_event = {	#提特兰人的讨价还价
+	id = ROT.23
+	title = ROT.23.t
+	desc = ROT.23.d
+	#picture =
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROT.23.a
+		custom_effect_tooltip = ROT.23.a.tt
+		add_political_power = -30
+		add_manpower = -3200
+		send_equipment = {
+			type = infantry_equipment
+			amount = 1000
+			target = ROT
+		}
+		send_equipment = {
+			type = uniform_equipment
+			amount = 1000
+			target = ROT
+		}
+		send_equipment = {
+			type = train_equipment
+			amount = 5
+			target = ROT
+		}
+		ROT = {
+			country_event = {
+				id = ROT.24
+				days = 1
+			}
+			set_country_flag = ROT_rsb_accepted_bargain_flag
+		}
+	}
+
+	option = {
+		name = ROT.23.b
+		custom_effect_tooltip = ROT.23.b.tt
+		add_war_support = 0.01
+		ROT = {
+			country_event = {
+				id = ROT.25
+				days = 1
+			}
+			set_country_flag = ROT_rsb_refused_bargain_flag
+		}
+	}
+}
+
+country_event = {	#互惠互利
+	id = ROT.24
+	title = ROT.24.t
+	desc = ROT.24.d
+	#picture =
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROT.24.a
+		add_popularity = {
+			ideology = conservative_republican
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = liberal_republican
+			popularity = 0.02
+		}
+		419 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+			}
+		}
+		add_tech_bonus = {
+			name = ROT_mutually_beneficial_air_bonus
+			bonus = 0.5
+			uses = 1
+			category = air_equipment
+		}
+		add_tech_bonus = {
+			name = ROT_mutually_beneficial_armor_bonus
+			bonus = 0.5
+			uses = 1
+			category = armor
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = {	#南巴拒绝接受我方提议！
+	id = ROT.25
+	title = ROT.25.t
+	desc = ROT.25.d
+	#picture =
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROT.25.a
+		add_popularity = {
+			ideology = national_socialist
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {	#提特兰人的离去
+	id = ROT.26
+	title = ROT.26.t
+	desc = ROT.26.d
+	#picture =
+
+	is_triggered_only = yes
+
+	option = {
+		name = ROT.26.a
+		add_war_support = -0.1
+		add_manpower = -5500
 	}
 }
 

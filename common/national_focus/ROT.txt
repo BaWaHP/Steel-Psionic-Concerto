@@ -68,6 +68,10 @@ focus_tree = {
 			add_manpower = -2000
 			add_stability = 0.1
 			SPC_secret_police_policy_up = yes
+			country_event = {
+				id = ROT.19
+				days = 1
+			}
 		}
 	}
 
@@ -264,6 +268,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = 50
+			country_event = {
+				id = ROT.20
+				days = 1
+			}
 		}
 	}
 
@@ -357,6 +365,454 @@ focus_tree = {
 			country_event = {
 				id = ROT.13
 				days = 1
+			}
+		}
+	}
+
+	#中巴内战干涉
+
+	focus = {	#履行联邦成员国的义务
+		id = ROT_fulfill_the_obligations
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = 15
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allow_branch = {
+			has_country_flag = ROT_focus_1
+			has_country_flag = ROT_traffic_paralysis_flag
+		}
+
+		#prerequisite = { focus = }
+		#relative_position_id = 
+		#mutually_exclusive = { focus = }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {	#鼎力相助
+		id = ROT_wholehearted_support
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_fulfill_the_obligations }
+		relative_position_id = ROT_fulfill_the_obligations
+		mutually_exclusive = { focus = ROT_bargain_with_rsb }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {	#动员兵工厂
+		id = ROT_mobilize_arsenals
+		icon = GFX_focus_AUS_raid_military_storages
+		x = -1
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_wholehearted_support }
+		relative_position_id = ROT_wholehearted_support
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_equipment_to_stockpile = {
+				type = uniform_equipment_0
+				amount = 500
+				producer = ROT
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				producer = ROT
+			}
+		}
+	}
+
+	focus = {	#确保交通运输
+		id = ROT_ensure_transportation
+		icon = GFX_focus_generic_railroad
+		x = 1
+		y = 1
+		cost = 1
+
+		available = {
+			RCC = { exists = yes }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_wholehearted_support }
+		relative_position_id = ROT_wholehearted_support
+
+		completion_reward = {
+			422 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_manpower = -5000
+			}
+			if = {
+				limit = { RCC = { exists = yes } }
+				give_market_access = RCC
+				add_opinion_modifier = {
+					target = RCC
+					modifier = ROT_wholehearted_support_opinion
+				}
+				RCC = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+					add_manpower = 1000
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 500
+						producer = ROT
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 200
+						producer = ROT
+					}
+					add_equipment_to_stockpile = {
+						type = train_equipment
+						amount = 5
+						producer = ROT
+					}
+					add_cic = 1000
+				}
+			}
+			if = {
+				limit = { FWJ = { exists = yes } }
+				give_market_access = FWJ
+				add_opinion_modifier = {
+					target = FWJ
+					modifier = ROT_wholehearted_support_opinion
+				}
+				FWJ = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+				}
+			}
+			if = {
+				limit = { FEJ = { exists = yes } }
+				give_market_access = FEJ
+				add_opinion_modifier = {
+					target = FEJ
+					modifier = ROT_wholehearted_support_opinion
+				}
+				FEJ = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#支援中巴合法政府
+		id = ROT_support_central_bastia_legitimate_government
+		icon = GFX_focus_generic_fascist_troops
+		x = 0
+		y = 2
+		cost = 1
+
+		available = {
+			RCC = {
+				exists = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = {
+			focus = ROT_mobilize_arsenals
+			focus = ROT_ensure_transportation
+		}
+		relative_position_id = ROT_wholehearted_support
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = conservative_republican
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = liberal_republican
+				popularity = -0.05
+			}
+			add_ideas = ROT_support_central_bastia_government_idea
+		}
+	}
+
+	focus = {	#讨价还价
+		id = ROT_bargain_with_rsb
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		cost = 1
+
+		available = {
+			RCC = {
+				exists = yes
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_fulfill_the_obligations }
+		relative_position_id = ROT_fulfill_the_obligations
+		mutually_exclusive = { focus = ROT_wholehearted_support }
+
+		completion_reward = {
+			RSB = {
+				country_event = {
+					id = ROT.23
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {	#公平的交易，外交的胜利
+		id = ROT_fair_trade_diplomatic_victory
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 1
+		cost = 1
+
+		available = {
+			has_country_flag = ROT_rsb_accepted_bargain_flag
+		}
+
+		bypass = {
+			RCC = { exists = no }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_bargain_with_rsb }
+		relative_position_id = ROT_bargain_with_rsb
+		mutually_exclusive = { focus = ROT_publicly_funded_tour }
+
+		completion_reward = {
+			422 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			if = {
+				limit = { RCC = { exists = yes } }
+				give_market_access = RCC
+				give_military_access = RCC
+				add_opinion_modifier = {
+					target = RCC
+					modifier = ROT_wholehearted_support_opinion
+				}
+				RCC = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+					add_ideas = ROT_titlan_central_bastia_trade_agreement
+				}
+			}
+			if = {
+				limit = { FWJ = { exists = yes } }
+				give_market_access = FWJ
+				give_military_access = FWJ
+				add_opinion_modifier = {
+					target = FWJ
+					modifier = ROT_wholehearted_support_opinion
+				}
+				FWJ = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+				}
+			}
+			if = {
+				limit = { FEJ = { exists = yes } }
+				give_market_access = FEJ
+				give_military_access = FEJ
+				add_opinion_modifier = {
+					target = FEJ
+					modifier = ROT_wholehearted_support_opinion
+				}
+				FEJ = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = ROT_wholehearted_support_opinion
+					}
+				}
+			}
+		}
+	}
+
+	focus = {	#上啊！提特兰人！
+		id = ROT_go_teotland
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+			RCC = { exists = yes }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_fair_trade_diplomatic_victory }
+		relative_position_id = ROT_fair_trade_diplomatic_victory
+
+		completion_reward = {
+			add_manpower = -10000
+			RCC = { add_manpower = 10000 }
+			add_ideas = ROT_full_support_central_bastia_government_idea
+		}
+	}
+
+	focus = {	#公费“旅游”
+		id = ROT_publicly_funded_tour
+		icon = GFX_focus_generic_railroad
+		x = 1
+		y = 1
+		cost = 1
+
+		available = {
+			has_country_flag = ROT_rsb_refused_bargain_flag
+			RCC = { exists = yes }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_bargain_with_rsb }
+		relative_position_id = ROT_bargain_with_rsb
+		mutually_exclusive = { focus = ROT_fair_trade_diplomatic_victory }
+
+		completion_reward = {
+			add_manpower = -5000
+			RCC = {
+				add_manpower = 5000
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {	#保卫提特兰侨民
+		id = ROT_protect_teotland_expatriates
+		icon = GFX_focus_generic_population_growth
+		x = 0
+		y = 1
+		cost = 1
+
+		available = {
+			RCC = { exists = yes }
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = ROT_publicly_funded_tour }
+		relative_position_id = ROT_publicly_funded_tour
+
+		completion_reward = {
+			add_political_power = 75
+			213 = { add_manpower = -10993 }
+			422 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_manpower = 10893
+			}
+			add_popularity = {
+				ideology = religious_extremism
+				popularity = 0.05
+			}
+			RCC = {
+				country_event = {
+					id = ROT.26
+					days = 1
+				}
 			}
 		}
 	}

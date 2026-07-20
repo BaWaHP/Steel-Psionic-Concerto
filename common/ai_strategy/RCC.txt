@@ -1,0 +1,69 @@
+RCC_war_support = {
+	allowed = {
+		OR = {
+			SPC_generic_region_trigger_51 = yes
+			tag = ROT
+		}
+	}
+	enable = { 
+		RCC = { has_war = yes } 
+		OR = {
+			AND = {
+				SPC_generic_region_trigger_51 = yes
+				OR = {
+					has_government = worldunion_democrat
+					has_government = liberal_republican
+					has_government = conservative_republican
+					has_government = authoritarian_republican
+				}
+			}
+			AND = {
+				tag = ROT
+				OR = {
+					has_idea = ROT_support_central_bastia_government_idea
+					has_idea = ROT_full_support_central_bastia_government_idea
+					has_completed_focus = ROT_protect_teotland_expatriates
+				}
+			}
+		}
+	}
+
+	abort = { has_global_flag = SPC_region_unified_global_11 }
+
+	ai_strategy = {
+		type = support
+		id = FWJ
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FWJ
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = RCC
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RCC
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = FEJ
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FEJ
+		value = 1000
+	}
+}
+

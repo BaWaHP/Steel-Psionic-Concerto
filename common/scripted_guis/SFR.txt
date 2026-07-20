@@ -139,13 +139,13 @@ scripted_gui = {
 				if = {
 					limit = { has_completed_focus = SFR_comrade_pistol_speech }
 					country_event = {
-						id = SFR.419
+						id = SFR.420
 						days = 3
 					}
 				}
 				else = {
 					country_event = {
-						id = SFR.420
+						id = SFR.419
 						days = 3
 					}
 				}

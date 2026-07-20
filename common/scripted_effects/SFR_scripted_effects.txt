@@ -1224,7 +1224,7 @@ SFR_workers_and_peasants_congress_all_mod_2_down_2 = {
 SFR_party_cooling_effect = {
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_1_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_1_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_1_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_1_1
 			min = 50
@@ -1232,17 +1232,17 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_1_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_1_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_1_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_2_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_2_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_2_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_2_1
 			min = 50
@@ -1250,17 +1250,17 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_2_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_2_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_2_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_3_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_3_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_3_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_3_1
 			min = 50
@@ -1268,19 +1268,19 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_3_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_3_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_3_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 	if = {
 		limit = { has_completed_focus = SFR_all_power_to_workers_and_peasants }
 		if = {
 			limit = { check_variable = { SFR_red_star_over_capital_group_4_1 > 50 } }
-			add_to_variable = { SFR_red_star_over_capital_group_4_1 = 2.5 }
+			add_to_variable = { SFR_red_star_over_capital_group_4_1 = -2.5 }
 			clamp_variable = {
 				var = SFR_red_star_over_capital_group_4_1
 				min = 50
@@ -1288,18 +1288,18 @@ SFR_party_cooling_effect = {
 			}
 		}
 		if = {
-			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 > 50 } }
+			limit = { check_variable = { SFR_red_star_over_capital_group_4_2 < 50 } }
 			add_to_variable = { SFR_red_star_over_capital_group_4_2 = 2.5 }
 			clamp_variable = {
 				var = SFR_red_star_over_capital_group_4_2
-				min = 50
-				max = 0
+				min = 0
+				max = 50
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_5_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_5_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_5_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_5_1
 			min = 50
@@ -1307,17 +1307,17 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_5_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_5_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_5_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_6_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_6_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_6_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_6_1
 			min = 50
@@ -1325,19 +1325,19 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_6_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_6_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_6_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_6_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 	if = {
 		limit = { has_completed_focus = SFR_national_assembly_proposal }
 		if = {
 			limit = { check_variable = { SFR_red_star_over_capital_group_7_1 > 50 } }
-			add_to_variable = { SFR_red_star_over_capital_group_7_1 = 2.5 }
+			add_to_variable = { SFR_red_star_over_capital_group_7_1 = -2.5 }
 			clamp_variable = {
 				var = SFR_red_star_over_capital_group_7_1
 				min = 50
@@ -1345,18 +1345,18 @@ SFR_party_cooling_effect = {
 			}
 		}
 		if = {
-			limit = { check_variable = { SFR_red_star_over_capital_group_7_2 > 50 } }
+			limit = { check_variable = { SFR_red_star_over_capital_group_7_2 < 50 } }
 			add_to_variable = { SFR_red_star_over_capital_group_7_2 = 2.5 }
 			clamp_variable = {
 				var = SFR_red_star_over_capital_group_7_2
-				min = 50
-				max = 0
+				min = 0
+				max = 50
 			}
 		}
 	}
 	if = {
 		limit = { check_variable = { SFR_red_star_over_capital_group_8_1 > 50 } }
-		add_to_variable = { SFR_red_star_over_capital_group_8_1 = 2.5 }
+		add_to_variable = { SFR_red_star_over_capital_group_8_1 = -2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_8_1
 			min = 50
@@ -1364,12 +1364,12 @@ SFR_party_cooling_effect = {
 		}
 	}
 	if = {
-		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 > 50 } }
+		limit = { check_variable = { SFR_red_star_over_capital_group_8_2 < 50 } }
 		add_to_variable = { SFR_red_star_over_capital_group_8_2 = 2.5 }
 		clamp_variable = {
 			var = SFR_red_star_over_capital_group_8_2
-			min = 50
-			max = 0
+			min = 0
+			max = 50
 		}
 	}
 }

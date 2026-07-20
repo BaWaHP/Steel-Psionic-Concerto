@@ -193,6 +193,24 @@ ideas = {
 			}
 		}
 
+		ROT_traffic_paralysis = {		#交通瘫痪
+			picture = ICE_general_strike
+			allowed = { original_tag = ROT }
+			removal_cost = -1
+
+			on_remove = {
+				set_country_flag = ROT_traffic_paralysis_flag
+				mark_focus_tree_layout_dirty = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.2
+				custom_modifier_tooltip = after_idea_new_focus_tt
+			}
+		}
+
 		ROT_rsb_troops_compromise = {		#南巴驻军妥协
 			picture = SPR_disbanded_army
 			allowed = { original_tag = ROT }
@@ -778,6 +796,64 @@ ideas = {
 			targeted_modifier = {
 				tag = LNR
 				send_volunteer_size = 1
+			}
+		}
+
+		#支援中巴合法政府
+		ROT_support_central_bastia_government_idea = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = { original_tag = ROT }
+			removal_cost = -1
+
+			cancel = { RCC = { exists = no } }
+			rule = { can_send_volunteers = yes }
+
+			modifier = {
+				experience_gain_army = 0.05
+			}
+
+			targeted_modifier = {
+				tag = RCC
+				send_volunteer_size = 1
+			}
+		}
+
+		#全力支援中巴合法政府
+		ROT_full_support_central_bastia_government_idea = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = { original_tag = ROT }
+			removal_cost = -1
+
+			cancel = { RCC = { exists = no } }
+			rule = { can_send_volunteers = yes }
+
+			modifier = {
+				experience_gain_army = 0.1
+			}
+
+			targeted_modifier = {
+				tag = RCC
+				send_volunteer_size = 2
+			}
+		}
+
+		#提特兰——中巴贸易协议
+		ROT_titlan_central_bastia_trade_agreement = {
+			picture = can_wartime_prices_and_trade_board
+			allowed = { original_tag = RCC }
+			removal_cost = -1
+
+			cancel = { ROT = { exists = no } }
+
+			modifier = {
+				stability_factor = 0.1
+				no_supply_grace = 24
+				monthly_living_standard_development_process = 1
+			}
+
+			targeted_modifier = {
+				tag = ROT
+				trade_cost_for_target_factor = -0.2
 			}
 		}
 

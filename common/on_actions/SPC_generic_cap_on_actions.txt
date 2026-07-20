@@ -416,13 +416,12 @@ on_actions = {
 				#夹击牛头人特供#
 				if = {
 					limit = { 
-						ROOT = {
-							tag = IMC
-							any_enemy_country = {
-								has_idea = ROT_common_struggle
-							}
-						}
+						FROM = { OR = { tag = ROT tag = KDK } }
+						ROOT = { tag = IMC }
+						ROT = { exists = yes has_war_with = IMC has_idea = ROT_common_struggle }
+						KDK = { exists = yes has_war_with = IMC has_idea = ROT_common_struggle }
 					}
+
 					set_global_flag = skip_default_capitulation
 				}
 
