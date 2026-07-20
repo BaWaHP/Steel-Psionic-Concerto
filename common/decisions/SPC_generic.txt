@@ -281,12 +281,12 @@ SPC_generic_rebuild_decision_category = {
 		icon = generic_form_nation
 
 		available = {
-			owns_state = 34
+			owns_state = 43
 			PEO = { exists = no }
 		}
 
 		visible = {
-			owns_state = 34
+			owns_state = 43
 			PEO = { exists = no }
 			SPC_generic_region_trigger_2_3 = no
 			any_of_scopes = {

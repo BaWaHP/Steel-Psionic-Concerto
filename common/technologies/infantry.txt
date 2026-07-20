@@ -1439,6 +1439,11 @@ technologies = {
 	#扩大重武器使用
 	heavy_infantry_weapons = {
 
+		enable_subunits = {
+			fire_support
+			mot_fire_support
+		}
+
 		category_light_infantry = {
 			hard_attack = 0.05
 			defense = 0.05

@@ -1930,6 +1930,10 @@ CLD_north_bureau_decisions = {
 		selectable_mission = no
 		days_mission_timeout = 365
 
+		complete_effect = {
+			set_country_flag = CLD_security_collapse_flag
+		}
+
 		timeout_effect = {
 			set_country_flag = CLD_security_collapse_flag
 			add_ideas = CLD_northern_security_collapse
@@ -1956,6 +1960,10 @@ CLD_north_bureau_decisions = {
 		selectable_mission = no
 		days_mission_timeout = 365
 
+		complete_effect = {
+			set_country_flag = CLD_economic_collapse_flag
+		}
+
 		timeout_effect = {
 			set_country_flag = CLD_economic_collapse_flag
 			add_ideas = CLD_northern_economic_collapse
@@ -1981,6 +1989,10 @@ CLD_north_bureau_decisions = {
 		is_good = no
 		selectable_mission = no
 		days_mission_timeout = 365
+
+		complete_effect = {
+			set_country_flag = CLD_plague_outbreak_flag
+		}
 
 		timeout_effect = {
 			set_country_flag = CLD_plague_outbreak_flag
