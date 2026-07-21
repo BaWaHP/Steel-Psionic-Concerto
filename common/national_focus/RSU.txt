@@ -504,6 +504,7 @@ focus_tree = {
 		cost = 2.15
 
 		available = {
+			date > 1998.7.10
 		}
 
 		available_if_capitulated = yes
@@ -785,10 +786,6 @@ focus_tree = {
 		y = 1
 		cost = 1.43
 		available_if_capitulated = yes
-
-		available = {
-			date > 1998.7.10
-		}
 
 		ai_will_do = { factor = 100 }
 

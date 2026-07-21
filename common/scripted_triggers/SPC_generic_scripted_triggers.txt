@@ -176,7 +176,10 @@ SPC_generic_region_trigger_51 = {	#南巴任意政权
 		#特尼安
 		SPC_generic_region_trigger_50 = yes
 		#南巴
-		tag = RSB tag = RSU tag = RRF tag = TCW tag = KTL tag = ROK
+		tag = RSB 
+		tag = RSU tag = RRF 
+		tag = TCW tag = KTL 
+		tag = ROK
 		#二元王国
 		tag = HGL tag = AST tag = BSK
 		#顿伏茨克
@@ -189,6 +192,26 @@ SPC_generic_region_trigger_51 = {	#南巴任意政权
 SPC_generic_region_trigger_52 = {	#鲁萨尔任意吃鸡政权
 	OR = { 
 		tag = RSU tag = RRF
+	}
+}
+
+SPC_generic_region_trigger_53 = {	#南巴（南方）任意政权
+	OR = { 
+		#特尼安
+		SPC_generic_region_trigger_50 = yes
+		#南巴
+		tag = RSB tag = RSU tag = RRF tag = TCW tag = KTL tag = ROK
+	}
+}
+
+SPC_generic_region_trigger_54 = {	#南巴（北方）任意政权
+	OR = { 
+		#二元王国
+		tag = HGL tag = AST tag = BSK
+		#顿伏茨克
+		tag = GDD tag = FCR
+		#女大公
+		tag = UPV
 	}
 }
 
@@ -239,6 +262,7 @@ SPC_generic_region_trigger_200 = {	#中巴任意政权
 
 		tag = OPH
 		tag = AYL
+		tag = DMT
 
 		tag = FWJ
 		tag = RCC

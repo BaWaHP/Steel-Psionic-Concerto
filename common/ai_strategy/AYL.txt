@@ -1,0 +1,52 @@
+AYL_war_support = {
+	allowed = {
+		SPC_generic_region_trigger_54 = yes
+	}
+	enable = { 
+		OR = {
+			AYL = { has_war = yes } 
+			DMT = { has_war = yes } 
+			OPH = { has_war = yes } 
+		}
+		SPC_generic_region_trigger_54 = yes
+	}
+
+	abort = { has_global_flag = SPC_region_unified_global_11 }
+
+	ai_strategy = {
+		type = support
+		id = AYL
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AYL
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = DMT
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = DMT
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = support
+		id = OPH
+		value = 300
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = OPH
+		value = 1000
+	}
+}
+
