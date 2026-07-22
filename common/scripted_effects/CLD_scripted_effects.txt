@@ -117,6 +117,82 @@ SPC_CLD_startup_effect = {
 	}
 }
 
+CLD_cadre_team_level_up = {
+	if = {
+		limit = { has_idea = CLD_cadre_team_1 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_1
+			add_idea = CLD_cadre_team_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_2 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_2
+			add_idea = CLD_cadre_team_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_3 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_3
+			add_idea = CLD_cadre_team_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_4 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_4
+			add_idea = CLD_cadre_team_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_5 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_5
+			add_idea = CLD_cadre_team_6
+		}
+	}
+}
+
+CLD_cadre_team_level_down = {
+	if = {
+		limit = { has_idea = CLD_cadre_team_6 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_6
+			add_idea = CLD_cadre_team_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_5 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_5
+			add_idea = CLD_cadre_team_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_4 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_4
+			add_idea = CLD_cadre_team_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_3 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_3
+			add_idea = CLD_cadre_team_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = CLD_cadre_team_2 }
+		swap_ideas = {
+			remove_idea = CLD_cadre_team_2
+			add_idea = CLD_cadre_team_1
+		}
+	}
+}
+
 CLD_new_liberated_zone_init = {
 	effect_tooltip = { add_dynamic_modifier = { modifier = CLD_new_liberated_zone_tt } }
 	hidden_effect = { add_dynamic_modifier = { modifier = CLD_new_liberated_zone } }

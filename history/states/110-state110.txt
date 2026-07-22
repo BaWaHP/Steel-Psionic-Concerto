@@ -12,7 +12,8 @@ state={
 		add_core_of = NCD
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
+			industrial_complex = 3
+			arms_factory = 1
 			dockyard = 1
 			20605 = {
 				naval_base = 1
@@ -27,8 +28,8 @@ state={
 	provinces={
 		862 2143 3996 5834 7899 8244 20493 20541 20593 20605 20635 20667 20698 20706 
 	}
-	manpower=967284
+	manpower=1967284
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=metropolis
 	local_supplies=0.000
 }

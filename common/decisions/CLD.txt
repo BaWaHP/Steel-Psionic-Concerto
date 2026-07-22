@@ -259,6 +259,7 @@ CLD_forming_emergency_committe_decisions = {
 			add_manpower = 1000
 			add_war_support = 0.03
 			add_to_variable = { CLD_intelligence_security_review_count = 1 }
+			CLD_cadre_team_level_up = yes
 		}
 
 		modifier = {
@@ -299,6 +300,7 @@ CLD_forming_emergency_committe_decisions = {
 
 		remove_effect = {
 			add_to_variable = { CLD_youth_leadership_selection_count = 1 }
+			CLD_cadre_team_level_up = yes
 			if = {
 				limit = { has_idea = CLD_uncomplete_managing_system }
 				swap_ideas = {

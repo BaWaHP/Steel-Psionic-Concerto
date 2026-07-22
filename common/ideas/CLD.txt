@@ -317,6 +317,120 @@ ideas = {
 	}
 
 	country = {
+		# 干部队伍：纪律全无，千疮百孔
+		CLD_cadre_team_1 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				political_power_gain = -0.1
+				monthly_living_standard_development_process = -5
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		# 干部队伍：死板僵化，作风涣散
+		CLD_cadre_team_2 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				political_power_gain = -0.01
+				monthly_living_standard_development_process = -3
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		# 干部队伍：作风懒散，腐败仍存
+		CLD_cadre_team_3 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		# 干部队伍：腐败微存
+		CLD_cadre_team_4 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		# 干部队伍：作风严密
+		CLD_cadre_team_5 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# 干部队伍：纪律严明，忠诚可靠，清正廉洁
+		CLD_cadre_team_6 = {
+			picture = CLD_uncomplete_managing_system
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.1
+				pioneer_communism_drift = 0.01
+				revolutionary_communism_drift = 0.01
+			}
+		}
+
+		# 国家政权组织：赋权地方
+		CLD_state_power_organization_local_empowerment = {
+			picture = CLD_commue_in_conflicts
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				line_change_production_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.2
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# 基本完成的南方土改
+		CLD_completed_southern_land_reform = {
+			picture = CLD_idea_progress_the_plains
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				weekly_manpower = 50
+				production_factory_efficiency_gain_factor = 0.05
+				monthly_living_standard_development_process = 1
+				monthly_agricultural_development_process = 1
+			}
+		}
+
 		#哈士奇的馈赠
 		CLD_husky_gift = {
 			picture = generic_morale_bonus
