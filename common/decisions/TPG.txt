@@ -1,0 +1,139 @@
+TPG_divine_arts_category = {
+	# 施行神术：沃土丰年
+	TPG_divine_art_bountiful_harvest = {
+		icon = GFX_decision_generic_welfare
+		priority = 40
+		cost = 0
+		days_remove = 300
+		days_re_enable = 0
+		visible = {
+			original_tag = TPG
+		}
+		available = {
+			has_country_leader = {
+				character = TPG_Gilania_Alphonse_III
+				ruling_only = yes
+			}
+			NOT = {
+				OR = {
+					has_decision = TPG_divine_art_bountiful_harvest
+					has_decision = TPG_divine_art_blessed_machinery
+					has_decision = TPG_divine_art_vanguard_spirit
+					has_decision = TPG_divine_art_gift_of_enlightenment
+				}
+			}
+		}
+		modifier = {
+			monthly_population = 0.1
+			stability_weekly = 0.005
+			war_support_weekly = 0.005
+			monthly_agricultural_development_process = 1
+			monthly_environment_development_process = 1
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	# 施行神术：百工祝圣
+	TPG_divine_art_blessed_machinery = {
+		icon = GFX_decision_generic_factory
+		priority = 30
+		cost = 0
+		days_remove = 300
+		days_re_enable = 0
+		visible = {
+			original_tag = TPG
+		}
+		available = {
+			has_country_leader = {
+				character = TPG_Gilania_Alphonse_III
+				ruling_only = yes
+			}
+			NOT = {
+				OR = {
+					has_decision = TPG_divine_art_bountiful_harvest
+					has_decision = TPG_divine_art_blessed_machinery
+					has_decision = TPG_divine_art_vanguard_spirit
+					has_decision = TPG_divine_art_gift_of_enlightenment
+				}
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			factory_energy_consumption = -0.1
+			monthly_industrial_development_process = 1
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	# 施行神术：陷阵之志
+	TPG_divine_art_vanguard_spirit = {
+		icon = GFX_decision_generic_army_support
+		priority = 20
+		cost = 0
+		days_remove = 300
+		days_re_enable = 0
+		visible = {
+			original_tag = TPG
+		}
+		available = {
+			has_country_leader = {
+				character = TPG_Gilania_Alphonse_III
+				ruling_only = yes
+			}
+			NOT = {
+				OR = {
+					has_decision = TPG_divine_art_bountiful_harvest
+					has_decision = TPG_divine_art_blessed_machinery
+					has_decision = TPG_divine_art_vanguard_spirit
+					has_decision = TPG_divine_art_gift_of_enlightenment
+				}
+			}
+		}
+		modifier = {
+			army_org_factor = 0.05
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+			monthly_military_development_process = 1
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	# 施行神术：启明之赐
+	TPG_divine_art_gift_of_enlightenment = {
+		icon = GFX_decision_generic_research
+		priority = 10
+		cost = 0
+		days_remove = 300
+		days_re_enable = 0
+		visible = {
+			original_tag = TPG
+		}
+		available = {
+			has_country_leader = {
+				character = TPG_Gilania_Alphonse_III
+				ruling_only = yes
+			}
+			NOT = {
+				OR = {
+					has_decision = TPG_divine_art_bountiful_harvest
+					has_decision = TPG_divine_art_blessed_machinery
+					has_decision = TPG_divine_art_vanguard_spirit
+					has_decision = TPG_divine_art_gift_of_enlightenment
+				}
+			}
+		}
+		modifier = {
+			research_speed_factor = 0.05
+			state_science_development_monthly = 0.0025
+			state_magic_development_monthly = 0.0025
+			monthly_research_development_process = 1
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

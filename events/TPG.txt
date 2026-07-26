@@ -1,37 +1,121 @@
-
 add_namespace = TPG
 add_namespace = TPGNews
-
-country_event = {	#内战爆发
+country_event = {
+	# 内战爆发
 	id = TPG.0
 	title = TPG.0.t
 	desc = TPG.0.d
-
 	is_triggered_only = yes
-
 	option = {
 		name = TPG.0.a
-		every_core_state = { add_core_of = ROG }
-		ROG = { 
-			transfer_state = 32 transfer_state = 33 transfer_state = 55 
+		every_core_state = {
+			add_core_of = ROG
+		}
+		ROG = {
+			transfer_state = 32
+			transfer_state = 33
+			transfer_state = 55
 			SPC_ROG_startup_effect = yes
+		}
+		if = {
+			limit = { WOM = { exists = yes } }
+			WOM = { country_event = TPG.1 }
+		}
+		if = {
+			limit = { SFH = { exists = yes } }
+			SFH = { country_event = TPG.2 }
 		}
 		news_event = TPGNews.1
 	}
 }
+country_event = {
+	# 吉拉尼亚陷入火海
+	id = TPG.1
+	title = TPG.1.t
+	desc = TPG.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = TPG.1.a
+		send_equipment = {
+			target = TPG
+			type = infantry_equipment
+			amount = 1000
+			old_prioritised = yes
+		}
+	}
+
+	option = {
+		name = TPG.1.b
+		add_political_power = 50
+		custom_effect_tooltip = TPG.1.b.tt
+	}
+}
+country_event = {
+	# 吉拉尼亚陷入内战
+	id = TPG.2
+	title = TPG.2.t
+	desc = TPG.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = TPG.2.a
+		send_equipment = {
+			target = ROG
+			type = infantry_equipment
+			amount = 1000
+			old_prioritised = yes
+		}
+		custom_effect_tooltip = TPG.2.a.tt
+	}
+
+	option = {
+		name = TPG.2.b
+	}
+}
 
 ###新闻###
-
-news_event = {		#吉拉尼亚内战爆发？
+news_event = {
+	# 吉拉尼亚内战爆发
 	id = TPGNews.1
 	title = TPGNews.1.t
 	desc = TPGNews.1.d
-	picture = GFX_news_event_generic_16
-	
+	picture = GFX_news_event_generic_61
+
 	major = yes
 	is_triggered_only = yes
-	
+
 	option = {
 		name = TPGNews.1.a
+	}
+}
+
+news_event = {
+	# 吉拉尼亚共和国胜利
+	id = TPGNews.2
+	title = TPGNews.2.t
+	desc = TPGNews.2.d
+	picture = GFX_news_event_generic_21
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = TPGNews.2.a
+	}
+}
+
+news_event = {
+	# 吉拉尼亚大公国胜利
+	id = TPGNews.3
+	title = TPGNews.3.t
+	desc = TPGNews.3.d
+	picture = GFX_news_event_generic_62
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = TPGNews.3.a
 	}
 }

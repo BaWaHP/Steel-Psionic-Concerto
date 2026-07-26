@@ -152,6 +152,24 @@ on_actions = {
 					SFH = { set_country_flag = SFH_nfh_end_civil_war }
 				}
 
+				###吉拉尼亚内战###
+				#共和国胜利#
+				if = {
+					limit = {
+						FROM = { tag = ROG }
+						ROOT = { tag = TPG }
+					}
+					news_event = TPGNews.2
+				}
+				#大公国胜利#
+				if = {
+					limit = {
+						FROM = { tag = TPG }
+						ROOT = { tag = ROG }
+					}
+					news_event = TPGNews.3
+				}
+
 				###沃姆内战###
 				if = {
 					limit = { 
