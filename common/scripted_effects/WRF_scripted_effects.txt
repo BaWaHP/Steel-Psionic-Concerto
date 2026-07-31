@@ -20,13 +20,6 @@
 SPC_WRF_startup_effect = {
 	###介绍页面###
 	set_variable = { SPC_intro_screen = 1 }
-	###普及度修正部分###
-	set_variable = { magic_development_monthly_buff = 0 }
-	set_variable = { science_development_monthly_buff = 0 }
-	every_owned_state = {
-		set_variable = { state_magic_monthly_buff = 0 }
-		set_variable = { state_science_monthly_buff = 0 }
-	}
 	###其它开局设置###
 	load_oob = "WRF"
 	inherit_technology = WDR

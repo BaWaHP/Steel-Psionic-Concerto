@@ -408,14 +408,6 @@ characters={
 				secretary_education
 				popular_figurehead
 			}
-			on_add = {
-				add_to_variable = { research_development_process = 2 }
-				add_to_variable = { science_development_monthly_buff = 2 }
-			}
-			on_remove = {
-				add_to_variable = { research_development_process = -2 }
-				add_to_variable = { science_development_monthly_buff = -2 }
-			}
 		}
 
 	}

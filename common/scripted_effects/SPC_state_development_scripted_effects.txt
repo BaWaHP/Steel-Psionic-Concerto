@@ -18,12 +18,8 @@
 
 
 SPC_states_development_startup = {
-	set_variable = { magic_development_monthly_buff = 0 }
-	set_variable = { science_development_monthly_buff = 0 }
 	SPC_state_development_initialization = yes
 	every_owned_state = {
-		set_variable = { state_magic_monthly_buff = 0 }
-		set_variable = { state_science_monthly_buff = 0 }
 		set_variable = { state_magic_progress = 0 }
 		set_variable = { state_magic_level = 0 }
 		set_variable = { state_science_progress = 0 }
@@ -38,29 +34,34 @@ SPC_monthly_development_rate_update = {
 		set_variable = { state_science_monthly_basic = 0 }
 		set_variable = { mag_progress_bar_frame = state_magic_progress }
 		set_variable = { sci_progress_bar_frame = state_science_progress }
-		###魔法部分
+		###魔法部分###
 		set_variable = { amount_of_data_added_to_monthly_magic_progress = 0 }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = state_magic_monthly_buff }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = ROOT.modifier@state_magic_development_monthly }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = modifier@local_magic_development_monthly }
+
+		set_temp_variable = { state_magic_development_monthly_temp = ROOT.modifier@state_magic_development_monthly }
+		multiply_temp_variable = { state_magic_development_monthly_temp = 100 }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = state_magic_development_monthly_temp }
+
+		set_temp_variable = { local_magic_development_monthly_temp = modifier@local_magic_development_monthly }
+		multiply_temp_variable = { local_magic_development_monthly_temp = 100 }
+		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = local_magic_development_monthly_temp }
 		every_neighbor_state = {
 			if = {
 				limit = {
 					check_variable = { state_magic_level = 0 }
 				}
-				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -1 }
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -2 }
 			}
 			else_if = {
 				limit = {
 					check_variable = { state_magic_level = 1 }
 				}	
-				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -0.5 }
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -1 }
 			}
 			else_if = {
 				limit = {
 					check_variable = { state_magic_level = 2 }
 				}	
-				###nothing
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_magic_progress = -0.5 }
 			}
 			else_if = {
 				limit = {
@@ -94,29 +95,34 @@ SPC_monthly_development_rate_update = {
 			}			
 		}
 		set_variable = { state_magic_monthly_basic = amount_of_data_added_to_monthly_magic_progress }
-		###科学部分
+		###科学部分###
 		set_variable = { amount_of_data_added_to_monthly_science_progress = 0 }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = state_science_monthly_buff }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = ROOT.modifier@state_science_development_monthly }
-		add_to_variable = { amount_of_data_added_to_monthly_magic_progress = modifier@local_science_development_monthly }
+
+		set_temp_variable = { state_science_development_monthly_temp = ROOT.modifier@state_science_development_monthly }
+		multiply_temp_variable = { state_science_development_monthly_temp = 100 }
+		add_to_variable = { amount_of_data_added_to_monthly_science_progress = state_science_development_monthly_temp }
+
+		set_temp_variable = { local_science_development_monthly_temp = modifier@local_science_development_monthly }
+		multiply_temp_variable = { local_science_development_monthly_temp = 100 }
+		add_to_variable = { amount_of_data_added_to_monthly_science_progress = local_science_development_monthly_temp }
 		every_neighbor_state = {
 			if = {
 				limit = {
 					check_variable = { state_science_level = 0 }
 				}
-				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -1 }
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -2 }
 			}
 			else_if = {
 				limit = {
 					check_variable = { state_science_level = 1 }
 				}	
-				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -0.5 }
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -1 }
 			}
 			else_if = {
 				limit = {
 					check_variable = { state_science_level = 2 }
 				}	
-				###nothing	
+				add_to_variable = { PREV.amount_of_data_added_to_monthly_science_progress = -0.5 }	
 			}
 			else_if = {
 				limit = {
@@ -203,6 +209,8 @@ SPC_monthly_development_level_update = {
 			}
 			set_variable = { state_science_progress = 0 }
 		}
+		set_variable = { mag_progress_bar_frame = state_magic_progress }
+		set_variable = { sci_progress_bar_frame = state_science_progress }
 		SPC_monthly_updated_development_modifier = yes
 	}
 }

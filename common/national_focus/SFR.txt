@@ -3933,10 +3933,16 @@ focus_tree = {
 			add_political_power = -50
 			add_stability = -0.05
 			NFH = { add_to_ROOT_potential_cores = yes }
+			FFH = { add_to_ROOT_potential_cores = yes }
+			AFH = { add_to_ROOT_potential_cores = yes }
 			MSA = { add_to_ROOT_potential_cores = yes }
 			every_owned_state = {
 				limit = {
-					is_core_of = NFH
+					OR = {
+						is_core_of = NFH
+						is_core_of = FFH
+						is_core_of = AFH
+					}
 					NOT = { is_core_of = SFR }
 				}
 				add_claim_by = SFR
@@ -8677,7 +8683,7 @@ focus_tree = {
 			}
 			add_to_variable = { SFR_red_farhome_army_aor = 0.1 }
 			add_to_variable = { SFR_red_farhome_army_mpf = 0.1 }
-			add_to_variable = { SFR_red_farhome_army_cwf = 0.1 }
+			add_to_variable = { SFR_red_farhome_army_cwf = -0.05 }
 			force_update_dynamic_modifier = yes
 		}
 	}

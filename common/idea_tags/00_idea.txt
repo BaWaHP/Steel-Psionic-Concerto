@@ -90,7 +90,7 @@ idea_categories = {
 		ledger = civilian
 		
 		cost = -1
-		removal_cost = 0
+		removal_cost = -1
 	}
 
 	industrial_policy = {
@@ -104,7 +104,7 @@ idea_categories = {
 		ledger = civilian
 		
 		cost = 100
-		removal_cost = 0
+		removal_cost = -1
 	}
 
 	government_policy = {
@@ -118,7 +118,7 @@ idea_categories = {
 		ledger = civilian
 		
 		cost = 100
-		removal_cost = 0
+		removal_cost = -1
 	}
 
 	race_and_culture_policy = {
@@ -135,7 +135,7 @@ idea_categories = {
 		ledger = civilian
 		
 		cost = 50
-		removal_cost = 100
+		removal_cost = -1
 	}
 
 	academy_spirit = {

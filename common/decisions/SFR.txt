@@ -1856,10 +1856,10 @@ SFR_workers_and_peasants_congress = {
 		allowed = { tag = SFR }
 		available = {
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_voting_flag }
-			has_completed_focus = SFR_enact_land_reform_act
+			has_completed_focus = SFR_prepare_planning_committee
 		}
 		visible = { 
-			has_completed_focus = SFR_enact_land_reform_act 
+			has_completed_focus = SFR_prepare_planning_committee 
 			NOT = { has_country_flag = SFR_workers_and_peasants_congress_vote_3_passed } 
 		}
 
