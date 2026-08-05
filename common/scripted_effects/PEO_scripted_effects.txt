@@ -149,12 +149,6 @@ SPC_PEO_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 4 }		
 		}
-		35 = {
-			set_variable = { state_magic_progress = 0 }
-			set_variable = { state_magic_level = 1 }
-			set_variable = { state_science_progress = 0 }
-			set_variable = { state_science_level = 4 }		
-		}
 	}
 }
 

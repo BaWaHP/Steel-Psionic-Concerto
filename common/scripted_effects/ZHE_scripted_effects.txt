@@ -181,24 +181,6 @@ SPC_ZHE_startup_effect = {
 				set_variable = { state_science_progress = 0 }
 				set_variable = { state_science_level = 4 }		
 			}
-			if = {
-				limit = {
-					state = 129
-				}
-				set_variable = { state_magic_progress = 0 }
-				set_variable = { state_magic_level = 1 }
-				set_variable = { state_science_progress = 0 }
-				set_variable = { state_science_level = 3 }		
-			}
-			if = {
-				limit = {
-					state = 130
-				}
-				set_variable = { state_magic_progress = 0 }
-				set_variable = { state_magic_level = 1 }
-				set_variable = { state_science_progress = 0 }
-				set_variable = { state_science_level = 2 }		
-			}
 		}
 	}
 }

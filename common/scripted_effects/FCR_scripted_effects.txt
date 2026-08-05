@@ -62,12 +62,6 @@ SPC_FCR_startup_effect = {
 		set_country_flag = SPC_ban_foreign_policy
 		set_country_flag = SPC_ban_moblization_policy
 		###控制省份对应普及度###
-		351 = {
-			set_variable = { state_magic_progress = 0 }
-			set_variable = { state_magic_level = 3 }
-			set_variable = { state_science_progress = 0 }
-			set_variable = { state_science_level = 3 }		
-		}
 		367 = {
 			set_variable = { state_magic_progress = 0 }
 			set_variable = { state_magic_level = 3 }

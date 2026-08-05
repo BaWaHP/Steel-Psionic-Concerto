@@ -108,9 +108,9 @@ SPC_TPG_startup_effect = {
 					state = 35
 				}
 				set_variable = { state_magic_progress = 0 }
-				set_variable = { state_magic_level = 4 }
+				set_variable = { state_magic_level = 1 }
 				set_variable = { state_science_progress = 0 }
-				set_variable = { state_science_level = 3 }
+				set_variable = { state_science_level = 4 }
 			}
 			if = {
 				limit = {

@@ -71,12 +71,6 @@ SPC_GLV_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 6 }		
 		}
-		69 = {
-			set_variable = { state_magic_progress = 0 }
-			set_variable = { state_magic_level = 2 }
-			set_variable = { state_science_progress = 0 }
-			set_variable = { state_science_level = 4 }		
-		}
 		100 = {
 			set_variable = { state_magic_progress = 0 }
 			set_variable = { state_magic_level = 2 }

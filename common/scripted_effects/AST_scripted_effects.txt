@@ -105,6 +105,24 @@ SPC_AST_startup_effect = {
 				set_variable = { state_science_progress = 0 }
 				set_variable = { state_science_level = 3 }		
 			}
+			if = {
+				limit = {
+					state = 356
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 3 }		
+			}
+			if = {
+				limit = {
+					state = 357
+				}
+				set_variable = { state_magic_progress = 0 }
+				set_variable = { state_magic_level = 2 }
+				set_variable = { state_science_progress = 0 }
+				set_variable = { state_science_level = 4 }		
+			}
 		}
 	}
 }

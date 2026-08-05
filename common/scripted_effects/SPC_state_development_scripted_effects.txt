@@ -184,7 +184,8 @@ SPC_monthly_development_level_update = {
 			limit = {
 				check_variable = { state_magic_progress < 0 }
 			}
-			set_variable = { state_magic_progress = 0 }
+			set_variable = { state_magic_progress = 80 }
+			add_to_variable = { state_magic_level = -1 }
 		}
 		if = {
 			limit = {
@@ -207,7 +208,8 @@ SPC_monthly_development_level_update = {
 			limit = {
 				check_variable = { state_science_progress < 0 }
 			}
-			set_variable = { state_science_progress = 0 }
+			set_variable = { state_science_progress = 80 }
+			add_to_variable = { state_science_level = -1 }
 		}
 		set_variable = { mag_progress_bar_frame = state_magic_progress }
 		set_variable = { sci_progress_bar_frame = state_science_progress }
@@ -354,7 +356,8 @@ SPC_special_op_update = {
 		limit = {
 			check_variable = { state_magic_progress < 0 }
 		}
-		set_variable = { state_magic_progress = 0 }
+		set_variable = { state_magic_progress = 80 }
+		add_to_variable = { state_magic_level = -1 }
 	}
 	if = {
 		limit = {
@@ -377,7 +380,8 @@ SPC_special_op_update = {
 		limit = {
 			check_variable = { state_science_progress < 0 }
 		}
-		set_variable = { state_science_progress = 0 }
+		set_variable = { state_science_progress = 80 }
+		add_to_variable = { state_science_level = -1 }
 	}
 	SPC_monthly_updated_development_modifier = yes
 }

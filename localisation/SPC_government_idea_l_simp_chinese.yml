@@ -141,14 +141,6 @@ monthly_environment_development_process:0 "每月自然环境水平变化"
 monthly_research_development_process:0 "每月学术氛围水平变化"
 monthly_race_mixing_status_process:0 "每月种族分歧水平变化"
 
-monthly_industrial_development_process:0 "每月工业发展水平点数增长"
-monthly_agricultural_development_process:0 "每月农业发展水平点数增长"
-monthly_military_development_process:0 "每月军队职业度水平点数增长"
-monthly_living_standard_development_process:0 "每月人民生活水平点数增长"
-monthly_environment_development_process:0 "每月自然环境水平点数增长"
-monthly_research_development_process:0 "每月学术氛围水平点数增长"
-monthly_race_mixing_status_process:0 "每月种族分歧水平点数增长"
-
 industrial_development_mod_tt_up_1:0 "我们的§Y工业发展水平§!将开始§C缓慢改善§!。"
 industrial_development_mod_tt_up_2:0 "我们的§Y工业发展水平§!将开始§C改善§!。"
 industrial_development_mod_tt_up_3:0 "我们的§Y工业发展水平§!将开始§C快速改善§!。"
@@ -311,7 +303,7 @@ NP_total_nationalization_desc:0 ""
 
 ###发展度###
 ###工业###
-industrial_development_generic_tt:0 "\n§Y当前工业发展度点数为:[?industrial_development_amount]\n当前点数的每月增长为:[GetIndDev]\n达到200点会进入下一等级！§!"
+ industrial_development_generic_tt:0 "\n§Y当前工业发展度点数为:[?industrial_development_amount]\n当前点数的每月增长为:[GetIndDev]\n达到200点会进入下一等级！§!"
 primitive_industry:0 "原始工业"
 primitive_industry_desc:0 "我们并没有什么工业可言，只不过是随手制作的工具，最原始的那种。"
 handcraft_industry:0 "个体手工业"
@@ -325,7 +317,7 @@ grouped_factory_industry_desc:0 "我们拥有大量许多工厂组成的工业�
 innovative_industry:0 "创新型工业"
 innovative_industry_desc:0 "我们发达的工业在另一方面促进了自身的发展，不断有新的想法被提出，被实施，我们工业生产的效率也因此飞速提升。"
 ###农业###
-agricultural_development_generic_tt:0 "\n§Y当前农业发展度点数为:[?agricultural_development_amount]\n当前点数的每月增长为:[GetArgDev]\n达到200点会进入下一等级！§!"
+ agricultural_development_generic_tt:0 "\n§Y当前农业发展度点数为:[?agricultural_development_amount]\n当前点数的每月增长为:[GetArgDev]\n达到200点会进入下一等级！§!"
 primitive_agriculture:0 "刀耕火种的农业"
 primitive_agriculture_desc:0 "我们只能进行最原始的农业劳动。"
 self_efficient_agriculture:0 "自给自足的小农经济"
@@ -339,7 +331,7 @@ half_auto_agriculture_desc:0 "我们开始尝试在农业生产中引入机械�
 mechanized_agriculture:0 "机械化农业"
 mechanized_agriculture_desc:0 "我们的农业生产已经基本由机械接手，我们只需定下大的方向，其余所有的细枝末节都由机械来完成。"
 ###军队###
-military_development_generic_tt:0 "\n§Y当前军队职业度点数为:[?military_development_amount]\n当前点数的每月增长为:[GetMilDev]\n达到200点会进入下一等级！§!"
+ military_development_generic_tt:0 "\n§Y当前军队职业度点数为:[?military_development_amount]\n当前点数的每月增长为:[GetMilDev]\n达到200点会进入下一等级！§!"
 primitive_army:0 "原始军队"
 primitive_army_desc:0 "我们所谓的军队不过就是随便一些人拿起了武器而已。"
 unorganized_army:0 "散兵游勇"
@@ -353,7 +345,7 @@ advanced_army_desc:0 "我们能够通过常年的学习和经验的累积建立�
 innovative_army:0 "创新式军事理论"
 innovative_army_desc:0 "我们富有创新精神的军官能够不断地提出新的理论去为我们的部队提供更好的训练方式和作战方式。"
 ###民生###
-living_standard_development_generic_tt:0 "\n§Y当前人民生活水平点数为:[?living_standard_development_amount]\n当前点数的每月增长为:[GetLivDev]\n达到200点会进入下一等级！§!\n\n注：§R在战争状态下，§!§Y生活水平每月自动§!§R-4。§!"
+ living_standard_development_generic_tt:0 "\n§Y当前人民生活水平点数为:[?living_standard_development_amount]\n当前点数的每月增长为:[GetLivDev]\n达到200点会进入下一等级！§!\n\n注：§R在战争状态下，§!§Y生活水平每月自动§!§R-4。§!"
 death_everywhere:0 "饿殍遍野"
 death_everywhere_desc:0 "我们的民众连最基本的食物需求也无法得到满足，饿死甚至是常事。"
 struggle_to_survive:0 "民生凋敝"
@@ -367,7 +359,7 @@ extra_living_desc:0 "在满足了基本需求之外，他们还能去试着干�
 best_living:0 "高级追求"
 best_living_desc:0 "我们的民众根本不用担心基本的需求，他们可以腾出大量的精力和时间去追求更高级的需求。"
 ###自然环境###
-environment_development_generic_tt:0 "\n§Y当前自然环境水平点数为:[?environment_development_amount]\n当前点数的每月增长为:[GetEnvDev]\n达到200点会进入下一等级！§!"
+ environment_development_generic_tt:0 "\n§Y当前自然环境水平点数为:[?environment_development_amount]\n当前点数的每月增长为:[GetEnvDev]\n达到200点会进入下一等级！§!"
 hazard_zone:0 "生命禁区"
 hazard_zone_desc:0 "在这里，基本没有生命能够存活，更别说居住。"
 unhabitable:0 "恶劣的生存环境"
@@ -381,7 +373,7 @@ relatively_comfortable_desc:0 "这里对于生物来说已经是相当宜居了�
 real_natural_environment:0 "大自然本该有的样子"
 real_natural_environment_desc:0 "就是它本该有的样子，没什么额外的东西。"
 ###学术氛围###
-research_development_generic_tt:0 "\n§Y当前学术氛围点数为:[?research_development_amount]\n当前点数的每月增长为:[GetResDev]\n达到200点会进入下一等级！§!"
+ research_development_generic_tt:0 "\n§Y当前学术氛围点数为:[?research_development_amount]\n当前点数的每月增长为:[GetResDev]\n达到200点会进入下一等级！§!"
 fuck_the_science:0 "不学无术"
 fuck_the_science_desc:0 "在大多数人眼中，搞科研的不必铲粪的厉害多少。"
 nobody_cares:0 "普遍忽视"

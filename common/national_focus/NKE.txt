@@ -156,7 +156,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			add_to_variable = { state_magic_progress = 20 }
+			capital_scope = { add_to_variable = { state_magic_progress = 20 } }
 			custom_effect_tooltip = NKE_append_magic_college_tt
 			add_tech_bonus = {
 				bonus = 1.0
@@ -295,12 +295,14 @@ focus_tree = {
 				province = 11394
 				value = 1
 			}
-			set_building_level = {
-				type = naval_base
-				level = 5
-				province = {
-					id = 11394
-				}
+			capital_scope = {
+				set_building_level = {
+					type = naval_base
+					level = 5
+					province = {
+						id = 11394
+					}
+				}	
 			}
 		}
 	}

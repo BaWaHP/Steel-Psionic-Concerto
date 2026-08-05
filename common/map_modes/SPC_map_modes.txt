@@ -102,6 +102,8 @@ scripted_map_modes = {
  			type = state
 			color = {
 				set_temp_variable = { green_temp = FROM.state_science_level }
+				set_temp_variable = { red_temp = 1 }
+				set_temp_variable = { blue_temp = 1 }
 				multiply_temp_variable = { red_temp = 0.12 }
 				multiply_temp_variable = { blue_temp = 0.12 }
 				multiply_temp_variable = { green_temp = 0.12 }
@@ -123,6 +125,8 @@ scripted_map_modes = {
  			type = state
 			color = {
 				set_temp_variable = { green_temp = FROM.state_magic_level }
+				set_temp_variable = { red_temp = 1 }
+				set_temp_variable = { blue_temp = 1 }
 				multiply_temp_variable = { red_temp = 0.12 }
 				multiply_temp_variable = { blue_temp = 0.12 }
 				multiply_temp_variable = { green_temp = 0.12 }

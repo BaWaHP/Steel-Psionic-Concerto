@@ -207,12 +207,6 @@ SPC_CBL_startup_effect = {
 			set_variable = { state_science_progress = 0 }
 			set_variable = { state_science_level = 3 }
 		}
-		406 = {
-			set_variable = { state_magic_progress = 0 }
-			set_variable = { state_magic_level = 2 }
-			set_variable = { state_science_progress = 0 }
-			set_variable = { state_science_level = 1 }
-		}
 		209 = {
 			set_variable = { state_magic_progress = 0 }
 			set_variable = { state_magic_level = 2 }

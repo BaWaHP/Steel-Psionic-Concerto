@@ -37,7 +37,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { industrial_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = primitive_industry } } country_event = CD.2 }
-		set_variable = { industrial_development_amount = 199 }
+		set_variable = { industrial_development_amount = 100 }
 	}
 	#农业
 	if = {
@@ -48,7 +48,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { agricultural_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = primitive_agriculture } } country_event = CD.4 }
-		set_variable = { agricultural_development_amount = 199 }
+		set_variable = { agricultural_development_amount = 100 }
 	}
 	#军事
 	if = {
@@ -59,7 +59,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { military_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = primitive_army } } country_event = CD.6 }
-		set_variable = { military_development_amount = 199 }
+		set_variable = { military_development_amount = 100 }
 	}
 	#生活水平
 	if = {
@@ -70,7 +70,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { living_standard_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = death_everywhere } } country_event = CD.8 }
-		set_variable = { living_standard_development_amount = 199 }
+		set_variable = { living_standard_development_amount = 100 }
 	}
 	#环境程度
 	if = {
@@ -81,7 +81,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { environment_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = hazard_zone } } country_event = CD.10 }
-		set_variable = { environment_development_amount = 199 }
+		set_variable = { environment_development_amount = 100 }
 	}
 	#学术氛围
 	if = {
@@ -92,7 +92,7 @@ SPC_country_development_upgrade = {
 	if = {
 		limit = { check_variable = { research_development_amount < -99 } }
 		if = { limit = { NOT = { has_idea = fuck_the_science } } country_event = CD.12 }
-		set_variable = { research_development_amount = 199 }
+		set_variable = { research_development_amount = 100 }
 	}
 
 	set_variable = { industrial_development_frame = industrial_development_amount }

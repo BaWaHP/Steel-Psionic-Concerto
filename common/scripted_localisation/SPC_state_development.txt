@@ -47,7 +47,7 @@ defined_text = {
 	name = GetLivDev
 	text = {
 		trigger = { 
-			set_temp_variable = { temp_dev = 0 }
+			set_temp_variable = { temp_dev = -2 }
 			add_to_temp_variable = { temp_dev = living_standard_development_mod }
             add_to_temp_variable = { temp_dev = modifier@monthly_living_standard_development_process }
 			if = {

@@ -17688,7 +17688,7 @@ focus_tree = {
 			add_political_power = -50
 			SPC_industrial_development_amount_up_2 = yes
 			SPC_agricultural_development_amount_up_4 = yes
-			SPC_research_development_amount_up_2 = 4
+			SPC_research_development_amount_up_2 = yes
 			SPC_environment_development_amount_up_4 = yes
 			SPC_environment_policy_up = yes
 		}
@@ -19112,8 +19112,12 @@ focus_tree = {
 			add_war_support = -0.1
 			add_manpower = -100000
 			army_experience = 100
-			SPC_military_development_amount_up_4 = yes
-			SPC_military_development_amount_up_4 = yes
+			SPC_military_development_amount_up_2 = yes
+			add_to_variable = {
+				var = military_development_mod
+				value = 4
+				tooltip = military_development_mod_tt_up_2
+			}
 		}
 	}
 

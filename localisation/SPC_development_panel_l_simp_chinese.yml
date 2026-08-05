@@ -13,7 +13,7 @@ magic_progress_text:0 "[?state_magic_progress|1]%"
 magic_progress_tt:0 "当前的§Y魔法普及度增长进度§!为[?state_magic_progress|Y1]%\n\n当前我们的§Y魔法普及度每月增长§!为[?state_magic_monthly_basic|Y1]%\n\n我们现在的§Y魔法普及度水平§!为[GetLocalMagicLevel]"
 
 science_progress_text:0 "[?state_science_progress|1]%"
-science_progres_tt:0 "当前的§Y科学普及度增长进度§!为[?state_science_progress|Y1]%\n\n当前我们的§Y科学普及度每月增长§!为[?state_science_monthly_basic|Y1]%\n\n我们现在的§Y科学普及度水平§!为[GetLocalScienceLevel]"
+science_progress_tt:0 "当前的§Y科学普及度增长进度§!为[?state_science_progress|Y1]%\n\n当前我们的§Y科学普及度每月增长§!为[?state_science_monthly_basic|Y1]%\n\n我们现在的§Y科学普及度水平§!为[GetLocalScienceLevel]"
 
 ###省份页面###
 
@@ -112,8 +112,8 @@ special_op_sci_1_text:0 "引入外地学者"
 special_op_sci_2_text:0 "发展地方工业"
 special_op_sci_3_text:0 "侧重科学普及教育"
 special_op_sci_4_text:0 "向地方让步"
-special_op_sci_1_tt:0 "§Y引入外地学者§!\n\n将花费100点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!"
-special_op_sci_2_tt:0 "§Y发展地方工业§!\n\n将花费200点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!\n将在当地获得一座民用工厂"
+special_op_sci_1_tt:0 "§Y引入外地学者§!\n\n将花费100点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!\n\n§R在修正结束前无法再次使用§!"
+special_op_sci_2_tt:0 "§Y发展地方工业§!\n\n将花费200点政治点数\n§Y科学普及度§!将§C增加§!§Y5%§!\n将在当地获得一座民用工厂\n\n§R在修正结束前无法再次使用§!"
 special_op_sci_3_tt:0 "§Y侧重科学普及教育§!\n\n将花费100点政治点数\n§Y科学普及度§!将§C增加§!§Y10%§!\n§Y魔法普及度§!将§R减少§!§Y5%§!"
 special_op_sci_4_tt:0 "§Y向地方让步§!\n\n§Y科学普及度§!将§R减少§!§Y5%§!\n我们会获得§Y20点政治点数§!"
 
