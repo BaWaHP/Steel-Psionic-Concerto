@@ -1134,3 +1134,34 @@ CLD_red_navy_init = {
 	set_variable = { CLD_red_navy_uhcdc = 0 }
 	force_update_dynamic_modifier = yes
 }
+
+#初始化第一届最高人民会议选举
+CLD_initialize_democratic_election = {
+	set_variable = { CLD_election_communist_seats = 458 }
+	set_variable = { CLD_election_social_democrat_seats = 70 }
+	set_variable = { CLD_election_democratic_union_seats = 42 }
+	set_variable = { CLD_election_independent_seats = 30 }
+	set_variable = { CLD_election_agrarian_worker_democrat_seats = 0 }
+	set_variable = { CLD_election_church_democratic_alliance_seats = 0 }
+	set_variable = { CLD_election_laboring_people_seats = 0 }
+	set_variable = { CLD_election_democratic_party_seats = 0 }
+	CLD_update_democratic_election_total = yes
+
+	set_country_flag = CLD_democratic_election_active
+	activate_mission = CLD_first_supreme_peoples_congress_election
+
+	unlock_decision_category_tooltip = CLD_democratic_elections_category
+	custom_effect_tooltip = CLD_democratic_election_initialized_tt
+}
+
+CLD_update_democratic_election_total = {
+	set_variable = { CLD_election_total_seats = CLD_election_communist_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_social_democrat_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_democratic_union_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_independent_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_agrarian_worker_democrat_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_church_democratic_alliance_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_laboring_people_seats }
+	add_to_variable = { CLD_election_total_seats = CLD_election_democratic_party_seats }
+}
+

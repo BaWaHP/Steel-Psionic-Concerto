@@ -68,3 +68,13 @@ CLD_defense_industry_committe_decisions = {
 	visible_when_empty = yes
 	priority = 100
 }
+
+#西莉迪亚民主选举
+CLD_democratic_elections_category = {
+	icon = GFX_decision_category_generic_communist_revolution
+	allowed = { tag = CLD }
+	visible = { has_country_flag = CLD_democratic_election_active }
+	visible_when_empty = yes
+	priority = 110
+}
+

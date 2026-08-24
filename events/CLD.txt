@@ -1694,8 +1694,392 @@ country_event = {
 	option = {
 		name = CLD.106.c
 		custom_effect_tooltip = CLD.106.c.tt1
-		add_ideas = CLD_husky_gift
+		add_ideas = CLD_husky_heavy_hand
 		custom_effect_tooltip = CLD.106.c.tt2
+	}
+}
+
+# 拉起手风琴……
+country_event = {
+	id = CLD.200
+	title = CLD.200.t
+	desc = CLD.200.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.200.a
+	}
+}
+
+# 请客吃饭
+country_event = {
+	id = CLD.201
+	title = CLD.201.t
+	desc = CLD.201.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.201.a
+		custom_effect_tooltip = CLD.201.a.tt
+	}
+}
+
+# 关于国内当前形势的报告（摘要）
+country_event = {
+	id = CLD.202
+	title = CLD.202.t
+	desc = CLD.202.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.202.a
+	}
+}
+
+# 会议记录
+country_event = {
+	id = CLD.203
+	title = CLD.203.t
+	desc = CLD.203.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.203.a
+	}
+}
+
+# 选区划分问题
+country_event = {
+	id = CLD.204
+	title = CLD.204.t
+	desc = CLD.204.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.204.a
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = 2
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -4
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = 2
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.204.b
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -10
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = 8
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = -2
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.204.c
+		ai_chance = { factor = 0 }
+		hidden_effect = { country_event = CLD.204 }
+	}
+}
+
+# 允许参与的政党
+country_event = {
+	id = CLD.205
+	title = CLD.205.t
+	desc = CLD.205.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.205.a
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = 1
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = 2
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = 1
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = -4
+			tooltip = CLD_election_independent_seats_tt
+		}		
+	}
+
+	option = {
+		name = CLD.205.b
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -6
+			tooltip = CLD_election_communist_seats_tt
+		}	
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -2
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = -1
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = 9
+			tooltip = CLD_election_independent_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.205.c
+		set_country_flag = CLD_additional_parties_admitted
+		add_to_variable = {
+			var = CLD_election_agrarian_worker_democrat_seats
+			value = 12
+			tooltip = CLD_election_agrarian_worker_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_church_democratic_alliance_seats
+			value = 10
+			tooltip = CLD_election_church_democratic_alliance_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_laboring_people_seats
+			value = 8
+			tooltip = CLD_election_laboring_people_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_party_seats
+			value = 5
+			tooltip = CLD_election_democratic_party_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = -3
+			tooltip = CLD_election_independent_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -2
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+	}
+}
+
+# 地方人民会议应该下沉到哪？
+country_event = {
+	id = CLD.206
+	title = CLD.206.t
+	desc = CLD.206.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.206.a
+		add_political_power = 20
+	}
+}
+
+# 北方问题
+country_event = {
+	id = CLD.207
+	title = CLD.207.t
+	desc = CLD.207.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.207.a
+		add_political_power = 40
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -12
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = 8
+			tooltip = CLD_election_social_democrat_seats_tt
+		}		
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = 2
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = 2
+			tooltip = CLD_election_independent_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.207.b
+		add_political_power = -20
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -6
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = 4
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = 1
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = 1
+			tooltip = CLD_election_independent_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.207.c
+		add_political_power = -40
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = 8
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -4
+			tooltip = CLD_election_social_democrat_seats_tt
+		}	
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = -2
+			tooltip = CLD_election_democratic_union_seats_tt
+		}	
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = -2
+			tooltip = CLD_election_independent_seats_tt
+		}			
+	}
+}
+
+# 选举宣传方向
+country_event = {
+	id = CLD.208
+	title = CLD.208.t
+	desc = CLD.208.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.208.a
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = 2
+			tooltip = CLD_election_communist_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -2
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.208.b
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = 6
+			tooltip = CLD_election_social_democrat_seats_tt
+		}		
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -6
+			tooltip = CLD_election_communist_seats_tt
+		}			
+	}
+
+	option = {
+		name = CLD.208.c
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = 8
+			tooltip = CLD_election_democratic_union_seats_tt
+		}		
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -6
+			tooltip = CLD_election_communist_seats_tt
+		}			
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -2
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+	}
+
+	option = {
+		name = CLD.208.e
+		add_to_variable = {
+			var = CLD_election_independent_seats
+			value = 4
+			tooltip = CLD_election_independent_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_communist_seats
+			value = -2
+			tooltip = CLD_election_communist_seats_tt
+		}		
+		add_to_variable = {
+			var = CLD_election_social_democrat_seats
+			value = -1
+			tooltip = CLD_election_social_democrat_seats_tt
+		}
+		add_to_variable = {
+			var = CLD_election_democratic_union_seats
+			value = -1
+			tooltip = CLD_election_democratic_union_seats_tt
+		}
+	}
+}
+
+# 第一届最高人民会议第一次会议举行
+country_event = {
+	id = CLD.209
+	title = CLD.209.t
+	desc = CLD.209.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.209.a
+		custom_effect_tooltip = CLD_first_supreme_peoples_congress_established_tt
+		hidden_effect = {
+			clr_country_flag = CLD_democratic_election_active
+			set_country_flag = CLD_first_supreme_peoples_congress_held
+		}
 	}
 }
 

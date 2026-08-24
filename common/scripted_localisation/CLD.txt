@@ -101,3 +101,14 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = GET_CLD_democratic_elections_extra_party
+	text = {
+		trigger = { has_country_flag = CLD_additional_parties_admitted }
+		localization_key = "CLD_democratic_elections_category_desc_extra"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+

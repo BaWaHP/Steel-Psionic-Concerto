@@ -450,13 +450,38 @@ ideas = {
 		}
 
 		#哈士奇的大手
-		CLD_husky_gift = {
+		CLD_husky_heavy_hand = {
 			picture = generic_morale_bonus
 			allowed = { always = yes }
 			removal_cost = -1
+			cancel = { has_idea = CLD_eagle_of_cilidia }
 			modifier = {
 				political_power_gain = -0.5
 				command_power_gain = -0.5
+			}
+		}
+
+		#西莉迪亚的雄鹰
+		CLD_eagle_of_cilidia = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = CLD }
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				monthly_industrial_development_process = 1
+				monthly_agricultural_development_process = 1
+				monthly_military_development_process = 1
+				monthly_living_standard_development_process = 1
+				monthly_environment_development_process = 1
+				monthly_research_development_process = 1
 			}
 		}
 
@@ -2140,6 +2165,26 @@ ideas = {
 				positioning = 0.05
 				naval_retreat_speed = 0.05
 				naval_morale_factor = 0.05
+			}
+		}
+
+		#西莉迪亚国民经济
+		CLD_cilidian_national_economy = {
+			picture = generic_mild_economic_recovery
+			allowed = { original_tag = CLD }
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
+				factory_energy_consumption = -0.25
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
 

@@ -2860,3 +2860,42 @@ CLD_central_economic_committe_decisions = {
 		}
 	}
 }
+
+CLD_democratic_elections_category = {
+	#第一届最高人民会议选举
+	CLD_first_supreme_peoples_congress_election = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { tag = CLD }
+		visible = { has_country_flag = CLD_democratic_election_active }
+		available = { always = no }
+		activation = { always = no }
+
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+
+		timeout_effect = {
+			country_event = CLD.209
+		}
+	}
+
+	#选举宣传
+	CLD_election_campaign = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		allowed = { tag = CLD }
+		visible = { has_country_flag = CLD_democratic_election_active }
+
+		cost = 0
+		days_remove = 15
+		fire_only_once = no
+
+		remove_effect = {
+			country_event = CLD.208
+		}
+
+		ai_will_do = {
+			base = 25
+		}
+	}
+}
+

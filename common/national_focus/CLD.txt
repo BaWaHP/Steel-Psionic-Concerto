@@ -4199,12 +4199,15 @@ focus_tree = {
 		icon = GFX_focus_FIN_socialist_welfare
 		x = 10
 		y = 0
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
 		allow_branch = {
 			has_completed_focus = CLD_take_next_step
+			NOT = { has_idea = CLD_northern_security_collapse }
+			NOT = { has_idea = CLD_northern_economic_collapse }
+			NOT = { has_idea = CLD_diseases_raging_in_north }
 		}
 
 		ai_will_do = {
@@ -4216,7 +4219,25 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			country_event = CLD.200
+			add_ideas = CLD_cilidian_national_economy
+			custom_effect_tooltip = CLD_remove_liberated_zone_modifiers_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							has_dynamic_modifier = CLD_new_liberated_zone
+							has_dynamic_modifier = CLD_liberated_zone
+						}
+					}
+					remove_dynamic_modifier = { modifier = CLD_new_liberated_zone }
+					remove_dynamic_modifier = { modifier = CLD_liberated_zone }
+				}
+			}
+			if = {
+				limit = { has_idea = CLD_husky_heavy_hand }
+				add_ideas = CLD_eagle_of_cilidia
+			}
 		}
 	}
 
@@ -4225,7 +4246,7 @@ focus_tree = {
 		icon = GFX_focus_generic_social_democracy
 		x = -2
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
@@ -4238,7 +4259,8 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			country_event = CLD.201
+			add_political_power = 150
 		}
 	}
 
@@ -4247,7 +4269,7 @@ focus_tree = {
 		icon = GFX_focus_AUS_union_of_danubian_socialist_republics
 		x = 0
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
@@ -4260,7 +4282,8 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			SPC_living_standard_development_amount_up_1 = yes
+			country_event = CLD.202
 		}
 	}
 
@@ -4269,7 +4292,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_communist_leadership
 		x = 2
 		y = 1
-		cost = 1
+		cost = 0.42
 
 		available_if_capitulated = yes
 
@@ -4282,7 +4305,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			country_event = CLD.203
 		}
 	}
 
@@ -4291,7 +4314,7 @@ focus_tree = {
 		icon = GFX_focus_ARG_defense_and_democracy
 		x = 0
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
@@ -4306,7 +4329,9 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			add_political_power = 120
+			CLD_initialize_democratic_election = yes
+			custom_effect_tooltip = CLD_prepare_for_democratic_elections_tt
 		}
 	}
 
@@ -4315,7 +4340,7 @@ focus_tree = {
 		icon = GFX_focus_AFG_promote_the_counter_elite
 		x = -4
 		y = 1
-		cost = 1
+		cost = 0.72
 
 		available_if_capitulated = yes
 
@@ -4328,7 +4353,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			add_political_power = 30
 		}
 	}
 
@@ -4337,7 +4362,7 @@ focus_tree = {
 		icon = GFX_Land_Reform
 		x = -2
 		y = 1
-		cost = 1
+		cost = 0.72
 
 		available_if_capitulated = yes
 
@@ -4350,7 +4375,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = CLD.204
 		}
 	}
 
@@ -4359,7 +4384,7 @@ focus_tree = {
 		icon = GFX_focus_CHI_demonstrate_our_resolve
 		x = 0
 		y = 1
-		cost = 1
+		cost = 0.15
 
 		available_if_capitulated = yes
 
@@ -4372,7 +4397,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = CLD.205
 		}
 	}
 
@@ -4381,7 +4406,7 @@ focus_tree = {
 		icon = GFX_goal_Generic_Workers_Democracy
 		x = 2
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
@@ -4394,7 +4419,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			country_event = CLD.206
 		}
 	}
 
@@ -4403,7 +4428,7 @@ focus_tree = {
 		icon = GFX_goal_generic_media_controls
 		x = 4
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
 
@@ -4416,7 +4441,27 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_political_power = 30
+			add_to_variable = {
+				var = CLD_election_communist_seats
+				value = 1
+				tooltip = CLD_election_communist_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_social_democrat_seats
+				value = 1
+				tooltip = CLD_election_social_democrat_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_democratic_union_seats
+				value = 1
+				tooltip = CLD_election_democratic_union_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_independent_seats
+				value = -3
+				tooltip = CLD_election_independent_seats_tt
+			}
 		}
 	}
 
@@ -4424,6 +4469,32 @@ focus_tree = {
 		id = CLD_northern_participation
 		icon = GFX_focus_generic_communism_anti_fascism
 		x = 1
+		y = 1
+		cost = 0.43
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_register_voters }
+		prerequisite = { focus = CLD_divide_electoral_districts }
+		prerequisite = { focus = CLD_allow_parties_to_join }
+		prerequisite = { focus = CLD_representative_level }
+		prerequisite = { focus = CLD_responsibilities_of_newspapers }
+		relative_position_id = CLD_register_voters
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = CLD.207
+		}
+	}
+
+	focus = {	#候选人资格审查
+		id = CLD_candidate_qualification_review
+		icon = GFX_focus_generic_secret_service_agency
+		x = 0
 		y = 1
 		cost = 1
 
@@ -4435,57 +4506,34 @@ focus_tree = {
 
 		prerequisite = { focus = CLD_register_voters }
 		prerequisite = { focus = CLD_divide_electoral_districts }
-		relative_position_id = CLD_register_voters
-		#mutually_exclusive = { focus =  }
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {	#各党派的宣传
-		id = CLD_propaganda_of_parties
-		icon = GFX_goal_generic_propaganda
-		x = 1
-		y = 1
-		cost = 1
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		prerequisite = { focus = CLD_divide_electoral_districts }
-		prerequisite = { focus = CLD_allow_parties_to_join }
-		relative_position_id = CLD_divide_electoral_districts
-		#mutually_exclusive = { focus =  }
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {	#候选人资格审查
-		id = CLD_candidate_qualification_review
-		icon = GFX_focus_generic_secret_service_agency
-		x = 1
-		y = 1
-		cost = 1
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
 		prerequisite = { focus = CLD_allow_parties_to_join }
 		prerequisite = { focus = CLD_representative_level }
+		prerequisite = { focus = CLD_responsibilities_of_newspapers }
 		relative_position_id = CLD_allow_parties_to_join
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_political_power = 30
+			add_to_variable = {
+				var = CLD_election_communist_seats
+				value = 1
+				tooltip = CLD_election_communist_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_social_democrat_seats
+				value = 1
+				tooltip = CLD_election_social_democrat_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_democratic_union_seats
+				value = 1
+				tooltip = CLD_election_democratic_union_seats_tt
+			}
+			add_to_variable = {
+				var = CLD_election_independent_seats
+				value = -3
+				tooltip = CLD_election_independent_seats_tt
+			}
 		}
 	}
 
@@ -4502,38 +4550,45 @@ focus_tree = {
 			factor = 100
 		}
 
+		prerequisite = { focus = CLD_register_voters }
+		prerequisite = { focus = CLD_divide_electoral_districts }
+		prerequisite = { focus = CLD_allow_parties_to_join }
 		prerequisite = { focus = CLD_representative_level }
 		prerequisite = { focus = CLD_responsibilities_of_newspapers }
 		relative_position_id = CLD_representative_level
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			add_political_power = 30
+			add_stability = 0.05
 		}
 	}
 
 	focus = {	#人民的选择
 		id = CLD_choice_of_the_people
 		icon = GFX_Generic_Liberatian_Socialism
-		x = 1
+		x = 0
 		y = 1
-		cost = 1
+		cost = 0.43
 
 		available_if_capitulated = yes
+
+		available = { has_country_flag = CLD_first_supreme_peoples_congress_held }
 
 		ai_will_do = {
 			factor = 100
 		}
 
 		prerequisite = { focus = CLD_northern_participation }
-		prerequisite = { focus = CLD_propaganda_of_parties }
 		prerequisite = { focus = CLD_candidate_qualification_review }
 		prerequisite = { focus = CLD_prevent_political_violence }
-		relative_position_id = CLD_propaganda_of_parties
+		relative_position_id = CLD_candidate_qualification_review
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-			
+			custom_effect_tooltip = unlock_new_focus_tree_tt
+			load_focus_tree = generic_focus
+			#mark_focus_tree_layout_dirty = yes
 		}
 	}
 
