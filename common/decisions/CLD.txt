@@ -258,8 +258,17 @@ CLD_forming_emergency_committe_decisions = {
 		complete_effect = {
 			add_manpower = 1000
 			add_war_support = 0.03
+			if = {
+				limit = { check_variable = { CLD_intelligence_security_review_count = 2 } }
+				CLD_cadre_team_level_up = yes
+			}
+			else = {
+				custom_effect_tooltip = CLD_intelligence_security_review_tt
+				effect_tooltip = {
+					CLD_cadre_team_level_up = yes
+				}
+			}
 			add_to_variable = { CLD_intelligence_security_review_count = 1 }
-			CLD_cadre_team_level_up = yes
 		}
 
 		modifier = {
