@@ -29,7 +29,7 @@ ideas = {
 			}
 		}
 
-		NCL_silt_double_beam_1 = {		#国淤双梁：南渡北离
+		NCL_silt_double_beam_1 = {		#国淤双梁：南渡北涣
 			picture = chi_wargaming_division
 			removal_cost = -1
 			
@@ -71,6 +71,7 @@ ideas = {
 			targeted_modifier = {
 				tag = NCD
 				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
 			}
 		}
 
@@ -118,8 +119,6 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
-				production_speed_buildings_factor = 0.05
-				industrial_capacity_factory = 0.05
 			}
 		}
 

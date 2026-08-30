@@ -1660,7 +1660,7 @@ focus_tree = {
 			CLD_army_reform_init = yes
 			custom_effect_tooltip = CLD_establish_central_people_commitee_tt
 			mark_focus_tree_layout_dirty = yes
-			#custom_effect_tooltip = unlock_new_focus_tree_tt
+			custom_effect_tooltip = unlock_new_focus_tree_tt
 		}
 	}
 
@@ -1675,6 +1675,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
+		}
+
+		allow_branch = {
+			has_completed_focus = CLD_lift_emergency_law
 		}
 
 		prerequisite = { focus = CLD_lift_emergency_law }
@@ -1910,6 +1914,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
+		}
+
+		allow_branch = {
+			has_completed_focus = CLD_lift_emergency_law
 		}
 
 		prerequisite = { focus = CLD_lift_emergency_law }
@@ -2213,6 +2221,10 @@ focus_tree = {
 			factor = 100
 		}
 
+		allow_branch = {
+			has_completed_focus = CLD_lift_emergency_law
+		}
+
 		prerequisite = { focus = CLD_lift_emergency_law }
 		relative_position_id = CLD_lift_emergency_law
 		#mutually_exclusive = { focus =  }
@@ -2465,6 +2477,421 @@ focus_tree = {
 			remove_ideas = CLD_remaining_insurgency
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = unlock_new_focus_tree_tt
+		}
+	}
+
+	focus = {	#北方局工作会议
+		id = CLD_north_bureau_meeting
+		icon = GFX_focus_generic_conference
+		x = 10
+		y = 10
+		cost = 1
+		
+		available_if_capitulated = yes
+
+		allow_branch = {
+			OR = {
+				has_country_flag = CLD_66_a_flag
+				has_country_flag = CLD_66_b_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#推进土地改革
+		id = CLD_push_land_reform
+		icon = GFX_focus_PRC_land_revolution_expedited
+		x = -7
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_north_bureau_meeting }
+		relative_position_id = CLD_north_bureau_meeting
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#稳定驻村工作点
+		id = CLD_stabilize_village_work_points
+		icon = GFX_focus_PRC_rural_region_development
+		x = -2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_push_land_reform }
+		relative_position_id = CLD_push_land_reform
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#镇压反动宗教分子
+		id = CLD_suppress_reactionary_religious_elements
+		icon = GFX_focus_ARG_state_atheism
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_push_land_reform }
+		relative_position_id = CLD_push_land_reform
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#动员贫下中农
+		id = CLD_mobilize_poor_and_lower_middle_peasants
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_push_land_reform }
+		relative_position_id = CLD_push_land_reform
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#打击反动地主
+		id = CLD_strike_reactionary_landlords
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = 0
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_stabilize_village_work_points }
+		prerequisite = { focus = CLD_suppress_reactionary_religious_elements }
+		prerequisite = { focus = CLD_mobilize_poor_and_lower_middle_peasants }
+		relative_position_id = CLD_suppress_reactionary_religious_elements
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩张国营工业
+		id = CLD_expand_state_owned_industry
+		icon = GFX_focus_generic_communist_industry
+		x = -2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_north_bureau_meeting }
+		relative_position_id = CLD_north_bureau_meeting
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#投资职业技术学校
+		id = CLD_invest_in_vocational_schools
+		icon = GFX_focus_generic_education
+		x = -1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_state_owned_industry }
+		relative_position_id = CLD_expand_state_owned_industry
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#新建国营企业
+		id = CLD_establish_state_owned_enterprises
+		icon = GFX_focus_generic_industry_investment
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_state_owned_industry }
+		relative_position_id = CLD_expand_state_owned_industry
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#加强企业党委
+		id = CLD_strengthen_enterprise_party_committees
+		icon = GFX_focus_generic_worker_administration
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_invest_in_vocational_schools }
+		prerequisite = { focus = CLD_establish_state_owned_enterprises }
+		relative_position_id = CLD_invest_in_vocational_schools
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#加强医疗保健
+		id = CLD_strengthen_healthcare
+		icon = GFX_focus_INS_expand_batavia_med_school
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_north_bureau_meeting }
+		relative_position_id = CLD_north_bureau_meeting
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#综合医生下乡巡诊
+		id = CLD_rural_medical_rounds
+		icon = GFX_focus_generic_field_hostpital
+		x = -1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_strengthen_healthcare }
+		relative_position_id = CLD_strengthen_healthcare
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#推广疫苗接种
+		id = CLD_promote_vaccination
+		icon = GFX_focus_INS_bio_pharma
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_strengthen_healthcare }
+		relative_position_id = CLD_strengthen_healthcare
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#社会主义就是最好的预防!
+		id = CLD_socialism_is_the_best_prevention
+		icon = GFX_focus_FIN_socialist_welfare
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_rural_medical_rounds }
+		prerequisite = { focus = CLD_promote_vaccination }
+		relative_position_id = CLD_rural_medical_rounds
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#扩张社会主义国营商业
+		id = CLD_expand_socialist_state_commerce
+		icon = GFX_focus_JAP_ministry_of_commerce_and_industry
+		x = 7
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_north_bureau_meeting }
+		relative_position_id = CLD_north_bureau_meeting
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#增开基层供销社
+		id = CLD_expand_grassroots_supply_and_marketing_cooperatives
+		icon = GFX_focus_PRC_establish_shorter_market_plans
+		x = -1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_socialist_state_commerce }
+		relative_position_id = CLD_expand_socialist_state_commerce
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#支持城市消费合作社
+		id = CLD_support_urban_consumer_cooperatives
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_socialist_state_commerce }
+		relative_position_id = CLD_expand_socialist_state_commerce
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#服务人民，繁荣经济
+		id = CLD_serve_the_people_prosper_the_economy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_expand_grassroots_supply_and_marketing_cooperatives }
+		prerequisite = { focus = CLD_support_urban_consumer_cooperatives }
+		relative_position_id = CLD_expand_grassroots_supply_and_marketing_cooperatives
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {	#工作总结
+		id = CLD_work_summary
+		icon = GFX_focus_generic_central_planning
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_strike_reactionary_landlords }
+		prerequisite = { focus = CLD_strengthen_enterprise_party_committees }
+		prerequisite = { focus = CLD_socialism_is_the_best_prevention }
+		prerequisite = { focus = CLD_serve_the_people_prosper_the_economy }
+		relative_position_id = CLD_strengthen_enterprise_party_committees
+
+		completion_reward = {
+
 		}
 	}
 

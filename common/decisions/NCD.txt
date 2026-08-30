@@ -433,18 +433,25 @@ NCD_interal_conflicts = {
 			clr_country_flag = NCD_interal_conflicts_1_on
 		}
 	}
-	NCD_interal_conflicts_take_actions_1 = {		#至上的国王运动正在行动
+	NCD_interal_conflicts_take_actions_1 = {		#至上的国王运动控制力的转移
 		icon = generic_civil_support
 		allowed = { tag = NCD }
 		available = { has_country_flag = NCD_interal_conflicts_ban }
-		activation = { always = no }
+		activation = { 
+			has_completed_focus = NCD_bloody_peach_and_bodies
+			check_variable = { NCD_interal_conflicts_var_1_2 > 5 }
+		}
 		
 		is_good = no
 		selectable_mission = no
 		days_mission_timeout = 45
 
 		timeout_effect = {
-			activate_mission = NCD_interal_conflicts_take_actions_1
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_2
+				value = -5
+				tooltip = NCD_interal_conflicts_var_1_2_tt
+			}
 			random_list = {
 				15 = {
 					add_to_variable = { 
@@ -536,12 +543,12 @@ NCD_interal_conflicts = {
 				45 = {
 					add_to_variable = { 
 						var = NCD_interal_conflicts_var_1_1
-						value = -3
+						value = -2.5
 						tooltip = NCD_interal_conflicts_var_1_1_tt
 					}
 					add_to_variable = { 
 						var = NCD_interal_conflicts_var_1_2
-						value = -3
+						value = -2.5
 						tooltip = NCD_interal_conflicts_var_1_2_tt
 					}
 				}
@@ -561,27 +568,23 @@ NCD_interal_conflicts = {
 			}
 		}
 		
-		cost = 20
+		cost = 30
 		fire_only_once = yes
 		days_remove = 15
 
 		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_1_1
-					value = 2.5
-					tooltip = NCD_interal_conflicts_var_1_1_tt
-				}
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_1
+				value = 2.5
+				tooltip = NCD_interal_conflicts_var_1_1_tt
 			}
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_1_2
-					value = 5
-					tooltip = NCD_interal_conflicts_var_1_2_tt
-				}
-			}	
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_2
+				value = 5
+				tooltip = NCD_interal_conflicts_var_1_2_tt
+			}
 			NCD_interal_conflicts_var_clamp_effect = yes
 			swap_ideas = {
 				remove_idea = NCD_hunger_everywhere
@@ -609,13 +612,11 @@ NCD_interal_conflicts = {
 		ai_will_do = { factor = 0.2 }
 
 		remove_effect = {
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_1_1
-					value = 7.5
-					tooltip = NCD_interal_conflicts_var_1_1_tt
-				}
-			}	
+			add_to_variable = { 
+				var = NCD_interal_conflicts_var_1_1
+				value = 7.5
+				tooltip = NCD_interal_conflicts_var_1_1_tt
+			}
 			NCD_interal_conflicts_var_clamp_effect = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -669,6 +670,13 @@ NCD_interal_conflicts = {
 				tooltip = NCD_interal_conflicts_var_2_tt
 			}
 			NCD_interal_conflicts_var_clamp_effect = yes
+			118 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
 		}
 	}
 
@@ -709,111 +717,6 @@ NCD_interal_conflicts = {
 		complete_effect = {
 			custom_effect_tooltip = NCD_interal_conflicts_2_close
 			clr_country_flag = NCD_interal_conflicts_2_on
-		}
-	}
-	NCD_interal_conflicts_take_actions_2 = {		#救国阵线护国派在行动
-		icon = generic_civil_support
-		allowed = { tag = NCD }
-		available = { always = no }
-		activation = { always = no }
-		
-		is_good = no
-		selectable_mission = no
-		days_mission_timeout = 30
-
-		timeout_effect = {
-			activate_mission = NCD_interal_conflicts_take_actions_2
-			random_list = {
-				25 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_1
-							value = 1
-							tooltip = NCD_interal_conflicts_var_3_1_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_up_var = 1 } NCD_interal_conflicts_var_3_1_up_effect = yes }
-				}
-				15 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_1
-							value = 2
-							tooltip = NCD_interal_conflicts_var_3_1_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_up_var = 2 } NCD_interal_conflicts_var_3_1_up_effect = yes }
-				}
-				30 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_2
-							value = 1
-							tooltip = NCD_interal_conflicts_var_3_2_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_up_var = 1 } NCD_interal_conflicts_var_3_2_up_effect = yes }
-				}
-				30 = {}
-			}
-		}
-	}
-	NCD_beat_protean_faction = {		#限制救国阵线护国派行动
-		icon = generic_arrest
-		allowed = { tag = NCD }
-
-		visible = { 
-			has_country_flag = NCD_interal_conflicts_2_on 
-			always = no
-		}
-		
-		cost = 25
-		fire_only_once = no
-		days_re_enable = 15
-
-		ai_will_do = { factor = 10 }
-
-		complete_effect = {
-			random_list = {
-				25 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_1
-							value = -5
-							tooltip = NCD_interal_conflicts_var_3_1_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_down_var = 5 } NCD_interal_conflicts_var_3_1_down_effect = yes }
-				}
-				30 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_2
-							value = -5
-							tooltip = NCD_interal_conflicts_var_3_2_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_down_var = 5 } NCD_interal_conflicts_var_3_2_down_effect = yes }
-				}
-				45 = {
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_1
-							value = -3
-							tooltip = NCD_interal_conflicts_var_3_1_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_1_down_var = 5 } NCD_interal_conflicts_var_3_1_down_effect = yes }
-					effect_tooltip = {
-						add_to_variable = { 
-							var = NCD_interal_conflicts_var_3_2
-							value = -3
-							tooltip = NCD_interal_conflicts_var_3_2_tt
-						}
-					}	
-					hidden_effect = { set_variable = { NCD_interal_conflicts_var_3_2_down_var = 5 } NCD_interal_conflicts_var_3_2_down_effect = yes }
-				}
-			}
 		}
 	}
 	NCD_integrate_high_command = {		#合并最高指挥团
@@ -859,14 +762,14 @@ NCD_interal_conflicts = {
 		cost = 10
 		fire_only_once = no
 		days_remove = 7
-		days_re_enable = 45
+		days_re_enable = 30
 
 		ai_will_do = { factor = 0.2 }
 
 		modifier = {
 			army_defence_factor = 0.05
 			land_reinforce_rate = 0.02
-			cannot_retreat_while_attacking = 1
+			cannot_retreat_while_defending = 1
 		}
 
 		remove_effect = {
@@ -890,16 +793,9 @@ NCD_interal_conflicts = {
 				has_country_flag = NCD_interal_conflicts_2_on
 			}
 		}
-		
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NCD_demand_mil_support_tr
-				check_variable = { NCD_demand_mil_support_count < 2 }
-			}
-		}
 
 		cost = 50
-		fire_only_once = no
+		fire_only_once = yes
 		days_remove = 30
 
 		ai_will_do = { factor = 0.7 }
@@ -1109,75 +1005,6 @@ NCD_interal_conflicts = {
 			NCD_interal_conflicts_var_clamp_effect = yes
 		}
 	}
-	NCD_expand_police_force = {		#增添警察部队
-		icon = ger_military_buildup
-		allowed = { tag = NCD }
-		available = { has_completed_focus = NCD_suppress_new_united_front }
-
-		visible = { 
-			has_country_flag = NCD_interal_conflicts_3_on 
-			always = no
-		}
-
-		cost = 25
-		fire_only_once = no
-		days_re_enable = 15
-
-		ai_will_do = { factor = 10 }
-
-		complete_effect = {
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_4_1
-					value = -3
-					tooltip = NCD_interal_conflicts_var_4_1_tt
-				}
-			}	
-			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_1_down_var = 3 } NCD_interal_conflicts_var_4_1_down_effect = yes }
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_4_2
-					value = 5
-					tooltip = NCD_interal_conflicts_var_4_2_tt
-				}
-			}	
-			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_2_up_var = 5 } NCD_interal_conflicts_var_4_2_up_effect = yes }
-		}
-	}
-	NCD_increase_threshold_for_police = {		#提高警察出动门槛
-		icon = gre_hellenic_academy
-		allowed = { tag = NCD }
-
-		visible = { 
-			has_country_flag = NCD_interal_conflicts_3_on 
-			always = no
-		}
-
-		cost = 25
-		fire_only_once = no
-		days_re_enable = 15
-
-		ai_will_do = { factor = 10 }
-
-		complete_effect = {
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_4_1
-					value = 4
-					tooltip = NCD_interal_conflicts_var_4_1_tt
-				}
-			}	
-			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_1_up_var = 4 } NCD_interal_conflicts_var_4_1_up_effect = yes }
-			effect_tooltip = {
-				add_to_variable = { 
-					var = NCD_interal_conflicts_var_4_2
-					value = -5
-					tooltip = NCD_interal_conflicts_var_4_2_tt
-				}
-			}	
-			hidden_effect = { set_variable = { NCD_interal_conflicts_var_4_2_down_var = 5 } NCD_interal_conflicts_var_4_2_down_effect = yes }
-		}
-	}
 	NCD_strict_control_over_borders = {		#严格管控国境线
 		icon = generic_scorched_earth
 		allowed = { tag = NCD }
@@ -1203,12 +1030,12 @@ NCD_interal_conflicts = {
 				tooltip = NCD_interal_conflicts_var_2_tt
 			}
 			NCD_interal_conflicts_var_clamp_effect = yes
-			#PEO = { 
-			#	add_opinion_modifier = {
-			#		target = NCD
-			#		modifier = NCD_strict_controlled_borders
-			#	} 
-			#}
+			PEO = { 
+				add_opinion_modifier = {
+					target = NCD
+					modifier = NCD_strict_controlled_borders
+				} 
+			}
 		}
 	}
 	NCD_protect_supply_line = {		#守卫补给线
@@ -1345,7 +1172,7 @@ NCD_interal_conflicts = {
 							limit = { infrastructure > 0 }
 							damage_building = {
 								type = infrastructure
-								damage = 0.5
+								damage = 1
 							}
 						}
 					}
@@ -1383,6 +1210,15 @@ NCD_interal_conflicts = {
 					30 = {
 						add_political_power = -30
 					}
+					30 = {
+						random_owned_state = {
+							limit = { infrastructure > 0 }
+							damage_building = {
+								type = infrastructure
+								damage = 2
+							}
+						}
+					}
 					20 = {
 						random_owned_state = {
 							limit = { supply_node > 0 }
@@ -1410,9 +1246,10 @@ NCD_interal_conflicts = {
 							}
 						}
 					}
-					50 = {
-						country_event = NCD.151
-					}
+				}
+				if = {
+					limit = { NOT = { has_country_flag = NCD_151_triggered } }
+					country_event = NCD.151
 				}
 			}
 		}

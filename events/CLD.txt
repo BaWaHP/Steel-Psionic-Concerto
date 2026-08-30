@@ -1561,6 +1561,8 @@ country_event = {
 			localization_key = ban_certain_advisor_tooltip
 			ADVISOR_NAME = CLD_human_Lorvin
 		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
 	}
 
 	option = {
@@ -1580,6 +1582,8 @@ country_event = {
 			localization_key = ban_certain_advisor_tooltip
 			ADVISOR_NAME = CLD_pugel_hofmann
 		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
 	}
 }
 

@@ -466,10 +466,10 @@ ideas = {
 				weekly_manpower = -1000
 				conscription_factor = -0.1
 				army_speed_factor = -0.25
-				army_org_factor = -0.15
+				army_org_regain = -0.15
 				supply_factor = -0.25
 				out_of_supply_factor = 0.05
-				army_defence_factor = 0.01
+				army_defence_factor = -0.01
 				stability_factor = 0.05
 			}
 		}
@@ -549,7 +549,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.5
+				civilian_factory_use = 1
 			}
 		}
 
@@ -646,7 +646,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_factory = -0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 

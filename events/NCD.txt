@@ -249,7 +249,7 @@ country_event = {	#北部的骚乱
 	desc = NCD.150.d
 	#picture = 
 	
-	#fire_only_once = yes
+	fire_only_once = yes
 	
 	trigger = {
 		#has_completed_focus = NCD_bloody_peach_and_bodies
@@ -282,6 +282,10 @@ country_event = {	#铁浸血，麦易髓
 		has_completed_focus = NCD_bloody_peach_and_bodies
 		check_variable = { NCD_interal_conflicts_var_2 = 50 }
 	}
+
+	immediate = {
+		set_country_flag = NCD_151_triggered
+	}
 	
 	option = {
 		name = NCD.151.a
@@ -296,20 +300,23 @@ country_event = {	#铁浸血，麦易髓
 				name = "起义军"
 				regiments = {
 					infantry = { x = 0 y = 0 }
-					light_infantry = { x = 0 y = 1 }
-					light_infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 1 }
+					light_infantry = { x = 1 y = 0 }
+					light_infantry = { x = 1 y = 1 }
+					light_infantry = { x = 1 y = 2 }
+					light_infantry = { x = 1 y = 3 }
 				}
 			}
 			116 = {
 				create_unit = {
-					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.6"  
+					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.75"  
 					owner = CLD
 					prioritize_location = 1793
 				}
 			}
 			477 = {
 				create_unit = {
-					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.6"  
+					division = "name = \"起义军\" division_template = \"起义军\" start_experience_factor = 0 start_equipment_factor = 0.75"  
 					owner = CLD
 					prioritize_location = 19495
 				}
