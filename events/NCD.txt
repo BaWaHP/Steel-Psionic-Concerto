@@ -325,6 +325,371 @@ country_event = {	#铁浸血，麦易髓
 	}
 }
 
+country_event = {	#技术工人的处置问题
+	id = NCD.200
+	title = NCD.200.t
+	desc = NCD.200.d
+	#picture = 
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			NCD_future_of_ncd_init = yes
+		}
+	}
+	
+	option = {
+		name = NCD.200.a
+		effect_tooltip = { NCD_future_of_ncd_init = yes	}
+		NCD_future_of_ncd_1_up = yes
+		NCD_future_of_ncd_2_up = yes
+	}
+
+	option = {
+		name = NCD.200.b
+		effect_tooltip = { NCD_future_of_ncd_init = yes	}
+		NCD_future_of_ncd_1_down = yes
+		NCD_future_of_ncd_2_down = yes
+	}
+}
+
+country_event = {	#一代人的血，一代人的泪
+	id = NCD.201
+	title = NCD.201.t
+	desc = NCD.201.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.201.a
+		add_manpower = -200000
+		remove_ideas = {
+			NCD_protect_nation_constitution
+			NCD_properly_settled_mobs
+		}
+		add_ideas = NCD_country_in_ruins
+	}
+}
+
+country_event = {	#终章（1）
+	id = NCD.202
+	title = NCD.202.t
+	desc = NCD.202.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.202.a
+		add_manpower = -1000
+		111 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		107 = { set_demilitarized_zone = yes remove_core_of = NCD }
+	}
+}
+
+country_event = {	#战争工业计划的结局
+	id = NCD.203
+	title = NCD.203.t
+	desc = NCD.203.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.203.a
+		remove_ideas = NCD_complete_war_industries_2
+		NCD_future_of_ncd_1_up = yes
+		NCD_future_of_ncd_2_down = yes
+	}
+
+	option = {
+		name = NCD.203.b
+		remove_ideas = NCD_complete_war_industries_2
+		NCD_future_of_ncd_1_down = yes
+		NCD_future_of_ncd_2_up = yes		
+	}
+}
+
+country_event = {	#也拟哭此土，死灰若付无
+	id = NCD.204
+	title = NCD.204.t
+	desc = NCD.204.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.204.a
+		remove_ideas = NCD_collapsed_economy_2
+		NCD_economy_status_init = yes
+	}
+}
+
+country_event = {	#终章（2）
+	id = NCD.205
+	title = NCD.205.t
+	desc = NCD.205.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.205.a
+		add_manpower = -2000
+		113 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		109 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		set_popularities = {
+			pioneer_communism = 0
+			revolutionary_communism = 2
+			worldunion_socialist = 15
+			worldunion_democrat = 10
+			liberal_republican = 10
+			conservative_republican = 5
+			authoritarian_republican = 3
+			national_socialist = 0
+			authoritarian_nationalism = 35
+			paternal_autocrat = 15
+			wizard_rules = 0
+		}
+		set_party_name = {
+			ideology = pioneer_communism
+			long_name = NCD_pioneer_communism_party_2_long
+			name = NCD_pioneer_communism_party_2
+		}
+		set_party_name = {
+			ideology = revolutionary_communism
+			long_name = NCD_revolutionary_communism_party_2_long
+			name = NCD_revolutionary_communism_party_2
+		}
+		set_party_name = {
+			ideology = worldunion_socialist
+			long_name = NCD_worldunion_socialist_party_2_long
+			name = NCD_worldunion_socialist_party_2
+		}
+		set_party_name = {
+			ideology = worldunion_democrat
+			long_name = NCD_worldunion_democrat_party_2_long
+			name = NCD_worldunion_democrat_party_2
+		}
+		set_party_name = {
+			ideology = liberal_republican
+			long_name = NCD_liberal_republican_party_2_long
+			name = NCD_liberal_republican_party_2
+		}
+		set_party_name = {
+			ideology = conservative_republican
+			long_name = NCD_conservative_republican_party_2_long
+			name = NCD_conservative_republican_party_2
+		}
+		set_party_name = {
+			ideology = authoritarian_republican
+			long_name = NCD_authoritarian_republican_party_2_long
+			name = NCD_authoritarian_republican_party_2
+		}
+		set_party_name = {
+			ideology = national_socialist
+			long_name = NCD_national_socialist_party_2_long
+			name = NCD_national_socialist_party_2
+		}
+		set_party_name = {
+			ideology = authoritarian_nationalism
+			long_name = NCD_authoritarian_nationalism_party_2_long
+			name = NCD_authoritarian_nationalism_party_2
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = NCD_paternal_autocrat_party_2_long
+			name = NCD_paternal_autocrat_party_2
+		}
+	}
+}
+
+country_event = {	#危戍临江火……
+	id = NCD.206
+	title = NCD.206.t
+	desc = NCD.206.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.206.a
+		remove_ideas = NCD_division_of_the_eagle_lion_cross_3
+		NCD_army_of_cd_init = yes
+		NCD_future_of_ncd_1_up = yes
+		NCD_future_of_ncd_2_up = yes	
+	}
+
+	option = {
+		name = NCD.206.b
+		remove_ideas = NCD_division_of_the_eagle_lion_cross_3
+		NCD_army_of_cd_init = yes
+		NCD_future_of_ncd_1_down = yes
+		NCD_future_of_ncd_2_down = yes		
+	}
+}
+
+country_event = {	#……空斋入雨寒
+	id = NCD.207
+	title = NCD.207.t
+	desc = NCD.207.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.207.a
+		add_ideas = NCD_research_sys_in_lack
+	}
+}
+
+country_event = {	#终章（3）
+	id = NCD.208
+	title = NCD.208.t
+	desc = NCD.208.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.208.a
+		add_political_power = -250
+		remove_ideas = NCD_celydrea_purism_3
+		NCD_heinrich_tzur_2 = {
+			swap_country_leader_traits = {
+				remove = NCD_extremist_militarists
+				add = NCD_none_but_emptiness
+			}
+		}
+	}
+}
+
+country_event = {	#断猿知屡别……
+	id = NCD.209
+	title = NCD.209.t
+	desc = NCD.209.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.209.a
+		add_manpower = -1000
+
+		109 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		113 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		110 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		114 = { set_demilitarized_zone = yes remove_core_of = NCD }
+		112 = { set_demilitarized_zone = yes remove_core_of = NCD }
+
+		every_owned_state = {
+			limit = { OR = { state = 111 state = 107 state = 109 state = 113 state = 110 state = 114 state = 112 } }
+			add_dynamic_modifier = { modifier = CLD_shadow_of_the_past }
+		}
+		117 = { add_dynamic_modifier = { modifier = CLD_factory_self_defense } }
+	}
+}
+
+country_event = {	#……嘶雁觉虚弹
+	id = NCD.210
+	title = NCD.210.t
+	desc = NCD.210.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.210.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		NCD_future_of_ncd_1_down = yes
+		NCD_future_of_ncd_2_up = yes	
+	}
+
+	option = {
+		name = NCD.210.b
+		add_popularity = {
+			ideology = authoritarian_nationalism
+			popularity = 0.1
+		}
+		NCD_future_of_ncd_1_up = yes
+		NCD_future_of_ncd_2_down = yes
+	}
+}
+
+country_event = {	#终章（4）
+	id = NCD.211
+	title = NCD.211.t
+	desc = NCD.211.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NCD.211.a
+		trigger = {
+			check_variable = { NCD_future_of_ncd_1 > 49 }
+			check_variable = { NCD_future_of_ncd_2 < 4 }
+		}
+		set_politics = { ruling_party = authoritarian_republican }
+		add_country_leader_role = {
+			character = NCD_raphael_bern
+			promote_leader = yes
+			country_leader = {
+				ideology = authoritarian_republican_subtype
+				expire = "2077.1.1.1"
+				traits = { NCD_careful_guardian }
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		load_focus_tree = generic_focus
+	}
+
+	option = {
+		name = NCD.211.b
+		trigger = {
+			check_variable = { NCD_future_of_ncd_1 < 50 }
+			check_variable = { NCD_future_of_ncd_2 < 4 }
+		}
+		set_politics = { ruling_party = authoritarian_nationalism }
+		add_country_leader_role = {
+			character = NCD_emergent_committee
+			promote_leader = yes
+			country_leader = {
+				ideology = authoritarian_nationalism_subtype
+				expire = "2077.1.1.1"
+				traits = { NCD_emergent_committee_trait }
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		load_focus_tree = generic_focus
+	}
+
+	option = {
+		name = NCD.211.c
+		trigger = { check_variable = { NCD_future_of_ncd_2 > 3 } }
+		set_politics = { ruling_party = worldunion_democrat }
+		add_country_leader_role = {
+			character = NCD_new_united_alliance_assembly
+			promote_leader = yes
+			country_leader = {
+				ideology = worldunion_democrat_subtype
+				expire = "2077.1.1.1"
+				traits = { NCD_long_waited_dem }
+			}
+		}
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = unlock_new_focus_tree_tt
+		load_focus_tree = generic_focus
+	}
+}
+
 ###新闻###
 
 add_namespace = NCDNews

@@ -621,4 +621,32 @@ characters={
 		}
 	}
 
+	NCD_emergent_committee = {		#应急委员会
+   		name = NCD_emergent_committee
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
+	NCD_new_united_alliance_assembly = {	#新联合联盟大会
+   		name = NCD_new_united_alliance_assembly
+   		portraits = {
+			civilian = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+			army = {
+				large="GFX_unknown"
+				small="GFX_idea_unknown_advisor"
+			}
+   		}
+	}
+
 }

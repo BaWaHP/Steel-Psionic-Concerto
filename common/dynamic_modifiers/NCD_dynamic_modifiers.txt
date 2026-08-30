@@ -32,3 +32,49 @@ NCD_lacking_skilled_workers = {	#缺失的技术工人
 	local_building_slots_factor = -0.25
 	state_production_speed_buildings_factor = -0.5
 }
+
+NCD_army_of_cd = {	#西莉迪亚军队
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_army_corruption
+
+    mobilization_speed = NCD_army_of_cd_ms
+    army_org_factor = NCD_army_of_cd_aof
+    attrition = NCD_army_of_cd_a
+    army_morale_factor = NCD_army_of_cd_amf
+    dig_in_speed_factor = NCD_army_of_cd_disf
+    max_dig_in = NCD_army_of_cd_mdi
+    army_attack_factor = NCD_army_of_cd_aaf
+    army_defence_factor = NCD_army_of_cd_adf
+    training_time_army_factor = NCD_army_of_cd_ttaf
+    land_reinforce_rate = NCD_army_of_cd_lrr
+    planning_speed = NCD_army_of_cd_ps
+    max_planning_factor = NCD_army_of_cd_mpf
+}
+
+#往日之影
+CLD_shadow_of_the_past = {
+    enable = { always = yes }
+    icon = GFX_idea_BEL_legacy_of_the_great_war
+
+    recruitable_population_factor = -0.75
+    local_building_slots_factor = -0.50
+    state_production_speed_buildings_factor = -0.75
+    local_factories = -0.75
+    resistance_target = 0.25
+    resistance_growth = 0.25
+    local_resources_factor = -1.00
+    starting_compliance = -0.50
+    compliance_growth = -0.50
+}
+
+#工厂自卫队
+CLD_factory_self_defense = {
+    enable = { always = yes }
+    icon = GFX_idea_YUG_local_militias
+
+    recruitable_population_factor = -1.00
+    state_production_speed_buildings_factor = -1.00
+    local_factories = 0.05
+    local_resources_factor = 0.10
+}

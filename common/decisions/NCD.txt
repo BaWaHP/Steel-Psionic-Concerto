@@ -5,7 +5,7 @@ NCD_skilled_worker_construction = {
 		available = { 
 			custom_trigger_tooltip = {
 				tooltip = NCD_inviting_formal_skilled_workers_tr
-				always = no
+				check_variable = { NCD_inviting_formal_skilled_workers_count > 2 }
 			}
 		}
 		activation = { always = no }
@@ -988,7 +988,7 @@ NCD_interal_conflicts = {
 	NCD_interal_conflicts_take_actions_3 = {		#新联合阵线在行动
 		icon = generic_civil_support
 		allowed = { tag = NCD }
-		available = { always = no }
+		available = { has_country_flag = NCD_interal_conflicts_ban }
 		activation = { always = no }
 		
 		is_good = no
@@ -1110,7 +1110,7 @@ NCD_interal_conflicts = {
 	NCD_interal_conflicts_take_actions_4 = {		#新联合阵线正在游击对抗
 		icon = generic_civil_support
 		allowed = { tag = NCD }
-		available = { always = no }
+		available = { has_country_flag = NCD_interal_conflicts_ban }
 		activation = { always = no }
 		
 		is_good = no

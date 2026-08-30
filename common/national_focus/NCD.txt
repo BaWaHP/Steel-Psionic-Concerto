@@ -1114,6 +1114,8 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		bypass = { has_war_with = CLD }
+
 		ai_will_do = {
 			factor = 100
 		}
@@ -1132,6 +1134,11 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 			CLD = { mark_focus_tree_layout_dirty = yes }
 		}
+
+		bypass_effect = {
+			add_war_support = 0.05
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 
 	#战时
@@ -1143,7 +1150,10 @@ focus_tree = {
 		y = 1
 		cost = 2.2
 
-		allow_branch = { has_completed_focus = NCD_put_down_the_fire }
+		allow_branch = { 
+			has_completed_focus = NCD_put_down_the_fire 
+			NOT = { has_completed_focus = NCD_glory_back_to_cd }
+		}
 
 		available_if_capitulated = yes
 
@@ -1704,7 +1714,145 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = NCD_militarism_nation_plus_tag
+			set_country_flag = NCD_interal_conflicts_ban
+			custom_effect_tooltip = {
+				localization_key = ban_decision_category_tt
+				CAT_NAME = NCD_interal_conflicts
+			}
+
+			country_event = {
+				id = NCD.200
+				days = 7
+			}
+			country_event = {
+				id = NCD.201
+				days = 14
+			}
+
 			custom_effect_tooltip = unlock_new_focus_tree_tt
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	focus = {	#穷冬万花匝……
+		id = NCD_end_of_winter
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		x = 8
+		y = 0
+		cost = 4
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			has_completed_focus = NCD_glory_back_to_cd
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		#prerequisite = { focus =  }
+		#relative_position_id = 
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NCD.202
+			hidden_effect = {
+				country_event = {
+					id = NCD.203
+					days = 7
+				}
+			}
+			country_event = {
+				id = NCD.204
+				days = 14
+			}
+		}
+	}
+
+	focus = {	#……永夜百忧攒
+		id = NCD_as_the_long_night_goes
+		icon = GFX_focus_generic_government_in_exile
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_end_of_winter }
+		relative_position_id = NCD_end_of_winter
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NCD.205
+			hidden_effect = {
+				country_event = {
+					id = NCD.206
+					days = 7
+				}
+			}
+			country_event = {
+				id = NCD.207
+				days = 14
+			}
+		}
+	}
+
+	focus = {	#心对炉死灰……
+		id = NCD_then_the_heart_falls
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_as_the_long_night_goes }
+		relative_position_id = NCD_as_the_long_night_goes
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NCD.208
+			hidden_effect = {
+				country_event = {
+					id = NCD.209
+					days = 7
+				}
+			}
+			country_event = {
+				id = NCD.210
+				days = 14
+			}
+		}
+	}
+
+	focus = {	#……颜随庭树残
+		id = NCD_now_the_home_is_gone
+		icon = GFX_focus_CHI_change_in_leadership
+		x = 0
+		y = 1
+		cost = 4
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = NCD_then_the_heart_falls }
+		relative_position_id = NCD_then_the_heart_falls
+		#mutually_exclusive = { focus =  }
+
+		completion_reward = {
+			country_event = NCD.211
 		}
 	}
 

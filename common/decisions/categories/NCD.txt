@@ -2,7 +2,10 @@ NCD_skilled_worker_construction = {		#技术工人建设
 	#picture = 
 	icon = generic_arms_trade
 	allowed = { tag = NCD }
-	visible = { has_completed_focus = NCD_nationalize_skilled_labour }
+	visible = { 
+		has_completed_focus = NCD_nationalize_skilled_labour 
+		NOT = { has_country_flag = NCD_skilled_worker_construction_ban }
+	}
 	visible_when_empty = no
 	priority = 10
 }

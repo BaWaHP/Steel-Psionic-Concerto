@@ -316,3 +316,101 @@ NCL_silt_double_beam_effect = {
 		}	
 	}
 }
+
+NCD_future_of_ncd_init = {
+	custom_effect_tooltip = {
+		localization_key = ban_decision_category_tt
+		CAT_NAME = NCD_skilled_worker_construction
+	}
+	set_country_flag = NCD_skilled_worker_construction_ban
+
+	set_variable = { NCD_future_of_ncd_1 = NCD_interal_conflicts_var_2 }	#国家未来
+	set_variable = { NCD_future_of_ncd_2 = 0 }								#动乱度
+}
+
+NCD_future_of_ncd_1_up = {
+	custom_effect_tooltip = NCD_future_of_ncd_tt_1_1
+	add_to_variable = { NCD_future_of_ncd_1 = -10 }
+}
+
+NCD_future_of_ncd_1_down = {
+	custom_effect_tooltip = NCD_future_of_ncd_tt_1_2
+	add_to_variable = { NCD_future_of_ncd_1 = 10 }
+}
+
+NCD_future_of_ncd_2_up = {
+	custom_effect_tooltip = NCD_future_of_ncd_tt_2_1
+	add_to_variable = { NCD_future_of_ncd_2 = 1 }
+}
+
+NCD_future_of_ncd_2_down = {
+	custom_effect_tooltip = NCD_future_of_ncd_tt_2_2
+	add_to_variable = { NCD_future_of_ncd_2 = -1 }
+}
+
+NCD_economy_status_init = {
+	set_variable = { NCD_economy_status_var = 5 }
+	add_ideas = NCD_economy_status_2
+}
+
+NCD_economy_status_update = {
+	hidden_effect = {
+		clamp_variable = {
+			var = NCD_economy_status_var
+			min = 0
+		}
+
+		if = {
+			limit = { has_idea = NCD_economy_status_1 }
+			remove_ideas = NCD_economy_status_1
+		}
+		else_if = {
+			limit = { has_idea = NCD_economy_status_2 }
+			remove_ideas = NCD_economy_status_2
+		}
+		else_if = {
+			limit = { has_idea = NCD_economy_status_3 }
+			remove_ideas = NCD_economy_status_3
+		}
+		else_if = {
+			limit = { has_idea = NCD_economy_status_4 }
+			remove_ideas = NCD_economy_status_4
+		}
+		else_if = {
+			limit = { has_idea = NCD_economy_status_5 }
+			remove_ideas = NCD_economy_status_5
+		}
+		else_if = {
+			limit = { has_idea = NCD_economy_status_6 }
+			remove_ideas = NCD_economy_status_6
+		}
+
+		if = {
+			limit = { check_variable = { NCD_economy_status_var < 3 } }
+			add_ideas = NCD_economy_status_1
+		}
+		else_if = {
+			limit = { check_variable = { NCD_economy_status_var < 8 } }
+			add_ideas = NCD_economy_status_2
+		}	
+	}
+}
+
+NCD_army_of_cd_init = {
+	effect_tooltip = { add_ideas = NCD_army_of_cd_tt }
+	hidden_effect = {
+		add_dynamic_modifier = { modifier = NCD_army_of_cd }
+		set_variable = { NCD_army_of_cd_ms = -0.5 }
+		set_variable = { NCD_army_of_cd_aof = 0.05 }
+		set_variable = { NCD_army_of_cd_a = 0.25 }
+		set_variable = { NCD_army_of_cd_amf = -0.5 }
+		set_variable = { NCD_army_of_cd_disf = -0.5 }
+		set_variable = { NCD_army_of_cd_mdi = -5 }
+		set_variable = { NCD_army_of_cd_aaf = -0.05 }
+		set_variable = { NCD_army_of_cd_adf = -0.15 }
+		set_variable = { NCD_army_of_cd_ttaf = 0.5 }
+		set_variable = { NCD_army_of_cd_lrr = -0.02 }
+		set_variable = { NCD_army_of_cd_ps = -0.75 }
+		set_variable = { NCD_army_of_cd_mpf = -0.5 }	
+	}
+}

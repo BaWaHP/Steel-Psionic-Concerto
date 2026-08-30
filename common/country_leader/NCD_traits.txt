@@ -108,4 +108,50 @@ leader_traits = {
 		}
 	}
 
+	NCD_none_but_emptiness = {		#唯余空，皆付无
+		random = no
+		
+		stability_factor = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_careful_guardian = {		#谨慎的护卫者
+		random = no
+		
+		political_power_gain = 0.02
+		stability_factor = 0.05
+		authoritarian_republican_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_emergent_committee_trait = {		#应急委员会
+		random = no
+		
+		political_power_gain = -0.02
+		authoritarian_nationalism_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	NCD_long_waited_dem = {		#久违的民主
+		random = no
+		
+		political_power_gain = -0.02
+		worldunion_socialist_drift = 0.02
+		worldunion_democrat_drift = 0.02
+		liberal_republican_drift = 0.02
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
 }
