@@ -2070,7 +2070,7 @@ country_event = {
 	}
 }
 
-# 第一届最高人民会议第一次会议举行
+#第一届最高人民会议第一次会议举行
 country_event = {
 	id = CLD.209
 	title = CLD.209.t
@@ -2083,6 +2083,70 @@ country_event = {
 		hidden_effect = {
 			clr_country_flag = CLD_democratic_election_active
 			set_country_flag = CLD_first_supreme_peoples_congress_held
+		}
+	}
+}
+
+#工作总结
+country_event = {
+	id = CLD.250
+	title = CLD.250.t
+	desc = CLD.250.d
+	is_triggered_only = yes
+
+	option = {
+		name = CLD.250.a
+		hidden_effect = {
+			clr_country_flag = CLD_north_bureau_direction_event_pending
+			clr_country_flag = CLD_250_a_flag
+			clr_country_flag = CLD_250_b_flag
+			clr_country_flag = CLD_250_c_flag
+			clr_country_flag = CLD_250_d_flag
+			set_country_flag = CLD_250_a_flag
+			set_country_flag = CLD_north_bureau_automation_active
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+	}
+
+	option = {
+		name = CLD.250.b
+		hidden_effect = {
+			clr_country_flag = CLD_north_bureau_direction_event_pending
+			clr_country_flag = CLD_250_a_flag
+			clr_country_flag = CLD_250_b_flag
+			clr_country_flag = CLD_250_c_flag
+			clr_country_flag = CLD_250_d_flag
+			set_country_flag = CLD_250_b_flag
+			set_country_flag = CLD_north_bureau_automation_active
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+	}
+
+	option = {
+		name = CLD.250.c
+		hidden_effect = {
+			clr_country_flag = CLD_north_bureau_direction_event_pending
+			clr_country_flag = CLD_250_a_flag
+			clr_country_flag = CLD_250_b_flag
+			clr_country_flag = CLD_250_c_flag
+			clr_country_flag = CLD_250_d_flag
+			set_country_flag = CLD_250_c_flag
+			set_country_flag = CLD_north_bureau_automation_active
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+	}
+
+	option = {
+		name = CLD.250.dd
+		hidden_effect = {
+			clr_country_flag = CLD_north_bureau_direction_event_pending
+			clr_country_flag = CLD_250_a_flag
+			clr_country_flag = CLD_250_b_flag
+			clr_country_flag = CLD_250_c_flag
+			clr_country_flag = CLD_250_d_flag
+			set_country_flag = CLD_250_d_flag
+			set_country_flag = CLD_north_bureau_automation_active
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
 		}
 	}
 }

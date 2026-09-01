@@ -27,6 +27,39 @@ on_actions = {
 				limit = { has_dynamic_modifier = CLD_red_army }
 				CLD_red_army_update = yes
 			}
+			if = {
+				limit = {
+					tag = CLD
+					NOT = { has_country_flag = CLD_north_bureau_mechanism_disabled }
+					OR = {
+						has_country_flag = CLD_66_a_flag
+						has_country_flag = CLD_66_b_flag
+					}
+					NOT = { has_country_flag = CLD_north_bureau_automation_active }
+					NOT = { has_country_flag = CLD_north_bureau_direction_event_pending }
+				}
+				if = {
+					limit = { has_completed_focus = CLD_work_summary }
+					set_country_flag = CLD_north_bureau_automation_active
+					country_event = { id = CLD_north_bureau_auto.3 hours = 1 }
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_country_flag = CLD_250_a_flag
+							has_country_flag = CLD_250_b_flag
+							has_country_flag = CLD_250_c_flag
+							has_country_flag = CLD_250_d_flag
+						}
+					}
+					set_country_flag = CLD_north_bureau_automation_active
+					country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+				}
+				else = {
+					set_country_flag = CLD_north_bureau_direction_event_pending
+					country_event = CLD.250
+				}
+			}
 		}
 	}
 }

@@ -112,3 +112,14 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = GET_CLD_strengthen_enterprise_party_committees_title
+	text = {
+		trigger = { has_country_flag = CLD_66_a_flag }
+		localization_key = "CLD_strengthen_enterprise_party_committees_2"
+	}
+	text = {
+		localization_key = "CLD_strengthen_enterprise_party_committees_1"
+	}
+}
+

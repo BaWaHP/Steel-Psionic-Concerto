@@ -1,0 +1,312 @@
+add_namespace = CLD_north_bureau_auto
+
+# Start or resume the selected North Bureau work path.
+country_event = {
+	id = CLD_north_bureau_auto.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CLD
+		NOT = { has_country_flag = CLD_north_bureau_mechanism_disabled }
+		has_country_flag = CLD_north_bureau_automation_active
+		OR = {
+			has_country_flag = CLD_250_a_flag
+			has_country_flag = CLD_250_b_flag
+			has_country_flag = CLD_250_c_flag
+			has_country_flag = CLD_250_d_flag
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_completed_focus = CLD_north_bureau_meeting } }
+			activate_shine_on_focus = CLD_north_bureau_meeting
+			country_event = { id = CLD_north_bureau_auto.2 days = 3 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_a_flag
+				NOT = { has_completed_focus = CLD_push_land_reform }
+			}
+			activate_shine_on_focus = CLD_push_land_reform
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_a_flag
+				NOT = { has_completed_focus = CLD_stabilize_village_work_points }
+			}
+			activate_shine_on_focus = CLD_stabilize_village_work_points
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_a_flag
+				NOT = { has_completed_focus = CLD_suppress_reactionary_religious_elements }
+			}
+			activate_shine_on_focus = CLD_suppress_reactionary_religious_elements
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_a_flag
+				NOT = { has_completed_focus = CLD_strike_reactionary_landlords }
+			}
+			activate_shine_on_focus = CLD_strike_reactionary_landlords
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_a_flag
+				NOT = { has_completed_focus = CLD_mobilize_poor_and_lower_middle_peasants }
+			}
+			activate_shine_on_focus = CLD_mobilize_poor_and_lower_middle_peasants
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_b_flag
+				NOT = { has_completed_focus = CLD_expand_state_owned_industry }
+			}
+			activate_shine_on_focus = CLD_expand_state_owned_industry
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_b_flag
+				NOT = { has_completed_focus = CLD_invest_in_vocational_schools }
+			}
+			activate_shine_on_focus = CLD_invest_in_vocational_schools
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_b_flag
+				NOT = { has_completed_focus = CLD_establish_state_owned_enterprises }
+			}
+			activate_shine_on_focus = CLD_establish_state_owned_enterprises
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_b_flag
+				NOT = { has_completed_focus = CLD_strengthen_enterprise_party_committees }
+			}
+			activate_shine_on_focus = CLD_strengthen_enterprise_party_committees
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_c_flag
+				NOT = { has_completed_focus = CLD_strengthen_healthcare }
+			}
+			activate_shine_on_focus = CLD_strengthen_healthcare
+			country_event = { id = CLD_north_bureau_auto.2 days = 21 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_c_flag
+				NOT = { has_completed_focus = CLD_rural_medical_rounds }
+			}
+			activate_shine_on_focus = CLD_rural_medical_rounds
+			country_event = { id = CLD_north_bureau_auto.2 days = 21 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_c_flag
+				NOT = { has_completed_focus = CLD_promote_vaccination }
+			}
+			activate_shine_on_focus = CLD_promote_vaccination
+			country_event = { id = CLD_north_bureau_auto.2 days = 35 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_c_flag
+				NOT = { has_completed_focus = CLD_socialism_is_the_best_prevention }
+			}
+			activate_shine_on_focus = CLD_socialism_is_the_best_prevention
+			country_event = { id = CLD_north_bureau_auto.2 days = 35 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_d_flag
+				NOT = { has_completed_focus = CLD_expand_socialist_state_commerce }
+			}
+			activate_shine_on_focus = CLD_expand_socialist_state_commerce
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_d_flag
+				NOT = { has_completed_focus = CLD_expand_grassroots_supply_and_marketing_cooperatives }
+			}
+			activate_shine_on_focus = CLD_expand_grassroots_supply_and_marketing_cooperatives
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_d_flag
+				NOT = { has_completed_focus = CLD_support_urban_consumer_cooperatives }
+			}
+			activate_shine_on_focus = CLD_support_urban_consumer_cooperatives
+			country_event = { id = CLD_north_bureau_auto.2 days = 25 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CLD_250_d_flag
+				NOT = { has_completed_focus = CLD_serve_the_people_prosper_the_economy }
+			}
+			activate_shine_on_focus = CLD_serve_the_people_prosper_the_economy
+			country_event = { id = CLD_north_bureau_auto.2 days = 14 }
+		}
+		else_if = {
+			limit = { NOT = { has_completed_focus = CLD_work_summary } }
+			activate_shine_on_focus = CLD_work_summary
+			country_event = { id = CLD_north_bureau_auto.2 days = 7 }
+		}
+		else = {
+			country_event = { id = CLD_north_bureau_auto.3 hours = 1 }
+		}
+	}
+}
+
+# Complete the focus currently being handled in the background, then advance.
+country_event = {
+	id = CLD_north_bureau_auto.2
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CLD
+		NOT = { has_country_flag = CLD_north_bureau_mechanism_disabled }
+		has_country_flag = CLD_north_bureau_automation_active
+	}
+
+	immediate = {
+		if = {
+			limit = { has_shine_effect_on_focus = CLD_north_bureau_meeting }
+			complete_national_focus = CLD_north_bureau_meeting
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_push_land_reform }
+			complete_national_focus = CLD_push_land_reform
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_stabilize_village_work_points }
+			complete_national_focus = CLD_stabilize_village_work_points
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_suppress_reactionary_religious_elements }
+			complete_national_focus = CLD_suppress_reactionary_religious_elements
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_strike_reactionary_landlords }
+			complete_national_focus = CLD_strike_reactionary_landlords
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_mobilize_poor_and_lower_middle_peasants }
+			complete_national_focus = CLD_mobilize_poor_and_lower_middle_peasants
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_expand_state_owned_industry }
+			complete_national_focus = CLD_expand_state_owned_industry
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_invest_in_vocational_schools }
+			complete_national_focus = CLD_invest_in_vocational_schools
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_establish_state_owned_enterprises }
+			complete_national_focus = CLD_establish_state_owned_enterprises
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_strengthen_enterprise_party_committees }
+			complete_national_focus = CLD_strengthen_enterprise_party_committees
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_strengthen_healthcare }
+			complete_national_focus = CLD_strengthen_healthcare
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_rural_medical_rounds }
+			complete_national_focus = CLD_rural_medical_rounds
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_promote_vaccination }
+			complete_national_focus = CLD_promote_vaccination
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_socialism_is_the_best_prevention }
+			complete_national_focus = CLD_socialism_is_the_best_prevention
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_expand_socialist_state_commerce }
+			complete_national_focus = CLD_expand_socialist_state_commerce
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_expand_grassroots_supply_and_marketing_cooperatives }
+			complete_national_focus = CLD_expand_grassroots_supply_and_marketing_cooperatives
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_support_urban_consumer_cooperatives }
+			complete_national_focus = CLD_support_urban_consumer_cooperatives
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_serve_the_people_prosper_the_economy }
+			complete_national_focus = CLD_serve_the_people_prosper_the_economy
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+		else_if = {
+			limit = { has_shine_effect_on_focus = CLD_work_summary }
+			complete_national_focus = CLD_work_summary
+		}
+		else = {
+			country_event = { id = CLD_north_bureau_auto.1 hours = 1 }
+		}
+	}
+}
+
+# Reset the repeatable subtree and request the next work direction.
+country_event = {
+	id = CLD_north_bureau_auto.3
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CLD
+		NOT = { has_country_flag = CLD_north_bureau_mechanism_disabled }
+	}
+
+	immediate = {
+		uncomplete_national_focus = {
+			focus = CLD_north_bureau_meeting
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+		clr_country_flag = CLD_250_a_flag
+		clr_country_flag = CLD_250_b_flag
+		clr_country_flag = CLD_250_c_flag
+		clr_country_flag = CLD_250_d_flag
+		clr_country_flag = CLD_north_bureau_automation_active
+		set_country_flag = CLD_north_bureau_direction_event_pending
+		country_event = CLD.250
+	}
+}

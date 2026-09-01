@@ -1679,6 +1679,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = CLD_lift_emergency_law
+			NOT = { has_completed_focus = CLD_take_next_step }
 		}
 
 		prerequisite = { focus = CLD_lift_emergency_law }
@@ -1918,6 +1919,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = CLD_lift_emergency_law
+			NOT = { has_completed_focus = CLD_take_next_step }
 		}
 
 		prerequisite = { focus = CLD_lift_emergency_law }
@@ -2223,6 +2225,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = CLD_lift_emergency_law
+			NOT = { has_completed_focus = CLD_take_next_step }
 		}
 
 		prerequisite = { focus = CLD_lift_emergency_law }
@@ -2485,11 +2488,19 @@ focus_tree = {
 		icon = GFX_focus_generic_conference
 		x = 10
 		y = 10
-		cost = 1
+		cost = 0.43
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 		
 		available_if_capitulated = yes
 
 		allow_branch = {
+			NOT = { has_country_flag = CLD_north_bureau_mechanism_disabled }
 			OR = {
 				has_country_flag = CLD_66_a_flag
 				has_country_flag = CLD_66_b_flag
@@ -2505,7 +2516,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 
 		completion_reward = {
-
+			add_political_power = 20
 		}
 	}
 
@@ -2514,7 +2525,15 @@ focus_tree = {
 		icon = GFX_focus_PRC_land_revolution_expedited
 		x = -7
 		y = 1
-		cost = 1
+		cost = 2
+
+		available = {
+			has_country_flag = CLD_250_a_flag
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2526,7 +2545,7 @@ focus_tree = {
 		relative_position_id = CLD_north_bureau_meeting
 
 		completion_reward = {
-
+			SPC_agricultural_development_amount_up_1 = yes
 		}
 	}
 
@@ -2535,7 +2554,14 @@ focus_tree = {
 		icon = GFX_focus_PRC_rural_region_development
 		x = -2
 		y = 1
-		cost = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2547,7 +2573,12 @@ focus_tree = {
 		relative_position_id = CLD_push_land_reform
 
 		completion_reward = {
-
+			add_stability = 0.01
+			add_manpower = 40
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 117 } }
+				CLD_new_liberated_zone_1_up = yes
+			}
 		}
 	}
 
@@ -2556,7 +2587,14 @@ focus_tree = {
 		icon = GFX_focus_ARG_state_atheism
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2568,7 +2606,36 @@ focus_tree = {
 		relative_position_id = CLD_push_land_reform
 
 		completion_reward = {
+			add_manpower = -20
+			SPC_agricultural_development_amount_up_1 = yes
+		}
+	}
 
+	focus = {	#打击反动地主
+		id = CLD_strike_reactionary_landlords
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = 2
+		y = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		prerequisite = { focus = CLD_push_land_reform }
+		relative_position_id = CLD_push_land_reform
+
+		completion_reward = {
+			add_manpower = -10
 		}
 	}
 
@@ -2577,28 +2644,14 @@ focus_tree = {
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = 2
 		y = 1
-		cost = 1
+		cost = 2
 
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 100
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
 		}
-
-		prerequisite = { focus = CLD_push_land_reform }
-		relative_position_id = CLD_push_land_reform
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {	#打击反动地主
-		id = CLD_strike_reactionary_landlords
-		icon = GFX_focus_generic_expropriate_industrialist
-		x = 0
-		y = 1
-		cost = 1
 
 		available_if_capitulated = yes
 
@@ -2608,11 +2661,16 @@ focus_tree = {
 
 		prerequisite = { focus = CLD_stabilize_village_work_points }
 		prerequisite = { focus = CLD_suppress_reactionary_religious_elements }
-		prerequisite = { focus = CLD_mobilize_poor_and_lower_middle_peasants }
-		relative_position_id = CLD_suppress_reactionary_religious_elements
+		prerequisite = { focus = CLD_strike_reactionary_landlords }
+		relative_position_id = CLD_stabilize_village_work_points
 
 		completion_reward = {
-
+			add_political_power = 20
+			SPC_agricultural_development_amount_up_1 = yes
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 117 } }
+				CLD_new_liberated_zone_2_up = yes
+			}
 		}
 	}
 
@@ -2621,7 +2679,15 @@ focus_tree = {
 		icon = GFX_focus_generic_communist_industry
 		x = -2
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			has_country_flag = CLD_250_b_flag
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2633,7 +2699,30 @@ focus_tree = {
 		relative_position_id = CLD_north_bureau_meeting
 
 		completion_reward = {
-
+			SPC_industrial_development_amount_up_1 = yes
+			random_list = {
+				60 = { add_political_power = 20 }
+				30 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+						CLD_new_liberated_zone_2_up = yes
+					}
+				}
+				10 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}		
+				}
+			}
 		}
 	}
 
@@ -2642,7 +2731,14 @@ focus_tree = {
 		icon = GFX_focus_generic_education
 		x = -1
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2654,7 +2750,26 @@ focus_tree = {
 		relative_position_id = CLD_expand_state_owned_industry
 
 		completion_reward = {
-
+			SPC_industrial_development_amount_up_1 = yes
+			SPC_research_development_amount_up_1 = yes
+			random_list = {
+				90 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+						CLD_new_liberated_zone_2_up = yes
+					}
+				}
+				10 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}					
+				}
+			}
 		}
 	}
 
@@ -2663,7 +2778,14 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_investment
 		x = 1
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2675,16 +2797,45 @@ focus_tree = {
 		relative_position_id = CLD_expand_state_owned_industry
 
 		completion_reward = {
-
+			SPC_industrial_development_amount_up_1 = yes
+			random_list = {
+				90 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+						CLD_new_liberated_zone_2_up = yes
+					}
+				}
+				10 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}					
+				}
+			}
 		}
 	}
 
-	focus = {	#加强企业党委
+	focus = {	#加强企业党组织
 		id = CLD_strengthen_enterprise_party_committees
 		icon = GFX_focus_generic_worker_administration
 		x = 1
 		y = 1
-		cost = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2697,7 +2848,19 @@ focus_tree = {
 		relative_position_id = CLD_invest_in_vocational_schools
 
 		completion_reward = {
-
+			add_political_power = 50
+			add_days_mission_timeout = {
+				mission = CLD_economic_collapse
+				days = 60
+			}
+			if = {
+				limit = { has_country_flag = CLD_66_a_flag }
+				custom_effect_tooltip = CLD_strengthen_enterprise_party_committees_tt
+				add_popularity = {
+					ideology = revolutionary_communism
+					popularity = 0.03
+				}
+			}
 		}
 	}
 
@@ -2706,7 +2869,15 @@ focus_tree = {
 		icon = GFX_focus_INS_expand_batavia_med_school
 		x = 2
 		y = 1
-		cost = 1
+		cost = 3
+
+		available = {
+			has_country_flag = CLD_250_c_flag
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2718,7 +2889,16 @@ focus_tree = {
 		relative_position_id = CLD_north_bureau_meeting
 
 		completion_reward = {
-
+			SPC_living_standard_development_amount_up_1 = yes
+			random_list = {
+				80 = { add_political_power = 20 }
+				20 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_3 < 10 } }
+						CLD_new_liberated_zone_3_up = yes
+					}					
+				}
+			}
 		}
 	}
 
@@ -2727,7 +2907,14 @@ focus_tree = {
 		icon = GFX_focus_generic_field_hostpital
 		x = -1
 		y = 1
-		cost = 1
+		cost = 3
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2739,7 +2926,12 @@ focus_tree = {
 		relative_position_id = CLD_strengthen_healthcare
 
 		completion_reward = {
-
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 117 } }
+				CLD_new_liberated_zone_3_up = yes
+			}
+			add_stability = 0.02
+			SPC_living_standard_development_amount_up_1 = yes
 		}
 	}
 
@@ -2748,7 +2940,14 @@ focus_tree = {
 		icon = GFX_focus_INS_bio_pharma
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2760,7 +2959,10 @@ focus_tree = {
 		relative_position_id = CLD_strengthen_healthcare
 
 		completion_reward = {
-
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+				CLD_new_liberated_zone_3_up = yes
+			}		
 		}
 	}
 
@@ -2769,7 +2971,14 @@ focus_tree = {
 		icon = GFX_focus_FIN_socialist_welfare
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2782,7 +2991,12 @@ focus_tree = {
 		relative_position_id = CLD_rural_medical_rounds
 
 		completion_reward = {
-
+			add_political_power = 30
+			SPC_living_standard_development_amount_up_1 = yes
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+				CLD_new_liberated_zone_3_up = yes
+			}					
 		}
 	}
 
@@ -2791,7 +3005,15 @@ focus_tree = {
 		icon = GFX_focus_JAP_ministry_of_commerce_and_industry
 		x = 7
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			has_country_flag = CLD_250_d_flag
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2803,7 +3025,26 @@ focus_tree = {
 		relative_position_id = CLD_north_bureau_meeting
 
 		completion_reward = {
-
+			SPC_living_standard_development_amount_up_1 = yes
+			random_list = {
+				60 = { add_political_power = 20 }
+				30 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+						CLD_new_liberated_zone_2_up = yes
+					}	
+				}
+				10 = {
+					random_owned_state = {
+						limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } }
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}						
+				}
+			}
 		}
 	}
 
@@ -2812,7 +3053,14 @@ focus_tree = {
 		icon = GFX_focus_PRC_establish_shorter_market_plans
 		x = -1
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2824,7 +3072,11 @@ focus_tree = {
 		relative_position_id = CLD_expand_socialist_state_commerce
 
 		completion_reward = {
-
+			SPC_living_standard_development_amount_up_1 = yes
+			every_owned_state = {
+				limit = { OR = { state = 115 state = 117 } }
+				CLD_new_liberated_zone_2_up = yes
+			}	
 		}
 	}
 
@@ -2833,7 +3085,14 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 1
 		y = 1
-		cost = 1
+		cost = 3.58
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2845,7 +3104,11 @@ focus_tree = {
 		relative_position_id = CLD_expand_socialist_state_commerce
 
 		completion_reward = {
-
+			add_political_power = 15
+			every_owned_state = {
+				limit = { OR = { state = 116 state = 118 state = 119 state = 477 } }
+				CLD_new_liberated_zone_2_up = yes
+			}	
 		}
 	}
 
@@ -2854,7 +3117,14 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 1
 		y = 1
-		cost = 1
+		cost = 2
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2867,7 +3137,12 @@ focus_tree = {
 		relative_position_id = CLD_expand_grassroots_supply_and_marketing_cooperatives
 
 		completion_reward = {
-
+			SPC_living_standard_development_amount_up_2 = yes
+			add_political_power = 30
+			random_owned_state = {
+				limit = { OR = { state = 115 state = 116 state = 117 state = 118 state = 119 state = 477 } check_variable = { CLD_new_liberated_zone_level_2 < 10 } }
+				CLD_new_liberated_zone_2_up = yes
+			}
 		}
 	}
 
@@ -2878,20 +3153,30 @@ focus_tree = {
 		y = 1
 		cost = 1
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = focus_will_be_completed_automatically_tt
+				always = no
+			}
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 100
 		}
 
-		prerequisite = { focus = CLD_strike_reactionary_landlords }
-		prerequisite = { focus = CLD_strengthen_enterprise_party_committees }
-		prerequisite = { focus = CLD_socialism_is_the_best_prevention }
-		prerequisite = { focus = CLD_serve_the_people_prosper_the_economy }
+		prerequisite = {
+			focus = CLD_mobilize_poor_and_lower_middle_peasants
+			focus = CLD_strengthen_enterprise_party_committees
+			focus = CLD_socialism_is_the_best_prevention
+			focus = CLD_serve_the_people_prosper_the_economy
+		}
 		relative_position_id = CLD_strengthen_enterprise_party_committees
 
 		completion_reward = {
-
+			effect_tooltip = { country_event = CLD.250 }
+			hidden_effect = { country_event = { id = CLD_north_bureau_auto.3 hours = 1 } }
 		}
 	}
 

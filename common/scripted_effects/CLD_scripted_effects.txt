@@ -1165,3 +1165,31 @@ CLD_update_democratic_election_total = {
 	add_to_variable = { CLD_election_total_seats = CLD_election_democratic_party_seats }
 }
 
+CLD_disable_north_bureau_mechanism = {
+	custom_effect_tooltip = CLD_disable_north_bureau_mechanism_tt
+	hidden_effect = {
+		set_country_flag = CLD_north_bureau_mechanism_disabled
+		clr_country_flag = CLD_north_bureau_automation_active
+		clr_country_flag = CLD_north_bureau_direction_event_pending
+		clr_country_flag = CLD_250_a_flag
+		clr_country_flag = CLD_250_b_flag
+		clr_country_flag = CLD_250_c_flag
+		clr_country_flag = CLD_250_d_flag
+
+		if = {
+			limit = { has_active_mission = CLD_security_collapse }
+			remove_mission = CLD_security_collapse
+		}
+		if = {
+			limit = { has_active_mission = CLD_economic_collapse }
+			remove_mission = CLD_economic_collapse
+		}
+		if = {
+			limit = { has_active_mission = CLD_plague_outbreak }
+			remove_mission = CLD_plague_outbreak
+		}
+
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
